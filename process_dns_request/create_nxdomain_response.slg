@@ -1,0 +1,3590 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_NXDOMAIN_Response
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_1.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+***  Proved C1:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H5.
+***  Proved C2:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_2.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  true
+***  Proved C11:  true
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New C1:  start_byte + dns_types__header_bits div 8 >= 0
+<S>  New C3:  start_byte + dns_types__header_bits div 8 >= 0
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New C2:  start_byte + dns_types__header_bits div 8 <= 8192
+<S>  New C4:  start_byte + dns_types__header_bits div 8 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(40).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C5:  start_byte + dns_types__header_bits div 8 >= - 2147483648
+-S-  Applied substitution rule create_nxdom_rules(41).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C6:  start_byte + dns_types__header_bits div 8 <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  start_byte >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New C7:  dns_types__header_bits div 8 >= 1
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8180
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+<S>  New C8:  dns_types__header_bits div 8 <= 8180
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C9:  dns_types__header_bits div 8 >= - 9223372036854775808
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C10:  dns_types__header_bits div 8 <= 9223372036854775807
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H1:  start_byte <= 8192
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New C1:  start_byte >= - 12
+<S>  New C3:  start_byte >= - 12
+<S>  New C2:  start_byte <= 8180
+<S>  New C4:  start_byte <= 8180
+<S>  New C5:  start_byte >= - 2147483660
+<S>  New C6:  start_byte <= 2147483635
+<S>  New C7:  true
+<S>  New C8:  true
+<S>  New C9:  true
+<S>  New C10:  true
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H8:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H10:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H12:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H28:  fld_messageid(fld_header(output_packet)) >= 0
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H9:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H11:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H13:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H29:  fld_messageid(fld_header(output_packet)) <= 65535
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H25:  dns_types__query <= fld_opcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H26:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H16:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H17:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C1:  start_byte >= - 12
+     using hypothesis H2.
+***  Proved C3:  start_byte >= - 12
+     using hypothesis H2.
+***  Proved C2:  start_byte <= 8180
+     using hypothesis H3.
+***  Proved C4:  start_byte <= 8180
+     using hypothesis H3.
+***  Proved C5:  start_byte >= - 2147483660
+     using hypothesis H2.
+***  Proved C6:  start_byte <= 2147483635
+     using hypothesis H3.
+***  Proved C7:  true
+***  Proved C8:  true
+***  Proved C9:  true
+***  Proved C10:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_3.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  dns_types__response_code__first <= dns_types__name_error
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H16:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New C1:  true
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H17:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_4.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H8:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H10:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H12:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H28:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New C1:  true
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H9:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H11:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H13:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H29:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_5.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+***  Proved C5:  true
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+<S>  New C1:  start_byte + dns_types__header_bits div 8 >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+<S>  New C2:  start_byte + dns_types__header_bits div 8 <= 16383
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H51:  true
+<S>  New C3:  element(domainname, [rr_type__wirestringtypeindex__first]) >= 0
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H52:  true
+<S>  New C4:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483647
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New C6:  1 <= rr_type__wirestringtypeindex__last
+<S>  New C3:  element(domainname, [1]) >= 0
+<S>  New C4:  element(domainname, [1]) <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+<S>  New C6:  true
+***  Proved C6:  true
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H1:  start_byte <= 8192
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H32:  start_byte + 12 >= dns_types__packet_length_range__first
+<S>  New H33:  start_byte + 12 <= dns_types__packet_length_range__last
+<S>  New H36:  start_byte + 12 >= dns_types__packet_bytes_range__base__first
+<S>  New H37:  start_byte + 12 <= dns_types__packet_bytes_range__base__last
+<S>  New H38:  12 >= dns_types__packet_bytes_range__first
+<S>  New H39:  12 <= dns_types__packet_bytes_range__last
+<S>  New H40:  12 >= system__min_int
+<S>  New H41:  12 <= system__max_int
+<S>  New C1:  start_byte >= - 12
+<S>  New C2:  start_byte <= 16371
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H40:  true
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H41:  true
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H32:  start_byte >= - 12
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H33:  start_byte <= 8180
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  start_byte >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H38:  true
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8180
+<S>  New H39:  true
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(40).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H36:  start_byte >= - 2147483660
+-S-  Applied substitution rule create_nxdom_rules(41).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H37:  start_byte <= 2147483635
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H8:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H10:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H12:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H28:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H45:  true
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H9:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H11:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H13:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H29:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H46:  true
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H25:  dns_types__query <= fld_opcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H26:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H16:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H43:  true
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H17:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H44:  true
+***  Proved C3:  element(domainname, [1]) >= 0
+     using hypothesis H4.
+***  Proved C4:  element(domainname, [1]) <= 2147483647
+     using hypothesis H4.
+***  Proved C1:  start_byte >= - 12
+     using hypothesis H32.
+***  Proved C2:  start_byte <= 16371
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_6.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+***  Proved C5:  true
+***  Proved C6:  rr_type__wirestringtypeindex__first <= 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H107.
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H9:  qname_location >= 0
+<S>  New H36:  current_qname_location >= 0
+<S>  New H42:  new_qname_location__1 >= 0
+<S>  New C1:  output_bytes__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H10:  qname_location <= 16383
+<S>  New H37:  current_qname_location <= 16383
+<S>  New H43:  new_qname_location__1 <= 16383
+<S>  New C2:  output_bytes__2 <= 16383
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H98:  amount_trimmed >= 0
+<S>  New H100:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New H102:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          1
+<S>  New C3:  element(trimmed_name__1, [rr_type__wirestringtypeindex__first]) 
+          >= 0
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H99:  amount_trimmed <= 2147483647
+<S>  New H101:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+<S>  New H103:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+<S>  New C4:  element(trimmed_name__1, [rr_type__wirestringtypeindex__first]) 
+          <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H34:  start_byte <= 8192
+<S>  New H60:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H59:  output_bytes__2 >= 13
+-S-  Applied substitution rule create_nxdom_rules(3).
+     This was achieved by replacing all occurrences of rr_type__maxnumrecords 
+          by:
+          64.
+<S>  New H58:  answer_count <= dns_types__unsigned_short__last - 64
+<S>  New H61:  answer_count__2 <= answer_count + 64
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H104:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H105:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 
+          character__last)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          255)
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H87:  output_bytes__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H4:  output_bytes <= 8192
+<S>  New H40:  current_qname_location <= 8192
+<S>  New H88:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H6:  start_byte >= 1
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H7:  start_byte <= 8180
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H12:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H16:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H18:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H32:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H49:  answer_count >= 0
+<S>  New H63:  fld_arcount(fld_header(output_packet__2)) >= 0
+<S>  New H65:  fld_nscount(fld_header(output_packet__2)) >= 0
+<S>  New H67:  fld_ancount(fld_header(output_packet__2)) >= 0
+<S>  New H69:  fld_qdcount(fld_header(output_packet__2)) >= 0
+<S>  New H83:  fld_messageid(fld_header(output_packet__2)) >= 0
+<S>  New H85:  answer_count__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H13:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H17:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H19:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H33:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H50:  answer_count <= 65535
+<S>  New H64:  fld_arcount(fld_header(output_packet__2)) <= 65535
+<S>  New H66:  fld_nscount(fld_header(output_packet__2)) <= 65535
+<S>  New H68:  fld_ancount(fld_header(output_packet__2)) <= 65535
+<S>  New H70:  fld_qdcount(fld_header(output_packet__2)) <= 65535
+<S>  New H84:  fld_messageid(fld_header(output_packet__2)) <= 65535
+<S>  New H86:  answer_count__2 <= 65535
+<S>  New H58:  answer_count <= 65471
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H29:  dns_types__query <= fld_opcode(fld_header(output_packet))
+<S>  New H80:  dns_types__query <= fld_opcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H30:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+<S>  New H81:  fld_opcode(fld_header(output_packet__2)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H20:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H71:  dns_types__no_error <= fld_rcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H21:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H72:  fld_rcode(fld_header(output_packet__2)) <= dns_types__refused
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H100:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+<S>  New H101:  amount_trimmed + (element(domainname, [1]) + 1) <= 2147483647
+<S>  New H102:  element(domainname, [1]) >= - 1
+<S>  New H103:  element(domainname, [1]) <= 2147483646
+<S>  New H107:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H104:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H105:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(current_name, [
+          i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(trimmed_name__1, [
+          i___1]) and element(trimmed_name__1, [i___1]) <= 255)
+<S>  New C3:  element(trimmed_name__1, [1]) >= 0
+<S>  New C4:  element(trimmed_name__1, [1]) <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  amount_trimmed < 129
+<S>  New H107:  true
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(current_name, [i___1]) and element(current_name, [i___1]) <= 
+          255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]
+          ) <= 255)
+***  Proved C1:  output_bytes__2 >= 0
+     using hypothesis H87.
+***  Proved C2:  output_bytes__2 <= 16383
+     using hypothesis H60.
+***  Proved C3:  element(trimmed_name__1, [1]) >= 0
+     using hypothesis H41.
+***  Proved C4:  element(trimmed_name__1, [1]) <= 2147483647
+     using hypothesis H41.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_7.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  true
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified C12 on reading formula in, to give:
+     %%%  C12:  fld_arcount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+%%%  Simplified C13 on reading formula in, to give:
+     %%%  C13:  fld_arcount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+%%%  Simplified C14 on reading formula in, to give:
+     %%%  C14:  fld_nscount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+%%%  Simplified C15 on reading formula in, to give:
+     %%%  C15:  fld_nscount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+%%%  Simplified C16 on reading formula in, to give:
+     %%%  C16:  0 >= dns_types__unsigned_short__first
+%%%  Simplified C17 on reading formula in, to give:
+     %%%  C17:  0 <= dns_types__unsigned_short__last
+%%%  Simplified C18 on reading formula in, to give:
+     %%%  C18:  fld_qdcount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+%%%  Simplified C19 on reading formula in, to give:
+     %%%  C19:  fld_qdcount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+%%%  Simplified C20 on reading formula in, to give:
+     %%%  C20:  dns_types__response_code__first <= dns_types__name_error
+%%%  Simplified C21 on reading formula in, to give:
+     %%%  C21:  dns_types__name_error <= dns_types__response_code__last
+%%%  Simplified C29 on reading formula in, to give:
+     %%%  C29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified C30 on reading formula in, to give:
+     %%%  C30:  fld_opcode(fld_header(output_packet)) <= 
+          dns_types__opcode_type__last
+%%%  Simplified C32 on reading formula in, to give:
+     %%%  C32:  fld_messageid(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+%%%  Simplified C33 on reading formula in, to give:
+     %%%  C33:  fld_messageid(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  0 < rr_type__wirestringtypeindex__last
+     using hypothesis H63.
+***  Proved C4:  start_byte + dns_types__header_bits div 8 <= 
+          dns_types__packet_length_range__last
+     using hypothesis H33.
+***  Proved C5:  qname_location <= start_byte + dns_types__header_bits div 8
+     using hypothesis H65.
+***  Proved C6:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H2.
+***  Proved C7:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H3.
+***  Proved C8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H4.
+***  Proved C9:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H5.
+***  Proved C10:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H6.
+***  Proved C11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+     using hypothesis H7.
+***  Proved C12:  fld_arcount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H8.
+***  Proved C13:  fld_arcount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H9.
+***  Proved C14:  fld_nscount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H10.
+***  Proved C15:  fld_nscount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H11.
+***  Proved C16:  0 >= dns_types__unsigned_short__first
+     using hypothesis H45.
+***  Proved C17:  0 <= dns_types__unsigned_short__last
+     using hypothesis H46.
+***  Proved C18:  fld_qdcount(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H14.
+***  Proved C19:  fld_qdcount(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H15.
+***  Proved C20:  dns_types__response_code__first <= dns_types__name_error
+     using hypothesis H43.
+***  Proved C21:  dns_types__name_error <= dns_types__response_code__last
+     using hypothesis H44.
+***  Proved C22:  true
+***  Proved C23:  true
+***  Proved C24:  true
+***  Proved C25:  true
+***  Proved C26:  true
+***  Proved C27:  true
+***  Proved C28:  true
+***  Proved C29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+     using hypothesis H25.
+***  Proved C30:  fld_opcode(fld_header(output_packet)) <= 
+          dns_types__opcode_type__last
+     using hypothesis H26.
+***  Proved C31:  true
+***  Proved C32:  fld_messageid(fld_header(output_packet)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H28.
+***  Proved C33:  fld_messageid(fld_header(output_packet)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H29.
+***  Proved C34:  start_byte <= dns_types__packet_size
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_8.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H121 has been replaced by "true".  (It is already present, as 
+          H106).
+---  Hypothesis H122 has been replaced by "true".  (It is already present, as 
+          H107).
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified C20 on reading formula in, to give:
+     %%%  C20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified C29 on reading formula in, to give:
+     %%%  C29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+***  Proved C1:  answer_count__2 = 0
+     using hypothesis H123.
+***  Proved C3:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) < 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H124.
+***  Proved C4:  output_bytes__2 <= dns_types__packet_length_range__last
+     using hypothesis H88.
+***  Proved C5:  new_qname_location__1 <= output_bytes__2
+     using hypothesis H126.
+***  Proved C6:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H6.
+***  Proved C7:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H7.
+***  Proved C8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H8.
+***  Proved C9:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H9.
+***  Proved C10:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H10.
+***  Proved C11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+     using hypothesis H62.
+***  Proved C12:  fld_arcount(fld_header(output_packet__2)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H63.
+***  Proved C13:  fld_arcount(fld_header(output_packet__2)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H64.
+***  Proved C14:  fld_nscount(fld_header(output_packet__2)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H65.
+***  Proved C15:  fld_nscount(fld_header(output_packet__2)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H66.
+***  Proved C16:  fld_ancount(fld_header(output_packet__2)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H67.
+***  Proved C17:  fld_ancount(fld_header(output_packet__2)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H68.
+***  Proved C18:  fld_qdcount(fld_header(output_packet__2)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H69.
+***  Proved C19:  fld_qdcount(fld_header(output_packet__2)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H70.
+***  Proved C20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+     using hypothesis H71.
+***  Proved C21:  fld_rcode(fld_header(output_packet__2)) <= 
+          dns_types__response_code__last
+     using hypothesis H72.
+***  Proved C22:  true
+***  Proved C23:  true
+***  Proved C24:  true
+***  Proved C25:  true
+***  Proved C26:  true
+***  Proved C27:  true
+***  Proved C28:  true
+***  Proved C29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+     using hypothesis H80.
+***  Proved C30:  fld_opcode(fld_header(output_packet__2)) <= 
+          dns_types__opcode_type__last
+     using hypothesis H81.
+***  Proved C31:  true
+***  Proved C32:  fld_messageid(fld_header(output_packet__2)) >= 
+          dns_types__unsigned_short__first
+     using hypothesis H83.
+***  Proved C33:  fld_messageid(fld_header(output_packet__2)) <= 
+          dns_types__unsigned_short__last
+     using hypothesis H84.
+***  Proved C34:  start_byte <= dns_types__packet_size
+     using hypothesis H34.
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H34:  start_byte <= 8192
+<S>  New H60:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H59:  output_bytes__2 >= 13
+-S-  Applied substitution rule create_nxdom_rules(3).
+     This was achieved by replacing all occurrences of rr_type__maxnumrecords 
+          by:
+          64.
+<S>  New H58:  answer_count <= dns_types__unsigned_short__last - 64
+<S>  New H61:  answer_count__2 <= answer_count + 64
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H104:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H105:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 
+          character__last)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          255)
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H98:  amount_trimmed >= 0
+<S>  New H100:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New H102:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          1
+<S>  New H119:  element(trimmed_name__1, [rr_type__wirestringtypeindex__first]) 
+          >= 0
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H99:  amount_trimmed <= 2147483647
+<S>  New H101:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+<S>  New H103:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+<S>  New H120:  element(trimmed_name__1, [rr_type__wirestringtypeindex__first]) 
+          <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H9:  qname_location >= 0
+<S>  New H36:  current_qname_location >= 0
+<S>  New H42:  new_qname_location__1 >= 0
+<S>  New H117:  output_bytes__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H10:  qname_location <= 16383
+<S>  New H37:  current_qname_location <= 16383
+<S>  New H43:  new_qname_location__1 <= 16383
+<S>  New H118:  output_bytes__2 <= 16383
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H87:  output_bytes__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H4:  output_bytes <= 8192
+<S>  New H40:  current_qname_location <= 8192
+<S>  New H88:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H6:  start_byte >= 1
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H7:  start_byte <= 8180
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H12:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H16:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H18:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H32:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H49:  answer_count >= 0
+<S>  New H63:  fld_arcount(fld_header(output_packet__2)) >= 0
+<S>  New H65:  fld_nscount(fld_header(output_packet__2)) >= 0
+<S>  New H67:  fld_ancount(fld_header(output_packet__2)) >= 0
+<S>  New H69:  fld_qdcount(fld_header(output_packet__2)) >= 0
+<S>  New H83:  fld_messageid(fld_header(output_packet__2)) >= 0
+<S>  New H85:  answer_count__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H13:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H17:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H19:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H33:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H50:  answer_count <= 65535
+<S>  New H64:  fld_arcount(fld_header(output_packet__2)) <= 65535
+<S>  New H66:  fld_nscount(fld_header(output_packet__2)) <= 65535
+<S>  New H68:  fld_ancount(fld_header(output_packet__2)) <= 65535
+<S>  New H70:  fld_qdcount(fld_header(output_packet__2)) <= 65535
+<S>  New H84:  fld_messageid(fld_header(output_packet__2)) <= 65535
+<S>  New H86:  answer_count__2 <= 65535
+<S>  New H58:  answer_count <= 65471
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H29:  dns_types__query <= fld_opcode(fld_header(output_packet))
+<S>  New H80:  dns_types__query <= fld_opcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H30:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+<S>  New H81:  fld_opcode(fld_header(output_packet__2)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H20:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H71:  dns_types__no_error <= fld_rcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H21:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H72:  fld_rcode(fld_header(output_packet__2)) <= dns_types__refused
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H107:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H124:  amount_trimmed + (element(domainname, [1]) + 1) < 
+          rr_type__wirestringtypeindex__last
+<S>  New H125:  element(trimmed_name__1, [1]) <> 0
+<S>  New H104:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H105:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(current_name, [
+          i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(trimmed_name__1, [
+          i___1]) and element(trimmed_name__1, [i___1]) <= 255)
+<S>  New H100:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+<S>  New H102:  element(domainname, [1]) >= - 1
+<S>  New H119:  element(trimmed_name__1, [1]) >= 0
+<S>  New H101:  amount_trimmed + (element(domainname, [1]) + 1) <= 2147483647
+<S>  New H103:  element(domainname, [1]) <= 2147483646
+<S>  New H120:  element(trimmed_name__1, [1]) <= 2147483647
+<S>  New C2:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  amount_trimmed < 129
+<S>  New H107:  true
+<S>  New H124:  amount_trimmed + (element(domainname, [1]) + 1) < 129
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(current_name, [i___1]) and element(current_name, [i___1]) <= 
+          255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]
+          ) <= 255)
+%%%  Hypotheses H119 & H125 together imply that
+          0 < element(trimmed_name__1, [1]).
+     H119 & H125 have therefore been deleted and a new H127 added to this 
+          effect.
+***  Proved C2:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+     using hypothesis H100.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_9.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+***  Proved C1:  current_qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H36.
+***  Proved C2:  current_qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H37.
+***  Proved C3:  current_qname_location <= dns_types__packet_length_range__last
+     using hypotheses H4 & H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_10.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+***  Proved C1:  new_qname_location__1 >= dns_types__qname_ptr_range__first
+     using hypothesis H42.
+***  Proved C2:  new_qname_location__1 <= dns_types__qname_ptr_range__last
+     using hypothesis H43.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_11.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+***  Proved C1:  answer_count >= dns_types__unsigned_short__first
+     using hypothesis H49.
+***  Proved C2:  answer_count <= dns_types__unsigned_short__last
+     using hypothesis H50.
+***  Proved C3:  new_qname_location__1 >= dns_types__qname_ptr_range__first
+     using hypothesis H42.
+***  Proved C4:  new_qname_location__1 <= dns_types__qname_ptr_range__last
+     using hypothesis H43.
+***  Proved C5:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H6.
+***  Proved C6:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H7.
+***  Proved C7:  start_byte <= dns_types__packet_size
+     using hypothesis H34.
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H34:  start_byte <= 8192
+-S-  Applied substitution rule create_nxdom_rules(3).
+     This was achieved by replacing all occurrences of rr_type__maxnumrecords 
+          by:
+          64.
+<S>  New C8:  answer_count <= dns_types__unsigned_short__last - 64
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 
+          character__last)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          255)
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H9:  qname_location >= 0
+<S>  New H36:  current_qname_location >= 0
+<S>  New H42:  new_qname_location__1 >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H10:  qname_location <= 16383
+<S>  New H37:  current_qname_location <= 16383
+<S>  New H43:  new_qname_location__1 <= 16383
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H4:  output_bytes <= 8192
+<S>  New H40:  current_qname_location <= 8192
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H6:  start_byte >= 1
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H7:  start_byte <= 8180
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H12:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H16:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H18:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H32:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H49:  answer_count >= 0
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H13:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H17:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H19:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H33:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H50:  answer_count <= 65535
+<S>  New C8:  answer_count <= 65471
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H29:  dns_types__query <= fld_opcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H30:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H20:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H21:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(current_name, [
+          i___1]) and element(current_name, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(trimmed_name__1, [
+          i___1]) and element(trimmed_name__1, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  amount_trimmed < 129
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(current_name, [i___1]) and element(current_name, [i___1]) <= 
+          255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]
+          ) <= 255)
+***  Proved C8:  answer_count <= 65471
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_12.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+***  Proved C1:  output_bytes__2 >= dns_types__packet_length_range__first
+     using hypothesis H87.
+***  Proved C2:  output_bytes__2 <= dns_types__packet_length_range__last
+     using hypothesis H88.
+***  Proved C3:  answer_count__2 >= dns_types__unsigned_short__first
+     using hypothesis H85.
+***  Proved C4:  answer_count__2 <= dns_types__unsigned_short__last
+     using hypothesis H86.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_13.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+***  Proved C1:  new_qname_location__1 >= dns_types__qname_ptr_range__first
+     using hypothesis H42.
+***  Proved C2:  new_qname_location__1 <= dns_types__qname_ptr_range__last
+     using hypothesis H43.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_14.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  true
+***  Proved C7:  true
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H98:  amount_trimmed >= 0
+<S>  New C1:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New C3:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H99:  amount_trimmed <= 2147483647
+<S>  New C2:  amount_trimmed + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+<S>  New C4:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C5:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C6:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          current_name, [i___1]) and element(current_name, [i___1]) <= 
+          character__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]) <= 
+          character__last)
+<S>  New C8:  1 <= rr_type__wirestringtypeindex__last
+<S>  New C1:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+<S>  New C3:  element(domainname, [1]) >= - 1
+<S>  New C2:  amount_trimmed + (element(domainname, [1]) + 1) <= 2147483647
+<S>  New C4:  element(domainname, [1]) <= 2147483646
+<S>  New C5:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New C6:  element(domainname, [1]) <= 9223372036854775806
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  amount_trimmed < 129
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+<S>  New C8:  true
+***  Proved C8:  true
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H34:  start_byte <= 8192
+<S>  New H60:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H59:  output_bytes__2 >= 13
+-S-  Applied substitution rule create_nxdom_rules(3).
+     This was achieved by replacing all occurrences of rr_type__maxnumrecords 
+          by:
+          64.
+<S>  New H58:  answer_count <= dns_types__unsigned_short__last - 64
+<S>  New H61:  answer_count__2 <= answer_count + 64
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(current_name, [i___1]) and element(current_name, [i___1]) <= 
+          character__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]
+          ) <= character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H35:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(current_name, [i___1]) and element(current_name, [i___1]) <= 
+          255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(trimmed_name__1, [i___1]) and element(trimmed_name__1, [i___1]
+          ) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H9:  qname_location >= 0
+<S>  New H36:  current_qname_location >= 0
+<S>  New H42:  new_qname_location__1 >= 0
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H10:  qname_location <= 16383
+<S>  New H37:  current_qname_location <= 16383
+<S>  New H43:  new_qname_location__1 <= 16383
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H87:  output_bytes__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H4:  output_bytes <= 8192
+<S>  New H40:  current_qname_location <= 8192
+<S>  New H88:  output_bytes__2 <= 8192
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H6:  start_byte >= 1
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H7:  start_byte <= 8180
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+<S>  New H62:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H12:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H16:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H18:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H32:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H49:  answer_count >= 0
+<S>  New H63:  fld_arcount(fld_header(output_packet__2)) >= 0
+<S>  New H65:  fld_nscount(fld_header(output_packet__2)) >= 0
+<S>  New H67:  fld_ancount(fld_header(output_packet__2)) >= 0
+<S>  New H69:  fld_qdcount(fld_header(output_packet__2)) >= 0
+<S>  New H83:  fld_messageid(fld_header(output_packet__2)) >= 0
+<S>  New H85:  answer_count__2 >= 0
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H13:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H17:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H19:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H33:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H50:  answer_count <= 65535
+<S>  New H64:  fld_arcount(fld_header(output_packet__2)) <= 65535
+<S>  New H66:  fld_nscount(fld_header(output_packet__2)) <= 65535
+<S>  New H68:  fld_ancount(fld_header(output_packet__2)) <= 65535
+<S>  New H70:  fld_qdcount(fld_header(output_packet__2)) <= 65535
+<S>  New H84:  fld_messageid(fld_header(output_packet__2)) <= 65535
+<S>  New H86:  answer_count__2 <= 65535
+<S>  New H58:  answer_count <= 65471
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H29:  dns_types__query <= fld_opcode(fld_header(output_packet))
+<S>  New H80:  dns_types__query <= fld_opcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H30:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+<S>  New H81:  fld_opcode(fld_header(output_packet__2)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H20:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H71:  dns_types__no_error <= fld_rcode(fld_header(output_packet__2))
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H21:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H72:  fld_rcode(fld_header(output_packet__2)) <= dns_types__refused
+***  Proved C3:  element(domainname, [1]) >= - 1
+     using hypothesis H8.
+***  Proved C4:  element(domainname, [1]) <= 2147483646
+     using hypothesis H8.
+***  Proved C5:  element(domainname, [1]) >= - 9223372036854775809
+     using hypothesis H8.
+***  Proved C6:  element(domainname, [1]) <= 9223372036854775806
+     using hypothesis H8.
+---  Eliminated hypothesis H22 (true-hypothesis).
+---  Eliminated hypothesis H23 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H25 (true-hypothesis).
+---  Eliminated hypothesis H26 (true-hypothesis).
+---  Eliminated hypothesis H27 (true-hypothesis).
+---  Eliminated hypothesis H28 (true-hypothesis).
+---  Eliminated hypothesis H31 (true-hypothesis).
+---  Eliminated hypothesis H38 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H44 (true-hypothesis).
+---  Eliminated hypothesis H45 (true-hypothesis).
+---  Eliminated hypothesis H46 (true-hypothesis).
+---  Eliminated hypothesis H47 (true-hypothesis).
+---  Eliminated hypothesis H48 (true-hypothesis).
+---  Eliminated hypothesis H51 (true-hypothesis).
+---  Eliminated hypothesis H52 (true-hypothesis).
+---  Eliminated hypothesis H53 (true-hypothesis).
+---  Eliminated hypothesis H54 (true-hypothesis).
+---  Eliminated hypothesis H55 (true-hypothesis).
+---  Eliminated hypothesis H56 (true-hypothesis).
+---  Eliminated hypothesis H57 (true-hypothesis).
+---  Eliminated hypothesis H73 (true-hypothesis).
+---  Eliminated hypothesis H74 (true-hypothesis).
+---  Eliminated hypothesis H75 (true-hypothesis).
+---  Eliminated hypothesis H76 (true-hypothesis).
+---  Eliminated hypothesis H77 (true-hypothesis).
+---  Eliminated hypothesis H78 (true-hypothesis).
+---  Eliminated hypothesis H79 (true-hypothesis).
+---  Eliminated hypothesis H82 (true-hypothesis).
+---  Eliminated hypothesis H89 (true-hypothesis).
+---  Eliminated hypothesis H90 (true-hypothesis).
+---  Eliminated hypothesis H91 (true-hypothesis).
+---  Eliminated hypothesis H92 (true-hypothesis).
+---  Eliminated hypothesis H93 (true-hypothesis).
+---  Eliminated hypothesis H94 (true-hypothesis).
+---  Eliminated hypothesis H95 (true-hypothesis).
+---  Eliminated hypothesis H96 (true-hypothesis).
+---  Eliminated hypothesis H97 (true-hypothesis).
+---  Eliminated hypothesis H98 (duplicate of H2).
+---  Eliminated hypothesis H88 (duplicate of H60).
+---  Eliminated hypothesis H34 (redundant, given H7).
+---  Eliminated hypothesis H37 (redundant, given H40).
+---  Eliminated hypothesis H49 (redundant, given H1).
+---  Eliminated hypothesis H50 (redundant, given H1).
+---  Eliminated hypothesis H58 (redundant, given H1).
+---  Eliminated hypothesis H86 (redundant, given H1 & H61).
+---  Eliminated hypothesis H87 (redundant, given H59).
+---  Eliminated hypothesis H99 (redundant, given H3).
+-S-  Eliminated hypothesis H1.
+     This was achieved by replacing all occurrences of answer_count by:
+          0.
+<S>  New H61:  answer_count__2 <= 64
+***  Proved C1:  amount_trimmed + (element(domainname, [1]) + 1) >= 0
+     using hypotheses H2 & H8.
+***  Proved C2:  amount_trimmed + (element(domainname, [1]) + 1) <= 2147483647
+     using hypotheses H3 & H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_15.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  true
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  not (0 < rr_type__wirestringtypeindex__last and element(
+          domainname, [rr_type__wirestringtypeindex__first]) <> 0 and 
+          qname_location <= start_byte + dns_types__header_bits div 8)
+---  Hypothesis H63 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H64 has been replaced by "true".  (It is already present, as 
+          H46).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  false
+---  Hypothesis H66 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
+          H46).
+***  Proved C1:  0 >= dns_types__unsigned_short__first
+     using hypothesis H45.
+***  Proved C2:  0 <= dns_types__unsigned_short__last
+     using hypothesis H46.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_16.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  true
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  not (0 < rr_type__wirestringtypeindex__last and element(
+          domainname, [rr_type__wirestringtypeindex__first]) <> 0 and 
+          qname_location <= start_byte + dns_types__header_bits div 8)
+---  Hypothesis H63 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H64 has been replaced by "true".  (It is already present, as 
+          H46).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  true
+---  Hypothesis H66 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
+          H46).
+***  Proved C1:  0 >= dns_types__unsigned_short__first
+     using hypothesis H45.
+***  Proved C2:  0 <= dns_types__unsigned_short__last
+     using hypothesis H46.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_17.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H121 has been replaced by "true".  (It is already present, as 
+          H106).
+---  Hypothesis H122 has been replaced by "true".  (It is already present, as 
+          H107).
+---  Hypothesis H124 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H125 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H127 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H128 has been replaced by "true".  (It is already present, as 
+          H86).
+***  Proved C1:  answer_count__2 >= dns_types__unsigned_short__first
+     using hypothesis H85.
+***  Proved C2:  answer_count__2 <= dns_types__unsigned_short__last
+     using hypothesis H86.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_18.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H121 has been replaced by "true".  (It is already present, as 
+          H106).
+---  Hypothesis H122 has been replaced by "true".  (It is already present, as 
+          H107).
+---  Hypothesis H124 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H125 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H127 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H128 has been replaced by "true".  (It is already present, as 
+          H86).
+***  Proved C1:  answer_count__2 >= dns_types__unsigned_short__first
+     using hypothesis H85.
+***  Proved C2:  answer_count__2 <= dns_types__unsigned_short__last
+     using hypothesis H86.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_19.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  true
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  not (0 < rr_type__wirestringtypeindex__last and element(
+          domainname, [rr_type__wirestringtypeindex__first]) <> 0 and 
+          qname_location <= start_byte + dns_types__header_bits div 8)
+---  Hypothesis H63 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H64 has been replaced by "true".  (It is already present, as 
+          H46).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  false
+---  Hypothesis H66 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H68 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H69 has been replaced by "true".  (It is already present, as 
+          H46).
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H1:  start_byte <= 8192
+<S>  New C2:  start_byte + dns_types__header_bits div 8 <= 8192
+>>>  Restructured hypothesis H62 into:
+     >>>  H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          rr_type__wirestringtypeindex__first]) = 0 or start_byte + 
+          dns_types__header_bits div 8 < qname_location
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H32:  start_byte + 12 >= dns_types__packet_length_range__first
+<S>  New H33:  start_byte + 12 <= dns_types__packet_length_range__last
+<S>  New H36:  start_byte + 12 >= dns_types__packet_bytes_range__base__first
+<S>  New H37:  start_byte + 12 <= dns_types__packet_bytes_range__base__last
+<S>  New H38:  12 >= dns_types__packet_bytes_range__first
+<S>  New H39:  12 <= dns_types__packet_bytes_range__last
+<S>  New H40:  12 >= system__min_int
+<S>  New H41:  12 <= system__max_int
+<S>  New H56:  start_byte + 12 >= dns_types__qname_ptr_range__first
+<S>  New H57:  start_byte + 12 <= dns_types__qname_ptr_range__last
+<S>  New H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          rr_type__wirestringtypeindex__first]) = 0 or start_byte + 12 < 
+          qname_location
+<S>  New C1:  start_byte >= 1
+<S>  New C2:  start_byte <= 8180
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H40:  true
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H41:  true
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H51:  true
+<S>  New H58:  element(domainname, [rr_type__wirestringtypeindex__first]) >= 0
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H52:  true
+<S>  New H59:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483647
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+<S>  New H56:  start_byte >= - 12
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+<S>  New H57:  start_byte <= 16371
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H32:  start_byte >= - 12
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H33:  start_byte <= 8180
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  start_byte >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H38:  true
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8180
+<S>  New H39:  true
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(40).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H36:  start_byte >= - 2147483660
+-S-  Applied substitution rule create_nxdom_rules(41).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H37:  start_byte <= 2147483635
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H8:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H10:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H12:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H28:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H45:  true
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H9:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H11:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H13:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H29:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H46:  true
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H25:  dns_types__query <= fld_opcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H26:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H16:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H43:  true
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H17:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H44:  true
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H61:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          1]) = 0 or start_byte + 12 < qname_location
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H58:  element(domainname, [1]) >= 0
+<S>  New H59:  element(domainname, [1]) <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H61:  true
+<S>  New H62:  element(domainname, [1]) = 0 or start_byte + 12 < qname_location
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C1:  start_byte >= 1
+     using hypothesis H2.
+***  Proved C2:  start_byte <= 8180
+     using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_20.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  dns_types__response_code__first <= dns_types__name_error
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H60 on reading formula in, to give:
+     %%%  H60:  true
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  not (0 < rr_type__wirestringtypeindex__last and element(
+          domainname, [rr_type__wirestringtypeindex__first]) <> 0 and 
+          qname_location <= start_byte + dns_types__header_bits div 8)
+---  Hypothesis H63 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H64 has been replaced by "true".  (It is already present, as 
+          H46).
+%%%  Simplified H65 on reading formula in, to give:
+     %%%  H65:  true
+---  Hypothesis H66 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H67 has been replaced by "true".  (It is already present, as 
+          H46).
+---  Hypothesis H68 has been replaced by "true".  (It is already present, as 
+          H45).
+---  Hypothesis H69 has been replaced by "true".  (It is already present, as 
+          H46).
+-S-  Applied substitution rule create_nxdom_rules(1).
+     This was achieved by replacing all occurrences of dns_types__packet_size 
+          by:
+          8192.
+<S>  New H1:  start_byte <= 8192
+<S>  New C2:  start_byte + dns_types__header_bits div 8 <= 8192
+>>>  Restructured hypothesis H62 into:
+     >>>  H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          rr_type__wirestringtypeindex__first]) = 0 or start_byte + 
+          dns_types__header_bits div 8 < qname_location
+-S-  Applied substitution rule create_nxdom_rules(2).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H32:  start_byte + 12 >= dns_types__packet_length_range__first
+<S>  New H33:  start_byte + 12 <= dns_types__packet_length_range__last
+<S>  New H36:  start_byte + 12 >= dns_types__packet_bytes_range__base__first
+<S>  New H37:  start_byte + 12 <= dns_types__packet_bytes_range__base__last
+<S>  New H38:  12 >= dns_types__packet_bytes_range__first
+<S>  New H39:  12 <= dns_types__packet_bytes_range__last
+<S>  New H40:  12 >= system__min_int
+<S>  New H41:  12 <= system__max_int
+<S>  New H56:  start_byte + 12 >= dns_types__qname_ptr_range__first
+<S>  New H57:  start_byte + 12 <= dns_types__qname_ptr_range__last
+<S>  New H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          rr_type__wirestringtypeindex__first]) = 0 or start_byte + 12 < 
+          qname_location
+<S>  New C1:  start_byte >= 1
+<S>  New C2:  start_byte <= 8180
+-S-  Applied substitution rule create_nxdom_rules(4).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H40:  true
+-S-  Applied substitution rule create_nxdom_rules(5).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H41:  true
+-S-  Applied substitution rule create_nxdom_rules(12).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule create_nxdom_rules(13).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(17).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H51:  true
+<S>  New H58:  element(domainname, [rr_type__wirestringtypeindex__first]) >= 0
+-S-  Applied substitution rule create_nxdom_rules(18).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H52:  true
+<S>  New H59:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483647
+-S-  Applied substitution rule create_nxdom_rules(27).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+<S>  New H56:  start_byte >= - 12
+-S-  Applied substitution rule create_nxdom_rules(28).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+<S>  New H57:  start_byte <= 16371
+-S-  Applied substitution rule create_nxdom_rules(33).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H32:  start_byte >= - 12
+-S-  Applied substitution rule create_nxdom_rules(34).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H33:  start_byte <= 8180
+-S-  Applied substitution rule create_nxdom_rules(38).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  start_byte >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+<S>  New H38:  true
+-S-  Applied substitution rule create_nxdom_rules(39).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8180
+<S>  New H39:  true
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(40).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H36:  start_byte >= - 2147483660
+-S-  Applied substitution rule create_nxdom_rules(41).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H37:  start_byte <= 2147483635
+-S-  Applied substitution rule create_nxdom_rules(44).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule create_nxdom_rules(45).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255)
+-S-  Applied substitution rule create_nxdom_rules(51).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H8:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H10:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H12:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H14:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H28:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New H45:  true
+-S-  Applied substitution rule create_nxdom_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H9:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H11:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H13:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H15:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H29:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New H46:  true
+-S-  Applied substitution rule create_nxdom_rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H25:  dns_types__query <= fld_opcode(fld_header(output_packet))
+-S-  Applied substitution rule create_nxdom_rules(58).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H26:  fld_opcode(fld_header(output_packet)) <= dns_types__status
+-S-  Applied substitution rule create_nxdom_rules(83).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H16:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New H43:  true
+-S-  Applied substitution rule create_nxdom_rules(84).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H17:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New H44:  true
+-S-  Applied substitution rule create_nxdom_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H61:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H62:  rr_type__wirestringtypeindex__last <= 0 or element(domainname, [
+          1]) = 0 or start_byte + 12 < qname_location
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H58:  element(domainname, [1]) >= 0
+<S>  New H59:  element(domainname, [1]) <= 2147483647
+-S-  Applied substitution rule create_nxdom_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H61:  true
+<S>  New H62:  element(domainname, [1]) = 0 or start_byte + 12 < qname_location
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C1:  start_byte >= 1
+     using hypothesis H2.
+***  Proved C2:  start_byte <= 8180
+     using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_21.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H121 has been replaced by "true".  (It is already present, as 
+          H106).
+---  Hypothesis H122 has been replaced by "true".  (It is already present, as 
+          H107).
+---  Hypothesis H124 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H125 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H127 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H128 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H129 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H130 has been replaced by "true".  (It is already present, as 
+          H86).
+***  Proved C1:  output_bytes__2 >= dns_types__header_bits div 8 + 1
+     using hypothesis H59.
+***  Proved C2:  output_bytes__2 <= dns_types__packet_size
+     using hypothesis H60.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_nxdomain_response_22.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(current_name, [i___1]) and element(
+          current_name, [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H36).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H37).
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(trimmed_name__1, [i___1]) and element(
+          trimmed_name__1, [i___1]) <= character__last)
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H49).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H56 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H57 has been replaced by "true".  (It is already present, as 
+          H34).
+%%%  Simplified H62 on reading formula in, to give:
+     %%%  H62:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet__2), [i___1]
+          ) and element(fld_bytes(output_packet__2), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H71 on reading formula in, to give:
+     %%%  H71:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet__2))
+%%%  Simplified H80 on reading formula in, to give:
+     %%%  H80:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet__2))
+---  Hypothesis H89 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H90 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H91 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H92 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H93 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H94 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H95 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H96 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H97 has been replaced by "true".  (It is already present, as 
+          H43).
+%%%  Simplified H106 on reading formula in, to give:
+     %%%  H106:  true
+---  Hypothesis H108 has been replaced by "true".  (It is already present, as 
+          H87).
+---  Hypothesis H109 has been replaced by "true".  (It is already present, as 
+          H88).
+---  Hypothesis H110 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H111 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H112 has been replaced by "true".  (It is already present, as 
+          H100).
+---  Hypothesis H113 has been replaced by "true".  (It is already present, as 
+          H101).
+---  Hypothesis H114 has been replaced by "true".  (It is already present, as 
+          H41).
+---  Hypothesis H115 has been replaced by "true".  (It is already present, as 
+          H42).
+---  Hypothesis H116 has been replaced by "true".  (It is already present, as 
+          H43).
+---  Hypothesis H121 has been replaced by "true".  (It is already present, as 
+          H106).
+---  Hypothesis H122 has been replaced by "true".  (It is already present, as 
+          H107).
+---  Hypothesis H124 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H125 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H127 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H128 has been replaced by "true".  (It is already present, as 
+          H86).
+---  Hypothesis H129 has been replaced by "true".  (It is already present, as 
+          H85).
+---  Hypothesis H130 has been replaced by "true".  (It is already present, as 
+          H86).
+***  Proved C1:  output_bytes__2 >= dns_types__header_bits div 8 + 1
+     using hypothesis H59.
+***  Proved C2:  output_bytes__2 <= dns_types__packet_size
+     using hypothesis H60.
+***  PROVED VC.
+

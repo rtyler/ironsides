@@ -1,0 +1,41 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+               {procedure Process_Dns_Request.Set_Unsigned_32}
+
+
+title procedure set_unsigned_32;
+
+  function round__(real) : integer;
+  type dns_types__packet_bytes_range = integer;
+  type dns_types__byte = integer;
+  type unsigned_types__unsigned32 = integer;
+  type dns_types__bytes_array_type = array [integer] of integer;
+  const system__min_int : integer = pending;
+  const system__max_int : integer = pending;
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const dns_types__byte__base__first : integer = pending; 
+  const dns_types__byte__base__last : integer = pending; 
+  const dns_types__packet_bytes_range__base__first : integer = pending; 
+  const dns_types__packet_bytes_range__base__last : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const dns_types__byte__first : integer = pending; 
+  const dns_types__byte__last : integer = pending; 
+  const dns_types__byte__modulus : integer = pending; 
+  const dns_types__byte__size : integer = pending; 
+  const dns_types__packet_bytes_range__first : integer = pending; 
+  const dns_types__packet_bytes_range__last : integer = pending; 
+  const dns_types__packet_bytes_range__size : integer = pending; 
+  var bytes : dns_types__bytes_array_type;
+  var start_byte : integer;
+  var value : integer;
+
+end;

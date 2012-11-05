@@ -1,0 +1,15 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+               {procedure Tcp_Dns_Package.Initialization_Done}
+
+
+title procedure initialization_done;
+
+  function round__(real) : integer;
+
+end;

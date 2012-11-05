@@ -1,0 +1,2210 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+      procedure process_first_line_of_record.ProcessFirstLineOfRecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 60:
+
+procedure_processfirstlineofrecord_1.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+        ->
+C1:    0 >= unsigned_types__unsigned32__first .
+C2:    0 <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+procedure_processfirstlineofrecord_2.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__a .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+procedure_processfirstlineofrecord_3.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__a .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentipv4__1 >= unsigned_types__unsigned32__first .
+H23:   currentipv4__1 <= unsigned_types__unsigned32__last .
+H24:   true .
+        ->
+C1:    currentipv4__1 >= unsigned_types__unsigned32__first .
+C2:    currentipv4__1 <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 74:
+
+procedure_processfirstlineofrecord_4.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__a .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentipv4__1 >= unsigned_types__unsigned32__first .
+H23:   currentipv4__1 <= unsigned_types__unsigned32__last .
+H24:   true .
+H25:   currentipv4__1 >= unsigned_types__unsigned32__first .
+H26:   currentipv4__1 <= unsigned_types__unsigned32__last .
+H27:   success__1 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H29:   currentipv4__1 >= unsigned_types__unsigned32__first .
+H30:   currentipv4__1 <= unsigned_types__unsigned32__last .
+        ->
+C1:    currentipv4__1 >= unsigned_types__unsigned32__first .
+C2:    currentipv4__1 <= unsigned_types__unsigned32__last .
+C3:    currentclass >= rr_type__classtype__first .
+C4:    currentclass <= rr_type__classtype__last .
+C5:    currentttl >= unsigned_types__unsigned32__first .
+C6:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 83:
+
+procedure_processfirstlineofrecord_5.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__aaaa .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 87:
+
+procedure_processfirstlineofrecord_6.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__aaaa .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__aaaa_record_type__ipv6addrtypeindex__first) and (
+           i___1 <= 
+           rr_type__aaaa_record_type__ipv6addrtypeindex__last)) -> ((element(
+           currentipv6__3, [i___1]) >= 
+           unsigned_types__unsigned16__first) and (element(
+           currentipv6__3, [i___1]) <= 
+           unsigned_types__unsigned16__last))) .
+H23:   true .
+H24:   success__3 .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H26:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__aaaa_record_type__ipv6addrtypeindex__first) and (
+           i___1 <= 
+           rr_type__aaaa_record_type__ipv6addrtypeindex__last)) -> ((element(
+           currentipv6__3, [i___1]) >= 
+           unsigned_types__unsigned16__first) and (element(
+           currentipv6__3, [i___1]) <= 
+           unsigned_types__unsigned16__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 95:
+
+procedure_processfirstlineofrecord_7.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__cname .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 99:
+
+procedure_processfirstlineofrecord_8.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__cname .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+H23:   true .
+H24:   success__5 .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 105:
+
+procedure_processfirstlineofrecord_9.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__cname .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+H23:   true .
+H24:   success__5 .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+H26:   linecount >= unsigned_types__unsigned32__first .
+H27:   linecount <= unsigned_types__unsigned32__last .
+H28:   lastpos >= rr_type__linelengthindex__first .
+H29:   lastpos <= rr_type__linelengthindex__last .
+H30:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__6, [i___1]) >= character__first) and (element(
+           currentdomainname__6, [i___1]) <= character__last))) .
+H31:   true .
+H32:   success__6 .
+H33:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H34:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__6, [i___1]) >= character__first) and (element(
+           currentdomainname__6, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+procedure_processfirstlineofrecord_10.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__cname .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+H23:   true .
+H24:   not success__5 .
+H25:   success__5 .
+H26:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H27:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__5, [i___1]) >= character__first) and (element(
+           currentdomainname__5, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 114:
+
+procedure_processfirstlineofrecord_11.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__mx .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 114:
+
+procedure_processfirstlineofrecord_12.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__mx .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentpref__8 >= unsigned_types__unsigned16__first .
+H23:   currentpref__8 <= unsigned_types__unsigned16__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H25:   true .
+        ->
+C1:    currentpref__8 >= unsigned_types__unsigned16__first .
+C2:    currentpref__8 <= unsigned_types__unsigned16__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 118:
+
+procedure_processfirstlineofrecord_13.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__mx .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentpref__8 >= unsigned_types__unsigned16__first .
+H23:   currentpref__8 <= unsigned_types__unsigned16__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H25:   true .
+H26:   currentpref__8 >= unsigned_types__unsigned16__first .
+H27:   currentpref__8 <= unsigned_types__unsigned16__last .
+H28:   success__8 .
+H29:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 124:
+
+procedure_processfirstlineofrecord_14.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__mx .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentpref__8 >= unsigned_types__unsigned16__first .
+H23:   currentpref__8 <= unsigned_types__unsigned16__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H25:   true .
+H26:   currentpref__8 >= unsigned_types__unsigned16__first .
+H27:   currentpref__8 <= unsigned_types__unsigned16__last .
+H28:   success__8 .
+H29:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H30:   linecount >= unsigned_types__unsigned32__first .
+H31:   linecount <= unsigned_types__unsigned32__last .
+H32:   lastpos >= rr_type__linelengthindex__first .
+H33:   lastpos <= rr_type__linelengthindex__last .
+H34:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__9, [i___1]) >= character__first) and (element(
+           currentdomainname__9, [i___1]) <= character__last))) .
+H35:   true .
+H36:   success__9 .
+H37:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H38:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__9, [i___1]) >= character__first) and (element(
+           currentdomainname__9, [i___1]) <= character__last))) .
+H39:   currentpref__8 >= unsigned_types__unsigned16__first .
+H40:   currentpref__8 <= unsigned_types__unsigned16__last .
+        ->
+C1:    currentpref__8 >= unsigned_types__unsigned16__first .
+C2:    currentpref__8 <= unsigned_types__unsigned16__last .
+C3:    currentclass >= rr_type__classtype__first .
+C4:    currentclass <= rr_type__classtype__last .
+C5:    currentttl >= unsigned_types__unsigned32__first .
+C6:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+procedure_processfirstlineofrecord_15.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__mx .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   currentpref__8 >= unsigned_types__unsigned16__first .
+H23:   currentpref__8 <= unsigned_types__unsigned16__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H25:   true .
+H26:   currentpref__8 >= unsigned_types__unsigned16__first .
+H27:   currentpref__8 <= unsigned_types__unsigned16__last .
+H28:   not success__8 .
+H29:   success__8 .
+H30:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H31:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__8, [i___1]) >= character__first) and (element(
+           currentdomainname__8, [i___1]) <= character__last))) .
+H32:   currentpref__8 >= unsigned_types__unsigned16__first .
+H33:   currentpref__8 <= unsigned_types__unsigned16__last .
+        ->
+C1:    currentpref__8 >= unsigned_types__unsigned16__first .
+C2:    currentpref__8 <= unsigned_types__unsigned16__last .
+C3:    currentclass >= rr_type__classtype__first .
+C4:    currentclass <= rr_type__classtype__last .
+C5:    currentttl >= unsigned_types__unsigned32__first .
+C6:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 134:
+
+procedure_processfirstlineofrecord_16.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ns .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 138:
+
+procedure_processfirstlineofrecord_17.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ns .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H23:   true .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H25:   true .
+H26:   success__12 .
+H27:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 144:
+
+procedure_processfirstlineofrecord_18.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ns .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H23:   true .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H25:   true .
+H26:   success__12 .
+H27:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H28:   linecount >= unsigned_types__unsigned32__first .
+H29:   linecount <= unsigned_types__unsigned32__last .
+H30:   lastpos >= rr_type__linelengthindex__first .
+H31:   lastpos <= rr_type__linelengthindex__last .
+H32:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__13, [i___1]) >= character__first) and (element(
+           currentdomainname__13, [i___1]) <= character__last))) .
+H33:   true .
+H34:   success__13 .
+H35:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H36:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__13, [i___1]) >= character__first) and (element(
+           currentdomainname__13, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+procedure_processfirstlineofrecord_19.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ns .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H23:   true .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+H25:   true .
+H26:   not success__12 .
+H27:   success__12 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H29:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__11, [i___1]) >= character__first) and (element(
+           currentdomainname__11, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 152:
+
+procedure_processfirstlineofrecord_20.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ptr .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 155:
+
+procedure_processfirstlineofrecord_21.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ptr .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+H23:   true .
+H24:   success__15 .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 161:
+
+procedure_processfirstlineofrecord_22.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ptr .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+H23:   true .
+H24:   success__15 .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+H26:   linecount >= unsigned_types__unsigned32__first .
+H27:   linecount <= unsigned_types__unsigned32__last .
+H28:   lastpos >= rr_type__linelengthindex__first .
+H29:   lastpos <= rr_type__linelengthindex__last .
+H30:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__16, [i___1]) >= character__first) and (element(
+           currentdomainname__16, [i___1]) <= character__last))) .
+H31:   true .
+H32:   success__16 .
+H33:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H34:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__16, [i___1]) >= character__first) and (element(
+           currentdomainname__16, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+procedure_processfirstlineofrecord_23.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__ptr .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+H23:   true .
+H24:   not success__15 .
+H25:   success__15 .
+H26:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H27:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__15, [i___1]) >= character__first) and (element(
+           currentdomainname__15, [i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 170:
+
+procedure_processfirstlineofrecord_24.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__soa .
+        ->
+C1:    0 >= unsigned_types__unsigned32__first .
+C2:    0 <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 171:
+
+procedure_processfirstlineofrecord_25.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__soa .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 177:
+
+procedure_processfirstlineofrecord_26.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__soa .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+H22:   lastpos >= rr_type__linelengthindex__first .
+H23:   lastpos <= rr_type__linelengthindex__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__18, [i___1]) >= character__first) and (element(
+           currentnameserver__18, [i___1]) <= character__last))) .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentemail__18, [i___1]) >= character__first) and (element(
+           currentemail__18, [i___1]) <= character__last))) .
+H26:   true .
+H27:   success__18 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__18, [i___1]) >= character__first) and (element(
+           currentnameserver__18, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 183:
+
+procedure_processfirstlineofrecord_27.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__soa .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+H22:   lastpos >= rr_type__linelengthindex__first .
+H23:   lastpos <= rr_type__linelengthindex__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__18, [i___1]) >= character__first) and (element(
+           currentnameserver__18, [i___1]) <= character__last))) .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentemail__18, [i___1]) >= character__first) and (element(
+           currentemail__18, [i___1]) <= character__last))) .
+H26:   true .
+H27:   success__18 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__18, [i___1]) >= character__first) and (element(
+           currentnameserver__18, [i___1]) <= character__last))) .
+H29:   linecount >= unsigned_types__unsigned32__first .
+H30:   linecount <= unsigned_types__unsigned32__last .
+H31:   lastpos >= rr_type__linelengthindex__first .
+H32:   lastpos <= rr_type__linelengthindex__last .
+H33:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__19, [i___1]) >= character__first) and (element(
+           currentnameserver__19, [i___1]) <= character__last))) .
+H34:   true .
+H35:   success__19 .
+H36:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentemail__18, [i___1]) >= character__first) and (element(
+           currentemail__18, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+procedure_processfirstlineofrecord_28.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__soa .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+H22:   lastpos >= rr_type__linelengthindex__first .
+H23:   lastpos <= rr_type__linelengthindex__last .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentnameserver__18, [i___1]) >= character__first) and (element(
+           currentnameserver__18, [i___1]) <= character__last))) .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentemail__18, [i___1]) >= character__first) and (element(
+           currentemail__18, [i___1]) <= character__last))) .
+H26:   true .
+H27:   not success__18 .
+H28:   success__18 .
+H29:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentemail__18, [i___1]) >= character__first) and (element(
+           currentemail__18, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 194:
+
+procedure_processfirstlineofrecord_29.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__dnskey .
+        ->
+C1:    0 >= unsigned_types__unsigned32__first .
+C2:    0 <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 195:
+
+procedure_processfirstlineofrecord_30.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__dnskey .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 199:
+
+procedure_processfirstlineofrecord_31.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__nsec .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 204:
+
+procedure_processfirstlineofrecord_32.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__nsec .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H23:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(rrstring__23, [
+           i___1]) >= character__first) and (element(rrstring__23, [
+           i___1]) <= character__last))) .
+H24:   true .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H26:   true .
+H27:   success__24 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= rr_type__linelengthindex__first .
+C4:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 209:
+
+procedure_processfirstlineofrecord_33.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__nsec .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H23:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(rrstring__23, [
+           i___1]) >= character__first) and (element(rrstring__23, [
+           i___1]) <= character__last))) .
+H24:   true .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H26:   true .
+H27:   success__24 .
+H28:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H29:   linecount >= unsigned_types__unsigned32__first .
+H30:   linecount <= unsigned_types__unsigned32__last .
+H31:   lastpos >= rr_type__linelengthindex__first .
+H32:   lastpos <= rr_type__linelengthindex__last .
+H33:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__25, [i___1]) >= character__first) and (element(
+           currentdomainname__25, [i___1]) <= character__last))) .
+H34:   true .
+H35:   success__25 .
+H36:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H37:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__25, [i___1]) >= character__first) and (element(
+           currentdomainname__25, [i___1]) <= character__last))) .
+H38:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(rrstring__23, [
+           i___1]) >= character__first) and (element(rrstring__23, [
+           i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+procedure_processfirstlineofrecord_34.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__nsec .
+H20:   lastpos >= rr_type__linelengthindex__first .
+H21:   lastpos <= rr_type__linelengthindex__last .
+H22:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H23:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(rrstring__23, [
+           i___1]) >= character__first) and (element(rrstring__23, [
+           i___1]) <= character__last))) .
+H24:   true .
+H25:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H26:   true .
+H27:   not success__24 .
+H28:   success__24 .
+H29:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) >= character__first) and (element(
+           rr_type__convertdomainnametowire(currentowner), [
+           i___1]) <= character__last))) .
+H30:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentdomainname__23, [i___1]) >= character__first) and (element(
+           currentdomainname__23, [i___1]) <= character__last))) .
+H31:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(rrstring__23, [
+           i___1]) >= character__first) and (element(rrstring__23, [
+           i___1]) <= character__last))) .
+        ->
+C1:    currentclass >= rr_type__classtype__first .
+C2:    currentclass <= rr_type__classtype__last .
+C3:    currentttl >= unsigned_types__unsigned32__first .
+C4:    currentttl <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 218:
+
+procedure_processfirstlineofrecord_35.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__rrsig .
+        ->
+C1:    0 >= unsigned_types__unsigned32__first .
+C2:    0 <= unsigned_types__unsigned32__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 219:
+
+procedure_processfirstlineofrecord_36.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   currentrecordtype = dns_types__rrsig .
+H20:   0 >= unsigned_types__unsigned32__first .
+H21:   0 <= unsigned_types__unsigned32__last .
+        ->
+C1:    lastpos >= rr_type__linelengthindex__first .
+C2:    lastpos <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 222:
+
+procedure_processfirstlineofrecord_37.
+H1:    lastpos >= 1 .
+H2:    lastpos <= rr_type__linelengthindex__last .
+H3:    currentrecordtype >= dns_types__query_type__first .
+H4:    currentrecordtype <= dns_types__query_type__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentorigin, [i___1]) >= character__first) and (element(
+           currentorigin, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           currentowner, [i___1]) >= character__first) and (element(
+           currentowner, [i___1]) <= character__last))) .
+H7:    currentttl >= unsigned_types__unsigned32__first .
+H8:    currentttl <= unsigned_types__unsigned32__last .
+H9:    currentclass >= rr_type__classtype__first .
+H10:   currentclass <= rr_type__classtype__last .
+H11:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           currentline, [i___1]) >= character__first) and (element(
+           currentline, [i___1]) <= character__last))) .
+H12:   lastpos >= rr_type__linelengthindex__first .
+H13:   lastpos <= rr_type__linelengthindex__last .
+H14:   linecount >= unsigned_types__unsigned32__first .
+H15:   linecount <= unsigned_types__unsigned32__last .
+H16:   true .
+H17:   0 >= unsigned_types__unsigned32__first .
+H18:   0 <= unsigned_types__unsigned32__last .
+H19:   not (currentrecordtype = dns_types__a) .
+H20:   not (currentrecordtype = dns_types__aaaa) .
+H21:   not (currentrecordtype = dns_types__cname) .
+H22:   not (currentrecordtype = dns_types__mx) .
+H23:   not (currentrecordtype = dns_types__ns) .
+H24:   not (currentrecordtype = dns_types__ptr) .
+H25:   not (currentrecordtype = dns_types__soa) .
+H26:   not (currentrecordtype = dns_types__dnskey) .
+H27:   not (currentrecordtype = dns_types__nsec) .
+H28:   not (currentrecordtype = dns_types__rrsig) .
+        ->
+C1:    linecount >= unsigned_types__unsigned32__first .
+C2:    linecount <= unsigned_types__unsigned32__last .
+C3:    lastpos >= natural__first .
+C4:    lastpos <= natural__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_processfirstlineofrecord_38.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_39.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_40.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_41.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_42.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_43.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_44.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_45.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_46.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_47.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_48.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_49.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_50.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_51.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_52.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_53.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_54.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_55.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_56.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_57.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_58.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_59.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_60.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_61.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_62.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_63.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_64.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_65.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_66.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_67.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_processfirstlineofrecord_68.
+*** true .          /* trivially true VC removed by Examiner */
+
+

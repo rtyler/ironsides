@@ -1,0 +1,770 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.DomainNameLength
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_domainnamelength_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> character__first <= element(name, [
+          i___1]) and element(name, [i___1]) <= character__last)
+<S>  New C2:  1 <= domainnamestringtypeindex__last
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_domainnamelength_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  domainnamestringtypeindex__first < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+***  Proved C3:  domainnamestringtypeindex__first < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New C1:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= 
+          domainnamestringtypeindex__first and domainnamestringtypeindex__first 
+          + 1 <= domainnamestringtypeindex__last
+<S>  New C2:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= integer__base__first and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C2:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first <= 2147483646
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  1 <= domainnamestringtypeindex__last
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C1:  element(name, [1]) <> 32 -> 2 <= domainnamestringtypeindex__last
+<S>  New C2:  true
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H4:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+<S>  New C1:  true
+***  Proved C2:  true
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_domainnamelength_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 32)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          domainnamestringtypeindex__first and index + 2 <= 
+          domainnamestringtypeindex__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          integer__base__first and index + 2 <= integer__base__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  index + 1 < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+***  Proved C3:  index + 1 < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+     using hypotheses H4 & H5.
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 128
+<S>  New C1:  index < 127 and element(name, [domainnamestringtypeindex__first]) 
+          <> 32 -> index + 2 >= domainnamestringtypeindex__first and index + 2 
+          <= domainnamestringtypeindex__last
+<S>  New C2:  index < 127 and element(name, [domainnamestringtypeindex__first]) 
+          <> 32 -> index + 2 >= integer__base__first and index + 2 <= 
+          integer__base__last
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C2:  index < 127 and element(name, [domainnamestringtypeindex__first]) 
+          <> 32 -> index >= - 2147483650 and index + 2 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  index < 127 and element(name, [domainnamestringtypeindex__first]) 
+          <> 32 -> index >= - 2147483650 and index <= 2147483645
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H6:  index >= 0
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C1:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index + 2 <= domainnamestringtypeindex__last
+<S>  New C2:  index < 127 and element(name, [1]) <> 32 -> index >= - 2147483650 
+          and index <= 2147483645
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  index <= 128
+<S>  New H7:  index <= 127
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+<S>  New C1:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index <= 126
+***  Proved C2:  index < 127 and element(name, [1]) <> 32 -> index >= - 
+          2147483650 and index <= 2147483645
+     using hypotheses H1 & H4.
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H7 (duplicate of H1).
+---  Eliminated hypothesis H5 (redundant, given H1).
+---  Eliminated hypothesis H6 (redundant, given H4).
+     +++  New H10:  integer__size >= 0
+     +++  New H11:  character__size >= 0
+     +++  New H12:  positive__size >= 0
+     +++  New H13:  domainnamestringtypeindex__size >= 0
+>>>  Conclusion C1 is an implication formula [P->Q].
+     Attempting to prove this by proving Q while adding P to the hypotheses.
++++  Added new hypotheses (in proving an implication formula).
+     +++  New H14:  index < 127
+     +++  New H15:  element(name, [1]) <> 32
++++  New subgoal C1:  index >= - 1 and index <= 126
+>>>  Conclusion C1 has now been split into two, giving:
+     >>>  C1:  index >= - 1
+     >>>  C2:  index <= 126
+***  Proved subgoal C1
+     using hypothesis H4.
+***  Proved subgoal C2
+     using hypothesis H14.
+***  Proved C1:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index <= 126
+     by implication.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_domainnamelength_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  domainnamestringtypeindex__first < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          domainnamestringtypeindex__first + 1 -> element(name, [q_]) <> 32)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+***  Proved C1:  domainnamestringtypeindex__first < maxdomainnamelength
+     using hypothesis H10.
+***  Proved C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+---  Attempted addition of new hypothesis:
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+     eliminated: this already exists (as H4).
++++  Using "A->B, A |- B" on hypotheses H9 & H10 yields a new hypothesis:
+     +++  H4:  domainnamestringtypeindex__first <= 
+          domainnamestringtypeindex__last
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= 
+          domainnamestringtypeindex__first and domainnamestringtypeindex__first 
+          + 1 <= domainnamestringtypeindex__last
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= integer__base__first and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+<S>  New H9:  domainnamestringtypeindex__first < 128 -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+<S>  New H10:  domainnamestringtypeindex__first < 128
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first <= 2147483646
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  1 <= domainnamestringtypeindex__last
+<S>  New H11:  element(name, [1]) <> 32
+<S>  New H12:  element(name, [2]) <> 32
+<S>  New H7:  element(name, [1]) <> 32 -> 2 <= domainnamestringtypeindex__last
+<S>  New H9:  1 <= domainnamestringtypeindex__last
+<S>  New H10:  true
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 2 -> element(name, [q_]) 
+          <> 32)
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H4:  true
+<S>  New H7:  true
+<S>  New H9:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H3 (true-hypothesis).
+---  Eliminated hypothesis H5 (true-hypothesis).
+---  Eliminated hypothesis H6 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H4 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+     +++  New H13:  integer__size >= 0
+     +++  New H14:  character__size >= 0
+     +++  New H15:  positive__size >= 0
+     +++  New H16:  domainnamestringtypeindex__size >= 0
+
+
+@@@@@@@@@@  VC: function_domainnamelength_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 32)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          domainnamestringtypeindex__first and index + 2 <= 
+          domainnamestringtypeindex__last
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          integer__base__first and index + 2 <= integer__base__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  index + 1 < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  element(name, [index + 2]) <> 32
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 2 -> element(
+          name, [q_]) <> 32)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+***  Proved C1:  index + 1 < maxdomainnamelength
+     using hypothesis H13.
+***  Proved C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+     using hypothesis H3.
++++  Using "A->B, A |- B" on hypotheses H12 & H13 yields a new hypothesis:
+     +++  H16:  domainnamestringtypeindex__first <= 
+          domainnamestringtypeindex__last
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 128
+<S>  New H10:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index + 2 >= domainnamestringtypeindex__first and index + 2 
+          <= domainnamestringtypeindex__last
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index + 2 >= integer__base__first and index + 2 <= 
+          integer__base__last
+<S>  New H12:  index < 127 -> domainnamestringtypeindex__first <= 
+          domainnamestringtypeindex__last
+<S>  New H13:  index < 127
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index >= - 2147483650 and index + 2 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index >= - 2147483650 and index <= 2147483645
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H6:  index >= 0
+<S>  New H14:  element(name, [1]) <> 32
+<S>  New H16:  1 <= domainnamestringtypeindex__last
+<S>  New H10:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index + 2 <= domainnamestringtypeindex__last
+<S>  New H12:  index < 127 -> 1 <= domainnamestringtypeindex__last
+<S>  New H11:  index < 127 and element(name, [1]) <> 32 -> index >= - 
+          2147483650 and index <= 2147483645
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  index <= 128
+<S>  New H7:  index <= 127
+<S>  New H16:  true
+<S>  New H10:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index <= 126
+<S>  New H12:  true
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+---  Eliminated hypothesis H7 (duplicate of H1).
+>>>  Using "A->B, A |- B" on H11, given H13 & H14, we simplify the former to:
+     >>>  H11:  index >= - 2147483650 and index <= 2147483645
+>>>  Using "A->B, A |- B" on H10, given H13 & H14, we simplify the former to:
+     >>>  H10:  index >= - 1 and index <= 126
+---  Eliminated hypothesis H1 (redundant, given H13).
+---  Eliminated hypothesis H5 (redundant, given H13).
+---  Eliminated hypothesis H6 (redundant, given H4).
+>>>  Hypothesis H10 has now been split into two, giving:
+     >>>  H17:  index >= - 1
+     >>>  H18:  index <= 126
+>>>  Hypothesis H11 has now been split into two, giving:
+     >>>  H19:  index >= - 2147483650
+     >>>  H20:  index <= 2147483645
+     +++  New H21:  integer__size >= 0
+     +++  New H22:  character__size >= 0
+     +++  New H23:  positive__size >= 0
+     +++  New H24:  domainnamestringtypeindex__size >= 0
+
+
+@@@@@@@@@@  VC: function_domainnamelength_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 32)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+***  Proved C1:  index + 1 >= domainnamestringtypeindex__first
+     using hypothesis H4.
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> character__first <= element(name, [i___1]) 
+          and element(name, [i___1]) <= character__last)
+<S>  New H5:  index <= 128
+<S>  New C2:  index <= 127
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 128
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(name, [i___1]) and element(
+          name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(name, [i___1]) and element(
+          name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C2:  index <= 127
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_domainnamelength_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  domainnamestringtypeindex__first < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  domainnamestringtypeindex__first = 1 and (element(name, [1]) = 
+          32 or element(name, [2]) = 32) or (domainnamestringtypeindex__first = 
+          maxdomainnamelength or element(name, [
+          domainnamestringtypeindex__first + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= domainnamestringtypeindex__first -> element(name, [
+          q_]) <> 32))
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+***  Proved C2:  true
+***  Proved C3:  domainnamestringtypeindex__first <= 
+          domainnamestringtypeindex__last
+     using hypothesis H4.
+>>>  Restructured hypothesis H10 into:
+     >>>  H10:  maxdomainnamelength <= domainnamestringtypeindex__first or 
+          element(name, [domainnamestringtypeindex__first]) = 32 or element(
+          name, [domainnamestringtypeindex__first + 1]) = 32
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= 
+          domainnamestringtypeindex__first and domainnamestringtypeindex__first 
+          + 1 <= domainnamestringtypeindex__last
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first + 1 >= integer__base__first and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+<S>  New H9:  domainnamestringtypeindex__first < 128 -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+<S>  New H10:  128 <= domainnamestringtypeindex__first or element(name, [
+          domainnamestringtypeindex__first]) = 32 or element(name, [
+          domainnamestringtypeindex__first + 1]) = 32
+<S>  New C1:  domainnamestringtypeindex__first = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (domainnamestringtypeindex__first = 
+          128 or element(name, [domainnamestringtypeindex__first + 1]) = 32 and 
+          for_all(q_ : integer, 1 <= q_ and q_ <= 
+          domainnamestringtypeindex__first -> element(name, [q_]) <> 32))
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first + 1 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H8:  domainnamestringtypeindex__first < 128 and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> 
+          domainnamestringtypeindex__first >= - 2147483649 and 
+          domainnamestringtypeindex__first <= 2147483646
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  1 <= domainnamestringtypeindex__last
+<S>  New H7:  element(name, [1]) <> 32 -> 2 <= domainnamestringtypeindex__last
+<S>  New H9:  1 <= domainnamestringtypeindex__last
+<S>  New H10:  element(name, [1]) = 32 or element(name, [2]) = 32
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C1:  element(name, [1]) = 32 or element(name, [2]) = 32 or element(
+          name, [2]) = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= 1 -> 
+          element(name, [q_]) <> 32)
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H4:  true
+<S>  New H7:  true
+<S>  New H9:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C1:  element(name, [1]) = 32 or element(name, [2]) = 32 or element(
+          name, [2]) = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= 1 -> 
+          element(name, [q_]) <> 32)
+     using hypothesis H10.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_domainnamelength_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 32)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          domainnamestringtypeindex__first and index + 2 <= 
+          domainnamestringtypeindex__last
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 -> index + 2 >= 
+          integer__base__first and index + 2 <= integer__base__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  index + 1 < maxdomainnamelength -> 
+          domainnamestringtypeindex__first <= domainnamestringtypeindex__last
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  not (index + 1 < maxdomainnamelength and element(name, [
+          domainnamestringtypeindex__first]) <> 32 and element(name, [index + 2]
+          ) <> 32)
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H7)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  index = 0 and (element(name, [1]) = 32 or element(name, [2]) = 
+          32) or (index + 1 = maxdomainnamelength or element(name, [index + 2]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 32))
+***  Proved C2:  index + 1 >= domainnamestringtypeindex__first
+     using hypothesis H6.
+***  Proved C3:  index + 1 <= domainnamestringtypeindex__last
+     using hypothesis H7.
+>>>  Restructured hypothesis H13 into:
+     >>>  H13:  maxdomainnamelength <= index + 1 or element(name, [
+          domainnamestringtypeindex__first]) = 32 or element(name, [index + 2]) 
+          = 32
+-S-  Applied substitution rule domainnamele_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 128
+<S>  New H10:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index + 2 >= domainnamestringtypeindex__first and index + 2 
+          <= domainnamestringtypeindex__last
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index + 2 >= integer__base__first and index + 2 <= 
+          integer__base__last
+<S>  New H12:  index < 127 -> domainnamestringtypeindex__first <= 
+          domainnamestringtypeindex__last
+<S>  New H13:  127 <= index or element(name, [domainnamestringtypeindex__first])
+           = 32 or element(name, [index + 2]) = 32
+<S>  New C1:  index = 0 and (element(name, [1]) = 32 or element(name, [2]) = 32)
+           or (index = 127 or element(name, [index + 2]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= index + 1 -> element(name, [q_]) <> 32))
+-S-  Applied substitution rule domainnamele_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index >= - 2147483650 and index + 2 <= integer__base__last
+-S-  Applied substitution rule domainnamele_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H11:  index < 127 and element(name, [domainnamestringtypeindex__first])
+           <> 32 -> index >= - 2147483650 and index <= 2147483645
+-S-  Applied substitution rule domainnamele_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule domainnamele_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H6:  index >= 0
+<S>  New H10:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index + 2 <= domainnamestringtypeindex__last
+<S>  New H12:  index < 127 -> 1 <= domainnamestringtypeindex__last
+<S>  New H13:  127 <= index or element(name, [1]) = 32 or element(name, [index 
+          + 2]) = 32
+<S>  New H11:  index < 127 and element(name, [1]) <> 32 -> index >= - 
+          2147483650 and index <= 2147483645
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+-S-  Applied substitution rule domainnamele_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  index <= 128
+<S>  New H7:  index <= 127
+<S>  New H10:  index < 127 and element(name, [1]) <> 32 -> index >= - 1 and 
+          index <= 126
+<S>  New H12:  true
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+%%%  Simplified H13 further (given H2 & H6), to give:
+     %%%  H13:  127 <= index or element(name, [index + 2]) = 32
+---  Eliminated hypothesis H7 (duplicate of H1).
+---  Eliminated hypothesis H5 (redundant, given H1).
+---  Eliminated hypothesis H6 (redundant, given H4).
+%%%  Simplified C1 further (given H4), to give:
+     %%%  C1:  index = 127 or element(name, [index + 2]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= index + 1 -> element(name, [q_]) <> 32)
+     +++  New H16:  integer__size >= 0
+     +++  New H17:  character__size >= 0
+     +++  New H18:  positive__size >= 0
+     +++  New H19:  domainnamestringtypeindex__size >= 0
+

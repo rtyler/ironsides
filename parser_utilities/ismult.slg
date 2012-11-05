@@ -1,0 +1,45 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.IsMult
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_ismult_1.  @@@@@@@@@@
+***  Proved C1:  char >= character__first
+     using hypothesis H2.
+***  Proved C2:  char <= character__last
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_ismult_2.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+***  Proved C1:  ada__characters__handling__to_upper(char) >= character__first
+     using hypothesis H6.
+***  Proved C2:  ada__characters__handling__to_upper(char) <= character__last
+     using hypothesis H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_ismult_3.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_ismult_4.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

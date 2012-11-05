@@ -1,0 +1,1448 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.findFirstToken
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 361:
+
+procedure_findfirsttoken_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 361:
+
+procedure_findfirsttoken_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 362:
+
+procedure_findfirsttoken_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to assertion of line 362:
+
+procedure_findfirsttoken_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 363:
+
+procedure_findfirsttoken_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 366:
+
+procedure_findfirsttoken_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 366:
+
+procedure_findfirsttoken_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 367:
+
+procedure_findfirsttoken_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 367:
+
+procedure_findfirsttoken_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 367:
+
+procedure_findfirsttoken_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 369:
+
+procedure_findfirsttoken_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to assertion of line 369:
+
+procedure_findfirsttoken_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to assertion of line 369:
+
+procedure_findfirsttoken_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 371:
+
+procedure_findfirsttoken_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 373:
+
+procedure_findfirsttoken_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 373:
+
+procedure_findfirsttoken_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 373:
+
+procedure_findfirsttoken_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 374:
+
+procedure_findfirsttoken_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 374:
+
+procedure_findfirsttoken_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 374:
+
+procedure_findfirsttoken_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 385:
+
+procedure_findfirsttoken_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 385:
+
+procedure_findfirsttoken_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 385:
+
+procedure_findfirsttoken_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 385:
+
+procedure_findfirsttoken_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 385:
+
+procedure_findfirsttoken_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 385:
+
+procedure_findfirsttoken_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 386:
+
+procedure_findfirsttoken_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to assertion of line 386:
+
+procedure_findfirsttoken_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to assertion of line 386:
+
+procedure_findfirsttoken_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to assertion of line 386:
+
+procedure_findfirsttoken_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 388:
+
+procedure_findfirsttoken_40.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 389:
+
+procedure_findfirsttoken_41.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 390:
+
+procedure_findfirsttoken_42.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 391:
+
+procedure_findfirsttoken_43.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 392:
+
+procedure_findfirsttoken_44.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 393:
+
+procedure_findfirsttoken_45.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 394:
+
+procedure_findfirsttoken_46.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 398:
+
+procedure_findfirsttoken_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_48.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 398:
+
+procedure_findfirsttoken_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_50.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 398:
+
+procedure_findfirsttoken_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_52.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 398:
+
+procedure_findfirsttoken_53.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 399:
+
+procedure_findfirsttoken_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_55.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 399:
+
+procedure_findfirsttoken_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_57.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 399:
+
+procedure_findfirsttoken_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_59.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 399:
+
+procedure_findfirsttoken_60.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 400:
+
+procedure_findfirsttoken_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_62.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 400:
+
+procedure_findfirsttoken_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_64.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 400:
+
+procedure_findfirsttoken_65.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_66.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 400:
+
+procedure_findfirsttoken_67.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 401:
+
+procedure_findfirsttoken_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_69.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 401:
+
+procedure_findfirsttoken_70.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_71.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 401:
+
+procedure_findfirsttoken_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_73.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 401:
+
+procedure_findfirsttoken_74.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 402:
+
+procedure_findfirsttoken_75.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_76.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 402:
+
+procedure_findfirsttoken_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_78.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 402:
+
+procedure_findfirsttoken_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_80.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 402:
+
+procedure_findfirsttoken_81.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 403:
+
+procedure_findfirsttoken_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_83.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 403:
+
+procedure_findfirsttoken_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_85.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 403:
+
+procedure_findfirsttoken_86.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_87.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 403:
+
+procedure_findfirsttoken_88.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 404:
+
+procedure_findfirsttoken_89.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_90.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 404:
+
+procedure_findfirsttoken_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_92.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 404:
+
+procedure_findfirsttoken_93.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_94.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 404:
+
+procedure_findfirsttoken_95.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 405:
+
+procedure_findfirsttoken_96.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_97.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 405:
+
+procedure_findfirsttoken_98.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_99.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 405:
+
+procedure_findfirsttoken_100.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_101.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 405:
+
+procedure_findfirsttoken_102.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 408:
+
+procedure_findfirsttoken_103.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_104.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 408:
+
+procedure_findfirsttoken_105.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_106.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 408:
+
+procedure_findfirsttoken_107.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_108.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 408:
+
+procedure_findfirsttoken_109.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 409:
+
+procedure_findfirsttoken_110.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_111.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 409:
+
+procedure_findfirsttoken_112.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_113.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 409:
+
+procedure_findfirsttoken_114.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_115.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 409:
+
+procedure_findfirsttoken_116.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 411:
+
+procedure_findfirsttoken_117.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_118.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 411:
+
+procedure_findfirsttoken_119.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_120.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 411:
+
+procedure_findfirsttoken_121.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_122.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 411:
+
+procedure_findfirsttoken_123.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 413:
+
+procedure_findfirsttoken_124.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_125.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 413:
+
+procedure_findfirsttoken_126.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_127.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 413:
+
+procedure_findfirsttoken_128.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_129.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 413:
+
+procedure_findfirsttoken_130.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 415:
+
+procedure_findfirsttoken_131.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_132.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 415:
+
+procedure_findfirsttoken_133.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_134.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 415:
+
+procedure_findfirsttoken_135.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_136.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 415:
+
+procedure_findfirsttoken_137.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 416:
+
+procedure_findfirsttoken_138.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_139.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 416:
+
+procedure_findfirsttoken_140.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_141.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 416:
+
+procedure_findfirsttoken_142.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_143.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 416:
+
+procedure_findfirsttoken_144.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 417:
+
+procedure_findfirsttoken_145.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_146.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 417:
+
+procedure_findfirsttoken_147.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_148.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 417:
+
+procedure_findfirsttoken_149.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_150.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 417:
+
+procedure_findfirsttoken_151.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          418:
+
+procedure_findfirsttoken_152.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_153.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to precondition check associated with 
+          statement of line 418:
+
+procedure_findfirsttoken_154.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_155.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to precondition check associated with 
+          statement of line 418:
+
+procedure_findfirsttoken_156.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_157.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to precondition check associated with 
+          statement of line 418:
+
+procedure_findfirsttoken_158.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 419:
+
+procedure_findfirsttoken_159.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_160.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 419:
+
+procedure_findfirsttoken_161.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_162.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 419:
+
+procedure_findfirsttoken_163.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_164.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 419:
+
+procedure_findfirsttoken_165.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 421:
+
+procedure_findfirsttoken_166.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_167.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 421:
+
+procedure_findfirsttoken_168.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_169.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 421:
+
+procedure_findfirsttoken_170.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_171.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 421:
+
+procedure_findfirsttoken_172.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 423:
+
+procedure_findfirsttoken_173.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_174.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 423:
+
+procedure_findfirsttoken_175.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_176.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 423:
+
+procedure_findfirsttoken_177.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_178.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 423:
+
+procedure_findfirsttoken_179.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 425:
+
+procedure_findfirsttoken_180.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_181.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to run-time check associated with 
+          statement of line 425:
+
+procedure_findfirsttoken_182.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_183.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to run-time check associated with 
+          statement of line 425:
+
+procedure_findfirsttoken_184.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_185.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to run-time check associated with 
+          statement of line 425:
+
+procedure_findfirsttoken_186.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_findfirsttoken_187.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_188.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_189.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_190.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_191.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_192.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_193.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_194.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_195.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_196.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_197.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_198.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_199.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_200.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_201.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_202.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_203.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_204.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_205.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_206.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_207.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_208.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_209.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_210.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_211.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_212.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 362 to finish:
+
+procedure_findfirsttoken_213.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_214.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_215.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_216.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_217.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_218.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_219.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_220.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_221.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_222.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_223.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_224.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_225.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_226.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_227.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_228.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_229.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_230.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_231.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_232.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_233.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_234.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_235.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_236.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_237.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_238.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 369 to finish:
+
+procedure_findfirsttoken_239.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_240.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_241.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_242.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_243.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_244.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_245.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_246.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_247.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_248.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_249.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_250.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_251.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_252.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_253.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_254.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_255.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_256.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_257.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_258.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_259.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_260.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_261.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_262.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_263.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_264.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 386 to finish:
+
+procedure_findfirsttoken_265.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_266.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_267.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_268.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_269.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_270.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_271.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_272.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_273.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_274.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_275.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_276.
+*** true .          /* all conclusions proved */
+
+
+procedure_findfirsttoken_277.
+*** true .          /* all conclusions proved */
+
+

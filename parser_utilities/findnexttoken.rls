@@ -1,0 +1,122 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                  /*procedure Parser_Utilities.findNextToken*/
+
+
+rule_family findnexttoke_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+findnexttoke_rules(1): blank may_be_replaced_by 32.
+findnexttoke_rules(2): tab may_be_replaced_by 9.
+findnexttoke_rules(3): comment_char may_be_replaced_by 59.
+findnexttoke_rules(4): control_char may_be_replaced_by 36.
+findnexttoke_rules(5): origin_char may_be_replaced_by 64.
+findnexttoke_rules(6): l_paren may_be_replaced_by 40.
+findnexttoke_rules(7): r_paren may_be_replaced_by 41.
+findnexttoke_rules(8): integer__size >= 0 may_be_deduced.
+findnexttoke_rules(9): integer__first may_be_replaced_by -2147483648.
+findnexttoke_rules(10): integer__last may_be_replaced_by 2147483647.
+findnexttoke_rules(11): integer__base__first may_be_replaced_by -2147483648.
+findnexttoke_rules(12): integer__base__last may_be_replaced_by 2147483647.
+findnexttoke_rules(13): character__size >= 0 may_be_deduced.
+findnexttoke_rules(14): character__first may_be_replaced_by 0.
+findnexttoke_rules(15): character__last may_be_replaced_by 255.
+findnexttoke_rules(16): character__base__first may_be_replaced_by 0.
+findnexttoke_rules(17): character__base__last may_be_replaced_by 255.
+findnexttoke_rules(18): positive__size >= 0 may_be_deduced.
+findnexttoke_rules(19): positive__first may_be_replaced_by 1.
+findnexttoke_rules(20): positive__last may_be_replaced_by 2147483647.
+findnexttoke_rules(21): positive__base__first may_be_replaced_by -2147483648.
+findnexttoke_rules(22): positive__base__last may_be_replaced_by 2147483647.
+findnexttoke_rules(23): rr_type__rritemtype__size >= 0 may_be_deduced.
+findnexttoke_rules(24): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+findnexttoke_rules(25): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+findnexttoke_rules(26): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+findnexttoke_rules(27): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+findnexttoke_rules(28): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+findnexttoke_rules(29): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+findnexttoke_rules(30): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+findnexttoke_rules(31): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+findnexttoke_rules(32): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+findnexttoke_rules(33): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+findnexttoke_rules(34): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+findnexttoke_rules(35): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+findnexttoke_rules(36): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+findnexttoke_rules(37): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+findnexttoke_rules(38): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+findnexttoke_rules(39): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+findnexttoke_rules(40): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+findnexttoke_rules(41): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+findnexttoke_rules(42): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+findnexttoke_rules(43): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+findnexttoke_rules(44): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+findnexttoke_rules(45): rr_type__rritemtype__pos(rr_type__control) may_be_replaced_by 8.
+findnexttoke_rules(46): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+findnexttoke_rules(47): rr_type__rritemtype__pos(rr_type__comment) may_be_replaced_by 9.
+findnexttoke_rules(48): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+findnexttoke_rules(49): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+findnexttoke_rules(50): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+findnexttoke_rules(51): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+findnexttoke_rules(52): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+findnexttoke_rules(53): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+findnexttoke_rules(54): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+findnexttoke_rules(55): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+findnexttoke_rules(56): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+findnexttoke_rules(57): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+findnexttoke_rules(58): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+findnexttoke_rules(59): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+findnexttoke_rules(60): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+findnexttoke_rules(61): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+findnexttoke_rules(62): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+findnexttoke_rules(63): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+findnexttoke_rules(64): rr_type__linelengthindex__size >= 0 may_be_deduced.
+findnexttoke_rules(65): rr_type__linelengthindex__first may_be_replaced_by 1.
+findnexttoke_rules(66): rr_type__linelengthindex__last may_be_replaced_by 256.
+findnexttoke_rules(67): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+findnexttoke_rules(68): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

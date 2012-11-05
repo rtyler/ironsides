@@ -1,0 +1,1468 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseOwnerTTLClassAndRecordType
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 839:
+
+procedure_parseownerttlclassandrecordtype_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          840:
+
+procedure_parseownerttlclassandrecordtype_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 840:
+
+procedure_parseownerttlclassandrecordtype_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 841:
+
+procedure_parseownerttlclassandrecordtype_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 842:
+
+procedure_parseownerttlclassandrecordtype_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 842:
+
+procedure_parseownerttlclassandrecordtype_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 843:
+
+procedure_parseownerttlclassandrecordtype_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to assertion of line 843:
+
+procedure_parseownerttlclassandrecordtype_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 844:
+
+procedure_parseownerttlclassandrecordtype_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 848:
+
+procedure_parseownerttlclassandrecordtype_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 848:
+
+procedure_parseownerttlclassandrecordtype_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 851:
+
+procedure_parseownerttlclassandrecordtype_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 851:
+
+procedure_parseownerttlclassandrecordtype_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 851:
+
+procedure_parseownerttlclassandrecordtype_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 851:
+
+procedure_parseownerttlclassandrecordtype_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 852:
+
+procedure_parseownerttlclassandrecordtype_16.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 843 to assertion of line 852:
+
+procedure_parseownerttlclassandrecordtype_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to assertion of line 852:
+
+procedure_parseownerttlclassandrecordtype_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to run-time check associated with 
+          statement of line 854:
+
+procedure_parseownerttlclassandrecordtype_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 862:
+
+procedure_parseownerttlclassandrecordtype_20.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 862:
+
+procedure_parseownerttlclassandrecordtype_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to run-time check associated with 
+          statement of line 862:
+
+procedure_parseownerttlclassandrecordtype_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          869:
+
+procedure_parseownerttlclassandrecordtype_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to precondition check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_30.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_31.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to precondition check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_34.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to precondition check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_36.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_37.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_38.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_39.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_40.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_41.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_42.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_43.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_44.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_45.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_46.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_47.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_48.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_49.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_50.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_51.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_59.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to precondition check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_60.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_61.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_62.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_63.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_64.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_65.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_66.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_67.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_68.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_69.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_70.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_71.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_72.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_73.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_74.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_75.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_80.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_83.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_85.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_86.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_87.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_88.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to run-time check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_89.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_90.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_92.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to run-time check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_93.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_94.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_95.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_96.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_97.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_98.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_99.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_100.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_101.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_102.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_103.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_104.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_105.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_106.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_107.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_108.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_109.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_110.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_111.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_112.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_113.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_114.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_115.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_116.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_117.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_118.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 869:
+
+procedure_parseownerttlclassandrecordtype_119.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_120.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_121.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_122.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_123.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_124.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_125.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_126.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_127.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_128.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_129.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_130.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_131.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_132.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_133.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_134.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_135.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_136.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_137.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_138.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_139.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_140.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_141.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_142.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 871:
+
+procedure_parseownerttlclassandrecordtype_143.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_144.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_145.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_146.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_147.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to assertion of line 871:
+
+procedure_parseownerttlclassandrecordtype_148.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_149.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parseownerttlclassandrecordtype_150.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_151.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 852 to assertion of line 871:
+
+procedure_parseownerttlclassandrecordtype_152.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_153.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to assertion of line 871:
+
+procedure_parseownerttlclassandrecordtype_154.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_155.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_156.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_157.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_158.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_159.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_160.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_161.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_162.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_163.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_164.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_165.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_166.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_167.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_168.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_169.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_170.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_171.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_172.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_173.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_174.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_175.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_176.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_177.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to assertion of line 871:
+
+procedure_parseownerttlclassandrecordtype_178.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_179.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_180.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_181.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_182.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_183.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_184.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_185.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_186.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_187.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_188.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_189.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_190.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_191.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_192.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_193.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_194.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_195.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_196.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_197.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_198.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_199.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_200.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_201.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 872:
+
+procedure_parseownerttlclassandrecordtype_202.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 872:
+
+procedure_parseownerttlclassandrecordtype_203.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to assertion of line 873:
+
+procedure_parseownerttlclassandrecordtype_204.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to assertion of line 873:
+
+procedure_parseownerttlclassandrecordtype_205.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 874:
+
+procedure_parseownerttlclassandrecordtype_206.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 878:
+
+procedure_parseownerttlclassandrecordtype_207.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 878:
+
+procedure_parseownerttlclassandrecordtype_208.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 878:
+
+procedure_parseownerttlclassandrecordtype_209.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 878:
+
+procedure_parseownerttlclassandrecordtype_210.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 880:
+
+procedure_parseownerttlclassandrecordtype_211.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 880:
+
+procedure_parseownerttlclassandrecordtype_212.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 880:
+
+procedure_parseownerttlclassandrecordtype_213.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 880:
+
+procedure_parseownerttlclassandrecordtype_214.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 881:
+
+procedure_parseownerttlclassandrecordtype_215.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 881:
+
+procedure_parseownerttlclassandrecordtype_216.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 881:
+
+procedure_parseownerttlclassandrecordtype_217.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 881:
+
+procedure_parseownerttlclassandrecordtype_218.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 883:
+
+procedure_parseownerttlclassandrecordtype_219.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 883:
+
+procedure_parseownerttlclassandrecordtype_220.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 885:
+
+procedure_parseownerttlclassandrecordtype_221.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 885:
+
+procedure_parseownerttlclassandrecordtype_222.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 887:
+
+procedure_parseownerttlclassandrecordtype_223.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 887:
+
+procedure_parseownerttlclassandrecordtype_224.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 889:
+
+procedure_parseownerttlclassandrecordtype_225.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 889:
+
+procedure_parseownerttlclassandrecordtype_226.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to precondition check associated with 
+          statement of line 893:
+
+procedure_parseownerttlclassandrecordtype_227.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to precondition check associated with 
+          statement of line 893:
+
+procedure_parseownerttlclassandrecordtype_228.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 893:
+
+procedure_parseownerttlclassandrecordtype_229.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 893:
+
+procedure_parseownerttlclassandrecordtype_230.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to run-time check associated with 
+          statement of line 905:
+
+procedure_parseownerttlclassandrecordtype_231.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_232.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_233.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_234.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_235.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_236.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_237.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_238.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to run-time check associated with 
+          statement of line 905:
+
+procedure_parseownerttlclassandrecordtype_239.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_240.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_241.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_242.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_243.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_244.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_245.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_246.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parseownerttlclassandrecordtype_247.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_248.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_249.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_250.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_251.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 843 to finish:
+
+procedure_parseownerttlclassandrecordtype_252.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_253.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_254.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_255.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 852 to finish:
+
+procedure_parseownerttlclassandrecordtype_256.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_257.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 871 to finish:
+
+procedure_parseownerttlclassandrecordtype_258.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_259.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_260.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_261.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_262.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_263.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_264.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_265.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_266.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_267.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_268.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_269.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_270.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_271.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_272.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_273.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_274.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_275.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_276.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_277.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_278.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_279.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_280.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_281.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 873 to finish:
+
+procedure_parseownerttlclassandrecordtype_282.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_283.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_284.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_285.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_286.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_287.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_288.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_289.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_290.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_291.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_292.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_293.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_294.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_295.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_296.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_297.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_298.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_299.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_300.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_301.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_302.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_303.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_304.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseownerttlclassandrecordtype_305.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.insertAAAARecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 433:
+
+procedure_insertaaaarecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 437:
+
+procedure_insertaaaarecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 437 to assertion of line 437:
+
+procedure_insertaaaarecord_3.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertaaaarecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 437 to run-time check associated with 
+          statement of line 438:
+
+procedure_insertaaaarecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 437 to run-time check associated with 
+          statement of line 439:
+
+procedure_insertaaaarecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 437 to run-time check associated with 
+          statement of line 440:
+
+procedure_insertaaaarecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 437 to finish:
+
+procedure_insertaaaarecord_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertaaaarecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertaaaarecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertaaaarecord_11.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertaaaarecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertaaaarecord_13.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,282 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+               function dns_table_pkg.DNS_Table_Type.To_Lower
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 31:
+
+function_to_lower_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H4:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H5:    (rr_type__wirenamelength(domainname) = 
+           rr_type__maxdomainnamelength + 1) or ((element(
+           domainname, [rr_type__wirenamelength(domainname)]) = 0) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__wirenamelength(domainname) - 1)) -> (element(
+           domainname, [q_]) <> 0)))) .
+        ->
+C1:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+C2:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+function_to_lower_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H4:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H5:    (rr_type__wirenamelength(domainname) = 
+           rr_type__maxdomainnamelength + 1) or ((element(
+           domainname, [rr_type__wirenamelength(domainname)]) = 0) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__wirenamelength(domainname) - 1)) -> (element(
+           domainname, [q_]) <> 0)))) .
+H6:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H7:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H8:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H9:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+        ->
+C1:    rr_type__wirenamelength(domainname) >= integer__first .
+C2:    rr_type__wirenamelength(domainname) <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+function_to_lower_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H4:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H5:    (rr_type__wirenamelength(domainname) = 
+           rr_type__maxdomainnamelength + 1) or ((element(
+           domainname, [rr_type__wirenamelength(domainname)]) = 0) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__wirenamelength(domainname) - 1)) -> (element(
+           domainname, [q_]) <> 0)))) .
+H6:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H7:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H8:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H9:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H10:   rr_type__wirenamelength(domainname) >= integer__first .
+H11:   rr_type__wirenamelength(domainname) <= integer__last .
+H12:   1 >= integer__first .
+H13:   1 <= integer__last .
+        ->
+C1:    (1 <= rr_type__wirenamelength(domainname)) -> ((
+           rr_type__wirenamelength(domainname) >= integer__first) and (
+           rr_type__wirenamelength(domainname) <= integer__last)) .
+C2:    (1 <= rr_type__wirenamelength(domainname)) -> ((1 >= 
+           integer__first) and (1 <= integer__last)) .
+ 
+
+For path(s) from start to assertion of line 33:
+
+function_to_lower_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H4:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H5:    (rr_type__wirenamelength(domainname) = 
+           rr_type__maxdomainnamelength + 1) or ((element(
+           domainname, [rr_type__wirenamelength(domainname)]) = 0) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__wirenamelength(domainname) - 1)) -> (element(
+           domainname, [q_]) <> 0)))) .
+H6:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H7:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H8:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H9:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H10:   rr_type__wirenamelength(domainname) >= integer__first .
+H11:   rr_type__wirenamelength(domainname) <= integer__last .
+H12:   1 >= integer__first .
+H13:   1 <= integer__last .
+H14:   (1 <= rr_type__wirenamelength(domainname)) -> ((
+           rr_type__wirenamelength(domainname) >= integer__first) and (
+           rr_type__wirenamelength(domainname) <= integer__last)) .
+H15:   (1 <= rr_type__wirenamelength(domainname)) -> ((1 >= 
+           integer__first) and (1 <= integer__last)) .
+H16:   rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+H17:   rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+H18:   1 <= rr_type__wirenamelength(domainname) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+C5:    1 >= 1 .
+C6:    1 <= rr_type__wirenamelength(domainname) .
+C7:    rr_type__wirenamelength(domainname) >= 
+           rr_type__wirestringtypeindex__first .
+C8:    rr_type__wirenamelength(domainname) <= 
+           rr_type__wirestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 33 to assertion of line 33:
+
+function_to_lower_5.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    loop__1__i >= integer__first .
+H4:    loop__1__i <= integer__last .
+H5:    loop__1__i >= 1 .
+H6:    loop__1__i <= length__entry__loop__1 .
+H7:    length__entry__loop__1 >= rr_type__wirestringtypeindex__first .
+H8:    length__entry__loop__1 <= rr_type__wirestringtypeindex__last .
+H9:    element(domainname, [loop__1__i]) >= character__first .
+H10:   element(domainname, [loop__1__i]) <= character__last .
+H11:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H12:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H13:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H14:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H15:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) >= character__first .
+H16:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) <= character__last .
+H17:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) >= character__first .
+H18:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) <= character__last .
+H19:   not (loop__1__i = length__entry__loop__1) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+C3:    loop__1__i + 1 >= integer__first .
+C4:    loop__1__i + 1 <= integer__last .
+C5:    loop__1__i + 1 >= 1 .
+C6:    loop__1__i + 1 <= length__entry__loop__1 .
+C7:    length__entry__loop__1 >= rr_type__wirestringtypeindex__first .
+C8:    length__entry__loop__1 <= rr_type__wirestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 33 to run-time check associated with statement of line 34:
+
+function_to_lower_6.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    loop__1__i >= integer__first .
+H4:    loop__1__i <= integer__last .
+H5:    loop__1__i >= 1 .
+H6:    loop__1__i <= length__entry__loop__1 .
+H7:    length__entry__loop__1 >= rr_type__wirestringtypeindex__first .
+H8:    length__entry__loop__1 <= rr_type__wirestringtypeindex__last .
+        ->
+C1:    element(domainname, [loop__1__i]) >= character__first .
+C2:    element(domainname, [loop__1__i]) <= character__last .
+C3:    loop__1__i >= rr_type__wirestringtypeindex__first .
+C4:    loop__1__i <= rr_type__wirestringtypeindex__last .
+C5:    loop__1__i >= rr_type__wirestringtypeindex__first .
+C6:    loop__1__i <= rr_type__wirestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 33 to run-time check associated with statement of line 34:
+
+function_to_lower_7.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           domainname, [i___1]) >= character__first) and (element(
+           domainname, [i___1]) <= character__last))) .
+H3:    loop__1__i >= integer__first .
+H4:    loop__1__i <= integer__last .
+H5:    loop__1__i >= 1 .
+H6:    loop__1__i <= length__entry__loop__1 .
+H7:    length__entry__loop__1 >= rr_type__wirestringtypeindex__first .
+H8:    length__entry__loop__1 <= rr_type__wirestringtypeindex__last .
+H9:    element(domainname, [loop__1__i]) >= character__first .
+H10:   element(domainname, [loop__1__i]) <= character__last .
+H11:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H12:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H13:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H14:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H15:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) >= character__first .
+H16:   ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) <= character__last .
+        ->
+C1:    ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) >= character__first .
+C2:    ada__characters__handling__to_lower(element(
+           domainname, [loop__1__i])) <= character__last .
+ 
+
+For path(s) from start to finish:
+
+function_to_lower_8.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 33 to finish:
+
+function_to_lower_9.
+*** true .          /* trivially true VC removed by Examiner */
+
+

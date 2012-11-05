@@ -1,0 +1,1048 @@
+           *******************************************************
+                         Report of SPARK Examination
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+Options:
+    index_file=mcc.idx
+    nowarning_file
+    notarget_compiler_data
+    config_file=mcc.cfg
+    source_extension=ada
+    listing_extension=ls_
+    nodictionary_file
+    report_file=spark.rep
+    nohtml
+    vcg
+    plain_output
+    sparklib
+    nostatistics
+    fdl_identifiers=accept
+    flow_analysis=information
+    language=95
+    profile=ravenscar
+    annotation_character=#
+    rules=none
+    error_explanations=off
+    justification_option=full
+    output_directory=.
+    output_directory (actual)=.
+
+Selected files:
+   @files.txt
+
+
+Index Filename(s) used were: 
+   mcc.idx
+   ada.idx
+   spark.idx
+
+
+Meta File(s) used were:
+   files.txt
+      dns_network.adb
+      dns_network_receive.adb
+      dns_table_pkg.adb
+      dns_types.adb
+      error_msgs.adb
+      multitask_process_dns_request.adb
+      non_spark_stuff.adb
+      parser_utilities.adb
+      process_dns_request.adb
+      process_first_line_of_record.adb
+      protected_spark_io_05.adb
+      rr_type.adb
+      socket_timeout.adb
+      spark_ada_command_line.adb
+      spark_dns_main.adb
+      task_limit.adb
+      tcp_dns_package.adb
+      udp_dns_package.adb
+      zone_file_io.adb
+      zone_file_parser.adb
+
+
+Full warning reporting selected
+
+
+Target configuration file:
+Line
+      -- Auto-generated SPARK target configuration file
+      -- Target claims to be 'SYSTEM_NAME_GNAT'
+      
+      package Standard is
+         type Integer is range -2147483648 ..  2147483647;
+         type Float is digits  6 range -3.40282E+38 ..  3.40282E+38;
+         type Short_Short_Integer is range -128 ..  127;
+         type Short_Integer is range -32768 ..  32767;
+         type Long_Integer is range -2147483648 ..  2147483647;
+         type Long_Long_Integer is range -9223372036854775808 ..  9223372036854775807;
+      end Standard;
+      
+      package System is
+         type Address is private;
+
+---        Note              :  3: The deferred constant Null_Address has been 
+           implicitly defined here.
+
+         Min_Int : constant := -9223372036854775808;
+         Max_Int : constant :=  9223372036854775807;
+         Max_Binary_Modulus : constant :=  18446744073709551615 + 1;
+         Max_Digits : constant :=  18;
+         Max_Base_Digits : constant :=  18;
+         Max_Mantissa : constant :=  63;
+         Storage_Unit : constant :=  8;
+         Word_Size : constant :=  32;
+         Fine_Delta : constant :=  1.08420217248550443E-19;
+         subtype Any_Priority is Integer range  0 ..  31;
+         subtype Priority is Any_Priority range  0 ..  30;
+
+---        Note              :  4: The constant Default_Priority, of type Priority, 
+           has been implicitly defined here.
+
+         subtype Interrupt_Priority is Any_Priority range  31 ..  31;
+         Default_Bit_Order : constant Bit_Order := Low_Order_First;
+      end System;
+
+
+Source Filename(s) used were:
+   dns_network.adb
+   dns_network.ads
+   dns_types.ads
+   dns_network_receive.adb
+   dns_network_receive.ads
+   dns_table_pkg.adb
+   dns_table_pkg.ads
+   rr_type-soa_record_type.ads
+   rr_type-rrsig_record_type.ads
+   rr_type-ptr_record_type.ads
+   rr_type-nsec_record_type.ads
+   rr_type-ns_record_type.ads
+   rr_type-mx_record_type.ads
+   rr_type-dnskey_record_type.ads
+   rr_type-cname_record_type.ads
+   rr_type-aaaa_record_type.ads
+   rr_type-a_record_type.ads
+   rr_type.ads
+   unsigned_types.ads
+   ada-characters-handling.shs
+   dns_types.adb
+   error_msgs.adb
+   error_msgs.ads
+   multitask_process_dns_request.adb
+   multitask_process_dns_request.ads
+   process_dns_request.ads
+   protected_spark_io_05.ads
+   non_spark_stuff.adb
+   non_spark_stuff.ads
+   parser_utilities.adb
+   parser_utilities.ads
+   process_dns_request.adb
+   process_first_line_of_record.adb
+   process_first_line_of_record.ads
+   zone_file_parser.ads
+   spark-ada-text_io.ads
+   spark-ada.ads
+   spark.ads
+   spark-ada-strings-maps.ads
+   spark-ada-strings.ads
+   protected_spark_io_05.adb
+   rr_type.adb
+   socket_timeout.adb
+   socket_timeout.ads
+   spark_ada_command_line.adb
+   spark_ada_command_line.ads
+   spark_dns_main.adb
+   zone_file_io.ads
+   tcp_dns_package.ads
+   udp_dns_package.ads
+   task_limit.adb
+   task_limit.ads
+   tcp_dns_package.adb
+   udp_dns_package.adb
+   zone_file_io.adb
+   zone_file_parser.adb
+
+
+
+Source Filename:   dns_network.ads
+No Listing File
+
+   Unit name:  DNS_Network
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      WITH Gnat.Sockets;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+      end DNS_Network;
+
+---        Warning           : 10: The private part of package DNS_Network is hidden 
+           - hidden text is ignored by the Examiner.
+
+
+Source Filename:   dns_types.ads
+No Listing File
+
+   Unit name:  DNS_Types
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Expected messages marked with the accept annotation
+Type Msg    Lines              Reason                    Match
+     No.  From    To                                    No.  Line
+Warn   2              representation clause ok            1      
+Warn   2              representation clause ok            1      
+Warn   2              representation clause ok            1      
+Warn   2              representation clause ok            1      
+Warn   2              representation clause ok            3      
+Warn   3              Inline ok                           1      
+Warn   2              representation clause ok            2      
+Warn   2              representation clause ok            2      
+
+
+
+Source Filename:   dns_network_receive.ads
+No Listing File
+
+   Unit name:  Dns_Network_Receive
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   dns_table_pkg.ads
+No Listing File
+
+   Unit name:  dns_table_pkg
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-soa_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Soa_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-rrsig_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Rrsig_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-ptr_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Ptr_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-nsec_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Nsec_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-ns_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Ns_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-mx_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Mx_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-dnskey_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Dnskey_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-cname_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.Cname_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-aaaa_record_type.ads
+No Listing File
+
+   Unit name:  RR_Type.Aaaa_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type-a_record_type.ads
+No Listing File
+
+   Unit name:  Rr_Type.A_Record_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   rr_type.ads
+No Listing File
+
+   Unit name:  Rr_Type
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   unsigned_types.ads
+No Listing File
+
+   Unit name:  Unsigned_Types
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   ada-characters-handling.shs
+No Listing File
+
+   Unit name:  Ada.Characters.Handling
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   error_msgs.ads
+No Listing File
+
+   Unit name:  Error_Msgs
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   multitask_process_dns_request.ads
+No Listing File
+
+   Unit name:  Multitask_Process_Dns_Request
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   process_dns_request.ads
+No Listing File
+
+   Unit name:  Process_Dns_Request
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   protected_spark_io_05.ads
+No Listing File
+
+   Unit name:  Protected_SPARK_IO_05
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end Protected_SPARK_IO_05;
+
+---        Warning           : 10: The private part of package Protected_SPARK_IO_05 
+           is hidden - hidden text is ignored by the Examiner.
+
+
+Source Filename:   non_spark_stuff.ads
+No Listing File
+
+   Unit name:  Non_Spark_Stuff
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   parser_utilities.ads
+No Listing File
+
+   Unit name:  Parser_Utilities
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   process_first_line_of_record.ads
+No Listing File
+
+   Unit name:  process_first_line_of_record
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   zone_file_parser.ads
+No Listing File
+
+   Unit name:  Zone_File_Parser
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   spark-ada-text_io.ads
+No Listing File
+
+   Unit name:  SPARK.Ada.Text_IO
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end SPARK.Ada.Text_IO;
+
+---        Warning           : 10: The private part of package Text_IO is hidden - 
+           hidden text is ignored by the Examiner.
+
+
+Source Filename:   spark-ada.ads
+No Listing File
+
+   Unit name:  SPARK.Ada
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   spark.ads
+No Listing File
+
+   Unit name:  SPARK
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   spark-ada-strings-maps.ads
+No Listing File
+
+   Unit name:  SPARK.Ada.Strings.Maps
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Ada.Strings.Maps;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end SPARK.Ada.Strings.Maps;
+
+---        Warning           : 10: The private part of package Maps is hidden - 
+           hidden text is ignored by the Examiner.
+
+
+Source Filename:   spark-ada-strings.ads
+No Listing File
+
+   Unit name:  SPARK.Ada.Strings
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   socket_timeout.ads
+No Listing File
+
+   Unit name:  Socket_Timeout
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+3 error(s) or warning(s)
+
+Line
+      WITH Gnat.Sockets;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+      end Socket_Timeout;
+
+          ^
+---        Warning           : 10: The private part of package Socket_Timeout is 
+           hidden - hidden text is ignored by the Examiner.
+---        Warning           :394: Variables of type Socket_Type cannot be 
+           initialized using the facilities of this package.
+
+
+Source Filename:   spark_ada_command_line.ads
+No Listing File
+
+   Unit name:  SPARK_Ada_Command_Line
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   zone_file_io.ads
+No Listing File
+
+   Unit name:  zone_file_io
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   tcp_dns_package.ads
+No Listing File
+
+   Unit name:  Tcp_Dns_Package
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   udp_dns_package.ads
+No Listing File
+
+   Unit name:  Udp_Dns_Package
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   task_limit.ads
+No Listing File
+
+   Unit name:  Task_Limit
+   Unit type:  package specification
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   dns_network.adb
+Listing Filename:  dns_network.lsb
+
+   Unit name:  DNS_Network
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+4 error(s) or warning(s)
+
+Line
+      with Ada.Streams;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Socket_Timeout;
+           ^
+---        Warning           :391: If the identifier Socket_Timeout represents a 
+           package which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Ada.Unchecked_Conversion;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end DNS_Network;
+
+---        Warning           : 10: The body of package DNS_Network is hidden - hidden 
+           text is ignored by the Examiner.
+
+
+Source Filename:   dns_network_receive.adb
+Listing Filename:  dns_network_receive.lsb
+
+   Unit name:  Dns_Network_Receive
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   dns_table_pkg.adb
+Listing Filename:  dns_table_pkg.lsb
+
+   Unit name:  Dns_Table_Pkg
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Expected messages marked with the accept annotation
+Type Msg    Lines              Reason                    Match
+     No.  From    To                                    No.  Line
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  23              assigning to uninitialized array    1      
+Flow 602         end  fills as much of array as needed    1      
+Flow  10              only care if there are any          1      
+Flow  33         end  only care if there are any          1      
+
+
+
+Source Filename:   dns_types.adb
+Listing Filename:  dns_types.lsb
+
+   Unit name:  DNS_Types
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Gnat.Byte_Swapping;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+         end Byte_Swap_US;
+
+---        Warning           : 10: The body of subprogram Byte_Swap_US is hidden - 
+           hidden text is ignored by the Examiner.
+
+
+Source Filename:   error_msgs.adb
+Listing Filename:  error_msgs.lsb
+
+   Unit name:  Error_Msgs
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+3 error(s) or warning(s)
+
+Line
+      with Ada.Text_IO, Ada.Integer_Text_IO;
+           ^            ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end error_msgs;
+
+---        Warning           : 10: The body of package Error_Msgs is hidden - hidden 
+           text is ignored by the Examiner.
+
+
+Source Filename:   multitask_process_dns_request.adb
+Listing Filename:  multitask_process_dns_request.lsb
+
+   Unit name:  Multitask_Process_Dns_Request
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Task_Limit;
+           ^
+---        Warning           :391: If the identifier Task_Limit represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end Multitask_Process_Dns_Request;
+
+---        Warning           : 10: The body of package Multitask_Process_Dns_Request 
+           is hidden - hidden text is ignored by the Examiner.
+
+
+Source Filename:   non_spark_stuff.adb
+Listing Filename:  non_spark_stuff.lsb
+
+   Unit name:  Non_Spark_Stuff
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+2 error(s) or warning(s)
+
+Line
+      with Ada.Calendar;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end Non_Spark_Stuff;
+
+---        Warning           : 10: The body of package Non_Spark_Stuff is hidden - 
+           hidden text is ignored by the Examiner.
+
+
+Source Filename:   parser_utilities.adb
+Listing Filename:  parser_utilities.lsb
+
+   Unit name:  Parser_Utilities
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   process_dns_request.adb
+Listing Filename:  process_dns_request.lsb
+
+   Unit name:  Process_Dns_Request
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+4 error(s) or warning(s)
+
+Line
+      with Ada.Text_Io;
+               ^
+---        Warning           :391: If the identifier Text_Io represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+            for i in rr_type.aaaa_record_type.IPV6AddrTypeIndex loop
+
+---        Warning           :402: Default assertion planted to cut loop.
+
+               EDNS_Rec.Code    := To_Query_Type(DNS_Types.Unsigned_Short(
+                                   ^
+---        Warning           : 12: Function To_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
+                     From_Query_Type(DNS_Types.OPT) mod 256);
+                     ^
+---        Warning           : 12: Function From_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
+
+Expected messages marked with the accept annotation
+Type Msg    Lines              Reason                    Match
+     No.  From    To                                    No.  Line
+Warn  12              unchecked conversions ok            2      
+Warn  12              unchecked conversions ok            1      
+Warn  12              unchecked conversions ok            2      
+Warn  12              unchecked conversions ok            1      
+Flow  10              The rest of the header fields re    1      
+Flow  10              The rest of the header fields re    1      
+Flow  10              The rest of the header fields re    1      
+Flow  10              not needed for ANY query            1      
+Flow  10              not needed for ANY query            1      
+Flow  10              not needed for any query            1      
+Flow  10              not needed for ANY query            1      
+Flow  10              not needed for ANY query            1      
+Flow  10              not needed for any query            1      
+Flow  23              init not needed                     1      
+Flow  10              only needed for UDP                 1      
+Flow  22              allow use of static expression f    1      
+Flow 602         end  initialization is unneeded          1      
+Flow 602         end  initialization is unneeded          1      
+Flow  33         end  Max_Transmit only for UDP           1      
+
+
+
+Source Filename:   process_first_line_of_record.adb
+Listing Filename:  process_first_line_of_record.lsb
+
+   Unit name:  process_first_line_of_record
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   protected_spark_io_05.adb
+Listing Filename:  protected_spark_io_05.lsb
+
+   Unit name:  Protected_Spark_Io_05
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+3 error(s) or warning(s)
+
+Line
+      with Text_IO;
+           ^
+---        Warning           :391: If the identifier Text_IO represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Unchecked_Deallocation;
+           ^
+---        Warning           :391: If the identifier Unchecked_Deallocation 
+           represents a package which contains a task or an interrupt handler 
+           then the partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end Protected_Spark_Io_05;
+
+---        Warning           : 10: The body of package Protected_Spark_Io_05 is 
+           hidden - hidden text is ignored by the Examiner.
+
+
+Source Filename:   rr_type.adb
+Listing Filename:  rr_type.lsb
+
+   Unit name:  Rr_Type
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   socket_timeout.adb
+Listing Filename:  socket_timeout.lsb
+
+   Unit name:  Socket_Timeout
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+7 error(s) or warning(s)
+
+Line
+      with Gnat.Sockets.Thin;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+      with Interfaces;
+           ^
+---        Warning           :391: If the identifier Interfaces represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Interfaces.C;
+           ^
+---        Warning           :391: If the identifier Interfaces represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Ada.Unchecked_Conversion;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Gnat.Sockets.Constants;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+      with ada.text_io;
+           ^
+---        Warning           :  1: The identifier ada is either undeclared or not 
+           visible at this point.
+
+      end Socket_Timeout;
+
+---        Warning           : 10: The body of package Socket_Timeout is hidden - 
+           hidden text is ignored by the Examiner.
+
+
+Source Filename:   spark_ada_command_line.adb
+Listing Filename:  spark_ada_command_line.lsb
+
+   Unit name:  SPARK_Ada_Command_Line
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+4 error(s) or warning(s)
+
+Line
+      with Ada.Command_Line;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Gnat.Os_Lib;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package which 
+           contains a task or an interrupt handler then the partition-level 
+           analysis performed by the Examiner will be incomplete.  Such 
+           packages must be inherited as well as withed.
+
+      end SPARK_Ada_Command_Line;
+
+---        Warning           : 10: The body of package SPARK_Ada_Command_Line is 
+           hidden - hidden text is ignored by the Examiner.
+
+
+Source Filename:   spark_dns_main.adb
+Listing Filename:  spark_dns_main.lsb
+
+   Unit name:  Spark_Dns_Main
+   Unit type:  main program
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Expected messages marked with the accept annotation
+Type Msg    Lines              Reason                    Match
+     No.  From    To                                    No.  Line
+Flow  10              done with file after this call      1      
+
+
+
+Source Filename:   task_limit.adb
+Listing Filename:  task_limit.lsb
+
+   Unit name:  Task_Limit
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   tcp_dns_package.adb
+Listing Filename:  tcp_dns_package.lsb
+
+   Unit name:  Tcp_Dns_Package
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   udp_dns_package.adb
+Listing Filename:  udp_dns_package.lsb
+
+   Unit name:  Udp_Dns_Package
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   zone_file_io.adb
+Listing Filename:  zone_file_io.lsb
+
+   Unit name:  Zone_File_Io
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+Source Filename:   zone_file_parser.adb
+Listing Filename:  zone_file_parser.lsb
+
+   Unit name:  zone_file_parser
+   Unit type:  package body
+   Unit has been analysed, any errors are listed below.
+
+No errors found
+
+
+--End of file--------------------------------------------------

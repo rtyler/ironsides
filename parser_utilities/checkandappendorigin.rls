@@ -1,0 +1,55 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+              /*procedure Parser_Utilities.CheckAndAppendOrigin*/
+
+
+rule_family checkandappe_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+checkandappe_rules(1): rr_type__maxdomainnamelength may_be_replaced_by 128.
+checkandappe_rules(2): character__first <= element(rr_type__blankdomainname, [I]) may_be_deduced_from [1 <= I, I <= 128].
+checkandappe_rules(3): element(rr_type__blankdomainname, [I]) <= 
+     character__last may_be_deduced_from [1 <= I, I <= 128].
+checkandappe_rules(4): integer__size >= 0 may_be_deduced.
+checkandappe_rules(5): integer__first may_be_replaced_by -2147483648.
+checkandappe_rules(6): integer__last may_be_replaced_by 2147483647.
+checkandappe_rules(7): integer__base__first may_be_replaced_by -2147483648.
+checkandappe_rules(8): integer__base__last may_be_replaced_by 2147483647.
+checkandappe_rules(9): character__size >= 0 may_be_deduced.
+checkandappe_rules(10): character__first may_be_replaced_by 0.
+checkandappe_rules(11): character__last may_be_replaced_by 255.
+checkandappe_rules(12): character__base__first may_be_replaced_by 0.
+checkandappe_rules(13): character__base__last may_be_replaced_by 255.
+checkandappe_rules(14): natural__size >= 0 may_be_deduced.
+checkandappe_rules(15): natural__first may_be_replaced_by 0.
+checkandappe_rules(16): natural__last may_be_replaced_by 2147483647.
+checkandappe_rules(17): natural__base__first may_be_replaced_by -2147483648.
+checkandappe_rules(18): natural__base__last may_be_replaced_by 2147483647.
+checkandappe_rules(19): positive__size >= 0 may_be_deduced.
+checkandappe_rules(20): positive__first may_be_replaced_by 1.
+checkandappe_rules(21): positive__last may_be_replaced_by 2147483647.
+checkandappe_rules(22): positive__base__first may_be_replaced_by -2147483648.
+checkandappe_rules(23): positive__base__last may_be_replaced_by 2147483647.
+checkandappe_rules(24): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+checkandappe_rules(25): unsigned_types__unsigned32__first may_be_replaced_by 0.
+checkandappe_rules(26): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+checkandappe_rules(27): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+checkandappe_rules(28): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+checkandappe_rules(29): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+checkandappe_rules(30): rr_type__linelengthindex__size >= 0 may_be_deduced.
+checkandappe_rules(31): rr_type__linelengthindex__first may_be_replaced_by 1.
+checkandappe_rules(32): rr_type__linelengthindex__last may_be_replaced_by 256.
+checkandappe_rules(33): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+checkandappe_rules(34): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+checkandappe_rules(35): rr_type__domainnamestringtypeindex__size >= 0 may_be_deduced.
+checkandappe_rules(36): rr_type__domainnamestringtypeindex__first may_be_replaced_by 1.
+checkandappe_rules(37): rr_type__domainnamestringtypeindex__last may_be_replaced_by 128.
+checkandappe_rules(38): rr_type__domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+checkandappe_rules(39): rr_type__domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.

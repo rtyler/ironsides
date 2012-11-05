@@ -1,0 +1,42 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Task_Limit.Task_Count_Type.Decrement
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 64:
+
+procedure_decrement_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_decrement_2.
+*** true .          /* all conclusions proved */
+
+
+procedure_decrement_3.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_decrement_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_decrement_5.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,103 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+          {procedure Process_Dns_Request.Set_TTL_Data_SOA_Response}
+
+
+title procedure set_ttl_data_soa_response;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__packet_bytes_range = integer;
+  type dns_types__byte = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type dns_types__bytes_array_type = array [integer] of integer;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__soa_record_type__soarecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        nameserver : string;
+        email : string;
+        serialnumber : integer;
+        refresh : integer;
+        retry : integer;
+        expiry : integer;
+        minimum : integer
+     end;
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const dns_types__byte__base__first : integer = pending; 
+  const dns_types__byte__base__last : integer = pending; 
+  const dns_types__packet_bytes_range__base__first : integer = pending; 
+  const dns_types__packet_bytes_range__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__soa_record_type__soarecordtype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const dns_types__byte__first : integer = pending; 
+  const dns_types__byte__last : integer = pending; 
+  const dns_types__byte__modulus : integer = pending; 
+  const dns_types__byte__size : integer = pending; 
+  const dns_types__packet_bytes_range__first : integer = pending; 
+  const dns_types__packet_bytes_range__last : integer = pending; 
+  const dns_types__packet_bytes_range__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var bytes : dns_types__bytes_array_type;
+  var start_byte : integer;
+  var soa_record : rr_type__soa_record_type__soarecordtype;
+  var nameserver_name_length : integer;
+  var mailbox_name_length : integer;
+  var current_byte : integer;
+  var loop__1__i : integer;
+  var loop__2__i : integer;
+  var bytes__6 : dns_types__bytes_array_type;
+  var bytes__5 : dns_types__bytes_array_type;
+  var bytes__4 : dns_types__bytes_array_type;
+  var bytes__3 : dns_types__bytes_array_type;
+  var bytes__2 : dns_types__bytes_array_type;
+  var bytes__1 : dns_types__bytes_array_type;
+
+end;

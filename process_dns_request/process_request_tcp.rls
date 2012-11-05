@@ -1,0 +1,268 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+             /*procedure Process_Dns_Request.Process_Request_Tcp*/
+
+
+rule_family process_requ_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+process_requ_rules(1): system__default_bit_order may_be_replaced_by system__low_order_first.
+process_requ_rules(2): dns_types__packet_size may_be_replaced_by 8192.
+process_requ_rules(3): dns_types__header_bits may_be_replaced_by 96.
+process_requ_rules(4): dns_types__udp_max_size may_be_replaced_by 512.
+process_requ_rules(5): dns_network__max_query_size may_be_replaced_by 311.
+process_requ_rules(6): integer__size >= 0 may_be_deduced.
+process_requ_rules(7): integer__first may_be_replaced_by -2147483648.
+process_requ_rules(8): integer__last may_be_replaced_by 2147483647.
+process_requ_rules(9): integer__base__first may_be_replaced_by -2147483648.
+process_requ_rules(10): integer__base__last may_be_replaced_by 2147483647.
+process_requ_rules(11): natural__size >= 0 may_be_deduced.
+process_requ_rules(12): natural__first may_be_replaced_by 0.
+process_requ_rules(13): natural__last may_be_replaced_by 2147483647.
+process_requ_rules(14): natural__base__first may_be_replaced_by -2147483648.
+process_requ_rules(15): natural__base__last may_be_replaced_by 2147483647.
+process_requ_rules(16): system__bit_order__size >= 0 may_be_deduced.
+process_requ_rules(17): system__bit_order__first may_be_replaced_by system__high_order_first.
+process_requ_rules(18): system__bit_order__last may_be_replaced_by system__low_order_first.
+process_requ_rules(19): system__bit_order__base__first may_be_replaced_by system__high_order_first.
+process_requ_rules(20): system__bit_order__base__last may_be_replaced_by system__low_order_first.
+process_requ_rules(21): system__bit_order__pos(system__bit_order__first) may_be_replaced_by 0.
+process_requ_rules(22): system__bit_order__pos(
+     system__high_order_first) may_be_replaced_by 0.
+process_requ_rules(23): system__bit_order__val(0) may_be_replaced_by 
+     system__high_order_first.
+process_requ_rules(24): system__bit_order__pos(
+     system__low_order_first) may_be_replaced_by 1.
+process_requ_rules(25): system__bit_order__val(1) may_be_replaced_by 
+     system__low_order_first.
+process_requ_rules(26): system__bit_order__pos(system__bit_order__last) may_be_replaced_by 1.
+process_requ_rules(27): system__bit_order__pos(succ(X)) may_be_replaced_by 
+     system__bit_order__pos(X) + 1
+     if [X <=system__low_order_first, X <> 
+     system__low_order_first].
+process_requ_rules(28): system__bit_order__pos(pred(X)) may_be_replaced_by 
+     system__bit_order__pos(X) - 1
+     if [X >=system__high_order_first, X <> 
+     system__high_order_first].
+process_requ_rules(29): system__bit_order__pos(X) >= 0 may_be_deduced_from
+     [system__high_order_first <= X, X <= system__low_order_first].
+process_requ_rules(30): system__bit_order__pos(X) <= 1 may_be_deduced_from
+     [system__high_order_first <= X, X <= system__low_order_first].
+process_requ_rules(31): system__bit_order__val(X) >= 
+     system__high_order_first may_be_deduced_from
+     [0 <= X, X <= 1].
+process_requ_rules(32): system__bit_order__val(X) <= 
+     system__low_order_first may_be_deduced_from
+     [0 <= X, X <= 1].
+process_requ_rules(33): succ(system__bit_order__val(X)) may_be_replaced_by 
+     system__bit_order__val(X+1)
+     if [0 <= X, X < 1].
+process_requ_rules(34): pred(system__bit_order__val(X)) may_be_replaced_by 
+     system__bit_order__val(X-1)
+     if [0 < X, X <= 1].
+process_requ_rules(35): system__bit_order__pos(system__bit_order__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 1].
+process_requ_rules(36): system__bit_order__val(system__bit_order__pos(X)) may_be_replaced_by X
+     if [system__high_order_first <= X, X <= 
+     system__low_order_first].
+process_requ_rules(37): system__bit_order__pos(X) <= 
+     system__bit_order__pos(Y) & X <= Y are_interchangeable 
+     if [system__high_order_first <= X, X <= 
+     system__low_order_first, system__high_order_first <= Y, Y <= 
+     system__low_order_first].
+process_requ_rules(38): system__bit_order__val(X) <= 
+     system__bit_order__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 1, 0 <= Y, Y <= 1].
+process_requ_rules(39): dns_types__packet_length_range__size >= 0 may_be_deduced.
+process_requ_rules(40): dns_types__packet_length_range__first may_be_replaced_by 0.
+process_requ_rules(41): dns_types__packet_length_range__last may_be_replaced_by 8192.
+process_requ_rules(42): dns_types__packet_length_range__base__first may_be_replaced_by -2147483648.
+process_requ_rules(43): dns_types__packet_length_range__base__last may_be_replaced_by 2147483647.
+process_requ_rules(44): dns_types__packet_bytes_range__size >= 0 may_be_deduced.
+process_requ_rules(45): dns_types__packet_bytes_range__first may_be_replaced_by 1.
+process_requ_rules(46): dns_types__packet_bytes_range__last may_be_replaced_by 8180.
+process_requ_rules(47): dns_types__packet_bytes_range__base__first may_be_replaced_by -2147483648.
+process_requ_rules(48): dns_types__packet_bytes_range__base__last may_be_replaced_by 2147483647.
+process_requ_rules(49): dns_types__byte__size >= 0 may_be_deduced.
+process_requ_rules(50): dns_types__byte__size may_be_replaced_by 8.
+process_requ_rules(51): dns_types__byte__first may_be_replaced_by 0.
+process_requ_rules(52): dns_types__byte__last may_be_replaced_by 255.
+process_requ_rules(53): dns_types__byte__base__first may_be_replaced_by 0.
+process_requ_rules(54): dns_types__byte__base__last may_be_replaced_by 255.
+process_requ_rules(55): dns_types__byte__modulus may_be_replaced_by 256.
+process_requ_rules(56): dns_types__unsigned_short__size >= 0 may_be_deduced.
+process_requ_rules(57): dns_types__unsigned_short__size may_be_replaced_by 16.
+process_requ_rules(58): dns_types__unsigned_short__first may_be_replaced_by 0.
+process_requ_rules(59): dns_types__unsigned_short__last may_be_replaced_by 65535.
+process_requ_rules(60): dns_types__unsigned_short__base__first may_be_replaced_by -2147483648.
+process_requ_rules(61): dns_types__unsigned_short__base__last may_be_replaced_by 2147483647.
+process_requ_rules(62): dns_types__opcode_type__size >= 0 may_be_deduced.
+process_requ_rules(63): dns_types__opcode_type__size may_be_replaced_by 4.
+process_requ_rules(64): dns_types__opcode_type__first may_be_replaced_by dns_types__query.
+process_requ_rules(65): dns_types__opcode_type__last may_be_replaced_by dns_types__status.
+process_requ_rules(66): dns_types__opcode_type__base__first may_be_replaced_by dns_types__query.
+process_requ_rules(67): dns_types__opcode_type__base__last may_be_replaced_by dns_types__status.
+process_requ_rules(68): dns_types__opcode_type__pos(
+     dns_types__opcode_type__first) may_be_replaced_by 0.
+process_requ_rules(69): dns_types__opcode_type__pos(
+     dns_types__query) may_be_replaced_by 0.
+process_requ_rules(70): dns_types__opcode_type__val(0) may_be_replaced_by 
+     dns_types__query.
+process_requ_rules(71): dns_types__opcode_type__pos(
+     dns_types__iquery) may_be_replaced_by 1.
+process_requ_rules(72): dns_types__opcode_type__val(1) may_be_replaced_by 
+     dns_types__iquery.
+process_requ_rules(73): dns_types__opcode_type__pos(
+     dns_types__status) may_be_replaced_by 2.
+process_requ_rules(74): dns_types__opcode_type__val(2) may_be_replaced_by 
+     dns_types__status.
+process_requ_rules(75): dns_types__opcode_type__pos(
+     dns_types__opcode_type__last) may_be_replaced_by 2.
+process_requ_rules(76): dns_types__opcode_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) + 1
+     if [X <=dns_types__status, X <> dns_types__status].
+process_requ_rules(77): dns_types__opcode_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) - 1
+     if [X >=dns_types__query, X <> dns_types__query].
+process_requ_rules(78): dns_types__opcode_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+process_requ_rules(79): dns_types__opcode_type__pos(X) <= 2 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+process_requ_rules(80): dns_types__opcode_type__val(X) >= 
+     dns_types__query may_be_deduced_from
+     [0 <= X, X <= 2].
+process_requ_rules(81): dns_types__opcode_type__val(X) <= 
+     dns_types__status may_be_deduced_from
+     [0 <= X, X <= 2].
+process_requ_rules(82): succ(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X+1)
+     if [0 <= X, X < 2].
+process_requ_rules(83): pred(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X-1)
+     if [0 < X, X <= 2].
+process_requ_rules(84): dns_types__opcode_type__pos(
+     dns_types__opcode_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 2].
+process_requ_rules(85): dns_types__opcode_type__val(
+     dns_types__opcode_type__pos(X)) may_be_replaced_by X
+     if [dns_types__query <= X, X <= dns_types__status].
+process_requ_rules(86): dns_types__opcode_type__pos(X) <= 
+     dns_types__opcode_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__query <= X, X <= dns_types__status, 
+     dns_types__query <= Y, Y <= dns_types__status].
+process_requ_rules(87): dns_types__opcode_type__val(X) <= 
+     dns_types__opcode_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 2, 0 <= Y, Y <= 2].
+process_requ_rules(88): dns_types__response_code__size >= 0 may_be_deduced.
+process_requ_rules(89): dns_types__response_code__size may_be_replaced_by 4.
+process_requ_rules(90): dns_types__response_code__first may_be_replaced_by dns_types__no_error.
+process_requ_rules(91): dns_types__response_code__last may_be_replaced_by dns_types__refused.
+process_requ_rules(92): dns_types__response_code__base__first may_be_replaced_by dns_types__no_error.
+process_requ_rules(93): dns_types__response_code__base__last may_be_replaced_by dns_types__refused.
+process_requ_rules(94): dns_types__response_code__pos(
+     dns_types__response_code__first) may_be_replaced_by 0.
+process_requ_rules(95): dns_types__response_code__pos(
+     dns_types__no_error) may_be_replaced_by 0.
+process_requ_rules(96): dns_types__response_code__val(0) may_be_replaced_by 
+     dns_types__no_error.
+process_requ_rules(97): dns_types__response_code__pos(
+     dns_types__format_error) may_be_replaced_by 1.
+process_requ_rules(98): dns_types__response_code__val(1) may_be_replaced_by 
+     dns_types__format_error.
+process_requ_rules(99): dns_types__response_code__pos(
+     dns_types__server_failure) may_be_replaced_by 2.
+process_requ_rules(100): dns_types__response_code__val(2) may_be_replaced_by 
+     dns_types__server_failure.
+process_requ_rules(101): dns_types__response_code__pos(
+     dns_types__name_error) may_be_replaced_by 3.
+process_requ_rules(102): dns_types__response_code__val(3) may_be_replaced_by 
+     dns_types__name_error.
+process_requ_rules(103): dns_types__response_code__pos(
+     dns_types__not_implemented) may_be_replaced_by 4.
+process_requ_rules(104): dns_types__response_code__val(4) may_be_replaced_by 
+     dns_types__not_implemented.
+process_requ_rules(105): dns_types__response_code__pos(
+     dns_types__refused) may_be_replaced_by 5.
+process_requ_rules(106): dns_types__response_code__val(5) may_be_replaced_by 
+     dns_types__refused.
+process_requ_rules(107): dns_types__response_code__pos(
+     dns_types__response_code__last) may_be_replaced_by 5.
+process_requ_rules(108): dns_types__response_code__pos(succ(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) + 1
+     if [X <=dns_types__refused, X <> dns_types__refused].
+process_requ_rules(109): dns_types__response_code__pos(pred(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) - 1
+     if [X >=dns_types__no_error, X <> dns_types__no_error].
+process_requ_rules(110): dns_types__response_code__pos(X) >= 0 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+process_requ_rules(111): dns_types__response_code__pos(X) <= 5 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+process_requ_rules(112): dns_types__response_code__val(X) >= 
+     dns_types__no_error may_be_deduced_from
+     [0 <= X, X <= 5].
+process_requ_rules(113): dns_types__response_code__val(X) <= 
+     dns_types__refused may_be_deduced_from
+     [0 <= X, X <= 5].
+process_requ_rules(114): succ(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X+1)
+     if [0 <= X, X < 5].
+process_requ_rules(115): pred(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X-1)
+     if [0 < X, X <= 5].
+process_requ_rules(116): dns_types__response_code__pos(
+     dns_types__response_code__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 5].
+process_requ_rules(117): dns_types__response_code__val(
+     dns_types__response_code__pos(X)) may_be_replaced_by X
+     if [dns_types__no_error <= X, X <= dns_types__refused].
+process_requ_rules(118): dns_types__response_code__pos(X) <= 
+     dns_types__response_code__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__no_error <= X, X <= dns_types__refused, 
+     dns_types__no_error <= Y, Y <= dns_types__refused].
+process_requ_rules(119): dns_types__response_code__val(X) <= 
+     dns_types__response_code__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 5, 0 <= Y, Y <= 5].
+process_requ_rules(120): dns_types__header_type__size >= 0 may_be_deduced.
+process_requ_rules(121): dns_types__header_type__size may_be_replaced_by 96.
+process_requ_rules(122): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__header_type)),
+      goal(checktype(B,dns_types__header_type)),
+      fld_messageid(A) = fld_messageid(B),
+      fld_qr(A) = fld_qr(B),
+      fld_opcode(A) = fld_opcode(B),
+      fld_aa(A) = fld_aa(B),
+      fld_tc(A) = fld_tc(B),
+      fld_rd(A) = fld_rd(B),
+      fld_ra(A) = fld_ra(B),
+      fld_res1(A) = fld_res1(B),
+      fld_res2(A) = fld_res2(B),
+      fld_res3(A) = fld_res3(B),
+      fld_rcode(A) = fld_rcode(B),
+      fld_qdcount(A) = fld_qdcount(B),
+      fld_ancount(A) = fld_ancount(B),
+      fld_nscount(A) = fld_nscount(B),
+      fld_arcount(A) = fld_arcount(B)].
+process_requ_rules(123): dns_types__dns_packet__size >= 0 may_be_deduced.
+process_requ_rules(124): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_packet)),
+      goal(checktype(B,dns_types__dns_packet)),
+      fld_header(A) = fld_header(B),
+      fld_bytes(A) = fld_bytes(B)].
+process_requ_rules(125): dns_types__dns_tcp_packet__size >= 0 may_be_deduced.
+process_requ_rules(126): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_tcp_packet)),
+      goal(checktype(B,dns_types__dns_tcp_packet)),
+      fld_length(A) = fld_length(B),
+      fld_rest(A) = fld_rest(B)].
+process_requ_rules(127): protected_spark_io_05__number_base__size >= 0 may_be_deduced.
+process_requ_rules(128): protected_spark_io_05__number_base__first may_be_replaced_by 2.
+process_requ_rules(129): protected_spark_io_05__number_base__last may_be_replaced_by 16.
+process_requ_rules(130): protected_spark_io_05__number_base__base__first may_be_replaced_by -2147483648.
+process_requ_rules(131): protected_spark_io_05__number_base__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,39 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                 /*function Rr_Type.ConvertStringToDomainName*/
+
+
+rule_family convertstrin_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convertstrin_rules(1): maxdomainnamelength may_be_replaced_by 128.
+convertstrin_rules(2): integer__size >= 0 may_be_deduced.
+convertstrin_rules(3): integer__first may_be_replaced_by -2147483648.
+convertstrin_rules(4): integer__last may_be_replaced_by 2147483647.
+convertstrin_rules(5): integer__base__first may_be_replaced_by -2147483648.
+convertstrin_rules(6): integer__base__last may_be_replaced_by 2147483647.
+convertstrin_rules(7): character__size >= 0 may_be_deduced.
+convertstrin_rules(8): character__first may_be_replaced_by 0.
+convertstrin_rules(9): character__last may_be_replaced_by 255.
+convertstrin_rules(10): character__base__first may_be_replaced_by 0.
+convertstrin_rules(11): character__base__last may_be_replaced_by 255.
+convertstrin_rules(12): positive__size >= 0 may_be_deduced.
+convertstrin_rules(13): positive__first may_be_replaced_by 1.
+convertstrin_rules(14): positive__last may_be_replaced_by 2147483647.
+convertstrin_rules(15): positive__base__first may_be_replaced_by -2147483648.
+convertstrin_rules(16): positive__base__last may_be_replaced_by 2147483647.
+convertstrin_rules(17): domainnamestringtypeindex__size >= 0 may_be_deduced.
+convertstrin_rules(18): domainnamestringtypeindex__first may_be_replaced_by 1.
+convertstrin_rules(19): domainnamestringtypeindex__last may_be_replaced_by 128.
+convertstrin_rules(20): domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+convertstrin_rules(21): domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.
+convertstrin_rules(22): s__index__subtype__1__first may_be_replaced_by 1.
+convertstrin_rules(23): s__index__subtype__1__last <= positive__last may_be_deduced.
+convertstrin_rules(24): s__index__subtype__1__last >= 0 may_be_deduced.

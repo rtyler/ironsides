@@ -1,0 +1,15 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+               /*procedure Udp_Dns_Package.Initialization_Done*/
+
+
+rule_family initializati_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+

@@ -1,0 +1,61 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                  {procedure Process_Dns_Request.Trim_Name}
+
+
+title procedure trim_name;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__qname_ptr_range = integer;
+  type dns_types__packet_length_range = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const system__min_int : integer = pending;
+  const system__max_int : integer = pending;
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const dns_types__packet_length_range__base__first : integer = pending; 
+  const dns_types__packet_length_range__base__last : integer = pending; 
+  const dns_types__qname_ptr_range__base__first : integer = pending; 
+  const dns_types__qname_ptr_range__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const dns_types__packet_length_range__first : integer = pending; 
+  const dns_types__packet_length_range__last : integer = pending; 
+  const dns_types__packet_length_range__size : integer = pending; 
+  const dns_types__qname_ptr_range__first : integer = pending; 
+  const dns_types__qname_ptr_range__last : integer = pending; 
+  const dns_types__qname_ptr_range__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var domainname : string;
+  var qname_location : integer;
+  var zone_length : integer;
+  var loop__1__i : integer;
+
+end;

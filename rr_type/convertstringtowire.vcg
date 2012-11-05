@@ -1,0 +1,33 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                    function Rr_Type.ConvertStringToWire
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 145:
+
+function_convertstringtowire_1.
+H1:    s__index__subtype__1__last - s__index__subtype__1__first + 1 <= 
+           maxdomainnamelength .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           s__index__subtype__1__first) and (i___1 <= 
+           s__index__subtype__1__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+        ->
+C1:    s__index__subtype__1__last - s__index__subtype__1__first + 1 <= 
+           maxdomainnamelength .
+ 
+
+For path(s) from start to finish:
+
+function_convertstringtowire_2.
+*** true .          /* trivially true VC removed by Examiner */
+
+

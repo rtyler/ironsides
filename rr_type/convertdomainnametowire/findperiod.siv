@@ -1,0 +1,79 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertDomainNameToWire.FindPeriod
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 118:
+
+function_findperiod_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 119:
+
+function_findperiod_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 120 to run-time check associated with 
+          statement of line 119:
+
+function_findperiod_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 120:
+
+function_findperiod_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 120 to assertion of line 120:
+
+function_findperiod_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 120 to run-time check associated with 
+          statement of line 121:
+
+function_findperiod_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 123:
+
+function_findperiod_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 120 to run-time check associated with 
+          statement of line 123:
+
+function_findperiod_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_findperiod_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 120 to finish:
+
+function_findperiod_10.
+*** true .          /* all conclusions proved */
+
+

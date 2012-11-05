@@ -1,0 +1,1766 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+             procedure Process_Dns_Request.Process_Request_Tcp
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 1156:
+
+procedure_process_request_tcp_1.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+        ->
+C1:    input_bytes__1 >= dns_types__packet_length_range__first .
+C2:    input_bytes__1 <= dns_types__packet_length_range__last .
+ 
+
+For path(s) from start to precondition check associated with statement of line 1172:
+
+procedure_process_request_tcp_2.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+        ->
+C1:    input_bytes__1 >= dns_types__packet_length_range__first .
+C2:    input_bytes__1 <= dns_types__packet_length_range__last .
+C3:    input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+C4:    input_bytes__1 < 312 .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1172:
+
+procedure_process_request_tcp_3.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+        ->
+C1:    max_transmit__2 >= dns_types__packet_length_range__first .
+C2:    max_transmit__2 <= dns_types__packet_length_range__last .
+C3:    output_bytes__2 >= dns_types__packet_length_range__first .
+C4:    output_bytes__2 <= dns_types__packet_length_range__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1185:
+
+procedure_process_request_tcp_4.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   system__default_bit_order = system__low_order_first .
+        ->
+C1:    output_bytes__2 >= dns_types__unsigned_short__first .
+C2:    output_bytes__2 <= dns_types__unsigned_short__last .
+C3:    output_bytes__2 >= dns_types__unsigned_short__first .
+C4:    output_bytes__2 <= dns_types__unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1185:
+
+procedure_process_request_tcp_5.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   system__default_bit_order = system__low_order_first .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H82:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+        ->
+C1:    dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+C2:    dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1187:
+
+procedure_process_request_tcp_6.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   not (system__default_bit_order = 
+           system__low_order_first) .
+        ->
+C1:    output_bytes__2 >= dns_types__unsigned_short__first .
+C2:    output_bytes__2 <= dns_types__unsigned_short__last .
+C3:    output_bytes__2 >= dns_types__unsigned_short__first .
+C4:    output_bytes__2 <= dns_types__unsigned_short__last .
+ 
+
+For path(s) from start to precondition check associated with statement of line 1195:
+
+procedure_process_request_tcp_7.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   system__default_bit_order = system__low_order_first .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H82:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+H83:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H84:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+        ->
+C1:    output_bytes__2 >= dns_types__packet_length_range__first .
+C2:    output_bytes__2 <= dns_types__packet_length_range__last .
+C3:    output_bytes__2 > dns_types__header_bits div 8 .
+ 
+
+procedure_process_request_tcp_8.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   not (system__default_bit_order = 
+           system__low_order_first) .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+        ->
+C1:    output_bytes__2 >= dns_types__packet_length_range__first .
+C2:    output_bytes__2 <= dns_types__packet_length_range__last .
+C3:    output_bytes__2 > dns_types__header_bits div 8 .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1201:
+
+procedure_process_request_tcp_9.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   system__default_bit_order = system__low_order_first .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H82:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+H83:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H84:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+H85:   output_bytes__2 >= dns_types__packet_length_range__first .
+H86:   output_bytes__2 <= dns_types__packet_length_range__last .
+H87:   output_bytes__2 > dns_types__header_bits div 8 .
+H88:   (system__default_bit_order = system__high_order_first) -> (
+           output_packet__3 = upf_length(output_packet__2, 
+           dns_types__byte_swap_us(output_bytes__2))) .
+H89:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__3)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__3)), [i___1]) <= dns_types__byte__last))) .
+H90:   fld_arcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H91:   fld_arcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H92:   fld_nscount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H93:   fld_nscount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H94:   fld_ancount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H95:   fld_ancount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H96:   fld_qdcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H97:   fld_qdcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H98:   fld_rcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__response_code__first .
+H99:   fld_rcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__response_code__last .
+H100:  true .
+H101:  true .
+H102:  true .
+H103:  true .
+H104:  true .
+H105:  true .
+H106:  true .
+H107:  fld_opcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__opcode_type__first .
+H108:  fld_opcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__opcode_type__last .
+H109:  true .
+H110:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H111:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H112:  fld_length(output_packet__3) >= 
+           dns_types__unsigned_short__first .
+H113:  fld_length(output_packet__3) <= 
+           dns_types__unsigned_short__last .
+H114:  true .
+H115:  failure__3 .
+H116:  true .
+        ->
+C1:    16 >= protected_spark_io_05__number_base__first .
+C2:    16 <= protected_spark_io_05__number_base__last .
+C3:    0 >= natural__first .
+C4:    0 <= natural__last .
+C5:    fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+C6:    fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+C7:    fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+C8:    fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+ 
+
+procedure_process_request_tcp_10.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   not (system__default_bit_order = 
+           system__low_order_first) .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   output_bytes__2 >= dns_types__packet_length_range__first .
+H82:   output_bytes__2 <= dns_types__packet_length_range__last .
+H83:   output_bytes__2 > dns_types__header_bits div 8 .
+H84:   (system__default_bit_order = system__high_order_first) -> (
+           output_packet__3 = upf_length(output_packet__2, 
+           output_bytes__2)) .
+H85:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__3)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__3)), [i___1]) <= dns_types__byte__last))) .
+H86:   fld_arcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H87:   fld_arcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H88:   fld_nscount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H89:   fld_nscount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H90:   fld_ancount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H91:   fld_ancount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H92:   fld_qdcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H93:   fld_qdcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H94:   fld_rcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__response_code__first .
+H95:   fld_rcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__response_code__last .
+H96:   true .
+H97:   true .
+H98:   true .
+H99:   true .
+H100:  true .
+H101:  true .
+H102:  true .
+H103:  fld_opcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__opcode_type__first .
+H104:  fld_opcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__opcode_type__last .
+H105:  true .
+H106:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H107:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H108:  fld_length(output_packet__3) >= 
+           dns_types__unsigned_short__first .
+H109:  fld_length(output_packet__3) <= 
+           dns_types__unsigned_short__last .
+H110:  true .
+H111:  failure__3 .
+H112:  true .
+        ->
+C1:    16 >= protected_spark_io_05__number_base__first .
+C2:    16 <= protected_spark_io_05__number_base__last .
+C3:    0 >= natural__first .
+C4:    0 <= natural__last .
+C5:    fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+C6:    fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+C7:    fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+C8:    fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 1203:
+
+procedure_process_request_tcp_11.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   system__default_bit_order = system__low_order_first .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H82:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+H83:   dns_types__byte_swap_us(output_bytes__2) >= 
+           dns_types__unsigned_short__first .
+H84:   dns_types__byte_swap_us(output_bytes__2) <= 
+           dns_types__unsigned_short__last .
+H85:   output_bytes__2 >= dns_types__packet_length_range__first .
+H86:   output_bytes__2 <= dns_types__packet_length_range__last .
+H87:   output_bytes__2 > dns_types__header_bits div 8 .
+H88:   (system__default_bit_order = system__high_order_first) -> (
+           output_packet__3 = upf_length(output_packet__2, 
+           dns_types__byte_swap_us(output_bytes__2))) .
+H89:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__3)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__3)), [i___1]) <= dns_types__byte__last))) .
+H90:   fld_arcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H91:   fld_arcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H92:   fld_nscount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H93:   fld_nscount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H94:   fld_ancount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H95:   fld_ancount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H96:   fld_qdcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H97:   fld_qdcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H98:   fld_rcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__response_code__first .
+H99:   fld_rcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__response_code__last .
+H100:  true .
+H101:  true .
+H102:  true .
+H103:  true .
+H104:  true .
+H105:  true .
+H106:  true .
+H107:  fld_opcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__opcode_type__first .
+H108:  fld_opcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__opcode_type__last .
+H109:  true .
+H110:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H111:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H112:  fld_length(output_packet__3) >= 
+           dns_types__unsigned_short__first .
+H113:  fld_length(output_packet__3) <= 
+           dns_types__unsigned_short__last .
+H114:  true .
+H115:  failure__3 .
+H116:  true .
+H117:  16 >= protected_spark_io_05__number_base__first .
+H118:  16 <= protected_spark_io_05__number_base__last .
+H119:  0 >= natural__first .
+H120:  0 <= natural__last .
+H121:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+H122:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+H123:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+H124:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+H125:  true .
+        ->
+C1:    0 >= natural__first .
+C2:    0 <= natural__last .
+ 
+
+procedure_process_request_tcp_12.
+H1:    true .
+H2:    (not failure__1) -> ((input_bytes__1 >= 1 + 
+           dns_types__header_bits div 8) and (input_bytes__1 <= 
+           dns_network__max_query_size)) .
+H3:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(input_packet__1)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           input_packet__1)), [i___1]) <= dns_types__byte__last))) .
+H4:    fld_arcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H5:    fld_arcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H6:    fld_nscount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H7:    fld_nscount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H8:    fld_ancount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H9:    fld_ancount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H10:   fld_qdcount(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H11:   fld_qdcount(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H12:   fld_rcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__response_code__first .
+H13:   fld_rcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__response_code__last .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   fld_opcode(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__opcode_type__first .
+H22:   fld_opcode(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__opcode_type__last .
+H23:   true .
+H24:   fld_messageid(fld_header(fld_rest(input_packet__1))) >= 
+           dns_types__unsigned_short__first .
+H25:   fld_messageid(fld_header(fld_rest(input_packet__1))) <= 
+           dns_types__unsigned_short__last .
+H26:   fld_length(input_packet__1) >= 
+           dns_types__unsigned_short__first .
+H27:   fld_length(input_packet__1) <= 
+           dns_types__unsigned_short__last .
+H28:   input_bytes__1 >= dns_types__packet_length_range__first .
+H29:   input_bytes__1 <= dns_types__packet_length_range__last .
+H30:   true .
+H31:   input_bytes__1 >= dns_types__packet_length_range__first .
+H32:   input_bytes__1 <= dns_types__packet_length_range__last .
+H33:   not failure__1 .
+H34:   input_bytes__1 >= dns_types__packet_length_range__first .
+H35:   input_bytes__1 <= dns_types__packet_length_range__last .
+H36:   input_bytes__1 >= dns_types__header_bits div 8 + 1 .
+H37:   input_bytes__1 < 312 .
+H38:   output_bytes__2 >= dns_types__header_bits div 8 + 1 .
+H39:   output_bytes__2 <= dns_types__packet_size .
+H40:   max_transmit__2 <= dns_types__packet_size .
+H41:   max_transmit__2 >= dns_types__udp_max_size .
+H42:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__2)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__2)), [i___1]) <= dns_types__byte__last))) .
+H43:   fld_arcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H44:   fld_arcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H45:   fld_nscount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H46:   fld_nscount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H47:   fld_ancount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H48:   fld_ancount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H49:   fld_qdcount(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H50:   fld_qdcount(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H51:   fld_rcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__response_code__first .
+H52:   fld_rcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__response_code__last .
+H53:   true .
+H54:   true .
+H55:   true .
+H56:   true .
+H57:   true .
+H58:   true .
+H59:   true .
+H60:   fld_opcode(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__opcode_type__first .
+H61:   fld_opcode(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__opcode_type__last .
+H62:   true .
+H63:   fld_messageid(fld_header(fld_rest(output_packet__2))) >= 
+           dns_types__unsigned_short__first .
+H64:   fld_messageid(fld_header(fld_rest(output_packet__2))) <= 
+           dns_types__unsigned_short__last .
+H65:   output_bytes__2 >= dns_types__packet_length_range__first .
+H66:   output_bytes__2 <= dns_types__packet_length_range__last .
+H67:   max_transmit__2 >= dns_types__packet_length_range__first .
+H68:   max_transmit__2 <= dns_types__packet_length_range__last .
+H69:   true .
+H70:   fld_length(output_packet__2) = fld_length(
+           output_packet) .
+H71:   output_packet__2 = upf_rest(output_packet, fld_rest(
+           output_packet__2)) .
+H72:   max_transmit__2 >= dns_types__packet_length_range__first .
+H73:   max_transmit__2 <= dns_types__packet_length_range__last .
+H74:   output_bytes__2 >= dns_types__packet_length_range__first .
+H75:   output_bytes__2 <= dns_types__packet_length_range__last .
+H76:   not (system__default_bit_order = 
+           system__low_order_first) .
+H77:   output_bytes__2 >= dns_types__unsigned_short__first .
+H78:   output_bytes__2 <= dns_types__unsigned_short__last .
+H79:   output_bytes__2 >= dns_types__unsigned_short__first .
+H80:   output_bytes__2 <= dns_types__unsigned_short__last .
+H81:   output_bytes__2 >= dns_types__packet_length_range__first .
+H82:   output_bytes__2 <= dns_types__packet_length_range__last .
+H83:   output_bytes__2 > dns_types__header_bits div 8 .
+H84:   (system__default_bit_order = system__high_order_first) -> (
+           output_packet__3 = upf_length(output_packet__2, 
+           output_bytes__2)) .
+H85:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(fld_rest(output_packet__3)), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(fld_rest(
+           output_packet__3)), [i___1]) <= dns_types__byte__last))) .
+H86:   fld_arcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H87:   fld_arcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H88:   fld_nscount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H89:   fld_nscount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H90:   fld_ancount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H91:   fld_ancount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H92:   fld_qdcount(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H93:   fld_qdcount(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H94:   fld_rcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__response_code__first .
+H95:   fld_rcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__response_code__last .
+H96:   true .
+H97:   true .
+H98:   true .
+H99:   true .
+H100:  true .
+H101:  true .
+H102:  true .
+H103:  fld_opcode(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__opcode_type__first .
+H104:  fld_opcode(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__opcode_type__last .
+H105:  true .
+H106:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           dns_types__unsigned_short__first .
+H107:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           dns_types__unsigned_short__last .
+H108:  fld_length(output_packet__3) >= 
+           dns_types__unsigned_short__first .
+H109:  fld_length(output_packet__3) <= 
+           dns_types__unsigned_short__last .
+H110:  true .
+H111:  failure__3 .
+H112:  true .
+H113:  16 >= protected_spark_io_05__number_base__first .
+H114:  16 <= protected_spark_io_05__number_base__last .
+H115:  0 >= natural__first .
+H116:  0 <= natural__last .
+H117:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+H118:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+H119:  fld_messageid(fld_header(fld_rest(output_packet__3))) >= 
+           integer__first .
+H120:  fld_messageid(fld_header(fld_rest(output_packet__3))) <= 
+           integer__last .
+H121:  true .
+        ->
+C1:    0 >= natural__first .
+C2:    0 <= natural__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_process_request_tcp_13.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_process_request_tcp_14.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_process_request_tcp_15.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_process_request_tcp_16.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_process_request_tcp_17.
+*** true .          /* trivially true VC removed by Examiner */
+
+

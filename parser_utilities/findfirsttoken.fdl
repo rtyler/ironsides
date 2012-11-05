@@ -1,0 +1,73 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                 {procedure Parser_Utilities.findFirstToken}
+
+
+title procedure findfirsttoken;
+
+  function round__(real) : integer;
+  type character = integer;
+  type rr_type__rritemtype = (rr_type__domainnameortimespec, 
+     rr_type__number, rr_type__class, rr_type__recordindicator, 
+     rr_type__ipv4, rr_type__ipv6, rr_type__lparen, 
+     rr_type__rparen, rr_type__control, rr_type__comment, 
+     rr_type__other);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const blank : character = pending;
+  const tab : character = pending;
+  const comment_char : character = pending;
+  const control_char : character = pending;
+  const origin_char : character = pending;
+  const l_paren : character = pending;
+  const r_paren : character = pending;
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__rritemtype__base__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__base__last : rr_type__rritemtype = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__rritemtype__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__last : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var s : string;
+  var length : integer;
+  var begidx : integer;
+  var endidx : integer;
+  var containsonlynumbers : boolean;
+  var containsonlyletters : boolean;
+  var containsperiod : boolean;
+  var containscolon : boolean;
+  var containsdecimalnumbers : boolean;
+  var containshexnumbers : boolean;
+  var containsletters : boolean;
+  var loop__3__i : integer;
+  var endidx__entry__loop__3 : integer;
+  function ada__characters__handling__is_letter(character) : boolean;
+  function ada__characters__handling__is_digit(character) : boolean;
+  function ada__characters__handling__is_hexadecimal_digit(character) : boolean;
+  function isclass(string, integer, integer) : boolean;
+  function isrecord(string, integer, integer) : boolean;
+
+end;

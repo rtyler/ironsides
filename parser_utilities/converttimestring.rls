@@ -1,0 +1,57 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                /*procedure Parser_Utilities.ConvertTimeString*/
+
+
+rule_family converttimes_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+converttimes_rules(1): rr_type__rrsig_record_type__max_year may_be_replaced_by 2020.
+converttimes_rules(2): secondsinaminute may_be_replaced_by 60.
+converttimes_rules(3): minutesinanhour may_be_replaced_by 60.
+converttimes_rules(4): hoursinaday may_be_replaced_by 24.
+converttimes_rules(5): maxdaysinamonth may_be_replaced_by 31.
+converttimes_rules(6): monthsinayear may_be_replaced_by 12.
+converttimes_rules(7): integer__size >= 0 may_be_deduced.
+converttimes_rules(8): integer__first may_be_replaced_by -2147483648.
+converttimes_rules(9): integer__last may_be_replaced_by 2147483647.
+converttimes_rules(10): integer__base__first may_be_replaced_by -2147483648.
+converttimes_rules(11): integer__base__last may_be_replaced_by 2147483647.
+converttimes_rules(12): character__size >= 0 may_be_deduced.
+converttimes_rules(13): character__first may_be_replaced_by 0.
+converttimes_rules(14): character__last may_be_replaced_by 255.
+converttimes_rules(15): character__base__first may_be_replaced_by 0.
+converttimes_rules(16): character__base__last may_be_replaced_by 255.
+converttimes_rules(17): natural__size >= 0 may_be_deduced.
+converttimes_rules(18): natural__first may_be_replaced_by 0.
+converttimes_rules(19): natural__last may_be_replaced_by 2147483647.
+converttimes_rules(20): natural__base__first may_be_replaced_by -2147483648.
+converttimes_rules(21): natural__base__last may_be_replaced_by 2147483647.
+converttimes_rules(22): positive__size >= 0 may_be_deduced.
+converttimes_rules(23): positive__first may_be_replaced_by 1.
+converttimes_rules(24): positive__last may_be_replaced_by 2147483647.
+converttimes_rules(25): positive__base__first may_be_replaced_by -2147483648.
+converttimes_rules(26): positive__base__last may_be_replaced_by 2147483647.
+converttimes_rules(27): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+converttimes_rules(28): unsigned_types__unsigned32__first may_be_replaced_by 0.
+converttimes_rules(29): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+converttimes_rules(30): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+converttimes_rules(31): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+converttimes_rules(32): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+converttimes_rules(33): 
+     rr_type__rrsig_record_type__timestringtypeindex__size >= 0 may_be_deduced.
+converttimes_rules(34): 
+     rr_type__rrsig_record_type__timestringtypeindex__first may_be_replaced_by 1.
+converttimes_rules(35): 
+     rr_type__rrsig_record_type__timestringtypeindex__last may_be_replaced_by 14.
+converttimes_rules(36): 
+     rr_type__rrsig_record_type__timestringtypeindex__base__first may_be_replaced_by -2147483648.
+converttimes_rules(37): 
+     rr_type__rrsig_record_type__timestringtypeindex__base__last may_be_replaced_by 2147483647.

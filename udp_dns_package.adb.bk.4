@@ -1,0 +1,65 @@
+with Protected_SPARK_IO_05;
+package body Udp_Dns_Package is
+   --type task_array is array(1..10) of udp_dns_task;
+   The_Task : Udp_Dns_Task;
+   --the_tasks : task_array;
+   Startup_Suspension : Ada.Synchronous_Task_Control.Suspension_Object;
+
+   procedure Initialization_Done is
+   begin
+      Ada.Synchronous_Task_Control.Set_True(Startup_Suspension);
+   end Initialization_Done;
+
+   ------------------
+   -- Udp_Dns_Task --
+   ------------------
+
+   task body Udp_Dns_Task is
+      Input_Packet  : DNS_Types.DNS_Packet;
+      Input_Bytes   : DNS_Types.Packet_Length_Range;
+      Reply_Address : DNS_Network.Network_Address_And_Port;
+      Output_Packet : DNS_Types.DNS_Packet;
+      Output_Bytes  : DNS_Types.Packet_Length_Range;
+      Failure       : Boolean;
+   begin
+      DNS_Network.Initialize_UDP;
+      Ada.Synchronous_Task_Control.Suspend_Until_True(Startup_Suspension);
+      Output_Packet.Bytes := DNS_Types.Bytes_Array_Type'(others => 0);
+      Output_Packet.Header := DNS_Types.Empty_Header;
+      loop
+         --# assert true;
+         DNS_Network_Receive.Receive_DNS_Packet(
+            Packet        => Input_Packet,
+            Number_Bytes  => Input_Bytes,
+            Reply_Address => Reply_Address,
+            Failure       => Failure);
+         if Failure then
+            Protected_SPARK_IO_05.SPARK_IO_PO.Put_Line(
+               Protected_SPARK_IO_05.SPARK_IO_PO.Standard_Output,
+               "Receive failed",0);
+         else
+            Process_Dns_Request.Create_Response(
+               Input_Packet  => Input_Packet,
+               Input_Bytes   => Input_Bytes,
+               Output_Packet => Output_Packet,
+               Output_Bytes => Output_Bytes);
+            -- since there is a restriction on UDP messages w/o EDNS, cap the UDP size here
+            Output_Bytes := DNS_Types.Packet_Length_Range'Min(DNS_Types.UDP_Max_Size,Output_Bytes);
+
+-- accept Flow, 10, Output_Packet, "don't really care that the packet is network ordered";
+            DNS_Network.Send_DNS_Packet(
+                  Packet       => Output_Packet,
+                  Number_Bytes => Output_Bytes,
+                  To_Address   => Reply_Address,
+                  Failure      => Failure);
+--end accept;
+            if Failure then
+               Protected_SPARK_IO_05.SPARK_IO_PO.Put_Line(
+                  Protected_SPARK_IO_05.SPARK_IO_PO.Standard_Output,
+                  "send failed",0);
+            end if;
+         end if;
+      end loop;
+   end Udp_Dns_Task;
+
+end Udp_Dns_Package;

@@ -1,0 +1,304 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+         /*procedure Zone_File_Parser.parseOwnerTTLClassAndRecordType*/
+
+
+rule_family parseownertt_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+parseownertt_rules(1): ada__characters__latin_1__ht may_be_replaced_by 9.
+parseownertt_rules(2): rr_type__maxdomainnamelength may_be_replaced_by 128.
+parseownertt_rules(3): character__first <= element(rr_type__blankdomainname, [I]) may_be_deduced_from [1 <= I, I <= 128].
+parseownertt_rules(4): element(rr_type__blankdomainname, [I]) <= 
+     character__last may_be_deduced_from [1 <= I, I <= 128].
+parseownertt_rules(5): integer__size >= 0 may_be_deduced.
+parseownertt_rules(6): integer__first may_be_replaced_by -2147483648.
+parseownertt_rules(7): integer__last may_be_replaced_by 2147483647.
+parseownertt_rules(8): integer__base__first may_be_replaced_by -2147483648.
+parseownertt_rules(9): integer__base__last may_be_replaced_by 2147483647.
+parseownertt_rules(10): character__size >= 0 may_be_deduced.
+parseownertt_rules(11): character__first may_be_replaced_by 0.
+parseownertt_rules(12): character__last may_be_replaced_by 255.
+parseownertt_rules(13): character__base__first may_be_replaced_by 0.
+parseownertt_rules(14): character__base__last may_be_replaced_by 255.
+parseownertt_rules(15): natural__size >= 0 may_be_deduced.
+parseownertt_rules(16): natural__first may_be_replaced_by 0.
+parseownertt_rules(17): natural__last may_be_replaced_by 2147483647.
+parseownertt_rules(18): natural__base__first may_be_replaced_by -2147483648.
+parseownertt_rules(19): natural__base__last may_be_replaced_by 2147483647.
+parseownertt_rules(20): positive__size >= 0 may_be_deduced.
+parseownertt_rules(21): positive__first may_be_replaced_by 1.
+parseownertt_rules(22): positive__last may_be_replaced_by 2147483647.
+parseownertt_rules(23): positive__base__first may_be_replaced_by -2147483648.
+parseownertt_rules(24): positive__base__last may_be_replaced_by 2147483647.
+parseownertt_rules(25): dns_types__query_type__size >= 0 may_be_deduced.
+parseownertt_rules(26): dns_types__query_type__size may_be_replaced_by 16.
+parseownertt_rules(27): dns_types__query_type__first may_be_replaced_by dns_types__a.
+parseownertt_rules(28): dns_types__query_type__last may_be_replaced_by dns_types__unimplemented.
+parseownertt_rules(29): dns_types__query_type__base__first may_be_replaced_by dns_types__a.
+parseownertt_rules(30): dns_types__query_type__base__last may_be_replaced_by dns_types__unimplemented.
+parseownertt_rules(31): dns_types__query_type__pos(
+     dns_types__query_type__first) may_be_replaced_by 0.
+parseownertt_rules(32): dns_types__query_type__pos(dns_types__a) may_be_replaced_by 0.
+parseownertt_rules(33): dns_types__query_type__val(0) may_be_replaced_by 
+     dns_types__a.
+parseownertt_rules(34): dns_types__query_type__pos(dns_types__ns) may_be_replaced_by 1.
+parseownertt_rules(35): dns_types__query_type__val(1) may_be_replaced_by 
+     dns_types__ns.
+parseownertt_rules(36): dns_types__query_type__pos(
+     dns_types__cname) may_be_replaced_by 2.
+parseownertt_rules(37): dns_types__query_type__val(2) may_be_replaced_by 
+     dns_types__cname.
+parseownertt_rules(38): dns_types__query_type__pos(dns_types__soa) may_be_replaced_by 3.
+parseownertt_rules(39): dns_types__query_type__val(3) may_be_replaced_by 
+     dns_types__soa.
+parseownertt_rules(40): dns_types__query_type__pos(dns_types__wks) may_be_replaced_by 4.
+parseownertt_rules(41): dns_types__query_type__val(4) may_be_replaced_by 
+     dns_types__wks.
+parseownertt_rules(42): dns_types__query_type__pos(dns_types__ptr) may_be_replaced_by 5.
+parseownertt_rules(43): dns_types__query_type__val(5) may_be_replaced_by 
+     dns_types__ptr.
+parseownertt_rules(44): dns_types__query_type__pos(dns_types__mx) may_be_replaced_by 6.
+parseownertt_rules(45): dns_types__query_type__val(6) may_be_replaced_by 
+     dns_types__mx.
+parseownertt_rules(46): dns_types__query_type__pos(
+     dns_types__aaaa) may_be_replaced_by 7.
+parseownertt_rules(47): dns_types__query_type__val(7) may_be_replaced_by 
+     dns_types__aaaa.
+parseownertt_rules(48): dns_types__query_type__pos(dns_types__srv) may_be_replaced_by 8.
+parseownertt_rules(49): dns_types__query_type__val(8) may_be_replaced_by 
+     dns_types__srv.
+parseownertt_rules(50): dns_types__query_type__pos(dns_types__a6) may_be_replaced_by 9.
+parseownertt_rules(51): dns_types__query_type__val(9) may_be_replaced_by 
+     dns_types__a6.
+parseownertt_rules(52): dns_types__query_type__pos(dns_types__opt) may_be_replaced_by 10.
+parseownertt_rules(53): dns_types__query_type__val(10) may_be_replaced_by 
+     dns_types__opt.
+parseownertt_rules(54): dns_types__query_type__pos(dns_types__ds) may_be_replaced_by 11.
+parseownertt_rules(55): dns_types__query_type__val(11) may_be_replaced_by 
+     dns_types__ds.
+parseownertt_rules(56): dns_types__query_type__pos(
+     dns_types__rrsig) may_be_replaced_by 12.
+parseownertt_rules(57): dns_types__query_type__val(12) may_be_replaced_by 
+     dns_types__rrsig.
+parseownertt_rules(58): dns_types__query_type__pos(
+     dns_types__nsec) may_be_replaced_by 13.
+parseownertt_rules(59): dns_types__query_type__val(13) may_be_replaced_by 
+     dns_types__nsec.
+parseownertt_rules(60): dns_types__query_type__pos(
+     dns_types__dnskey) may_be_replaced_by 14.
+parseownertt_rules(61): dns_types__query_type__val(14) may_be_replaced_by 
+     dns_types__dnskey.
+parseownertt_rules(62): dns_types__query_type__pos(dns_types__any) may_be_replaced_by 15.
+parseownertt_rules(63): dns_types__query_type__val(15) may_be_replaced_by 
+     dns_types__any.
+parseownertt_rules(64): dns_types__query_type__pos(dns_types__caa) may_be_replaced_by 16.
+parseownertt_rules(65): dns_types__query_type__val(16) may_be_replaced_by 
+     dns_types__caa.
+parseownertt_rules(66): dns_types__query_type__pos(
+     dns_types__error) may_be_replaced_by 17.
+parseownertt_rules(67): dns_types__query_type__val(17) may_be_replaced_by 
+     dns_types__error.
+parseownertt_rules(68): dns_types__query_type__pos(
+     dns_types__unimplemented) may_be_replaced_by 18.
+parseownertt_rules(69): dns_types__query_type__val(18) may_be_replaced_by 
+     dns_types__unimplemented.
+parseownertt_rules(70): dns_types__query_type__pos(
+     dns_types__query_type__last) may_be_replaced_by 18.
+parseownertt_rules(71): dns_types__query_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) + 1
+     if [X <=dns_types__unimplemented, X <> 
+     dns_types__unimplemented].
+parseownertt_rules(72): dns_types__query_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) - 1
+     if [X >=dns_types__a, X <> dns_types__a].
+parseownertt_rules(73): dns_types__query_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+parseownertt_rules(74): dns_types__query_type__pos(X) <= 18 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+parseownertt_rules(75): dns_types__query_type__val(X) >= 
+     dns_types__a may_be_deduced_from
+     [0 <= X, X <= 18].
+parseownertt_rules(76): dns_types__query_type__val(X) <= 
+     dns_types__unimplemented may_be_deduced_from
+     [0 <= X, X <= 18].
+parseownertt_rules(77): succ(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X+1)
+     if [0 <= X, X < 18].
+parseownertt_rules(78): pred(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X-1)
+     if [0 < X, X <= 18].
+parseownertt_rules(79): dns_types__query_type__pos(
+     dns_types__query_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 18].
+parseownertt_rules(80): dns_types__query_type__val(
+     dns_types__query_type__pos(X)) may_be_replaced_by X
+     if [dns_types__a <= X, X <= dns_types__unimplemented].
+parseownertt_rules(81): dns_types__query_type__pos(X) <= 
+     dns_types__query_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__a <= X, X <= dns_types__unimplemented, 
+     dns_types__a <= Y, Y <= dns_types__unimplemented].
+parseownertt_rules(82): dns_types__query_type__val(X) <= 
+     dns_types__query_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 18, 0 <= Y, Y <= 18].
+parseownertt_rules(83): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+parseownertt_rules(84): unsigned_types__unsigned32__first may_be_replaced_by 0.
+parseownertt_rules(85): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+parseownertt_rules(86): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+parseownertt_rules(87): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+parseownertt_rules(88): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+parseownertt_rules(89): rr_type__classtype__size >= 0 may_be_deduced.
+parseownertt_rules(90): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+parseownertt_rules(91): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+parseownertt_rules(92): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+parseownertt_rules(93): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+parseownertt_rules(94): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+parseownertt_rules(95): rr_type__classtype__pos(rr_type__internet) may_be_replaced_by 0.
+parseownertt_rules(96): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+parseownertt_rules(97): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+parseownertt_rules(98): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+parseownertt_rules(99): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+parseownertt_rules(100): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+parseownertt_rules(101): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+parseownertt_rules(102): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+parseownertt_rules(103): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+parseownertt_rules(104): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+parseownertt_rules(105): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+parseownertt_rules(106): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parseownertt_rules(107): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parseownertt_rules(108): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+parseownertt_rules(109): rr_type__classtype__val(X) <= 
+     rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+parseownertt_rules(110): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+parseownertt_rules(111): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+parseownertt_rules(112): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+parseownertt_rules(113): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+parseownertt_rules(114): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+parseownertt_rules(115): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+parseownertt_rules(116): rr_type__rritemtype__size >= 0 may_be_deduced.
+parseownertt_rules(117): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+parseownertt_rules(118): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+parseownertt_rules(119): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+parseownertt_rules(120): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+parseownertt_rules(121): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+parseownertt_rules(122): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+parseownertt_rules(123): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+parseownertt_rules(124): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+parseownertt_rules(125): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+parseownertt_rules(126): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+parseownertt_rules(127): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+parseownertt_rules(128): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+parseownertt_rules(129): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+parseownertt_rules(130): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+parseownertt_rules(131): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+parseownertt_rules(132): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+parseownertt_rules(133): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+parseownertt_rules(134): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+parseownertt_rules(135): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+parseownertt_rules(136): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+parseownertt_rules(137): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+parseownertt_rules(138): rr_type__rritemtype__pos(
+     rr_type__control) may_be_replaced_by 8.
+parseownertt_rules(139): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+parseownertt_rules(140): rr_type__rritemtype__pos(
+     rr_type__comment) may_be_replaced_by 9.
+parseownertt_rules(141): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+parseownertt_rules(142): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+parseownertt_rules(143): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+parseownertt_rules(144): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+parseownertt_rules(145): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+parseownertt_rules(146): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+parseownertt_rules(147): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parseownertt_rules(148): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parseownertt_rules(149): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+parseownertt_rules(150): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+parseownertt_rules(151): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+parseownertt_rules(152): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+parseownertt_rules(153): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+parseownertt_rules(154): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parseownertt_rules(155): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+parseownertt_rules(156): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+parseownertt_rules(157): rr_type__linelengthindex__size >= 0 may_be_deduced.
+parseownertt_rules(158): rr_type__linelengthindex__first may_be_replaced_by 1.
+parseownertt_rules(159): rr_type__linelengthindex__last may_be_replaced_by 256.
+parseownertt_rules(160): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+parseownertt_rules(161): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+parseownertt_rules(162): rr_type__domainnamestringtypeindex__size >= 0 may_be_deduced.
+parseownertt_rules(163): rr_type__domainnamestringtypeindex__first may_be_replaced_by 1.
+parseownertt_rules(164): rr_type__domainnamestringtypeindex__last may_be_replaced_by 128.
+parseownertt_rules(165): rr_type__domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+parseownertt_rules(166): rr_type__domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.

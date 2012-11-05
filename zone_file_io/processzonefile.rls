@@ -1,0 +1,468 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                   /*procedure zone_file_io.processzoneFile*/
+
+
+rule_family processzonef_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+processzonef_rules(1): rr_type__maxlinelength may_be_replaced_by 256.
+processzonef_rules(2): integer__size >= 0 may_be_deduced.
+processzonef_rules(3): integer__first may_be_replaced_by -2147483648.
+processzonef_rules(4): integer__last may_be_replaced_by 2147483647.
+processzonef_rules(5): integer__base__first may_be_replaced_by -2147483648.
+processzonef_rules(6): integer__base__last may_be_replaced_by 2147483647.
+processzonef_rules(7): character__size >= 0 may_be_deduced.
+processzonef_rules(8): character__first may_be_replaced_by 0.
+processzonef_rules(9): character__last may_be_replaced_by 255.
+processzonef_rules(10): character__base__first may_be_replaced_by 0.
+processzonef_rules(11): character__base__last may_be_replaced_by 255.
+processzonef_rules(12): natural__size >= 0 may_be_deduced.
+processzonef_rules(13): natural__first may_be_replaced_by 0.
+processzonef_rules(14): natural__last may_be_replaced_by 2147483647.
+processzonef_rules(15): natural__base__first may_be_replaced_by -2147483648.
+processzonef_rules(16): natural__base__last may_be_replaced_by 2147483647.
+processzonef_rules(17): positive__size >= 0 may_be_deduced.
+processzonef_rules(18): positive__first may_be_replaced_by 1.
+processzonef_rules(19): positive__last may_be_replaced_by 2147483647.
+processzonef_rules(20): positive__base__first may_be_replaced_by -2147483648.
+processzonef_rules(21): positive__base__last may_be_replaced_by 2147483647.
+processzonef_rules(22): dns_types__query_type__size >= 0 may_be_deduced.
+processzonef_rules(23): dns_types__query_type__size may_be_replaced_by 16.
+processzonef_rules(24): dns_types__query_type__first may_be_replaced_by dns_types__a.
+processzonef_rules(25): dns_types__query_type__last may_be_replaced_by dns_types__unimplemented.
+processzonef_rules(26): dns_types__query_type__base__first may_be_replaced_by dns_types__a.
+processzonef_rules(27): dns_types__query_type__base__last may_be_replaced_by dns_types__unimplemented.
+processzonef_rules(28): dns_types__query_type__pos(
+     dns_types__query_type__first) may_be_replaced_by 0.
+processzonef_rules(29): dns_types__query_type__pos(dns_types__a) may_be_replaced_by 0.
+processzonef_rules(30): dns_types__query_type__val(0) may_be_replaced_by 
+     dns_types__a.
+processzonef_rules(31): dns_types__query_type__pos(dns_types__ns) may_be_replaced_by 1.
+processzonef_rules(32): dns_types__query_type__val(1) may_be_replaced_by 
+     dns_types__ns.
+processzonef_rules(33): dns_types__query_type__pos(
+     dns_types__cname) may_be_replaced_by 2.
+processzonef_rules(34): dns_types__query_type__val(2) may_be_replaced_by 
+     dns_types__cname.
+processzonef_rules(35): dns_types__query_type__pos(dns_types__soa) may_be_replaced_by 3.
+processzonef_rules(36): dns_types__query_type__val(3) may_be_replaced_by 
+     dns_types__soa.
+processzonef_rules(37): dns_types__query_type__pos(dns_types__wks) may_be_replaced_by 4.
+processzonef_rules(38): dns_types__query_type__val(4) may_be_replaced_by 
+     dns_types__wks.
+processzonef_rules(39): dns_types__query_type__pos(dns_types__ptr) may_be_replaced_by 5.
+processzonef_rules(40): dns_types__query_type__val(5) may_be_replaced_by 
+     dns_types__ptr.
+processzonef_rules(41): dns_types__query_type__pos(dns_types__mx) may_be_replaced_by 6.
+processzonef_rules(42): dns_types__query_type__val(6) may_be_replaced_by 
+     dns_types__mx.
+processzonef_rules(43): dns_types__query_type__pos(
+     dns_types__aaaa) may_be_replaced_by 7.
+processzonef_rules(44): dns_types__query_type__val(7) may_be_replaced_by 
+     dns_types__aaaa.
+processzonef_rules(45): dns_types__query_type__pos(dns_types__srv) may_be_replaced_by 8.
+processzonef_rules(46): dns_types__query_type__val(8) may_be_replaced_by 
+     dns_types__srv.
+processzonef_rules(47): dns_types__query_type__pos(dns_types__a6) may_be_replaced_by 9.
+processzonef_rules(48): dns_types__query_type__val(9) may_be_replaced_by 
+     dns_types__a6.
+processzonef_rules(49): dns_types__query_type__pos(dns_types__opt) may_be_replaced_by 10.
+processzonef_rules(50): dns_types__query_type__val(10) may_be_replaced_by 
+     dns_types__opt.
+processzonef_rules(51): dns_types__query_type__pos(dns_types__ds) may_be_replaced_by 11.
+processzonef_rules(52): dns_types__query_type__val(11) may_be_replaced_by 
+     dns_types__ds.
+processzonef_rules(53): dns_types__query_type__pos(
+     dns_types__rrsig) may_be_replaced_by 12.
+processzonef_rules(54): dns_types__query_type__val(12) may_be_replaced_by 
+     dns_types__rrsig.
+processzonef_rules(55): dns_types__query_type__pos(
+     dns_types__nsec) may_be_replaced_by 13.
+processzonef_rules(56): dns_types__query_type__val(13) may_be_replaced_by 
+     dns_types__nsec.
+processzonef_rules(57): dns_types__query_type__pos(
+     dns_types__dnskey) may_be_replaced_by 14.
+processzonef_rules(58): dns_types__query_type__val(14) may_be_replaced_by 
+     dns_types__dnskey.
+processzonef_rules(59): dns_types__query_type__pos(dns_types__any) may_be_replaced_by 15.
+processzonef_rules(60): dns_types__query_type__val(15) may_be_replaced_by 
+     dns_types__any.
+processzonef_rules(61): dns_types__query_type__pos(dns_types__caa) may_be_replaced_by 16.
+processzonef_rules(62): dns_types__query_type__val(16) may_be_replaced_by 
+     dns_types__caa.
+processzonef_rules(63): dns_types__query_type__pos(
+     dns_types__error) may_be_replaced_by 17.
+processzonef_rules(64): dns_types__query_type__val(17) may_be_replaced_by 
+     dns_types__error.
+processzonef_rules(65): dns_types__query_type__pos(
+     dns_types__unimplemented) may_be_replaced_by 18.
+processzonef_rules(66): dns_types__query_type__val(18) may_be_replaced_by 
+     dns_types__unimplemented.
+processzonef_rules(67): dns_types__query_type__pos(
+     dns_types__query_type__last) may_be_replaced_by 18.
+processzonef_rules(68): dns_types__query_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) + 1
+     if [X <=dns_types__unimplemented, X <> 
+     dns_types__unimplemented].
+processzonef_rules(69): dns_types__query_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) - 1
+     if [X >=dns_types__a, X <> dns_types__a].
+processzonef_rules(70): dns_types__query_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+processzonef_rules(71): dns_types__query_type__pos(X) <= 18 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+processzonef_rules(72): dns_types__query_type__val(X) >= 
+     dns_types__a may_be_deduced_from
+     [0 <= X, X <= 18].
+processzonef_rules(73): dns_types__query_type__val(X) <= 
+     dns_types__unimplemented may_be_deduced_from
+     [0 <= X, X <= 18].
+processzonef_rules(74): succ(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X+1)
+     if [0 <= X, X < 18].
+processzonef_rules(75): pred(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X-1)
+     if [0 < X, X <= 18].
+processzonef_rules(76): dns_types__query_type__pos(
+     dns_types__query_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 18].
+processzonef_rules(77): dns_types__query_type__val(
+     dns_types__query_type__pos(X)) may_be_replaced_by X
+     if [dns_types__a <= X, X <= dns_types__unimplemented].
+processzonef_rules(78): dns_types__query_type__pos(X) <= 
+     dns_types__query_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__a <= X, X <= dns_types__unimplemented, 
+     dns_types__a <= Y, Y <= dns_types__unimplemented].
+processzonef_rules(79): dns_types__query_type__val(X) <= 
+     dns_types__query_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 18, 0 <= Y, Y <= 18].
+processzonef_rules(80): unsigned_types__unsigned8__size >= 0 may_be_deduced.
+processzonef_rules(81): unsigned_types__unsigned8__first may_be_replaced_by 0.
+processzonef_rules(82): unsigned_types__unsigned8__last may_be_replaced_by 255.
+processzonef_rules(83): unsigned_types__unsigned8__base__first may_be_replaced_by 0.
+processzonef_rules(84): unsigned_types__unsigned8__base__last may_be_replaced_by 255.
+processzonef_rules(85): unsigned_types__unsigned8__modulus may_be_replaced_by 256.
+processzonef_rules(86): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+processzonef_rules(87): unsigned_types__unsigned16__first may_be_replaced_by 0.
+processzonef_rules(88): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+processzonef_rules(89): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+processzonef_rules(90): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+processzonef_rules(91): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.
+processzonef_rules(92): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+processzonef_rules(93): unsigned_types__unsigned32__first may_be_replaced_by 0.
+processzonef_rules(94): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+processzonef_rules(95): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+processzonef_rules(96): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+processzonef_rules(97): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+processzonef_rules(98): rr_type__classtype__size >= 0 may_be_deduced.
+processzonef_rules(99): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+processzonef_rules(100): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+processzonef_rules(101): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+processzonef_rules(102): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+processzonef_rules(103): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+processzonef_rules(104): rr_type__classtype__pos(
+     rr_type__internet) may_be_replaced_by 0.
+processzonef_rules(105): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+processzonef_rules(106): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+processzonef_rules(107): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+processzonef_rules(108): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+processzonef_rules(109): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+processzonef_rules(110): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+processzonef_rules(111): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+processzonef_rules(112): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+processzonef_rules(113): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+processzonef_rules(114): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+processzonef_rules(115): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+processzonef_rules(116): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+processzonef_rules(117): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+processzonef_rules(118): rr_type__classtype__val(X) <= 
+     rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+processzonef_rules(119): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+processzonef_rules(120): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+processzonef_rules(121): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+processzonef_rules(122): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+processzonef_rules(123): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+processzonef_rules(124): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+processzonef_rules(125): rr_type__rritemtype__size >= 0 may_be_deduced.
+processzonef_rules(126): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+processzonef_rules(127): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+processzonef_rules(128): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+processzonef_rules(129): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+processzonef_rules(130): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+processzonef_rules(131): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+processzonef_rules(132): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+processzonef_rules(133): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+processzonef_rules(134): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+processzonef_rules(135): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+processzonef_rules(136): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+processzonef_rules(137): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+processzonef_rules(138): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+processzonef_rules(139): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+processzonef_rules(140): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+processzonef_rules(141): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+processzonef_rules(142): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+processzonef_rules(143): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+processzonef_rules(144): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+processzonef_rules(145): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+processzonef_rules(146): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+processzonef_rules(147): rr_type__rritemtype__pos(
+     rr_type__control) may_be_replaced_by 8.
+processzonef_rules(148): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+processzonef_rules(149): rr_type__rritemtype__pos(
+     rr_type__comment) may_be_replaced_by 9.
+processzonef_rules(150): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+processzonef_rules(151): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+processzonef_rules(152): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+processzonef_rules(153): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+processzonef_rules(154): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+processzonef_rules(155): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+processzonef_rules(156): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+processzonef_rules(157): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+processzonef_rules(158): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+processzonef_rules(159): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+processzonef_rules(160): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+processzonef_rules(161): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+processzonef_rules(162): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+processzonef_rules(163): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+processzonef_rules(164): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+processzonef_rules(165): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+processzonef_rules(166): rr_type__linelengthindex__size >= 0 may_be_deduced.
+processzonef_rules(167): rr_type__linelengthindex__first may_be_replaced_by 1.
+processzonef_rules(168): rr_type__linelengthindex__last may_be_replaced_by 256.
+processzonef_rules(169): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+processzonef_rules(170): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+processzonef_rules(171): rr_type__domainnamestringtypeindex__size >= 0 may_be_deduced.
+processzonef_rules(172): rr_type__domainnamestringtypeindex__first may_be_replaced_by 1.
+processzonef_rules(173): rr_type__domainnamestringtypeindex__last may_be_replaced_by 128.
+processzonef_rules(174): rr_type__domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+processzonef_rules(175): rr_type__domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.
+processzonef_rules(176): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+processzonef_rules(177): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+processzonef_rules(178): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+processzonef_rules(179): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+processzonef_rules(180): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.
+processzonef_rules(181): rr_type__resourcerecordtype__size >= 0 may_be_deduced.
+processzonef_rules(182): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__resourcerecordtype)),
+      goal(checktype(B,rr_type__resourcerecordtype)),
+      fld_ttlinseconds(A) = fld_ttlinseconds(B),
+      fld_class(A) = fld_class(B)].
+processzonef_rules(183): 
+     rr_type__dnskey_record_type__keylengthvaluetype__size >= 0 may_be_deduced.
+processzonef_rules(184): 
+     rr_type__dnskey_record_type__keylengthvaluetype__first may_be_replaced_by 0.
+processzonef_rules(185): 
+     rr_type__dnskey_record_type__keylengthvaluetype__last may_be_replaced_by 1365.
+processzonef_rules(186): 
+     rr_type__dnskey_record_type__keylengthvaluetype__base__first may_be_replaced_by -2147483648.
+processzonef_rules(187): 
+     rr_type__dnskey_record_type__keylengthvaluetype__base__last may_be_replaced_by 2147483647.
+processzonef_rules(188): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__size >= 0 may_be_deduced.
+processzonef_rules(189): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__first may_be_replaced_by 1.
+processzonef_rules(190): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__last may_be_replaced_by 1365.
+processzonef_rules(191): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__base__first may_be_replaced_by -2147483648.
+processzonef_rules(192): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__base__last may_be_replaced_by 2147483647.
+processzonef_rules(193): 
+     rr_type__dnskey_record_type__dnskeyrecordtype__size >= 0 may_be_deduced.
+processzonef_rules(194): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__dnskey_record_type__dnskeyrecordtype)),
+      goal(checktype(B,rr_type__dnskey_record_type__dnskeyrecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_flags(A) = fld_flags(B),
+      fld_protocol(A) = fld_protocol(B),
+      fld_algorithm(A) = fld_algorithm(B),
+      fld_key(A) = fld_key(B),
+      fld_keylength(A) = fld_keylength(B)].
+processzonef_rules(195): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__size >= 0 may_be_deduced.
+processzonef_rules(196): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__first may_be_replaced_by 1.
+processzonef_rules(197): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__last may_be_replaced_by 1365.
+processzonef_rules(198): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__base__first may_be_replaced_by -2147483648.
+processzonef_rules(199): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__base__last may_be_replaced_by 2147483647.
+processzonef_rules(200): 
+     rr_type__rrsig_record_type__rrsigrecordtype__size >= 0 may_be_deduced.
+processzonef_rules(201): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__rrsig_record_type__rrsigrecordtype)),
+      goal(checktype(B,rr_type__rrsig_record_type__rrsigrecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_typecovered(A) = fld_typecovered(B),
+      fld_algorithm(A) = fld_algorithm(B),
+      fld_numlabels(A) = fld_numlabels(B),
+      fld_origttl(A) = fld_origttl(B),
+      fld_sigexpiration(A) = fld_sigexpiration(B),
+      fld_siginception(A) = fld_siginception(B),
+      fld_keytag(A) = fld_keytag(B),
+      fld_signername(A) = fld_signername(B),
+      fld_signature(A) = fld_signature(B),
+      fld_signaturelength(A) = fld_signaturelength(B)].
+processzonef_rules(202): spark__ada__text_io__exception_t__size >= 0 may_be_deduced.
+processzonef_rules(203): spark__ada__text_io__exception_t__first may_be_replaced_by spark__ada__text_io__no_exception.
+processzonef_rules(204): spark__ada__text_io__exception_t__last may_be_replaced_by spark__ada__text_io__layout_error.
+processzonef_rules(205): spark__ada__text_io__exception_t__base__first may_be_replaced_by spark__ada__text_io__no_exception.
+processzonef_rules(206): spark__ada__text_io__exception_t__base__last may_be_replaced_by spark__ada__text_io__layout_error.
+processzonef_rules(207): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__exception_t__first) may_be_replaced_by 0.
+processzonef_rules(208): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__no_exception) may_be_replaced_by 0.
+processzonef_rules(209): spark__ada__text_io__exception_t__val(0) may_be_replaced_by 
+     spark__ada__text_io__no_exception.
+processzonef_rules(210): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__status_error) may_be_replaced_by 1.
+processzonef_rules(211): spark__ada__text_io__exception_t__val(1) may_be_replaced_by 
+     spark__ada__text_io__status_error.
+processzonef_rules(212): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__mode_error) may_be_replaced_by 2.
+processzonef_rules(213): spark__ada__text_io__exception_t__val(2) may_be_replaced_by 
+     spark__ada__text_io__mode_error.
+processzonef_rules(214): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__name_error) may_be_replaced_by 3.
+processzonef_rules(215): spark__ada__text_io__exception_t__val(3) may_be_replaced_by 
+     spark__ada__text_io__name_error.
+processzonef_rules(216): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__use_error) may_be_replaced_by 4.
+processzonef_rules(217): spark__ada__text_io__exception_t__val(4) may_be_replaced_by 
+     spark__ada__text_io__use_error.
+processzonef_rules(218): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__device_error) may_be_replaced_by 5.
+processzonef_rules(219): spark__ada__text_io__exception_t__val(5) may_be_replaced_by 
+     spark__ada__text_io__device_error.
+processzonef_rules(220): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__end_error) may_be_replaced_by 6.
+processzonef_rules(221): spark__ada__text_io__exception_t__val(6) may_be_replaced_by 
+     spark__ada__text_io__end_error.
+processzonef_rules(222): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__data_error) may_be_replaced_by 7.
+processzonef_rules(223): spark__ada__text_io__exception_t__val(7) may_be_replaced_by 
+     spark__ada__text_io__data_error.
+processzonef_rules(224): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__layout_error) may_be_replaced_by 8.
+processzonef_rules(225): spark__ada__text_io__exception_t__val(8) may_be_replaced_by 
+     spark__ada__text_io__layout_error.
+processzonef_rules(226): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__exception_t__last) may_be_replaced_by 8.
+processzonef_rules(227): spark__ada__text_io__exception_t__pos(succ(X)) may_be_replaced_by 
+     spark__ada__text_io__exception_t__pos(X) + 1
+     if [X <=spark__ada__text_io__layout_error, X <> 
+     spark__ada__text_io__layout_error].
+processzonef_rules(228): spark__ada__text_io__exception_t__pos(pred(X)) may_be_replaced_by 
+     spark__ada__text_io__exception_t__pos(X) - 1
+     if [X >=spark__ada__text_io__no_exception, X <> 
+     spark__ada__text_io__no_exception].
+processzonef_rules(229): spark__ada__text_io__exception_t__pos(X) >= 0 may_be_deduced_from
+     [spark__ada__text_io__no_exception <= X, X <= 
+     spark__ada__text_io__layout_error].
+processzonef_rules(230): spark__ada__text_io__exception_t__pos(X) <= 8 may_be_deduced_from
+     [spark__ada__text_io__no_exception <= X, X <= 
+     spark__ada__text_io__layout_error].
+processzonef_rules(231): spark__ada__text_io__exception_t__val(X) >= 
+     spark__ada__text_io__no_exception may_be_deduced_from
+     [0 <= X, X <= 8].
+processzonef_rules(232): spark__ada__text_io__exception_t__val(X) <= 
+     spark__ada__text_io__layout_error may_be_deduced_from
+     [0 <= X, X <= 8].
+processzonef_rules(233): succ(spark__ada__text_io__exception_t__val(X)) may_be_replaced_by 
+     spark__ada__text_io__exception_t__val(X+1)
+     if [0 <= X, X < 8].
+processzonef_rules(234): pred(spark__ada__text_io__exception_t__val(X)) may_be_replaced_by 
+     spark__ada__text_io__exception_t__val(X-1)
+     if [0 < X, X <= 8].
+processzonef_rules(235): spark__ada__text_io__exception_t__pos(
+     spark__ada__text_io__exception_t__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 8].
+processzonef_rules(236): spark__ada__text_io__exception_t__val(
+     spark__ada__text_io__exception_t__pos(X)) may_be_replaced_by X
+     if [spark__ada__text_io__no_exception <= X, X <= 
+     spark__ada__text_io__layout_error].
+processzonef_rules(237): spark__ada__text_io__exception_t__pos(X) <= 
+     spark__ada__text_io__exception_t__pos(Y) & X <= Y are_interchangeable 
+     if [spark__ada__text_io__no_exception <= X, X <= 
+     spark__ada__text_io__layout_error, 
+     spark__ada__text_io__no_exception <= Y, Y <= 
+     spark__ada__text_io__layout_error].
+processzonef_rules(238): spark__ada__text_io__exception_t__val(X) <= 
+     spark__ada__text_io__exception_t__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 8, 0 <= Y, Y <= 8].

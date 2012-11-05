@@ -1,0 +1,63 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.convertIpv6.SeparatorsOK
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 846:
+
+function_separatorsok_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 846:
+
+function_separatorsok_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 847:
+
+function_separatorsok_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 847 to assertion of line 847:
+
+function_separatorsok_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 847 to run-time check associated with 
+          statement of line 848:
+
+function_separatorsok_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_separatorsok_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 847 to finish:
+
+function_separatorsok_7.
+*** true .          /* all conclusions proved */
+
+
+function_separatorsok_8.
+*** true .          /* all conclusions proved */
+
+

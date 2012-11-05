@@ -1,0 +1,38 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.IsMult
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 525:
+
+function_ismult_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 525:
+
+function_ismult_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_ismult_3.
+*** true .          /* all conclusions proved */
+
+
+function_ismult_4.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,46 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                  /*function Rr_Type.ConvertDomainNameToWire*/
+
+
+rule_family convertdomai_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convertdomai_rules(1): maxdomainnamelength may_be_replaced_by 128.
+convertdomai_rules(2): integer__size >= 0 may_be_deduced.
+convertdomai_rules(3): integer__first may_be_replaced_by -2147483648.
+convertdomai_rules(4): integer__last may_be_replaced_by 2147483647.
+convertdomai_rules(5): integer__base__first may_be_replaced_by -2147483648.
+convertdomai_rules(6): integer__base__last may_be_replaced_by 2147483647.
+convertdomai_rules(7): character__size >= 0 may_be_deduced.
+convertdomai_rules(8): character__first may_be_replaced_by 0.
+convertdomai_rules(9): character__last may_be_replaced_by 255.
+convertdomai_rules(10): character__base__first may_be_replaced_by 0.
+convertdomai_rules(11): character__base__last may_be_replaced_by 255.
+convertdomai_rules(12): positive__size >= 0 may_be_deduced.
+convertdomai_rules(13): positive__first may_be_replaced_by 1.
+convertdomai_rules(14): positive__last may_be_replaced_by 2147483647.
+convertdomai_rules(15): positive__base__first may_be_replaced_by -2147483648.
+convertdomai_rules(16): positive__base__last may_be_replaced_by 2147483647.
+convertdomai_rules(17): linelengthindex__size >= 0 may_be_deduced.
+convertdomai_rules(18): linelengthindex__first may_be_replaced_by 1.
+convertdomai_rules(19): linelengthindex__last may_be_replaced_by 256.
+convertdomai_rules(20): linelengthindex__base__first may_be_replaced_by -2147483648.
+convertdomai_rules(21): linelengthindex__base__last may_be_replaced_by 2147483647.
+convertdomai_rules(22): domainnamestringtypeindex__size >= 0 may_be_deduced.
+convertdomai_rules(23): domainnamestringtypeindex__first may_be_replaced_by 1.
+convertdomai_rules(24): domainnamestringtypeindex__last may_be_replaced_by 128.
+convertdomai_rules(25): domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+convertdomai_rules(26): domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.
+convertdomai_rules(27): wirestringtypeindex__size >= 0 may_be_deduced.
+convertdomai_rules(28): wirestringtypeindex__first may_be_replaced_by 1.
+convertdomai_rules(29): wirestringtypeindex__last may_be_replaced_by 129.
+convertdomai_rules(30): wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+convertdomai_rules(31): wirestringtypeindex__base__last may_be_replaced_by 2147483647.

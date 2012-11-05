@@ -1,0 +1,38 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+            {function Parser_Utilities.ConvertTimeSpec.MultValue}
+
+
+title function multvalue;
+
+  function round__(real) : integer;
+  type character = integer;
+  const secondsinaminute : integer = pending;
+  const minutesinanhour : integer = pending;
+  const hoursinaday : integer = pending;
+  const daysinaweek : integer = pending;
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var char : character;
+  function ada__characters__handling__to_upper(character) : character;
+  function ismult(character) : boolean;
+
+end;

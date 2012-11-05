@@ -1,0 +1,38 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Spark_Dns_Main
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 56:
+
+procedure_spark_dns_main_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 61:
+
+procedure_spark_dns_main_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_spark_dns_main_3.
+*** true .          /* all conclusions proved */
+
+
+procedure_spark_dns_main_4.
+*** true .          /* all conclusions proved */
+
+

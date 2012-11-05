@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryCNAMERecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 156:
+
+procedure_querycnamerecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 157:
+
+procedure_querycnamerecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 159:
+
+procedure_querycnamerecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to assertion of line 159:
+
+procedure_querycnamerecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_querycnamerecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to run-time check associated with 
+          statement of line 160:
+
+procedure_querycnamerecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to run-time check associated with 
+          statement of line 161:
+
+procedure_querycnamerecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to run-time check associated with 
+          statement of line 162:
+
+procedure_querycnamerecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to run-time check associated with 
+          statement of line 164:
+
+procedure_querycnamerecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 159 to finish:
+
+procedure_querycnamerecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_querycnamerecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_querycnamerecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_querycnamerecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_querycnamerecords_14.
+*** true .          /* all conclusions proved */
+
+

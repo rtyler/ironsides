@@ -1,0 +1,854 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.convert8BitUnsigned
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_1.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_2.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+-S-  Applied substitution rule convert8bitu_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule convert8bitu_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__last by:
+          255.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_3.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  endidx >= - 2147483648
+<S>  New C3:  begidx >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  endidx <= 2147483647
+<S>  New C4:  begidx <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  true
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  true
+-S-  Applied substitution rule convert8bitu_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__first by:
+          0.
+<S>  New H10:  true
+-S-  Applied substitution rule convert8bitu_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__last by:
+          255.
+<S>  New H11:  true
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  begidx >= 1
+<S>  New H5:  endidx >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  begidx <= 256
+<S>  New H6:  endidx <= 256
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  endidx >= - 2147483648
+     using hypothesis H5.
+***  Proved C3:  begidx >= - 2147483648
+     using hypothesis H3.
+***  Proved C2:  endidx <= 2147483647
+     using hypothesis H6.
+***  Proved C4:  begidx <= 2147483647
+     using hypothesis H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_4.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  begidx <= endidx -> endidx >= integer__first and endidx <= 
+          integer__last
+     using hypotheses H12 & H13.
+***  Proved C2:  begidx <= endidx -> begidx >= integer__first and begidx <= 
+          integer__last
+     using hypotheses H14 & H15.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_5.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified C12 on reading formula in, to give:
+     %%%  C12:  true
+***  Proved C3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C4:  begidx >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C5:  begidx <= rr_type__linelengthindex__last
+     using hypothesis H4.
+***  Proved C6:  endidx >= rr_type__linelengthindex__first
+     using hypothesis H5.
+***  Proved C7:  endidx <= rr_type__linelengthindex__last
+     using hypothesis H6.
+***  Proved C8:  true
+***  Proved C9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+     using hypothesis H1.
+***  Proved C10:  begidx >= integer__first
+     using hypothesis H14.
+***  Proved C11:  begidx <= integer__last
+     using hypothesis H15.
+***  Proved C12:  true
+***  Proved C13:  begidx <= endidx
+     using hypothesis H18.
+-S-  Applied substitution rule convert8bitu_rules(1).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__max_8bit_val by:
+          255.
+<S>  New C2:  true
+***  Proved C2:  true
++++  Using "A->B, A |- B" on hypotheses H16 & H18 yields a new hypothesis:
+     +++  H19:  endidx >= integer__first and endidx <= integer__last
++++  Using "A->B, A |- B" on hypotheses H17 & H18 yields a new hypothesis:
+     +++  H20:  begidx >= integer__first and begidx <= integer__last
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H12:  endidx >= - 2147483648
+<S>  New H14:  begidx >= - 2147483648
+<S>  New H16:  begidx <= endidx -> endidx >= - 2147483648 and endidx <= 
+          integer__last
+<S>  New H17:  begidx <= endidx -> begidx >= - 2147483648 and begidx <= 
+          integer__last
+<S>  New H19:  endidx >= - 2147483648 and endidx <= integer__last
+<S>  New H20:  begidx >= - 2147483648 and begidx <= integer__last
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H13:  endidx <= 2147483647
+<S>  New H15:  begidx <= 2147483647
+<S>  New H16:  begidx <= endidx -> endidx >= - 2147483648 and endidx <= 
+          2147483647
+<S>  New H17:  begidx <= endidx -> begidx >= - 2147483648 and begidx <= 
+          2147483647
+<S>  New H19:  endidx >= - 2147483648 and endidx <= 2147483647
+<S>  New H20:  begidx >= - 2147483648 and begidx <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  true
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  true
+-S-  Applied substitution rule convert8bitu_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__first by:
+          0.
+<S>  New H10:  true
+-S-  Applied substitution rule convert8bitu_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__last by:
+          255.
+<S>  New H11:  true
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  begidx >= 1
+<S>  New H5:  endidx >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  begidx <= 256
+<S>  New H6:  endidx <= 256
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  begidx >= 1
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_6.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+***  Proved C1:  begidx >= 1
+     using hypothesis H1.
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          unsigned_types__max_8bit_val
+     using hypothesis H28.
+***  Proved C3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H3.
+***  Proved C4:  begidx >= rr_type__linelengthindex__first
+     using hypothesis H4.
+***  Proved C5:  begidx <= rr_type__linelengthindex__last
+     using hypothesis H5.
+***  Proved C6:  endidx >= rr_type__linelengthindex__first
+     using hypothesis H6.
+***  Proved C7:  endidx <= rr_type__linelengthindex__last
+     using hypothesis H7.
+***  Proved C8:  true
+***  Proved C9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+     using hypothesis H9.
+***  Proved C10:  loop__1__i + 1 >= integer__first
+     using hypothesis H10.
+***  Proved C12:  loop__1__i + 1 >= begidx
+     using hypothesis H12.
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H11:  loop__1__i <= 2147483647
+<S>  New C11:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H28 into:
+     >>>  H28:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          unsigned_types__max_8bit_val
+>>>  Restructured hypothesis H29 into:
+     >>>  H29:  loop__1__i <> endidx
+-S-  Applied substitution rule convert8bitu_rules(1).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__max_8bit_val by:
+          255.
+<S>  New H2:  tmpval <= 255
+<S>  New H28:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H10:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H24:  10 * tmpval >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H25:  10 * tmpval <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H14:  element(zonefileline, [loop__1__i]) >= 48
+<S>  New H20:  tmpval >= 0
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H15:  element(zonefileline, [loop__1__i]) <= 2147483695
+<S>  New H21:  tmpval <= 2147483647
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          2147483647
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H4:  begidx >= 1
+<S>  New H6:  endidx >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H5:  begidx <= 256
+<S>  New H7:  endidx <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+%%%  Hypotheses H13 & H29 together imply that
+          loop__1__i < endidx.
+     H13 & H29 have therefore been deleted and a new H30 added to this effect.
+***  Proved C13:  loop__1__i + 1 <= endidx
+     via its standard form, which is:
+     Std.Fm C13:  endidx - loop__1__i > 0
+     using hypothesis H30.
+***  Proved C11:  loop__1__i <= 2147483646
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_7.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+***  Proved C3:  loop__1__i >= rr_type__linelengthindex__first
+     using hypotheses H4 & H12.
+***  Proved C4:  loop__1__i <= rr_type__linelengthindex__last
+     using hypotheses H7 & H13.
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  element(zonefileline, [loop__1__i]) >= 48
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  element(zonefileline, [loop__1__i]) <= 2147483695
+***  Proved C1:  element(zonefileline, [loop__1__i]) >= 48
+     using hypotheses H9, H12 & H13.
+***  Proved C2:  element(zonefileline, [loop__1__i]) <= 2147483695
+     using hypotheses H9, H12 & H13.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_8.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H14:  element(zonefileline, [loop__1__i]) >= 48
+<S>  New H20:  tmpval >= 0
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H15:  element(zonefileline, [loop__1__i]) <= 2147483695
+<S>  New H21:  tmpval <= 2147483647
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          2147483647
+-S-  Applied substitution rule convert8bitu_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  10 * tmpval >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  10 * tmpval <= 2147483647
+***  Proved C3:  10 * tmpval >= - 2147483648
+     using hypothesis H20.
+-S-  Applied substitution rule convert8bitu_rules(1).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__max_8bit_val by:
+          255.
+<S>  New H2:  tmpval <= 255
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H10:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H11:  loop__1__i <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H4:  begidx >= 1
+<S>  New H6:  endidx >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H5:  begidx <= 256
+<S>  New H7:  endidx <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+     via its standard form, which is:
+     Std.Fm C1:  - 48 + (10 * tmpval + element(zonefileline, [loop__1__i])) >= 0
+     using hypotheses H14 & H20.
+***  Proved C4:  10 * tmpval <= 2147483647
+     using hypothesis H2.
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H4 (duplicate of H1).
+---  Eliminated hypothesis H10 (redundant, given H16).
+---  Eliminated hypothesis H11 (redundant, given H17).
+---  Eliminated hypothesis H21 (redundant, given H2).
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          2147483647
+     using hypotheses H2, H9, H12 & H13.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_9.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H9)
+          .
+***  Proved C1:  0 >= unsigned_types__unsigned8__first
+     using hypothesis H10.
+***  Proved C2:  0 <= unsigned_types__unsigned8__last
+     using hypothesis H11.
+***  Proved C3:  0 >= unsigned_types__unsigned8__first
+     using hypothesis H10.
+***  Proved C4:  0 <= unsigned_types__unsigned8__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_10.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H23).
+-S-  Applied substitution rule convert8bitu_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__first by:
+          0.
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+<S>  New C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__last by:
+          255.
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+>>>  Restructured hypothesis H31 into:
+     >>>  H31:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          unsigned_types__max_8bit_val
+-S-  Applied substitution rule convert8bitu_rules(1).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__max_8bit_val by:
+          255.
+<S>  New H2:  tmpval <= 255
+<S>  New H28:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) > 255
+<S>  New H31:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H10:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H11:  loop__1__i <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H24:  10 * tmpval >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H25:  10 * tmpval <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H14:  element(zonefileline, [loop__1__i]) >= 48
+<S>  New H20:  tmpval >= 0
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H15:  element(zonefileline, [loop__1__i]) <= 2147483695
+<S>  New H21:  tmpval <= 2147483647
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          2147483647
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H4:  begidx >= 1
+<S>  New H6:  endidx >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H5:  begidx <= 256
+<S>  New H7:  endidx <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+     using hypothesis H22.
+***  Proved C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+     using hypothesis H22.
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+     using hypothesis H31.
+***  Proved C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+     using hypothesis H31.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_11.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i_ : integer, begidx <= i_ and i_ <= endidx -> 48 <= 
+          element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H23).
+-S-  Applied substitution rule convert8bitu_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__first by:
+          0.
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+<S>  New C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned8__last by:
+          255.
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+>>>  Restructured hypothesis H28 into:
+     >>>  H28:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          unsigned_types__max_8bit_val
+-S-  Applied substitution rule convert8bitu_rules(1).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__max_8bit_val by:
+          255.
+<S>  New H2:  tmpval <= 255
+<S>  New H28:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+-S-  Applied substitution rule convert8bitu_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H10:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H11:  loop__1__i <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H24:  10 * tmpval >= - 2147483648
+-S-  Applied substitution rule convert8bitu_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H25:  10 * tmpval <= 2147483647
+-S-  Applied substitution rule convert8bitu_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule convert8bitu_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(13).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H14:  element(zonefileline, [loop__1__i]) >= 48
+<S>  New H20:  tmpval >= 0
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+-S-  Applied substitution rule convert8bitu_rules(14).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H15:  element(zonefileline, [loop__1__i]) <= 2147483695
+<S>  New H21:  tmpval <= 2147483647
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 
+          2147483647
+-S-  Applied substitution rule convert8bitu_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H4:  begidx >= 1
+<S>  New H6:  endidx >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule convert8bitu_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H5:  begidx <= 256
+<S>  New H7:  endidx <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+     using hypothesis H22.
+***  Proved C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) >= 0
+     using hypothesis H22.
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+     using hypothesis H28.
+***  Proved C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) <= 255
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_12.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_13.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_14.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_15.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_16.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_convert8bitunsigned_17.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

@@ -1,0 +1,66 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnn
+
+U rr_type.nsec_record_type%s  rr_type-nsec_record_type.ads  17f6c77e EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W rr_type%s		rr_type.adb		rr_type.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-nsec_record_type.ads  20120707130422 3cb23cba
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D unsigned_types.ads	20120707130426 dd57bff3
+X 7 rr_type.ads
+20K9*Rr_Type 98e12 8|19r9 20r31 22r20 23r20 29r13 30r56 30r75 31r18 34r36
+. 35r39 37r5
+22n23*INTERNET{22E9} 8|29r21
+29A12*LineFromFileType{string}<integer> 8|23r28
+39A12*WireStringType{string}<integer> 8|22r28
+41a4*Spaces32{string} 8|30r83
+48a4*Spaces64{string} 8|30r64
+50a4*Spaces256{string} 8|31r26
+77R9*ResourceRecordType 81e17 8|20r39
+79m10*ttlInSeconds{23|21M9} 8|28m4
+80e10*class{22E9} 8|29m4
+88I12*ReturnedRecordsIndexType{integer} 8|34r44
+93I12*NumBucketsIndexType{integer} 8|35r47
+X 8 rr_type-nsec_record_type.ads
+19K17*Nsec_Record_Type 7|20k9 8|37l13 37e29
+20R9*NSECRecordType<7|77R9> 24e14 27r28 27r46 34r73
+22a7*DomainName{7|39A12} 30m4
+23a7*recordList{7|29A12} 31m4
+27r1*blankNSECRecord{20R9}
+34A6*NSECRecordBucketType(20R9)<integer> 35r71
+35A6*NSECRecordHashTableType(34A6)<integer>
+X 23 unsigned_types.ads
+21M9*Unsigned32
+

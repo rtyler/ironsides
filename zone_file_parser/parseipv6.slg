@@ -1,0 +1,635 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseIpv6
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  1 >= rr_type__linelengthindex__first
+     using hypothesis H6.
+***  Proved C2:  1 <= rr_type__linelengthindex__last
+     using hypothesis H7.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule parseipv6_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseipv6_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseipv6_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H6:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseipv6_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H7:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C5:  1 <= zlength
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  rr_type__rritemtype__first <= foundtype__1
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__rritemtype__first <= foundtype__1
+***  Proved C1:  rr_type__rritemtype__first <= foundtype__1
+     using hypothesis H21.
+***  Proved C2:  foundtype__1 <= rr_type__rritemtype__last
+     using hypothesis H22.
+***  Proved C3:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H19.
+***  Proved C4:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H20.
+***  Proved C5:  begidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H17.
+***  Proved C6:  begidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H18.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  endidx__1 < zlength
+     using hypothesis H34.
+***  Proved C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+***  Proved C5:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  endidx >= integer__base__first
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  endidx <= integer__base__last
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  0 >= integer__base__first
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  0 <= integer__base__last
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  endidx + 1 <= zlength
+%%%  Simplified H26 on reading formula in, to give:
+     %%%  H26:  foundtype__2 = rr_type__number -> for_all(i_ : integer, 
+          begidx__2 <= i_ and i_ <= endidx__2 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  rr_type__rritemtype__first <= foundtype__2
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H32).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  endidx__2 < zlength
+     using hypothesis H44.
+***  Proved C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+***  Proved C5:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  endidx >= integer__base__first
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  endidx <= integer__base__last
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  0 >= integer__base__first
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  0 <= integer__base__last
+***  Proved C1:  endidx + 1 >= rr_type__linelengthindex__first
+     using hypothesis H8.
+-S-  Applied substitution rule parseipv6_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= 256 -> character__first <= element(zonefileline, [i___1])
+           and element(zonefileline, [i___1]) <= character__last)
+<S>  New H4:  zlength <= 256
+<S>  New H7:  begidx <= 256
+<S>  New H9:  endidx <= 256
+<S>  New C2:  endidx <= 255
+-S-  Applied substitution rule parseipv6_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  endidx >= - 2147483648
+<S>  New C5:  true
+-S-  Applied substitution rule parseipv6_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  endidx <= 2147483647
+<S>  New C6:  true
+***  Proved C2:  endidx <= 255
+     using hypotheses H1 & H4.
+***  Proved C5:  true
+***  Proved C4:  endidx <= 2147483647
+     using hypothesis H9.
+***  Proved C6:  true
+-S-  Applied substitution rule parseipv6_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= 256 -> 0 <= element(zonefileline, [i___1]) and element(
+          zonefileline, [i___1]) <= character__last)
+-S-  Applied substitution rule parseipv6_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= 256 -> 0 <= element(zonefileline, [i___1]) and element(
+          zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseipv6_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H6:  begidx >= 1
+<S>  New H8:  endidx >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C3:  endidx >= - 2147483648
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  endidx >= integer__base__first
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  endidx <= integer__base__last
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  0 >= integer__base__first
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  0 <= integer__base__last
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  endidx + 1 <= zlength
+***  Proved C1:  endidx + 1 >= rr_type__linelengthindex__first
+     using hypothesis H10.
+***  Proved C2:  endidx + 1 <= rr_type__linelengthindex__last
+     using hypothesis H11.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule parseipv6_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H12:  endidx >= - 2147483648
+<S>  New H14:  true
+-S-  Applied substitution rule parseipv6_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H13:  endidx <= 2147483647
+<S>  New H15:  true
+-S-  Applied substitution rule parseipv6_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseipv6_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseipv6_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H6:  begidx >= 1
+<S>  New H8:  endidx >= 1
+<S>  New H10:  endidx >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseipv6_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H7:  begidx <= 256
+<S>  New H9:  endidx <= 256
+<S>  New H11:  endidx <= 255
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C5:  endidx + 1 <= zlength
+     via its standard form, which is:
+     Std.Fm C5:  - endidx + zlength > 0
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  endidx >= integer__base__first
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  endidx <= integer__base__last
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  0 >= integer__base__first
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  0 <= integer__base__last
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  endidx + 1 <= zlength
+%%%  Simplified H26 on reading formula in, to give:
+     %%%  H26:  foundtype__2 = rr_type__number -> for_all(i_ : integer, 
+          begidx__2 <= i_ and i_ <= endidx__2 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  rr_type__rritemtype__first <= foundtype__2
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__rritemtype__first <= foundtype__2
+***  Proved C1:  rr_type__rritemtype__first <= foundtype__2
+     using hypothesis H31.
+***  Proved C2:  foundtype__2 <= rr_type__rritemtype__last
+     using hypothesis H32.
+***  Proved C3:  endidx__2 >= rr_type__linelengthindex__first
+     using hypothesis H29.
+***  Proved C4:  endidx__2 <= rr_type__linelengthindex__last
+     using hypothesis H30.
+***  Proved C5:  begidx__2 >= rr_type__linelengthindex__first
+     using hypothesis H27.
+***  Proved C6:  begidx__2 <= rr_type__linelengthindex__last
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H20).
+***  Proved C1:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H19.
+***  Proved C2:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H20.
+***  Proved C3:  begidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H17.
+***  Proved C4:  begidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H18.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_9.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  endidx + 1 >= rr_type__linelengthindex__first
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  endidx + 1 <= rr_type__linelengthindex__last
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  endidx >= integer__base__first
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  endidx <= integer__base__last
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  0 >= integer__base__first
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  0 <= integer__base__last
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  endidx + 1 <= zlength
+%%%  Simplified H26 on reading formula in, to give:
+     %%%  H26:  foundtype__2 = rr_type__number -> for_all(i_ : integer, 
+          begidx__2 <= i_ and i_ <= endidx__2 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  rr_type__rritemtype__first <= foundtype__2
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H42 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H44 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H45 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H29).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H30).
+***  Proved C1:  endidx__2 >= rr_type__linelengthindex__first
+     using hypothesis H29.
+***  Proved C2:  endidx__2 <= rr_type__linelengthindex__last
+     using hypothesis H30.
+***  Proved C3:  begidx__2 >= rr_type__linelengthindex__first
+     using hypothesis H27.
+***  Proved C4:  begidx__2 <= rr_type__linelengthindex__last
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_10.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_11.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_12.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_13.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_14.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseipv6_15.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

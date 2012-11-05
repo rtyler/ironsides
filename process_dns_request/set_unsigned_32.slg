@@ -1,0 +1,696 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_Unsigned_32
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_set_unsigned_32_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 
+          dns_types__byte__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 
+          dns_types__byte__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 
+          dns_types__byte__first
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 
+          dns_types__byte__last
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  16777216 >= system__min_int
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  16777216 <= system__max_int
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  true
+***  Proved C5:  true
+***  Proved C8:  true
+***  Proved C9:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C10:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H4.
+-S-  Applied substitution rule set_unsigned_rules(10).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New C1:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule set_unsigned_rules(11).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C2:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 255
+<S>  New C4:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 255
+-S-  Applied substitution rule set_unsigned_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C6:  true
+-S-  Applied substitution rule set_unsigned_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C7:  true
+***  Proved C6:  true
+***  Proved C7:  true
+-S-  Applied substitution rule set_unsigned_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> 0 <= element(bytes, [i___1]) 
+          and element(bytes, [i___1]) <= 255)
+<S>  New H3:  start_byte >= 1
+-S-  Applied substitution rule set_unsigned_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8177
+<S>  New H4:  start_byte <= 8180
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_unsigned_rules(16).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  value >= 0
+-S-  Applied substitution rule set_unsigned_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  value <= 4294967295
+-S-  Applied substitution rule set_unsigned_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New C1:  value div 16777216 mod 4294967296 >= 0
+<S>  New C3:  value div 16777216 mod 4294967296 >= 0
+<S>  New C2:  value div 16777216 mod 4294967296 <= 255
+<S>  New C4:  value div 16777216 mod 4294967296 <= 255
+***  Proved C1:  value div 16777216 mod 4294967296 >= 0
+***  Proved C3:  value div 16777216 mod 4294967296 >= 0
+---  Eliminated hypothesis H4 (redundant, given H1).
+---  Eliminated conclusion C4, which is a duplicate of C2.
+***  Proved C2:  value div 16777216 mod 4294967296 <= 255
+     using hypotheses H5 & H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_unsigned_32_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 
+          dns_types__byte__first
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 
+          dns_types__byte__last
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  16777216 >= system__min_int
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  16777216 <= system__max_int
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  65536 >= system__min_int
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  65536 <= system__max_int
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  Proved C8:  65536 <= system__max_int
+     using hypothesis H13.
+***  Proved C9:  true
+***  Proved C10:  start_byte + 1 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C11:  start_byte + 1 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+-S-  Applied substitution rule set_unsigned_rules(10).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C1:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule set_unsigned_rules(11).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C2:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= 255
+<S>  New C4:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= 255
+-S-  Applied substitution rule set_unsigned_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H12:  true
+<S>  New C7:  true
+-S-  Applied substitution rule set_unsigned_rules(6).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C12:  start_byte >= - 2147483649
+-S-  Applied substitution rule set_unsigned_rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C13:  start_byte <= 2147483646
+***  Proved C7:  true
+-S-  Applied substitution rule set_unsigned_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H13:  true
+-S-  Applied substitution rule set_unsigned_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> 0 <= element(bytes, [i___1]) 
+          and element(bytes, [i___1]) <= 255)
+<S>  New H3:  start_byte >= 1
+-S-  Applied substitution rule set_unsigned_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8177
+<S>  New H4:  start_byte <= 8180
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_unsigned_rules(16).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  value >= 0
+-S-  Applied substitution rule set_unsigned_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  value <= 4294967295
+-S-  Applied substitution rule set_unsigned_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H7:  value div 16777216 mod 4294967296 >= 0
+<S>  New H8:  value div 16777216 mod 4294967296 <= 255
+<S>  New C1:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New C3:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New C2:  value div 65536 mod 4294967296 mod 256 mod 4294967296 <= 255
+<S>  New C4:  value div 65536 mod 4294967296 mod 256 mod 4294967296 <= 255
+***  Proved C12:  start_byte >= - 2147483649
+     using hypothesis H3.
+***  Proved C13:  start_byte <= 2147483646
+     using hypothesis H1.
+***  Proved C1:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+***  Proved C3:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H11 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H13 (true-hypothesis).
+---  Eliminated hypothesis H4 (redundant, given H1).
+---  Eliminated conclusion C4, which is a duplicate of C2.
+***  Proved C2:  value div 65536 mod 4294967296 mod 256 mod 4294967296 <= 255
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_unsigned_32_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 
+          dns_types__byte__first
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 
+          dns_types__byte__last
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  16777216 >= system__min_int
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  16777216 <= system__max_int
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H17 on reading formula in, to give:
+     %%%  H17:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H18).
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  true
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  true
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  65536 >= system__min_int
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  65536 <= system__max_int
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  true
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  256 >= system__min_int
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  256 <= system__max_int
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  Proved C8:  256 <= system__max_int
+     using hypothesis H13.
+***  Proved C9:  true
+***  Proved C10:  start_byte + 2 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C11:  start_byte + 2 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+***  Proved C12:  start_byte + 2 >= dns_types__packet_bytes_range__base__first
+     using hypothesis H28.
+-S-  Applied substitution rule set_unsigned_rules(10).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 0
+<S>  New H17:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C1:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 mod 
+          unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule set_unsigned_rules(11).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H18:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C2:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 mod 
+          unsigned_types__unsigned32__modulus <= 255
+<S>  New C4:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 mod 
+          unsigned_types__unsigned32__modulus <= 255
+-S-  Applied substitution rule set_unsigned_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H12:  true
+<S>  New H23:  true
+<S>  New C7:  true
+-S-  Applied substitution rule set_unsigned_rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H29:  start_byte <= 2147483646
+<S>  New C13:  start_byte <= 2147483645
+***  Proved C7:  true
+-S-  Applied substitution rule set_unsigned_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H13:  true
+<S>  New H24:  true
+-S-  Applied substitution rule set_unsigned_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> 0 <= element(bytes, [i___1]) 
+          and element(bytes, [i___1]) <= 255)
+<S>  New H3:  start_byte >= 1
+<S>  New H26:  start_byte >= 0
+-S-  Applied substitution rule set_unsigned_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8177
+<S>  New H4:  start_byte <= 8180
+<S>  New H27:  start_byte <= 8179
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_unsigned_rules(6).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H28:  start_byte >= - 2147483649
+-S-  Applied substitution rule set_unsigned_rules(16).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  value >= 0
+-S-  Applied substitution rule set_unsigned_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  value <= 4294967295
+-S-  Applied substitution rule set_unsigned_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H7:  value div 16777216 mod 4294967296 >= 0
+<S>  New H8:  value div 16777216 mod 4294967296 <= 255
+<S>  New H17:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New H18:  value div 65536 mod 4294967296 mod 256 mod 4294967296 <= 255
+<S>  New C1:  value div 256 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New C3:  value div 256 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New C2:  value div 256 mod 4294967296 mod 256 mod 4294967296 <= 255
+<S>  New C4:  value div 256 mod 4294967296 mod 256 mod 4294967296 <= 255
+***  Proved C13:  start_byte <= 2147483645
+     using hypothesis H1.
+***  Proved C1:  value div 256 mod 4294967296 mod 256 mod 4294967296 >= 0
+***  Proved C3:  value div 256 mod 4294967296 mod 256 mod 4294967296 >= 0
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H11 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H22 (true-hypothesis).
+---  Eliminated hypothesis H23 (true-hypothesis).
+---  Eliminated hypothesis H25 (true-hypothesis).
+---  Eliminated hypothesis H13 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H4 (redundant, given H1).
+---  Eliminated hypothesis H26 (redundant, given H3).
+---  Eliminated hypothesis H27 (redundant, given H1).
+---  Eliminated hypothesis H28 (redundant, given H3).
+---  Eliminated hypothesis H29 (redundant, given H1).
+---  Eliminated conclusion C4, which is a duplicate of C2.
+***  Proved C2:  value div 256 mod 4294967296 mod 256 mod 4294967296 <= 255
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_unsigned_32_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 
+          dns_types__byte__first
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 
+          dns_types__byte__last
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  16777216 >= system__min_int
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  16777216 <= system__max_int
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H17 on reading formula in, to give:
+     %%%  H17:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H18).
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  true
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  true
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  65536 >= system__min_int
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  65536 <= system__max_int
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  true
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= dns_types__byte__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= dns_types__byte__last
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H31).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H21).
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  true
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  256 >= system__min_int
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  256 <= system__max_int
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  true
+***  Proved C5:  true
+***  Proved C6:  start_byte + 3 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C7:  start_byte + 3 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+***  Proved C8:  start_byte + 3 >= dns_types__packet_bytes_range__base__first
+     using hypothesis H28.
+-S-  Applied substitution rule set_unsigned_rules(10).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H7:  value div 16777216 mod unsigned_types__unsigned32__modulus >= 0
+<S>  New H17:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= 0
+<S>  New H30:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C1:  value mod 256 mod unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  value mod 256 mod unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule set_unsigned_rules(11).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H8:  value div 16777216 mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H18:  value div 65536 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H31:  value div 256 mod unsigned_types__unsigned32__modulus mod 256 
+          mod unsigned_types__unsigned32__modulus <= 255
+<S>  New H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C2:  value mod 256 mod unsigned_types__unsigned32__modulus <= 255
+<S>  New C4:  value mod 256 mod unsigned_types__unsigned32__modulus <= 255
+-S-  Applied substitution rule set_unsigned_rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H29:  start_byte <= 2147483646
+<S>  New H42:  start_byte <= 2147483645
+<S>  New C9:  start_byte <= 2147483644
+-S-  Applied substitution rule set_unsigned_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H12:  true
+<S>  New H23:  true
+<S>  New H36:  true
+-S-  Applied substitution rule set_unsigned_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H13:  true
+<S>  New H24:  true
+<S>  New H37:  true
+-S-  Applied substitution rule set_unsigned_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> 0 <= element(bytes, [i___1]) 
+          and element(bytes, [i___1]) <= 255)
+<S>  New H3:  start_byte >= 1
+<S>  New H26:  start_byte >= 0
+<S>  New H39:  start_byte >= - 1
+-S-  Applied substitution rule set_unsigned_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8177
+<S>  New H4:  start_byte <= 8180
+<S>  New H27:  start_byte <= 8179
+<S>  New H40:  start_byte <= 8178
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_unsigned_rules(6).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H28:  start_byte >= - 2147483649
+<S>  New H41:  start_byte >= - 2147483650
+-S-  Applied substitution rule set_unsigned_rules(16).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  value >= 0
+-S-  Applied substitution rule set_unsigned_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  value <= 4294967295
+-S-  Applied substitution rule set_unsigned_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H7:  value div 16777216 mod 4294967296 >= 0
+<S>  New H8:  value div 16777216 mod 4294967296 <= 255
+<S>  New H17:  value div 65536 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New H18:  value div 65536 mod 4294967296 mod 256 mod 4294967296 <= 255
+<S>  New H30:  value div 256 mod 4294967296 mod 256 mod 4294967296 >= 0
+<S>  New H31:  value div 256 mod 4294967296 mod 256 mod 4294967296 <= 255
+<S>  New C1:  value mod 256 mod 4294967296 >= 0
+<S>  New C3:  value mod 256 mod 4294967296 >= 0
+<S>  New C2:  value mod 256 mod 4294967296 <= 255
+<S>  New C4:  value mod 256 mod 4294967296 <= 255
+***  Proved C9:  start_byte <= 2147483644
+     using hypothesis H1.
+***  Proved C1:  value mod 256 mod 4294967296 >= 0
+***  Proved C3:  value mod 256 mod 4294967296 >= 0
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H11 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (true-hypothesis).
+---  Eliminated hypothesis H22 (true-hypothesis).
+---  Eliminated hypothesis H25 (true-hypothesis).
+---  Eliminated hypothesis H32 (true-hypothesis).
+---  Eliminated hypothesis H33 (true-hypothesis).
+---  Eliminated hypothesis H34 (true-hypothesis).
+---  Eliminated hypothesis H35 (true-hypothesis).
+---  Eliminated hypothesis H38 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+---  Eliminated hypothesis H23 (true-hypothesis).
+---  Eliminated hypothesis H36 (true-hypothesis).
+---  Eliminated hypothesis H13 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H37 (true-hypothesis).
+---  Eliminated hypothesis H4 (redundant, given H1).
+---  Eliminated hypothesis H26 (redundant, given H3).
+---  Eliminated hypothesis H27 (redundant, given H1).
+---  Eliminated hypothesis H28 (redundant, given H3).
+---  Eliminated hypothesis H29 (redundant, given H1).
+---  Eliminated hypothesis H39 (redundant, given H3).
+---  Eliminated hypothesis H40 (redundant, given H1).
+---  Eliminated hypothesis H41 (redundant, given H3).
+---  Eliminated hypothesis H42 (redundant, given H1).
+---  Eliminated conclusion C4, which is a duplicate of C2.
+***  Proved C2:  value mod 256 mod 4294967296 <= 255
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_unsigned_32_5.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

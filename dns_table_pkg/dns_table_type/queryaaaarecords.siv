@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryAAAARecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 123:
+
+procedure_queryaaaarecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 124:
+
+procedure_queryaaaarecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 126:
+
+procedure_queryaaaarecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to assertion of line 126:
+
+procedure_queryaaaarecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryaaaarecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to run-time check associated with 
+          statement of line 127:
+
+procedure_queryaaaarecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to run-time check associated with 
+          statement of line 129:
+
+procedure_queryaaaarecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to run-time check associated with 
+          statement of line 130:
+
+procedure_queryaaaarecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to run-time check associated with 
+          statement of line 132:
+
+procedure_queryaaaarecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 126 to finish:
+
+procedure_queryaaaarecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryaaaarecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryaaaarecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_queryaaaarecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryaaaarecords_14.
+*** true .          /* all conclusions proved */
+
+

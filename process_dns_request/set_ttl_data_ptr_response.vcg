@@ -1,0 +1,523 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+          procedure Process_Dns_Request.Set_TTL_Data_PTR_Response
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 93:
+
+procedure_set_ttl_data_ptr_response_1.
+H1:    current_name_length >= 0 .
+H2:    current_name_length <= rr_type__wirestringtypeindex__last .
+H3:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+        ->
+C1:    fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+C2:    fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+C3:    start_byte >= dns_types__packet_bytes_range__first .
+C4:    start_byte <= dns_types__packet_bytes_range__last .
+C5:    start_byte <= dns_types__packet_bytes_range__last - 3 .
+ 
+
+For path(s) from start to precondition check associated with statement of line 95:
+
+procedure_set_ttl_data_ptr_response_2.
+H1:    current_name_length >= 0 .
+H2:    current_name_length <= rr_type__wirestringtypeindex__last .
+H3:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H16:   start_byte >= dns_types__packet_bytes_range__first .
+H17:   start_byte <= dns_types__packet_bytes_range__last .
+H18:   start_byte <= dns_types__packet_bytes_range__last - 3 .
+H19:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__1, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__1, [i___1]) <= dns_types__byte__last))) .
+        ->
+C1:    current_name_length >= unsigned_types__unsigned16__first .
+C2:    current_name_length <= unsigned_types__unsigned16__last .
+C3:    start_byte + 4 >= dns_types__packet_bytes_range__first .
+C4:    start_byte + 4 <= dns_types__packet_bytes_range__last .
+C5:    start_byte + 4 <= dns_types__packet_bytes_range__last - 1 .
+C6:    current_name_length >= unsigned_types__unsigned16__first .
+C7:    current_name_length <= unsigned_types__unsigned16__last .
+C8:    start_byte + 4 >= dns_types__packet_bytes_range__base__first .
+C9:    start_byte + 4 <= dns_types__packet_bytes_range__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 97:
+
+procedure_set_ttl_data_ptr_response_3.
+H1:    current_name_length >= 0 .
+H2:    current_name_length <= rr_type__wirestringtypeindex__last .
+H3:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H16:   start_byte >= dns_types__packet_bytes_range__first .
+H17:   start_byte <= dns_types__packet_bytes_range__last .
+H18:   start_byte <= dns_types__packet_bytes_range__last - 3 .
+H19:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__1, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__1, [i___1]) <= dns_types__byte__last))) .
+H20:   current_name_length >= unsigned_types__unsigned16__first .
+H21:   current_name_length <= unsigned_types__unsigned16__last .
+H22:   start_byte + 4 >= dns_types__packet_bytes_range__first .
+H23:   start_byte + 4 <= dns_types__packet_bytes_range__last .
+H24:   start_byte + 4 <= dns_types__packet_bytes_range__last - 1 .
+H25:   current_name_length >= unsigned_types__unsigned16__first .
+H26:   current_name_length <= unsigned_types__unsigned16__last .
+H27:   start_byte + 4 >= dns_types__packet_bytes_range__base__first .
+H28:   start_byte + 4 <= dns_types__packet_bytes_range__base__last .
+H29:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__2, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__2, [i___1]) <= dns_types__byte__last))) .
+        ->
+C1:    current_name_length >= integer__first .
+C2:    current_name_length <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 97:
+
+procedure_set_ttl_data_ptr_response_4.
+H1:    current_name_length >= 0 .
+H2:    current_name_length <= rr_type__wirestringtypeindex__last .
+H3:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H16:   start_byte >= dns_types__packet_bytes_range__first .
+H17:   start_byte <= dns_types__packet_bytes_range__last .
+H18:   start_byte <= dns_types__packet_bytes_range__last - 3 .
+H19:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__1, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__1, [i___1]) <= dns_types__byte__last))) .
+H20:   current_name_length >= unsigned_types__unsigned16__first .
+H21:   current_name_length <= unsigned_types__unsigned16__last .
+H22:   start_byte + 4 >= dns_types__packet_bytes_range__first .
+H23:   start_byte + 4 <= dns_types__packet_bytes_range__last .
+H24:   start_byte + 4 <= dns_types__packet_bytes_range__last - 1 .
+H25:   current_name_length >= unsigned_types__unsigned16__first .
+H26:   current_name_length <= unsigned_types__unsigned16__last .
+H27:   start_byte + 4 >= dns_types__packet_bytes_range__base__first .
+H28:   start_byte + 4 <= dns_types__packet_bytes_range__base__last .
+H29:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__2, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__2, [i___1]) <= dns_types__byte__last))) .
+H30:   current_name_length >= integer__first .
+H31:   current_name_length <= integer__last .
+H32:   1 >= integer__first .
+H33:   1 <= integer__last .
+        ->
+C1:    (1 <= current_name_length) -> ((current_name_length >= 
+           rr_type__wirestringtypeindex__first) and (
+           current_name_length <= 
+           rr_type__wirestringtypeindex__last)) .
+C2:    (1 <= current_name_length) -> ((1 >= 
+           rr_type__wirestringtypeindex__first) and (1 <= 
+           rr_type__wirestringtypeindex__last)) .
+ 
+
+For path(s) from start to assertion of line 98:
+
+procedure_set_ttl_data_ptr_response_5.
+H1:    current_name_length >= 0 .
+H2:    current_name_length <= rr_type__wirestringtypeindex__last .
+H3:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H16:   start_byte >= dns_types__packet_bytes_range__first .
+H17:   start_byte <= dns_types__packet_bytes_range__last .
+H18:   start_byte <= dns_types__packet_bytes_range__last - 3 .
+H19:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__1, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__1, [i___1]) <= dns_types__byte__last))) .
+H20:   current_name_length >= unsigned_types__unsigned16__first .
+H21:   current_name_length <= unsigned_types__unsigned16__last .
+H22:   start_byte + 4 >= dns_types__packet_bytes_range__first .
+H23:   start_byte + 4 <= dns_types__packet_bytes_range__last .
+H24:   start_byte + 4 <= dns_types__packet_bytes_range__last - 1 .
+H25:   current_name_length >= unsigned_types__unsigned16__first .
+H26:   current_name_length <= unsigned_types__unsigned16__last .
+H27:   start_byte + 4 >= dns_types__packet_bytes_range__base__first .
+H28:   start_byte + 4 <= dns_types__packet_bytes_range__base__last .
+H29:   for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__2, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__2, [i___1]) <= dns_types__byte__last))) .
+H30:   current_name_length >= integer__first .
+H31:   current_name_length <= integer__last .
+H32:   1 >= integer__first .
+H33:   1 <= integer__last .
+H34:   (1 <= current_name_length) -> ((current_name_length >= 
+           rr_type__wirestringtypeindex__first) and (
+           current_name_length <= 
+           rr_type__wirestringtypeindex__last)) .
+H35:   (1 <= current_name_length) -> ((1 >= 
+           rr_type__wirestringtypeindex__first) and (1 <= 
+           rr_type__wirestringtypeindex__last)) .
+H36:   1 <= current_name_length .
+        ->
+C1:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+C2:    1 >= rr_type__wirestringtypeindex__first .
+C3:    1 <= rr_type__wirestringtypeindex__last .
+C4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes__2, [i___1]) >= dns_types__byte__first) and (element(
+           bytes__2, [i___1]) <= dns_types__byte__last))) .
+C5:    start_byte >= dns_types__packet_bytes_range__first .
+C6:    start_byte <= dns_types__packet_bytes_range__last .
+C7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+C8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+C9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+C10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+C11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+C12:   current_name_length >= rr_type__wirestringtypeindex__first .
+C13:   current_name_length <= rr_type__wirestringtypeindex__last .
+C14:   current_name_length >= 0 .
+C15:   current_name_length <= rr_type__wirestringtypeindex__last .
+C16:   start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+C17:   1 >= rr_type__wirestringtypeindex__first .
+C18:   1 <= rr_type__wirestringtypeindex__last .
+C19:   1 >= 1 .
+C20:   1 <= current_name_length .
+ 
+
+For path(s) from assertion of line 98 to assertion of line 98:
+
+procedure_set_ttl_data_ptr_response_6.
+H1:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H2:    loop__1__i >= rr_type__wirestringtypeindex__first .
+H3:    loop__1__i <= rr_type__wirestringtypeindex__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   current_name_length >= 0 .
+H15:   current_name_length <= rr_type__wirestringtypeindex__last .
+H16:   start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H17:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H18:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H19:   loop__1__i >= 1 .
+H20:   loop__1__i <= current_name_length .
+H21:   element(fld_domainname(ptr_record), [loop__1__i]) >= 
+           dns_types__byte__first .
+H22:   element(fld_domainname(ptr_record), [loop__1__i]) <= 
+           dns_types__byte__last .
+H23:   element(fld_domainname(ptr_record), [loop__1__i]) >= 
+           dns_types__byte__first .
+H24:   element(fld_domainname(ptr_record), [loop__1__i]) <= 
+           dns_types__byte__last .
+H25:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H26:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H27:   start_byte + 5 + loop__1__i >= 
+           dns_types__packet_bytes_range__first .
+H28:   start_byte + 5 + loop__1__i <= 
+           dns_types__packet_bytes_range__last .
+H29:   start_byte + 5 + loop__1__i >= 
+           dns_types__packet_bytes_range__base__first .
+H30:   start_byte + 5 + loop__1__i <= 
+           dns_types__packet_bytes_range__base__last .
+H31:   loop__1__i >= dns_types__packet_bytes_range__first .
+H32:   loop__1__i <= dns_types__packet_bytes_range__last .
+H33:   start_byte + 5 >= dns_types__packet_bytes_range__base__first .
+H34:   start_byte + 5 <= dns_types__packet_bytes_range__base__last .
+H35:   not (loop__1__i = current_name_length) .
+        ->
+C1:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+C2:    loop__1__i + 1 >= rr_type__wirestringtypeindex__first .
+C3:    loop__1__i + 1 <= rr_type__wirestringtypeindex__last .
+C4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(update(
+           bytes, [start_byte + 5 + loop__1__i], element(fld_domainname(
+           ptr_record), [loop__1__i])), [i___1]) >= 
+           dns_types__byte__first) and (element(update(
+           bytes, [start_byte + 5 + loop__1__i], element(fld_domainname(
+           ptr_record), [loop__1__i])), [i___1]) <= 
+           dns_types__byte__last))) .
+C5:    start_byte >= dns_types__packet_bytes_range__first .
+C6:    start_byte <= dns_types__packet_bytes_range__last .
+C7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+C8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+C9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+C10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+C11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+C12:   current_name_length >= rr_type__wirestringtypeindex__first .
+C13:   current_name_length <= rr_type__wirestringtypeindex__last .
+C14:   current_name_length >= 0 .
+C15:   current_name_length <= rr_type__wirestringtypeindex__last .
+C16:   start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+C17:   loop__1__i + 1 >= rr_type__wirestringtypeindex__first .
+C18:   loop__1__i + 1 <= rr_type__wirestringtypeindex__last .
+C19:   loop__1__i + 1 >= 1 .
+C20:   loop__1__i + 1 <= current_name_length .
+ 
+
+For path(s) from assertion of line 98 to run-time check associated with statement of line 100:
+
+procedure_set_ttl_data_ptr_response_7.
+H1:    start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H2:    loop__1__i >= rr_type__wirestringtypeindex__first .
+H3:    loop__1__i <= rr_type__wirestringtypeindex__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           bytes, [i___1]) >= dns_types__byte__first) and (element(
+           bytes, [i___1]) <= dns_types__byte__last))) .
+H5:    start_byte >= dns_types__packet_bytes_range__first .
+H6:    start_byte <= dns_types__packet_bytes_range__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           fld_domainname(ptr_record), [i___1]) >= 
+           character__first) and (element(fld_domainname(
+           ptr_record), [i___1]) <= character__last))) .
+H8:    fld_class(fld_inherit(ptr_record)) >= 
+           rr_type__classtype__first .
+H9:    fld_class(fld_inherit(ptr_record)) <= 
+           rr_type__classtype__last .
+H10:   fld_ttlinseconds(fld_inherit(ptr_record)) >= 
+           unsigned_types__unsigned32__first .
+H11:   fld_ttlinseconds(fld_inherit(ptr_record)) <= 
+           unsigned_types__unsigned32__last .
+H12:   current_name_length >= rr_type__wirestringtypeindex__first .
+H13:   current_name_length <= rr_type__wirestringtypeindex__last .
+H14:   current_name_length >= 0 .
+H15:   current_name_length <= rr_type__wirestringtypeindex__last .
+H16:   start_byte <= dns_types__packet_bytes_range__last - 6 - 
+           current_name_length .
+H17:   loop__1__i >= rr_type__wirestringtypeindex__first .
+H18:   loop__1__i <= rr_type__wirestringtypeindex__last .
+H19:   loop__1__i >= 1 .
+H20:   loop__1__i <= current_name_length .
+        ->
+C1:    element(fld_domainname(ptr_record), [loop__1__i]) >= 
+           dns_types__byte__first .
+C2:    element(fld_domainname(ptr_record), [loop__1__i]) <= 
+           dns_types__byte__last .
+C3:    element(fld_domainname(ptr_record), [loop__1__i]) >= 
+           dns_types__byte__first .
+C4:    element(fld_domainname(ptr_record), [loop__1__i]) <= 
+           dns_types__byte__last .
+C5:    loop__1__i >= rr_type__wirestringtypeindex__first .
+C6:    loop__1__i <= rr_type__wirestringtypeindex__last .
+C7:    start_byte + 5 + loop__1__i >= 
+           dns_types__packet_bytes_range__first .
+C8:    start_byte + 5 + loop__1__i <= 
+           dns_types__packet_bytes_range__last .
+C9:    start_byte + 5 + loop__1__i >= 
+           dns_types__packet_bytes_range__base__first .
+C10:   start_byte + 5 + loop__1__i <= 
+           dns_types__packet_bytes_range__base__last .
+C11:   loop__1__i >= dns_types__packet_bytes_range__first .
+C12:   loop__1__i <= dns_types__packet_bytes_range__last .
+C13:   start_byte + 5 >= dns_types__packet_bytes_range__base__first .
+C14:   start_byte + 5 <= dns_types__packet_bytes_range__base__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_set_ttl_data_ptr_response_8.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 98 to finish:
+
+procedure_set_ttl_data_ptr_response_9.
+*** true .          /* trivially true VC removed by Examiner */
+
+

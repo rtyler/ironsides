@@ -1,0 +1,1095 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                       procedure DNS_Types.Byte_Swap
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 38:
+
+procedure_byte_swap_1.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+        ->
+C1:    fld_messageid(h) >= unsigned_short__first .
+C2:    fld_messageid(h) <= unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 38:
+
+procedure_byte_swap_2.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+        ->
+C1:    byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+C2:    byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 39:
+
+procedure_byte_swap_3.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+        ->
+C1:    fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+C2:    fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 39:
+
+procedure_byte_swap_4.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+        ->
+C1:    byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+C2:    byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 40:
+
+procedure_byte_swap_5.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+        ->
+C1:    fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+C2:    fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 40:
+
+procedure_byte_swap_6.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+C2:    byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 41:
+
+procedure_byte_swap_7.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H40:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H41:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) >= 
+           unsigned_short__first .
+C2:    fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 41:
+
+procedure_byte_swap_8.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H40:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H41:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H42:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) >= 
+           unsigned_short__first .
+H43:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) <= 
+           unsigned_short__last .
+H44:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H45:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+C2:    byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 42:
+
+procedure_byte_swap_9.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H40:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H41:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H42:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) >= 
+           unsigned_short__first .
+H43:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) <= 
+           unsigned_short__last .
+H44:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H45:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+H46:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H47:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) >= 
+           unsigned_short__first .
+C2:    fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 42:
+
+procedure_byte_swap_10.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H40:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H41:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H42:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) >= 
+           unsigned_short__first .
+H43:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) <= 
+           unsigned_short__last .
+H44:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H45:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+H46:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H47:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+H48:   fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) >= 
+           unsigned_short__first .
+H49:   fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) <= 
+           unsigned_short__last .
+H50:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) >= 
+           unsigned_short__first .
+H51:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) >= 
+           unsigned_short__first .
+C2:    byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) <= 
+           unsigned_short__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_byte_swap_11.
+H1:    true .
+H2:    fld_arcount(h) >= unsigned_short__first .
+H3:    fld_arcount(h) <= unsigned_short__last .
+H4:    fld_nscount(h) >= unsigned_short__first .
+H5:    fld_nscount(h) <= unsigned_short__last .
+H6:    fld_ancount(h) >= unsigned_short__first .
+H7:    fld_ancount(h) <= unsigned_short__last .
+H8:    fld_qdcount(h) >= unsigned_short__first .
+H9:    fld_qdcount(h) <= unsigned_short__last .
+H10:   fld_rcode(h) >= response_code__first .
+H11:   fld_rcode(h) <= response_code__last .
+H12:   true .
+H13:   true .
+H14:   true .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   fld_opcode(h) >= opcode_type__first .
+H20:   fld_opcode(h) <= opcode_type__last .
+H21:   true .
+H22:   fld_messageid(h) >= unsigned_short__first .
+H23:   fld_messageid(h) <= unsigned_short__last .
+H24:   fld_messageid(h) >= unsigned_short__first .
+H25:   fld_messageid(h) <= unsigned_short__last .
+H26:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H27:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H28:   byte_swap_us(fld_messageid(h)) >= unsigned_short__first .
+H29:   byte_swap_us(fld_messageid(h)) <= unsigned_short__last .
+H30:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) >= unsigned_short__first .
+H31:   fld_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h)))) <= unsigned_short__last .
+H32:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H33:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H34:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) >= 
+           unsigned_short__first .
+H35:   byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))) <= 
+           unsigned_short__last .
+H36:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) >= 
+           unsigned_short__first .
+H37:   fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))) <= 
+           unsigned_short__last .
+H38:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H39:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H40:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) >= 
+           unsigned_short__first .
+H41:   byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))) <= 
+           unsigned_short__last .
+H42:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) >= 
+           unsigned_short__first .
+H43:   fld_nscount(upf_ancount(upf_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))))))) <= 
+           unsigned_short__last .
+H44:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H45:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+H46:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) >= 
+           unsigned_short__first .
+H47:   byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))))) <= 
+           unsigned_short__last .
+H48:   fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) >= 
+           unsigned_short__first .
+H49:   fld_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))) <= 
+           unsigned_short__last .
+H50:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) >= 
+           unsigned_short__first .
+H51:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) <= 
+           unsigned_short__last .
+H52:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) >= 
+           unsigned_short__first .
+H53:   byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))))) <= 
+           unsigned_short__last .
+        ->
+C1:    upf_arcount(upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h)))))), 
+           byte_swap_us(fld_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))))))))), 
+           byte_swap_us(fld_arcount(upf_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))), 
+           byte_swap_us(fld_nscount(upf_ancount(upf_qdcount(
+           upf_messageid(h, byte_swap_us(fld_messageid(h))), 
+           byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h)))))), byte_swap_us(fld_ancount(
+           upf_qdcount(upf_messageid(h, byte_swap_us(fld_messageid(
+           h))), byte_swap_us(fld_qdcount(upf_messageid(h, 
+           byte_swap_us(fld_messageid(h))))))))))))))) = upf_arcount(
+           upf_nscount(upf_ancount(upf_qdcount(upf_messageid(
+           h, byte_swap_us(fld_messageid(h))), byte_swap_us(fld_qdcount(
+           h))), byte_swap_us(fld_ancount(h))), 
+           byte_swap_us(fld_nscount(h))), byte_swap_us(fld_arcount(
+           h))) .
+ 
+

@@ -1,0 +1,40 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                     /*function Parser_Utilities.isClass*/
+
+
+rule_family isclass_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+isclass_rules(1): integer__size >= 0 may_be_deduced.
+isclass_rules(2): integer__first may_be_replaced_by -2147483648.
+isclass_rules(3): integer__last may_be_replaced_by 2147483647.
+isclass_rules(4): integer__base__first may_be_replaced_by -2147483648.
+isclass_rules(5): integer__base__last may_be_replaced_by 2147483647.
+isclass_rules(6): character__size >= 0 may_be_deduced.
+isclass_rules(7): character__first may_be_replaced_by 0.
+isclass_rules(8): character__last may_be_replaced_by 255.
+isclass_rules(9): character__base__first may_be_replaced_by 0.
+isclass_rules(10): character__base__last may_be_replaced_by 255.
+isclass_rules(11): positive__size >= 0 may_be_deduced.
+isclass_rules(12): positive__first may_be_replaced_by 1.
+isclass_rules(13): positive__last may_be_replaced_by 2147483647.
+isclass_rules(14): positive__base__first may_be_replaced_by -2147483648.
+isclass_rules(15): positive__base__last may_be_replaced_by 2147483647.
+isclass_rules(16): rr_type__linelengthindex__size >= 0 may_be_deduced.
+isclass_rules(17): rr_type__linelengthindex__first may_be_replaced_by 1.
+isclass_rules(18): rr_type__linelengthindex__last may_be_replaced_by 256.
+isclass_rules(19): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+isclass_rules(20): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+isclass_rules(21): two_range__size >= 0 may_be_deduced.
+isclass_rules(22): two_range__first may_be_replaced_by 1.
+isclass_rules(23): two_range__last may_be_replaced_by 2.
+isclass_rules(24): two_range__base__first may_be_replaced_by -2147483648.
+isclass_rules(25): two_range__base__last may_be_replaced_by 2147483647.

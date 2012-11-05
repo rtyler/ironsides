@@ -1,0 +1,320 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+              /*procedure Process_Dns_Request.Create_Response_A*/
+
+
+rule_family create_respo_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+create_respo_rules(1): dns_types__packet_size may_be_replaced_by 8192.
+create_respo_rules(2): dns_types__header_bits may_be_replaced_by 96.
+create_respo_rules(3): rr_type__maxnumrecords may_be_replaced_by 64.
+create_respo_rules(4): system__min_int may_be_replaced_by -9223372036854775808.
+create_respo_rules(5): system__max_int may_be_replaced_by 9223372036854775807.
+create_respo_rules(6): integer__size >= 0 may_be_deduced.
+create_respo_rules(7): integer__first may_be_replaced_by -2147483648.
+create_respo_rules(8): integer__last may_be_replaced_by 2147483647.
+create_respo_rules(9): integer__base__first may_be_replaced_by -2147483648.
+create_respo_rules(10): integer__base__last may_be_replaced_by 2147483647.
+create_respo_rules(11): character__size >= 0 may_be_deduced.
+create_respo_rules(12): character__first may_be_replaced_by 0.
+create_respo_rules(13): character__last may_be_replaced_by 255.
+create_respo_rules(14): character__base__first may_be_replaced_by 0.
+create_respo_rules(15): character__base__last may_be_replaced_by 255.
+create_respo_rules(16): natural__size >= 0 may_be_deduced.
+create_respo_rules(17): natural__first may_be_replaced_by 0.
+create_respo_rules(18): natural__last may_be_replaced_by 2147483647.
+create_respo_rules(19): natural__base__first may_be_replaced_by -2147483648.
+create_respo_rules(20): natural__base__last may_be_replaced_by 2147483647.
+create_respo_rules(21): positive__size >= 0 may_be_deduced.
+create_respo_rules(22): positive__first may_be_replaced_by 1.
+create_respo_rules(23): positive__last may_be_replaced_by 2147483647.
+create_respo_rules(24): positive__base__first may_be_replaced_by -2147483648.
+create_respo_rules(25): positive__base__last may_be_replaced_by 2147483647.
+create_respo_rules(26): dns_types__qname_ptr_range__size >= 0 may_be_deduced.
+create_respo_rules(27): dns_types__qname_ptr_range__first may_be_replaced_by 0.
+create_respo_rules(28): dns_types__qname_ptr_range__last may_be_replaced_by 16383.
+create_respo_rules(29): dns_types__qname_ptr_range__base__first <= 
+     dns_types__qname_ptr_range__base__last may_be_deduced.
+create_respo_rules(30): dns_types__qname_ptr_range__base__first <= 
+     dns_types__qname_ptr_range__first may_be_deduced.
+create_respo_rules(31): dns_types__qname_ptr_range__base__last >= 
+     dns_types__qname_ptr_range__last may_be_deduced.
+create_respo_rules(32): dns_types__packet_length_range__size >= 0 may_be_deduced.
+create_respo_rules(33): dns_types__packet_length_range__first may_be_replaced_by 0.
+create_respo_rules(34): dns_types__packet_length_range__last may_be_replaced_by 8192.
+create_respo_rules(35): dns_types__packet_length_range__base__first may_be_replaced_by -2147483648.
+create_respo_rules(36): dns_types__packet_length_range__base__last may_be_replaced_by 2147483647.
+create_respo_rules(37): dns_types__packet_bytes_range__size >= 0 may_be_deduced.
+create_respo_rules(38): dns_types__packet_bytes_range__first may_be_replaced_by 1.
+create_respo_rules(39): dns_types__packet_bytes_range__last may_be_replaced_by 8180.
+create_respo_rules(40): dns_types__packet_bytes_range__base__first may_be_replaced_by -2147483648.
+create_respo_rules(41): dns_types__packet_bytes_range__base__last may_be_replaced_by 2147483647.
+create_respo_rules(42): dns_types__byte__size >= 0 may_be_deduced.
+create_respo_rules(43): dns_types__byte__size may_be_replaced_by 8.
+create_respo_rules(44): dns_types__byte__first may_be_replaced_by 0.
+create_respo_rules(45): dns_types__byte__last may_be_replaced_by 255.
+create_respo_rules(46): dns_types__byte__base__first may_be_replaced_by 0.
+create_respo_rules(47): dns_types__byte__base__last may_be_replaced_by 255.
+create_respo_rules(48): dns_types__byte__modulus may_be_replaced_by 256.
+create_respo_rules(49): dns_types__unsigned_short__size >= 0 may_be_deduced.
+create_respo_rules(50): dns_types__unsigned_short__size may_be_replaced_by 16.
+create_respo_rules(51): dns_types__unsigned_short__first may_be_replaced_by 0.
+create_respo_rules(52): dns_types__unsigned_short__last may_be_replaced_by 65535.
+create_respo_rules(53): dns_types__unsigned_short__base__first may_be_replaced_by -2147483648.
+create_respo_rules(54): dns_types__unsigned_short__base__last may_be_replaced_by 2147483647.
+create_respo_rules(55): dns_types__opcode_type__size >= 0 may_be_deduced.
+create_respo_rules(56): dns_types__opcode_type__size may_be_replaced_by 4.
+create_respo_rules(57): dns_types__opcode_type__first may_be_replaced_by dns_types__query.
+create_respo_rules(58): dns_types__opcode_type__last may_be_replaced_by dns_types__status.
+create_respo_rules(59): dns_types__opcode_type__base__first may_be_replaced_by dns_types__query.
+create_respo_rules(60): dns_types__opcode_type__base__last may_be_replaced_by dns_types__status.
+create_respo_rules(61): dns_types__opcode_type__pos(
+     dns_types__opcode_type__first) may_be_replaced_by 0.
+create_respo_rules(62): dns_types__opcode_type__pos(
+     dns_types__query) may_be_replaced_by 0.
+create_respo_rules(63): dns_types__opcode_type__val(0) may_be_replaced_by 
+     dns_types__query.
+create_respo_rules(64): dns_types__opcode_type__pos(
+     dns_types__iquery) may_be_replaced_by 1.
+create_respo_rules(65): dns_types__opcode_type__val(1) may_be_replaced_by 
+     dns_types__iquery.
+create_respo_rules(66): dns_types__opcode_type__pos(
+     dns_types__status) may_be_replaced_by 2.
+create_respo_rules(67): dns_types__opcode_type__val(2) may_be_replaced_by 
+     dns_types__status.
+create_respo_rules(68): dns_types__opcode_type__pos(
+     dns_types__opcode_type__last) may_be_replaced_by 2.
+create_respo_rules(69): dns_types__opcode_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) + 1
+     if [X <=dns_types__status, X <> dns_types__status].
+create_respo_rules(70): dns_types__opcode_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) - 1
+     if [X >=dns_types__query, X <> dns_types__query].
+create_respo_rules(71): dns_types__opcode_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+create_respo_rules(72): dns_types__opcode_type__pos(X) <= 2 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+create_respo_rules(73): dns_types__opcode_type__val(X) >= 
+     dns_types__query may_be_deduced_from
+     [0 <= X, X <= 2].
+create_respo_rules(74): dns_types__opcode_type__val(X) <= 
+     dns_types__status may_be_deduced_from
+     [0 <= X, X <= 2].
+create_respo_rules(75): succ(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X+1)
+     if [0 <= X, X < 2].
+create_respo_rules(76): pred(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X-1)
+     if [0 < X, X <= 2].
+create_respo_rules(77): dns_types__opcode_type__pos(
+     dns_types__opcode_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 2].
+create_respo_rules(78): dns_types__opcode_type__val(
+     dns_types__opcode_type__pos(X)) may_be_replaced_by X
+     if [dns_types__query <= X, X <= dns_types__status].
+create_respo_rules(79): dns_types__opcode_type__pos(X) <= 
+     dns_types__opcode_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__query <= X, X <= dns_types__status, 
+     dns_types__query <= Y, Y <= dns_types__status].
+create_respo_rules(80): dns_types__opcode_type__val(X) <= 
+     dns_types__opcode_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 2, 0 <= Y, Y <= 2].
+create_respo_rules(81): dns_types__response_code__size >= 0 may_be_deduced.
+create_respo_rules(82): dns_types__response_code__size may_be_replaced_by 4.
+create_respo_rules(83): dns_types__response_code__first may_be_replaced_by dns_types__no_error.
+create_respo_rules(84): dns_types__response_code__last may_be_replaced_by dns_types__refused.
+create_respo_rules(85): dns_types__response_code__base__first may_be_replaced_by dns_types__no_error.
+create_respo_rules(86): dns_types__response_code__base__last may_be_replaced_by dns_types__refused.
+create_respo_rules(87): dns_types__response_code__pos(
+     dns_types__response_code__first) may_be_replaced_by 0.
+create_respo_rules(88): dns_types__response_code__pos(
+     dns_types__no_error) may_be_replaced_by 0.
+create_respo_rules(89): dns_types__response_code__val(0) may_be_replaced_by 
+     dns_types__no_error.
+create_respo_rules(90): dns_types__response_code__pos(
+     dns_types__format_error) may_be_replaced_by 1.
+create_respo_rules(91): dns_types__response_code__val(1) may_be_replaced_by 
+     dns_types__format_error.
+create_respo_rules(92): dns_types__response_code__pos(
+     dns_types__server_failure) may_be_replaced_by 2.
+create_respo_rules(93): dns_types__response_code__val(2) may_be_replaced_by 
+     dns_types__server_failure.
+create_respo_rules(94): dns_types__response_code__pos(
+     dns_types__name_error) may_be_replaced_by 3.
+create_respo_rules(95): dns_types__response_code__val(3) may_be_replaced_by 
+     dns_types__name_error.
+create_respo_rules(96): dns_types__response_code__pos(
+     dns_types__not_implemented) may_be_replaced_by 4.
+create_respo_rules(97): dns_types__response_code__val(4) may_be_replaced_by 
+     dns_types__not_implemented.
+create_respo_rules(98): dns_types__response_code__pos(
+     dns_types__refused) may_be_replaced_by 5.
+create_respo_rules(99): dns_types__response_code__val(5) may_be_replaced_by 
+     dns_types__refused.
+create_respo_rules(100): dns_types__response_code__pos(
+     dns_types__response_code__last) may_be_replaced_by 5.
+create_respo_rules(101): dns_types__response_code__pos(succ(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) + 1
+     if [X <=dns_types__refused, X <> dns_types__refused].
+create_respo_rules(102): dns_types__response_code__pos(pred(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) - 1
+     if [X >=dns_types__no_error, X <> dns_types__no_error].
+create_respo_rules(103): dns_types__response_code__pos(X) >= 0 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+create_respo_rules(104): dns_types__response_code__pos(X) <= 5 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+create_respo_rules(105): dns_types__response_code__val(X) >= 
+     dns_types__no_error may_be_deduced_from
+     [0 <= X, X <= 5].
+create_respo_rules(106): dns_types__response_code__val(X) <= 
+     dns_types__refused may_be_deduced_from
+     [0 <= X, X <= 5].
+create_respo_rules(107): succ(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X+1)
+     if [0 <= X, X < 5].
+create_respo_rules(108): pred(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X-1)
+     if [0 < X, X <= 5].
+create_respo_rules(109): dns_types__response_code__pos(
+     dns_types__response_code__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 5].
+create_respo_rules(110): dns_types__response_code__val(
+     dns_types__response_code__pos(X)) may_be_replaced_by X
+     if [dns_types__no_error <= X, X <= dns_types__refused].
+create_respo_rules(111): dns_types__response_code__pos(X) <= 
+     dns_types__response_code__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__no_error <= X, X <= dns_types__refused, 
+     dns_types__no_error <= Y, Y <= dns_types__refused].
+create_respo_rules(112): dns_types__response_code__val(X) <= 
+     dns_types__response_code__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 5, 0 <= Y, Y <= 5].
+create_respo_rules(113): dns_types__header_type__size >= 0 may_be_deduced.
+create_respo_rules(114): dns_types__header_type__size may_be_replaced_by 96.
+create_respo_rules(115): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__header_type)),
+      goal(checktype(B,dns_types__header_type)),
+      fld_messageid(A) = fld_messageid(B),
+      fld_qr(A) = fld_qr(B),
+      fld_opcode(A) = fld_opcode(B),
+      fld_aa(A) = fld_aa(B),
+      fld_tc(A) = fld_tc(B),
+      fld_rd(A) = fld_rd(B),
+      fld_ra(A) = fld_ra(B),
+      fld_res1(A) = fld_res1(B),
+      fld_res2(A) = fld_res2(B),
+      fld_res3(A) = fld_res3(B),
+      fld_rcode(A) = fld_rcode(B),
+      fld_qdcount(A) = fld_qdcount(B),
+      fld_ancount(A) = fld_ancount(B),
+      fld_nscount(A) = fld_nscount(B),
+      fld_arcount(A) = fld_arcount(B)].
+create_respo_rules(116): dns_types__dns_packet__size >= 0 may_be_deduced.
+create_respo_rules(117): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_packet)),
+      goal(checktype(B,dns_types__dns_packet)),
+      fld_header(A) = fld_header(B),
+      fld_bytes(A) = fld_bytes(B)].
+create_respo_rules(118): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+create_respo_rules(119): unsigned_types__unsigned16__first may_be_replaced_by 0.
+create_respo_rules(120): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+create_respo_rules(121): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+create_respo_rules(122): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+create_respo_rules(123): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.
+create_respo_rules(124): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+create_respo_rules(125): unsigned_types__unsigned32__first may_be_replaced_by 0.
+create_respo_rules(126): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+create_respo_rules(127): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+create_respo_rules(128): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+create_respo_rules(129): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+create_respo_rules(130): rr_type__classtype__size >= 0 may_be_deduced.
+create_respo_rules(131): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+create_respo_rules(132): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+create_respo_rules(133): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+create_respo_rules(134): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+create_respo_rules(135): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+create_respo_rules(136): rr_type__classtype__pos(
+     rr_type__internet) may_be_replaced_by 0.
+create_respo_rules(137): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+create_respo_rules(138): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+create_respo_rules(139): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+create_respo_rules(140): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+create_respo_rules(141): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+create_respo_rules(142): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+create_respo_rules(143): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+create_respo_rules(144): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+create_respo_rules(145): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+create_respo_rules(146): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+create_respo_rules(147): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+create_respo_rules(148): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+create_respo_rules(149): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+create_respo_rules(150): rr_type__classtype__val(X) <= 
+     rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+create_respo_rules(151): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+create_respo_rules(152): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+create_respo_rules(153): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+create_respo_rules(154): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+create_respo_rules(155): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+create_respo_rules(156): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+create_respo_rules(157): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+create_respo_rules(158): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+create_respo_rules(159): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+create_respo_rules(160): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+create_respo_rules(161): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.
+create_respo_rules(162): rr_type__resourcerecordtype__size >= 0 may_be_deduced.
+create_respo_rules(163): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__resourcerecordtype)),
+      goal(checktype(B,rr_type__resourcerecordtype)),
+      fld_ttlinseconds(A) = fld_ttlinseconds(B),
+      fld_class(A) = fld_class(B)].
+create_respo_rules(164): rr_type__returnedrecordsindextype__size >= 0 may_be_deduced.
+create_respo_rules(165): rr_type__returnedrecordsindextype__first may_be_replaced_by 1.
+create_respo_rules(166): rr_type__returnedrecordsindextype__last may_be_replaced_by 64.
+create_respo_rules(167): rr_type__returnedrecordsindextype__base__first may_be_replaced_by -2147483648.
+create_respo_rules(168): rr_type__returnedrecordsindextype__base__last may_be_replaced_by 2147483647.
+create_respo_rules(169): rr_type__numberofrecordstype__size >= 0 may_be_deduced.
+create_respo_rules(170): rr_type__numberofrecordstype__first may_be_replaced_by 0.
+create_respo_rules(171): rr_type__numberofrecordstype__last may_be_replaced_by 64.
+create_respo_rules(172): rr_type__numberofrecordstype__base__first may_be_replaced_by -2147483648.
+create_respo_rules(173): rr_type__numberofrecordstype__base__last may_be_replaced_by 2147483647.
+create_respo_rules(174): rr_type__a_record_type__arecordtype__size >= 0 may_be_deduced.
+create_respo_rules(175): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__a_record_type__arecordtype)),
+      goal(checktype(B,rr_type__a_record_type__arecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_ipv4(A) = fld_ipv4(B)].

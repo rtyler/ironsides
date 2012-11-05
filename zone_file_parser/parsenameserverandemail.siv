@@ -1,0 +1,1032 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseNameServerAndEmail
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          752:
+
+procedure_parsenameserverandemail_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 752:
+
+procedure_parsenameserverandemail_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 756:
+
+procedure_parsenameserverandemail_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to assertion of line 756:
+
+procedure_parsenameserverandemail_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 757:
+
+procedure_parsenameserverandemail_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to precondition check associated with 
+          statement of line 758:
+
+procedure_parsenameserverandemail_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 758:
+
+procedure_parsenameserverandemail_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 765:
+
+procedure_parsenameserverandemail_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 765:
+
+procedure_parsenameserverandemail_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          766:
+
+procedure_parsenameserverandemail_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to precondition check associated with 
+          statement of line 766:
+
+procedure_parsenameserverandemail_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 766:
+
+procedure_parsenameserverandemail_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 766:
+
+procedure_parsenameserverandemail_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 767:
+
+procedure_parsenameserverandemail_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 767:
+
+procedure_parsenameserverandemail_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 772:
+
+procedure_parsenameserverandemail_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 772:
+
+procedure_parsenameserverandemail_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 775:
+
+procedure_parsenameserverandemail_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 775:
+
+procedure_parsenameserverandemail_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 775:
+
+procedure_parsenameserverandemail_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 775:
+
+procedure_parsenameserverandemail_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 776:
+
+procedure_parsenameserverandemail_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to assertion of line 776:
+
+procedure_parsenameserverandemail_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to assertion of line 776:
+
+procedure_parsenameserverandemail_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 778:
+
+procedure_parsenameserverandemail_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 780:
+
+procedure_parsenameserverandemail_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 780:
+
+procedure_parsenameserverandemail_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 780:
+
+procedure_parsenameserverandemail_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 780:
+
+procedure_parsenameserverandemail_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 780:
+
+procedure_parsenameserverandemail_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 780:
+
+procedure_parsenameserverandemail_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 782:
+
+procedure_parsenameserverandemail_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to assertion of line 782:
+
+procedure_parsenameserverandemail_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to assertion of line 782:
+
+procedure_parsenameserverandemail_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to assertion of line 782:
+
+procedure_parsenameserverandemail_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 783:
+
+procedure_parsenameserverandemail_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 794:
+
+procedure_parsenameserverandemail_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_40.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 794:
+
+procedure_parsenameserverandemail_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_44.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 794:
+
+procedure_parsenameserverandemail_45.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 794:
+
+procedure_parsenameserverandemail_46.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          795:
+
+procedure_parsenameserverandemail_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_50.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to precondition check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_54.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to precondition check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_55.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to precondition check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_56.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 795:
+
+procedure_parsenameserverandemail_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_60.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_64.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_65.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 795:
+
+procedure_parsenameserverandemail_66.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 796:
+
+procedure_parsenameserverandemail_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_70.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 796:
+
+procedure_parsenameserverandemail_71.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_73.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_74.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 796:
+
+procedure_parsenameserverandemail_75.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 796:
+
+procedure_parsenameserverandemail_76.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 801:
+
+procedure_parsenameserverandemail_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_80.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 801:
+
+procedure_parsenameserverandemail_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_84.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 801:
+
+procedure_parsenameserverandemail_85.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 801:
+
+procedure_parsenameserverandemail_86.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 804:
+
+procedure_parsenameserverandemail_87.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_88.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_89.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_90.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_92.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_93.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_94.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_95.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_96.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 804:
+
+procedure_parsenameserverandemail_97.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_98.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_99.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_100.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_101.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_102.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_103.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_104.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_105.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 804:
+
+procedure_parsenameserverandemail_106.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 805:
+
+procedure_parsenameserverandemail_107.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_108.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_109.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_110.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to assertion of line 805:
+
+procedure_parsenameserverandemail_111.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_112.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_113.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_114.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to assertion of line 805:
+
+procedure_parsenameserverandemail_115.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to assertion of line 805:
+
+procedure_parsenameserverandemail_116.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to assertion of line 805:
+
+procedure_parsenameserverandemail_117.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to run-time check associated with 
+          statement of line 807:
+
+procedure_parsenameserverandemail_118.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 809:
+
+procedure_parsenameserverandemail_119.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_120.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_121.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_122.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_123.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_124.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_125.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_126.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_127.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_128.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_129.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 809:
+
+procedure_parsenameserverandemail_130.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_131.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_132.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_133.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_134.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_135.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_136.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_137.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_138.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_139.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to run-time check associated with 
+          statement of line 809:
+
+procedure_parsenameserverandemail_140.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 811:
+
+procedure_parsenameserverandemail_141.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_142.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_143.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_144.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to assertion of line 811:
+
+procedure_parsenameserverandemail_145.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_146.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_147.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_148.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to assertion of line 811:
+
+procedure_parsenameserverandemail_149.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to assertion of line 811:
+
+procedure_parsenameserverandemail_150.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to assertion of line 811:
+
+procedure_parsenameserverandemail_151.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 811 to assertion of line 811:
+
+procedure_parsenameserverandemail_152.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 811 to run-time check associated with 
+          statement of line 812:
+
+procedure_parsenameserverandemail_153.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parsenameserverandemail_154.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_155.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_156.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_157.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_158.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_159.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_160.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_161.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_162.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_163.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_164.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_165.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_166.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_167.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_168.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_169.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 756 to finish:
+
+procedure_parsenameserverandemail_170.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_171.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_172.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_173.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_174.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_175.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_176.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_177.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_178.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_179.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_180.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_181.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_182.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_183.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_184.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_185.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 776 to finish:
+
+procedure_parsenameserverandemail_186.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_187.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_188.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_189.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 782 to finish:
+
+procedure_parsenameserverandemail_190.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_191.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_192.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsenameserverandemail_193.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 805 to finish:
+
+procedure_parsenameserverandemail_194.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 811 to finish:
+
+procedure_parsenameserverandemail_195.
+*** true .          /* all conclusions proved */
+
+

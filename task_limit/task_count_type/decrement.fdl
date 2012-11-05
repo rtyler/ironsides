@@ -1,0 +1,27 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+               {procedure Task_Limit.Task_Count_Type.Decrement}
+
+
+title procedure decrement;
+
+  function round__(real) : integer;
+  const max_tasks : integer = pending;
+  const task_count_subtype__base__first : integer = pending; 
+  const task_count_subtype__base__last : integer = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const task_count_subtype__first : integer = pending; 
+  const task_count_subtype__last : integer = pending; 
+  const task_count_subtype__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var task_count_type__task_count : integer;
+
+end;

@@ -1,0 +1,103 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseIpv6
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          716:
+
+procedure_parseipv6_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 716:
+
+procedure_parseipv6_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 720:
+
+procedure_parseipv6_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to assertion of line 720:
+
+procedure_parseipv6_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to run-time check associated with 
+          statement of line 721:
+
+procedure_parseipv6_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to precondition check associated with 
+          statement of line 722:
+
+procedure_parseipv6_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to run-time check associated with 
+          statement of line 722:
+
+procedure_parseipv6_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 728:
+
+procedure_parseipv6_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to run-time check associated with 
+          statement of line 728:
+
+procedure_parseipv6_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parseipv6_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv6_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv6_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 720 to finish:
+
+procedure_parseipv6_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv6_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv6_15.
+*** true .          /* all conclusions proved */
+
+

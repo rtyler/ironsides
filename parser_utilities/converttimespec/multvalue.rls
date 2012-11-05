@@ -1,0 +1,34 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+            /*function Parser_Utilities.ConvertTimeSpec.MultValue*/
+
+
+rule_family multvalue_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+multvalue_rules(1): secondsinaminute may_be_replaced_by 60.
+multvalue_rules(2): minutesinanhour may_be_replaced_by 60.
+multvalue_rules(3): hoursinaday may_be_replaced_by 24.
+multvalue_rules(4): daysinaweek may_be_replaced_by 7.
+multvalue_rules(5): integer__size >= 0 may_be_deduced.
+multvalue_rules(6): integer__first may_be_replaced_by -2147483648.
+multvalue_rules(7): integer__last may_be_replaced_by 2147483647.
+multvalue_rules(8): integer__base__first may_be_replaced_by -2147483648.
+multvalue_rules(9): integer__base__last may_be_replaced_by 2147483647.
+multvalue_rules(10): character__size >= 0 may_be_deduced.
+multvalue_rules(11): character__first may_be_replaced_by 0.
+multvalue_rules(12): character__last may_be_replaced_by 255.
+multvalue_rules(13): character__base__first may_be_replaced_by 0.
+multvalue_rules(14): character__base__last may_be_replaced_by 255.
+multvalue_rules(15): natural__size >= 0 may_be_deduced.
+multvalue_rules(16): natural__first may_be_replaced_by 0.
+multvalue_rules(17): natural__last may_be_replaced_by 2147483647.
+multvalue_rules(18): natural__base__first may_be_replaced_by -2147483648.
+multvalue_rules(19): natural__base__last may_be_replaced_by 2147483647.

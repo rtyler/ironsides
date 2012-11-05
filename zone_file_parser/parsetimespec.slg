@@ -1,0 +1,259 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseTimeSpec
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+-S-  Applied substitution rule parsetimespe_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule parsetimespe_rules(18).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  1 >= rr_type__linelengthindex__first
+     using hypothesis H8.
+***  Proved C2:  1 <= rr_type__linelengthindex__last
+     using hypothesis H9.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule parsetimespe_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parsetimespe_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parsetimespe_rules(17).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  true
+-S-  Applied substitution rule parsetimespe_rules(18).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H7:  true
+-S-  Applied substitution rule parsetimespe_rules(64).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parsetimespe_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H9:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C5:  1 <= zlength
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__rritemtype__first <= foundtype__1
+***  Proved C1:  rr_type__rritemtype__first <= foundtype__1
+     using hypothesis H23.
+***  Proved C2:  foundtype__1 <= rr_type__rritemtype__last
+     using hypothesis H24.
+***  Proved C3:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H21.
+***  Proved C4:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H22.
+***  Proved C5:  begidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H19.
+***  Proved C6:  begidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H21.
+***  Proved C2:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H22.
+***  Proved C3:  begidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H19.
+***  Proved C4:  begidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H20).
+***  Proved C1:  newtimespec__2 >= unsigned_types__unsigned32__first
+     using hypothesis H42.
+***  Proved C2:  newtimespec__2 <= unsigned_types__unsigned32__last
+     using hypothesis H43.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parsetimespec_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

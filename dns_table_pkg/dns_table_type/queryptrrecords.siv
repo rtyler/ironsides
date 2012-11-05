@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryPTRRecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 311:
+
+procedure_queryptrrecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 313:
+
+procedure_queryptrrecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 315:
+
+procedure_queryptrrecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to assertion of line 315:
+
+procedure_queryptrrecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryptrrecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to run-time check associated with 
+          statement of line 317:
+
+procedure_queryptrrecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to run-time check associated with 
+          statement of line 318:
+
+procedure_queryptrrecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to run-time check associated with 
+          statement of line 319:
+
+procedure_queryptrrecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to run-time check associated with 
+          statement of line 321:
+
+procedure_queryptrrecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 315 to finish:
+
+procedure_queryptrrecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryptrrecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryptrrecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_queryptrrecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryptrrecords_14.
+*** true .          /* all conclusions proved */
+
+

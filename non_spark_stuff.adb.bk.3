@@ -1,0 +1,37 @@
+----------------------------------------------------------------
+-- IRONSIDES - DNS SERVER
+--
+-- By: Martin C. Carlisle and Barry S. Fagin
+--     Department of Computer Science
+--     United States Air Force Academy
+--
+-- This is free software; you can redistribute it and/or
+-- modify without restriction.  We do ask that you please keep
+-- the original author information, and clearly indicate if the
+-- software has been modified.
+--
+-- This software is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty
+-- of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+----------------------------------------------------------------
+with Ada.Calendar;
+package body Non_Spark_Stuff is
+
+   -------------
+   -- Time_Of --
+   -------------
+
+   function Time_Of
+     (Year, Month, Day, Hour, Minute, Second : Natural)
+      return Unsigned_Types.Unsigned32
+   is
+   begin
+      return Unsigned_Types.Unsigned32(
+         Ada.Calendar.Time_Of(
+            Year => Year,
+            Month => Month,
+            Day => Day,
+            Seconds => Second+Minute*60+Hour*3600));
+   end Time_Of;
+
+end Non_Spark_Stuff;

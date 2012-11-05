@@ -1,0 +1,779 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function dns_table_pkg.DNS_Table_Type.hash
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_hash_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New C1:  4 >= integer__first
+<S>  New C2:  4 <= integer__last
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C3:  true
+<S>  New C1:  true
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C4:  true
+<S>  New C2:  true
+***  Proved C3:  true
+***  Proved C1:  true
+***  Proved C4:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+***  Proved C1:  1 <= numcharsinhashfunction -> numcharsinhashfunction >= 
+          integer__first and numcharsinhashfunction <= integer__last
+     using hypotheses H3 & H4.
+***  Proved C2:  1 <= numcharsinhashfunction -> 1 >= integer__first and 1 <= 
+          integer__last
+     using hypotheses H5 & H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+***  Proved C1:  true
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C4:  1 >= integer__first
+     using hypothesis H5.
+***  Proved C5:  1 <= integer__last
+     using hypothesis H6.
+***  Proved C6:  true
+***  Proved C7:  1 <= numcharsinhashfunction
+     using hypothesis H9.
++++  Using "A->B, A |- B" on hypotheses H7 & H9 yields a new hypothesis:
+     +++  H10:  numcharsinhashfunction >= integer__first and 
+          numcharsinhashfunction <= integer__last
++++  Using "A->B, A |- B" on hypotheses H8 & H9 yields a new hypothesis:
+     +++  H11:  1 >= integer__first and 1 <= integer__last
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H3:  4 >= integer__first
+<S>  New H4:  4 <= integer__last
+<S>  New H7:  4 >= integer__first and 4 <= integer__last
+<S>  New H8:  1 >= integer__first and 1 <= integer__last
+<S>  New H9:  true
+<S>  New H10:  4 >= integer__first and 4 <= integer__last
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H5:  true
+<S>  New H11:  1 <= integer__last
+<S>  New H3:  true
+<S>  New H7:  4 <= integer__last
+<S>  New H8:  1 <= integer__last
+<S>  New H10:  4 <= integer__last
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H6:  true
+<S>  New H4:  true
+<S>  New H11:  true
+<S>  New H7:  true
+<S>  New H8:  true
+<S>  New H10:  true
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__wirestringtypeindex__last -> element(domainname, [q_]) <= 
+          255 and 0 <= element(domainname, [q_]))
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+***  Proved C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  val + element(domainname, [loop__1__i]) <= loop__1__i * 
+          character__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 0
+***  Proved C2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= 
+          q_ and q_ <= rr_type__wirestringtypeindex__last -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H3.
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 0
+     using hypothesis H6.
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H7:  loop__1__i <= 4
+<S>  New H14:  not loop__1__i = 4
+<S>  New C7:  loop__1__i <= 3
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypotheses H7 & H14.
+***  Proved C7:  loop__1__i <= 3
+     using hypotheses H7 & H14.
+>>>  Restructured hypothesis H14 into:
+     >>>  H14:  loop__1__i <> 4
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H1:  val <= (loop__1__i - 1) * 255
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C1:  val + element(domainname, [loop__1__i]) <= loop__1__i * 255
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  val >= 0
+<S>  New H10:  val + element(domainname, [loop__1__i]) >= 0
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  val <= 2147483647
+<S>  New H11:  val + element(domainname, [loop__1__i]) <= 2147483647
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__wirestringtypeindex__last -> element(domainname, [q_]) <= 
+          255 and 0 <= element(domainname, [q_]))
+<S>  New H12:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H13:  loop__1__i <= 129
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+%%%  Hypotheses H7 & H14 together imply that
+          loop__1__i < 4.
+     H7 & H14 have therefore been deleted and a new H15 added to this effect.
+---  Eliminated hypothesis H12 (duplicate of H6).
+---  Eliminated hypothesis H4 (redundant, given H6).
+---  Eliminated hypothesis H5 (redundant, given H13).
+---  Eliminated hypothesis H6 (redundant, given H1 & H8).
+---  Eliminated hypothesis H9 (redundant, given H1 & H13).
+---  Eliminated hypothesis H13 (redundant, given H15).
+     +++  New H16:  integer__size >= 0
+     +++  New H17:  character__size >= 0
+     +++  New H18:  natural__size >= 0
+     +++  New H19:  positive__size >= 0
+     +++  New H20:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H21:  rr_type__numbucketsindextype__size >= 0
+
+
+@@@@@@@@@@  VC: function_hash_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  val >= 0
+<S>  New C1:  val + element(domainname, [loop__1__i]) >= 0
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  val <= 2147483647
+<S>  New C2:  val + element(domainname, [loop__1__i]) <= 2147483647
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__wirestringtypeindex__last -> element(domainname, [q_]) <= 
+          255 and 0 <= element(domainname, [q_]))
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New C3:  loop__1__i >= 1
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+<S>  New C4:  loop__1__i <= 129
+***  Proved C3:  loop__1__i >= 1
+     using hypothesis H6.
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H7:  loop__1__i <= 4
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H1:  val <= (loop__1__i - 1) * 255
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C4:  loop__1__i <= 129
+     using hypothesis H7.
+---  Eliminated hypothesis H4 (redundant, given H6).
+---  Eliminated hypothesis H5 (redundant, given H7).
+---  Eliminated hypothesis H6 (redundant, given H1 & H8).
+---  Eliminated hypothesis H9 (redundant, given H1 & H7).
+***  Proved C1:  val + element(domainname, [loop__1__i]) >= 0
+     using hypotheses H2, H6, H7 & H8.
+     +++  New H10:  integer__size >= 0
+     +++  New H11:  character__size >= 0
+     +++  New H12:  natural__size >= 0
+     +++  New H13:  positive__size >= 0
+     +++  New H14:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H15:  rr_type__numbucketsindextype__size >= 0
+
+
+@@@@@@@@@@  VC: function_hash_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+-S-  Applied substitution rule hash_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  0 mod rr_type__numbuckets >= - 2147483649
+<S>  New C3:  0 mod rr_type__numbuckets >= - 2147483648
+-S-  Applied substitution rule hash_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  0 mod rr_type__numbuckets <= 2147483646
+<S>  New C4:  0 mod rr_type__numbuckets <= 2147483647
+>>>  Restructured hypothesis H9 into:
+     >>>  H9:  numcharsinhashfunction < 1
+-S-  Applied substitution rule hash_rules(1).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New C5:  true
+<S>  New C1:  true
+<S>  New C3:  true
+<S>  New C2:  true
+<S>  New C4:  true
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H3:  4 >= integer__first
+<S>  New H4:  4 <= integer__last
+<S>  New H7:  4 >= integer__first and 4 <= integer__last
+<S>  New H8:  1 >= integer__first and 1 <= integer__last
+<S>  New H9:  false
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H5:  true
+<S>  New H3:  true
+<S>  New H7:  4 <= integer__last
+<S>  New H8:  1 <= integer__last
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H6:  true
+<S>  New H4:  true
+<S>  New H7:  true
+<S>  New H8:  true
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H10:  true
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H11:  true
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C5:  true
+***  Proved C1:  true
+***  Proved C3:  true
+***  Proved C2:  true
+***  Proved C4:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule hash_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          >= - 2147483649
+<S>  New C3:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          >= - 2147483648
+-S-  Applied substitution rule hash_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          <= 2147483646
+<S>  New C4:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          <= 2147483647
+-S-  Applied substitution rule hash_rules(1).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New C5:  true
+<S>  New C1:  (val + element(domainname, [loop__1__i])) mod 64 >= - 2147483649
+<S>  New C3:  (val + element(domainname, [loop__1__i])) mod 64 >= - 2147483648
+<S>  New C2:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483646
+<S>  New C4:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483647
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H7:  loop__1__i <= 4
+<S>  New H14:  loop__1__i = 4
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H1:  val <= (loop__1__i - 1) * 255
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  val >= 0
+<S>  New H10:  val + element(domainname, [loop__1__i]) >= 0
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  val <= 2147483647
+<S>  New H11:  val + element(domainname, [loop__1__i]) <= 2147483647
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__wirestringtypeindex__last -> element(domainname, [q_]) <= 
+          255 and 0 <= element(domainname, [q_]))
+<S>  New H12:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H13:  loop__1__i <= 129
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C5:  true
+***  Proved C1:  (val + element(domainname, [loop__1__i])) mod 64 >= - 
+          2147483649
+***  Proved C3:  (val + element(domainname, [loop__1__i])) mod 64 >= - 
+          2147483648
+***  Proved C2:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483646
+***  Proved C4:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483647
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+***  Proved C1:  true
+-S-  Applied substitution rule hash_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New C2:  0 mod rr_type__numbuckets >= 0
+-S-  Applied substitution rule hash_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New C3:  0 mod rr_type__numbuckets <= 63
+>>>  Restructured hypothesis H9 into:
+     >>>  H9:  numcharsinhashfunction < 1
+-S-  Applied substitution rule hash_rules(1).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New H12:  1 >= integer__base__first
+<S>  New H13:  1 <= integer__base__last
+<S>  New H14:  0 >= integer__base__first
+<S>  New H15:  0 <= integer__base__last
+<S>  New H16:  true
+<S>  New C2:  true
+<S>  New C3:  true
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H3:  4 >= integer__first
+<S>  New H4:  4 <= integer__last
+<S>  New H7:  4 >= integer__first and 4 <= integer__last
+<S>  New H8:  1 >= integer__first and 1 <= integer__last
+<S>  New H9:  false
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H5:  true
+<S>  New H3:  true
+<S>  New H7:  4 <= integer__last
+<S>  New H8:  1 <= integer__last
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H6:  true
+<S>  New H4:  true
+<S>  New H7:  true
+<S>  New H8:  true
+-S-  Applied substitution rule hash_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H12:  true
+<S>  New H14:  true
+-S-  Applied substitution rule hash_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H13:  true
+<S>  New H15:  true
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H10:  true
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H11:  true
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C2:  true
+***  Proved C3:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_hash_9.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, rr_type__wirestringtypeindex__first <= q_ 
+          and q_ <= rr_type__wirestringtypeindex__last -> element(domainname, [
+          q_]) <= 255 and 0 <= element(domainname, [q_]))
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  true
+-S-  Applied substitution rule hash_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New C2:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          >= 0
+-S-  Applied substitution rule hash_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New C3:  (val + element(domainname, [loop__1__i])) mod rr_type__numbuckets 
+          <= 63
+-S-  Applied substitution rule hash_rules(1).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New H17:  (val + element(domainname, [loop__1__i])) mod 64 + 1 >= 
+          integer__base__first
+<S>  New H18:  (val + element(domainname, [loop__1__i])) mod 64 + 1 <= 
+          integer__base__last
+<S>  New H19:  (val + element(domainname, [loop__1__i])) mod 64 >= 
+          integer__base__first
+<S>  New H20:  (val + element(domainname, [loop__1__i])) mod 64 <= 
+          integer__base__last
+<S>  New H21:  true
+<S>  New C2:  (val + element(domainname, [loop__1__i])) mod 64 >= 0
+<S>  New C3:  (val + element(domainname, [loop__1__i])) mod 64 <= 63
+-S-  Applied substitution rule hash_rules(2).
+     This was achieved by replacing all occurrences of numcharsinhashfunction 
+          by:
+          4.
+<S>  New H7:  loop__1__i <= 4
+<S>  New H14:  loop__1__i = 4
+-S-  Applied substitution rule hash_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule hash_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+-S-  Applied substitution rule hash_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H17:  (val + element(domainname, [loop__1__i])) mod 64 >= - 2147483649
+<S>  New H19:  (val + element(domainname, [loop__1__i])) mod 64 >= - 2147483648
+-S-  Applied substitution rule hash_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H18:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483646
+<S>  New H20:  (val + element(domainname, [loop__1__i])) mod 64 <= 2147483647
+-S-  Applied substitution rule hash_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule hash_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H1:  val <= (loop__1__i - 1) * 255
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H8:  val >= 0
+<S>  New H10:  val + element(domainname, [loop__1__i]) >= 0
+-S-  Applied substitution rule hash_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H9:  val <= 2147483647
+<S>  New H11:  val + element(domainname, [loop__1__i]) <= 2147483647
+-S-  Applied substitution rule hash_rules(24).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__wirestringtypeindex__last -> element(domainname, [q_]) <= 
+          255 and 0 <= element(domainname, [q_]))
+<S>  New H12:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule hash_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H13:  loop__1__i <= 129
+<S>  New H2:  for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(
+          domainname, [q_]) <= 255 and 0 <= element(domainname, [q_]))
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C2:  (val + element(domainname, [loop__1__i])) mod 64 >= 0
+***  Proved C3:  (val + element(domainname, [loop__1__i])) mod 64 <= 63
+***  PROVED VC.
+

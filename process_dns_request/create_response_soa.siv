@@ -1,0 +1,914 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_Response_SOA
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 558:
+
+procedure_create_response_soa_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 560:
+
+procedure_create_response_soa_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 566:
+
+procedure_create_response_soa_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 567:
+
+procedure_create_response_soa_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 567:
+
+procedure_create_response_soa_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 568:
+
+procedure_create_response_soa_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 568:
+
+procedure_create_response_soa_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 569:
+
+procedure_create_response_soa_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          572:
+
+procedure_create_response_soa_9.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    start_byte <= 8180 .
+H4:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H5:    qname_location >= 0 .
+H6:    qname_location <= 16383 .
+H7:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H8:    fld_arcount(fld_header(output_packet)) >= 0 .
+H9:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H10:   fld_nscount(fld_header(output_packet)) >= 0 .
+H11:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H12:   fld_ancount(fld_header(output_packet)) >= 0 .
+H13:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H14:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H15:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H16:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H17:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H18:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H19:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H20:   fld_messageid(fld_header(output_packet)) >= 0 .
+H21:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H22:   answer_count >= 0 .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H27:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H28:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H29:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H31:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H32:   num_found__1 <= 64 .
+H33:   num_found__1 >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H36:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H39:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H40:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H41:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H42:   integer__size >= 0 .
+H43:   character__size >= 0 .
+H44:   natural__size >= 0 .
+H45:   positive__size >= 0 .
+H46:   dns_types__qname_ptr_range__size >= 0 .
+H47:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H48:   dns_types__packet_length_range__size >= 0 .
+H49:   dns_types__packet_bytes_range__size >= 0 .
+H50:   dns_types__dns_packet__size >= 0 .
+H51:   unsigned_types__unsigned16__size >= 0 .
+H52:   unsigned_types__unsigned32__size >= 0 .
+H53:   rr_type__classtype__size >= 0 .
+H54:   rr_type__wirestringtypeindex__size >= 0 .
+H55:   rr_type__resourcerecordtype__size >= 0 .
+H56:   rr_type__returnedrecordsindextype__size >= 0 .
+H57:   rr_type__numberofrecordstype__size >= 0 .
+H58:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H59:   dns_types__qname_ptr_range__base__first <= 0 .
+H60:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8179 .
+C2:    start_byte <= 8178 .
+
+
+For path(s) from start to run-time check associated with statement of line 574:
+
+procedure_create_response_soa_10.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   start_byte <= 8178 .
+H44:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H45:   fld_header(output_packet__2) = fld_header(output_packet) .
+H46:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H47:   integer__size >= 0 .
+H48:   character__size >= 0 .
+H49:   natural__size >= 0 .
+H50:   positive__size >= 0 .
+H51:   dns_types__qname_ptr_range__size >= 0 .
+H52:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H53:   dns_types__packet_length_range__size >= 0 .
+H54:   dns_types__packet_bytes_range__size >= 0 .
+H55:   dns_types__dns_packet__size >= 0 .
+H56:   unsigned_types__unsigned16__size >= 0 .
+H57:   unsigned_types__unsigned32__size >= 0 .
+H58:   rr_type__classtype__size >= 0 .
+H59:   rr_type__wirestringtypeindex__size >= 0 .
+H60:   rr_type__resourcerecordtype__size >= 0 .
+H61:   rr_type__returnedrecordsindextype__size >= 0 .
+H62:   rr_type__numberofrecordstype__size >= 0 .
+H63:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H64:   dns_types__qname_ptr_range__base__first <= 0 .
+H65:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8177 .
+
+
+For path(s) from start to run-time check associated with statement of line 575:
+
+procedure_create_response_soa_11.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H44:   fld_header(output_packet__2) = fld_header(output_packet) .
+H45:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H46:   start_byte <= 8177 .
+H47:   integer__size >= 0 .
+H48:   character__size >= 0 .
+H49:   natural__size >= 0 .
+H50:   positive__size >= 0 .
+H51:   dns_types__qname_ptr_range__size >= 0 .
+H52:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H53:   dns_types__packet_length_range__size >= 0 .
+H54:   dns_types__packet_bytes_range__size >= 0 .
+H55:   dns_types__dns_packet__size >= 0 .
+H56:   unsigned_types__unsigned16__size >= 0 .
+H57:   unsigned_types__unsigned32__size >= 0 .
+H58:   rr_type__classtype__size >= 0 .
+H59:   rr_type__wirestringtypeindex__size >= 0 .
+H60:   rr_type__resourcerecordtype__size >= 0 .
+H61:   rr_type__returnedrecordsindextype__size >= 0 .
+H62:   rr_type__numberofrecordstype__size >= 0 .
+H63:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H64:   dns_types__qname_ptr_range__base__first <= 0 .
+H65:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8176 .
+
+
+For path(s) from start to run-time check associated with statement of line 577:
+
+procedure_create_response_soa_12.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H44:   fld_header(output_packet__2) = fld_header(output_packet) .
+H45:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H46:   start_byte <= 8176 .
+H47:   integer__size >= 0 .
+H48:   character__size >= 0 .
+H49:   natural__size >= 0 .
+H50:   positive__size >= 0 .
+H51:   dns_types__qname_ptr_range__size >= 0 .
+H52:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H53:   dns_types__packet_length_range__size >= 0 .
+H54:   dns_types__packet_bytes_range__size >= 0 .
+H55:   dns_types__dns_packet__size >= 0 .
+H56:   unsigned_types__unsigned16__size >= 0 .
+H57:   unsigned_types__unsigned32__size >= 0 .
+H58:   rr_type__classtype__size >= 0 .
+H59:   rr_type__wirestringtypeindex__size >= 0 .
+H60:   rr_type__resourcerecordtype__size >= 0 .
+H61:   rr_type__returnedrecordsindextype__size >= 0 .
+H62:   rr_type__numberofrecordstype__size >= 0 .
+H63:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H64:   dns_types__qname_ptr_range__base__first <= 0 .
+H65:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8175 .
+
+
+For path(s) from start to run-time check associated with statement of line 578:
+
+procedure_create_response_soa_13.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H44:   fld_header(output_packet__2) = fld_header(output_packet) .
+H45:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H46:   start_byte <= 8175 .
+H47:   integer__size >= 0 .
+H48:   character__size >= 0 .
+H49:   natural__size >= 0 .
+H50:   positive__size >= 0 .
+H51:   dns_types__qname_ptr_range__size >= 0 .
+H52:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H53:   dns_types__packet_length_range__size >= 0 .
+H54:   dns_types__packet_bytes_range__size >= 0 .
+H55:   dns_types__dns_packet__size >= 0 .
+H56:   unsigned_types__unsigned16__size >= 0 .
+H57:   unsigned_types__unsigned32__size >= 0 .
+H58:   rr_type__classtype__size >= 0 .
+H59:   rr_type__wirestringtypeindex__size >= 0 .
+H60:   rr_type__resourcerecordtype__size >= 0 .
+H61:   rr_type__returnedrecordsindextype__size >= 0 .
+H62:   rr_type__numberofrecordstype__size >= 0 .
+H63:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H64:   dns_types__qname_ptr_range__base__first <= 0 .
+H65:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8174 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          579:
+
+procedure_create_response_soa_14.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H44:   fld_header(output_packet__2) = fld_header(output_packet) .
+H45:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H46:   start_byte <= 8174 .
+H47:   integer__size >= 0 .
+H48:   character__size >= 0 .
+H49:   natural__size >= 0 .
+H50:   positive__size >= 0 .
+H51:   dns_types__qname_ptr_range__size >= 0 .
+H52:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H53:   dns_types__packet_length_range__size >= 0 .
+H54:   dns_types__packet_bytes_range__size >= 0 .
+H55:   dns_types__dns_packet__size >= 0 .
+H56:   unsigned_types__unsigned16__size >= 0 .
+H57:   unsigned_types__unsigned32__size >= 0 .
+H58:   rr_type__classtype__size >= 0 .
+H59:   rr_type__wirestringtypeindex__size >= 0 .
+H60:   rr_type__resourcerecordtype__size >= 0 .
+H61:   rr_type__returnedrecordsindextype__size >= 0 .
+H62:   rr_type__numberofrecordstype__size >= 0 .
+H63:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H64:   dns_types__qname_ptr_range__base__first <= 0 .
+H65:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte <= 8173 .
+
+
+For path(s) from start to run-time check associated with statement of line 581:
+
+procedure_create_response_soa_15.
+H1:    answer_count <= 65471 .
+H2:    start_byte >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 16383 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H7:    fld_arcount(fld_header(output_packet)) >= 0 .
+H8:    fld_arcount(fld_header(output_packet)) <= 65535 .
+H9:    fld_nscount(fld_header(output_packet)) >= 0 .
+H10:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H11:   fld_ancount(fld_header(output_packet)) >= 0 .
+H12:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H13:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H14:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H15:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H16:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H17:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H18:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H19:   fld_messageid(fld_header(output_packet)) >= 0 .
+H20:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H21:   answer_count >= 0 .
+H22:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_minimum(
+          element(replies__1, [i___1])) and fld_minimum(element(replies__1, [
+          i___1])) <= 4294967295) .
+H23:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_expiry(
+          element(replies__1, [i___1])) and fld_expiry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_retry(
+          element(replies__1, [i___1])) and fld_retry(element(replies__1, [
+          i___1])) <= 4294967295) .
+H25:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_refresh(
+          element(replies__1, [i___1])) and fld_refresh(element(replies__1, [
+          i___1])) <= 4294967295) .
+H26:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_serialnumber(element(replies__1, [i___1])) and fld_serialnumber(
+          element(replies__1, [i___1])) <= 4294967295) .
+H27:   for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_email(element(
+          replies__1, [i___1])), [i___3]) and element(fld_email(element(
+          replies__1, [i___1])), [i___3]) <= 255)) .
+H28:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) and element(fld_nameserver(
+          element(replies__1, [i___1])), [i___2]) <= 255)) .
+H29:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies__1, [i___1]))) and fld_class(
+          fld_inherit(element(replies__1, [i___1]))) <= rr_type__hs) .
+H30:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies__1, [i___1]))) <= 
+          4294967295) .
+H31:   num_found__1 <= 64 .
+H32:   num_found__1 >= 1 .
+H33:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) >= 1 .
+H34:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) <= 129 
+          .
+H35:   rr_type__wirenamelength(fld_nameserver(element(replies__1, [1]))) = 129 
+          or element(fld_nameserver(element(replies__1, [1])), [
+          rr_type__wirenamelength(fld_nameserver(element(replies__1, [1])))]) = 
+          0 and for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__wirenamelength(
+          fld_nameserver(element(replies__1, [1]))) - 1 -> element(
+          fld_nameserver(element(replies__1, [1])), [q_]) <> 0) .
+H36:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) >= 1 .
+H37:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) <= 129 .
+H38:   rr_type__wirenamelength(fld_email(element(replies__1, [1]))) = 129 or 
+          element(fld_email(element(replies__1, [1])), [rr_type__wirenamelength(
+          fld_email(element(replies__1, [1])))]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) - 1 -> element(fld_email(element(replies__1, [1]))
+          , [q_]) <> 0) .
+H39:   - 2147475499 <= rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1]))) .
+H40:   start_byte < 8148 - (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) .
+H41:   qname_location >= - 49152 .
+H42:   qname_location <= 16383 .
+H43:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H44:   fld_header(output_packet__2) = fld_header(output_packet) .
+H45:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H46:   start_byte <= 8173 .
+H47:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__3), [i___1]) and element(fld_bytes(
+          output_packet__3), [i___1]) <= 255) .
+H48:   fld_header(output_packet__3) = fld_header(output_packet) .
+H49:   output_packet__3 = upf_bytes(output_packet__2, fld_bytes(
+          output_packet__3)) .
+H50:   integer__size >= 0 .
+H51:   character__size >= 0 .
+H52:   natural__size >= 0 .
+H53:   positive__size >= 0 .
+H54:   dns_types__qname_ptr_range__size >= 0 .
+H55:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H56:   dns_types__packet_length_range__size >= 0 .
+H57:   dns_types__packet_bytes_range__size >= 0 .
+H58:   dns_types__dns_packet__size >= 0 .
+H59:   unsigned_types__unsigned16__size >= 0 .
+H60:   unsigned_types__unsigned32__size >= 0 .
+H61:   rr_type__classtype__size >= 0 .
+H62:   rr_type__wirestringtypeindex__size >= 0 .
+H63:   rr_type__resourcerecordtype__size >= 0 .
+H64:   rr_type__returnedrecordsindextype__size >= 0 .
+H65:   rr_type__numberofrecordstype__size >= 0 .
+H66:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+H67:   dns_types__qname_ptr_range__base__first <= 0 .
+H68:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    start_byte + 32 + (rr_type__wirenamelength(fld_nameserver(element(
+          replies__1, [1]))) + rr_type__wirenamelength(fld_email(element(
+          replies__1, [1])))) <= 8180 .
+
+
+For path(s) from start to run-time check associated with statement of line 585:
+
+procedure_create_response_soa_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 586:
+
+procedure_create_response_soa_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_20.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_create_response_soa_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_soa_24.
+*** true .          /* all conclusions proved */
+
+

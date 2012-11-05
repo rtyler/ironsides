@@ -1,0 +1,29 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertStringToWire
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          145:
+
+function_convertstringtowire_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_convertstringtowire_2.
+*** true .          /* all conclusions proved */
+
+

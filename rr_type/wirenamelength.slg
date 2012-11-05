@@ -1,0 +1,481 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.WireNameLength
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_wirenamelength_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+-S-  Applied substitution rule wirenameleng_rules(18).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          wirestringtypeindex__last -> character__first <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+<S>  New C2:  1 <= wirestringtypeindex__last
+-S-  Applied substitution rule wirenameleng_rules(19).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  true
+***  Proved C3:  true
+***  Proved C4:  wirestringtypeindex__first <= wirestringtypeindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule wirenameleng_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C5:  maxdomainnamelength >= - 2147483649
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New C6:  129 <= integer__base__last
+<S>  New C5:  true
+-S-  Applied substitution rule wirenameleng_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C6:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(name, [
+          q_]) <> 0)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+***  Proved C3:  index + 1 >= wirestringtypeindex__first
+     using hypothesis H6.
+***  Proved C4:  index + 1 <= wirestringtypeindex__last
+     using hypothesis H7.
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule wirenameleng_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C5:  maxdomainnamelength >= - 2147483649
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 129
+<S>  New C6:  129 <= integer__base__last
+<S>  New C5:  true
+-S-  Applied substitution rule wirenameleng_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C6:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 
+          wirestringtypeindex__first -> element(name, [q_]) <> 0)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C1:  wirestringtypeindex__first < maxdomainnamelength + 1
+     using hypothesis H13.
+***  Proved C3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 
+          and i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H11:  129 >= integer__base__first
+<S>  New H12:  129 <= integer__base__last
+<S>  New H13:  wirestringtypeindex__first < 129
+-S-  Applied substitution rule wirenameleng_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H11:  true
+-S-  Applied substitution rule wirenameleng_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H12:  true
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New H7:  true
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+-S-  Applied substitution rule wirenameleng_rules(18).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__first by:
+          1.
+<S>  New H4:  1 <= wirestringtypeindex__last
+<S>  New H14:  element(name, [1]) <> 0
+<S>  New H13:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          wirestringtypeindex__last -> 0 <= element(name, [i___1]) and element(
+          name, [i___1]) <= 255)
+<S>  New C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 1 -> element(name, [q_]) 
+          <> 0)
+-S-  Applied substitution rule wirenameleng_rules(19).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__last by:
+          129.
+<S>  New H4:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C2:  for_all(q_ : integer, 1 <= q_ and q_ <= 1 -> element(name, [q_]
+          ) <> 0)
+     using hypothesis H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(name, [
+          q_]) <> 0)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H7)
+          .
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 0)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C1:  index + 1 < maxdomainnamelength + 1
+     using hypothesis H16.
+***  Proved C2:  for_all(q_ : integer, 1 <= q_ and q_ <= index + 1 -> element(
+          name, [q_]) <> 0)
+     using hypotheses H2 & H17.
+***  Proved C3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 
+          and i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(name, [
+          q_]) <> 0)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C1:  index + 1 >= wirestringtypeindex__first
+     using hypothesis H4.
+-S-  Applied substitution rule wirenameleng_rules(19).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__last by:
+          129.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= 129 -> character__first <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New H5:  index <= 129
+<S>  New C2:  index <= 128
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 129
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= 129 -> 0 <= element(name, [i___1]) and element(name, [i___1])
+           <= character__last)
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= 129 -> 0 <= element(name, [i___1]) and element(name, [i___1])
+           <= 255)
+-S-  Applied substitution rule wirenameleng_rules(18).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C2:  index <= 128
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  true
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  wirestringtypeindex__first = maxdomainnamelength + 1 or element(
+          name, [wirestringtypeindex__first]) = 0 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= wirestringtypeindex__first - 1 -> element(name, [q_]) 
+          <> 0)
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+***  Proved C2:  true
+***  Proved C3:  wirestringtypeindex__first <= wirestringtypeindex__last
+     using hypothesis H4.
+>>>  Restructured hypothesis H13 into:
+     >>>  H13:  maxdomainnamelength + 1 <= wirestringtypeindex__first or 
+          element(name, [wirestringtypeindex__first]) = 0
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H11:  129 >= integer__base__first
+<S>  New H12:  129 <= integer__base__last
+<S>  New H13:  129 <= wirestringtypeindex__first or element(name, [
+          wirestringtypeindex__first]) = 0
+<S>  New C1:  wirestringtypeindex__first = 129 or element(name, [
+          wirestringtypeindex__first]) = 0 and for_all(q_ : integer, 1 <= q_ 
+          and q_ <= wirestringtypeindex__first - 1 -> element(name, [q_]) <> 0)
+-S-  Applied substitution rule wirenameleng_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H11:  true
+-S-  Applied substitution rule wirenameleng_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H12:  true
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New H7:  true
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+-S-  Applied substitution rule wirenameleng_rules(18).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__first by:
+          1.
+<S>  New H4:  1 <= wirestringtypeindex__last
+<S>  New H13:  element(name, [1]) = 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          wirestringtypeindex__last -> 0 <= element(name, [i___1]) and element(
+          name, [i___1]) <= 255)
+<S>  New C1:  element(name, [1]) = 0 and for_all(q_ : integer, 1 <= q_ and q_ 
+          <= 0 -> element(name, [q_]) <> 0)
+-S-  Applied substitution rule wirenameleng_rules(19).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__last by:
+          129.
+<S>  New H4:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C1:  element(name, [1]) = 0 and for_all(q_ : integer, 1 <= q_ and 
+          q_ <= 0 -> element(name, [q_]) <> 0)
+     using hypothesis H13.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_wirenamelength_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(name, [
+          q_]) <> 0)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> character__first <= element(
+          name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H7)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  index + 1 = maxdomainnamelength + 1 or element(name, [index + 1])
+           = 0 and for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(
+          name, [q_]) <> 0)
+***  Proved C2:  index + 1 >= wirestringtypeindex__first
+     using hypothesis H6.
+***  Proved C3:  index + 1 <= wirestringtypeindex__last
+     using hypothesis H7.
+>>>  Restructured hypothesis H16 into:
+     >>>  H16:  maxdomainnamelength + 1 <= index + 1 or element(name, [index + 
+          1]) = 0
+-S-  Applied substitution rule wirenameleng_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  index < 129
+<S>  New H14:  129 >= integer__base__first
+<S>  New H15:  129 <= integer__base__last
+<S>  New H16:  128 <= index or element(name, [index + 1]) = 0
+<S>  New C1:  index = 128 or element(name, [index + 1]) = 0 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= index -> element(name, [q_]) <> 0)
+-S-  Applied substitution rule wirenameleng_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H14:  true
+-S-  Applied substitution rule wirenameleng_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H15:  true
+-S-  Applied substitution rule wirenameleng_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= character__last)
+<S>  New H10:  true
+-S-  Applied substitution rule wirenameleng_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H11:  true
+<S>  New H3:  for_all(i___1 : integer, wirestringtypeindex__first <= i___1 and 
+          i___1 <= wirestringtypeindex__last -> 0 <= element(name, [i___1]) and 
+          element(name, [i___1]) <= 255)
+-S-  Applied substitution rule wirenameleng_rules(18).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__first by:
+          1.
+<S>  New H4:  index >= 1
+<S>  New H6:  index >= 0
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          wirestringtypeindex__last -> 0 <= element(name, [i___1]) and element(
+          name, [i___1]) <= 255)
+-S-  Applied substitution rule wirenameleng_rules(19).
+     This was achieved by replacing all occurrences of 
+          wirestringtypeindex__last by:
+          129.
+<S>  New H5:  index <= 129
+<S>  New H7:  index <= 128
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H12 (true-hypothesis).
+---  Eliminated hypothesis H13 (true-hypothesis).
+---  Eliminated hypothesis H17 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H11 (true-hypothesis).
+---  Eliminated hypothesis H7 (duplicate of H1).
+---  Eliminated hypothesis H5 (redundant, given H1).
+---  Eliminated hypothesis H6 (redundant, given H4).
+     +++  New H19:  integer__size >= 0
+     +++  New H20:  character__size >= 0
+     +++  New H21:  positive__size >= 0
+     +++  New H22:  wirestringtypeindex__size >= 0
+

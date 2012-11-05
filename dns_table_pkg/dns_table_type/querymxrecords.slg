@@ -1,0 +1,2647 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryMXRecords
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(to_lower(domainname), [i___1]) and 
+          element(to_lower(domainname), [i___1]) <= character__last)
+***  Proved C1:  hash(to_lower(domainname)) >= 
+          rr_type__numbucketsindextype__first
+     using hypothesis H9.
+***  Proved C2:  hash(to_lower(domainname)) <= 
+          rr_type__numbucketsindextype__last
+     using hypothesis H10.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(to_lower(domainname), [i___1]) and 
+          element(to_lower(domainname), [i___1]) <= character__last)
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+-S-  Applied substitution rule querymxrecor_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule querymxrecor_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__last by:
+          64.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(to_lower(domainname), [i___1]) and 
+          element(to_lower(domainname), [i___1]) <= character__last)
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  true
+%%%  Simplified C13 on reading formula in, to give:
+     %%%  C13:  true
+***  Proved C1:  true
+***  Proved C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+     using hypothesis H3.
+***  Proved C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+     using hypothesis H4.
+***  Proved C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+     using hypothesis H5.
+***  Proved C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+     using hypothesis H6.
+***  Proved C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+     using hypothesis H7.
+***  Proved C11:  true
+***  Proved C13:  true
+-S-  Applied substitution rule querymxrecor_rules(2).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New C4:  hash(to_lower(domainname)) <= 64
+-S-  Applied substitution rule querymxrecor_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C2:  true
+<S>  New C12:  1 <= rr_type__returnedrecordsindextype__last
+<S>  New C14:  1 <= rr_type__returnedrecordsindextype__last
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          rr_type__classtype__first <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__classtype__last))
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C12:  true
+<S>  New C14:  true
+***  Proved C2:  true
+***  Proved C12:  true
+***  Proved C14:  true
+-S-  Applied substitution rule querymxrecor_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          to_lower(domainname), [i___1]) and element(to_lower(domainname), [
+          i___1]) <= character__last)
+-S-  Applied substitution rule querymxrecor_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H3:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H8:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          to_lower(domainname), [i___1]) and element(to_lower(domainname), [
+          i___1]) <= 255)
+-S-  Applied substitution rule querymxrecor_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= unsigned_types__unsigned16__last))
+-S-  Applied substitution rule querymxrecor_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+-S-  Applied substitution rule querymxrecor_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+-S-  Applied substitution rule querymxrecor_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+-S-  Applied substitution rule querymxrecor_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+-S-  Applied substitution rule querymxrecor_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule querymxrecor_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H3:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 1 <= 
+          i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 1 <= 
+          i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(to_lower(
+          domainname), [i___1]) and element(to_lower(domainname), [i___1]) <= 
+          255)
+-S-  Applied substitution rule querymxrecor_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H3:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H8:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(to_lower(domainname), [i___1]) and element(to_lower(
+          domainname), [i___1]) <= 255)
+-S-  Applied substitution rule querymxrecor_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__first by:
+          0.
+<S>  New H13:  true
+-S-  Applied substitution rule querymxrecor_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__last by:
+          64.
+<S>  New H14:  true
+-S-  Applied substitution rule querymxrecor_rules(75).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New H9:  hash(to_lower(domainname)) >= 1
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H3:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) and 
+          element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(element(element(dns_table_type__mxrecordkeys, [i___1])
+          , [i___2]), [i___3]) and element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(76).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New H10:  hash(to_lower(domainname)) <= 64
+<S>  New H4:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H6:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H5:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H3:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+***  Proved C3:  hash(to_lower(domainname)) >= 1
+     using hypothesis H9.
+***  Proved C4:  hash(to_lower(domainname)) <= 64
+     using hypothesis H10.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_4.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H20).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  howmany >= - 1
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+***  Proved C1:  howmany >= - 1
+     using hypothesis H1.
+***  Proved C3:  bucket >= 1
+     using hypothesis H3.
+***  Proved C4:  bucket <= rr_type__numbuckets
+     using hypothesis H4.
+***  Proved C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H5.
+***  Proved C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+     using hypothesis H6.
+***  Proved C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+     using hypothesis H7.
+***  Proved C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+     using hypothesis H8.
+***  Proved C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+     using hypothesis H9.
+***  Proved C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+     using hypothesis H10.
+***  Proved C11:  loop__1__ctr + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+***  Proved C13:  loop__1__ctr + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New H12:  loop__1__ctr <= 64
+<S>  New H35:  howmany <= 63
+<S>  New H36:  not loop__1__ctr = 64
+<S>  New C12:  loop__1__ctr <= 63
+<S>  New C14:  loop__1__ctr <= 63
+***  Proved C12:  loop__1__ctr <= 63
+     using hypotheses H12 & H36.
+***  Proved C14:  loop__1__ctr <= 63
+     using hypotheses H12 & H36.
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  element(element(element(dns_table_type__mxrecordkeys, [bucket])
+          , [loop__1__ctr]), [1]) <> ascii__nul
+>>>  Restructured hypothesis H36 into:
+     >>>  H36:  loop__1__ctr <> 64
+-S-  Applied substitution rule querymxrecor_rules(1).
+     This was achieved by replacing all occurrences of ascii__nul by:
+          0.
+<S>  New H21:  element(element(element(dns_table_type__mxrecordkeys, [bucket]), 
+          [loop__1__ctr]), [1]) <> 0
+-S-  Applied substitution rule querymxrecor_rules(2).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New H4:  bucket <= 64
+-S-  Applied substitution rule querymxrecor_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+-S-  Applied substitution rule querymxrecor_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+-S-  Applied substitution rule querymxrecor_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+-S-  Applied substitution rule querymxrecor_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+-S-  Applied substitution rule querymxrecor_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+-S-  Applied substitution rule querymxrecor_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+-S-  Applied substitution rule querymxrecor_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule querymxrecor_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H15:  true
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H16:  true
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H11:  loop__1__ctr >= 1
+<S>  New H34:  howmany >= 0
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__first by:
+          0.
+<S>  New H28:  howmany >= - 1
+-S-  Applied substitution rule querymxrecor_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__last by:
+          64.
+<S>  New H29:  howmany <= 63
+-S-  Applied substitution rule querymxrecor_rules(75).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New H19:  bucket >= 1
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) and 
+          element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(element(element(dns_table_type__mxrecordkeys, [i___1])
+          , [i___2]), [i___3]) and element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(76).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New H20:  bucket <= 64
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+%%%  Hypotheses H12 & H36 together imply that
+          loop__1__ctr < 64.
+     H12 & H36 have therefore been deleted and a new H37 added to this effect.
+***  Proved C2:  howmany + 1 < loop__1__ctr + 1
+     via its standard form, which is:
+     Std.Fm C2:  - howmany + loop__1__ctr > 0
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_5.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H20).
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+***  Proved C1:  howmany >= 0
+     using hypothesis H1.
+***  Proved C2:  howmany < loop__1__ctr + 1
+     using hypothesis H2.
+***  Proved C3:  bucket >= 1
+     using hypothesis H3.
+***  Proved C4:  bucket <= rr_type__numbuckets
+     using hypothesis H4.
+***  Proved C5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H5.
+***  Proved C6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+     using hypothesis H6.
+***  Proved C7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+     using hypothesis H7.
+***  Proved C8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+     using hypothesis H8.
+***  Proved C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+     using hypothesis H9.
+***  Proved C10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+     using hypothesis H10.
+***  Proved C11:  loop__1__ctr + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+***  Proved C13:  loop__1__ctr + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New H12:  loop__1__ctr <= 64
+<S>  New H28:  not loop__1__ctr = 64
+<S>  New C12:  loop__1__ctr <= 63
+<S>  New C14:  loop__1__ctr <= 63
+***  Proved C12:  loop__1__ctr <= 63
+     using hypotheses H12 & H28.
+***  Proved C14:  loop__1__ctr <= 63
+     using hypotheses H12 & H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_6.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+***  Proved C3:  loop__1__ctr >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+***  Proved C4:  loop__1__ctr <= rr_type__returnedrecordsindextype__last
+     using hypothesis H12.
+-S-  Applied substitution rule querymxrecor_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C1:  true
+-S-  Applied substitution rule querymxrecor_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C2:  true
+-S-  Applied substitution rule querymxrecor_rules(75).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> character__first <= element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) and 
+          element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> character__first <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+<S>  New C5:  bucket >= 1
+-S-  Applied substitution rule querymxrecor_rules(76).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 
+          rr_type__classtype__first <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C6:  bucket <= 64
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C5:  bucket >= 1
+     using hypothesis H3.
+-S-  Applied substitution rule querymxrecor_rules(2).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New H4:  bucket <= 64
+-S-  Applied substitution rule querymxrecor_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+-S-  Applied substitution rule querymxrecor_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) 
+          and fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), 
+          [i___2])) <= unsigned_types__unsigned16__last))
+-S-  Applied substitution rule querymxrecor_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) 
+          and fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), 
+          [i___2])) <= 65535))
+-S-  Applied substitution rule querymxrecor_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+-S-  Applied substitution rule querymxrecor_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+-S-  Applied substitution rule querymxrecor_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 
+          rr_type__internet <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__classtype__last))
+-S-  Applied substitution rule querymxrecor_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 
+          rr_type__internet <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule querymxrecor_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H11:  loop__1__ctr >= 1
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 1 
+          <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 1 
+          <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 1 
+          <= i___1 and i___1 <= 64 -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 1 
+          <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(fld_inherit(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 1 
+          <= i___1 and i___1 <= 64 -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H12:  loop__1__ctr <= 64
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+***  Proved C6:  bucket <= 64
+     using hypothesis H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_7.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+***  Proved C1:  loop__1__ctr >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+***  Proved C2:  loop__1__ctr <= rr_type__returnedrecordsindextype__last
+     using hypothesis H12.
+***  Proved C3:  bucket >= rr_type__numbucketsindextype__first
+     using hypothesis H19.
+***  Proved C4:  bucket <= rr_type__numbucketsindextype__last
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_8.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H20).
+-S-  Applied substitution rule querymxrecor_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__first by:
+          0.
+<S>  New C1:  howmany >= - 1
+-S-  Applied substitution rule querymxrecor_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__numberofrecordstype__last by:
+          64.
+<S>  New C2:  howmany <= 63
+***  Proved C1:  howmany >= - 1
+     using hypothesis H1.
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  element(element(element(dns_table_type__mxrecordkeys, [bucket])
+          , [loop__1__ctr]), [1]) <> ascii__nul
+-S-  Applied substitution rule querymxrecor_rules(1).
+     This was achieved by replacing all occurrences of ascii__nul by:
+          0.
+<S>  New H21:  element(element(element(dns_table_type__mxrecordkeys, [bucket]), 
+          [loop__1__ctr]), [1]) <> 0
+-S-  Applied substitution rule querymxrecor_rules(2).
+     This was achieved by replacing all occurrences of rr_type__numbuckets by:
+          64.
+<S>  New H4:  bucket <= 64
+-S-  Applied substitution rule querymxrecor_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+-S-  Applied substitution rule querymxrecor_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) 
+          and fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), 
+          [i___2])) <= unsigned_types__unsigned16__last))
+-S-  Applied substitution rule querymxrecor_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H7:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) 
+          and fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), 
+          [i___2])) <= 65535))
+-S-  Applied substitution rule querymxrecor_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+-S-  Applied substitution rule querymxrecor_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+-S-  Applied substitution rule querymxrecor_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet 
+          <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__classtype__last))
+-S-  Applied substitution rule querymxrecor_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H8:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= rr_type__returnedrecordsindextype__last -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet 
+          <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule querymxrecor_rules(58).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H15:  true
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H16:  true
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H11:  loop__1__ctr >= 1
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H12:  loop__1__ctr <= 64
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(75).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New H19:  bucket >= 1
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) and 
+          element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(element(element(dns_table_type__mxrecordkeys, [i___1])
+          , [i___2]), [i___3]) and element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule querymxrecor_rules(76).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New H20:  bucket <= 64
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])) and 
+          fld_pref(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2])) <= 65535))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H6:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_mailexchanger(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New H10:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__mxrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__mxrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+***  Proved C2:  howmany <= 63
+     using hypotheses H2 & H12.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_9.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H20).
+***  Proved C1:  loop__1__ctr >= rr_type__returnedrecordsindextype__first
+     using hypothesis H11.
+***  Proved C2:  loop__1__ctr <= rr_type__returnedrecordsindextype__last
+     using hypothesis H12.
+***  Proved C3:  bucket >= rr_type__numbucketsindextype__first
+     using hypothesis H19.
+***  Proved C4:  bucket <= rr_type__numbucketsindextype__last
+     using hypothesis H20.
+-S-  Applied substitution rule querymxrecor_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New H11:  loop__1__ctr >= 1
+<S>  New C5:  howmany >= 0
+-S-  Applied substitution rule querymxrecor_rules(66).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H12:  loop__1__ctr <= 64
+<S>  New H6:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_mailexchanger(element(element(dns_table_type__mxrecordtable, [
+          i___1]), [i___2])), [i___3]) and element(fld_mailexchanger(element(
+          element(dns_table_type__mxrecordtable, [i___1]), [i___2])), [i___3]) 
+          <= character__last)))
+<S>  New H7:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned16__first <= fld_pref(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2])) and fld_pref(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2])) <= 
+          unsigned_types__unsigned16__last))
+<S>  New H8:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          rr_type__classtype__first <= fld_class(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__mxrecordtable, [i___1]), [
+          i___2]))) <= rr_type__classtype__last))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__mxrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__mxrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H10:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__mxrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__mxrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C6:  howmany <= 63
+***  Proved C5:  howmany >= 0
+     using hypothesis H1.
+***  Proved C6:  howmany <= 63
+     using hypotheses H2 & H12.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_10.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_11.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_12.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_13.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_querymxrecords_14.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

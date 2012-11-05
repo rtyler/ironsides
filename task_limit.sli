@@ -1,0 +1,42 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Task_Limit%b task_limit.adb
+U Task_Limit%s Task_Limit.ads
+
+D task_limit.adb 00000000000000 00000000
+D Task_Limit.ads 00000000000000 00000000
+
+X 2 Task_Limit.ads
+19i4 MAX_TASKS 1|35r52 36r53 37r36 38r36 57r52 58r53
+21w19 Task_Count_Type 25m19 29m19 24r25 26r32 28r25
+23U17 Increment 24=25 1|32=28
+23e27 Success 26m19 1|34m22 37r83 38r86
+27U17 Decrement 28=25 1|55=28
+31i7 Task_Count 1|33m22 56m22 32r28 34r35 35r18 35r38 36r19 36r39 37r22
+. 37r52 37r65 38r22 38r52 38r65 55r28 57r18 57r38 58r19 58r39 59r20
+. 59r40 59r53 60r20 60r40 60r53

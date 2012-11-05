@@ -1,0 +1,480 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure DNS_Types.Byte_Swap
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_1.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+***  Proved C1:  fld_messageid(h) >= unsigned_short__first
+     using hypothesis H22.
+***  Proved C2:  fld_messageid(h) <= unsigned_short__last
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_2.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+***  Proved C1:  byte_swap_us(fld_messageid(h)) >= unsigned_short__first
+     using hypothesis H26.
+***  Proved C2:  byte_swap_us(fld_messageid(h)) <= unsigned_short__last
+     using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_3.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_qdcount(h) <= unsigned_short__last
+***  Proved C1:  fld_qdcount(h) >= unsigned_short__first
+     using hypothesis H8.
+***  Proved C2:  fld_qdcount(h) <= unsigned_short__last
+     using hypothesis H9.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_4.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+***  Proved C1:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+     using hypothesis H32.
+***  Proved C2:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+     using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_5.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_ancount(h) <= unsigned_short__last
+***  Proved C1:  fld_ancount(h) >= unsigned_short__first
+     using hypothesis H6.
+***  Proved C2:  fld_ancount(h) <= unsigned_short__last
+     using hypothesis H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_6.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+***  Proved C1:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+     using hypothesis H38.
+***  Proved C2:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+     using hypothesis H39.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_7.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H38).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H39).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_nscount(h) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_nscount(h) <= unsigned_short__last
+***  Proved C1:  fld_nscount(h) >= unsigned_short__first
+     using hypothesis H4.
+***  Proved C2:  fld_nscount(h) <= unsigned_short__last
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_8.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H38).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H39).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_nscount(h) >= unsigned_short__first
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_nscount(h) <= unsigned_short__last
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+***  Proved C1:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+     using hypothesis H44.
+***  Proved C2:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+     using hypothesis H45.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_9.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H38).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H39).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_nscount(h) >= unsigned_short__first
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_nscount(h) <= unsigned_short__last
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H44).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H45).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  fld_arcount(h) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  fld_arcount(h) <= unsigned_short__last
+***  Proved C1:  fld_arcount(h) >= unsigned_short__first
+     using hypothesis H2.
+***  Proved C2:  fld_arcount(h) <= unsigned_short__last
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_10.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H38).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H39).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_nscount(h) >= unsigned_short__first
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_nscount(h) <= unsigned_short__last
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H44).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H45).
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_arcount(h) >= unsigned_short__first
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_arcount(h) <= unsigned_short__last
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  byte_swap_us(fld_arcount(h)) >= unsigned_short__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  byte_swap_us(fld_arcount(h)) <= unsigned_short__last
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  byte_swap_us(fld_arcount(h)) >= unsigned_short__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  byte_swap_us(fld_arcount(h)) <= unsigned_short__last
+***  Proved C1:  byte_swap_us(fld_arcount(h)) >= unsigned_short__first
+     using hypothesis H50.
+***  Proved C2:  byte_swap_us(fld_arcount(h)) <= unsigned_short__last
+     using hypothesis H51.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_byte_swap_11.  @@@@@@@@@@
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  response_code__first <= fld_rcode(h)
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  opcode_type__first <= fld_opcode(h)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H26).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H27).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  fld_qdcount(h) >= unsigned_short__first
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  fld_qdcount(h) <= unsigned_short__last
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  byte_swap_us(fld_qdcount(h)) >= unsigned_short__first
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  byte_swap_us(fld_qdcount(h)) <= unsigned_short__last
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H32).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H33).
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  fld_ancount(h) >= unsigned_short__first
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  fld_ancount(h) <= unsigned_short__last
+%%%  Simplified H38 on reading formula in, to give:
+     %%%  H38:  byte_swap_us(fld_ancount(h)) >= unsigned_short__first
+%%%  Simplified H39 on reading formula in, to give:
+     %%%  H39:  byte_swap_us(fld_ancount(h)) <= unsigned_short__last
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H38).
+---  Hypothesis H41 has been replaced by "true".  (It is already present, as 
+          H39).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  fld_nscount(h) >= unsigned_short__first
+%%%  Simplified H43 on reading formula in, to give:
+     %%%  H43:  fld_nscount(h) <= unsigned_short__last
+%%%  Simplified H44 on reading formula in, to give:
+     %%%  H44:  byte_swap_us(fld_nscount(h)) >= unsigned_short__first
+%%%  Simplified H45 on reading formula in, to give:
+     %%%  H45:  byte_swap_us(fld_nscount(h)) <= unsigned_short__last
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H44).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H45).
+%%%  Simplified H48 on reading formula in, to give:
+     %%%  H48:  fld_arcount(h) >= unsigned_short__first
+%%%  Simplified H49 on reading formula in, to give:
+     %%%  H49:  fld_arcount(h) <= unsigned_short__last
+%%%  Simplified H50 on reading formula in, to give:
+     %%%  H50:  byte_swap_us(fld_arcount(h)) >= unsigned_short__first
+%%%  Simplified H51 on reading formula in, to give:
+     %%%  H51:  byte_swap_us(fld_arcount(h)) <= unsigned_short__last
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H50).
+---  Hypothesis H53 has been replaced by "true".  (It is already present, as 
+          H51).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+

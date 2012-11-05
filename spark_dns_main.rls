@@ -1,0 +1,31 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                          /*procedure Spark_Dns_Main*/
+
+
+rule_family spark_dns_ma_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+spark_dns_ma_rules(1): spark_ada_command_line__failure may_be_replaced_by 1.
+spark_dns_ma_rules(2): integer__size >= 0 may_be_deduced.
+spark_dns_ma_rules(3): integer__first may_be_replaced_by -2147483648.
+spark_dns_ma_rules(4): integer__last may_be_replaced_by 2147483647.
+spark_dns_ma_rules(5): integer__base__first may_be_replaced_by -2147483648.
+spark_dns_ma_rules(6): integer__base__last may_be_replaced_by 2147483647.
+spark_dns_ma_rules(7): natural__size >= 0 may_be_deduced.
+spark_dns_ma_rules(8): natural__first may_be_replaced_by 0.
+spark_dns_ma_rules(9): natural__last may_be_replaced_by 2147483647.
+spark_dns_ma_rules(10): natural__base__first may_be_replaced_by -2147483648.
+spark_dns_ma_rules(11): natural__base__last may_be_replaced_by 2147483647.
+spark_dns_ma_rules(12): spark_ada_command_line__exit_status__size >= 0 may_be_deduced.
+spark_dns_ma_rules(13): spark_ada_command_line__exit_status__first may_be_replaced_by -2147483648.
+spark_dns_ma_rules(14): spark_ada_command_line__exit_status__last may_be_replaced_by 2147483647.
+spark_dns_ma_rules(15): spark_ada_command_line__exit_status__base__first may_be_replaced_by -2147483648.
+spark_dns_ma_rules(16): spark_ada_command_line__exit_status__base__last may_be_replaced_by 2147483647.

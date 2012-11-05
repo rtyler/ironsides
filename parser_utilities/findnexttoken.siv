@@ -1,0 +1,1507 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.findNextToken
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 447:
+
+procedure_findnexttoken_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 447:
+
+procedure_findnexttoken_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 448:
+
+procedure_findnexttoken_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to assertion of line 448:
+
+procedure_findnexttoken_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 449:
+
+procedure_findnexttoken_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 451:
+
+procedure_findnexttoken_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 451:
+
+procedure_findnexttoken_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 452:
+
+procedure_findnexttoken_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 452:
+
+procedure_findnexttoken_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 452:
+
+procedure_findnexttoken_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 455:
+
+procedure_findnexttoken_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to assertion of line 455:
+
+procedure_findnexttoken_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to assertion of line 455:
+
+procedure_findnexttoken_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 457:
+
+procedure_findnexttoken_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 459:
+
+procedure_findnexttoken_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 459:
+
+procedure_findnexttoken_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 459:
+
+procedure_findnexttoken_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 461:
+
+procedure_findnexttoken_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 461:
+
+procedure_findnexttoken_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 461:
+
+procedure_findnexttoken_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 473:
+
+procedure_findnexttoken_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 473:
+
+procedure_findnexttoken_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 473:
+
+procedure_findnexttoken_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 473:
+
+procedure_findnexttoken_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 473:
+
+procedure_findnexttoken_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 473:
+
+procedure_findnexttoken_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 474:
+
+procedure_findnexttoken_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 474:
+
+procedure_findnexttoken_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 474:
+
+procedure_findnexttoken_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 474:
+
+procedure_findnexttoken_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 475:
+
+procedure_findnexttoken_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_41.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to assertion of line 475:
+
+procedure_findnexttoken_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_43.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to assertion of line 475:
+
+procedure_findnexttoken_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_45.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to assertion of line 475:
+
+procedure_findnexttoken_46.
+H1:    begidx >= 1 .
+H2:    begidx <= length .
+H3:    endidx__entry__loop__3 >= begidx .
+H4:    endidx__entry__loop__3 <= length .
+H5:    containsonlynumbers -> for_all(j_ : integer, begidx <= j_ and j_ <= 
+          loop__3__i -> 48 <= element(s, [j_]) and element(s, [j_]) <= 57) .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= element(s, [
+          i___1]) and element(s, [i___1]) <= 255) .
+H7:    length >= 1 .
+H8:    length <= 256 .
+H9:    begidx~ <= length .
+H10:   loop__3__i >= begidx .
+H11:   endidx__entry__loop__3 <= 256 .
+H12:   loop__3__i >= 1 .
+H13:   element(s, [loop__3__i]) >= 0 .
+H14:   element(s, [loop__3__i]) <= 255 .
+H15:   loop__3__i <= 255 .
+H16:   loop__3__i < endidx__entry__loop__3 .
+H17:   integer__size >= 0 .
+H18:   character__size >= 0 .
+H19:   positive__size >= 0 .
+H20:   rr_type__rritemtype__size >= 0 .
+H21:   rr_type__linelengthindex__size >= 0 .
+       ->
+C1:    containsonlynumbers and (element(s, [loop__3__i + 1]) >= 48 and element(
+          s, [loop__3__i + 1]) <= 57) -> for_all(j_ : integer, begidx <= j_ and 
+          j_ <= loop__3__i + 1 -> 48 <= element(s, [j_]) and element(s, [j_]) 
+          <= 57) .
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 479:
+
+procedure_findnexttoken_47.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 480:
+
+procedure_findnexttoken_48.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 481:
+
+procedure_findnexttoken_49.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 482:
+
+procedure_findnexttoken_50.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 483:
+
+procedure_findnexttoken_51.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 484:
+
+procedure_findnexttoken_52.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 488:
+
+procedure_findnexttoken_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_54.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 488:
+
+procedure_findnexttoken_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_56.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 488:
+
+procedure_findnexttoken_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_58.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 488:
+
+procedure_findnexttoken_59.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 489:
+
+procedure_findnexttoken_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_61.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 489:
+
+procedure_findnexttoken_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_63.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 489:
+
+procedure_findnexttoken_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_65.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 489:
+
+procedure_findnexttoken_66.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 490:
+
+procedure_findnexttoken_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_68.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 490:
+
+procedure_findnexttoken_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_70.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 490:
+
+procedure_findnexttoken_71.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_72.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 490:
+
+procedure_findnexttoken_73.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 491:
+
+procedure_findnexttoken_74.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_75.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 491:
+
+procedure_findnexttoken_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_77.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 491:
+
+procedure_findnexttoken_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_79.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 491:
+
+procedure_findnexttoken_80.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 492:
+
+procedure_findnexttoken_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_82.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 492:
+
+procedure_findnexttoken_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_84.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 492:
+
+procedure_findnexttoken_85.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_86.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 492:
+
+procedure_findnexttoken_87.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 493:
+
+procedure_findnexttoken_88.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_89.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 493:
+
+procedure_findnexttoken_90.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_91.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 493:
+
+procedure_findnexttoken_92.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_93.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 493:
+
+procedure_findnexttoken_94.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 494:
+
+procedure_findnexttoken_95.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_96.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 494:
+
+procedure_findnexttoken_97.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_98.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 494:
+
+procedure_findnexttoken_99.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_100.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 494:
+
+procedure_findnexttoken_101.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 495:
+
+procedure_findnexttoken_102.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_103.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 495:
+
+procedure_findnexttoken_104.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_105.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 495:
+
+procedure_findnexttoken_106.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_107.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 495:
+
+procedure_findnexttoken_108.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 498:
+
+procedure_findnexttoken_109.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_110.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 498:
+
+procedure_findnexttoken_111.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_112.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 498:
+
+procedure_findnexttoken_113.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_114.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 498:
+
+procedure_findnexttoken_115.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 499:
+
+procedure_findnexttoken_116.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_117.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 499:
+
+procedure_findnexttoken_118.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_119.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 499:
+
+procedure_findnexttoken_120.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_121.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 499:
+
+procedure_findnexttoken_122.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 501:
+
+procedure_findnexttoken_123.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_124.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 501:
+
+procedure_findnexttoken_125.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_126.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 501:
+
+procedure_findnexttoken_127.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_128.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 501:
+
+procedure_findnexttoken_129.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 503:
+
+procedure_findnexttoken_130.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_131.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 503:
+
+procedure_findnexttoken_132.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_133.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 503:
+
+procedure_findnexttoken_134.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_135.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 503:
+
+procedure_findnexttoken_136.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 505:
+
+procedure_findnexttoken_137.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_138.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 505:
+
+procedure_findnexttoken_139.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_140.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 505:
+
+procedure_findnexttoken_141.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_142.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 505:
+
+procedure_findnexttoken_143.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 506:
+
+procedure_findnexttoken_144.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_145.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 506:
+
+procedure_findnexttoken_146.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_147.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 506:
+
+procedure_findnexttoken_148.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_149.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 506:
+
+procedure_findnexttoken_150.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 507:
+
+procedure_findnexttoken_151.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_152.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 507:
+
+procedure_findnexttoken_153.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_154.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 507:
+
+procedure_findnexttoken_155.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_156.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 507:
+
+procedure_findnexttoken_157.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          508:
+
+procedure_findnexttoken_158.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_159.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to precondition check associated with 
+          statement of line 508:
+
+procedure_findnexttoken_160.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_161.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to precondition check associated with 
+          statement of line 508:
+
+procedure_findnexttoken_162.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_163.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to precondition check associated with 
+          statement of line 508:
+
+procedure_findnexttoken_164.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 509:
+
+procedure_findnexttoken_165.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_166.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 509:
+
+procedure_findnexttoken_167.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_168.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 509:
+
+procedure_findnexttoken_169.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_170.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 509:
+
+procedure_findnexttoken_171.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 511:
+
+procedure_findnexttoken_172.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_173.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 511:
+
+procedure_findnexttoken_174.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_175.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 511:
+
+procedure_findnexttoken_176.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_177.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 511:
+
+procedure_findnexttoken_178.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 513:
+
+procedure_findnexttoken_179.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_180.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 513:
+
+procedure_findnexttoken_181.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_182.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 513:
+
+procedure_findnexttoken_183.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_184.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 513:
+
+procedure_findnexttoken_185.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 515:
+
+procedure_findnexttoken_186.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_187.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to run-time check associated with 
+          statement of line 515:
+
+procedure_findnexttoken_188.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_189.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to run-time check associated with 
+          statement of line 515:
+
+procedure_findnexttoken_190.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_191.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to run-time check associated with 
+          statement of line 515:
+
+procedure_findnexttoken_192.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_findnexttoken_193.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_194.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_195.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_196.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_197.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_198.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_199.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_200.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_201.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_202.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_203.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_204.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_205.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_206.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_207.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_208.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_209.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_210.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_211.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_212.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_213.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_214.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_215.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_216.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_217.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_218.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 448 to finish:
+
+procedure_findnexttoken_219.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_220.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_221.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_222.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_223.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_224.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_225.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_226.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_227.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_228.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_229.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_230.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_231.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_232.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_233.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_234.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_235.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_236.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_237.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_238.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_239.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_240.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_241.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_242.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_243.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_244.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 455 to finish:
+
+procedure_findnexttoken_245.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_246.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_247.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_248.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_249.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_250.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_251.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_252.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_253.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_254.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_255.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_256.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_257.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_258.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_259.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_260.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_261.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_262.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_263.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_264.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_265.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_266.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_267.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_268.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_269.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_270.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 475 to finish:
+
+procedure_findnexttoken_271.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_272.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_273.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_274.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_275.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_276.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_277.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_278.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_279.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_280.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_281.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_282.
+*** true .          /* all conclusions proved */
+
+
+procedure_findnexttoken_283.
+*** true .          /* all conclusions proved */
+
+

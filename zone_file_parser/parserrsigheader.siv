@@ -1,0 +1,1688 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseRRSigHeader
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          253:
+
+procedure_parserrsigheader_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 253:
+
+procedure_parserrsigheader_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 257:
+
+procedure_parserrsigheader_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to assertion of line 257:
+
+procedure_parserrsigheader_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 258:
+
+procedure_parserrsigheader_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 259:
+
+procedure_parserrsigheader_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 259:
+
+procedure_parserrsigheader_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 263:
+
+procedure_parserrsigheader_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 263:
+
+procedure_parserrsigheader_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 263:
+
+procedure_parserrsigheader_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 263:
+
+procedure_parserrsigheader_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 268:
+
+procedure_parserrsigheader_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 268:
+
+procedure_parserrsigheader_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          269:
+
+procedure_parserrsigheader_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 269:
+
+procedure_parserrsigheader_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 269:
+
+procedure_parserrsigheader_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 269:
+
+procedure_parserrsigheader_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          271:
+
+procedure_parserrsigheader_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 271:
+
+procedure_parserrsigheader_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 271:
+
+procedure_parserrsigheader_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 271:
+
+procedure_parserrsigheader_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 274:
+
+procedure_parserrsigheader_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 274:
+
+procedure_parserrsigheader_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 274:
+
+procedure_parserrsigheader_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 274:
+
+procedure_parserrsigheader_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 284:
+
+procedure_parserrsigheader_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 284:
+
+procedure_parserrsigheader_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          285:
+
+procedure_parserrsigheader_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_37.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 285:
+
+procedure_parserrsigheader_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_41.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 285:
+
+procedure_parserrsigheader_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_45.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 285:
+
+procedure_parserrsigheader_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_49.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 292:
+
+procedure_parserrsigheader_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_57.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 292:
+
+procedure_parserrsigheader_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_65.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          293:
+
+procedure_parserrsigheader_66.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_70.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_71.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parserrsigheader_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_73.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 293:
+
+procedure_parserrsigheader_74.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_75.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_79.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_parserrsigheader_80.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_81.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from start to run-time check associated with statement of line 293:
+
+procedure_parserrsigheader_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_85.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_86.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_87.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_88.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_89.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 293:
+
+procedure_parserrsigheader_90.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_92.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_93.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_94.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_95.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_96.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_97.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 297:
+
+procedure_parserrsigheader_98.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_99.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_100.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_101.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_102.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_103.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_104.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_105.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to assertion of line 297:
+
+procedure_parserrsigheader_106.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_107.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_108.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_109.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_110.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_111.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_112.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_113.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 297 to assertion of line 297:
+
+procedure_parserrsigheader_114.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 297 to run-time check associated with 
+          statement of line 301:
+
+procedure_parserrsigheader_115.
+H1:    endidx <= zlength .
+H2:    endidx - begidx = 13 .
+H3:    loop__2__i <= 14 .
+H4:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255) .
+H5:    zlength <= 256 .
+H6:    loop__2__i >= 1 .
+H7:    begidx >= 1 .
+H8:    integer__size >= 0 .
+H9:    character__size >= 0 .
+H10:   positive__size >= 0 .
+H11:   unsigned_types__unsigned8__size >= 0 .
+H12:   unsigned_types__unsigned16__size >= 0 .
+H13:   unsigned_types__unsigned32__size >= 0 .
+H14:   rr_type__classtype__size >= 0 .
+H15:   rr_type__rritemtype__size >= 0 .
+H16:   rr_type__linelengthindex__size >= 0 .
+H17:   rr_type__domainnamestringtypeindex__size >= 0 .
+H18:   rr_type__resourcerecordtype__size >= 0 .
+H19:   rr_type__rrsig_record_type__timestringtypeindex__size >= 0 .
+H20:   rr_type__rrsig_record_type__rrsigstringtypeindex__size >= 0 .
+H21:   rr_type__rrsig_record_type__rrsigrecordtype__size >= 0 .
+H22:   dns_types__a <= fld_typecovered(
+          rr_type__rrsig_record_type__blankrrsigrecord) .
+H23:   fld_typecovered(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          dns_types__unimplemented .
+H24:   0 <= fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) .
+H25:   0 <= fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) .
+H26:   fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H27:   fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H28:   0 <= fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) .
+H29:   fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) <= 65535 .
+H30:   0 <= fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H31:   0 <= fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) .
+H32:   0 <= fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) .
+H33:   0 <= fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) .
+H34:   fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) <= 4294967295 .
+H35:   fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) <= 4294967295 .
+H36:   fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H37:   fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H38:   rr_type__internet <= fld_class(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H39:   fld_class(fld_inherit(rr_type__rrsig_record_type__blankrrsigrecord)) <= 
+          rr_type__hs .
+H40:   1 <= fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) .
+H41:   fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          1365 .
+       ->
+C1:    element(zonefileline, [begidx + (loop__2__i - 1)]) >= 0 .
+C2:    element(zonefileline, [begidx + (loop__2__i - 1)]) <= 255 .
+C3:    begidx + (loop__2__i - 1) <= 256 .
+
+
+For path(s) from assertion of line 297 to assertion of line 305:
+
+procedure_parserrsigheader_116.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to assertion of line 305:
+
+procedure_parserrsigheader_117.
+H1:    for_all(j_ : integer, 1 <= j_ and j_ <= loop__3__i - 1 -> 48 <= element(
+          timestring, [j_]) and element(timestring, [j_]) <= 57) .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255) .
+H3:    zlength >= 1 .
+H4:    zlength <= 256 .
+H5:    loop__3__i >= 1 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 14 -> 0 <= element(
+          timestring, [i___1]) and element(timestring, [i___1]) <= 255) .
+H7:    48 <= element(timestring, [loop__3__i]) .
+H8:    element(timestring, [loop__3__i]) <= 57 .
+H9:    loop__3__i < 14 .
+H10:   integer__size >= 0 .
+H11:   character__size >= 0 .
+H12:   positive__size >= 0 .
+H13:   unsigned_types__unsigned8__size >= 0 .
+H14:   unsigned_types__unsigned16__size >= 0 .
+H15:   unsigned_types__unsigned32__size >= 0 .
+H16:   rr_type__classtype__size >= 0 .
+H17:   rr_type__rritemtype__size >= 0 .
+H18:   rr_type__linelengthindex__size >= 0 .
+H19:   rr_type__domainnamestringtypeindex__size >= 0 .
+H20:   rr_type__resourcerecordtype__size >= 0 .
+H21:   rr_type__rrsig_record_type__timestringtypeindex__size >= 0 .
+H22:   rr_type__rrsig_record_type__rrsigstringtypeindex__size >= 0 .
+H23:   rr_type__rrsig_record_type__rrsigrecordtype__size >= 0 .
+H24:   dns_types__a <= fld_typecovered(
+          rr_type__rrsig_record_type__blankrrsigrecord) .
+H25:   fld_typecovered(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          dns_types__unimplemented .
+H26:   0 <= fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) .
+H27:   0 <= fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) .
+H28:   fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H29:   fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H30:   0 <= fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) .
+H31:   fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) <= 65535 .
+H32:   0 <= fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H33:   0 <= fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) .
+H34:   0 <= fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) .
+H35:   0 <= fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) .
+H36:   fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) <= 4294967295 .
+H37:   fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) <= 4294967295 .
+H38:   fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H39:   fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H40:   rr_type__internet <= fld_class(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H41:   fld_class(fld_inherit(rr_type__rrsig_record_type__blankrrsigrecord)) <= 
+          rr_type__hs .
+H42:   1 <= fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) .
+H43:   fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          1365 .
+       ->
+C1:    for_all(j_ : integer, 1 <= j_ and j_ <= loop__3__i -> 48 <= element(
+          timestring, [j_]) and element(timestring, [j_]) <= 57) .
+
+
+For path(s) from assertion of line 305 to run-time check associated with 
+          statement of line 306:
+
+procedure_parserrsigheader_118.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to precondition check associated with 
+          statement of line 312:
+
+procedure_parserrsigheader_119.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_120.
+H1:    for_all(j_ : integer, 1 <= j_ and j_ <= 13 -> 48 <= element(timestring, [
+          j_]) and element(timestring, [j_]) <= 57) .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255) .
+H3:    zlength >= 1 .
+H4:    zlength <= 256 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 14 -> 0 <= element(
+          timestring, [i___1]) and element(timestring, [i___1]) <= 255) .
+H6:    48 <= element(timestring, [14]) .
+H7:    element(timestring, [14]) <= 57 .
+H8:    integer__size >= 0 .
+H9:    character__size >= 0 .
+H10:   positive__size >= 0 .
+H11:   unsigned_types__unsigned8__size >= 0 .
+H12:   unsigned_types__unsigned16__size >= 0 .
+H13:   unsigned_types__unsigned32__size >= 0 .
+H14:   rr_type__classtype__size >= 0 .
+H15:   rr_type__rritemtype__size >= 0 .
+H16:   rr_type__linelengthindex__size >= 0 .
+H17:   rr_type__domainnamestringtypeindex__size >= 0 .
+H18:   rr_type__resourcerecordtype__size >= 0 .
+H19:   rr_type__rrsig_record_type__timestringtypeindex__size >= 0 .
+H20:   rr_type__rrsig_record_type__rrsigstringtypeindex__size >= 0 .
+H21:   rr_type__rrsig_record_type__rrsigrecordtype__size >= 0 .
+H22:   dns_types__a <= fld_typecovered(
+          rr_type__rrsig_record_type__blankrrsigrecord) .
+H23:   fld_typecovered(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          dns_types__unimplemented .
+H24:   0 <= fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) .
+H25:   0 <= fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) .
+H26:   fld_algorithm(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H27:   fld_numlabels(rr_type__rrsig_record_type__blankrrsigrecord) <= 255 .
+H28:   0 <= fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) .
+H29:   fld_keytag(rr_type__rrsig_record_type__blankrrsigrecord) <= 65535 .
+H30:   0 <= fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H31:   0 <= fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) .
+H32:   0 <= fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) .
+H33:   0 <= fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) .
+H34:   fld_ttlinseconds(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) <= 4294967295 .
+H35:   fld_origttl(rr_type__rrsig_record_type__blankrrsigrecord) <= 4294967295 .
+H36:   fld_sigexpiration(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H37:   fld_siginception(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          4294967295 .
+H38:   rr_type__internet <= fld_class(fld_inherit(
+          rr_type__rrsig_record_type__blankrrsigrecord)) .
+H39:   fld_class(fld_inherit(rr_type__rrsig_record_type__blankrrsigrecord)) <= 
+          rr_type__hs .
+H40:   1 <= fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) .
+H41:   fld_signaturelength(rr_type__rrsig_record_type__blankrrsigrecord) <= 
+          1365 .
+       ->
+C1:    for_all(i_ : integer, 1 <= i_ and i_ <= 14 -> 48 <= element(timestring, [
+          i_]) and element(timestring, [i_]) <= 57) .
+
+
+For path(s) from assertion of line 305 to run-time check associated with 
+          statement of line 312:
+
+procedure_parserrsigheader_121.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_122.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 320:
+
+procedure_parserrsigheader_123.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_124.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_125.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_126.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_127.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_128.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_129.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_130.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_131.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_132.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_133.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_134.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_135.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_136.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_137.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_138.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 320:
+
+procedure_parserrsigheader_139.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_140.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_141.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_142.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_143.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_144.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_145.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_146.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_147.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_148.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_149.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_150.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_151.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_152.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_153.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_154.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to run-time check associated with 
+          statement of line 320:
+
+procedure_parserrsigheader_155.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_156.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_157.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_158.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          321:
+
+procedure_parserrsigheader_159.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_160.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_161.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_162.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_163.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_164.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_165.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_166.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_167.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_168.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_169.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_170.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_171.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_172.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_173.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_174.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to precondition check associated with 
+          statement of line 321:
+
+procedure_parserrsigheader_175.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_176.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_177.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_178.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_179.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_180.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_181.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_182.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_183.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_184.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_185.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_186.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_187.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_188.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_189.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_190.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to precondition check associated with 
+          statement of line 321:
+
+procedure_parserrsigheader_191.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_192.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_193.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_194.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 321:
+
+procedure_parserrsigheader_195.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_196.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_197.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_198.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_199.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_200.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_201.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_202.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_203.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_204.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_205.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_206.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_207.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_208.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_209.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_210.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to run-time check associated with 
+          statement of line 321:
+
+procedure_parserrsigheader_211.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_212.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_213.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_214.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_215.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_216.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_217.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_218.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_219.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_220.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_221.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_222.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_223.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_224.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_225.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_226.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to run-time check associated with 
+          statement of line 321:
+
+procedure_parserrsigheader_227.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_228.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_229.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_230.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parserrsigheader_231.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_232.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_233.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_234.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_235.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_236.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_237.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_238.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_239.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_240.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_241.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_242.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_243.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_244.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_245.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_246.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_247.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_248.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_249.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_250.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_251.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_252.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_253.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_254.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_255.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_256.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_257.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_258.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_259.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_260.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_261.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_262.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_263.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_264.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_265.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_266.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_267.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_268.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_269.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_270.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_271.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_272.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_273.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_274.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_275.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_276.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_277.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_278.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 257 to finish:
+
+procedure_parserrsigheader_279.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_280.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_281.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_282.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_283.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_284.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_285.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_286.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_287.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_288.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_289.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_290.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_291.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_292.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_293.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_294.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_295.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_296.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_297.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_298.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_299.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_300.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_301.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_302.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_303.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_304.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_305.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_306.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_307.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_308.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_309.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_310.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_311.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_312.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_313.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_314.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_315.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_316.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_317.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_318.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_319.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_320.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_321.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_322.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_323.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_324.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_325.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_326.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 305 to finish:
+
+procedure_parserrsigheader_327.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_328.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_329.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_330.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_331.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_332.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_333.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_334.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_335.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_336.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_337.
+*** true .          /* all conclusions proved */
+
+
+procedure_parserrsigheader_338.
+*** true .          /* all conclusions proved */
+
+

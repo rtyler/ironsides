@@ -1,0 +1,2859 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Rr_Type.AppendDomainNames
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) <= domainnamestringtypeindex__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+***  Proved C1:  domainnamelength(right) >= domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C2:  domainnamelength(right) <= domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New C3:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(left) + 1 + domainnamelength(right) <= 2147483647
+<S>  New C4:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+***  Proved C1:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+     using hypotheses H5 & H10.
+***  Proved C3:  domainnamelength(left) >= - 2147483649
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+     using hypotheses H6 & H11.
+***  Proved C4:  domainnamelength(left) <= 2147483646
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New C3:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(left) + 1 + domainnamelength(right) <= 2147483647
+<S>  New C4:  domainnamelength(left) <= 2147483646
+>>>  Restructured hypothesis H17 into:
+     >>>  H17:  domainnamelength(left) <> domainnamestringtypeindex__last
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) <> 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+%%%  Hypotheses H6 & H17 together imply that
+          domainnamelength(left) < 128.
+     H6 & H17 have therefore been deleted and a new H22 added to this effect.
+***  Proved C1:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+     using hypotheses H5 & H10.
+***  Proved C3:  domainnamelength(left) >= - 2147483649
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+     using hypotheses H11 & H22.
+***  Proved C4:  domainnamelength(left) <= 2147483646
+     using hypothesis H22.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) <= domainnamestringtypeindex__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) <= domainnamestringtypeindex__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) <= domainnamestringtypeindex__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) <= domainnamestringtypeindex__last
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_9.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C3:  domainnamelength(left) + 1 >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C5:  domainnamelength(left) + 1 >= integer__base__first
+     using hypothesis H24.
+***  Proved C6:  domainnamelength(left) + 1 <= integer__base__last
+     using hypothesis H25.
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(left, [i___1]) and element(
+          left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(right, [i___1]) and element(
+          right, [i___1]) <= 255)
+<S>  New C4:  domainnamelength(left) <= 127
+***  Proved C1:  true
+***  Proved C2:  true
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) > 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+###  Established a contradiction [false-hypothesis] using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_10.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C3:  domainnamelength(left) + 1 >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C5:  domainnamelength(left) + 1 >= integer__base__first
+     using hypothesis H24.
+***  Proved C6:  domainnamelength(left) + 1 <= integer__base__last
+     using hypothesis H25.
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  not domainnamelength(left) = 128
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(left, [i___1]) and element(
+          left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(right, [i___1]) and element(
+          right, [i___1]) <= 255)
+<S>  New C4:  domainnamelength(left) <= 127
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C4:  domainnamelength(left) <= 127
+     using hypotheses H6 & H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_11.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C3:  domainnamelength(left) + 1 >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C5:  domainnamelength(left) + 1 >= integer__base__first
+     using hypothesis H24.
+***  Proved C6:  domainnamelength(left) + 1 <= integer__base__last
+     using hypothesis H25.
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(left, [i___1]) and element(
+          left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(right, [i___1]) and element(
+          right, [i___1]) <= 255)
+<S>  New C4:  domainnamelength(left) <= 127
+***  Proved C1:  true
+***  Proved C2:  true
+>>>  Restructured hypothesis H26 into:
+     >>>  H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          maxdomainnamelength
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+###  Established a contradiction [false-hypothesis] using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_12.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C3:  domainnamelength(left) + 1 >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C5:  domainnamelength(left) + 1 >= integer__base__first
+     using hypothesis H24.
+***  Proved C6:  domainnamelength(left) + 1 <= integer__base__last
+     using hypothesis H25.
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  not domainnamelength(left) = 128
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(left, [i___1]) and element(
+          left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= 128 -> 0 <= element(right, [i___1]) and element(
+          right, [i___1]) <= 255)
+<S>  New C4:  domainnamelength(left) <= 127
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C4:  domainnamelength(left) <= 127
+     using hypotheses H6 & H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_13.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(right) >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(right) <= 2147483647
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) > 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+***  Proved C1:  domainnamelength(right) >= - 2147483648
+     using hypothesis H10.
+***  Proved C2:  domainnamelength(right) <= 2147483647
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_14.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(right) >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(right) <= 2147483647
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+>>>  Restructured hypothesis H17 into:
+     >>>  H17:  domainnamelength(left) <> domainnamestringtypeindex__last
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) > 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) <> 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+%%%  Hypotheses H6 & H17 together imply that
+          domainnamelength(left) < 128.
+     H6 & H17 have therefore been deleted and a new H41 added to this effect.
+***  Proved C1:  domainnamelength(right) >= - 2147483648
+     using hypothesis H10.
+***  Proved C2:  domainnamelength(right) <= 2147483647
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_15.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(right) >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(right) <= 2147483647
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+>>>  Restructured hypothesis H26 into:
+     >>>  H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          maxdomainnamelength
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+***  Proved C1:  domainnamelength(right) >= - 2147483648
+     using hypothesis H10.
+***  Proved C2:  domainnamelength(right) <= 2147483647
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_16.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  domainnamelength(right) >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  domainnamelength(right) <= 2147483647
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+>>>  Restructured hypothesis H17 into:
+     >>>  H17:  domainnamelength(left) <> domainnamestringtypeindex__last
+>>>  Restructured hypothesis H26 into:
+     >>>  H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          maxdomainnamelength
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) <= 128
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) <> 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+%%%  Hypotheses H6 & H17 together imply that
+          domainnamelength(left) < 128.
+     H6 & H17 have therefore been deleted and a new H41 added to this effect.
+***  Proved C1:  domainnamelength(right) >= - 2147483648
+     using hypothesis H10.
+***  Proved C2:  domainnamelength(right) <= 2147483647
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_17.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  1 <= domainnamelength(right) -> domainnamelength(right) >= 
+          integer__first and domainnamelength(right) <= integer__last
+     using hypotheses H41 & H42.
+***  Proved C2:  1 <= domainnamelength(right) -> 1 >= integer__first and 1 <= 
+          integer__last
+     using hypotheses H43 & H44.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_18.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  1 <= domainnamelength(right) -> domainnamelength(right) >= 
+          integer__first and domainnamelength(right) <= integer__last
+     using hypotheses H41 & H42.
+***  Proved C2:  1 <= domainnamelength(right) -> 1 >= integer__first and 1 <= 
+          integer__last
+     using hypotheses H43 & H44.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_19.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  1 <= domainnamelength(right) -> domainnamelength(right) >= 
+          integer__first and domainnamelength(right) <= integer__last
+     using hypotheses H41 & H42.
+***  Proved C2:  1 <= domainnamelength(right) -> 1 >= integer__first and 1 <= 
+          integer__last
+     using hypotheses H43 & H44.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_20.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  1 <= domainnamelength(right) -> domainnamelength(right) >= 
+          integer__first and domainnamelength(right) <= integer__last
+     using hypotheses H41 & H42.
+***  Proved C2:  1 <= domainnamelength(right) -> 1 >= integer__first and 1 <= 
+          integer__last
+     using hypotheses H43 & H44.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_21.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) < domainnamestringtypeindex__last
+     using hypothesis H36.
+***  Proved C4:  true
+***  Proved C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+     using hypotheses H2, H33, H34, H35 & H36.
+***  Proved C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+     using hypothesis H3.
+***  Proved C7:  true
+***  Proved C8:  1 >= integer__first
+     using hypothesis H43.
+***  Proved C9:  1 <= integer__last
+     using hypothesis H44.
+***  Proved C10:  true
+***  Proved C11:  1 <= domainnamelength(right)
+     using hypothesis H49.
+***  Proved C12:  domainnamelength(right) >= domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C13:  domainnamelength(right) <= domainnamestringtypeindex__last
+     using hypothesis H11.
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) > 128
+<S>  New C3:  domainnamelength(left) + 1 + domainnamelength(right) <= 128
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
++++  Using "A->B, A |- B" on hypotheses H45 & H49 yields a new hypothesis:
+     +++  H50:  domainnamelength(right) >= integer__first and domainnamelength(
+          right) <= integer__last
++++  Using "A->B, A |- B" on hypotheses H46 & H49 yields a new hypothesis:
+     +++  H51:  1 >= integer__first and 1 <= integer__last
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H41:  domainnamelength(right) >= - 2147483648
+<S>  New H43:  true
+<S>  New H45:  1 <= domainnamelength(right) -> domainnamelength(right) >= - 
+          2147483648 and domainnamelength(right) <= integer__last
+<S>  New H46:  1 <= domainnamelength(right) -> 1 <= integer__last
+<S>  New H50:  domainnamelength(right) >= - 2147483648 and domainnamelength(
+          right) <= integer__last
+<S>  New H51:  1 <= integer__last
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H42:  domainnamelength(right) <= 2147483647
+<S>  New H44:  true
+<S>  New H45:  1 <= domainnamelength(right) -> domainnamelength(right) >= - 
+          2147483648 and domainnamelength(right) <= 2147483647
+<S>  New H46:  true
+<S>  New H50:  domainnamelength(right) >= - 2147483648 and domainnamelength(
+          right) <= 2147483647
+<S>  New H51:  true
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) = 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+###  Established a contradiction [false-hypothesis] using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_22.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) < domainnamestringtypeindex__last
+     using hypotheses H6 & H17.
+***  Proved C4:  true
+***  Proved C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+     using hypotheses H2, H33, H34, H35 & H36.
+***  Proved C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+     using hypothesis H3.
+***  Proved C7:  true
+***  Proved C8:  1 >= integer__first
+     using hypothesis H43.
+***  Proved C9:  1 <= integer__last
+     using hypothesis H44.
+***  Proved C10:  true
+***  Proved C11:  1 <= domainnamelength(right)
+     using hypothesis H49.
+***  Proved C12:  domainnamelength(right) >= domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C13:  domainnamelength(right) <= domainnamestringtypeindex__last
+     using hypothesis H11.
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 128 or element(
+          left, [domainnamelength(left) + 1]) = 32 and for_all(q_ : integer, 1 
+          <= q_ and q_ <= domainnamelength(left) -> element(left, [q_]) <> 32))
+<S>  New H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 128 or 
+          element(right, [domainnamelength(right) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= domainnamelength(right) -> element(right, [
+          q_]) <> 32))
+<S>  New H26:  domainnamelength(left) + 1 + domainnamelength(right) > 128
+<S>  New C3:  domainnamelength(left) + 1 + domainnamelength(right) <= 128
+>>>  Restructured hypothesis H17 into:
+     >>>  H17:  domainnamelength(left) <> domainnamestringtypeindex__last
+>>>  Restructured hypothesis H32 into:
+     >>>  H32:  element(left, [domainnamelength(left)]) <> origin_char or 
+          domainnamelength(left) <> 1
++++  Using "A->B, A |- B" on hypotheses H45 & H49 yields a new hypothesis:
+     +++  H50:  domainnamelength(right) >= integer__first and domainnamelength(
+          right) <= integer__last
++++  Using "A->B, A |- B" on hypotheses H46 & H49 yields a new hypothesis:
+     +++  H51:  1 >= integer__first and 1 <= integer__last
+-S-  Applied substitution rule appenddomain_rules(2).
+     This was achieved by replacing all occurrences of origin_char by:
+          64.
+<S>  New H32:  element(left, [domainnamelength(left)]) <> 64 or 
+          domainnamelength(left) <> 1
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H41:  domainnamelength(right) >= - 2147483648
+<S>  New H43:  true
+<S>  New H45:  1 <= domainnamelength(right) -> domainnamelength(right) >= - 
+          2147483648 and domainnamelength(right) <= integer__last
+<S>  New H46:  1 <= domainnamelength(right) -> 1 <= integer__last
+<S>  New H50:  domainnamelength(right) >= - 2147483648 and domainnamelength(
+          right) <= integer__last
+<S>  New H51:  1 <= integer__last
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H42:  domainnamelength(right) <= 2147483647
+<S>  New H44:  true
+<S>  New H45:  1 <= domainnamelength(right) -> domainnamelength(right) >= - 
+          2147483648 and domainnamelength(right) <= 2147483647
+<S>  New H46:  true
+<S>  New H50:  domainnamelength(right) >= - 2147483648 and domainnamelength(
+          right) <= 2147483647
+<S>  New H51:  true
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H22:  domainnamelength(left) + 1 + domainnamelength(right) >= - 
+          2147483648
+<S>  New H24:  domainnamelength(left) >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H23:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          2147483647
+<S>  New H25:  domainnamelength(left) <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H33:  true
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H34:  true
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  domainnamelength(left) >= 1
+<S>  New H10:  domainnamelength(right) >= 1
+<S>  New H35:  domainnamelength(left) >= 0
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H6:  domainnamelength(left) <= 128
+<S>  New H11:  domainnamelength(right) <= 128
+<S>  New H17:  domainnamelength(left) <> 128
+<S>  New H36:  domainnamelength(left) <= 127
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+%%%  Hypotheses H6 & H17 together imply that
+          domainnamelength(left) < 128.
+     H6 & H17 have therefore been deleted and a new H52 added to this effect.
+###  Established a contradiction [false-hypothesis] using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_23.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) < domainnamestringtypeindex__last
+     using hypothesis H36.
+***  Proved C3:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          maxdomainnamelength
+     using hypothesis H26.
+***  Proved C4:  true
+***  Proved C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+     using hypotheses H2, H33, H34, H35 & H36.
+***  Proved C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+     using hypothesis H3.
+***  Proved C7:  true
+***  Proved C8:  1 >= integer__first
+     using hypothesis H43.
+***  Proved C9:  1 <= integer__last
+     using hypothesis H44.
+***  Proved C10:  true
+***  Proved C11:  1 <= domainnamelength(right)
+     using hypothesis H49.
+***  Proved C12:  domainnamelength(right) >= domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C13:  domainnamelength(right) <= domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_24.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  domainnamelength(left) = 1 and (element(left, [1]) = 32 or 
+          element(left, [2]) = 32) or (domainnamelength(left) = 
+          maxdomainnamelength or element(left, [domainnamelength(left) + 1]) = 
+          32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(left) 
+          -> element(left, [q_]) <> 32))
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  domainnamelength(right) = 1 and (element(right, [1]) = 32 or 
+          element(right, [2]) = 32) or (domainnamelength(right) = 
+          maxdomainnamelength or element(right, [domainnamelength(right) + 1]) 
+          = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= domainnamelength(
+          right) -> element(right, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H25).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  true
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C1:  domainnamelength(left) >= domainnamestringtypeindex__first
+     using hypothesis H5.
+***  Proved C2:  domainnamelength(left) < domainnamestringtypeindex__last
+     using hypotheses H6 & H17.
+***  Proved C3:  domainnamelength(left) + 1 + domainnamelength(right) <= 
+          maxdomainnamelength
+     using hypothesis H26.
+***  Proved C4:  true
+***  Proved C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) and element(update(left, [domainnamelength(left) + 1]
+          , 46), [i___1]) <= character__last)
+     using hypotheses H2, H33, H34, H35 & H36.
+***  Proved C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+     using hypothesis H3.
+***  Proved C7:  true
+***  Proved C8:  1 >= integer__first
+     using hypothesis H43.
+***  Proved C9:  1 <= integer__last
+     using hypothesis H44.
+***  Proved C10:  true
+***  Proved C11:  1 <= domainnamelength(right)
+     using hypothesis H49.
+***  Proved C12:  domainnamelength(right) >= domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C13:  domainnamelength(right) <= domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_25.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [lengthl + 1 + loop__1__i], 
+          element(right, [loop__1__i])), [i___1]) and element(update(left, [
+          lengthl + 1 + loop__1__i], element(right, [loop__1__i])), [i___1]) <= 
+          character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  loop__1__i >= 0
+***  Proved C1:  lengthl >= domainnamestringtypeindex__first
+     using hypothesis H1.
+***  Proved C2:  lengthl < domainnamestringtypeindex__last
+     using hypothesis H2.
+***  Proved C3:  lengthl + 1 + lengthr <= maxdomainnamelength
+     using hypothesis H3.
+***  Proved C4:  lengthr__entry__loop__1 = lengthr
+     using hypothesis H4.
+***  Proved C5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(update(left, [lengthl + 1 + loop__1__i], 
+          element(right, [loop__1__i])), [i___1]) and element(update(left, [
+          lengthl + 1 + loop__1__i], element(right, [loop__1__i])), [i___1]) <= 
+          character__last)
+     using hypotheses H5, H14, H15, H18 & H19.
+***  Proved C6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+     using hypothesis H6.
+***  Proved C7:  true
+***  Proved C8:  loop__1__i + 1 >= integer__first
+     using hypothesis H8.
+***  Proved C10:  loop__1__i >= 0
+     using hypothesis H10.
+***  Proved C12:  lengthr__entry__loop__1 >= domainnamestringtypeindex__first
+     using hypothesis H12.
+***  Proved C13:  lengthr__entry__loop__1 <= domainnamestringtypeindex__last
+     using hypothesis H13.
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+<S>  New C9:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H24 into:
+     >>>  H24:  loop__1__i <> lengthr__entry__loop__1
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H3:  lengthl + 1 + lengthr <= 128
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H20:  lengthl + 1 + loop__1__i >= - 2147483648
+<S>  New H22:  lengthl >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H21:  lengthl + 1 + loop__1__i <= 2147483647
+<S>  New H23:  lengthl <= 2147483646
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New H14:  element(right, [loop__1__i]) >= 0
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H15:  element(right, [loop__1__i]) <= 255
+<S>  New H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H1:  lengthl >= 1
+<S>  New H12:  lengthr__entry__loop__1 >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H18:  lengthl + 1 + loop__1__i >= 1
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H2:  lengthl < 128
+<S>  New H13:  lengthr__entry__loop__1 <= 128
+<S>  New H17:  loop__1__i <= 128
+<S>  New H19:  lengthl + 1 + loop__1__i <= 128
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+%%%  Hypotheses H11 & H24 together imply that
+          loop__1__i < lengthr__entry__loop__1.
+     H11 & H24 have therefore been deleted and a new H25 added to this effect.
+***  Proved C11:  loop__1__i + 1 <= lengthr__entry__loop__1
+     via its standard form, which is:
+     Std.Fm C11:  lengthr__entry__loop__1 - loop__1__i > 0
+     using hypothesis H25.
+***  Proved C9:  loop__1__i <= 2147483646
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_26.  @@@@@@@@@@
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(left, [i___1]) and element(left, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(right, [i___1]) and element(right, [i___1]
+          ) <= character__last)
+***  Proved C4:  loop__1__i <= domainnamestringtypeindex__last
+     using hypotheses H11 & H13.
+***  Proved C5:  lengthl + 1 + loop__1__i >= domainnamestringtypeindex__first
+     using hypotheses H1 & H10.
+-S-  Applied substitution rule appenddomain_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= character__last)
+<S>  New H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= character__last)
+<S>  New C1:  element(right, [loop__1__i]) >= 0
+-S-  Applied substitution rule appenddomain_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H5:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C2:  element(right, [loop__1__i]) <= 255
+-S-  Applied substitution rule appenddomain_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H1:  lengthl >= 1
+<S>  New H12:  lengthr__entry__loop__1 >= 1
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(left, [i___1]) and 
+          element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(right, [i___1]) and 
+          element(right, [i___1]) <= 255)
+<S>  New C3:  loop__1__i >= 1
+-S-  Applied substitution rule appenddomain_rules(20).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H2:  lengthl < 128
+<S>  New H13:  lengthr__entry__loop__1 <= 128
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(left, [i___1]) and element(left, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(right, [i___1]) and element(right, [i___1]) <= 255)
+<S>  New C6:  lengthl + 1 + loop__1__i <= 128
+-S-  Applied substitution rule appenddomain_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C7:  lengthl + 1 + loop__1__i >= - 2147483648
+<S>  New C9:  lengthl >= - 2147483649
+-S-  Applied substitution rule appenddomain_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C8:  lengthl + 1 + loop__1__i <= 2147483647
+<S>  New C10:  lengthl <= 2147483646
+***  Proved C1:  element(right, [loop__1__i]) >= 0
+     using hypotheses H6, H10, H11 & H13.
+***  Proved C2:  element(right, [loop__1__i]) <= 255
+     using hypotheses H6, H10, H11 & H13.
+***  Proved C3:  loop__1__i >= 1
+     using hypothesis H10.
+***  Proved C7:  lengthl + 1 + loop__1__i >= - 2147483648
+     using hypotheses H1 & H10.
+***  Proved C9:  lengthl >= - 2147483649
+     using hypothesis H1.
+***  Proved C10:  lengthl <= 2147483646
+     using hypothesis H2.
+-S-  Applied substitution rule appenddomain_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H3:  lengthl + 1 + lengthr <= 128
+-S-  Applied substitution rule appenddomain_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule appenddomain_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+***  Proved C8:  lengthl + 1 + loop__1__i <= 2147483647
+     via its standard form, which is:
+     Std.Fm C8:  1 + (lengthl + loop__1__i) <= 2147483647
+     using hypotheses H2, H11 & H13.
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H2 (redundant, given H3, H4 & H12).
+---  Eliminated hypothesis H8 (redundant, given H10).
+---  Eliminated hypothesis H9 (redundant, given H11 & H13).
+---  Eliminated hypothesis H13 (redundant, given H1, H3 & H4).
+-S-  Eliminated hypothesis H4.
+     This was achieved by replacing all occurrences of lengthr__entry__loop__1 
+          by:
+          lengthr.
+<S>  New H11:  loop__1__i <= lengthr
+<S>  New H12:  lengthr >= 1
+***  Proved C6:  lengthl + 1 + loop__1__i <= 128
+     via its standard form, which is:
+     Std.Fm C6:  - lengthl - loop__1__i > - 128
+     using hypotheses H3, H4 & H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_27.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_28.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_29.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_30.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_31.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_32.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_33.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_34.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_35.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_36.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_37.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_38.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_appenddomainnames_39.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

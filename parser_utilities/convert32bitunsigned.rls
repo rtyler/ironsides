@@ -1,0 +1,47 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+              /*procedure Parser_Utilities.convert32BitUnsigned*/
+
+
+rule_family convert32bit_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convert32bit_rules(1): unsigned_types__max_32bit_val may_be_replaced_by 4294967295.
+convert32bit_rules(2): integer__size >= 0 may_be_deduced.
+convert32bit_rules(3): integer__first may_be_replaced_by -2147483648.
+convert32bit_rules(4): integer__last may_be_replaced_by 2147483647.
+convert32bit_rules(5): integer__base__first may_be_replaced_by -2147483648.
+convert32bit_rules(6): integer__base__last may_be_replaced_by 2147483647.
+convert32bit_rules(7): character__size >= 0 may_be_deduced.
+convert32bit_rules(8): character__first may_be_replaced_by 0.
+convert32bit_rules(9): character__last may_be_replaced_by 255.
+convert32bit_rules(10): character__base__first may_be_replaced_by 0.
+convert32bit_rules(11): character__base__last may_be_replaced_by 255.
+convert32bit_rules(12): positive__size >= 0 may_be_deduced.
+convert32bit_rules(13): positive__first may_be_replaced_by 1.
+convert32bit_rules(14): positive__last may_be_replaced_by 2147483647.
+convert32bit_rules(15): positive__base__first may_be_replaced_by -2147483648.
+convert32bit_rules(16): positive__base__last may_be_replaced_by 2147483647.
+convert32bit_rules(17): long_long_integer__size >= 0 may_be_deduced.
+convert32bit_rules(18): long_long_integer__first may_be_replaced_by -9223372036854775808.
+convert32bit_rules(19): long_long_integer__last may_be_replaced_by 9223372036854775807.
+convert32bit_rules(20): long_long_integer__base__first may_be_replaced_by -9223372036854775808.
+convert32bit_rules(21): long_long_integer__base__last may_be_replaced_by 9223372036854775807.
+convert32bit_rules(22): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+convert32bit_rules(23): unsigned_types__unsigned32__first may_be_replaced_by 0.
+convert32bit_rules(24): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+convert32bit_rules(25): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+convert32bit_rules(26): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+convert32bit_rules(27): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+convert32bit_rules(28): rr_type__linelengthindex__size >= 0 may_be_deduced.
+convert32bit_rules(29): rr_type__linelengthindex__first may_be_replaced_by 1.
+convert32bit_rules(30): rr_type__linelengthindex__last may_be_replaced_by 256.
+convert32bit_rules(31): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+convert32bit_rules(32): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,141 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+      {procedure process_first_line_of_record.ProcessFirstLineOfRecord}
+
+
+title procedure processfirstlineofrecord;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__query_type = (dns_types__a, dns_types__ns, 
+     dns_types__cname, dns_types__soa, dns_types__wks, 
+     dns_types__ptr, dns_types__mx, dns_types__aaaa, 
+     dns_types__srv, dns_types__a6, dns_types__opt, dns_types__ds, 
+     dns_types__rrsig, dns_types__nsec, dns_types__dnskey, 
+     dns_types__any, dns_types__caa, dns_types__error, 
+     dns_types__unimplemented);
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__aaaa_record_type__ipv6addrtype = array [integer] of integer;
+  const rr_type__aaaa_record_type__ipv6addrtypeindex__base__first : integer = pending; 
+  const rr_type__aaaa_record_type__ipv6addrtypeindex__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__last : integer = pending; 
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const dns_types__query_type__base__first : 
+     dns_types__query_type = pending; 
+  const dns_types__query_type__base__last : dns_types__query_type = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__aaaa_record_type__ipv6addrtypeindex__first : integer = pending; 
+  const rr_type__aaaa_record_type__ipv6addrtypeindex__last : integer = pending; 
+  const rr_type__aaaa_record_type__ipv6addrtypeindex__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__domainnamestringtypeindex__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__size : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const dns_types__query_type__first : dns_types__query_type = pending; 
+  const dns_types__query_type__last : dns_types__query_type = pending; 
+  const dns_types__query_type__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var currentrecordtype : dns_types__query_type;
+  var currentorigin : string;
+  var currentowner : string;
+  var currentttl : integer;
+  var currentclass : rr_type__classtype;
+  var currentline : string;
+  var lastpos : integer;
+  var linecount : integer;
+  var currentnameserver : string;
+  var currentemail : string;
+  var success : boolean;
+  var currentipv4 : integer;
+  var currentipv6 : rr_type__aaaa_record_type__ipv6addrtype;
+  var currentdomainname : string;
+  var currentpref : integer;
+  var rrstring : string;
+  function rr_type__convertdomainnametowire(string) : string;
+  var success__25 : boolean;
+  var currentdomainname__25 : string;
+  var success__24 : boolean;
+  var rrstring__23 : string;
+  var currentdomainname__23 : string;
+  var success__19 : boolean;
+  var currentnameserver__19 : string;
+  var success__18 : boolean;
+  var currentemail__18 : string;
+  var currentnameserver__18 : string;
+  var success__16 : boolean;
+  var currentdomainname__16 : string;
+  var success__15 : boolean;
+  var currentdomainname__15 : string;
+  var success__13 : boolean;
+  var currentdomainname__13 : string;
+  var success__12 : boolean;
+  var currentdomainname__11 : string;
+  var success__9 : boolean;
+  var currentdomainname__9 : string;
+  var success__8 : boolean;
+  var currentdomainname__8 : string;
+  var currentpref__8 : integer;
+  var success__6 : boolean;
+  var currentdomainname__6 : string;
+  var success__5 : boolean;
+  var currentdomainname__5 : string;
+  var success__3 : boolean;
+  var currentipv6__3 : rr_type__aaaa_record_type__ipv6addrtype;
+  var success__1 : boolean;
+  var currentipv4__1 : integer;
+
+end;

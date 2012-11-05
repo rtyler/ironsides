@@ -1,0 +1,48 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                    {procedure Rr_Type.AppendDomainNames}
+
+
+title procedure appenddomainnames;
+
+  function round__(real) : integer;
+  type character = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const maxdomainnamelength : integer = pending;
+  const origin_char : character = pending;
+  const domainnamestringtypeindex__base__first : integer = pending; 
+  const domainnamestringtypeindex__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const domainnamestringtypeindex__first : integer = pending; 
+  const domainnamestringtypeindex__last : integer = pending; 
+  const domainnamestringtypeindex__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var left : string;
+  var right : string;
+  var success : boolean;
+  var lengthl : integer;
+  var lengthr : integer;
+  var loop__1__i : integer;
+  var lengthr__entry__loop__1 : integer;
+  function domainnamelength(string) : integer;
+
+end;

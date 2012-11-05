@@ -1,0 +1,597 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.ConvertTimeSpec.MultValue
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_multvalue_1.  @@@@@@@@@@
+***  Proved C1:  char >= character__first
+     using hypothesis H2.
+***  Proved C2:  char <= character__last
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_2.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+***  Proved C1:  ada__characters__handling__to_upper(char) >= character__first
+     using hypothesis H6.
+***  Proved C2:  ada__characters__handling__to_upper(char) <= character__last
+     using hypothesis H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_3.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_4.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New C1:  60 >= natural__first
+<S>  New C2:  60 <= natural__last
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_5.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  secondsinaminute * minutesinanhour >= 0
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  secondsinaminute * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New C1:  60 * minutesinanhour >= 0
+<S>  New C2:  60 * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_6.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  secondsinaminute * minutesinanhour * hoursinaday >= 0
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  secondsinaminute * minutesinanhour * hoursinaday <= 2147483647
+-S-  Applied substitution rule multvalue_rules(8).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  secondsinaminute * minutesinanhour >= - 2147483648
+-S-  Applied substitution rule multvalue_rules(9).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  secondsinaminute * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New C1:  60 * minutesinanhour * hoursinaday >= 0
+<S>  New C2:  60 * minutesinanhour * hoursinaday <= 2147483647
+<S>  New C3:  60 * minutesinanhour >= - 2147483648
+<S>  New C4:  60 * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New C1:  3600 * hoursinaday >= 0
+<S>  New C2:  3600 * hoursinaday <= 2147483647
+<S>  New C3:  true
+<S>  New C4:  true
+-S-  Applied substitution rule multvalue_rules(3).
+     This was achieved by replacing all occurrences of hoursinaday by:
+          24.
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+***  Proved C3:  true
+***  Proved C4:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_7.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  secondsinaminute * minutesinanhour * hoursinaday * daysinaweek >= 
+          0
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  secondsinaminute * minutesinanhour * hoursinaday * daysinaweek <= 
+          2147483647
+-S-  Applied substitution rule multvalue_rules(8).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  secondsinaminute * minutesinanhour * hoursinaday >= - 2147483648
+<S>  New C5:  secondsinaminute * minutesinanhour >= - 2147483648
+-S-  Applied substitution rule multvalue_rules(9).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  secondsinaminute * minutesinanhour * hoursinaday <= 2147483647
+<S>  New C6:  secondsinaminute * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New C1:  60 * minutesinanhour * hoursinaday * daysinaweek >= 0
+<S>  New C2:  60 * minutesinanhour * hoursinaday * daysinaweek <= 2147483647
+<S>  New C3:  60 * minutesinanhour * hoursinaday >= - 2147483648
+<S>  New C5:  60 * minutesinanhour >= - 2147483648
+<S>  New C4:  60 * minutesinanhour * hoursinaday <= 2147483647
+<S>  New C6:  60 * minutesinanhour <= 2147483647
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New C1:  3600 * hoursinaday * daysinaweek >= 0
+<S>  New C2:  3600 * hoursinaday * daysinaweek <= 2147483647
+<S>  New C3:  3600 * hoursinaday >= - 2147483648
+<S>  New C5:  true
+<S>  New C4:  3600 * hoursinaday <= 2147483647
+<S>  New C6:  true
+-S-  Applied substitution rule multvalue_rules(3).
+     This was achieved by replacing all occurrences of hoursinaday by:
+          24.
+<S>  New C1:  86400 * daysinaweek >= 0
+<S>  New C2:  86400 * daysinaweek <= 2147483647
+<S>  New C3:  true
+<S>  New C4:  true
+-S-  Applied substitution rule multvalue_rules(4).
+     This was achieved by replacing all occurrences of daysinaweek by:
+          7.
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+***  Proved C5:  true
+***  Proved C6:  true
+***  Proved C3:  true
+***  Proved C4:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_8.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_9.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H14).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  1 >= natural__first
+     using hypothesis H13.
+***  Proved C4:  1 <= natural__last
+     using hypothesis H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_10.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H14).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  secondsinaminute <= 604800
+***  Proved C3:  secondsinaminute >= natural__first
+     using hypothesis H13.
+***  Proved C4:  secondsinaminute <= natural__last
+     using hypothesis H14.
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New H13:  60 >= natural__first
+<S>  New H14:  60 <= natural__last
+<S>  New C1:  true
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_11.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H14).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  secondsinaminute * minutesinanhour <= 604800
+***  Proved C3:  secondsinaminute * minutesinanhour >= natural__first
+     using hypothesis H13.
+***  Proved C4:  secondsinaminute * minutesinanhour <= natural__last
+     using hypothesis H14.
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New H13:  60 * minutesinanhour >= natural__first
+<S>  New H14:  60 * minutesinanhour <= natural__last
+<S>  New C1:  60 * minutesinanhour >= 0
+<S>  New C2:  60 * minutesinanhour <= 604800
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New H13:  3600 >= natural__first
+<S>  New H14:  3600 <= natural__last
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H13:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H14:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_12.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  secondsinaminute * minutesinanhour * hoursinaday <= 604800
+***  Proved C3:  secondsinaminute * minutesinanhour * hoursinaday >= 
+          natural__first
+     using hypothesis H13.
+***  Proved C4:  secondsinaminute * minutesinanhour * hoursinaday <= 
+          natural__last
+     using hypothesis H14.
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New H13:  60 * minutesinanhour * hoursinaday >= natural__first
+<S>  New H14:  60 * minutesinanhour * hoursinaday <= natural__last
+<S>  New H15:  60 * minutesinanhour >= integer__base__first
+<S>  New H16:  60 * minutesinanhour <= integer__base__last
+<S>  New C1:  60 * minutesinanhour * hoursinaday >= 0
+<S>  New C2:  60 * minutesinanhour * hoursinaday <= 604800
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New H13:  3600 * hoursinaday >= natural__first
+<S>  New H14:  3600 * hoursinaday <= natural__last
+<S>  New H15:  3600 >= integer__base__first
+<S>  New H16:  3600 <= integer__base__last
+<S>  New C1:  3600 * hoursinaday >= 0
+<S>  New C2:  3600 * hoursinaday <= 604800
+-S-  Applied substitution rule multvalue_rules(3).
+     This was achieved by replacing all occurrences of hoursinaday by:
+          24.
+<S>  New H13:  86400 >= natural__first
+<S>  New H14:  86400 <= natural__last
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(8).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H15:  true
+-S-  Applied substitution rule multvalue_rules(9).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H16:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H13:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H14:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_13.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H14).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  secondsinaminute * minutesinanhour * hoursinaday * daysinaweek 
+          <= 604800
+***  Proved C3:  secondsinaminute * minutesinanhour * hoursinaday * daysinaweek 
+          >= natural__first
+     using hypothesis H13.
+***  Proved C4:  secondsinaminute * minutesinanhour * hoursinaday * daysinaweek 
+          <= natural__last
+     using hypothesis H14.
+-S-  Applied substitution rule multvalue_rules(1).
+     This was achieved by replacing all occurrences of secondsinaminute by:
+          60.
+<S>  New H13:  60 * minutesinanhour * hoursinaday * daysinaweek >= 
+          natural__first
+<S>  New H14:  60 * minutesinanhour * hoursinaday * daysinaweek <= natural__last
+<S>  New H15:  60 * minutesinanhour * hoursinaday >= integer__base__first
+<S>  New H16:  60 * minutesinanhour * hoursinaday <= integer__base__last
+<S>  New H17:  60 * minutesinanhour >= integer__base__first
+<S>  New H18:  60 * minutesinanhour <= integer__base__last
+<S>  New C1:  60 * minutesinanhour * hoursinaday * daysinaweek >= 0
+<S>  New C2:  60 * minutesinanhour * hoursinaday * daysinaweek <= 604800
+-S-  Applied substitution rule multvalue_rules(2).
+     This was achieved by replacing all occurrences of minutesinanhour by:
+          60.
+<S>  New H13:  3600 * hoursinaday * daysinaweek >= natural__first
+<S>  New H14:  3600 * hoursinaday * daysinaweek <= natural__last
+<S>  New H15:  3600 * hoursinaday >= integer__base__first
+<S>  New H16:  3600 * hoursinaday <= integer__base__last
+<S>  New H17:  3600 >= integer__base__first
+<S>  New H18:  3600 <= integer__base__last
+<S>  New C1:  3600 * hoursinaday * daysinaweek >= 0
+<S>  New C2:  3600 * hoursinaday * daysinaweek <= 604800
+-S-  Applied substitution rule multvalue_rules(3).
+     This was achieved by replacing all occurrences of hoursinaday by:
+          24.
+<S>  New H13:  86400 * daysinaweek >= natural__first
+<S>  New H14:  86400 * daysinaweek <= natural__last
+<S>  New H15:  86400 >= integer__base__first
+<S>  New H16:  86400 <= integer__base__last
+<S>  New C1:  86400 * daysinaweek >= 0
+<S>  New C2:  86400 * daysinaweek <= 604800
+-S-  Applied substitution rule multvalue_rules(4).
+     This was achieved by replacing all occurrences of daysinaweek by:
+          7.
+<S>  New H13:  604800 >= natural__first
+<S>  New H14:  604800 <= natural__last
+<S>  New C1:  true
+<S>  New C2:  true
+-S-  Applied substitution rule multvalue_rules(8).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H17:  true
+<S>  New H15:  true
+-S-  Applied substitution rule multvalue_rules(9).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H18:  true
+<S>  New H16:  true
+-S-  Applied substitution rule multvalue_rules(11).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  char >= 0
+<S>  New H6:  ada__characters__handling__to_upper(char) >= 0
+-S-  Applied substitution rule multvalue_rules(12).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  char <= 255
+<S>  New H7:  ada__characters__handling__to_upper(char) <= 255
+-S-  Applied substitution rule multvalue_rules(16).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H13:  true
+-S-  Applied substitution rule multvalue_rules(17).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H14:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_multvalue_14.  @@@@@@@@@@
+---  Hypothesis H4 has been replaced by "true".  (It is already present, as H2).
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H7).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H7)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H18).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  0 >= natural__first
+     using hypothesis H17.
+***  Proved C4:  0 <= natural__last
+     using hypothesis H18.
+***  PROVED VC.
+

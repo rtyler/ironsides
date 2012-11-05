@@ -1,0 +1,148 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_NXDOMAIN_Response
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 676:
+
+procedure_create_nxdomain_response_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 677:
+
+procedure_create_nxdomain_response_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 679:
+
+procedure_create_nxdomain_response_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 680:
+
+procedure_create_nxdomain_response_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 683:
+
+procedure_create_nxdomain_response_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 683:
+
+procedure_create_nxdomain_response_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 686:
+
+procedure_create_nxdomain_response_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to assertion of line 686:
+
+procedure_create_nxdomain_response_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to precondition check associated with 
+          statement of line 689:
+
+procedure_create_nxdomain_response_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 689:
+
+procedure_create_nxdomain_response_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to precondition check associated with 
+          statement of line 694:
+
+procedure_create_nxdomain_response_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 694:
+
+procedure_create_nxdomain_response_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 702:
+
+procedure_create_nxdomain_response_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 703:
+
+procedure_create_nxdomain_response_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 708:
+
+procedure_create_nxdomain_response_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_nxdomain_response_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to run-time check associated with 
+          statement of line 708:
+
+procedure_create_nxdomain_response_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_nxdomain_response_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_create_nxdomain_response_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_nxdomain_response_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 686 to finish:
+
+procedure_create_nxdomain_response_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_nxdomain_response_22.
+*** true .          /* all conclusions proved */
+
+

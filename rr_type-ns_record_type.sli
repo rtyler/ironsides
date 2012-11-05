@@ -1,0 +1,51 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Rr_Type.Ns_Record_Type%s rr_type-ns_record_type.ads
+W Rr_Type%s rr_type.ads rr_type.sli
+W Unsigned_Types%s Unsigned_Types.ads Unsigned_Types.sli
+
+D rr_type-ns_record_type.ads 00000000000000 00000000
+D rr_type.ads 00000000000000 00000000
+D Unsigned_Types.ads 00000000000000 00000000
+
+X 2 rr_type.ads
+3K9 Rr_Type 1|1w12
+15i4 MaxDomainNameLength 44r32 49r18 55r24 57r24
+38a7 Left 41m16 41r26 41r62
+39a7 Right 41r32 41r67
+40e7 Success 41m49 41r39 41r73
+43a28 Name 44r58 45r73
+44i15 Length 44r25 44r63 45r60
+45i20 Q 45r78
+47a30 Name 48r40 48r55 49r42 50r71
+48i15 Length 48r26 49r11 49r47 50r60
+50i20 Q 50r76
+54a39 S 55r12
+56a33 S 57r12
+X 3 Unsigned_Types.ads
+1K9 Unsigned_Types 2|2w13

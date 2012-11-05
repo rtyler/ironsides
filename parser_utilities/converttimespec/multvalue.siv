@@ -1,0 +1,90 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.ConvertTimeSpec.MultValue
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 627:
+
+function_multvalue_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 627:
+
+function_multvalue_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 630:
+
+function_multvalue_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 632:
+
+function_multvalue_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 634:
+
+function_multvalue_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 636:
+
+function_multvalue_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 638:
+
+function_multvalue_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 640:
+
+function_multvalue_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_multvalue_9.
+*** true .          /* all conclusions proved */
+
+
+function_multvalue_10.
+*** true .          /* all conclusions proved */
+
+
+function_multvalue_11.
+*** true .          /* all conclusions proved */
+
+
+function_multvalue_12.
+*** true .          /* all conclusions proved */
+
+
+function_multvalue_13.
+*** true .          /* all conclusions proved */
+
+
+function_multvalue_14.
+*** true .          /* all conclusions proved */
+
+

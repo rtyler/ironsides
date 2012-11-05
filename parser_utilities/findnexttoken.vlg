@@ -1,0 +1,64 @@
+Date: 10-Jul-2012, 15:08:19
+Host: DFCS-MCARLISLE
+Non-option args: 
+    findnexttoken
+Option args: 
+    -fuse-concls   \
+    -decls=c:\spark\2011\bin\../share/spark/prelude.fdl   \
+    -unique-working-files   \
+    -rules=c:\spark\2011\bin\../share/spark/prelude.rul   \
+    -rules=c:\spark\2011\bin\../share/spark/divmod.rul   \
+    -elim-enums   \
+    -ground-eval-exp   \
+    -abstract-exp   \
+    -abstract-divmod   \
+    -utick   \
+    -gtick   \
+    -longtick   \
+    -echo-final-stats   \
+    -csv-reports-include-unit-kind   \
+    -level=warning   \
+    -bit-type   \
+    -bit-type-bool-eq-to-iff   \
+    -refine-types   \
+    -refine-int-subrange-type   \
+    -abstract-arrays-records-late   \
+    -elim-array-constructors   \
+    -add-array-select-box-update-axioms   \
+    -abstract-array-box-updates   \
+    -add-array-select-update-axioms   \
+    -abstract-array-select-updates   \
+    -abstract-array-types   \
+    -abstract-record-types   \
+    -abstract-bit-ops   \
+    -abstract-bit-valued-eqs   \
+    -abstract-bit-valued-int-le   \
+    -elim-bit-type-and-consts   \
+    -abstract-reals   \
+    -lift-quants   \
+    -strip-quantifier-patterns   \
+    -elim-type-aliases   \
+    -interface-mode=smtlib   \
+    -refine-bit-type-as-int-subtype   \
+    -refine-bit-eq-equiv   \
+    -elim-record-constructors   \
+    -add-record-select-update-axioms   \
+    -abstract-record-selects-updates   \
+    -logic=AUFNIRA   \
+    -report=findnexttoken   \
+    -prover-command=c:\spark\2011\bin\alt-ergo.exe -steps  5000   \
+    -siv   \
+
+
+
+Total ERROR   messages: 0
+Total WARNING messages: 0
+
+Summary Stats: 
+    true:    1  (100.0%)
+unproven:    0  ( 0.0%)    [timeout:    0  ( 0.0%) ]
+   error:    0  ( 0.0%)
+   total:    1
+
+Time: 0.06s  (u: 0.05s, s: 0.02s, cu: 0.00s, cs: 0.00s,  0.0% ch, 25.0% sys)
+

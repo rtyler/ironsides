@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryMXRecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 218:
+
+procedure_querymxrecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 220:
+
+procedure_querymxrecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 222:
+
+procedure_querymxrecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to assertion of line 222:
+
+procedure_querymxrecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_querymxrecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to run-time check associated with 
+          statement of line 223:
+
+procedure_querymxrecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to run-time check associated with 
+          statement of line 224:
+
+procedure_querymxrecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to run-time check associated with 
+          statement of line 225:
+
+procedure_querymxrecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to run-time check associated with 
+          statement of line 227:
+
+procedure_querymxrecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 222 to finish:
+
+procedure_querymxrecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_querymxrecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_querymxrecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_querymxrecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_querymxrecords_14.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,968 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                  function Rr_Type.ConvertDomainNameToWire
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 127:
+
+function_convertdomainnametowire_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+        ->
+C1:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+C2:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 129:
+
+function_convertdomainnametowire_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(domainnameversion) - 1 >= integer__first .
+C2:    domainnamelength(domainnameversion) - 1 <= integer__last .
+C3:    domainnamelength(domainnameversion) - 1 >= integer__base__first .
+C4:    domainnamelength(domainnameversion) - 1 <= integer__base__last .
+C5:    domainnamestringtypeindex__first >= integer__first .
+C6:    domainnamestringtypeindex__first <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 129:
+
+function_convertdomainnametowire_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H10:   domainnamelength(domainnameversion) - 1 >= integer__first .
+H11:   domainnamelength(domainnameversion) - 1 <= integer__last .
+H12:   domainnamelength(domainnameversion) - 1 >= integer__base__first .
+H13:   domainnamelength(domainnameversion) - 1 <= integer__base__last .
+H14:   domainnamestringtypeindex__first >= integer__first .
+H15:   domainnamestringtypeindex__first <= integer__last .
+        ->
+C1:    (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamelength(domainnameversion) - 1 >= 
+           integer__first) and (domainnamelength(
+           domainnameversion) - 1 <= integer__last)) .
+C2:    (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamestringtypeindex__first >= integer__first) and (
+           domainnamestringtypeindex__first <= integer__last)) .
+ 
+
+For path(s) from start to assertion of line 130:
+
+function_convertdomainnametowire_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H10:   domainnamelength(domainnameversion) - 1 >= integer__first .
+H11:   domainnamelength(domainnameversion) - 1 <= integer__last .
+H12:   domainnamelength(domainnameversion) - 1 >= integer__base__first .
+H13:   domainnamelength(domainnameversion) - 1 <= integer__base__last .
+H14:   domainnamestringtypeindex__first >= integer__first .
+H15:   domainnamestringtypeindex__first <= integer__last .
+H16:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamelength(domainnameversion) - 1 >= 
+           integer__first) and (domainnamelength(
+           domainnameversion) - 1 <= integer__last)) .
+H17:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamestringtypeindex__first >= integer__first) and (
+           domainnamestringtypeindex__first <= integer__last)) .
+H18:   domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H19:   domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H20:   domainnamestringtypeindex__first <= domainnamelength(
+           domainnameversion) - 1 .
+        ->
+C1:    domainnamelength(domainnameversion) >= 1 .
+C2:    domainnamelength(domainnameversion) <= 
+           maxdomainnamelength .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+C4:    domainnamestringtypeindex__first >= integer__first .
+C5:    domainnamestringtypeindex__first <= integer__last .
+C6:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+C7:    domainnamestringtypeindex__first <= domainnamelength(
+           domainnameversion) - 1 .
+C8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+C9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 130 to assertion of line 130:
+
+function_convertdomainnametowire_5.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+H13:   loop__1__i + 1 >= linelengthindex__first .
+H14:   loop__1__i + 1 <= linelengthindex__last .
+H15:   loop__1__i + 1 >= integer__base__first .
+H16:   loop__1__i + 1 <= integer__base__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H22:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H23:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H24:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H25:   not (loop__1__i = lengthofdomainname__entry__loop__1 - 1) .
+        ->
+C1:    lengthofdomainname >= 1 .
+C2:    lengthofdomainname <= maxdomainnamelength .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= domainnamestringtypeindex__first .
+C7:    loop__1__i + 1 <= lengthofdomainname__entry__loop__1 - 1 .
+C8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+C9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+ 
+
+function_convertdomainnametowire_6.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   not (element(domainnameversion, [loop__1__i]) = 46) .
+H13:   element(domainnameversion, [loop__1__i]) >= 
+           character__first .
+H14:   element(domainnameversion, [loop__1__i]) <= 
+           character__last .
+H15:   loop__1__i >= domainnamestringtypeindex__first .
+H16:   loop__1__i <= domainnamestringtypeindex__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   not (loop__1__i = lengthofdomainname__entry__loop__1 - 1) .
+        ->
+C1:    lengthofdomainname >= 1 .
+C2:    lengthofdomainname <= maxdomainnamelength .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= domainnamestringtypeindex__first .
+C7:    loop__1__i + 1 <= lengthofdomainname__entry__loop__1 - 1 .
+C8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+C9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 131:
+
+function_convertdomainnametowire_7.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+        ->
+C1:    loop__1__i >= domainnamestringtypeindex__first .
+C2:    loop__1__i <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 132:
+
+function_convertdomainnametowire_8.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+        ->
+C1:    loop__1__i + 1 >= linelengthindex__first .
+C2:    loop__1__i + 1 <= linelengthindex__last .
+C3:    loop__1__i + 1 >= integer__base__first .
+C4:    loop__1__i + 1 <= integer__base__last .
+C5:    loop__1__i + 1 >= wirestringtypeindex__first .
+C6:    loop__1__i + 1 <= wirestringtypeindex__last .
+C7:    loop__1__i + 1 >= integer__base__first .
+C8:    loop__1__i + 1 <= integer__base__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 132:
+
+function_convertdomainnametowire_9.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+H13:   loop__1__i + 1 >= linelengthindex__first .
+H14:   loop__1__i + 1 <= linelengthindex__last .
+H15:   loop__1__i + 1 >= integer__base__first .
+H16:   loop__1__i + 1 <= integer__base__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H22:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+        ->
+C1:    findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+C2:    findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 134:
+
+function_convertdomainnametowire_10.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   not (element(domainnameversion, [loop__1__i]) = 46) .
+        ->
+C1:    element(domainnameversion, [loop__1__i]) >= 
+           character__first .
+C2:    element(domainnameversion, [loop__1__i]) <= 
+           character__last .
+C3:    loop__1__i >= domainnamestringtypeindex__first .
+C4:    loop__1__i <= domainnamestringtypeindex__last .
+C5:    loop__1__i + 1 >= wirestringtypeindex__first .
+C6:    loop__1__i + 1 <= wirestringtypeindex__last .
+C7:    loop__1__i + 1 >= integer__base__first .
+C8:    loop__1__i + 1 <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_11.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H10:   domainnamelength(domainnameversion) - 1 >= integer__first .
+H11:   domainnamelength(domainnameversion) - 1 <= integer__last .
+H12:   domainnamelength(domainnameversion) - 1 >= integer__base__first .
+H13:   domainnamelength(domainnameversion) - 1 <= integer__base__last .
+H14:   domainnamestringtypeindex__first >= integer__first .
+H15:   domainnamestringtypeindex__first <= integer__last .
+H16:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamelength(domainnameversion) - 1 >= 
+           integer__first) and (domainnamelength(
+           domainnameversion) - 1 <= integer__last)) .
+H17:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamestringtypeindex__first >= integer__first) and (
+           domainnamestringtypeindex__first <= integer__last)) .
+H18:   domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H19:   domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H20:   not (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) .
+        ->
+C1:    domainnamestringtypeindex__first >= linelengthindex__first .
+C2:    domainnamestringtypeindex__first <= linelengthindex__last .
+C3:    domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+C4:    domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_12.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+H13:   loop__1__i + 1 >= linelengthindex__first .
+H14:   loop__1__i + 1 <= linelengthindex__last .
+H15:   loop__1__i + 1 >= integer__base__first .
+H16:   loop__1__i + 1 <= integer__base__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H22:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H23:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H24:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H25:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+        ->
+C1:    domainnamestringtypeindex__first >= linelengthindex__first .
+C2:    domainnamestringtypeindex__first <= linelengthindex__last .
+C3:    domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+C4:    domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+ 
+
+function_convertdomainnametowire_13.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   not (element(domainnameversion, [loop__1__i]) = 46) .
+H13:   element(domainnameversion, [loop__1__i]) >= 
+           character__first .
+H14:   element(domainnameversion, [loop__1__i]) <= 
+           character__last .
+H15:   loop__1__i >= domainnamestringtypeindex__first .
+H16:   loop__1__i <= domainnamestringtypeindex__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+        ->
+C1:    domainnamestringtypeindex__first >= linelengthindex__first .
+C2:    domainnamestringtypeindex__first <= linelengthindex__last .
+C3:    domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+C4:    domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_14.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H10:   domainnamelength(domainnameversion) - 1 >= integer__first .
+H11:   domainnamelength(domainnameversion) - 1 <= integer__last .
+H12:   domainnamelength(domainnameversion) - 1 >= integer__base__first .
+H13:   domainnamelength(domainnameversion) - 1 <= integer__base__last .
+H14:   domainnamestringtypeindex__first >= integer__first .
+H15:   domainnamestringtypeindex__first <= integer__last .
+H16:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamelength(domainnameversion) - 1 >= 
+           integer__first) and (domainnamelength(
+           domainnameversion) - 1 <= integer__last)) .
+H17:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamestringtypeindex__first >= integer__first) and (
+           domainnamestringtypeindex__first <= integer__last)) .
+H18:   domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H19:   domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H20:   not (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) .
+H21:   domainnamestringtypeindex__first >= linelengthindex__first .
+H22:   domainnamestringtypeindex__first <= linelengthindex__last .
+H23:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H24:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H25:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H26:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+C2:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_15.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+H13:   loop__1__i + 1 >= linelengthindex__first .
+H14:   loop__1__i + 1 <= linelengthindex__last .
+H15:   loop__1__i + 1 >= integer__base__first .
+H16:   loop__1__i + 1 <= integer__base__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H22:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H23:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H24:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H25:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+H26:   domainnamestringtypeindex__first >= linelengthindex__first .
+H27:   domainnamestringtypeindex__first <= linelengthindex__last .
+H28:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H29:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H30:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H31:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+C2:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+ 
+
+function_convertdomainnametowire_16.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   not (element(domainnameversion, [loop__1__i]) = 46) .
+H13:   element(domainnameversion, [loop__1__i]) >= 
+           character__first .
+H14:   element(domainnameversion, [loop__1__i]) <= 
+           character__last .
+H15:   loop__1__i >= domainnamestringtypeindex__first .
+H16:   loop__1__i <= domainnamestringtypeindex__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+H22:   domainnamestringtypeindex__first >= linelengthindex__first .
+H23:   domainnamestringtypeindex__first <= linelengthindex__last .
+H24:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H25:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H26:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H27:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+C2:    findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 138:
+
+function_convertdomainnametowire_17.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H3:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H5:    ((domainnamelength(domainnameversion) = 1) and ((element(
+           domainnameversion, [1]) = 32) or (element(
+           domainnameversion, [2]) = 32))) or ((
+           domainnamelength(domainnameversion) = 
+           maxdomainnamelength) or ((element(
+           domainnameversion, [domainnamelength(
+           domainnameversion) + 1]) = 32) and (for_all(q_: 
+           integer, ((q_ >= 1) and (q_ <= domainnamelength(
+           domainnameversion))) -> (element(
+           domainnameversion, [q_]) <> 32))))) .
+H6:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H7:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H8:    domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H9:    domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H10:   domainnamelength(domainnameversion) - 1 >= integer__first .
+H11:   domainnamelength(domainnameversion) - 1 <= integer__last .
+H12:   domainnamelength(domainnameversion) - 1 >= integer__base__first .
+H13:   domainnamelength(domainnameversion) - 1 <= integer__base__last .
+H14:   domainnamestringtypeindex__first >= integer__first .
+H15:   domainnamestringtypeindex__first <= integer__last .
+H16:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamelength(domainnameversion) - 1 >= 
+           integer__first) and (domainnamelength(
+           domainnameversion) - 1 <= integer__last)) .
+H17:   (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) -> ((
+           domainnamestringtypeindex__first >= integer__first) and (
+           domainnamestringtypeindex__first <= integer__last)) .
+H18:   domainnamelength(domainnameversion) >= 
+           domainnamestringtypeindex__first .
+H19:   domainnamelength(domainnameversion) <= 
+           domainnamestringtypeindex__last .
+H20:   not (domainnamestringtypeindex__first <= 
+           domainnamelength(domainnameversion) - 1) .
+H21:   domainnamestringtypeindex__first >= linelengthindex__first .
+H22:   domainnamestringtypeindex__first <= linelengthindex__last .
+H23:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H24:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H25:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H26:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+H27:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H28:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    0 >= character__first .
+C2:    0 <= character__last .
+C3:    0 >= character__first .
+C4:    0 <= character__last .
+C5:    domainnamelength(domainnameversion) + 1 >= 
+           wirestringtypeindex__first .
+C6:    domainnamelength(domainnameversion) + 1 <= 
+           wirestringtypeindex__last .
+C7:    domainnamelength(domainnameversion) + 1 >= integer__base__first .
+C8:    domainnamelength(domainnameversion) + 1 <= integer__base__last .
+ 
+
+For path(s) from assertion of line 130 to run-time check associated with statement of line 138:
+
+function_convertdomainnametowire_18.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   element(domainnameversion, [loop__1__i]) = 46 .
+H13:   loop__1__i + 1 >= linelengthindex__first .
+H14:   loop__1__i + 1 <= linelengthindex__last .
+H15:   loop__1__i + 1 >= integer__base__first .
+H16:   loop__1__i + 1 <= integer__base__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H22:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H23:   findperiod(domainnameversion, loop__1__i + 1) >= 
+           character__first .
+H24:   findperiod(domainnameversion, loop__1__i + 1) <= 
+           character__last .
+H25:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+H26:   domainnamestringtypeindex__first >= linelengthindex__first .
+H27:   domainnamestringtypeindex__first <= linelengthindex__last .
+H28:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H29:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H30:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H31:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+H32:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H33:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    0 >= character__first .
+C2:    0 <= character__last .
+C3:    0 >= character__first .
+C4:    0 <= character__last .
+C5:    lengthofdomainname + 1 >= wirestringtypeindex__first .
+C6:    lengthofdomainname + 1 <= wirestringtypeindex__last .
+C7:    lengthofdomainname + 1 >= integer__base__first .
+C8:    lengthofdomainname + 1 <= integer__base__last .
+ 
+
+function_convertdomainnametowire_19.
+H1:    lengthofdomainname >= 1 .
+H2:    lengthofdomainname <= maxdomainnamelength .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           domainnameversion, [i___1]) >= character__first) and (element(
+           domainnameversion, [i___1]) <= character__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= domainnamestringtypeindex__first .
+H7:    loop__1__i <= lengthofdomainname__entry__loop__1 - 1 .
+H8:    lengthofdomainname__entry__loop__1 >= 
+           domainnamestringtypeindex__first .
+H9:    lengthofdomainname__entry__loop__1 <= 
+           domainnamestringtypeindex__last .
+H10:   loop__1__i >= domainnamestringtypeindex__first .
+H11:   loop__1__i <= domainnamestringtypeindex__last .
+H12:   not (element(domainnameversion, [loop__1__i]) = 46) .
+H13:   element(domainnameversion, [loop__1__i]) >= 
+           character__first .
+H14:   element(domainnameversion, [loop__1__i]) <= 
+           character__last .
+H15:   loop__1__i >= domainnamestringtypeindex__first .
+H16:   loop__1__i <= domainnamestringtypeindex__last .
+H17:   loop__1__i + 1 >= wirestringtypeindex__first .
+H18:   loop__1__i + 1 <= wirestringtypeindex__last .
+H19:   loop__1__i + 1 >= integer__base__first .
+H20:   loop__1__i + 1 <= integer__base__last .
+H21:   loop__1__i = lengthofdomainname__entry__loop__1 - 1 .
+H22:   domainnamestringtypeindex__first >= linelengthindex__first .
+H23:   domainnamestringtypeindex__first <= linelengthindex__last .
+H24:   domainnamestringtypeindex__first >= 
+           wirestringtypeindex__first .
+H25:   domainnamestringtypeindex__first <= 
+           wirestringtypeindex__last .
+H26:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H27:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+H28:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) >= character__first .
+H29:   findperiod(domainnameversion, 
+           domainnamestringtypeindex__first) <= character__last .
+        ->
+C1:    0 >= character__first .
+C2:    0 <= character__last .
+C3:    0 >= character__first .
+C4:    0 <= character__last .
+C5:    lengthofdomainname + 1 >= wirestringtypeindex__first .
+C6:    lengthofdomainname + 1 <= wirestringtypeindex__last .
+C7:    lengthofdomainname + 1 >= integer__base__first .
+C8:    lengthofdomainname + 1 <= integer__base__last .
+ 
+
+For path(s) from start to finish:
+
+function_convertdomainnametowire_20.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 130 to finish:
+
+function_convertdomainnametowire_21.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+function_convertdomainnametowire_22.
+*** true .          /* trivially true VC removed by Examiner */
+
+

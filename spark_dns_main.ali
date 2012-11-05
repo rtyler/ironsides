@@ -1,0 +1,125 @@
+V "GNAT Lib v2011"
+M P 0 W=b
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnn
+
+U spark_dns_main%b	spark_dns_main.adb	b18b067a NE OO SU
+W dns_table_pkg%s	dns_table_pkg.adb	dns_table_pkg.ali
+W spark%s		spark.ads		spark.ali
+W spark.ada%s		spark-ada.ads		spark-ada.ali
+W spark.ada.text_io%s	spark-ada-text_io.adb	spark-ada-text_io.ali
+W spark_ada_command_line%s  spark_ada_command_line.adb  spark_ada_command_line.ali
+W system%s		system.ads		system.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W tcp_dns_package%s	tcp_dns_package.adb	tcp_dns_package.ali
+W udp_dns_package%s	udp_dns_package.adb	udp_dns_package.ali
+W zone_file_io%s	zone_file_io.adb	zone_file_io.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-reatim.ads		20110428140902 63f07669
+D a-stream.ads		20110428140902 2ca4ee37
+D a-sytaco.ads		20110428140902 a7cf8eb9
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D dns_network.ads	20120707130602 f1ab7b6e
+D dns_network_receive.ads  20120707130414 b5e0b4ea
+D dns_table_pkg.ads	20120707130414 38043df2
+D dns_types.ads		20120707130416 d000ba3f
+D gnat.ads		20110428140904 fd2ad2f1
+D g-socket.ads		20110428140904 c20e5040
+D interfac.ads		20110428140906 f77d8799
+D i-c.ads		20110428140906 5421119b
+D i-cstrin.ads		20110428140906 341d0ddf
+D i-cstrea.ads		20110428140906 1bd72c32
+D multitask_process_dns_request.ads  20120707130416 eceb6286
+D process_dns_request.ads  20120707130418 a0eccf01
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-a_record_type.ads  20120707130420 0d6b36f2
+D rr_type-aaaa_record_type.ads  20120707130420 1ee8fe4c
+D rr_type-cname_record_type.ads  20120707130420 40c48ba5
+D rr_type-dnskey_record_type.ads  20120707130420 71b14674
+D rr_type-mx_record_type.ads  20120707130420 dd5a7d35
+D rr_type-ns_record_type.ads  20120707130420 9cfbe856
+D rr_type-nsec_record_type.ads  20120707130422 3cb23cba
+D rr_type-ptr_record_type.ads  20120707130422 fa9794c7
+D rr_type-rrsig_record_type.ads  20120707130422 94724ac7
+D rr_type-soa_record_type.ads  20120707130422 250fc6ac
+D spark.ads		20110601161248 99ec3c77
+D spark-ada.ads		20110601161248 ebcb8742
+D spark-ada-text_io.ads	20110601161248 202f1ff3
+D spark_ada_command_line.ads  20120707130424 025e8b63
+D spark_dns_main.adb	20120707130424 189be878
+D system.ads		20110428140910 bc164b96
+D s-atacco.ads		20110428140906 1dc856ad
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-multip.ads		20110428140908 38ac9f73
+D s-oscons.ads		20110428170002 cdbaafae
+D s-osinte.ads		20110428140908 ecf1fbfd
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stausa.ads		20110428140908 017a0a05
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-tasinf.ads		20110428140908 859198ad
+D s-taspri.ads		20110428140908 196697f7
+D s-taprop.ads		20110428140908 07f79e46
+D s-taskin.ads		20110428140908 b2eaee08
+D s-taprob.ads		20110428140908 502249e3
+D s-tassta.ads		20110428140908 e88ef99e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+D s-win32.ads		20110428140910 07238fa2
+D tcp_dns_package.ads	20120707130426 3af2f91a
+D udp_dns_package.ads	20120707130426 936384e0
+D unsigned_types.ads	20120707130426 dd57bff3
+D zone_file_io.ads	20120707130426 1af43a9a
+X 15 dns_table_pkg.ads
+46K9*dns_table_pkg 269e18 40|22w6
+X 36 spark.ads
+41K9*SPARK 43e10 40|21r6 54r15
+X 37 spark-ada.ads
+41K15*Ada 43e14 40|21r12 54r21
+X 38 spark-ada-text_io.ads
+56K19*Text_IO 727e22 40|21w16 54r25
+69R9*File_Type 719e14 40|54r33
+X 39 spark_ada_command_line.ads
+60K9*SPARK_Ada_Command_Line 87e27 40|20w6 56r4 61r7 61r47
+69U14*Create_File_From_Argument 40|56s27
+75I9*Exit_Status<integer>
+78i4*Failure{75I9} 40|61r70
+81U14*Exit_With_Status 40|61s30
+X 40 spark_dns_main.adb
+40U11*Spark_Dns_Main 40b11 65l5 65t19
+50b4 Success{boolean} 58m43 58r43 60r7
+54r4 zoneFile{38|69R9} 56m55 56r55 58m33 58r33
+X 73 tcp_dns_package.ads
+23K9*Tcp_Dns_Package 40|19w6 63r4 73|44e20
+27U14*Initialization_Done 40|63s20
+X 74 udp_dns_package.ads
+27K9*Udp_Dns_Package 40|18w6 64r4 74|48e20
+31U14*Initialization_Done 40|64s20
+X 76 zone_file_io.ads
+26K9*zone_file_io 40|23w6 58r4 76|34e17
+28U14*processzoneFile 40|58s17
+

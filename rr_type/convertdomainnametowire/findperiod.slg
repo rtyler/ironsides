@@ -1,0 +1,548 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertDomainNameToWire.FindPeriod
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_findperiod_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+***  Proved C1:  position >= linelengthindex__first
+     using hypothesis H3.
+***  Proved C2:  position <= linelengthindex__last
+     using hypothesis H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H4).
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(17).
+     This was achieved by replacing all occurrences of linelengthindex__first 
+          by:
+          1.
+<S>  New H3:  position >= 1
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H4:  position <= 256
+-S-  Applied substitution rule findperiod_rules(22).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(token, [i___1]) and 
+          element(token, [i___1]) <= 255)
+<S>  New C1:  position < domainnamestringtypeindex__last -> position >= 1 and 
+          position <= domainnamestringtypeindex__last
+-S-  Applied substitution rule findperiod_rules(23).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(token, [i___1]) and element(token, [i___1]) <= 255)
+<S>  New C1:  position < 128 -> position >= 1 and position <= 128
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H5 (true-hypothesis).
+---  Eliminated hypothesis H6 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H8 (true-hypothesis).
+     +++  New H9:  integer__size >= 0
+     +++  New H10:  character__size >= 0
+     +++  New H11:  positive__size >= 0
+     +++  New H12:  linelengthindex__size >= 0
+     +++  New H13:  domainnamestringtypeindex__size >= 0
+>>>  Conclusion C1 is an implication formula [P->Q].
+     Attempting to prove this by proving Q while adding P to the hypotheses.
++++  Added new hypotheses (in proving an implication formula).
+     +++  New H14:  position < 128
++++  New subgoal C1:  position >= 1 and position <= 128
+>>>  Conclusion C1 has now been split into two, giving:
+     >>>  C1:  position >= 1
+     >>>  C2:  position <= 128
+***  Proved subgoal C1
+     using hypothesis H3.
+***  Proved subgoal C2
+     using hypothesis H14.
+***  Proved C1:  position < 128 -> position >= 1 and position <= 128
+     by implication.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_3.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(17).
+     This was achieved by replacing all occurrences of linelengthindex__first 
+          by:
+          1.
+<S>  New H4:  position >= 1
+<S>  New H6:  result >= 1
+<S>  New H8:  result >= 0
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H2:  result < 256
+<S>  New H5:  position <= 256
+<S>  New H7:  result <= 256
+<S>  New H9:  result <= 255
+-S-  Applied substitution rule findperiod_rules(22).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(token, [i___1]) and 
+          element(token, [i___1]) <= 255)
+<S>  New C1:  result + 1 < domainnamestringtypeindex__last -> result >= 0 and 
+          result + 1 <= domainnamestringtypeindex__last
+-S-  Applied substitution rule findperiod_rules(23).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(token, [i___1]) and element(token, [i___1]) <= 255)
+<S>  New C1:  result < 127 -> result >= 0 and result <= 127
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H11 (true-hypothesis).
+---  Eliminated hypothesis H9 (duplicate of H2).
+---  Eliminated hypothesis H5 (redundant, given H1 & H2).
+---  Eliminated hypothesis H7 (redundant, given H2).
+---  Eliminated hypothesis H8 (redundant, given H6).
+     +++  New H12:  integer__size >= 0
+     +++  New H13:  character__size >= 0
+     +++  New H14:  positive__size >= 0
+     +++  New H15:  linelengthindex__size >= 0
+     +++  New H16:  domainnamestringtypeindex__size >= 0
+>>>  Conclusion C1 is an implication formula [P->Q].
+     Attempting to prove this by proving Q while adding P to the hypotheses.
++++  Added new hypotheses (in proving an implication formula).
+     +++  New H17:  result < 127
++++  New subgoal C1:  result >= 0 and result <= 127
+>>>  Conclusion C1 has now been split into two, giving:
+     >>>  C1:  result >= 0
+     >>>  C2:  result <= 127
+***  Proved subgoal C1
+     using hypothesis H8.
+***  Proved subgoal C2
+     using hypothesis H17.
+***  Proved C1:  result < 127 -> result >= 0 and result <= 127
+     by implication.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H4).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+***  Proved C1:  true
+***  Proved C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+     using hypothesis H2.
+***  Proved C4:  position >= linelengthindex__first
+     using hypothesis H3.
+***  Proved C5:  position <= linelengthindex__last
+     using hypothesis H4.
++++  Using "A->B, A |- B" on hypotheses H9 & H10 yields a new hypothesis:
+     +++  H12:  position >= domainnamestringtypeindex__first and position <= 
+          domainnamestringtypeindex__last
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(17).
+     This was achieved by replacing all occurrences of linelengthindex__first 
+          by:
+          1.
+<S>  New H3:  position >= 1
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H4:  position <= 256
+<S>  New C2:  position < 256
+-S-  Applied substitution rule findperiod_rules(22).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H9:  position < domainnamestringtypeindex__last -> position >= 1 and 
+          position <= domainnamestringtypeindex__last
+<S>  New H12:  position >= 1 and position <= domainnamestringtypeindex__last
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(token, [i___1]) and 
+          element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(23).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H10:  position < 128
+<S>  New H9:  position < 128 -> position >= 1 and position <= 128
+<S>  New H12:  position >= 1 and position <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(token, [i___1]) and element(token, [i___1]) <= 255)
+***  Proved C2:  position < 256
+     using hypothesis H10.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_5.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+***  Proved C1:  result + 1 >= position
+     using hypothesis H1.
+***  Proved C3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+     using hypothesis H3.
+***  Proved C4:  position >= linelengthindex__first
+     using hypothesis H4.
+***  Proved C5:  position <= linelengthindex__last
+     using hypothesis H5.
++++  Using "A->B, A |- B" on hypotheses H12 & H13 yields a new hypothesis:
+     +++  H15:  result + 1 >= domainnamestringtypeindex__first and result + 1 
+          <= domainnamestringtypeindex__last
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(17).
+     This was achieved by replacing all occurrences of linelengthindex__first 
+          by:
+          1.
+<S>  New H4:  position >= 1
+<S>  New H6:  result >= 1
+<S>  New H8:  result >= 0
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H2:  result < 256
+<S>  New H5:  position <= 256
+<S>  New H7:  result <= 256
+<S>  New H9:  result <= 255
+<S>  New C2:  result < 255
+-S-  Applied substitution rule findperiod_rules(22).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H12:  result + 1 < domainnamestringtypeindex__last -> result >= 0 and 
+          result + 1 <= domainnamestringtypeindex__last
+<S>  New H15:  result >= 0 and result + 1 <= domainnamestringtypeindex__last
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(token, [i___1]) and 
+          element(token, [i___1]) <= 255)
+-S-  Applied substitution rule findperiod_rules(23).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H13:  result < 127
+<S>  New H12:  result < 127 -> result >= 0 and result <= 127
+<S>  New H15:  result >= 0 and result <= 127
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(token, [i___1]) and element(token, [i___1]) <= 255)
+***  Proved C2:  result < 255
+     using hypothesis H13.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_6.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+***  Proved C1:  result + 1 >= linelengthindex__first
+     using hypothesis H6.
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H2:  result < 256
+<S>  New H5:  position <= 256
+<S>  New H7:  result <= 256
+<S>  New C2:  result <= 255
+***  Proved C2:  result <= 255
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  0 >= character__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  0 <= character__last
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  0 >= integer__base__first
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  0 <= integer__base__last
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+<S>  New C2:  true
+-S-  Applied substitution rule findperiod_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  true
+-S-  Applied substitution rule findperiod_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  true
+***  Proved C4:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_8.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H9)
+          .
+-S-  Applied substitution rule findperiod_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= character__last)
+<S>  New C1:  result + 1 - position >= 0
+-S-  Applied substitution rule findperiod_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 0 <= element(
+          token, [i___1]) and element(token, [i___1]) <= 255)
+<S>  New C2:  result + 1 - position <= 255
+-S-  Applied substitution rule findperiod_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  result + 1 - position >= - 2147483648
+-S-  Applied substitution rule findperiod_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  result + 1 - position <= 2147483647
+***  Proved C1:  result + 1 - position >= 0
+     using hypothesis H1.
+***  Proved C3:  result + 1 - position >= - 2147483648
+     using hypothesis H1.
+>>>  Restructured hypothesis H13 into:
+     >>>  H13:  domainnamestringtypeindex__last <= result + 1 or element(token, 
+          [result + 1]) = 46
+-S-  Applied substitution rule findperiod_rules(17).
+     This was achieved by replacing all occurrences of linelengthindex__first 
+          by:
+          1.
+<S>  New H4:  position >= 1
+<S>  New H6:  result >= 1
+<S>  New H8:  result >= 0
+-S-  Applied substitution rule findperiod_rules(18).
+     This was achieved by replacing all occurrences of linelengthindex__last by:
+          256.
+<S>  New H2:  result < 256
+<S>  New H5:  position <= 256
+<S>  New H7:  result <= 256
+<S>  New H9:  result <= 255
+-S-  Applied substitution rule findperiod_rules(22).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          domainnamestringtypeindex__last -> 0 <= element(token, [i___1]) and 
+          element(token, [i___1]) <= 255)
+<S>  New H12:  result + 1 < domainnamestringtypeindex__last -> result >= 0 and 
+          result + 1 <= domainnamestringtypeindex__last
+-S-  Applied substitution rule findperiod_rules(23).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H13:  127 <= result or element(token, [result + 1]) = 46
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(token, [i___1]) and element(token, [i___1]) <= 255)
+<S>  New H12:  result < 127 -> result >= 0 and result <= 127
+***  Proved C2:  result + 1 - position <= 255
+     using hypotheses H4 & H9.
+***  Proved C4:  result + 1 - position <= 2147483647
+     using hypotheses H2 & H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_9.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H5 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H6 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H3).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  0 >= character__first
+%%%  Simplified H14 on reading formula in, to give:
+     %%%  H14:  0 <= character__last
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  0 >= integer__base__first
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  0 <= integer__base__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  0 >= character__first
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  0 <= character__last
+***  Proved C1:  true
+***  Proved C2:  0 >= character__first
+     using hypothesis H13.
+***  Proved C3:  0 <= character__last
+     using hypothesis H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_findperiod_10.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, domainnamestringtypeindex__first <= 
+          i___1 and i___1 <= domainnamestringtypeindex__last -> 
+          character__first <= element(token, [i___1]) and element(token, [i___1]
+          ) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H9)
+          .
+***  Proved C1:  true
+***  Proved C2:  result + 1 - position >= character__first
+     using hypothesis H16.
+***  Proved C3:  result + 1 - position <= character__last
+     using hypothesis H17.
+***  PROVED VC.
+

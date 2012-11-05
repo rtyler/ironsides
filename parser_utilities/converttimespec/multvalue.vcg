@@ -1,0 +1,423 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+            function Parser_Utilities.ConvertTimeSpec.MultValue
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 627:
+
+function_multvalue_1.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+        ->
+C1:    char >= character__first .
+C2:    char <= character__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 627:
+
+function_multvalue_2.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+        ->
+C1:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+C2:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 630:
+
+function_multvalue_3.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 83 .
+        ->
+C1:    1 >= natural__first .
+C2:    1 <= natural__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 632:
+
+function_multvalue_4.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 77 .
+        ->
+C1:    secondsinaminute >= natural__first .
+C2:    secondsinaminute <= natural__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 634:
+
+function_multvalue_5.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 72 .
+        ->
+C1:    secondsinaminute * minutesinanhour >= natural__first .
+C2:    secondsinaminute * minutesinanhour <= natural__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 636:
+
+function_multvalue_6.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 68 .
+        ->
+C1:    secondsinaminute * minutesinanhour * hoursinaday >= 
+           natural__first .
+C2:    secondsinaminute * minutesinanhour * hoursinaday <= 
+           natural__last .
+C3:    secondsinaminute * minutesinanhour >= integer__base__first .
+C4:    secondsinaminute * minutesinanhour <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 638:
+
+function_multvalue_7.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 87 .
+        ->
+C1:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek >= natural__first .
+C2:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek <= natural__last .
+C3:    secondsinaminute * minutesinanhour * hoursinaday >= 
+           integer__base__first .
+C4:    secondsinaminute * minutesinanhour * hoursinaday <= 
+           integer__base__last .
+C5:    secondsinaminute * minutesinanhour >= integer__base__first .
+C6:    secondsinaminute * minutesinanhour <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 640:
+
+function_multvalue_8.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   not (ada__characters__handling__to_upper(char) = 83) .
+H13:   not (ada__characters__handling__to_upper(char) = 77) .
+H14:   not (ada__characters__handling__to_upper(char) = 72) .
+H15:   not (ada__characters__handling__to_upper(char) = 68) .
+H16:   not (ada__characters__handling__to_upper(char) = 87) .
+        ->
+C1:    0 >= natural__first .
+C2:    0 <= natural__last .
+ 
+
+For path(s) from start to finish:
+
+function_multvalue_9.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 83 .
+H13:   1 >= natural__first .
+H14:   1 <= natural__last .
+H15:   1 >= natural__first .
+H16:   1 <= natural__last .
+        ->
+C1:    1 >= 0 .
+C2:    1 <= 60 * 60 * 24 * 7 .
+C3:    1 >= natural__first .
+C4:    1 <= natural__last .
+ 
+
+function_multvalue_10.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 77 .
+H13:   secondsinaminute >= natural__first .
+H14:   secondsinaminute <= natural__last .
+H15:   secondsinaminute >= natural__first .
+H16:   secondsinaminute <= natural__last .
+        ->
+C1:    secondsinaminute >= 0 .
+C2:    secondsinaminute <= 60 * 60 * 24 * 7 .
+C3:    secondsinaminute >= natural__first .
+C4:    secondsinaminute <= natural__last .
+ 
+
+function_multvalue_11.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 72 .
+H13:   secondsinaminute * minutesinanhour >= natural__first .
+H14:   secondsinaminute * minutesinanhour <= natural__last .
+H15:   secondsinaminute * minutesinanhour >= natural__first .
+H16:   secondsinaminute * minutesinanhour <= natural__last .
+        ->
+C1:    secondsinaminute * minutesinanhour >= 0 .
+C2:    secondsinaminute * minutesinanhour <= 60 * 60 * 24 * 7 .
+C3:    secondsinaminute * minutesinanhour >= natural__first .
+C4:    secondsinaminute * minutesinanhour <= natural__last .
+ 
+
+function_multvalue_12.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 68 .
+H13:   secondsinaminute * minutesinanhour * hoursinaday >= 
+           natural__first .
+H14:   secondsinaminute * minutesinanhour * hoursinaday <= 
+           natural__last .
+H15:   secondsinaminute * minutesinanhour >= integer__base__first .
+H16:   secondsinaminute * minutesinanhour <= integer__base__last .
+H17:   secondsinaminute * minutesinanhour * hoursinaday >= 
+           natural__first .
+H18:   secondsinaminute * minutesinanhour * hoursinaday <= 
+           natural__last .
+        ->
+C1:    secondsinaminute * minutesinanhour * hoursinaday >= 0 .
+C2:    secondsinaminute * minutesinanhour * hoursinaday <= 60 * 60 * 24 * 
+           7 .
+C3:    secondsinaminute * minutesinanhour * hoursinaday >= 
+           natural__first .
+C4:    secondsinaminute * minutesinanhour * hoursinaday <= 
+           natural__last .
+ 
+
+function_multvalue_13.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   ada__characters__handling__to_upper(char) = 87 .
+H13:   secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek >= natural__first .
+H14:   secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek <= natural__last .
+H15:   secondsinaminute * minutesinanhour * hoursinaday >= 
+           integer__base__first .
+H16:   secondsinaminute * minutesinanhour * hoursinaday <= 
+           integer__base__last .
+H17:   secondsinaminute * minutesinanhour >= integer__base__first .
+H18:   secondsinaminute * minutesinanhour <= integer__base__last .
+H19:   secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek >= natural__first .
+H20:   secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek <= natural__last .
+        ->
+C1:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek >= 0 .
+C2:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek <= 60 * 60 * 24 * 7 .
+C3:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek >= natural__first .
+C4:    secondsinaminute * minutesinanhour * hoursinaday * 
+           daysinaweek <= natural__last .
+ 
+
+function_multvalue_14.
+H1:    ismult(char) .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H8:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H9:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+H10:   ada__characters__handling__to_upper(char) >= 
+           character__first .
+H11:   ada__characters__handling__to_upper(char) <= 
+           character__last .
+H12:   not (ada__characters__handling__to_upper(char) = 83) .
+H13:   not (ada__characters__handling__to_upper(char) = 77) .
+H14:   not (ada__characters__handling__to_upper(char) = 72) .
+H15:   not (ada__characters__handling__to_upper(char) = 68) .
+H16:   not (ada__characters__handling__to_upper(char) = 87) .
+H17:   0 >= natural__first .
+H18:   0 <= natural__last .
+H19:   0 >= natural__first .
+H20:   0 <= natural__last .
+        ->
+C1:    0 >= 0 .
+C2:    0 <= 60 * 60 * 24 * 7 .
+C3:    0 >= natural__first .
+C4:    0 <= natural__last .
+ 
+

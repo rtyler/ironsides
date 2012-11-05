@@ -1,0 +1,52 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                      function Parser_Utilities.IsMult
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 525:
+
+function_ismult_1.
+H1:    true .
+H2:    char >= character__first .
+H3:    char <= character__last .
+        ->
+C1:    char >= character__first .
+C2:    char <= character__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 525:
+
+function_ismult_2.
+H1:    true .
+H2:    char >= character__first .
+H3:    char <= character__last .
+H4:    char >= character__first .
+H5:    char <= character__last .
+H6:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+H7:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+        ->
+C1:    ada__characters__handling__to_upper(char) >= 
+           character__first .
+C2:    ada__characters__handling__to_upper(char) <= 
+           character__last .
+ 
+
+For path(s) from start to finish:
+
+function_ismult_3.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+function_ismult_4.
+*** true .          /* trivially true VC removed by Examiner */
+
+

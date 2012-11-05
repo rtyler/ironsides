@@ -1,0 +1,127 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnvnvnnnnnnnnnnnnnvnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnn
+
+U rr_type%b		rr_type.adb		9ce6e57d NE OO PK
+
+U rr_type%s		rr_type.ads		f6134437 EB EE OO PF PK KU
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W unsigned_types%s	unsigned_types.ads	unsigned_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type.adb		20120707130422 b7a21eb9
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D unsigned_types.ads	20120707130426 dd57bff3
+X 6 rr_type.ads
+20K9*Rr_Type 21r26 98l5 98e12 7|19b14 149l5 149t12
+22E9*classType 22e44 80r18
+22n23*INTERNET{22E9}
+22n33*CS{22E9}
+22n37*CH{22E9}
+22n41*HS{22E9}
+24E9*RrItemType 25e47
+24n24*DomainNameOrTimeSpec{24E9}
+24n46*Number{24E9}
+24n54*Class{24E9}
+24n61*RecordIndicator{24E9}
+24n78*Ipv4{24E9}
+24n84*Ipv6{24E9}
+25n7*LParen{24E9}
+25n15*RParen{24E9}
+25n23*Control{24E9}
+25n32*Comment{24E9}
+25n41*Other{24E9}
+27i4*MaxLineLength{natural} 28r48
+28I12*LineLengthIndex{integer} 29r39 7|116r71 117r20
+29A12*LineFromFileType{string}<integer> 30r25 30r45
+30a4*BlankLine{29A12}
+32i4*MaxDomainNameLength{integer} 34r24 38r53 7|32r19 56r38 87r19
+33I12*DomainNameStringTypeIndex{integer} 35r43 64r66 7|27r14 29r15 31r16
+. 32r53 48r17 49r17 53r20 113r25 119r28 129r30
+35A12*DomainNameStringType{string}<integer> 36r31 36r55 55r21 56r17 64r37
+. 70r29 71r60 7|26r14 43r21 44r17 95r60 97r23 111r41 116r38 137r19 137r79
+36a4*BlankDomainName{35A12} 7|97r47
+38I12*WireStringTypeIndex{integer} 39r37 60r58 7|82r14 84r15 86r16
+39A12*WireStringType{string}<integer> 40r25 40r43 60r35 70r58 73r54 82r26
+. 95r70 7|81r14 111r70 114r18 142r54
+40a4*BlankWire{39A12} 7|128r22
+41a4*Spaces32{string} 48r34 48r45 83r7 83r18 83r29
+44i4*MAX_32BIT_VAL{long_long_integer}
+45i4*MAX_16BIT_VAL{long_long_integer}
+46i4*MAX_8BIT_VAL{long_long_integer}
+48a4*Spaces64{string} 49r35 49r46
+49a4*Spaces128{string} 50r35 50r47
+50a4*Spaces256{string} 51r35 51r47
+51a4*Spaces512{string} 52r36 52r48
+52a4*Spaces1024{string}
+54U14*AppendDomainNames 55=7 56>7 57=7 7|42b14 74l8 74t25
+55a7 Left{35A12} 7|43b7 51r35 61r14 62m13 64m13 70m16
+56a7 Right{35A12} 7|44b7 52r35 62r21 70r39
+57b7 Success{boolean} 7|45b7 54m10 57m10 59r10
+60V13*WireNameLength{38I12} 60>28 7|80b13 93l8 93t22
+60a28 Name{39A12} 7|81b7 87r45
+64V13*DomainNameLength{33I12} 64>30 7|25b13 38l8 38t24 51s18 52s18 127s29
+64a30 Name{35A12} 7|26b7 32r48 32r100
+69V13*ConvertDomainNameToWire{39A12} 70>7 7|110b13 140l8 140t31 145s14
+70a7 DomainNameVersion{35A12} 7|111b19 127r46 131r13 132r44 134r33 137r61
+71V13*ConvertStringToDomainName{35A12} 71>39 7|95b13 104l8 104t33 145s38
+71s39 S{string} 7|95b39 99r33 101r30
+73V13*ConvertStringToWire{39A12} 73>33 7|142b13 146l8 146t27
+73s33 S{string} 7|142b33 145r64
+77R9*ResourceRecordType 81e17
+79m10*ttlInSeconds{20|21M9}
+80e10*class{22E9}
+82a4*BlankOwner{39A12}
+87i4*MaxNumRecords{integer} 88r57 89r52
+88I12*ReturnedRecordsIndexType{integer} 95r41
+89I12*NumberOfRecordsType{integer}
+92i4*NumBuckets{integer} 93r52
+93I12*NumBucketsIndexType{integer} 96r37
+95A9*OwnerRecordBucketType(39A12)<integer> 96r61
+96A9*OwnerHashTableType(95A9)<integer>
+X 7 rr_type.adb
+29i7 Index{6|33I12} 31m7 32r13 32r105 35m10 35r19 37r14
+47e7 ORIGIN_CHAR{character} 61r30
+48i7 LengthL{6|33I12} 51m7 53r10 56r12 61r19 61r46 64r18 70r22
+49i7 LengthR{6|33I12} 52m7 56r27 65r39
+65i17 I{integer} 70r33 70r45
+84i7 Index{6|38I12} 86m7 87r13 87r50 90m10 90r19 92r14
+97a7 newdomainName{6|35A12} 101m10 103r14
+99i11 I{integer} 101r24 101r32
+113i4 LengthOfDomainName{6|33I12} 127m7 129r63 138r19
+114a4 WireVersion{6|39A12} 128m7 132m13 134m13 137m7 138m7 139r14
+116V16 FindPeriod{character} 116b16 116>27 116>60 124l11 124t21 132s33 137s50
+116a27 Token{6|35A12} 119r68
+116i60 Position{6|28I12} 118r32 123r41
+117i11 result{6|28I12} 118m22 119r19 119r74 121m13 121r23 123r34
+129i11 I{integer} 131r31 132r25 132r62 134r25 134r51
+X 20 unsigned_types.ads
+18K9*Unsigned_Types 6|18w6 79r25 20|25e19
+21M9*Unsigned32 6|79r40
+

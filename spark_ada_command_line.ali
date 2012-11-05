@@ -1,0 +1,112 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnvvnnnnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnn
+
+U spark_ada_command_line%b  spark_ada_command_line.adb  54b72bb3 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
+W spark%s		spark.ads		spark.ali
+W spark.ada%s		spark-ada.ads		spark-ada.ali
+W spark.ada.text_io%s	spark-ada-text_io.adb	spark-ada-text_io.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U spark_ada_command_line%s  spark_ada_command_line.ads  22719490 EE NE OO PK
+W spark%s		spark.ads		spark.ali
+W spark.ada%s		spark-ada.ads		spark-ada.ali
+W spark.ada.text_io%s	spark-ada-text_io.adb	spark-ada-text_io.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-comlin.ads		20110428140900 e0accaa5
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D gnat.ads		20110428140904 fd2ad2f1
+D g-os_lib.ads		20110428140904 0db74523
+D interfac.ads		20110428140906 f77d8799
+D i-cstrea.ads		20110428140906 1bd72c32
+D spark.ads		20110601161248 99ec3c77
+D spark-ada.ads		20110601161248 ebcb8742
+D spark-ada-text_io.ads	20110601161248 202f1ff3
+D spark_ada_command_line.ads  20120707130424 025e8b63
+D spark_ada_command_line.adb  20120707130424 a3b0c571
+D system.ads		20110428140910 bc164b96
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-os_lib.ads		20110428140908 e0681e2d
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-string.ads		20110428140908 46b01415
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 20|35r6 36r6 46r23 54r10 54r39 55r42 61r47 65r10 65r39 66r30
+X 2 a-comlin.ads
+38K13*Command_Line 139e21 20|35w10 46r27 55r46 61r51 66r34
+41V13*Argument_Count{natural} 20|46s40
+48V13*Argument{string} 20|61s64 66s47
+57V13*Command_Name{string} 20|55s59
+X 9 a-textio.ads
+49K13*Text_IO 471e16 20|36w10 54r14 54r43 65r14 65r43
+52P9*File_Type(369R9)
+119V13*Standard_Error{52P9} 20|54s51 65s51
+259U14*Put_Line 20|54s22 65s22
+260p7 File{52P9} 20|54r31 65r31
+261s7 Item{string} 20|55r13 66r13
+X 12 gnat.ads
+34K9*GNAT 37e9 20|38r6 57r10 67r10 75r7
+X 13 g-os_lib.ads
+51K14*OS_Lib=51:36 20|38w11 57r15 67r15 75r12
+X 16 spark.ads
+41K9*SPARK 43e10 19|57r6 70r18 20|37r6 39r10 51r18 59r7 60r38 63r10 64r13
+X 17 spark-ada.ads
+41K15*Ada 43e14 19|57r12 70r24 20|37r12 39r16 51r24 59r13 60r44 63r16 64r19
+X 18 spark-ada-text_io.ads
+56K19*Text_IO 727e22 19|57w16 70r28 20|37w16 39r20 51r28 59r17 60r48 63r20
+. 64r23
+69R9*File_Type 719e14 19|70r36 20|51r36
+70n23*In_File{70E9} 20|60r56
+91E9*Exception_T 99e38 20|39r28
+91n25*No_Exception{91E9} 20|64r31
+125U14*Open 20|59s25
+126r7 File{69R9} 20|59r30
+127e7 Mode{70E9} 20|60r30
+128s7 Name{string} 20|61r30
+129s7 Form{string} 20|62r30
+687V13*Get_Last_Exception_File{91E9} 20|63s28
+X 19 spark_ada_command_line.ads
+60K9*SPARK_Ada_Command_Line 87l5 87e27 20|41b14 78l5 78t27
+66V13*Argument_Count{natural} 20|44b13 47l8 47t22 53s10
+69U14*Create_File_From_Argument 69>40 70<7 20|50b14 69l8 69t33
+69i40 Number{natural} 20|50b40 61r73 66r56
+70r7 file{18|69R9} 20|51b7 59m38 63r52
+75I9*Exit_Status<integer> 77r23 78r23 81r42 85r23 86r23 20|73r42
+77i4*Success{75I9} 85c4
+78i4*Failure{75I9} 86c4
+81U14*Exit_With_Status 81>32 20|73b14 76l8 76t24
+81i32 Code{75I9} 20|73b32 75r35
+X 26 s-os_lib.ads
+923U14*OS_Exit 20|57s22 67s22 75s19
+

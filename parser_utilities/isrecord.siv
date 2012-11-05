@@ -1,0 +1,302 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.isRecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+function_isrecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+function_isrecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 71:
+
+function_isrecord_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 71:
+
+function_isrecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 72:
+
+function_isrecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 88:
+
+function_isrecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 89:
+
+function_isrecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 96:
+
+function_isrecord_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 97:
+
+function_isrecord_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 104:
+
+function_isrecord_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 105:
+
+function_isrecord_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 112:
+
+function_isrecord_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 113:
+
+function_isrecord_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 120:
+
+function_isrecord_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 121:
+
+function_isrecord_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 121:
+
+function_isrecord_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 130:
+
+function_isrecord_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 131:
+
+function_isrecord_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 131:
+
+function_isrecord_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 140:
+
+function_isrecord_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 141:
+
+function_isrecord_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 141:
+
+function_isrecord_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 141:
+
+function_isrecord_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 151:
+
+function_isrecord_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 152:
+
+function_isrecord_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 152:
+
+function_isrecord_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 152:
+
+function_isrecord_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 162:
+
+function_isrecord_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 163:
+
+function_isrecord_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 163:
+
+function_isrecord_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 163:
+
+function_isrecord_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 163:
+
+function_isrecord_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_isrecord_33.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_34.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_35.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_36.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_37.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_38.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_39.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_40.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_41.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_42.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_43.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_44.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_45.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_46.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_47.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_48.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_49.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_50.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_51.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_52.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_53.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_54.
+*** true .          /* all conclusions proved */
+
+
+function_isrecord_55.
+*** true .          /* all conclusions proved */
+
+

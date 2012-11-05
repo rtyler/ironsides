@@ -1,0 +1,46 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+            {function Rr_Type.ConvertDomainNameToWire.FindPeriod}
+
+
+title function findperiod;
+
+  function round__(real) : integer;
+  type character = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const domainnamestringtypeindex__base__first : integer = pending; 
+  const domainnamestringtypeindex__base__last : integer = pending; 
+  const linelengthindex__base__first : integer = pending; 
+  const linelengthindex__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const domainnamestringtypeindex__first : integer = pending; 
+  const domainnamestringtypeindex__last : integer = pending; 
+  const domainnamestringtypeindex__size : integer = pending; 
+  const linelengthindex__first : integer = pending; 
+  const linelengthindex__last : integer = pending; 
+  const linelengthindex__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var token : string;
+  var position : integer;
+  var result : integer;
+
+end;

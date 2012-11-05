@@ -1,0 +1,51 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnatwu
+A -g
+A -gnato
+A -gnatwa
+A -gnat05
+A -gnat05
+A -gnatp
+A -g
+P ZX
+R nnnnnnnvnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnn
+
+U non_spark_stuff%b	non_spark_stuff.adb	b4f9be83 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+
+U non_spark_stuff%s	non_spark_stuff.ads	7963463b EE NE OO PK
+W unsigned_types%s	unsigned_types.ads	unsigned_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-calend.ads		20110428140858 343c83dd
+D a-unccon.ads		20110428140902 f9eb8f06
+D non_spark_stuff.ads	20120707130416 a434f9c8
+D non_spark_stuff.adb	20120710142444 24f1c496
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-stalib.ads		20110428140908 f78bcf95
+D unsigned_types.ads	20120707130426 dd57bff3
+X 1 ada.ads
+16K9*Ada 19e8 5|1r6 2r10 6r27 6r48 12r40
+X 2 a-calend.ads
+36K13*Calendar 358e17 5|1w10 2r14 6r31 6r52 12r44
+38I9*Time 5|2r23 6r40
+74V13*Time_Of{38I9} 5|6s61 12s53
+97V13*"-"{duration} 5|13s48
+X 4 non_spark_stuff.ads
+20K9*Non_Spark_Stuff 22l5 22e20 5|3b14 15l5 15t20
+21V13*Time_Of{9|21M9} 21>21 21>27 21>34 21>39 21>45 21>53 5|9b13 14l8 14t15
+21i21 Year{natural} 5|9b21 12r61
+21i27 Month{natural} 5|9b27 12r66
+21i34 Day{natural} 5|9b34 12r72
+21i39 Hour{natural} 5|9b39 13r24
+21i45 Minute{natural} 5|9b45 13r32
+21i53 Second{natural} 5|9b53 13r39
+X 5 non_spark_stuff.adb
+6i4 EPOCH_START{2|38I9} 13r50
+X 9 unsigned_types.ads
+18K9*Unsigned_Types 4|18w6 21r78 5|9r78 12r14 9|25e19
+21M9*Unsigned32 4|21r93 5|9r93 12r29
+

@@ -1,0 +1,100 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.InsertSOARecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 654:
+
+procedure_insertsoarecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 660:
+
+procedure_insertsoarecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 664:
+
+procedure_insertsoarecord_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 664 to assertion of line 664:
+
+procedure_insertsoarecord_4.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertsoarecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 664 to run-time check associated with 
+          statement of line 665:
+
+procedure_insertsoarecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 664 to run-time check associated with 
+          statement of line 666:
+
+procedure_insertsoarecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 664 to run-time check associated with 
+          statement of line 667:
+
+procedure_insertsoarecord_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_insertsoarecord_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 664 to finish:
+
+procedure_insertsoarecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertsoarecord_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertsoarecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertsoarecord_13.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertsoarecord_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertsoarecord_15.
+*** true .          /* all conclusions proved */
+
+

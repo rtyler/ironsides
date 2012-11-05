@@ -1,0 +1,69 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function dns_table_pkg.DNS_Table_Type.Same
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 44:
+
+function_same_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 45:
+
+function_same_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 45:
+
+function_same_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 46:
+
+function_same_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 46 to assertion of line 46:
+
+function_same_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 46 to run-time check associated with 
+          statement of line 47:
+
+function_same_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_same_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 46 to finish:
+
+function_same_8.
+*** true .          /* all conclusions proved */
+
+
+function_same_9.
+*** true .          /* all conclusions proved */
+
+

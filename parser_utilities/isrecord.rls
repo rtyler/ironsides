@@ -1,0 +1,35 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                     /*function Parser_Utilities.isRecord*/
+
+
+rule_family isrecord_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+isrecord_rules(1): integer__size >= 0 may_be_deduced.
+isrecord_rules(2): integer__first may_be_replaced_by -2147483648.
+isrecord_rules(3): integer__last may_be_replaced_by 2147483647.
+isrecord_rules(4): integer__base__first may_be_replaced_by -2147483648.
+isrecord_rules(5): integer__base__last may_be_replaced_by 2147483647.
+isrecord_rules(6): character__size >= 0 may_be_deduced.
+isrecord_rules(7): character__first may_be_replaced_by 0.
+isrecord_rules(8): character__last may_be_replaced_by 255.
+isrecord_rules(9): character__base__first may_be_replaced_by 0.
+isrecord_rules(10): character__base__last may_be_replaced_by 255.
+isrecord_rules(11): positive__size >= 0 may_be_deduced.
+isrecord_rules(12): positive__first may_be_replaced_by 1.
+isrecord_rules(13): positive__last may_be_replaced_by 2147483647.
+isrecord_rules(14): positive__base__first may_be_replaced_by -2147483648.
+isrecord_rules(15): positive__base__last may_be_replaced_by 2147483647.
+isrecord_rules(16): rr_type__linelengthindex__size >= 0 may_be_deduced.
+isrecord_rules(17): rr_type__linelengthindex__first may_be_replaced_by 1.
+isrecord_rules(18): rr_type__linelengthindex__last may_be_replaced_by 256.
+isrecord_rules(19): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+isrecord_rules(20): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,306 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U zone_file_parser%b zone_file_parser.adb
+U zone_file_parser%s zone_file_parser.ads
+W DNS_Types%s dns_types.adb dns_types.sli
+W Rr_Type.Soa_Record_Type%s rr_type-soa_record_type.ads rr_type-soa_record_type.sli
+W Rr_Type.Rrsig_Record_Type%s rr_type-rrsig_record_type.ads rr_type-rrsig_record_type.sli
+W Rr_Type.Mx_Record_Type%s rr_type-mx_record_type.ads rr_type-mx_record_type.sli
+W Rr_Type.Dnskey_Record_Type%s rr_type-dnskey_record_type.ads rr_type-dnskey_record_type.sli
+W RR_Type.Aaaa_Record_Type%s rr_type-aaaa_record_type.ads rr_type-aaaa_record_type.sli
+W Rr_Type.A_Record_Type%s rr_type-a_record_type.ads rr_type-a_record_type.sli
+W Rr_Type%s rr_type.adb rr_type.sli
+W Unsigned_Types%s Unsigned_Types.ads Unsigned_Types.sli
+W Ada.Characters.Handling%s ada-characters-handling.shs ada-characters-handling.sli
+W Error_Msgs%s error_msgs.adb error_msgs.sli
+W Non_Spark_Stuff%s non_spark_stuff.adb non_spark_stuff.sli
+W Parser_Utilities%s parser_utilities.adb parser_utilities.sli
+W SPARK.Ada.Strings.Maps%s spark-ada-strings-maps.ads spark-ada-strings-maps.sli
+
+D dns_types.ads 00000000000000 00000000
+D rr_type-soa_record_type.ads 00000000000000 00000000
+D rr_type-rrsig_record_type.ads 00000000000000 00000000
+D rr_type-mx_record_type.ads 00000000000000 00000000
+D rr_type-dnskey_record_type.ads 00000000000000 00000000
+D rr_type-aaaa_record_type.ads 00000000000000 00000000
+D rr_type-a_record_type.ads 00000000000000 00000000
+D rr_type.ads 00000000000000 00000000
+D Unsigned_Types.ads 00000000000000 00000000
+D ada-characters-handling.shs 00000000000000 00000000
+D error_msgs.ads 00000000000000 00000000
+D Non_Spark_Stuff.ads 00000000000000 00000000
+D Parser_Utilities.ads 00000000000000 00000000
+D zone_file_parser.ads 00000000000000 00000000
+D spark-ada-strings-maps.ads 00000000000000 00000000
+D zone_file_parser.adb 00000000000000 00000000
+
+X 1 dns_types.ads
+21K9 DNS_Types 3|22w37 13|21w13 14|22w62
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34
+X 2 rr_type-soa_record_type.ads
+21K9 Soa_Record_Type 13|23w15 14|24w66 16|580r74
+33i4 MAX_SERIAL_VAL 16|580r90
+X 3 rr_type-rrsig_record_type.ads
+23K9 Rrsig_Record_Type 13|22w69 14|24w39 16|125r48 126r37 299r48 300r37
+24i4 TimeStringLength 16|125r66 299r66
+26I12 TimeStringTypeIndex 16|126r55 300r55
+X 4 rr_type-mx_record_type.ads
+21K9 Mx_Record_Type 14|24w15 16|634r61
+23m4 MAX_PREF_VAL 16|634r76
+X 5 rr_type-dnskey_record_type.ads
+22K9 Dnskey_Record_Type 11|22w46 13|22w41 14|23w68
+X 6 rr_type-aaaa_record_type.ads
+20K9 Aaaa_Record_Type 13|22w15 14|23w42
+X 7 rr_type-a_record_type.ads
+20K9 A_Record_Type 13|21w102
+X 8 rr_type.ads
+20K9 Rr_Type 2|20w12 3|22w12 4|20w12 5|21w12 6|19w29 7|19w29 11|22w13 22w38 13|54r19
+. 21w85 21w94 22w7 22w33 22w61 23w7 14|23w25 23w34 23w60 24w7 24w31
+. 24w58 16|125r40 126r29 170r65 299r40 300r29 368r62 422r62 449r65 580r66 634r53
+. 659r64 776r62 805r62 853r40
+24n46 Number 13|54r27
+32i4 MaxDomainNameLength 61r32 66r18 72r24 74r24 16|170r73 368r70 422r70 449r73 659r72
+. 776r70 805r70 853r48
+55a7 Left 58m16 58r26 58r62
+56a7 Right 58r32 58r67
+57e7 Success 58m49 58r39 58r73
+60a28 Name 61r58 62r73
+61i15 Length 61r25 61r63 62r60
+62i20 Q 62r78
+64a30 Name 65r40 65r55 66r42 67r71
+65i15 Length 65r26 66r11 66r47 67r60
+67i20 Q 67r76
+71a39 S 72r12
+73a33 S 74r12
+X 9 Unsigned_Types.ads
+18K9 Unsigned_Types 2|20w21 3|22w21 4|20w21 5|21w21 6|19w13 7|19w13 8|19w13 11|22w22 12|19w13
+. 13|23w32 14|25w31
+X 10 ada-characters-handling.shs
+43K9 Handling 13|21w63 14|22w28
+X 11 error_msgs.ads
+23K9 Error_Msgs 13|21w73 14|22w73
+25a41 currentLine 27r26
+26i4 Length 27r39
+26m25 lineCount 27r47
+29a31 currentLine 31r26
+30i4 Length 31r39
+30m25 lineCount 31r47
+33a35 currentLine 35r26
+34i4 Length 35r39
+34m25 lineCount 35r47
+37a31 currentLine 39r26
+38i4 Length 39r39
+38m25 lineCount 39r47
+41a36 CurrentLine 43r26
+42i4 length 43r39
+42m25 lineCount 43r47
+45a35 CurrentLine 47r26
+46i4 length 47r39
+46m25 lineCount 47r47
+49a44 CurrentLine 51r26
+50i4 length 51r39
+50m25 lineCount 51r47
+53a38 CurrentLine 55r26
+54i4 begIdx 55r39
+54i24 endIdx 55r47
+57a40 CurrentLine 59r26
+58i4 begIdx 59r39
+58i24 endIdx 59r47
+61a33 CurrentLine 63r26
+62m4 lineCount 63r39
+65a35 CurrentLine 67r26
+66i4 length 67r39
+66m25 lineCount 67r47
+X 12 Non_Spark_Stuff.ads
+20K9 Non_Spark_Stuff 13|23w48
+X 13 Parser_Utilities.ads
+27K9 Parser_Utilities 14|23w7
+29a35 target 35m16 35r37
+30a10 Origin 35r45
+31a10 CurrentLine 36r20
+32i10 LastPos 36r33
+33m10 LineCount 36r42
+34e10 Success 35m24 35r53
+38a33 Name 39r32
+38e69 success 39m19 39r38
+41a29 s 44r23
+42i29 length 44r26
+43e29 T 44m16
+46a28 s 51r39 55r60 55r76
+47i28 length 51r42 52r22 53r44 53r65
+48i28 BegIdx 51m16 51r50 52r12 53r13 53r34 55r41
+49i28 EndIdx 51m24 53r23 53r55 55r49
+50e28 T 51m32 54r15
+55i22 I 55r62 55r78
+57m34 value 62m16
+58a7 ZoneFileLine 62r27 62r71 63r58 63r85
+59i7 BegIdx 62r41 62r85 63r39
+60i7 EndIdx 62r49 62r93 63r47
+61e7 Success 62m58 62r101
+63i20 I 63r71 63r98
+65m35 value 70m16
+66a7 ZoneFileLine 70r27 70r71 71r58 71r85
+67i7 BegIdx 70r41 70r85 71r39
+68i7 EndIdx 70r49 70r93 71r47
+69e7 Success 70m58 70r101
+71i20 I 71r71 71r98
+73m35 value 78m16
+74a7 ZoneFileLine 78r27 78r71 79r58 79r85
+75i7 BegIdx 78r41 78r85 79r39
+76i7 EndIdx 78r49 78r93 79r47
+77e7 Success 78m58 78r101
+79i20 I 79r71 79r98
+81a30 S 83r36
+81i63 begIdx 83r39
+82i7 endIdx 83r47
+82m43 RetVal 83m16
+82e83 success 83m23 83r55
+85m32 TimeVal 88m16
+86a7 TimeString 88r29 88r55 89r75 89r100
+87e7 Success 88m42 88r67
+89i20 I 89r86 89r111
+91r24 RRSIG_Rec 96m16 96r31 97r25
+92a23 S 96r42 96r67 97r36
+93i23 Length 96r45 96r70 97r39
+94e23 allDone 96m54
+95e23 success 97m12 97r47
+99r23 DNSKEY_Rec 103m16 103r32 103r69
+100a23 S 103r44 103r81
+101i23 Length 103r47 103r84
+102e23 success 103m56 103r92
+114i27 begIdx 116r12
+115i24 endIdx 116r22
+X 14 zone_file_parser.ads
+30r32 DNSKEY_Rec 34m16
+31a7 zoneFileLine 34r41
+32i7 ZLength 34r55 16|46r30
+33e7 Success 34m28 34r64
+36r31 RRSIG_Rec 40m16
+37a7 zoneFileLine 40r40
+38i7 ZLength 40r54 16|257r30 297r69 297r79 298r34
+39e7 Success 40m27 40r63
+42r32 RRSIG_Rec 46m16
+43a7 zoneFileLine 46r40
+44i7 ZLength 46r54 16|123r69 123r79 124r34
+45e7 Success 46m27 46r63
+48a31 newOrigin 52m16 52r31
+49m31 NewTTL 53m10 53r22
+50a31 zoneFileLine 52r42 53r30 54r32
+51i31 ZLength 52r56 53r44 54r46
+51e69 Success 54m10 53r53 54r23
+56a30 newDomainName 59m17
+57a30 zoneFileLine 59r36 60r33
+58i30 ZLength 59r50 60r47 16|348r30
+58e68 Success 60m11 60r24
+63a7 newDomainName 68m17
+64a7 RRString 68m32
+65a7 zoneFileLine 68r46 69r33
+66i7 ZLength 68r60 69r47 16|402r30
+67e7 Success 69m11 69r24
+71m24 newIpv4 74m16
+72a24 zoneFileLine 74r29 75r32
+73i24 zLength 74r43 75r46 16|689r30
+73e62 success 75m10 75r23
+77a24 newIpv6 80m16
+78a24 zoneFileLine 80r29 81r32
+79i25 zLength 80r43 81r46 16|720r30
+79e63 success 81m10 81r23
+83m37 newPref 87m16
+84a37 newDomainName 87m25
+85a37 zoneFileLine 87r44 88r32
+86i37 zLength 87r58 88r46 16|618r30
+86e75 success 88m10 88r23
+90a38 newNameServer 94m16
+91a39 newEmail 94m31
+92a39 zoneFileLine 94r45 95r32
+93i39 ZLength 94r59 95r46 16|756r30
+93e77 Success 95m10 95r23
+97m32 newSerialNumber 100m16
+98a34 zoneFileLine 100r37 101r32
+99i34 ZLength 100r51 101r46
+99e72 Success 101m10 101r23
+103m28 newTimeSpec 106m16
+104a7 zoneFileLine 106r33 107r32
+105i7 ZLength 106r47 107r46
+105e45 Success 107m10 106r56 107r23
+109a46 newOwner 115m16 115r30
+110m31 newTTL 116m11 116r23
+111e31 newClass 117m11 117r25
+112e31 newType 118m11 118r24
+113a30 zoneFileLine 115r40 116r31 117r35 118r33 119r33
+114i31 zLength 115r54 116r45 117r49 118r47 119r47
+114e69 success 119m11 116r54 117r58 118r56 119r24
+X 15 spark-ada-strings-maps.ads
+51K9 Maps 14|25w25
+135a7 Arg_From 136r13 137r41 138r53 139r19 139r35
+135a17 To 136r31
+137i21 I 138r44 139r29
+138i24 J 139r45
+X 16 zone_file_parser.adb
+35i7 endIdx 46r21
+102i7 BegIdx 123r27 123r36 125r31 170r30 170r53
+103i7 EndIdx 123r48 123r57 124r24 125r24 170r46 171r27 171r36 176r30
+106a7 TimeString 131r65 131r90
+122H17 I 126r24
+130H17 I 131r57
+131i35 J 131r76 131r101
+188r49 RRSIG_Rec 193m16 193r31
+189a7 ZoneFileLine 193r42 194r31
+190i7 ZLength 193r56 194r45
+191i7 EndIdx 194m10 193r65 194r54
+192e7 Success 194m18 193r73 194r62
+242i7 begIdx 297r27 297r36 299r31
+243i7 endIdx 257r21 297r48 297r57 298r24 299r24
+246a7 TimeString 305r65 305r90
+296H17 I 300r24
+304H17 I 305r57
+305i35 J 305r76 305r101
+336i7 begIdx 368r27 368r50
+337i7 endIdx 348r21 368r43 369r24 369r33 374r27
+389i7 begIdx 422r27 422r50 449r30 449r53 455r40
+390i7 endIdx 402r21 422r43 423r24 423r33 428r27 449r46 450r27 450r36 455r30
+487i7 begIdx 517r33 517r49 542r33 542r49
+488i7 EndIdx 517r59 542r59
+563i7 begIdx 580r24
+567i7 TmpVal 580r40 580r56
+602i7 begIdx 634r27 659r29 659r52
+603i7 endIdx 618r21 659r45 660r26 660r35 665r29
+606m7 TmpVal 634r43
+680i7 endIdx 689r21
+711i7 endIdx 720r21
+743i7 begIdx 776r27 776r50 805r27 805r50
+744i7 endIdx 756r21 776r43 777r24 777r33 782r27 805r43 806r24 806r33 811r27
+827i7 begIdx 843r23 843r39 871r21 873r23 873r39
+828i7 endIdx 843r49 871r31 873r49
+830i7 lengthOfToken 852r27 852r43 853r24

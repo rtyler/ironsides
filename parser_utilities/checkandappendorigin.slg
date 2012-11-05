@@ -1,0 +1,356 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.CheckAndAppendOrigin
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(target, [i___1]) and element(target, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(origin, [i___1]) and element(origin, [i___1]) <= 
+          character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  rr_type__domainnamelength(target) = 1 and (element(target, [1]) 
+          = 32 or element(target, [2]) = 32) or (rr_type__domainnamelength(
+          target) = rr_type__maxdomainnamelength or element(target, [
+          rr_type__domainnamelength(target) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__domainnamelength(target) -> 
+          element(target, [q_]) <> 32))
+***  Proved C1:  rr_type__domainnamelength(target) >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C2:  rr_type__domainnamelength(target) <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(target, [i___1]) and element(target, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(origin, [i___1]) and element(origin, [i___1]) <= 
+          character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  rr_type__domainnamelength(target) = 1 and (element(target, [1]) 
+          = 32 or element(target, [2]) = 32) or (rr_type__domainnamelength(
+          target) = rr_type__maxdomainnamelength or element(target, [
+          rr_type__domainnamelength(target) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__domainnamelength(target) -> 
+          element(target, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+-S-  Applied substitution rule checkandappe_rules(15).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C3:  lastpos >= 0
+-S-  Applied substitution rule checkandappe_rules(16).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C4:  lastpos <= 2147483647
+-S-  Applied substitution rule checkandappe_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__maxdomainnamelength by:
+          128.
+<S>  New H12:  rr_type__domainnamelength(target) = 1 and (element(target, [1]) 
+          = 32 or element(target, [2]) = 32) or (rr_type__domainnamelength(
+          target) = 128 or element(target, [rr_type__domainnamelength(target) + 
+          1]) = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__domainnamelength(target) -> element(target, [q_]) <> 32))
+-S-  Applied substitution rule checkandappe_rules(10).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= character__last)
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule checkandappe_rules(11).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= 255)
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H7:  linecount >= 0
+-S-  Applied substitution rule checkandappe_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H8:  linecount <= 4294967295
+-S-  Applied substitution rule checkandappe_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  lastpos >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(currentline, [i___1]) 
+          and element(currentline, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(32).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  lastpos <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          255)
+-S-  Applied substitution rule checkandappe_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H10:  rr_type__domainnamelength(target) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(37).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H11:  rr_type__domainnamelength(target) <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(target, [i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(origin, [i___1]) and element(origin, [i___1]) <= 255)
+***  Proved C3:  lastpos >= 0
+     using hypothesis H5.
+***  Proved C4:  lastpos <= 2147483647
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(target, [i___1]) and element(target, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(origin, [i___1]) and element(origin, [i___1]) <= 
+          character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  rr_type__domainnamelength(target) = 1 and (element(target, [1]) 
+          = 32 or element(target, [2]) = 32) or (rr_type__domainnamelength(
+          target) = rr_type__maxdomainnamelength or element(target, [
+          rr_type__domainnamelength(target) + 1]) = 32 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__domainnamelength(target) -> 
+          element(target, [q_]) <> 32))
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified H17 on reading formula in, to give:
+     %%%  H17:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(target__2, [i___1]) and element(target__2, [i___1]) <= 
+          character__last)
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+-S-  Applied substitution rule checkandappe_rules(15).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C3:  lastpos >= 0
+-S-  Applied substitution rule checkandappe_rules(16).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C4:  lastpos <= 2147483647
+>>>  Restructured hypothesis H16 into:
+     >>>  H16:  origin <> rr_type__blankdomainname
+-S-  Applied substitution rule checkandappe_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__maxdomainnamelength by:
+          128.
+<S>  New H12:  rr_type__domainnamelength(target) = 1 and (element(target, [1]) 
+          = 32 or element(target, [2]) = 32) or (rr_type__domainnamelength(
+          target) = 128 or element(target, [rr_type__domainnamelength(target) + 
+          1]) = 32 and for_all(q_ : integer, 1 <= q_ and q_ <= 
+          rr_type__domainnamelength(target) -> element(target, [q_]) <> 32))
+-S-  Applied substitution rule checkandappe_rules(10).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= character__last)
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+<S>  New H17:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target__2, [
+          i___1]) and element(target__2, [i___1]) <= character__last)
+-S-  Applied substitution rule checkandappe_rules(11).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= 255)
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 255)
+<S>  New H17:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target__2, [
+          i___1]) and element(target__2, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H7:  linecount >= 0
+-S-  Applied substitution rule checkandappe_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H8:  linecount <= 4294967295
+-S-  Applied substitution rule checkandappe_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  lastpos >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(currentline, [i___1]) 
+          and element(currentline, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(32).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  lastpos <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          255)
+-S-  Applied substitution rule checkandappe_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H10:  rr_type__domainnamelength(target) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target, [
+          i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(origin, [
+          i___1]) and element(origin, [i___1]) <= 255)
+<S>  New H17:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(target__2, [
+          i___1]) and element(target__2, [i___1]) <= 255)
+-S-  Applied substitution rule checkandappe_rules(37).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H11:  rr_type__domainnamelength(target) <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(target, [i___1]) and element(target, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(origin, [i___1]) and element(origin, [i___1]) <= 255)
+<S>  New H17:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(target__2, [i___1]) and element(target__2, [i___1]) <= 255)
+***  Proved C3:  lastpos >= 0
+     using hypothesis H5.
+***  Proved C4:  lastpos <= 2147483647
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_4.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_5.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkandappendorigin_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

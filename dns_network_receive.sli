@@ -1,0 +1,92 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Dns_Network_Receive%b dns_network_receive.adb
+U Dns_Network_Receive%s dns_network_receive.ads
+W DNS_Network%s dns_network.adb dns_network.sli
+W DNS_Types%s dns_types.adb dns_types.sli
+
+D dns_network.ads 00000000000000 00000000
+D dns_types.ads 00000000000000 00000000
+D dns_network_receive.adb 00000000000000 00000000
+D dns_network_receive.ads 00000000000000 00000000
+
+X 1 dns_network.ads
+21K9 DNS_Network 4|28m16 40m16 27r22 28r72 30r33 39r22 40r87 42r33 20w23
+22H19 Network 34m16 38m16 43m16 52m16 60m24 74m16 83m24 90m16 33r22
+. 34r29 37r22 38r29 42r22 43r45 51r22 52r60 59r22 60r37 61r28 73r22
+. 74r75 82r22 83r37 84r28 89r22 4|28m28 40m28 27r34 28r84 39r34 40r99
+24H13 Network_Type 22r29
+27N4 Max_Query_Size 4|30r45 42r45
+32U14 Initialize_TCP 33=22
+36U14 Initialize_UDP 37=22
+40U14 Get_Connection_TCP 42=22
+41H7 Socket 43m33
+46U14 Receive_DNS_Packet_TCP 51=22
+47r7 Packet 52m25
+48i7 Number_Bytes 52m33
+49H7 Socket 52r69
+50e7 Failure 52m47
+54U14 Send_DNS_Packet_Tcp 59=22
+55r7 Packet 61m16 60r46 63r65 63r74
+56i7 Number_Bytes 60r54 62r20
+57H7 Socket 60r68
+58e7 Failure 60m16
+68U14 Receive_DNS_Packet 73=22
+69r7 Packet 74m25
+70i7 Number_Bytes 74m33
+71H7 Reply_Address 74m47
+72e7 Failure 74m62
+78U14 Send_DNS_Packet 82=22
+78r30 Packet 84m16 83r46 86r65 86r74
+79i7 Number_Bytes 83r54 85r20
+80H7 To_Address 83r68
+81e7 Failure 83m16
+88U14 Discard_Socket 89=22
+88H29 Socket 90r32
+X 2 dns_types.ads
+21K9 DNS_Types 1|62r36 85r36 20w13 4|29r47 29r79 41r47 41r79 20w13
+23N4 Header_Bits 1|62r46 85r46 4|29r89 41r89
+27I9 Packet_Length_Range 4|29r57 41r57
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34
+X 4 dns_network_receive.ads
+22U14 Receive_DNS_Packet_TCP 27=34
+23r7 Packet 28m37
+24i7 Number_Bytes 28m45 29r31 30r17
+25H7 Socket 28r93
+26e7 Failure 28m59 29r18
+34U14 Receive_DNS_Packet 39=34
+35r7 Packet 40m37
+36i7 Number_Bytes 40m45 41r31 42r17
+37H7 Reply_Address 40m59
+38e7 Failure 40m74 41r18

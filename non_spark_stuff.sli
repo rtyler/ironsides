@@ -1,0 +1,37 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Non_Spark_Stuff%b non_spark_stuff.adb
+U Non_Spark_Stuff%s Non_Spark_Stuff.ads
+W Unsigned_Types%s Unsigned_Types.ads Unsigned_Types.sli
+
+D Unsigned_Types.ads 00000000000000 00000000
+D non_spark_stuff.adb 00000000000000 00000000
+D Non_Spark_Stuff.ads 00000000000000 00000000
+
+X 1 Unsigned_Types.ads
+18K9 Unsigned_Types 3|19w13

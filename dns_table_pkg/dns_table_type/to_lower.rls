@@ -1,0 +1,36 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+               /*function dns_table_pkg.DNS_Table_Type.To_Lower*/
+
+
+rule_family to_lower_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+to_lower_rules(1): rr_type__maxdomainnamelength may_be_replaced_by 128.
+to_lower_rules(2): integer__size >= 0 may_be_deduced.
+to_lower_rules(3): integer__first may_be_replaced_by -2147483648.
+to_lower_rules(4): integer__last may_be_replaced_by 2147483647.
+to_lower_rules(5): integer__base__first may_be_replaced_by -2147483648.
+to_lower_rules(6): integer__base__last may_be_replaced_by 2147483647.
+to_lower_rules(7): character__size >= 0 may_be_deduced.
+to_lower_rules(8): character__first may_be_replaced_by 0.
+to_lower_rules(9): character__last may_be_replaced_by 255.
+to_lower_rules(10): character__base__first may_be_replaced_by 0.
+to_lower_rules(11): character__base__last may_be_replaced_by 255.
+to_lower_rules(12): positive__size >= 0 may_be_deduced.
+to_lower_rules(13): positive__first may_be_replaced_by 1.
+to_lower_rules(14): positive__last may_be_replaced_by 2147483647.
+to_lower_rules(15): positive__base__first may_be_replaced_by -2147483648.
+to_lower_rules(16): positive__base__last may_be_replaced_by 2147483647.
+to_lower_rules(17): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+to_lower_rules(18): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+to_lower_rules(19): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+to_lower_rules(20): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+to_lower_rules(21): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.

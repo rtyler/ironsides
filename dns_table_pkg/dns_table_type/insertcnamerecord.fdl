@@ -1,0 +1,92 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+          {procedure dns_table_pkg.DNS_Table_Type.insertCNAMERecord}
+
+
+title procedure insertcnamerecord;
+
+  function round__(real) : integer;
+  type character = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__ownerrecordbuckettype = array [integer] of string;
+  type rr_type__cname_record_type__cnamerecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        canonicaldomainname : string
+     end;
+  type rr_type__ownerhashtabletype = array [integer] of 
+     rr_type__ownerrecordbuckettype;
+  type rr_type__cname_record_type__cnamerecordbuckettype = array [integer] of 
+     rr_type__cname_record_type__cnamerecordtype;
+  type rr_type__cname_record_type__cnamerecordhashtabletype = array [integer] of 
+     rr_type__cname_record_type__cnamerecordbuckettype;
+  const rr_type__blankowner : string = pending;
+  const rr_type__numbucketsindextype__base__first : integer = pending; 
+  const rr_type__numbucketsindextype__base__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__cname_record_type__cnamerecordtype__size : integer = pending; 
+  const rr_type__numbucketsindextype__first : integer = pending; 
+  const rr_type__numbucketsindextype__last : integer = pending; 
+  const rr_type__numbucketsindextype__size : integer = pending; 
+  const rr_type__returnedrecordsindextype__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var key : string;
+  var therecord : rr_type__cname_record_type__cnamerecordtype;
+  var success : boolean;
+  var dns_table_type__cnamerecordkeys : 
+     rr_type__ownerhashtabletype;
+  var dns_table_type__cnamerecordtable : 
+     rr_type__cname_record_type__cnamerecordhashtabletype;
+  var bucket : integer;
+  var lower_key : string;
+  var loop__1__i : integer;
+  function to_lower(string) : string;
+  function hash(string) : integer;
+
+end;

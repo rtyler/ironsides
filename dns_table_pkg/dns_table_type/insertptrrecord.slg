@@ -1,0 +1,1673 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.insertPTRRecord
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(to_lower(key), [i___1]) and element(
+          to_lower(key), [i___1]) <= character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H12).
+***  Proved C1:  hash(to_lower(key)) >= rr_type__numbucketsindextype__first
+     using hypothesis H14.
+***  Proved C2:  hash(to_lower(key)) <= rr_type__numbucketsindextype__last
+     using hypothesis H15.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified H12 on reading formula in, to give:
+     %%%  H12:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(to_lower(key), [i___1]) and element(
+          to_lower(key), [i___1]) <= character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+%%%  Simplified C12 on reading formula in, to give:
+     %%%  C12:  true
+%%%  Simplified C14 on reading formula in, to give:
+     %%%  C14:  true
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+     using hypothesis H3.
+***  Proved C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+     using hypothesis H4.
+***  Proved C5:  fld_class(fld_inherit(therecord)) <= rr_type__classtype__last
+     using hypothesis H5.
+***  Proved C6:  fld_ttlinseconds(fld_inherit(therecord)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H6.
+***  Proved C7:  fld_ttlinseconds(fld_inherit(therecord)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H7.
+***  Proved C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+     using hypothesis H8.
+***  Proved C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+     using hypothesis H9.
+***  Proved C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+     using hypothesis H10.
+***  Proved C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+     using hypothesis H11.
+***  Proved C12:  true
+***  Proved C14:  true
+-S-  Applied substitution rule insertptrrec_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C13:  1 <= rr_type__returnedrecordsindextype__last
+<S>  New C15:  1 <= rr_type__returnedrecordsindextype__last
+-S-  Applied substitution rule insertptrrec_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          rr_type__classtype__first <= fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) <= rr_type__classtype__last))
+<S>  New H10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C13:  true
+<S>  New C15:  true
+***  Proved C13:  true
+***  Proved C15:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H17).
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(lower_key, [i___1]) and element(
+          lower_key, [i___1]) <= character__last)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H17).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  false
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= rr_type__classtype__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2]))) and fld_ttlinseconds(fld_inherit(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(update(dns_table_type__ptrrecordkeys, [bucket], 
+          update(element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i]
+          , lower_key)), [i___1]), [i___2]), [i___3]) and element(element(
+          element(update(dns_table_type__ptrrecordkeys, [bucket], update(
+          element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], 
+          lower_key)), [i___1]), [i___2]), [i___3]) <= character__last)))
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+     using hypothesis H3.
+***  Proved C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+     using hypothesis H4.
+***  Proved C5:  fld_class(fld_inherit(therecord)) <= rr_type__classtype__last
+     using hypothesis H5.
+***  Proved C6:  fld_ttlinseconds(fld_inherit(therecord)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H6.
+***  Proved C7:  fld_ttlinseconds(fld_inherit(therecord)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H7.
+***  Proved C12:  loop__1__i + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+***  Proved C14:  loop__1__i + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+-S-  Applied substitution rule insertptrrec_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New H13:  loop__1__i <= 64
+<S>  New H34:  not loop__1__i = 64
+<S>  New C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New C9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= rr_type__classtype__last))
+<S>  New C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2]))) and fld_ttlinseconds(fld_inherit(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(update(dns_table_type__ptrrecordkeys, [bucket], 
+          update(element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i]
+          , lower_key)), [i___1]), [i___2]), [i___3]) and element(element(
+          element(update(dns_table_type__ptrrecordkeys, [bucket], update(
+          element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], 
+          lower_key)), [i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New C13:  loop__1__i <= 63
+<S>  New C15:  loop__1__i <= 63
+***  Proved C13:  loop__1__i <= 63
+     using hypotheses H13 & H34.
+***  Proved C15:  loop__1__i <= 63
+     using hypotheses H13 & H34.
+>>>  Restructured hypothesis H34 into:
+     >>>  H34:  loop__1__i <> 64
+-S-  Applied substitution rule insertptrrec_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          key, [i___1]) and element(key, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_domainname(therecord), [i___1]) and element(fld_domainname(
+          therecord), [i___1]) <= character__last)
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__ptrrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= character__last)))
+<S>  New H23:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          lower_key, [i___1]) and element(lower_key, [i___1]) <= 
+          character__last)
+<S>  New C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          update(dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) and element(element(element(update(
+          dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+-S-  Applied substitution rule insertptrrec_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          key, [i___1]) and element(key, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_domainname(therecord), [i___1]) and element(fld_domainname(
+          therecord), [i___1]) <= 255)
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__ptrrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H23:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          lower_key, [i___1]) and element(lower_key, [i___1]) <= 255)
+<S>  New C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          update(dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) and element(element(element(update(
+          dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule insertptrrec_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  fld_ttlinseconds(fld_inherit(therecord)) >= 0
+<S>  New H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          update(dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= unsigned_types__unsigned32__last))
+-S-  Applied substitution rule insertptrrec_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H7:  fld_ttlinseconds(fld_inherit(therecord)) <= 4294967295
+<S>  New H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) and 
+          fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          update(dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= 4294967295))
+-S-  Applied substitution rule insertptrrec_rules(25).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H4:  rr_type__internet <= fld_class(fld_inherit(therecord))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New C9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+-S-  Applied substitution rule insertptrrec_rules(26).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H5:  fld_class(fld_inherit(therecord)) <= rr_type__hs
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New C9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= rr_type__hs))
+-S-  Applied substitution rule insertptrrec_rules(52).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(key, [i___1]) and 
+          element(key, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_domainname(
+          therecord), [i___1]) and element(fld_domainname(therecord), [i___1]) 
+          <= 255)
+<S>  New H8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= 255)))
+<S>  New H23:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(lower_key, [i___1])
+           and element(lower_key, [i___1]) <= 255)
+<S>  New C8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 
+          rr_type__wirestringtypeindex__last -> for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 0 <= element(
+          element(element(update(dns_table_type__ptrrecordkeys, [bucket], 
+          update(element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i]
+          , lower_key)), [i___1]), [i___2]), [i___3]) and element(element(
+          element(update(dns_table_type__ptrrecordkeys, [bucket], update(
+          element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], 
+          lower_key)), [i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule insertptrrec_rules(53).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(key, [i___1]) and element(key, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_domainname(therecord), [i___1]) and element(
+          fld_domainname(therecord), [i___1]) <= 255)
+<S>  New H8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__ptrrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New H23:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(lower_key, [i___1]) and element(lower_key, [i___1]) <= 255)
+<S>  New C8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          update(dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) and element(element(element(update(
+          dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule insertptrrec_rules(59).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__first by:
+          1.
+<S>  New H12:  loop__1__i >= 1
+<S>  New H10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__ptrrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New C10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= 4294967295))
+<S>  New C9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, rr_type__numbucketsindextype__first <= i___1 and 
+          i___1 <= rr_type__numbucketsindextype__last -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New C8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(fld_domainname(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= element(element(element(
+          update(dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) and element(element(element(update(
+          dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule insertptrrec_rules(64).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__first by:
+          1.
+<S>  New H16:  bucket >= 1
+<S>  New H10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) and 
+          element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(element(element(dns_table_type__ptrrecordkeys, [i___1]
+          ), [i___2]), [i___3]) and element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) <= 255)))
+<S>  New C10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= 4294967295))
+<S>  New C9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__internet <= fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_class(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New C8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(fld_domainname(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2])), [i___3]) and element(fld_domainname(element(
+          element(update(dns_table_type__ptrrecordtable, [bucket], update(
+          element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], 
+          therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= rr_type__numbucketsindextype__last 
+          -> 0 <= element(element(element(update(dns_table_type__ptrrecordkeys, 
+          [bucket], update(element(dns_table_type__ptrrecordkeys, [bucket]), [
+          loop__1__i], lower_key)), [i___1]), [i___2]), [i___3]) and element(
+          element(element(update(dns_table_type__ptrrecordkeys, [bucket], 
+          update(element(dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i]
+          , lower_key)), [i___1]), [i___2]), [i___3]) <= 255)))
+-S-  Applied substitution rule insertptrrec_rules(65).
+     This was achieved by replacing all occurrences of 
+          rr_type__numbucketsindextype__last by:
+          64.
+<S>  New H17:  bucket <= 64
+<S>  New H10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(dns_table_type__ptrrecordtable, [i___1]), 
+          [i___2]))) and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 4294967295))
+<S>  New H9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New H8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_domainname(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2])), [
+          i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 255))
+          )
+<S>  New H11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [i___3]) and 
+          element(element(element(dns_table_type__ptrrecordkeys, [i___1]), [
+          i___2]), [i___3]) <= 255)))
+<S>  New C10:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) and fld_ttlinseconds(
+          fld_inherit(element(element(update(dns_table_type__ptrrecordtable, [
+          bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2]))) <= 4294967295))
+<S>  New C9:  for_all(i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(
+          i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet <= 
+          fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(update(
+          dns_table_type__ptrrecordtable, [bucket], update(element(
+          dns_table_type__ptrrecordtable, [bucket]), [loop__1__i], therecord)), 
+          [i___1]), [i___2]))) <= rr_type__hs))
+<S>  New C8:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_domainname(
+          element(element(update(dns_table_type__ptrrecordtable, [bucket], 
+          update(element(dns_table_type__ptrrecordtable, [bucket]), [loop__1__i]
+          , therecord)), [i___1]), [i___2])), [i___3]) and element(
+          fld_domainname(element(element(update(dns_table_type__ptrrecordtable, 
+          [bucket], update(element(dns_table_type__ptrrecordtable, [bucket]), [
+          loop__1__i], therecord)), [i___1]), [i___2])), [i___3]) <= 255)))
+<S>  New C11:  for_all(i___3 : integer, 1 <= i___3 and i___3 <= 129 -> for_all(
+          i___2 : integer, 1 <= i___2 and i___2 <= 64 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(element(element(
+          update(dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) and element(element(element(update(
+          dns_table_type__ptrrecordkeys, [bucket], update(element(
+          dns_table_type__ptrrecordkeys, [bucket]), [loop__1__i], lower_key)), [
+          i___1]), [i___2]), [i___3]) <= 255)))
+%%%  Hypotheses H13 & H34 together imply that
+          loop__1__i < 64.
+     H13 & H34 have therefore been deleted and a new H35 added to this effect.
+###  Established a contradiction [false-hypothesis] using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H17).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified C8 on reading formula in, to give:
+     %%%  C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+     using hypothesis H3.
+***  Proved C4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+     using hypothesis H4.
+***  Proved C5:  fld_class(fld_inherit(therecord)) <= rr_type__classtype__last
+     using hypothesis H5.
+***  Proved C6:  fld_ttlinseconds(fld_inherit(therecord)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H6.
+***  Proved C7:  fld_ttlinseconds(fld_inherit(therecord)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H7.
+***  Proved C8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+     using hypothesis H8.
+***  Proved C9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+     using hypothesis H9.
+***  Proved C10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+     using hypothesis H10.
+***  Proved C11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first 
+          <= i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+     using hypothesis H11.
+***  Proved C12:  loop__1__i + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+***  Proved C14:  loop__1__i + 1 >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+-S-  Applied substitution rule insertptrrec_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__returnedrecordsindextype__last by:
+          64.
+<S>  New H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+<S>  New H9:  for_all(i___2 : integer, rr_type__returnedrecordsindextype__first 
+          <= i___2 and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+<S>  New H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 64 -> 
+          for_all(i___1 : integer, rr_type__numbucketsindextype__first <= i___1 
+          and i___1 <= rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+<S>  New H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= 64 -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+<S>  New H13:  loop__1__i <= 64
+<S>  New H25:  not loop__1__i = 64
+<S>  New C13:  loop__1__i <= 63
+<S>  New C15:  loop__1__i <= 63
+***  Proved C13:  loop__1__i <= 63
+     using hypotheses H13 & H25.
+***  Proved C15:  loop__1__i <= 63
+     using hypotheses H13 & H25.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+***  Proved C1:  loop__1__i >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+***  Proved C2:  loop__1__i <= rr_type__returnedrecordsindextype__last
+     using hypothesis H13.
+***  Proved C3:  bucket >= rr_type__numbucketsindextype__first
+     using hypothesis H16.
+***  Proved C4:  bucket <= rr_type__numbucketsindextype__last
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H17).
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(lower_key, [i___1]) and element(
+          lower_key, [i___1]) <= character__last)
+***  Proved C1:  loop__1__i >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+***  Proved C2:  loop__1__i <= rr_type__returnedrecordsindextype__last
+     using hypothesis H13.
+***  Proved C3:  bucket >= rr_type__numbucketsindextype__first
+     using hypothesis H16.
+***  Proved C4:  bucket <= rr_type__numbucketsindextype__last
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(key, [i___1]) and element(key, [i___1]) 
+          <= character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_domainname(therecord), [i___1]) and 
+          element(fld_domainname(therecord), [i___1]) <= character__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  rr_type__classtype__first <= fld_class(fld_inherit(therecord))
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          fld_domainname(element(element(dns_table_type__ptrrecordtable, [i___1]
+          ), [i___2])), [i___3]) and element(fld_domainname(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2])), [i___3]) <= 
+          character__last)))
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> rr_type__classtype__first <= 
+          fld_class(fld_inherit(element(element(dns_table_type__ptrrecordtable, 
+          [i___1]), [i___2]))) and fld_class(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          rr_type__classtype__last))
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  for_all(i___2 : integer, 
+          rr_type__returnedrecordsindextype__first <= i___2 and i___2 <= 
+          rr_type__returnedrecordsindextype__last -> for_all(i___1 : integer, 
+          rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> 
+          unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(
+          element(element(dns_table_type__ptrrecordtable, [i___1]), [i___2]))) 
+          and fld_ttlinseconds(fld_inherit(element(element(
+          dns_table_type__ptrrecordtable, [i___1]), [i___2]))) <= 
+          unsigned_types__unsigned32__last))
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___3 : integer, rr_type__wirestringtypeindex__first <= 
+          i___3 and i___3 <= rr_type__wirestringtypeindex__last -> for_all(
+          i___2 : integer, rr_type__returnedrecordsindextype__first <= i___2 
+          and i___2 <= rr_type__returnedrecordsindextype__last -> for_all(i___1 
+          : integer, rr_type__numbucketsindextype__first <= i___1 and i___1 <= 
+          rr_type__numbucketsindextype__last -> character__first <= element(
+          element(element(dns_table_type__ptrrecordkeys, [i___1]), [i___2]), [
+          i___3]) and element(element(element(dns_table_type__ptrrecordkeys, [
+          i___1]), [i___2]), [i___3]) <= character__last)))
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H17).
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(lower_key, [i___1]) and element(
+          lower_key, [i___1]) <= character__last)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H17).
+***  Proved C1:  loop__1__i >= rr_type__returnedrecordsindextype__first
+     using hypothesis H12.
+***  Proved C2:  loop__1__i <= rr_type__returnedrecordsindextype__last
+     using hypothesis H13.
+***  Proved C3:  bucket >= rr_type__numbucketsindextype__first
+     using hypothesis H16.
+***  Proved C4:  bucket <= rr_type__numbucketsindextype__last
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_8.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_9.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_10.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_11.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_12.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_insertptrrecord_13.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

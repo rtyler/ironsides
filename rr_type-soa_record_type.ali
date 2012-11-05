@@ -1,0 +1,73 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnn
+
+U rr_type.soa_record_type%s  rr_type-soa_record_type.ads  d31c829b EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W rr_type%s		rr_type.adb		rr_type.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+W unsigned_types%s	unsigned_types.ads	unsigned_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-soa_record_type.ads  20120707130422 250fc6ac
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D unsigned_types.ads	20120707130426 dd57bff3
+X 7 rr_type.ads
+20K9*Rr_Type 98e12 8|21r9 22r30 24r25 25r25 39r16 40r58 41r9 41r28 42r54
+. 43r9 43r28 52r39 53r42 55r5
+22n23*INTERNET{22E9} 8|39r24
+39A12*WireStringType{string}<integer> 8|24r33 25r33
+41a4*Spaces32{string} 8|40r66 41r17 41r36 42r62 43r17 43r36
+77R9*ResourceRecordType 81e17 8|22r38
+79m10*ttlInSeconds{23|21M9} 8|38m7
+80e10*class{22E9} 8|39m7
+88I12*ReturnedRecordsIndexType{integer} 8|52r47
+93I12*NumBucketsIndexType{integer} 8|53r50
+X 8 rr_type-soa_record_type.ads
+21K17*Soa_Record_Type 7|20k9 8|55l13 55e28
+22R9*SOARecordType<7|77R9> 31e17 37r30 37r47 52r76
+24a10*NameServer{7|39A12} 40m7
+25a10*Email{7|39A12} 42m7
+26m10*SerialNumber{23|21M9} 44m7
+27m10*Refresh{23|21M9} 45m7
+28m10*Retry{23|21M9} 46m7
+29m10*Expiry{23|21M9} 47m7
+30m10*Minimum{23|21M9} 48m7
+33i4*MAX_SERIAL_VAL{long_long_integer}
+34i4*MAX_TIME_VAL{long_long_integer}
+37r4*BlanksoaRecord{22R9}
+52A9*SoaRecordBucketType(22R9)<integer> 53r74
+53A9*SoaRecordHashTableType(52A9)<integer>
+X 23 unsigned_types.ads
+18K9*Unsigned_Types 8|18w6 19r10 26r25 27r25 28r25 29r25 30r25 23|25e19
+21M9*Unsigned32 8|19r25 26r40 27r40 28r40 29r40 30r40
+

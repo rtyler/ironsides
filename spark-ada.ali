@@ -1,0 +1,18 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U spark.ada%s		spark-ada.ads		7227bb35 NE OO PK IU
+W spark%s		spark.ads		spark.ali
+
+D spark.ads		20110601161248 99ec3c77
+D spark-ada.ads		20110601161248 ebcb8742
+D system.ads		20110428140910 bc164b96
+X 1 spark.ads
+41K9*SPARK 43e10 2|41r9 43r5
+X 2 spark-ada.ads
+41K15*Ada 1|41k9 2|43l11 43e14
+

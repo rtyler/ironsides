@@ -1,0 +1,52 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                 /*procedure Parser_Utilities.ConvertTimeSpec*/
+
+
+rule_family converttimes_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+converttimes_rules(1): rr_type__soa_record_type__max_time_val may_be_replaced_by 4294967295.
+converttimes_rules(2): integer__size >= 0 may_be_deduced.
+converttimes_rules(3): integer__first may_be_replaced_by -2147483648.
+converttimes_rules(4): integer__last may_be_replaced_by 2147483647.
+converttimes_rules(5): integer__base__first may_be_replaced_by -2147483648.
+converttimes_rules(6): integer__base__last may_be_replaced_by 2147483647.
+converttimes_rules(7): character__size >= 0 may_be_deduced.
+converttimes_rules(8): character__first may_be_replaced_by 0.
+converttimes_rules(9): character__last may_be_replaced_by 255.
+converttimes_rules(10): character__base__first may_be_replaced_by 0.
+converttimes_rules(11): character__base__last may_be_replaced_by 255.
+converttimes_rules(12): natural__size >= 0 may_be_deduced.
+converttimes_rules(13): natural__first may_be_replaced_by 0.
+converttimes_rules(14): natural__last may_be_replaced_by 2147483647.
+converttimes_rules(15): natural__base__first may_be_replaced_by -2147483648.
+converttimes_rules(16): natural__base__last may_be_replaced_by 2147483647.
+converttimes_rules(17): positive__size >= 0 may_be_deduced.
+converttimes_rules(18): positive__first may_be_replaced_by 1.
+converttimes_rules(19): positive__last may_be_replaced_by 2147483647.
+converttimes_rules(20): positive__base__first may_be_replaced_by -2147483648.
+converttimes_rules(21): positive__base__last may_be_replaced_by 2147483647.
+converttimes_rules(22): long_long_integer__size >= 0 may_be_deduced.
+converttimes_rules(23): long_long_integer__first may_be_replaced_by -9223372036854775808.
+converttimes_rules(24): long_long_integer__last may_be_replaced_by 9223372036854775807.
+converttimes_rules(25): long_long_integer__base__first may_be_replaced_by -9223372036854775808.
+converttimes_rules(26): long_long_integer__base__last may_be_replaced_by 9223372036854775807.
+converttimes_rules(27): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+converttimes_rules(28): unsigned_types__unsigned32__first may_be_replaced_by 0.
+converttimes_rules(29): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+converttimes_rules(30): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+converttimes_rules(31): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+converttimes_rules(32): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+converttimes_rules(33): rr_type__linelengthindex__size >= 0 may_be_deduced.
+converttimes_rules(34): rr_type__linelengthindex__first may_be_replaced_by 1.
+converttimes_rules(35): rr_type__linelengthindex__last may_be_replaced_by 256.
+converttimes_rules(36): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+converttimes_rules(37): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

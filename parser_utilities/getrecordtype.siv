@@ -1,0 +1,440 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.getRecordType
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 188:
+
+function_getrecordtype_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 188:
+
+function_getrecordtype_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 189:
+
+function_getrecordtype_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 189:
+
+function_getrecordtype_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 190:
+
+function_getrecordtype_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 194:
+
+function_getrecordtype_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 197:
+
+function_getrecordtype_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 200:
+
+function_getrecordtype_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 203:
+
+function_getrecordtype_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 206:
+
+function_getrecordtype_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 207:
+
+function_getrecordtype_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 208:
+
+function_getrecordtype_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 210:
+
+function_getrecordtype_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 214:
+
+function_getrecordtype_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 215:
+
+function_getrecordtype_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 216:
+
+function_getrecordtype_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 218:
+
+function_getrecordtype_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 222:
+
+function_getrecordtype_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 223:
+
+function_getrecordtype_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 224:
+
+function_getrecordtype_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 226:
+
+function_getrecordtype_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 230:
+
+function_getrecordtype_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 231:
+
+function_getrecordtype_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 232:
+
+function_getrecordtype_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 234:
+
+function_getrecordtype_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 238:
+
+function_getrecordtype_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 239:
+
+function_getrecordtype_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 239:
+
+function_getrecordtype_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 241:
+
+function_getrecordtype_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 243:
+
+function_getrecordtype_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 247:
+
+function_getrecordtype_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 248:
+
+function_getrecordtype_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 248:
+
+function_getrecordtype_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 250:
+
+function_getrecordtype_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 252:
+
+function_getrecordtype_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 256:
+
+function_getrecordtype_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 257:
+
+function_getrecordtype_37.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 257:
+
+function_getrecordtype_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 257:
+
+function_getrecordtype_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 260:
+
+function_getrecordtype_40.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 262:
+
+function_getrecordtype_41.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 266:
+
+function_getrecordtype_42.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 267:
+
+function_getrecordtype_43.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 267:
+
+function_getrecordtype_44.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 267:
+
+function_getrecordtype_45.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 270:
+
+function_getrecordtype_46.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 272:
+
+function_getrecordtype_47.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 276:
+
+function_getrecordtype_48.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 277:
+
+function_getrecordtype_49.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 277:
+
+function_getrecordtype_50.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 277:
+
+function_getrecordtype_51.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 277:
+
+function_getrecordtype_52.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 281:
+
+function_getrecordtype_53.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 283:
+
+function_getrecordtype_54.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 286:
+
+function_getrecordtype_55.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_getrecordtype_56.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_57.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_58.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_59.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_60.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_61.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_62.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_63.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_64.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_65.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_66.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_67.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_68.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_69.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_70.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_71.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_72.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_73.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_74.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_75.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_76.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_77.
+*** true .          /* all conclusions proved */
+
+
+function_getrecordtype_78.
+*** true .          /* all conclusions proved */
+
+

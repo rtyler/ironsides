@@ -1,0 +1,214 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+             function Parser_Utilities.convertIpv6.SeparatorsOK
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 846:
+
+function_separatorsok_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+        ->
+C1:    separatorindextype__last - 1 >= integer__first .
+C2:    separatorindextype__last - 1 <= integer__last .
+C3:    separatorindextype__last - 1 >= integer__base__first .
+C4:    separatorindextype__last - 1 <= integer__base__last .
+C5:    separatorindextype__first >= integer__first .
+C6:    separatorindextype__first <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 846:
+
+function_separatorsok_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+H4:    separatorindextype__last - 1 >= integer__first .
+H5:    separatorindextype__last - 1 <= integer__last .
+H6:    separatorindextype__last - 1 >= integer__base__first .
+H7:    separatorindextype__last - 1 <= integer__base__last .
+H8:    separatorindextype__first >= integer__first .
+H9:    separatorindextype__first <= integer__last .
+        ->
+C1:    (separatorindextype__first <= separatorindextype__last - 1) -> ((
+           separatorindextype__last - 1 >= integer__first) and (
+           separatorindextype__last - 1 <= integer__last)) .
+C2:    (separatorindextype__first <= separatorindextype__last - 1) -> ((
+           separatorindextype__first >= integer__first) and (
+           separatorindextype__first <= integer__last)) .
+ 
+
+For path(s) from start to assertion of line 847:
+
+function_separatorsok_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+H4:    separatorindextype__last - 1 >= integer__first .
+H5:    separatorindextype__last - 1 <= integer__last .
+H6:    separatorindextype__last - 1 >= integer__base__first .
+H7:    separatorindextype__last - 1 <= integer__base__last .
+H8:    separatorindextype__first >= integer__first .
+H9:    separatorindextype__first <= integer__last .
+H10:   (separatorindextype__first <= separatorindextype__last - 1) -> ((
+           separatorindextype__last - 1 >= integer__first) and (
+           separatorindextype__last - 1 <= integer__last)) .
+H11:   (separatorindextype__first <= separatorindextype__last - 1) -> ((
+           separatorindextype__first >= integer__first) and (
+           separatorindextype__first <= integer__last)) .
+H12:   separatorindextype__first <= separatorindextype__last - 1 .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+C4:    separatorindextype__first >= integer__first .
+C5:    separatorindextype__first <= integer__last .
+C6:    separatorindextype__first >= separatorindextype__first .
+C7:    separatorindextype__first <= separatorindextype__last - 1 .
+ 
+
+For path(s) from assertion of line 847 to assertion of line 847:
+
+function_separatorsok_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= separatorindextype__first .
+H7:    loop__1__i <= separatorindextype__last - 1 .
+H8:    element(sarray, [loop__1__i + 1]) - 1 >= integer__base__first .
+H9:    element(sarray, [loop__1__i + 1]) - 1 <= integer__base__last .
+H10:   loop__1__i + 1 >= separatorindextype__first .
+H11:   loop__1__i + 1 <= separatorindextype__last .
+H12:   loop__1__i + 1 >= integer__base__first .
+H13:   loop__1__i + 1 <= integer__base__last .
+H14:   loop__1__i >= separatorindextype__first .
+H15:   loop__1__i <= separatorindextype__last .
+H16:   element(sarray, [loop__1__i]) >= 
+           rr_type__linelengthindex__first .
+H17:   element(sarray, [loop__1__i]) <= 
+           rr_type__linelengthindex__last .
+H18:   loop__1__i >= separatorindextype__first .
+H19:   loop__1__i <= separatorindextype__last .
+H20:   not ((element(line, [element(sarray, [loop__1__i])]) <> 
+           field_separator) or (element(sarray, [loop__1__i]) = element(
+           sarray, [loop__1__i + 1]) - 1)) .
+H21:   not (loop__1__i = separatorindextype__last - 1) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= separatorindextype__first .
+C7:    loop__1__i + 1 <= separatorindextype__last - 1 .
+ 
+
+For path(s) from assertion of line 847 to run-time check associated with statement of line 848:
+
+function_separatorsok_5.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= separatorindextype__first .
+H7:    loop__1__i <= separatorindextype__last - 1 .
+        ->
+C1:    element(sarray, [loop__1__i + 1]) - 1 >= integer__base__first .
+C2:    element(sarray, [loop__1__i + 1]) - 1 <= integer__base__last .
+C3:    loop__1__i + 1 >= separatorindextype__first .
+C4:    loop__1__i + 1 <= separatorindextype__last .
+C5:    loop__1__i + 1 >= integer__base__first .
+C6:    loop__1__i + 1 <= integer__base__last .
+C7:    loop__1__i >= separatorindextype__first .
+C8:    loop__1__i <= separatorindextype__last .
+C9:    element(sarray, [loop__1__i]) >= 
+           rr_type__linelengthindex__first .
+C10:   element(sarray, [loop__1__i]) <= 
+           rr_type__linelengthindex__last .
+C11:   loop__1__i >= separatorindextype__first .
+C12:   loop__1__i <= separatorindextype__last .
+ 
+
+For path(s) from start to finish:
+
+function_separatorsok_6.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 847 to finish:
+
+function_separatorsok_7.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+function_separatorsok_8.
+*** true .          /* trivially true VC removed by Examiner */
+
+

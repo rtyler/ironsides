@@ -1,0 +1,26 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+               /*procedure Task_Limit.Task_Count_Type.Increment*/
+
+
+rule_family increment_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+increment_rules(1): max_tasks may_be_replaced_by 100.
+increment_rules(2): integer__size >= 0 may_be_deduced.
+increment_rules(3): integer__first may_be_replaced_by -2147483648.
+increment_rules(4): integer__last may_be_replaced_by 2147483647.
+increment_rules(5): integer__base__first may_be_replaced_by -2147483648.
+increment_rules(6): integer__base__last may_be_replaced_by 2147483647.
+increment_rules(7): task_count_subtype__size >= 0 may_be_deduced.
+increment_rules(8): task_count_subtype__first may_be_replaced_by 0.
+increment_rules(9): task_count_subtype__last may_be_replaced_by 100.
+increment_rules(10): task_count_subtype__base__first may_be_replaced_by -2147483648.
+increment_rules(11): task_count_subtype__base__last may_be_replaced_by 2147483647.

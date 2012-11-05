@@ -1,0 +1,54 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                       {procedure DNS_Types.Byte_Swap}
+
+
+title procedure byte_swap;
+
+  function round__(real) : integer;
+  type unsigned_short = integer;
+  type opcode_type = (query, iquery, status);
+  type response_code = (no_error, format_error, server_failure, 
+     name_error, not_implemented, refused);
+  type header_type = record
+        messageid : integer;
+        qr : boolean;
+        opcode : opcode_type;
+        aa : boolean;
+        tc : boolean;
+        rd : boolean;
+        ra : boolean;
+        res1 : boolean;
+        res2 : boolean;
+        res3 : boolean;
+        rcode : response_code;
+        qdcount : integer;
+        ancount : integer;
+        nscount : integer;
+        arcount : integer
+     end;
+  const response_code__base__first : response_code = pending; 
+  const response_code__base__last : response_code = pending; 
+  const opcode_type__base__first : opcode_type = pending; 
+  const opcode_type__base__last : opcode_type = pending; 
+  const unsigned_short__base__first : integer = pending; 
+  const unsigned_short__base__last : integer = pending; 
+  const header_type__size : integer = pending; 
+  const response_code__first : response_code = pending; 
+  const response_code__last : response_code = pending; 
+  const response_code__size : integer = pending; 
+  const opcode_type__first : opcode_type = pending; 
+  const opcode_type__last : opcode_type = pending; 
+  const opcode_type__size : integer = pending; 
+  const unsigned_short__first : integer = pending; 
+  const unsigned_short__last : integer = pending; 
+  const unsigned_short__size : integer = pending; 
+  var h : header_type;
+  function byte_swap_us(integer) : integer;
+
+end;

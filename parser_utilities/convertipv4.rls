@@ -1,0 +1,57 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                   /*function Parser_Utilities.convertIpv4*/
+
+
+rule_family convertipv4_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convertipv4_rules(1): rr_type__a_record_type__invalid_ipv4_addr may_be_replaced_by 0.
+convertipv4_rules(2): num_bytes may_be_replaced_by 4.
+convertipv4_rules(3): req_num_separators may_be_replaced_by 3.
+convertipv4_rules(4): max_byte_value may_be_replaced_by 255.
+convertipv4_rules(5): max_digits_per_byte may_be_replaced_by 3.
+convertipv4_rules(6): ipv4_radix may_be_replaced_by 10.
+convertipv4_rules(7): integer__size >= 0 may_be_deduced.
+convertipv4_rules(8): integer__first may_be_replaced_by -2147483648.
+convertipv4_rules(9): integer__last may_be_replaced_by 2147483647.
+convertipv4_rules(10): integer__base__first may_be_replaced_by -2147483648.
+convertipv4_rules(11): integer__base__last may_be_replaced_by 2147483647.
+convertipv4_rules(12): character__size >= 0 may_be_deduced.
+convertipv4_rules(13): character__first may_be_replaced_by 0.
+convertipv4_rules(14): character__last may_be_replaced_by 255.
+convertipv4_rules(15): character__base__first may_be_replaced_by 0.
+convertipv4_rules(16): character__base__last may_be_replaced_by 255.
+convertipv4_rules(17): natural__size >= 0 may_be_deduced.
+convertipv4_rules(18): natural__first may_be_replaced_by 0.
+convertipv4_rules(19): natural__last may_be_replaced_by 2147483647.
+convertipv4_rules(20): natural__base__first may_be_replaced_by -2147483648.
+convertipv4_rules(21): natural__base__last may_be_replaced_by 2147483647.
+convertipv4_rules(22): positive__size >= 0 may_be_deduced.
+convertipv4_rules(23): positive__first may_be_replaced_by 1.
+convertipv4_rules(24): positive__last may_be_replaced_by 2147483647.
+convertipv4_rules(25): positive__base__first may_be_replaced_by -2147483648.
+convertipv4_rules(26): positive__base__last may_be_replaced_by 2147483647.
+convertipv4_rules(27): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+convertipv4_rules(28): unsigned_types__unsigned32__first may_be_replaced_by 0.
+convertipv4_rules(29): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+convertipv4_rules(30): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+convertipv4_rules(31): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+convertipv4_rules(32): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+convertipv4_rules(33): rr_type__linelengthindex__size >= 0 may_be_deduced.
+convertipv4_rules(34): rr_type__linelengthindex__first may_be_replaced_by 1.
+convertipv4_rules(35): rr_type__linelengthindex__last may_be_replaced_by 256.
+convertipv4_rules(36): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+convertipv4_rules(37): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+convertipv4_rules(38): separatorindextype__size >= 0 may_be_deduced.
+convertipv4_rules(39): separatorindextype__first may_be_replaced_by 1.
+convertipv4_rules(40): separatorindextype__last may_be_replaced_by 4.
+convertipv4_rules(41): separatorindextype__base__first may_be_replaced_by -2147483648.
+convertipv4_rules(42): separatorindextype__base__last may_be_replaced_by 2147483647.

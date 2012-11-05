@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.insertARecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 406:
+
+procedure_insertarecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 410:
+
+procedure_insertarecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 410 to assertion of line 410:
+
+procedure_insertarecord_3.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertarecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 410 to run-time check associated with 
+          statement of line 411:
+
+procedure_insertarecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 410 to run-time check associated with 
+          statement of line 412:
+
+procedure_insertarecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 410 to run-time check associated with 
+          statement of line 413:
+
+procedure_insertarecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 410 to finish:
+
+procedure_insertarecord_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertarecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertarecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertarecord_11.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertarecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertarecord_13.
+*** true .          /* all conclusions proved */
+
+

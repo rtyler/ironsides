@@ -1,0 +1,15 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                   /*task_type Tcp_Dns_Package.Tcp_Dns_Task*/
+
+
+rule_family tcp_dns_task_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+

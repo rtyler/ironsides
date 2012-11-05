@@ -1,0 +1,249 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                /*procedure Zone_File_Parser.ParseDNSKeyHeader*/
+
+
+rule_family parsednskeyh_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+parsednskeyh_rules(1): unsigned_types__unsigned32__first <= fld_ttlinseconds(fld_inherit(rr_type__dnskey_record_type__blankdnskeyrecord)) may_be_deduced.
+parsednskeyh_rules(2): fld_ttlinseconds(fld_inherit(rr_type__dnskey_record_type__blankdnskeyrecord)) <= 
+     unsigned_types__unsigned32__last may_be_deduced.
+parsednskeyh_rules(3): rr_type__classtype__first <= fld_class(fld_inherit(rr_type__dnskey_record_type__blankdnskeyrecord)) may_be_deduced.
+parsednskeyh_rules(4): fld_class(fld_inherit(rr_type__dnskey_record_type__blankdnskeyrecord)) <= 
+     rr_type__classtype__last may_be_deduced.
+parsednskeyh_rules(5): unsigned_types__unsigned16__first <= fld_flags(rr_type__dnskey_record_type__blankdnskeyrecord) may_be_deduced.
+parsednskeyh_rules(6): fld_flags(rr_type__dnskey_record_type__blankdnskeyrecord) <= 
+     unsigned_types__unsigned16__last may_be_deduced.
+parsednskeyh_rules(7): unsigned_types__unsigned8__first <= fld_protocol(rr_type__dnskey_record_type__blankdnskeyrecord) may_be_deduced.
+parsednskeyh_rules(8): fld_protocol(rr_type__dnskey_record_type__blankdnskeyrecord) <= 
+     unsigned_types__unsigned8__last may_be_deduced.
+parsednskeyh_rules(9): unsigned_types__unsigned8__first <= fld_algorithm(rr_type__dnskey_record_type__blankdnskeyrecord) may_be_deduced.
+parsednskeyh_rules(10): fld_algorithm(rr_type__dnskey_record_type__blankdnskeyrecord) <= 
+     unsigned_types__unsigned8__last may_be_deduced.
+parsednskeyh_rules(11): character__first <= element(fld_key(rr_type__dnskey_record_type__blankdnskeyrecord), [I]) may_be_deduced_from [1 <= I, I <= 1365].
+parsednskeyh_rules(12): element(fld_key(rr_type__dnskey_record_type__blankdnskeyrecord), [I]) <= 
+     character__last may_be_deduced_from [1 <= I, I <= 1365].
+parsednskeyh_rules(13): 
+     rr_type__dnskey_record_type__keylengthvaluetype__first <= fld_keylength(rr_type__dnskey_record_type__blankdnskeyrecord) may_be_deduced.
+parsednskeyh_rules(14): fld_keylength(rr_type__dnskey_record_type__blankdnskeyrecord) <= 
+     rr_type__dnskey_record_type__keylengthvaluetype__last may_be_deduced.
+parsednskeyh_rules(15): correct_protocol_value may_be_replaced_by 3.
+parsednskeyh_rules(16): integer__size >= 0 may_be_deduced.
+parsednskeyh_rules(17): integer__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(18): integer__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(19): integer__base__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(20): integer__base__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(21): character__size >= 0 may_be_deduced.
+parsednskeyh_rules(22): character__first may_be_replaced_by 0.
+parsednskeyh_rules(23): character__last may_be_replaced_by 255.
+parsednskeyh_rules(24): character__base__first may_be_replaced_by 0.
+parsednskeyh_rules(25): character__base__last may_be_replaced_by 255.
+parsednskeyh_rules(26): positive__size >= 0 may_be_deduced.
+parsednskeyh_rules(27): positive__first may_be_replaced_by 1.
+parsednskeyh_rules(28): positive__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(29): positive__base__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(30): positive__base__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(31): unsigned_types__unsigned8__size >= 0 may_be_deduced.
+parsednskeyh_rules(32): unsigned_types__unsigned8__first may_be_replaced_by 0.
+parsednskeyh_rules(33): unsigned_types__unsigned8__last may_be_replaced_by 255.
+parsednskeyh_rules(34): unsigned_types__unsigned8__base__first may_be_replaced_by 0.
+parsednskeyh_rules(35): unsigned_types__unsigned8__base__last may_be_replaced_by 255.
+parsednskeyh_rules(36): unsigned_types__unsigned8__modulus may_be_replaced_by 256.
+parsednskeyh_rules(37): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+parsednskeyh_rules(38): unsigned_types__unsigned16__first may_be_replaced_by 0.
+parsednskeyh_rules(39): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+parsednskeyh_rules(40): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+parsednskeyh_rules(41): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+parsednskeyh_rules(42): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.
+parsednskeyh_rules(43): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+parsednskeyh_rules(44): unsigned_types__unsigned32__first may_be_replaced_by 0.
+parsednskeyh_rules(45): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+parsednskeyh_rules(46): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+parsednskeyh_rules(47): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+parsednskeyh_rules(48): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+parsednskeyh_rules(49): rr_type__classtype__size >= 0 may_be_deduced.
+parsednskeyh_rules(50): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+parsednskeyh_rules(51): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+parsednskeyh_rules(52): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+parsednskeyh_rules(53): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+parsednskeyh_rules(54): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+parsednskeyh_rules(55): rr_type__classtype__pos(rr_type__internet) may_be_replaced_by 0.
+parsednskeyh_rules(56): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+parsednskeyh_rules(57): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+parsednskeyh_rules(58): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+parsednskeyh_rules(59): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+parsednskeyh_rules(60): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+parsednskeyh_rules(61): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+parsednskeyh_rules(62): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+parsednskeyh_rules(63): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+parsednskeyh_rules(64): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+parsednskeyh_rules(65): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+parsednskeyh_rules(66): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parsednskeyh_rules(67): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parsednskeyh_rules(68): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+parsednskeyh_rules(69): rr_type__classtype__val(X) <= rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+parsednskeyh_rules(70): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+parsednskeyh_rules(71): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+parsednskeyh_rules(72): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+parsednskeyh_rules(73): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+parsednskeyh_rules(74): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+parsednskeyh_rules(75): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+parsednskeyh_rules(76): rr_type__rritemtype__size >= 0 may_be_deduced.
+parsednskeyh_rules(77): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+parsednskeyh_rules(78): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+parsednskeyh_rules(79): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+parsednskeyh_rules(80): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+parsednskeyh_rules(81): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+parsednskeyh_rules(82): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+parsednskeyh_rules(83): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+parsednskeyh_rules(84): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+parsednskeyh_rules(85): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+parsednskeyh_rules(86): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+parsednskeyh_rules(87): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+parsednskeyh_rules(88): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+parsednskeyh_rules(89): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+parsednskeyh_rules(90): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+parsednskeyh_rules(91): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+parsednskeyh_rules(92): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+parsednskeyh_rules(93): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+parsednskeyh_rules(94): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+parsednskeyh_rules(95): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+parsednskeyh_rules(96): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+parsednskeyh_rules(97): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+parsednskeyh_rules(98): rr_type__rritemtype__pos(rr_type__control) may_be_replaced_by 8.
+parsednskeyh_rules(99): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+parsednskeyh_rules(100): rr_type__rritemtype__pos(
+     rr_type__comment) may_be_replaced_by 9.
+parsednskeyh_rules(101): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+parsednskeyh_rules(102): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+parsednskeyh_rules(103): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+parsednskeyh_rules(104): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+parsednskeyh_rules(105): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+parsednskeyh_rules(106): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+parsednskeyh_rules(107): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsednskeyh_rules(108): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsednskeyh_rules(109): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+parsednskeyh_rules(110): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+parsednskeyh_rules(111): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+parsednskeyh_rules(112): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+parsednskeyh_rules(113): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+parsednskeyh_rules(114): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsednskeyh_rules(115): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+parsednskeyh_rules(116): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+parsednskeyh_rules(117): rr_type__linelengthindex__size >= 0 may_be_deduced.
+parsednskeyh_rules(118): rr_type__linelengthindex__first may_be_replaced_by 1.
+parsednskeyh_rules(119): rr_type__linelengthindex__last may_be_replaced_by 256.
+parsednskeyh_rules(120): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(121): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(122): rr_type__resourcerecordtype__size >= 0 may_be_deduced.
+parsednskeyh_rules(123): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__resourcerecordtype)),
+      goal(checktype(B,rr_type__resourcerecordtype)),
+      fld_ttlinseconds(A) = fld_ttlinseconds(B),
+      fld_class(A) = fld_class(B)].
+parsednskeyh_rules(124): 
+     rr_type__dnskey_record_type__keylengthvaluetype__size >= 0 may_be_deduced.
+parsednskeyh_rules(125): 
+     rr_type__dnskey_record_type__keylengthvaluetype__first may_be_replaced_by 0.
+parsednskeyh_rules(126): 
+     rr_type__dnskey_record_type__keylengthvaluetype__last may_be_replaced_by 1365.
+parsednskeyh_rules(127): 
+     rr_type__dnskey_record_type__keylengthvaluetype__base__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(128): 
+     rr_type__dnskey_record_type__keylengthvaluetype__base__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(129): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__size >= 0 may_be_deduced.
+parsednskeyh_rules(130): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__first may_be_replaced_by 1.
+parsednskeyh_rules(131): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__last may_be_replaced_by 1365.
+parsednskeyh_rules(132): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__base__first may_be_replaced_by -2147483648.
+parsednskeyh_rules(133): 
+     rr_type__dnskey_record_type__dnskeystringtypeindex__base__last may_be_replaced_by 2147483647.
+parsednskeyh_rules(134): 
+     rr_type__dnskey_record_type__dnskeyrecordtype__size >= 0 may_be_deduced.
+parsednskeyh_rules(135): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__dnskey_record_type__dnskeyrecordtype)),
+      goal(checktype(B,rr_type__dnskey_record_type__dnskeyrecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_flags(A) = fld_flags(B),
+      fld_protocol(A) = fld_protocol(B),
+      fld_algorithm(A) = fld_algorithm(B),
+      fld_key(A) = fld_key(B),
+      fld_keylength(A) = fld_keylength(B)].

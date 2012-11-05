@@ -1,0 +1,1009 @@
+dns_network.adb:--# hide DNS_Network;
+dns_network.adb:   --# global in out Network;
+dns_network.adb:   --# derives Network from *;
+dns_network.ads:--# inherit DNS_Types,System;
+dns_network.ads:--# own protected Network : Network_Type;
+dns_network.ads:   --# type Network_Type is abstract;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network from Network;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network from Network;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network from * & Socket from Network;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network, Packet, Number_Bytes, Failure from Network, Socket;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Failure,Network from Network, Packet, Number_Bytes, Socket &
+dns_network.ads:   --#         Packet from Network;
+dns_network.ads:   --# pre Integer(Number_Bytes) > DNS_Types.Header_Bits/8;
+dns_network.ads:   --# post System.Default_Bit_Order=System.High_Order_First -> Packet = Packet~;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network, Packet, Number_Bytes, Reply_Address, Failure from Network;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Failure,Network from Network, Packet, Number_Bytes, To_Address &
+dns_network.ads:   --#         Packet from Network;
+dns_network.ads:   --# pre Integer(Number_Bytes) > DNS_Types.Header_Bits/8;
+dns_network.ads:   --# post System.Default_Bit_Order=System.High_Order_First -> Packet = Packet~;
+dns_network.ads:   --# global in out Network;
+dns_network.ads:   --# derives Network from *, Socket;
+dns_network.ads:   --# hide DNS_Network
+dns_network_receive.ads:--# inherit DNS_Types,DNS_Network;
+dns_network_receive.ads:   --# global in out DNS_Network.Network;
+dns_network_receive.ads:   --# derives DNS_Network.Network, Packet, Number_Bytes, Failure from DNS_Network.Network, Socket;
+dns_network_receive.ads:   --# post (not Failure) -> (Number_Bytes >= DNS_Types.Packet_Length_Range(1+DNS_Types.Header_Bits/8)
+dns_network_receive.ads:   --#      and Number_Bytes <= DNS_Network.MAX_QUERY_SIZE);
+dns_network_receive.ads:   --# global in out DNS_Network.Network;
+dns_network_receive.ads:   --# derives DNS_Network.Network, Packet, Number_Bytes, Reply_Address, Failure from DNS_Network.Network;
+dns_network_receive.ads:   --# post (not Failure) -> (Number_Bytes >= DNS_Types.Packet_Length_Range(1+DNS_Types.Header_Bits/8)
+dns_network_receive.ads:   --#      and Number_Bytes <= DNS_Network.MAX_QUERY_SIZE);
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:         --#assert true;
+dns_table_pkg.adb:         --# assert val <= (i-1)*Character'Pos(Character'Last)
+dns_table_pkg.adb:         --#   and (for all Q in rr_type.WireStringTypeIndex =>
+dns_table_pkg.adb:         --#          (character'pos(domainname(Q))<=255 and
+dns_table_pkg.adb:         --#           character'pos(domainname(Q))>=0));
+dns_table_pkg.adb:   --# global in ARecordTable, ARecordKeys;
+dns_table_pkg.adb:   --# derives howMany from ARecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from ARecordKeys, ARecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in AAAARecordTable, AAAARecordKeys;
+dns_table_pkg.adb:   --# derives howMany from AAAARecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from AAAARecordKeys, AAAARecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in CNAMERecordTable, CNAMERecordKeys;
+dns_table_pkg.adb:   --# derives howMany from CNAMERecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from CNAMERecordKeys, CNAMERecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in DNSKEYRecordTable, DNSKEYRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from DNSKEYRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from DNSKEYRecordKeys, DNSKEYRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in MXRecordTable, MXRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from MXRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from MXRecordKeys, MXRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in NSRecordTable, NSRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from NSRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from NSRecordKeys, NSRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in NSECRecordTable, NSECRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from NSECRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from NSECRecordKeys, NSECRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in PTRRecordTable, PTRRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from PTRRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from PTRRecordKeys, PTRRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr
+dns_table_pkg.adb:         --#    and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in RRSIGRecordTable, RRSIGRecordKeys;
+dns_table_pkg.adb:   --# derives howMany from RRSIGRecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from RRSIGRecordKeys, RRSIGRecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in SOARecordTable, SOARecordKeys;
+dns_table_pkg.adb:   --# derives howMany from SOARecordKeys, domainName &
+dns_table_pkg.adb:   --#         returnedRecords from SOARecordKeys, SOARecordTable, domainName;
+dns_table_pkg.adb:         --# assert howMany >= 0 and howMany < ctr
+dns_table_pkg.adb:         --#    and bucket >= 1 and bucket <= rr_type.NumBuckets;
+dns_table_pkg.adb:            --# accept Flow, 23, returnedRecords, "assigning to uninitialized array is OK";
+dns_table_pkg.adb:            --# end accept;
+dns_table_pkg.adb:      --# accept Flow, 602, returnedRecords, returnedRecords, "fills as much of array as needed";
+dns_table_pkg.adb:   --# global in out ARecordTable, ARecordKeys;
+dns_table_pkg.adb:   --# derives ARecordTable from *, ARecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         ARecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from ARecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out AAAARecordTable, AAAARecordKeys;
+dns_table_pkg.adb:   --# derives AAAARecordTable from *, AAAARecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         AAAARecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from AAAARecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out CNAMERecordTable, CNAMERecordKeys;
+dns_table_pkg.adb:   --# derives CNAMERecordTable from *, CNAMERecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         CNAMERecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from CNAMERecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out DNSKEYRecordTable, DNSKEYRecordKeys;
+dns_table_pkg.adb:   --# derives DNSKEYRecordTable from *, DNSKEYRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         DNSKEYRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from DNSKEYRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out MXRecordTable, MXRecordKeys;
+dns_table_pkg.adb:   --# derives MXRecordTable from *, MXRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         MXRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from MXRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out NSRecordTable, NSRecordKeys;
+dns_table_pkg.adb:   --# derives NSRecordTable from *, NSRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         NSRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from NSRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out NSECRecordTable, NSECRecordKeys;
+dns_table_pkg.adb:   --# derives NSECRecordTable from *, NSECRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         NSECRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from NSECRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out PTRRecordTable, PTRRecordKeys;
+dns_table_pkg.adb:   --# derives PTRRecordTable from *, PTRRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         PTRRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from PTRRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out rrsigRecordTable, rrsigRecordKeys;
+dns_table_pkg.adb:   --# derives rrsigRecordTable from *, rrsigRecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         rrsigRecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from rrsigRecordKeys, Key;
+dns_table_pkg.adb:         --# assert true;
+dns_table_pkg.adb:   --# global in out SOARecordTable, SOARecordKeys;
+dns_table_pkg.adb:   --# derives SOARecordTable from *, SOARecordKeys, theRecord, Key &
+dns_table_pkg.adb:   --#         SOARecordKeys from *, Key &
+dns_table_pkg.adb:   --#         success from SOARecordKeys, Key;
+dns_table_pkg.adb:      --# accept Flow, 10, ReturnedSOARecords, "only care if there are any";
+dns_table_pkg.adb:      --# end accept;
+dns_table_pkg.adb:            --# assert true;
+dns_table_pkg.adb:      --# accept Flow, 33, ReturnedSOARecords, "only care if there are any";
+dns_table_pkg.ads:--# inherit System, Ada.Characters.Handling, unsigned_types, dns_types, rr_type, rr_type.a_record_type, rr_type.aaaa_record_type,
+dns_table_pkg.ads:--#    rr_type.cname_record_type, rr_type.dnskey_record_type, rr_type.mx_record_type,
+dns_table_pkg.ads:--#    rr_type.ns_record_type, rr_type.nsec_record_type, rr_type.ptr_record_type,
+dns_table_pkg.ads:--#    rr_type.rrsig_record_type, rr_type.soa_record_type;
+dns_table_pkg.ads:--# own protected DNS_Table : DNS_Table_Type (priority => 0);
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in out DNS_Table_Type;
+dns_table_pkg.ads:   --# derives DNS_Table_Type from *, theRecord, Key &
+dns_table_pkg.ads:   --#         success from DNS_Table_Type, key;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives  returnedRecords, howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives  returnedRecords, howMany from DNS_Table_Type, domainName;
+dns_table_pkg.ads:   --# global in DNS_Table_Type;
+dns_table_pkg.ads:   --# derives returnedRecords from DNS_Table_Type, domainName &
+dns_table_pkg.ads:   --#         howMany from DNS_Table_Type, domainName;
+dns_types.adb:      --# hide Byte_Swap_US
+dns_types.ads:--# inherit System;
+dns_types.ads:   --# assert Packet_Length_Range'Base is Integer;
+dns_types.ads:   --# assert Packet_Bytes_Range'Base is Integer;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# assert Unsigned_Short'Base is Integer;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# accept Warning, 3, "Inline ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# derives H from H;
+dns_types.ads:   --# post H = H~[MessageID => Byte_Swap_US(H~.MessageID);
+dns_types.ads:   --#   QDCount => Byte_Swap_US(H~.QDCount);
+dns_types.ads:   --#   ANCount => Byte_Swap_US(H~.ANCount);
+dns_types.ads:   --#   NSCount => Byte_Swap_US(H~.NSCount);
+dns_types.ads:   --#   ARCount => Byte_Swap_US(H~.ARCount)];
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+dns_types.ads:   --# accept Warning, 2, "representation clause ok";
+dns_types.ads:   --# end accept;
+error_msgs.adb:--# hide error_msgs
+error_msgs.ads:--# inherit rr_type, unsigned_types, Rr_Type.Dnskey_Record_Type;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives null from currentLine, begIdx, endIdx;
+error_msgs.ads:   --# derives null from currentLine, begIdx, endIdx;
+error_msgs.ads:   --# derives null from currentLine, lineCount;
+error_msgs.ads:   --# derives null from currentLine, length, lineCount;
+error_msgs.ads:   --# derives ;
+multitask_process_dns_request.adb:      --# hide Multitask_Process_Dns_Request;
+multitask_process_dns_request.adb:      --# global in out Protected_SPARK_IO_05.SPARK_IO_PO;
+multitask_process_dns_request.adb:      --#        in out DNS_Network.Network;
+multitask_process_dns_request.adb:      --# derives DNS_Network.Network from DNS_Network.Network, Reply_Socket &
+multitask_process_dns_request.adb:      --#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Network.Network, Reply_Socket;
+multitask_process_dns_request.ads:--# inherit DNS_types, DNS_Table_Pkg, DNS_Network, System, Protected_SPARK_IO_05, Process_DNS_Request;
+multitask_process_dns_request.ads:      --# global in out Protected_SPARK_IO_05.SPARK_IO_PO;
+multitask_process_dns_request.ads:      --#        in DNS_Table_Pkg.DNS_Table;
+multitask_process_dns_request.ads:      --#        in out DNS_Network.Network;
+multitask_process_dns_request.ads:      --# derives DNS_Network.Network from DNS_Network.Network, Reply_Socket,
+multitask_process_dns_request.ads:      --#                                  DNS_Table_Pkg.DNS_Table &
+multitask_process_dns_request.ads:      --#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Network.Network, Reply_Socket,
+multitask_process_dns_request.ads:      --#                                                DNS_Table_Pkg.DNS_Table;
+non_spark_stuff.adb:   --# hide non_spark_stuff
+non_spark_stuff.ads:--# inherit unsigned_types;
+parser_utilities.adb:   --# pre begIdx <= endIdx;
+parser_utilities.adb:               --# assert true;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx < length;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx <= length and
+parser_utilities.adb:         --#    endIdx >= begIdx and endIdx < length;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx <= length and
+parser_utilities.adb:         --#    endIdx >= begIdx and endIdx <= length;
+parser_utilities.adb:         --# assert begIdx < length;
+parser_utilities.adb:         --# assert begIdx <= length and
+parser_utilities.adb:         --#    endIdx >= begIdx and endIdx < length;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx <= length and endIdx >= begIdx and endIdx <= length
+parser_utilities.adb:         --#    and EndIdx = EndIdx%
+parser_utilities.adb:         --#    and ((ContainsOnlyNumbers = true)  ->
+parser_utilities.adb:         --#         (for all J in integer range BegIdx..I => (S(J) >= '0' AND S(J) <= '9')));
+parser_utilities.adb:         --# assert begIdx >= 1 and tmpVal <= unsigned_types.MAX_8BIT_VAL;
+parser_utilities.adb:         --# assert begIdx >= 1 and tmpVal <= unsigned_types.MAX_16BIT_VAL;
+parser_utilities.adb:         --# assert begIdx >= 1 and tmpVal >= 0 and tmpVal <= unsigned_types.MAX_32BIT_VAL;
+parser_utilities.adb:      --# pre isMult(Char);
+parser_utilities.adb:      --# return Value => Value >= 0 and Value <= 60*60*24*7;
+parser_utilities.adb:         --#assert Blob >= 0 and Blob <= Rr_Type.SOA_Record_Type.MAX_TIME_VAL
+parser_utilities.adb:         --#and Tmp >= 0 and Tmp <= Rr_Type.SOA_Record_Type.MAX_TIME_VAL;
+parser_utilities.adb:         --#assert year <= rr_type.rrsig_record_type.MAX_YEAR and month <= 12 and day <= 31
+parser_utilities.adb:         --#   and hour <= 23 and minute <= 59 and second <= 59;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx < length;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx <= endIdx and endIdx >= 1 and endIdx < length;
+parser_utilities.adb:            --# assert BegIdx = begIdx% and EndIdx = EndIdx% and I >= BegIdx and I <= EndIdx
+parser_utilities.adb:            --# and BegIdx >= 1
+parser_utilities.adb:            --# and RRSIG_Rec.SignatureLength + ((EndIdx-BegIdx)+1) <= Rr_Type.RRSIG_Record_Type.MaxRRSigLength;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx < length;
+parser_utilities.adb:         --# assert begIdx >= 1 and begIdx <= endIdx and endIdx >= 1 and endIdx < length;
+parser_utilities.adb:            --# assert BegIdx = begIdx% and EndIdx = EndIdx% and I >= BegIdx and I <= EndIdx
+parser_utilities.adb:            --# and BegIdx >= 1
+parser_utilities.adb:            --# and DNSKEY_Rec.KeyLength + ((EndIdx-BegIdx)+1) <= Rr_Type.Dnskey_Record_Type.MaxDNSKeyLength;
+parser_utilities.adb:            --# assert true;
+parser_utilities.adb:         --# assert ctr < endIdx and numSeparators <= REQ_NUM_SEPARATORS and numDigitsInField <= MAX_DIGITS_IN_FIELD;
+parser_utilities.adb:         --# assert ctr < endIdx and numSeparators <= REQ_NUM_SEPARATORS and numDigitsInByte <= MAX_DIGITS_PER_BYTE;
+parser_utilities.ads:--# inherit dns_types, Ada.Characters.Latin_1, Ada.Characters.Handling, error_msgs, rr_type, rr_type.a_record_type,
+parser_utilities.ads:--#   rr_type.aaaa_record_type, rr_type.dnskey_record_type, rr_type.rrsig_Record_Type,
+parser_utilities.ads:--#   rr_type.soa_record_type, unsigned_types, non_spark_stuff;
+parser_utilities.ads:   --# derives target, success from target, origin, success
+parser_utilities.ads:   --# & null from currentLine, lastPos, lineCount;
+parser_utilities.ads:      --# derives success from name, success;
+parser_utilities.ads:   --# derives T from s, length;
+parser_utilities.ads:   --# derives begIdx, endIdx, T from s, length, begIdx;
+parser_utilities.ads:   --# pre begIdx <= length;
+parser_utilities.ads:   --# post begIdx <= endIdx and begIdx <= length and endIdx <= length
+parser_utilities.ads:   --#  and ((T = rr_type.Number) ->
+parser_utilities.ads:   --#      (for all I in integer range begIdx..endIdx => (S(I) >= '0' and S(I) <= '9')));
+parser_utilities.ads:   --# derives value from zoneFileLine, begIdx, endIdx & success from zoneFileLine, begIdx, endIdx, success;
+parser_utilities.ads:   --# pre for all I in integer range BegIdx..EndIdx => (ZoneFileLine(I) >= '0' and ZoneFileLine(I) <= '9');
+parser_utilities.ads:   --# derives value from zoneFileLine, begIdx, endIdx & success from zoneFileLine, begIdx, endIdx, success;
+parser_utilities.ads:   --# pre for all I in integer range BegIdx..EndIdx => (ZoneFileLine(I) >= '0' and ZoneFileLine(I) <= '9');
+parser_utilities.ads:   --# derives value from zoneFileLine, begIdx, endIdx & success from zoneFileLine, begIdx, endIdx, success;
+parser_utilities.ads:   --# pre for all I in integer range BegIdx..EndIdx => (ZoneFileLine(I) >= '0' and ZoneFileLine(I) <= '9');
+parser_utilities.ads:   --# derives retVal,success from S, begIdx, endIdx, success;
+parser_utilities.ads:   --# derives timeVal from timeString & success from timeString, success;
+parser_utilities.ads:   --# pre for all I in Rr_Type.Rrsig_Record_Type.TimeStringTypeIndex => (timeString(I) >= '0' and timeString(I) <= '9');
+parser_utilities.ads:   --# derives RRSIG_Rec from RRSIG_Rec, S, Length & AllDone from S, Length
+parser_utilities.ads:   --#   & Success from RRSIG_Rec, S, Length, Success;
+parser_utilities.ads:   --# derives DNSKEY_Rec from DNSKEY_Rec, S, Length & Success from DNSKEY_Rec, S, Length, Success;
+parser_utilities.ads:   --# pre begIdx <= endIdx;
+process_dns_request.adb:            --# assert Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-6)-DNS_Types.Packet_Bytes_Range(Current_Name_Length) and
+process_dns_request.adb:            --# i>=RR_Type.WireStringTypeIndex'First and i<= RR_Type.WireStringTypeIndex'Last;
+process_dns_request.adb:            --# assert Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-6)-DNS_Types.Packet_Bytes_Range(Current_Name_Length) and
+process_dns_request.adb:            --# i>=RR_Type.WireStringTypeIndex'First and i<= RR_Type.WireStringTypeIndex'Last;
+process_dns_request.adb:            --# assert Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-8)-DNS_Types.Packet_Bytes_Range(Current_Name_Length) and
+process_dns_request.adb:            --# i>=RR_Type.WireStringTypeIndex'First and i<= RR_Type.WireStringTypeIndex'Last;
+process_dns_request.adb:         --# assert Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-20)-
+process_dns_request.adb:         --# DNS_Types.Packet_Bytes_Range(Mailbox_Name_Length+Nameserver_Name_Length) and
+process_dns_request.adb:         --# i>=RR_Type.WireStringTypeIndex'First and i<= RR_Type.WireStringTypeIndex'Last;
+process_dns_request.adb:         --# assert Current_Byte>=1 and Current_Byte <= (DNS_Types.Packet_Bytes_Range'Last-20)-
+process_dns_request.adb:         --# DNS_Types.Packet_Bytes_Range(Mailbox_Name_Length) and
+process_dns_request.adb:         --# i>=RR_Type.WireStringTypeIndex'First and i<= RR_Type.WireStringTypeIndex'Last;
+process_dns_request.adb:         --# assert I>=RR_Type.WireStringType'First and I < RR_Type.WireStringType'Last and
+process_dns_request.adb:         --# Byte >= DNS_Types.Packet_Bytes_Range'First and Integer(Byte) <= Integer(Input_Bytes-5);
+process_dns_request.adb:      --# accept Warning, 12, type_To_Natural, "unchecked conversions ok";
+process_dns_request.adb:      --# end accept;
+process_dns_request.adb:         --# accept Warning, 12, To_Type, "unchecked conversions ok";
+process_dns_request.adb:         --# end accept;
+process_dns_request.adb:      --# accept Warning, 12, class_To_Natural, "unchecked conversions ok";
+process_dns_request.adb:      --# end accept;
+process_dns_request.adb:         --# accept Warning, 12, To_Class, "unchecked conversions ok";
+process_dns_request.adb:         --# end accept;
+process_dns_request.adb:               --# assert Response_Counter >=1 and Response_Counter <= NumFound
+process_dns_request.adb:               --# and Answer_Count = Answer_Count~
+process_dns_request.adb:               --# and Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.adb:               --# and Current_Byte = Start_Byte +
+process_dns_request.adb:               --#        DNS_Types.Packet_Bytes_Range(28*(Response_Counter-1))
+process_dns_request.adb:               --# and Integer(Current_Byte) < DNS_Types.Packet_Size-(28+DNS_Types.Header_Bits/8)
+process_dns_request.adb:               --# and numfound <= rr_type.MaxNumRecords ;
+process_dns_request.adb:               --# assert Response_Counter >=1 and Response_Counter <= NumFound
+process_dns_request.adb:               --# and Integer(Start_Byte) <= DNS_Types.Packet_Size
+process_dns_request.adb:               --# and Answer_Count = Answer_Count~
+process_dns_request.adb:               --# and Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.adb:               --# and Current_Byte = Start_Byte +
+process_dns_request.adb:               --#        DNS_Types.Packet_Bytes_Range(16*(Response_Counter-1))
+process_dns_request.adb:               --# and Integer(Current_Byte) < DNS_Types.Packet_Size-(16+DNS_Types.Header_Bits/8)
+process_dns_request.adb:               --# and numfound <= rr_type.MaxNumRecords ;
+process_dns_request.adb:            --# assert Response_Counter >=1 and Response_Counter <= Num_Found
+process_dns_request.adb:            --# and current_name_length >=1 and current_name_length<=rr_type.WireStringTypeIndex'last
+process_dns_request.adb:            --# and Num_Found <= rr_type.MaxNumRecords
+process_dns_request.adb:            --# and Integer(Start_Byte) <= DNS_Types.Packet_Size
+process_dns_request.adb:            --# and Answer_Count = Answer_Count~
+process_dns_request.adb:            --# and Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.adb:            --# and Integer(Current_Byte) < (DNS_Types.Packet_Size-(12+DNS_Types.Header_Bits/8))-
+process_dns_request.adb:            --#    (Current_Name_Length)
+process_dns_request.adb:            --# and Current_Byte >= 0;
+process_dns_request.adb:            --# assert Response_Counter >=1 and Response_Counter <= Num_Found
+process_dns_request.adb:            --# and current_name_length >=1 and current_name_length<=rr_type.WireStringTypeIndex'last
+process_dns_request.adb:            --# and Num_Found <= rr_type.MaxNumRecords
+process_dns_request.adb:            --# and Integer(Start_Byte) <= DNS_Types.Packet_Size
+process_dns_request.adb:            --# and Answer_Count = Answer_Count~
+process_dns_request.adb:            --# and Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.adb:            --# and Integer(Current_Byte) < (DNS_Types.Packet_Size-(12+DNS_Types.Header_Bits/8))-
+process_dns_request.adb:            --#    (Current_Name_Length)
+process_dns_request.adb:            --# and Current_Byte >= 0;
+process_dns_request.adb:            --# assert Response_Counter >=1 and Response_Counter <= Num_Found
+process_dns_request.adb:            --# and current_name_length >=1 and current_name_length<=rr_type.WireStringTypeIndex'last
+process_dns_request.adb:            --# and Num_Found <= rr_type.MaxNumRecords
+process_dns_request.adb:            --# and Integer(Start_Byte) <= DNS_Types.Packet_Size
+process_dns_request.adb:            --# and Answer_Count = Answer_Count~
+process_dns_request.adb:            --# and Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.adb:            --# and Integer(Current_Byte) < (DNS_Types.Packet_Size-(14+DNS_Types.Header_Bits/8))-
+process_dns_request.adb:            --#    (Current_Name_Length)
+process_dns_request.adb:            --# and Current_Byte >= 0;
+process_dns_request.adb:         --# assert I<RR_Type.WireStringTypeIndex'Last and
+process_dns_request.adb:         --#        I<=Name_Length and
+process_dns_request.adb:         --#        Output_Packet.Header.ANCount = 0 and
+process_dns_request.adb:         --#        Current_Byte >= Start_Byte and
+process_dns_request.adb:         --#        Integer(Current_Byte)+DNS_Types.Header_Bits/8<DNS_Types.Packet_Size;
+process_dns_request.adb:            --# assert I+Zone_Length<=RR_Type.WireStringTypeIndex'Last and I>=1 and
+process_dns_request.adb:            --# zone_length = natural(character'pos(domainname(domainname'first))+1);
+process_dns_request.adb:         --# assert Answer_Count=0 and Amount_Trimmed>=0 and Amount_Trimmed<RR_Type.WireStringType'Last
+process_dns_request.adb:         --# and Output_Bytes <= DNS_Types.Packet_Length_Range'Last
+process_dns_request.adb:         --# and Current_Qname_Location <= DNS_Types.QNAME_PTR_RANGE(Output_Bytes);
+process_dns_request.adb:      --# accept Flow, 10, Output_Packet.Header.QR,
+process_dns_request.adb:      --#   "The rest of the header fields retain their newly assigned values";
+process_dns_request.adb:      --# accept Flow, 10, Output_Packet.Header.ANCOUNT,
+process_dns_request.adb:      --#   "The rest of the header fields retain their newly assigned values";
+process_dns_request.adb:      --# accept Flow, 10, Output_Packet.Header.AA,
+process_dns_request.adb:      --#   "The rest of the header fields retain their newly assigned values";
+process_dns_request.adb:      --# end accept;
+process_dns_request.adb:      --# end accept;
+process_dns_request.adb:      --# end accept;
+process_dns_request.adb:      --# assert Integer(Input_Bytes) >=DNS_Types.Header_Bits/8+1
+process_dns_request.adb:      --# and Qname_Location >=0 and Qname_Location < 16384
+process_dns_request.adb:      --# and Integer(Input_Bytes) < 312;
+process_dns_request.adb:         --# assert Integer(Input_Bytes) >=DNS_Types.Header_Bits/8
+process_dns_request.adb:         --# and Qname_Location >=0 and Qname_Location < 16384
+process_dns_request.adb:         --# and Integer(Input_Bytes) < 312
+process_dns_request.adb:         --# and Start_Byte <= DNS_Types.Packet_Bytes_Range(Input_Bytes) and Start_Byte >= 4;
+process_dns_request.adb:--# accept Flow, 10, MX_Replies, "not needed for ANY query";
+process_dns_request.adb:--# accept Flow, 10, Qname_Locations, "not needed for ANY query";
+process_dns_request.adb:--# accept Flow, 10, NumFound, "not needed for any query";
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:--# accept Flow, 10, NS_Replies, "not needed for ANY query";
+process_dns_request.adb:--# accept Flow, 10, Qname_Locations, "not needed for ANY query";
+process_dns_request.adb:--# accept Flow, 10, NumFound, "not needed for any query";
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:--# end accept;
+process_dns_request.adb:            --# assert Counter >= 1 and Counter<=NumFound and
+process_dns_request.adb:            --#    Answer_Count >=0 and Answer_Count <= 65535 and
+process_dns_request.adb:            --#    Additional_Count >= 0 and
+process_dns_request.adb:            --#    (for all Z in RR_Type.ReturnedRecordsIndexType =>
+process_dns_request.adb:            --#       (Qname_Locations(Z) >= 0 and Qname_Locations(Z) < 16384)) and
+process_dns_request.adb:            --#    Qname_Location >=0 and Qname_Location <= 16383 and
+process_dns_request.adb:            --#    Additional_Count < DNS_Types.Unsigned_Short'Last-DNS_Types.Unsigned_Short(
+process_dns_request.adb:            --#    2*Rr_Type.MaxNumRecords) and
+process_dns_request.adb:            --#    NumFound >= 0 and NumFound <= rr_type.MaxNumRecords and
+process_dns_request.adb:            --#    Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and
+process_dns_request.adb:            --#    Integer(Output_Bytes) <= DNS_Types.Packet_Size;
+process_dns_request.adb:            --# assert Counter >= 1 and Counter<=NumFound and
+process_dns_request.adb:            --#    (for all Z in RR_Type.ReturnedRecordsIndexType =>
+process_dns_request.adb:            --#       (Qname_Locations(Z) >= 0 and Qname_Locations(Z) < 16384)) and
+process_dns_request.adb:            --#    Qname_Location >=0 and Qname_Location <= 16383 and
+process_dns_request.adb:            --#    Answer_Count >=0 and Answer_Count <= 65535 and
+process_dns_request.adb:            --#    Additional_Count >= 0 and
+process_dns_request.adb:            --#    Additional_Count < DNS_Types.Unsigned_Short'Last-DNS_Types.Unsigned_Short(
+process_dns_request.adb:            --#    2*Rr_Type.MaxNumRecords) and
+process_dns_request.adb:            --#    NumFound >= 0 and NumFound <= rr_type.MaxNumRecords and
+process_dns_request.adb:            --#    Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and
+process_dns_request.adb:            --#    Integer(Output_Bytes) <= DNS_Types.Packet_Size;
+process_dns_request.adb:      --# assert
+process_dns_request.adb:      --#    Answer_Count >=0 and Answer_Count <= 65535 and
+process_dns_request.adb:      --#    Qname_Location >=0 and Qname_Location < 16384 and
+process_dns_request.adb:      --#    Additional_Count >= 0 and
+process_dns_request.adb:      --#    NumFound >= 0 and NumFound <= rr_type.MaxNumRecords and
+process_dns_request.adb:      --#    Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and
+process_dns_request.adb:      --#    Integer(Output_Bytes) <= DNS_Types.Packet_Size;
+process_dns_request.adb:      --# assert
+process_dns_request.adb:      --#    Answer_Count >=0 and Answer_Count <= 65535 and
+process_dns_request.adb:      --#    Qname_Location >=0 and Qname_Location < 16384 and
+process_dns_request.adb:      --#    Additional_Count >= 0 and
+process_dns_request.adb:      --#    NumFound >= 0 and NumFound <= rr_type.MaxNumRecords and
+process_dns_request.adb:      --#    Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and
+process_dns_request.adb:      --#    Integer(Max_Transmit) <= DNS_Types.Packet_Size and Max_Transmit >= DNS_Types.UDP_Max_Size and
+process_dns_request.adb:      --#    Integer(Output_Bytes) <= DNS_Types.Packet_Size;
+process_dns_request.adb:         --# accept Flow, 23, Output_Packet.Rest, "init not needed";
+process_dns_request.adb:         --# accept Flow, 10, Max_Transmit, "only needed for UDP";
+process_dns_request.adb:         --# end accept;
+process_dns_request.adb:         --# end accept;
+process_dns_request.adb:         --# accept Flow, 22,
+process_dns_request.adb:         --#   "allow use of static expression for portability across platforms";
+process_dns_request.adb:         --# end accept;
+process_dns_request.adb:      --# accept Flow, 602, DNS_Network.Network, Output_Packet.Rest,  "initialization is unneeded";
+process_dns_request.adb:      --# accept Flow, 602, Protected_SPARK_IO_05.SPARK_IO_PO, Output_Packet.Rest,  "initialization is unneeded";
+process_dns_request.adb:      --# accept Flow, 33, Max_Transmit, "Max_Transmit only for UDP";
+process_dns_request.ads:--# inherit DNS_types, DNS_Network, DNS_Network_Receive, System, Protected_SPARK_IO_05,
+process_dns_request.ads:--#          RR_Type, RR_Type.a_record_type, RR_Type.aaaa_record_type,
+process_dns_request.ads:--#          RR_Type.cname_record_type, RR_Type.ns_record_type,
+process_dns_request.ads:--#          RR_type.mx_record_type, RR_Type.ptr_record_type,
+process_dns_request.ads:--#          RR_type.soa_record_type,
+process_dns_request.ads:--#          DNS_Table_Pkg, Unsigned_Types, ada.Unchecked_Conversion;
+process_dns_request.ads:      --# global in out Protected_SPARK_IO_05.SPARK_IO_PO;
+process_dns_request.ads:      --#        in out DNS_Network.Network;
+process_dns_request.ads:      --#        in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:      --# derives DNS_Network.Network from DNS_Table_Pkg.DNS_Table, DNS_Network.Network, Reply_Socket &
+process_dns_request.ads:      --#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Table_Pkg.DNS_Table, DNS_Network.Network, Reply_Socket;
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --#        in out Protected_SPARK_IO_05.SPARK_IO_PO;
+process_dns_request.ads:   --# derives Output_Packet from *, DNS_Table_Pkg.DNS_Table, Input_Packet, Input_Bytes &
+process_dns_request.ads:   --#         Output_Bytes from  Output_Packet, Input_Bytes, Input_Packet, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Table_Pkg.DNS_Table, Input_Packet, Input_Bytes &
+process_dns_request.ads:   --#         Max_Transmit from DNS_Table_Pkg.DNS_Table, Input_Packet, Input_Bytes;
+process_dns_request.ads:   --# pre Integer(Input_Bytes) >=DNS_Types.Header_Bits/8+1
+process_dns_request.ads:   --#     and Integer(Input_Bytes) < 312;
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#      Integer(Max_Transmit) <= DNS_Types.Packet_Size and Max_Transmit >= DNS_Types.UDP_Max_Size;
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, Value;
+process_dns_request.ads:   --# pre Start_Byte <= DNS_Types.Packet_Bytes_Range'Last-3;
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, Value;
+process_dns_request.ads:   --# pre Start_Byte <= DNS_Types.Packet_Bytes_Range'Last-1;
+process_dns_request.ads:   --# derives Domainname from Input_Packet,Input_Bytes &
+process_dns_request.ads:   --#         Query_Type from Input_Packet,Input_Bytes &
+process_dns_request.ads:   --#         Query_Class from Input_Packet,Input_Bytes &
+process_dns_request.ads:   --#         End_Byte from Input_Packet,Input_Bytes;
+process_dns_request.ads:   --# pre Input_Bytes >=DNS_Types.Header_Bits/8+1 and Input_Bytes < 1000;
+process_dns_request.ads:   --# post Integer(End_Byte) <= Integer(Input_Bytes) and End_Byte >= 4;
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, A_Record;
+process_dns_request.ads:   --# pre Start_Byte <= DNS_Types.Packet_Bytes_Range'Last-10;
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, AAAA_Record;
+process_dns_request.ads:   --# pre Start_Byte <= DNS_Types.Packet_Bytes_Range'Last-22;
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, NS_Record, Current_Name_Length;
+process_dns_request.ads:   --# pre Current_Name_Length >= 0 and Current_Name_Length<=RR_Type.WireStringTypeIndex'Last and
+process_dns_request.ads:   --#     Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-6)-DNS_Types.Packet_Bytes_Range(Current_Name_Length);
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, PTR_Record, Current_Name_Length;
+process_dns_request.ads:   --# pre Current_Name_Length >= 0 and Current_Name_Length<=RR_Type.WireStringTypeIndex'Last and
+process_dns_request.ads:   --#     Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-6)-DNS_Types.Packet_Bytes_Range(Current_Name_Length);
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, MX_Record, Current_Name_Length;
+process_dns_request.ads:   --# pre Current_Name_Length >= 0 and Current_Name_Length<=RR_Type.WireStringTypeIndex'Last and
+process_dns_request.ads:   --#     Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-8)-DNS_Types.Packet_Bytes_Range(Current_Name_Length);
+process_dns_request.ads:   --# derives Bytes from *, Start_Byte, SOA_Record, Nameserver_Name_Length, Mailbox_Name_Length;
+process_dns_request.ads:   --# pre Nameserver_Name_Length >= 0 and Nameserver_Name_Length<=RR_Type.WireStringTypeIndex'Last and
+process_dns_request.ads:   --#     Mailbox_Name_Length >= 0 and Mailbox_Name_Length<=RR_Type.WireStringTypeIndex'Last and
+process_dns_request.ads:   --#     Start_Byte <= (DNS_Types.Packet_Bytes_Range'Last-26)-
+process_dns_request.ads:   --#        DNS_Types.Packet_Bytes_Range(Nameserver_Name_Length+Mailbox_Name_Length);
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Input_Packet, Input_Bytes, Query_End_Byte &
+process_dns_request.ads:   --#         Output_Bytes from Start_Byte, Input_Packet, Input_Bytes, Query_End_Byte &
+process_dns_request.ads:   --#         Max_Transmit from Start_Byte, Input_Bytes, Input_Packet, Query_End_Byte &
+process_dns_request.ads:   --#         DNSSEC from Start_Byte, Input_Bytes, Input_Packet, Query_End_Byte &
+process_dns_request.ads:   --#         Additional_Count from *, Input_Packet, Start_Byte, Input_Bytes, Query_End_Byte;
+process_dns_request.ads:   --# pre Additional_Count < DNS_Types.Unsigned_Short'Last;
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Output_Bytes <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#      Additional_Count >= Additional_Count~ and Additional_Count <= Additional_Count~+1 and
+process_dns_request.ads:   --#      Max_Transmit >= DNS_Types.UDP_Max_Size and Max_Transmit <= DNS_Types.Packet_Size;
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Qname_Location, Start_Byte, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# pre Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords)
+process_dns_request.ads:   --#     and Integer(Start_Byte) <= DNS_Types.Packet_Size;
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#      Answer_Count <= Answer_Count~+DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Qname_Location, Start_Byte, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Qname_Location, Start_Byte, DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size;
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size;
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Qname_Location, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#      Answer_Count <= Answer_Count~ + DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# derives Domainname from Cnames &
+process_dns_request.ads:   --#         Qname_Location from Start_Byte &
+process_dns_request.ads:   --#         Output_Packet from *, Qname_Location, Start_Byte, Cnames &
+process_dns_request.ads:   --#         Output_Bytes from Cnames, Start_Byte;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size
+process_dns_request.ads:   --#     and Output_Packet.Header.ANCount = 0;
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#      Output_Packet.Header.ANCount <= 1;
+process_dns_request.ads:   --# derives Output_Packet from * &
+process_dns_request.ads:   --#         Output_Bytes from Input_Bytes;
+process_dns_request.ads:   --# post Output_Bytes = Input_Bytes;
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Qname_Location, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Num_Found from DNS_Table_Pkg.DNS_Table, Domainname &
+process_dns_request.ads:   --#         Replies from DNS_Table_Pkg.DNS_Table, Domainname &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Qname_Locations from Start_Byte, DNS_Table_Pkg.DNS_Table, Domainname ;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= Answer_Count~+DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Qname_Location, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= Answer_Count~+DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Qname_Location, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Num_Found from DNS_Table_Pkg.DNS_Table, Domainname &
+process_dns_request.ads:   --#         Replies from DNS_Table_Pkg.DNS_Table, Domainname &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Qname_Locations from Start_Byte, DNS_Table_Pkg.DNS_Table, Domainname ;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= Answer_Count~+DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# global in DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# derives Output_Packet from *, Start_Byte, Qname_Location, Domainname, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Output_Bytes from Domainname, Start_Byte, DNS_Table_Pkg.DNS_Table &
+process_dns_request.ads:   --#         Answer_Count from *, Domainname, DNS_Table_Pkg.DNS_Table;
+process_dns_request.ads:   --# pre Integer(Start_Byte) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= DNS_Types.Unsigned_Short'Last-DNS_types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# post Integer(Output_Bytes) >= DNS_Types.Header_Bits/8+1 and Integer(Output_Bytes) <= DNS_Types.Packet_Size and
+process_dns_request.ads:   --#     Answer_Count <= Answer_Count~+DNS_Types.Unsigned_Short(rr_type.MaxNumRecords);
+process_dns_request.ads:   --# derives Trimmed_Name from Domainname &
+process_dns_request.ads:   --#         New_Qname_Location from Domainname, Qname_Location;
+process_dns_request.ads:   --# pre Qname_Location <= DNS_Types.QNAME_PTR_RANGE(DNS_Types.Packet_Length_Range'Last);
+process_first_line_of_record.ads:--# inherit Dns_Types, dns_table_pkg, error_msgs, parser_utilities, rr_type.a_record_type,
+process_first_line_of_record.ads:--# rr_type.aaaa_record_type, rr_type.cname_record_type, rr_type.dnskey_record_type, rr_type.mx_record_type,
+process_first_line_of_record.ads:--# rr_type.ns_record_type, rr_type.nsec_record_type, rr_type.ptr_record_type, rr_type.rrsig_record_type,
+process_first_line_of_record.ads:--# spark.ada.text_io, unsigned_types, rr_type, zone_file_parser;
+process_first_line_of_record.ads:      --# global in out dns_table_pkg.DNS_Table;
+process_first_line_of_record.ads:      --# derives dns_table_pkg.DNS_Table from dns_table_pkg.DNS_Table, currentRecordType,
+process_first_line_of_record.ads:      --#   currentOrigin, currentOwner, currentTTL, CurrentClass, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & inMultilineRecord, lineInRecordCtr from currentRecordType
+process_first_line_of_record.ads:      --# & currentNameServer, currentEmail from currentOrigin, currentRecordType, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & DNSKEY_Rec from currentRecordType, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & RRSIG_Rec from currentRecordType, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & recordSuccessfullyInserted from dns_table_pkg.DNS_Table, currentRecordType,
+process_first_line_of_record.ads:      --#    currentOrigin, currentOwner, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & success from currentRecordType, currentOrigin, currentLine, lastPos, success
+process_first_line_of_record.ads:      --# & null from lineCount;
+process_first_line_of_record.ads:      --# pre lastPos >= 1 and lastPos <= rr_type.lineLengthIndex'last;
+protected_spark_io_05.adb:   --# hide Protected_SPARK_IO_05;
+protected_spark_io_05.adb:      --# hide SPARK_IO_05;
+protected_spark_io_05.ads:         --# own protected SPARK_IO_PO : SPARK_IO_05(Priority=>0);
+protected_spark_io_05.ads:      --# global in SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives File,
+protected_spark_io_05.ads:      --#         Status from Form_Of_File,
+protected_spark_io_05.ads:      --#                     Name_Of_File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in  SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives File,
+protected_spark_io_05.ads:      --#         Status from Form_Of_File,
+protected_spark_io_05.ads:      --#                     Name_Length,
+protected_spark_io_05.ads:      --#                     Name_Of_File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives File,
+protected_spark_io_05.ads:      --#         Status from Form_Of_File,
+protected_spark_io_05.ads:      --#                     Mode_Of_File,
+protected_spark_io_05.ads:      --#                     Name_Of_File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives File,
+protected_spark_io_05.ads:      --#         SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Status from Form_Of_File,
+protected_spark_io_05.ads:      --#                     Mode_Of_File,
+protected_spark_io_05.ads:      --#                     Name_Length,
+protected_spark_io_05.ads:      --#                     Name_Of_File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Status from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05 &
+protected_spark_io_05.ads:      --#         File   from ;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Status from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05 &
+protected_spark_io_05.ads:      --#         File   from ;
+protected_spark_io_05.ads:      --# derives File,
+protected_spark_io_05.ads:      --#         Status from File,
+protected_spark_io_05.ads:      --#                     Mode_Of_File;
+protected_spark_io_05.ads:      --# derives Name_Of_File,
+protected_spark_io_05.ads:      --#         Stop         from File;
+protected_spark_io_05.ads:      --# derives Form_Of_File,
+protected_spark_io_05.ads:      --#         Stop             from File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Spacing;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                     File,
+protected_spark_io_05.ads:      --#                     Spacing;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                     File,
+protected_spark_io_05.ads:      --#                     Posn;
+protected_spark_io_05.ads:      --# pre Mode (File) = In_File;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Posn;
+protected_spark_io_05.ads:      --# pre Mode( File ) = Out_File or
+protected_spark_io_05.ads:      --#     Mode (File) = Append_File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# pre Mode (File) = In_File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# pre Mode (File) = Out_File or
+protected_spark_io_05.ads:      --#     Mode (File) = Append_File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# pre Mode (File) = In_File;
+protected_spark_io_05.ads:      --# global SPARK_IO_05;
+protected_spark_io_05.ads:      --# pre Mode (File) = Out_File or
+protected_spark_io_05.ads:      --#     Mode (File) = Append_File;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item   from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Item;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item,
+protected_spark_io_05.ads:      --#         Status from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item,
+protected_spark_io_05.ads:      --#         Stop   from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Item,
+protected_spark_io_05.ads:      --#                      Stop;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item,
+protected_spark_io_05.ads:      --#         Stop   from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Item,
+protected_spark_io_05.ads:      --#                      Stop;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item,
+protected_spark_io_05.ads:      --#         Read   from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05,
+protected_spark_io_05.ads:      --#                     Width;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      Base,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Item,
+protected_spark_io_05.ads:      --#                      Width;
+protected_spark_io_05.ads:      --# derives Item,
+protected_spark_io_05.ads:      --#         Stop from Source,
+protected_spark_io_05.ads:      --#                   Start_Pos;
+protected_spark_io_05.ads:      --# derives Dest from *,
+protected_spark_io_05.ads:      --#                   Base,
+protected_spark_io_05.ads:      --#                   Item,
+protected_spark_io_05.ads:      --#                   Start_Pos;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05,
+protected_spark_io_05.ads:      --#         Item,
+protected_spark_io_05.ads:      --#         Read   from File,
+protected_spark_io_05.ads:      --#                     SPARK_IO_05,
+protected_spark_io_05.ads:      --#                     Width;
+protected_spark_io_05.ads:      --# global in out SPARK_IO_05;
+protected_spark_io_05.ads:      --# derives SPARK_IO_05 from *,
+protected_spark_io_05.ads:      --#                      Aft,
+protected_spark_io_05.ads:      --#                      Exp,
+protected_spark_io_05.ads:      --#                      File,
+protected_spark_io_05.ads:      --#                      Fore,
+protected_spark_io_05.ads:      --#                      Item;
+protected_spark_io_05.ads:      --# derives Item,
+protected_spark_io_05.ads:      --#         Stop from Source,
+protected_spark_io_05.ads:      --#                   Start_Pos;
+protected_spark_io_05.ads:      --# derives Dest from *,
+protected_spark_io_05.ads:      --#                   Aft,
+protected_spark_io_05.ads:      --#                   Exp,
+protected_spark_io_05.ads:      --#                   Item,
+protected_spark_io_05.ads:      --#                   Start_Pos;
+protected_spark_io_05.ads:   --# hide Protected_SPARK_IO_05;
+rr_type-a_record_type.ads:--# inherit Unsigned_Types, rr_type;
+rr_type-aaaa_record_type.ads:--# inherit Unsigned_Types, rr_type;
+rr_type-cname_record_type.ads:--#inherit rr_type;
+rr_type-dnskey_record_type.ads:--#inherit rr_type, unsigned_types;
+rr_type-mx_record_type.ads:--#inherit rr_type, unsigned_types;
+rr_type-ns_record_type.ads:--#inherit rr_type;
+rr_type-nsec_record_type.ads:--#inherit rr_type;
+rr_type-ptr_record_type.ads:--#inherit rr_type;
+rr_type-rrsig_record_type.ads:--#inherit rr_type, unsigned_types, dns_types;
+rr_type-soa_record_type.ads:--#inherit rr_type, unsigned_types;
+rr_type.adb:         --# assert Index<MaxDomainNameLength and
+rr_type.adb:         --#   (for all Q in DomainNameStringTypeIndex range 1..Index+1 => (Name(Q)/= ' '));
+rr_type.adb:               --# assert lengthL >= DomainNameStringTypeIndex'First
+rr_type.adb:               --# and lengthL < DomainNameStringTypeIndex'Last
+rr_type.adb:               --# and ((LengthL + 1) + LengthR) <= MaxDomainNameLength
+rr_type.adb:               --# and lengthR% = lengthR;
+rr_type.adb:         --# assert Index<MaxDomainNameLength+1 and
+rr_type.adb:         --#   (for all Q in WireStringTypeIndex range 1..Index => (Name(Q)/=Character'Val(0)));
+rr_type.adb:         --# assert true;
+rr_type.adb:   	    --# assert Result >= Position and Result < LineLengthIndex'Last;
+rr_type.adb:         --# assert LengthOfDomainName>=1 and LengthOfDomainName<=MaxDomainNameLength;
+rr_type.ads:--# inherit Unsigned_Types;
+rr_type.ads:   --# derives Left from Left, Right, Success & Success from Left,Right,Success;
+rr_type.ads:   --# return Length => Length=MaxDomainNameLength+1 or (Name(Length)=Character'Val(0) and
+rr_type.ads:   --#    (for all Q in DomainNameStringTypeIndex range 1..Length-1 => (Name(Q)/=Character'Val(0))));
+rr_type.ads:   --# return Length => (Length=1 and (Name(1)=' ' or Name(2)=' ')) or
+rr_type.ads:   --#    Length=MaxDomainNameLength or (Name(Length+1)=' ' and
+rr_type.ads:   --#    (for all Q in DomainNameStringTypeIndex range 1..Length => (Name(Q)/= ' ')));
+rr_type.ads:   --# pre S'length <= MaxDomainNameLength;
+rr_type.ads:   --# pre S'length <= MaxDomainNameLength;
+socket_timeout.adb:--# hide Socket_Timeout;
+socket_timeout.ads:   --# derives null from Socket, Milliseconds;
+socket_timeout.ads:   --# hide Socket_Timeout;
+socket_timeout_linux.adb:--# hide Socket_Timeout;
+spark_ada_command_line.adb:   --# hide SPARK_Ada_Command_Line;
+spark_ada_command_line.ads:--# inherit Spark.Ada.Text_IO;
+spark_ada_command_line.ads:--# own State;
+spark_ada_command_line.ads:--# initializes State;
+spark_ada_command_line.ads:   --# global State;
+spark_ada_command_line.ads:   --# global State;
+spark_ada_command_line.ads:   --# derives file from number, State;
+spark_ada_command_line.ads:   --# derives null from Code;
+spark_dns_main.adb:--# inherit udp_dns_package, dns_table_pkg, Tcp_Dns_Package, Protected_SPARK_IO_05,
+spark_dns_main.adb:--#    DNS_Network, zone_file_io, Spark_Ada_Command_Line, Spark.Ada.Text_IO;
+spark_dns_main.adb:--# main_program
+spark_dns_main.adb:--# global in out DNS_Network.Network;
+spark_dns_main.adb:--#        in out Protected_SPARK_IO_05.SPARK_IO_PO;
+spark_dns_main.adb:--#        in out Udp_Dns_Package.Startup_Suspension;
+spark_dns_main.adb:--#        in out Tcp_Dns_Package.Startup_Suspension;
+spark_dns_main.adb:--#        in out DNS_Table_Pkg.DNS_Table;
+spark_dns_main.adb:--#        in Spark_Ada_Command_Line.State;
+spark_dns_main.adb:--# derives DNS_Network.Network from *, tcp_dns_package.startup_suspension,
+spark_dns_main.adb:--#             udp_dns_package.startup_suspension, dns_table_pkg.dns_table, spark_ada_command_line.state &
+spark_dns_main.adb:--#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Network.Network, udp_dns_package.startup_suspension,
+spark_dns_main.adb:--#               tcp_dns_package.startup_suspension, spark_ada_command_line.state, dns_table_pkg.dns_table &
+spark_dns_main.adb:--#         Udp_Dns_Package.Startup_Suspension from * &
+spark_dns_main.adb:--#         Tcp_Dns_Package.Startup_Suspension from * &
+spark_dns_main.adb:--#         DNS_Table_Pkg.DNS_Table from *, Spark_Ada_Command_Line.State;
+spark_dns_main.adb:--# global out Tcp_Dns_Package.Startup_Suspension;
+spark_dns_main.adb:--#        out Udp_Dns_Package.Startup_Suspension;
+spark_dns_main.adb:--#        in out DNS_Table_Pkg.DNS_Table;
+spark_dns_main.adb:--#        in Spark_Ada_Command_Line.State;
+spark_dns_main.adb:--# derives tcp_dns_package.startup_suspension from  &
+spark_dns_main.adb:--#         DNS_Table_Pkg.DNS_Table from *, Spark_Ada_Command_Line.State &
+spark_dns_main.adb:--#         udp_dns_package.startup_suspension from;
+spark_dns_main.adb:--# declare delay;
+spark_dns_main.adb:--# accept Flow, 10, zoneFile, "done with file after this call";
+spark_dns_main.adb:--# end accept;
+task_limit.adb:         --# global in out Task_Count;
+task_limit.adb:         --# derives Task_Count from * &
+task_limit.adb:         --#         Success from Task_Count;
+task_limit.adb:         --# pre Task_Count >= 0 and Task_Count <= MAX_TASKS;
+task_limit.adb:         --# post Task_Count >= 0 and Task_Count <= MAX_TASKS and
+task_limit.adb:         --#      (((Task_Count~ = MAX_TASKS) -> ((Task_Count = Task_Count~) and (Success=False))) and
+task_limit.adb:         --#       ((Task_Count~ < MAX_TASKS) -> ((Task_Count = Task_Count~ + 1) and Success)));
+task_limit.adb:         --# global in out Task_Count;
+task_limit.adb:         --# derives Task_Count from *;
+task_limit.adb:         --# pre Task_Count >= 0 and Task_Count <= MAX_TASKS;
+task_limit.adb:         --# post Task_Count >= 0 and Task_Count <= MAX_TASKS and
+task_limit.adb:         --#      (Task_Count~ > 0 -> (Task_Count = Task_Count~ - 1)) and
+task_limit.adb:         --#      (Task_Count~ = 0 -> (Task_Count = Task_Count~));
+task_limit.ads:      --# global in out Task_Count_Type;
+task_limit.ads:      --# derives Task_Count_Type from * &
+task_limit.ads:      --#         Success from Task_Count_Type;
+task_limit.ads:      --# global in out Task_Count_Type;
+task_limit.ads:      --# derives Task_Count_Type from *;
+tcp_dns_package.adb:         --# assert true;
+tcp_dns_package.ads:--# inherit DNS_Types, DNS_Network, multitask_process_dns_request, Protected_SPARK_IO_05,
+tcp_dns_package.ads:--#     Ada.Synchronous_Task_Control, DNS_Table_Pkg;
+tcp_dns_package.ads:--# own protected Startup_Suspension (Suspendable);
+tcp_dns_package.ads:--#     task The_Task : Tcp_Dns_Task;
+tcp_dns_package.ads:   --# global out Startup_Suspension;
+tcp_dns_package.ads:   --# derives Startup_Suspension from ;
+tcp_dns_package.ads:--# global in out DNS_Network.Network;
+tcp_dns_package.ads:--#        in out Protected_SPARK_IO_05.SPARK_IO_PO;
+tcp_dns_package.ads:--#        in DNS_Table_Pkg.DNS_Table;
+tcp_dns_package.ads:--#        out Startup_Suspension;
+tcp_dns_package.ads:--# derives DNS_Network.Network from DNS_Network.Network, DNS_Table_Pkg.DNS_Table &
+tcp_dns_package.ads:--#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Table_Pkg.DNS_Table, DNS_Network.Network &
+tcp_dns_package.ads:--#         Startup_Suspension from  ;
+tcp_dns_package.ads:--# declare suspends => Startup_Suspension;
+udp_dns_package.adb:         --# assert true;
+udp_dns_package.ads:--# inherit DNS_Types, DNS_Table_Pkg, DNS_Network_Receive, DNS_Network,
+udp_dns_package.ads:--#     Protected_SPARK_IO_05,
+udp_dns_package.ads:--#     process_dns_request,
+udp_dns_package.ads:--#     Ada.Synchronous_Task_Control;
+udp_dns_package.ads:--# own protected Startup_Suspension (Suspendable);
+udp_dns_package.ads:--#     task The_Task : Udp_Dns_Task;
+udp_dns_package.ads:   --# global out Startup_Suspension;
+udp_dns_package.ads:   --# derives Startup_Suspension from ;
+udp_dns_package.ads:--# global in out DNS_Network.Network;
+udp_dns_package.ads:--#        in out Protected_SPARK_IO_05.SPARK_IO_PO;
+udp_dns_package.ads:--#        in DNS_Table_Pkg.DNS_Table;
+udp_dns_package.ads:--#        out Startup_Suspension;
+udp_dns_package.ads:--# derives DNS_Network.Network from DNS_Table_Pkg.DNS_Table, DNS_Network.Network &
+udp_dns_package.ads:--#         Protected_SPARK_IO_05.SPARK_IO_PO from *, DNS_Table_Pkg.DNS_Table, DNS_Network.Network &
+udp_dns_package.ads:--#         Startup_Suspension from  ;
+udp_dns_package.ads:--# declare suspends => Startup_Suspension;
+zone_file_io.adb:         --# assert true;
+zone_file_io.adb:            	   --#assert I >= 1;
+zone_file_io.ads:--# inherit dns_table_pkg, dns_types, error_msgs, parser_utilities, process_first_line_of_record,
+zone_file_io.ads:--# rr_type, rr_type.a_record_type, rr_type.aaaa_record_type, rr_type.cname_record_type,
+zone_file_io.ads:--# rr_type.dnskey_record_type, rr_type.mx_record_type, rr_type.ns_record_type, rr_type.nsec_record_type,
+zone_file_io.ads:--# rr_type.ptr_record_type, Rr_type.rrsig_record_type, rr_type.SOA_record_type,
+zone_file_io.ads:--# Spark.Ada.Text_IO, unsigned_types, zone_file_parser, ada.characters.handling;
+zone_file_io.ads:   --# global in out dns_table_pkg.DNS_Table;
+zone_file_io.ads:   --# derives dns_table_pkg.DNS_Table, success from dns_table_pkg.DNS_Table, zoneFile
+zone_file_io.ads:   --# & zoneFile from zoneFile, dns_table_pkg.DNS_Table;
+zone_file_io.ads:   --# declare delay;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx = begIdx% and endIdx = endIdx% and zLength = zlength%
+zone_file_parser.adb:               --# and endIdx <= zLength
+zone_file_parser.adb:               --# and endIdx-begIdx = rr_type.rrsig_record_type.timeStringLength-1
+zone_file_parser.adb:               --# and I <= Rr_Type.Rrsig_Record_Type.TimeStringTypeIndex'Last;
+zone_file_parser.adb:               --# assert for all J in Integer range 1..I-1 => (TimeString(J) >= '0' and TimeString(J) <= '9');
+zone_file_parser.adb:                  --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:                  --# and endIdx = endIdx%;
+zone_file_parser.adb:                  --# assert endIdx >= 1;
+zone_file_parser.adb:   --# derives RRSIG_Rec from RRSIG_Rec, zoneFileLine, zLength, endIDx, success
+zone_file_parser.adb:   --# & endIdx, success from zoneFileLine, zLength, endIdx, success;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx = begIdx% and endIdx = endIdx% and zLength = zlength%
+zone_file_parser.adb:               --# and endIdx <= zLength
+zone_file_parser.adb:               --# and endIdx-begIdx = rr_type.rrsig_record_type.timeStringLength-1
+zone_file_parser.adb:               --# and I <= Rr_Type.Rrsig_Record_Type.TimeStringTypeIndex'Last;
+zone_file_parser.adb:               --# assert for all J in Integer range 1..I-1 => (TimeString(J) >= '0' and TimeString(J) <= '9');
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:               --# and endIdx = endIdx%;
+zone_file_parser.adb:               --# assert endIdx >= 1;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:               --# and endIdx = endIdx%;
+zone_file_parser.adb:               --# assert endIdx >= 1;
+zone_file_parser.adb:                  --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:                  --# and endIdx = endIdx%;
+zone_file_parser.adb:                  --# assert endIdx >= begIdx;
+zone_file_parser.adb:                     --# assert begIdx >= 1 and begIdx <= endIdx;
+zone_file_parser.adb:                     --# assert begIdx >= 1 and begIdx <= endIdx;
+zone_file_parser.adb:            --# assert begIdx >= 1 and tmpVal >= 0 and tmpVal <= rr_type.SOA_record_type.MAX_SERIAL_VAL;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx >= 1 and tmpVal <= rr_type.mx_record_type.MAX_PREF_VAL;
+zone_file_parser.adb:               		--# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:               		--# and endIdx = endIdx%;
+zone_file_parser.adb:               		--# assert endIdx >= 1;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:         --# assert endIdx < zlength;
+zone_file_parser.adb:               --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:               --# and endIdx = endIdx%;
+zone_file_parser.adb:               --# assert endIdx >= 1;
+zone_file_parser.adb:               --# assert begIdx >= 1 and endIdx-begIdx+1 <= rr_type.MaxDomainNameLength
+zone_file_parser.adb:               --# and endIdx = endIdx%;
+zone_file_parser.adb:               --# assert endIdx >= 1;
+zone_file_parser.adb:           --# assert begIdx >= 1 and begIdx <= endIdx;
+zone_file_parser.adb:               --# assert lengthOfToken = lengthOfToken%
+zone_file_parser.adb:               --# and lengthOfToken < rr_type.MaxDomainNameLength;
+zone_file_parser.adb:         --# assert begIdx <= endIdx;
+zone_file_parser.adb:           --# assert begIdx >= 1 and begIdx <= endIdx;
+zone_file_parser.ads:--# inherit Ada.Characters.Handling, Ada.Characters.Latin_1, dns_types, error_msgs,
+zone_file_parser.ads:--#   parser_utilities, rr_type, rr_type.aaaa_record_type, rr_type.dnskey_record_type,
+zone_file_parser.ads:--#   rr_type.mx_record_type, rr_type.rrsig_record_type, rr_type.soa_record_type,
+zone_file_parser.ads:--#   Spark.Ada.Strings.Maps, unsigned_types;
+zone_file_parser.ads:   --# derives DNSKEY_Rec, success from zoneFileLine, zLength, success;
+zone_file_parser.ads:   --# derives RRSIG_Rec, success from zoneFileLine, zLength, success;
+zone_file_parser.ads:   --# derives RRSIG_Rec, success from zoneFileLine, zLength, success;
+zone_file_parser.ads:   --# derives newOrigin from newOrigin, zoneFileLine, zLength
+zone_file_parser.ads:   --# & newTTL from newTTL, zoneFileLine, zLength, success
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:    --# derives newDomainName from zoneFileLine, zLength
+zone_file_parser.ads:    --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:    --# derives newDomainName, RRString from zoneFileLine, zLength
+zone_file_parser.ads:    --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newIpv4 from zoneFileLine, zLength
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newIpv6 from zoneFileLine, zLength
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newPref, newDomainName from zoneFileLine, zlength
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newNameServer, newEMail from zoneFileLine, zlength
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newSerialNumber from zoneFileLine, zLength
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newTimeSpec from zoneFileLine, zLength, success
+zone_file_parser.ads:   --# & success from success, zoneFileLine, zLength;
+zone_file_parser.ads:   --# derives newOwner from newOwner, zoneFileLine, zLength
+zone_file_parser.ads:   --#  & newTTL from newTTL, zoneFileLine, zLength, success
+zone_file_parser.ads:   --#  & newClass from newClass, zoneFileLine, zLength, success
+zone_file_parser.ads:   --#  & newType from newType, zoneFileLine, zLength, success
+zone_file_parser.ads:   --#  & success from success, zoneFileLine, zLength;

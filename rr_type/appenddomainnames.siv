@@ -1,0 +1,201 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Rr_Type.AppendDomainNames
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 51:
+
+procedure_appenddomainnames_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 52:
+
+procedure_appenddomainnames_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 56:
+
+procedure_appenddomainnames_3.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 61:
+
+procedure_appenddomainnames_5.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_6.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_7.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 64:
+
+procedure_appenddomainnames_9.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_appenddomainnames_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_11.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_appenddomainnames_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 65:
+
+procedure_appenddomainnames_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 65:
+
+procedure_appenddomainnames_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 66:
+
+procedure_appenddomainnames_21.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_appenddomainnames_22.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_appenddomainnames_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 66 to assertion of line 66:
+
+procedure_appenddomainnames_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 66 to run-time check associated with 
+          statement of line 70:
+
+procedure_appenddomainnames_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_appenddomainnames_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_appenddomainnames_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 66 to finish:
+
+procedure_appenddomainnames_39.
+*** true .          /* all conclusions proved */
+
+

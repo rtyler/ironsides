@@ -1,0 +1,829 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_SOA_Response
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          136:
+
+procedure_set_ttl_data_soa_response_1.
+H1:    nameserver_name_length <= 129 .
+H2:    mailbox_name_length <= 129 .
+H3:    start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H4:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H5:    start_byte >= 1 .
+H6:    fld_minimum(soa_record) >= 0 .
+H7:    fld_minimum(soa_record) <= 4294967295 .
+H8:    fld_expiry(soa_record) >= 0 .
+H9:    fld_expiry(soa_record) <= 4294967295 .
+H10:   fld_retry(soa_record) >= 0 .
+H11:   fld_retry(soa_record) <= 4294967295 .
+H12:   fld_refresh(soa_record) >= 0 .
+H13:   fld_refresh(soa_record) <= 4294967295 .
+H14:   fld_serialnumber(soa_record) >= 0 .
+H15:   fld_serialnumber(soa_record) <= 4294967295 .
+H16:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H17:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H18:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H19:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H20:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H21:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H22:   nameserver_name_length >= 1 .
+H23:   mailbox_name_length >= 1 .
+H24:   integer__size >= 0 .
+H25:   character__size >= 0 .
+H26:   positive__size >= 0 .
+H27:   dns_types__packet_bytes_range__size >= 0 .
+H28:   unsigned_types__unsigned16__size >= 0 .
+H29:   unsigned_types__unsigned32__size >= 0 .
+H30:   rr_type__classtype__size >= 0 .
+H31:   rr_type__wirestringtypeindex__size >= 0 .
+H32:   rr_type__resourcerecordtype__size >= 0 .
+H33:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte <= 8177 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          138:
+
+procedure_set_ttl_data_soa_response_2.
+H1:    nameserver_name_length <= 129 .
+H2:    mailbox_name_length <= 129 .
+H3:    start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H4:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H5:    start_byte >= 1 .
+H6:    fld_minimum(soa_record) >= 0 .
+H7:    fld_minimum(soa_record) <= 4294967295 .
+H8:    fld_expiry(soa_record) >= 0 .
+H9:    fld_expiry(soa_record) <= 4294967295 .
+H10:   fld_retry(soa_record) >= 0 .
+H11:   fld_retry(soa_record) <= 4294967295 .
+H12:   fld_refresh(soa_record) >= 0 .
+H13:   fld_refresh(soa_record) <= 4294967295 .
+H14:   fld_serialnumber(soa_record) >= 0 .
+H15:   fld_serialnumber(soa_record) <= 4294967295 .
+H16:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H17:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H18:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H19:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H20:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H21:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H22:   nameserver_name_length >= 1 .
+H23:   mailbox_name_length >= 1 .
+H24:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255) .
+H25:   integer__size >= 0 .
+H26:   character__size >= 0 .
+H27:   positive__size >= 0 .
+H28:   dns_types__packet_bytes_range__size >= 0 .
+H29:   unsigned_types__unsigned16__size >= 0 .
+H30:   unsigned_types__unsigned32__size >= 0 .
+H31:   rr_type__classtype__size >= 0 .
+H32:   rr_type__wirestringtypeindex__size >= 0 .
+H33:   rr_type__resourcerecordtype__size >= 0 .
+H34:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte <= 8176 .
+C2:    start_byte <= 8175 .
+
+
+For path(s) from start to run-time check associated with statement of line 141:
+
+procedure_set_ttl_data_soa_response_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 141:
+
+procedure_set_ttl_data_soa_response_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 142:
+
+procedure_set_ttl_data_soa_response_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to assertion of line 142:
+
+procedure_set_ttl_data_soa_response_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to run-time check associated with 
+          statement of line 145:
+
+procedure_set_ttl_data_soa_response_7.
+H1:    loop__1__i >= 1 .
+H2:    loop__1__i <= 129 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H4:    start_byte >= 1 .
+H5:    start_byte <= 8180 .
+H6:    fld_minimum(soa_record) >= 0 .
+H7:    fld_minimum(soa_record) <= 4294967295 .
+H8:    fld_expiry(soa_record) >= 0 .
+H9:    fld_expiry(soa_record) <= 4294967295 .
+H10:   fld_retry(soa_record) >= 0 .
+H11:   fld_retry(soa_record) <= 4294967295 .
+H12:   fld_refresh(soa_record) >= 0 .
+H13:   fld_refresh(soa_record) <= 4294967295 .
+H14:   fld_serialnumber(soa_record) >= 0 .
+H15:   fld_serialnumber(soa_record) <= 4294967295 .
+H16:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H17:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H18:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H19:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H20:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H21:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H22:   nameserver_name_length >= 1 .
+H23:   nameserver_name_length <= 129 .
+H24:   mailbox_name_length >= 1 .
+H25:   mailbox_name_length <= 129 .
+H26:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H27:   loop__1__i <= nameserver_name_length .
+H28:   integer__size >= 0 .
+H29:   character__size >= 0 .
+H30:   positive__size >= 0 .
+H31:   dns_types__packet_bytes_range__size >= 0 .
+H32:   unsigned_types__unsigned16__size >= 0 .
+H33:   unsigned_types__unsigned32__size >= 0 .
+H34:   rr_type__classtype__size >= 0 .
+H35:   rr_type__wirestringtypeindex__size >= 0 .
+H36:   rr_type__resourcerecordtype__size >= 0 .
+H37:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + 5 + loop__1__i <= 8180 .
+
+
+For path(s) from start to run-time check associated with statement of line 148:
+
+procedure_set_ttl_data_soa_response_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to run-time check associated with 
+          statement of line 148:
+
+procedure_set_ttl_data_soa_response_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 151:
+
+procedure_set_ttl_data_soa_response_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to run-time check associated with 
+          statement of line 151:
+
+procedure_set_ttl_data_soa_response_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 151:
+
+procedure_set_ttl_data_soa_response_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to run-time check associated with 
+          statement of line 151:
+
+procedure_set_ttl_data_soa_response_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 152:
+
+procedure_set_ttl_data_soa_response_14.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to assertion of line 152:
+
+procedure_set_ttl_data_soa_response_15.
+H1:    nameserver_name_length >= 1 .
+H2:    nameserver_name_length <= 129 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H4:    start_byte >= 1 .
+H5:    fld_minimum(soa_record) >= 0 .
+H6:    fld_minimum(soa_record) <= 4294967295 .
+H7:    fld_expiry(soa_record) >= 0 .
+H8:    fld_expiry(soa_record) <= 4294967295 .
+H9:    fld_retry(soa_record) >= 0 .
+H10:   fld_retry(soa_record) <= 4294967295 .
+H11:   fld_refresh(soa_record) >= 0 .
+H12:   fld_refresh(soa_record) <= 4294967295 .
+H13:   fld_serialnumber(soa_record) >= 0 .
+H14:   fld_serialnumber(soa_record) <= 4294967295 .
+H15:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H16:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H17:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H18:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H19:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H20:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H21:   nameserver_name_length >= 1 .
+H22:   nameserver_name_length <= 129 .
+H23:   mailbox_name_length >= 1 .
+H24:   mailbox_name_length <= 129 .
+H25:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H26:   element(fld_nameserver(soa_record), [nameserver_name_length]) >= 0 .
+H27:   element(fld_nameserver(soa_record), [nameserver_name_length]) <= 255 .
+H28:   start_byte + 5 + nameserver_name_length >= 1 .
+H29:   start_byte + 5 + nameserver_name_length <= 8180 .
+H30:   start_byte + (5 + nameserver_name_length) >= 1 .
+H31:   start_byte + (5 + nameserver_name_length) <= 8180 .
+H32:   integer__size >= 0 .
+H33:   character__size >= 0 .
+H34:   positive__size >= 0 .
+H35:   dns_types__packet_bytes_range__size >= 0 .
+H36:   unsigned_types__unsigned16__size >= 0 .
+H37:   unsigned_types__unsigned32__size >= 0 .
+H38:   rr_type__classtype__size >= 0 .
+H39:   rr_type__wirestringtypeindex__size >= 0 .
+H40:   rr_type__resourcerecordtype__size >= 0 .
+H41:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (5 + nameserver_name_length) <= 8160 - mailbox_name_length .
+
+
+For path(s) from assertion of line 152 to assertion of line 152:
+
+procedure_set_ttl_data_soa_response_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 152 to run-time check associated with 
+          statement of line 155:
+
+procedure_set_ttl_data_soa_response_17.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    loop__2__i >= 1 .
+H4:    loop__2__i <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    fld_minimum(soa_record) >= 0 .
+H8:    fld_minimum(soa_record) <= 4294967295 .
+H9:    fld_expiry(soa_record) >= 0 .
+H10:   fld_expiry(soa_record) <= 4294967295 .
+H11:   fld_retry(soa_record) >= 0 .
+H12:   fld_retry(soa_record) <= 4294967295 .
+H13:   fld_refresh(soa_record) >= 0 .
+H14:   fld_refresh(soa_record) <= 4294967295 .
+H15:   fld_serialnumber(soa_record) >= 0 .
+H16:   fld_serialnumber(soa_record) <= 4294967295 .
+H17:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H18:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H19:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H20:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H21:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H23:   nameserver_name_length >= 1 .
+H24:   nameserver_name_length <= 129 .
+H25:   mailbox_name_length >= 1 .
+H26:   mailbox_name_length <= 129 .
+H27:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H28:   loop__2__i <= mailbox_name_length .
+H29:   integer__size >= 0 .
+H30:   character__size >= 0 .
+H31:   positive__size >= 0 .
+H32:   dns_types__packet_bytes_range__size >= 0 .
+H33:   unsigned_types__unsigned16__size >= 0 .
+H34:   unsigned_types__unsigned32__size >= 0 .
+H35:   rr_type__classtype__size >= 0 .
+H36:   rr_type__wirestringtypeindex__size >= 0 .
+H37:   rr_type__resourcerecordtype__size >= 0 .
+H38:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    current_byte + loop__2__i <= 8180 .
+C2:    current_byte + loop__2__i <= 2147483647 .
+
+
+For path(s) from start to run-time check associated with statement of line 158:
+
+procedure_set_ttl_data_soa_response_18.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to run-time check associated with 
+          statement of line 158:
+
+procedure_set_ttl_data_soa_response_19.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to run-time check associated with 
+          statement of line 158:
+
+procedure_set_ttl_data_soa_response_20.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   integer__size >= 0 .
+H34:   character__size >= 0 .
+H35:   positive__size >= 0 .
+H36:   dns_types__packet_bytes_range__size >= 0 .
+H37:   unsigned_types__unsigned16__size >= 0 .
+H38:   unsigned_types__unsigned32__size >= 0 .
+H39:   rr_type__classtype__size >= 0 .
+H40:   rr_type__wirestringtypeindex__size >= 0 .
+H41:   rr_type__resourcerecordtype__size >= 0 .
+H42:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8180 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          161:
+
+procedure_set_ttl_data_soa_response_21.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to precondition check associated with 
+          statement of line 161:
+
+procedure_set_ttl_data_soa_response_22.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to precondition check associated with 
+          statement of line 161:
+
+procedure_set_ttl_data_soa_response_23.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   start_byte + (6 + (nameserver_name_length + mailbox_name_length)) >= 1 .
+H34:   nameserver_name_length + mailbox_name_length >= - 5 .
+H35:   integer__size >= 0 .
+H36:   character__size >= 0 .
+H37:   positive__size >= 0 .
+H38:   dns_types__packet_bytes_range__size >= 0 .
+H39:   unsigned_types__unsigned16__size >= 0 .
+H40:   unsigned_types__unsigned32__size >= 0 .
+H41:   rr_type__classtype__size >= 0 .
+H42:   rr_type__wirestringtypeindex__size >= 0 .
+H43:   rr_type__resourcerecordtype__size >= 0 .
+H44:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8177 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          163:
+
+procedure_set_ttl_data_soa_response_24.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to precondition check associated with 
+          statement of line 163:
+
+procedure_set_ttl_data_soa_response_25.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to precondition check associated with 
+          statement of line 163:
+
+procedure_set_ttl_data_soa_response_26.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   start_byte + (6 + (nameserver_name_length + mailbox_name_length)) >= 1 .
+H34:   nameserver_name_length + mailbox_name_length >= - 5 .
+H35:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255) .
+H36:   integer__size >= 0 .
+H37:   character__size >= 0 .
+H38:   positive__size >= 0 .
+H39:   dns_types__packet_bytes_range__size >= 0 .
+H40:   unsigned_types__unsigned16__size >= 0 .
+H41:   unsigned_types__unsigned32__size >= 0 .
+H42:   rr_type__classtype__size >= 0 .
+H43:   rr_type__wirestringtypeindex__size >= 0 .
+H44:   rr_type__resourcerecordtype__size >= 0 .
+H45:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8176 .
+C2:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8173 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          165:
+
+procedure_set_ttl_data_soa_response_27.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to precondition check associated with 
+          statement of line 165:
+
+procedure_set_ttl_data_soa_response_28.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to precondition check associated with 
+          statement of line 165:
+
+procedure_set_ttl_data_soa_response_29.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   start_byte + (6 + (nameserver_name_length + mailbox_name_length)) >= 1 .
+H34:   nameserver_name_length + mailbox_name_length >= - 5 .
+H35:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255) .
+H36:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__4, [i___1]) and element(bytes__4, [i___1]) <= 255) .
+H37:   integer__size >= 0 .
+H38:   character__size >= 0 .
+H39:   positive__size >= 0 .
+H40:   dns_types__packet_bytes_range__size >= 0 .
+H41:   unsigned_types__unsigned16__size >= 0 .
+H42:   unsigned_types__unsigned32__size >= 0 .
+H43:   rr_type__classtype__size >= 0 .
+H44:   rr_type__wirestringtypeindex__size >= 0 .
+H45:   rr_type__resourcerecordtype__size >= 0 .
+H46:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8172 .
+C2:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8169 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          167:
+
+procedure_set_ttl_data_soa_response_30.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to precondition check associated with 
+          statement of line 167:
+
+procedure_set_ttl_data_soa_response_31.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to precondition check associated with 
+          statement of line 167:
+
+procedure_set_ttl_data_soa_response_32.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   start_byte + (6 + (nameserver_name_length + mailbox_name_length)) >= 1 .
+H34:   nameserver_name_length + mailbox_name_length >= - 5 .
+H35:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255) .
+H36:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__4, [i___1]) and element(bytes__4, [i___1]) <= 255) .
+H37:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__5, [i___1]) and element(bytes__5, [i___1]) <= 255) .
+H38:   integer__size >= 0 .
+H39:   character__size >= 0 .
+H40:   positive__size >= 0 .
+H41:   dns_types__packet_bytes_range__size >= 0 .
+H42:   unsigned_types__unsigned16__size >= 0 .
+H43:   unsigned_types__unsigned32__size >= 0 .
+H44:   rr_type__classtype__size >= 0 .
+H45:   rr_type__wirestringtypeindex__size >= 0 .
+H46:   rr_type__resourcerecordtype__size >= 0 .
+H47:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8168 .
+C2:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8165 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          169:
+
+procedure_set_ttl_data_soa_response_33.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 142 to precondition check associated with 
+          statement of line 169:
+
+procedure_set_ttl_data_soa_response_34.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 152 to precondition check associated with 
+          statement of line 169:
+
+procedure_set_ttl_data_soa_response_35.
+H1:    current_byte >= 1 .
+H2:    current_byte <= 8160 - mailbox_name_length .
+H3:    mailbox_name_length >= 1 .
+H4:    mailbox_name_length <= 129 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H6:    start_byte >= 1 .
+H7:    start_byte <= 8180 .
+H8:    fld_minimum(soa_record) >= 0 .
+H9:    fld_minimum(soa_record) <= 4294967295 .
+H10:   fld_expiry(soa_record) >= 0 .
+H11:   fld_expiry(soa_record) <= 4294967295 .
+H12:   fld_retry(soa_record) >= 0 .
+H13:   fld_retry(soa_record) <= 4294967295 .
+H14:   fld_refresh(soa_record) >= 0 .
+H15:   fld_refresh(soa_record) <= 4294967295 .
+H16:   fld_serialnumber(soa_record) >= 0 .
+H17:   fld_serialnumber(soa_record) <= 4294967295 .
+H18:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> 0 <= element(
+          fld_email(soa_record), [i___2]) and element(fld_email(soa_record), [
+          i___2]) <= 255) .
+H19:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(soa_record), [i___1]) and element(fld_nameserver(
+          soa_record), [i___1]) <= 255) .
+H20:   rr_type__internet <= fld_class(fld_inherit(soa_record)) .
+H21:   fld_class(fld_inherit(soa_record)) <= rr_type__hs .
+H22:   fld_ttlinseconds(fld_inherit(soa_record)) >= 0 .
+H23:   fld_ttlinseconds(fld_inherit(soa_record)) <= 4294967295 .
+H24:   nameserver_name_length >= 1 .
+H25:   nameserver_name_length <= 129 .
+H26:   mailbox_name_length >= 1 .
+H27:   mailbox_name_length <= 129 .
+H28:   start_byte <= 8154 - (nameserver_name_length + mailbox_name_length) .
+H29:   element(fld_email(soa_record), [mailbox_name_length]) >= 0 .
+H30:   element(fld_email(soa_record), [mailbox_name_length]) <= 255 .
+H31:   current_byte + mailbox_name_length >= 1 .
+H32:   current_byte + mailbox_name_length <= 8180 .
+H33:   start_byte + (6 + (nameserver_name_length + mailbox_name_length)) >= 1 .
+H34:   nameserver_name_length + mailbox_name_length >= - 5 .
+H35:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255) .
+H36:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__4, [i___1]) and element(bytes__4, [i___1]) <= 255) .
+H37:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__5, [i___1]) and element(bytes__5, [i___1]) <= 255) .
+H38:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__6, [i___1]) and element(bytes__6, [i___1]) <= 255) .
+H39:   integer__size >= 0 .
+H40:   character__size >= 0 .
+H41:   positive__size >= 0 .
+H42:   dns_types__packet_bytes_range__size >= 0 .
+H43:   unsigned_types__unsigned16__size >= 0 .
+H44:   unsigned_types__unsigned32__size >= 0 .
+H45:   rr_type__classtype__size >= 0 .
+H46:   rr_type__wirestringtypeindex__size >= 0 .
+H47:   rr_type__resourcerecordtype__size >= 0 .
+H48:   rr_type__soa_record_type__soarecordtype__size >= 0 .
+       ->
+C1:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8164 .
+C2:    start_byte + (6 + (nameserver_name_length + mailbox_name_length)) <= 
+          8161 .
+
+
+For path(s) from start to finish:
+
+procedure_set_ttl_data_soa_response_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 142 to finish:
+
+procedure_set_ttl_data_soa_response_37.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 152 to finish:
+
+procedure_set_ttl_data_soa_response_38.
+*** true .          /* all conclusions proved */
+
+

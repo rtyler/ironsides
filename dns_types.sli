@@ -1,0 +1,41 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U DNS_Types%b dns_types.adb
+U DNS_Types%s dns_types.ads
+
+D dns_types.ads 00000000000000 00000000
+D dns_types.adb 00000000000000 00000000
+
+X 1 dns_types.ads
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34

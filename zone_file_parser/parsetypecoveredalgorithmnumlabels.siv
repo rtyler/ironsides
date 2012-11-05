@@ -1,0 +1,422 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseTypeCoveredAlgorithmNumLabels
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 203:
+
+procedure_parsetypecoveredalgorithmnumlabels_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          204:
+
+procedure_parsetypecoveredalgorithmnumlabels_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 204:
+
+procedure_parsetypecoveredalgorithmnumlabels_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          207:
+
+procedure_parsetypecoveredalgorithmnumlabels_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 207:
+
+procedure_parsetypecoveredalgorithmnumlabels_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 214:
+
+procedure_parsetypecoveredalgorithmnumlabels_6.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_7.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          215:
+
+procedure_parsetypecoveredalgorithmnumlabels_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 215:
+
+procedure_parsetypecoveredalgorithmnumlabels_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          218:
+
+procedure_parsetypecoveredalgorithmnumlabels_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 218:
+
+procedure_parsetypecoveredalgorithmnumlabels_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 226:
+
+procedure_parsetypecoveredalgorithmnumlabels_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_24.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          227:
+
+procedure_parsetypecoveredalgorithmnumlabels_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 227:
+
+procedure_parsetypecoveredalgorithmnumlabels_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_45.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_47.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          230:
+
+procedure_parsetypecoveredalgorithmnumlabels_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_56.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 230:
+
+procedure_parsetypecoveredalgorithmnumlabels_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_65.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parsetypecoveredalgorithmnumlabels_66.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_70.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_71.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_73.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_74.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_75.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_80.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_85.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_86.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_87.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_88.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_89.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_90.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_91.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetypecoveredalgorithmnumlabels_92.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,859 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+            procedure dns_table_pkg.DNS_Table_Type.insertARecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 406:
+
+procedure_insertarecord_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           to_lower(key), [i___1]) >= character__first) and (element(
+           to_lower(key), [i___1]) <= character__last))) .
+H14:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           to_lower(key), [i___1]) >= character__first) and (element(
+           to_lower(key), [i___1]) <= character__last))) .
+H15:   hash(to_lower(key)) >= rr_type__numbucketsindextype__first .
+H16:   hash(to_lower(key)) <= rr_type__numbucketsindextype__last .
+        ->
+C1:    hash(to_lower(key)) >= rr_type__numbucketsindextype__first .
+C2:    hash(to_lower(key)) <= rr_type__numbucketsindextype__last .
+ 
+
+For path(s) from start to assertion of line 410:
+
+procedure_insertarecord_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           to_lower(key), [i___1]) >= character__first) and (element(
+           to_lower(key), [i___1]) <= character__last))) .
+H14:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           to_lower(key), [i___1]) >= character__first) and (element(
+           to_lower(key), [i___1]) <= character__last))) .
+H15:   hash(to_lower(key)) >= rr_type__numbucketsindextype__first .
+H16:   hash(to_lower(key)) <= rr_type__numbucketsindextype__last .
+H17:   hash(to_lower(key)) >= rr_type__numbucketsindextype__first .
+H18:   hash(to_lower(key)) <= rr_type__numbucketsindextype__last .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+C3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+C4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+C5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+C6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+C7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+C8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+C9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+C10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+C11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+C12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+C13:   rr_type__returnedrecordsindextype__first >= 
+           rr_type__returnedrecordsindextype__first .
+C14:   rr_type__returnedrecordsindextype__first <= 
+           rr_type__returnedrecordsindextype__last .
+C15:   rr_type__returnedrecordsindextype__first >= 
+           rr_type__returnedrecordsindextype__first .
+C16:   rr_type__returnedrecordsindextype__first <= 
+           rr_type__returnedrecordsindextype__last .
+ 
+
+For path(s) from assertion of line 410 to assertion of line 410:
+
+procedure_insertarecord_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H14:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H15:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H16:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H17:   bucket >= rr_type__numbucketsindextype__first .
+H18:   bucket <= rr_type__numbucketsindextype__last .
+H19:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H20:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H21:   bucket >= rr_type__numbucketsindextype__first .
+H22:   bucket <= rr_type__numbucketsindextype__last .
+H23:   element(element(dns_table_type__arecordkeys, [bucket]), [
+           loop__1__i]) = rr_type__blankowner .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           lower_key, [i___1]) >= character__first) and (element(
+           lower_key, [i___1]) <= character__last))) .
+H25:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H26:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H27:   bucket >= rr_type__numbucketsindextype__first .
+H28:   bucket <= rr_type__numbucketsindextype__last .
+H29:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H30:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H31:   bucket >= rr_type__numbucketsindextype__first .
+H32:   bucket <= rr_type__numbucketsindextype__last .
+H33:   true .
+H34:   not true .
+H35:   not (loop__1__i = rr_type__returnedrecordsindextype__last) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+C3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+C4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+C5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+C6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+C7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+C8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+C9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+C10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+C11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(update(
+           dns_table_type__arecordtable, [bucket], update(element(
+           dns_table_type__arecordtable, [bucket]), [
+           loop__1__i], therecord)), [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+C12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(update(
+           dns_table_type__arecordkeys, [bucket], update(element(
+           dns_table_type__arecordkeys, [bucket]), [
+           loop__1__i], lower_key)), [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(update(
+           dns_table_type__arecordkeys, [bucket], update(element(
+           dns_table_type__arecordkeys, [bucket]), [
+           loop__1__i], lower_key)), [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+C13:   loop__1__i + 1 >= rr_type__returnedrecordsindextype__first .
+C14:   loop__1__i + 1 <= rr_type__returnedrecordsindextype__last .
+C15:   loop__1__i + 1 >= rr_type__returnedrecordsindextype__first .
+C16:   loop__1__i + 1 <= rr_type__returnedrecordsindextype__last .
+ 
+
+procedure_insertarecord_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H14:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H15:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H16:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H17:   bucket >= rr_type__numbucketsindextype__first .
+H18:   bucket <= rr_type__numbucketsindextype__last .
+H19:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H20:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H21:   bucket >= rr_type__numbucketsindextype__first .
+H22:   bucket <= rr_type__numbucketsindextype__last .
+H23:   not (element(element(dns_table_type__arecordkeys, [
+           bucket]), [loop__1__i]) = rr_type__blankowner) .
+H24:   true .
+H25:   not success .
+H26:   not (loop__1__i = rr_type__returnedrecordsindextype__last) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+C3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+C4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+C5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+C6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+C7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+C8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+C9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+C10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+C11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+C12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+C13:   loop__1__i + 1 >= rr_type__returnedrecordsindextype__first .
+C14:   loop__1__i + 1 <= rr_type__returnedrecordsindextype__last .
+C15:   loop__1__i + 1 >= rr_type__returnedrecordsindextype__first .
+C16:   loop__1__i + 1 <= rr_type__returnedrecordsindextype__last .
+ 
+
+For path(s) from assertion of line 410 to run-time check associated with statement of line 411:
+
+procedure_insertarecord_5.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H14:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H15:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H16:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H17:   bucket >= rr_type__numbucketsindextype__first .
+H18:   bucket <= rr_type__numbucketsindextype__last .
+        ->
+C1:    loop__1__i >= rr_type__returnedrecordsindextype__first .
+C2:    loop__1__i <= rr_type__returnedrecordsindextype__last .
+C3:    bucket >= rr_type__numbucketsindextype__first .
+C4:    bucket <= rr_type__numbucketsindextype__last .
+ 
+
+For path(s) from assertion of line 410 to run-time check associated with statement of line 412:
+
+procedure_insertarecord_6.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H14:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H15:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H16:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H17:   bucket >= rr_type__numbucketsindextype__first .
+H18:   bucket <= rr_type__numbucketsindextype__last .
+H19:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H20:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H21:   bucket >= rr_type__numbucketsindextype__first .
+H22:   bucket <= rr_type__numbucketsindextype__last .
+H23:   element(element(dns_table_type__arecordkeys, [bucket]), [
+           loop__1__i]) = rr_type__blankowner .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           lower_key, [i___1]) >= character__first) and (element(
+           lower_key, [i___1]) <= character__last))) .
+        ->
+C1:    loop__1__i >= rr_type__returnedrecordsindextype__first .
+C2:    loop__1__i <= rr_type__returnedrecordsindextype__last .
+C3:    bucket >= rr_type__numbucketsindextype__first .
+C4:    bucket <= rr_type__numbucketsindextype__last .
+ 
+
+For path(s) from assertion of line 410 to run-time check associated with statement of line 413:
+
+procedure_insertarecord_7.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           key, [i___1]) >= character__first) and (element(
+           key, [i___1]) <= character__last))) .
+H3:    fld_ipv4(therecord) >= unsigned_types__unsigned32__first .
+H4:    fld_ipv4(therecord) <= unsigned_types__unsigned32__last .
+H5:    fld_class(fld_inherit(therecord)) >= 
+           rr_type__classtype__first .
+H6:    fld_class(fld_inherit(therecord)) <= 
+           rr_type__classtype__last .
+H7:    fld_ttlinseconds(fld_inherit(therecord)) >= 
+           unsigned_types__unsigned32__first .
+H8:    fld_ttlinseconds(fld_inherit(therecord)) <= 
+           unsigned_types__unsigned32__last .
+H9:    for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) >= 
+           unsigned_types__unsigned32__first) and (fld_ipv4(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2])) <= 
+           unsigned_types__unsigned32__last))))) .
+H10:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_class(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           rr_type__classtype__first) and (fld_class(fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           rr_type__classtype__last))))) .
+H11:   for_all(i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) >= 
+           unsigned_types__unsigned32__first) and (fld_ttlinseconds(
+           fld_inherit(element(element(
+           dns_table_type__arecordtable, [i___1]), [i___2]))) <= 
+           unsigned_types__unsigned32__last))))) .
+H12:   for_all(i___3: integer, ((i___3 >= 
+           rr_type__wirestringtypeindex__first) and (i___3 <= 
+           rr_type__wirestringtypeindex__last)) -> (for_all(
+           i___2: integer, ((i___2 >= 
+           rr_type__returnedrecordsindextype__first) and (
+           i___2 <= rr_type__returnedrecordsindextype__last)) -> (for_all(
+           i___1: integer, ((i___1 >= 
+           rr_type__numbucketsindextype__first) and (i___1 <= 
+           rr_type__numbucketsindextype__last)) -> ((element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) >= character__first) and (element(element(element(
+           dns_table_type__arecordkeys, [i___1]), [i___2]), [
+           i___3]) <= character__last))))))) .
+H13:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H14:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H15:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H16:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H17:   bucket >= rr_type__numbucketsindextype__first .
+H18:   bucket <= rr_type__numbucketsindextype__last .
+H19:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H20:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H21:   bucket >= rr_type__numbucketsindextype__first .
+H22:   bucket <= rr_type__numbucketsindextype__last .
+H23:   element(element(dns_table_type__arecordkeys, [bucket]), [
+           loop__1__i]) = rr_type__blankowner .
+H24:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__wirestringtypeindex__first) and (i___1 <= 
+           rr_type__wirestringtypeindex__last)) -> ((element(
+           lower_key, [i___1]) >= character__first) and (element(
+           lower_key, [i___1]) <= character__last))) .
+H25:   loop__1__i >= rr_type__returnedrecordsindextype__first .
+H26:   loop__1__i <= rr_type__returnedrecordsindextype__last .
+H27:   bucket >= rr_type__numbucketsindextype__first .
+H28:   bucket <= rr_type__numbucketsindextype__last .
+        ->
+C1:    loop__1__i >= rr_type__returnedrecordsindextype__first .
+C2:    loop__1__i <= rr_type__returnedrecordsindextype__last .
+C3:    bucket >= rr_type__numbucketsindextype__first .
+C4:    bucket <= rr_type__numbucketsindextype__last .
+ 
+
+For path(s) from assertion of line 410 to finish:
+
+procedure_insertarecord_8.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_insertarecord_9.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_insertarecord_10.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_insertarecord_11.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For checks of refinement integrity: 
+
+procedure_insertarecord_12.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_insertarecord_13.
+*** true .          /* trivially true VC removed by Examiner */
+
+

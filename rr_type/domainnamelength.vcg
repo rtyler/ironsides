@@ -1,0 +1,316 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                     function Rr_Type.DomainNameLength
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 31:
+
+function_domainnamelength_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+        ->
+C1:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+C2:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+function_domainnamelength_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+H5:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H6:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+        ->
+C1:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first + 1 <= 
+           domainnamestringtypeindex__last)) .
+C2:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= integer__base__first) and (
+           domainnamestringtypeindex__first + 1 <= integer__base__last)) .
+C3:    (domainnamestringtypeindex__first < 
+           maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+ 
+
+For path(s) from assertion of line 33 to run-time check associated with statement of line 32:
+
+function_domainnamelength_3.
+H1:    index < maxdomainnamelength .
+H2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= index + 1)) -> (element(
+           name, [q_]) <> 32)) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H4:    index >= domainnamestringtypeindex__first .
+H5:    index <= domainnamestringtypeindex__last .
+H6:    index + 1 >= domainnamestringtypeindex__first .
+H7:    index + 1 <= domainnamestringtypeindex__last .
+H8:    index + 1 >= domainnamestringtypeindex__first .
+H9:    index + 1 <= domainnamestringtypeindex__last .
+        ->
+C1:    ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= domainnamestringtypeindex__first) and (
+           index + 1 + 1 <= domainnamestringtypeindex__last)) .
+C2:    ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= integer__base__first) and (
+           index + 1 + 1 <= integer__base__last)) .
+C3:    (index + 1 < maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+ 
+
+For path(s) from start to assertion of line 33:
+
+function_domainnamelength_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+H5:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H6:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+H7:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first + 1 <= 
+           domainnamestringtypeindex__last)) .
+H8:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= integer__base__first) and (
+           domainnamestringtypeindex__first + 1 <= integer__base__last)) .
+H9:    (domainnamestringtypeindex__first < 
+           maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+H10:   domainnamestringtypeindex__first < 
+           maxdomainnamelength .
+H11:   element(name, [domainnamestringtypeindex__first]) <> 32 .
+H12:   element(name, [domainnamestringtypeindex__first + 1]) <> 32 .
+        ->
+C1:    domainnamestringtypeindex__first < 
+           maxdomainnamelength .
+C2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamestringtypeindex__first + 1)) -> (element(
+           name, [q_]) <> 32)) .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+ 
+
+For path(s) from assertion of line 33 to assertion of line 33:
+
+function_domainnamelength_5.
+H1:    index < maxdomainnamelength .
+H2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= index + 1)) -> (element(
+           name, [q_]) <> 32)) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H4:    index >= domainnamestringtypeindex__first .
+H5:    index <= domainnamestringtypeindex__last .
+H6:    index + 1 >= domainnamestringtypeindex__first .
+H7:    index + 1 <= domainnamestringtypeindex__last .
+H8:    index + 1 >= domainnamestringtypeindex__first .
+H9:    index + 1 <= domainnamestringtypeindex__last .
+H10:   ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= domainnamestringtypeindex__first) and (
+           index + 1 + 1 <= domainnamestringtypeindex__last)) .
+H11:   ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= integer__base__first) and (
+           index + 1 + 1 <= integer__base__last)) .
+H12:   (index + 1 < maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+H13:   index + 1 < maxdomainnamelength .
+H14:   element(name, [domainnamestringtypeindex__first]) <> 32 .
+H15:   element(name, [index + 1 + 1]) <> 32 .
+        ->
+C1:    index + 1 < maxdomainnamelength .
+C2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= index + 1 + 1)) -> (element(
+           name, [q_]) <> 32)) .
+C3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+ 
+
+For path(s) from assertion of line 33 to run-time check associated with statement of line 35:
+
+function_domainnamelength_6.
+H1:    index < maxdomainnamelength .
+H2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= index + 1)) -> (element(
+           name, [q_]) <> 32)) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H4:    index >= domainnamestringtypeindex__first .
+H5:    index <= domainnamestringtypeindex__last .
+        ->
+C1:    index + 1 >= domainnamestringtypeindex__first .
+C2:    index + 1 <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to finish:
+
+function_domainnamelength_7.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H4:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+H5:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H6:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+H7:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first + 1 <= 
+           domainnamestringtypeindex__last)) .
+H8:    ((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           domainnamestringtypeindex__first + 1 >= integer__base__first) and (
+           domainnamestringtypeindex__first + 1 <= integer__base__last)) .
+H9:    (domainnamestringtypeindex__first < 
+           maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+H10:   not (((domainnamestringtypeindex__first < 
+           maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) and (element(
+           name, [domainnamestringtypeindex__first + 1]) <> 32)) .
+H11:   domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+H12:   domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+        ->
+C1:    ((domainnamestringtypeindex__first = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           domainnamestringtypeindex__first = 
+           maxdomainnamelength) or ((element(name, [
+           domainnamestringtypeindex__first + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamestringtypeindex__first)) -> (element(
+           name, [q_]) <> 32))))) .
+C2:    domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first .
+C3:    domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 33 to finish:
+
+function_domainnamelength_8.
+H1:    index < maxdomainnamelength .
+H2:    for_all(q_: integer, ((q_ >= 1) and (q_ <= index + 1)) -> (element(
+           name, [q_]) <> 32)) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H4:    index >= domainnamestringtypeindex__first .
+H5:    index <= domainnamestringtypeindex__last .
+H6:    index + 1 >= domainnamestringtypeindex__first .
+H7:    index + 1 <= domainnamestringtypeindex__last .
+H8:    index + 1 >= domainnamestringtypeindex__first .
+H9:    index + 1 <= domainnamestringtypeindex__last .
+H10:   ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= domainnamestringtypeindex__first) and (
+           index + 1 + 1 <= domainnamestringtypeindex__last)) .
+H11:   ((index + 1 < maxdomainnamelength) and (element(name, [
+           domainnamestringtypeindex__first]) <> 32)) -> ((
+           index + 1 + 1 >= integer__base__first) and (
+           index + 1 + 1 <= integer__base__last)) .
+H12:   (index + 1 < maxdomainnamelength) -> ((
+           domainnamestringtypeindex__first >= 
+           domainnamestringtypeindex__first) and (
+           domainnamestringtypeindex__first <= 
+           domainnamestringtypeindex__last)) .
+H13:   not (((index + 1 < maxdomainnamelength) and (element(
+           name, [domainnamestringtypeindex__first]) <> 32)) and (element(
+           name, [index + 1 + 1]) <> 32)) .
+H14:   index + 1 >= domainnamestringtypeindex__first .
+H15:   index + 1 <= domainnamestringtypeindex__last .
+        ->
+C1:    ((index + 1 = 1) and ((element(name, [1]) = 32) or (element(
+           name, [2]) = 32))) or ((index + 1 = 
+           maxdomainnamelength) or ((element(name, [index + 1 + 1]) = 
+           32) and (for_all(q_: integer, ((q_ >= 1) and (q_ <= 
+           index + 1)) -> (element(name, [q_]) <> 32))))) .
+C2:    index + 1 >= domainnamestringtypeindex__first .
+C3:    index + 1 <= domainnamestringtypeindex__last .
+ 
+

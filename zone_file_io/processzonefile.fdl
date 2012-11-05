@@ -1,0 +1,261 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                   {procedure zone_file_io.processzoneFile}
+
+
+title procedure processzonefile;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__query_type = (dns_types__a, dns_types__ns, 
+     dns_types__cname, dns_types__soa, dns_types__wks, 
+     dns_types__ptr, dns_types__mx, dns_types__aaaa, 
+     dns_types__srv, dns_types__a6, dns_types__opt, dns_types__ds, 
+     dns_types__rrsig, dns_types__nsec, dns_types__dnskey, 
+     dns_types__any, dns_types__caa, dns_types__error, 
+     dns_types__unimplemented);
+  type unsigned_types__unsigned8 = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type rr_type__rritemtype = (rr_type__domainnameortimespec, 
+     rr_type__number, rr_type__class, rr_type__recordindicator, 
+     rr_type__ipv4, rr_type__ipv6, rr_type__lparen, 
+     rr_type__rparen, rr_type__control, rr_type__comment, 
+     rr_type__other);
+  type spark__ada__text_io__file_type = pending;
+  type spark__ada__text_io__exception_t = (
+     spark__ada__text_io__no_exception, 
+     spark__ada__text_io__status_error, 
+     spark__ada__text_io__mode_error, 
+     spark__ada__text_io__name_error, 
+     spark__ada__text_io__use_error, 
+     spark__ada__text_io__device_error, 
+     spark__ada__text_io__end_error, 
+     spark__ada__text_io__data_error, 
+     spark__ada__text_io__layout_error);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__dnskey_record_type__dnskeyrecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        flags : integer;
+        protocol : integer;
+        algorithm : integer;
+        key : string;
+        keylength : integer
+     end;
+  type rr_type__rrsig_record_type__rrsigrecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        typecovered : dns_types__query_type;
+        algorithm : integer;
+        numlabels : integer;
+        origttl : integer;
+        sigexpiration : integer;
+        siginception : integer;
+        keytag : integer;
+        signername : string;
+        signature : string;
+        signaturelength : integer
+     end;
+  const rr_type__maxlinelength : integer = pending;
+  const spark__ada__text_io__exception_t__base__first : 
+     spark__ada__text_io__exception_t = pending; 
+  const spark__ada__text_io__exception_t__base__last : 
+     spark__ada__text_io__exception_t = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__last : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__base__first : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__base__last : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__base__first : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__last : integer = pending; 
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__rritemtype__base__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__base__last : rr_type__rritemtype = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const unsigned_types__unsigned8__base__first : integer = pending; 
+  const unsigned_types__unsigned8__base__last : integer = pending; 
+  const dns_types__query_type__base__first : 
+     dns_types__query_type = pending; 
+  const dns_types__query_type__base__last : dns_types__query_type = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const spark__ada__text_io__exception_t__first : 
+     spark__ada__text_io__exception_t = pending; 
+  const spark__ada__text_io__exception_t__last : 
+     spark__ada__text_io__exception_t = pending; 
+  const spark__ada__text_io__exception_t__size : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigrecordtype__size : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__last : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__size : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeyrecordtype__size : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__first : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__last : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__size : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__first : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__last : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__domainnamestringtypeindex__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__size : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__rritemtype__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__last : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const unsigned_types__unsigned8__first : integer = pending; 
+  const unsigned_types__unsigned8__last : integer = pending; 
+  const unsigned_types__unsigned8__modulus : integer = pending; 
+  const unsigned_types__unsigned8__size : integer = pending; 
+  const dns_types__query_type__first : dns_types__query_type = pending; 
+  const dns_types__query_type__last : dns_types__query_type = pending; 
+  const dns_types__query_type__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var zonefile : spark__ada__text_io__file_type;
+  var success : boolean;
+  var currentline : string;
+  var lastpos : integer;
+  var keytoolong : boolean;
+  var commentline : boolean;
+  var controlline : boolean;
+  var havesoarecord : boolean;
+  var alldone : boolean;
+  var returnedtype : rr_type__rritemtype;
+  var recordsuccessfullyinserted : boolean;
+  var linecount : integer;
+  var rrctr : integer;
+  var inmultilinerecord : boolean;
+  var lineinrecordctr : integer;
+  var begidx : integer;
+  var endidx : integer;
+  var currentorigin : string;
+  var currentowner : string;
+  var currentttl : integer;
+  var currentclass : rr_type__classtype;
+  var currentrecordtype : dns_types__query_type;
+  var currentnameserver : string;
+  var dnskey_rec : rr_type__dnskey_record_type__dnskeyrecordtype;
+  var rrsig_rec : rr_type__rrsig_record_type__rrsigrecordtype;
+  var currentemail : string;
+  var currentserialnumber : integer;
+  var currentrefresh : integer;
+  var currentretry : integer;
+  var currentexpiry : integer;
+  var currentminimum : integer;
+  var loop__2__i : integer;
+  function rr_type__convertdomainnametowire(string) : string;
+  function spark__ada__text_io__get_last_exception_file(
+     spark__ada__text_io__file_type) : 
+     spark__ada__text_io__exception_t;
+  var zonefile__29 : spark__ada__text_io__file_type;
+  var lastpos__29 : integer;
+  var currentline__29 : string;
+  var success__22 : boolean;
+  var success__14 : boolean;
+  var success__13 : boolean;
+  var success__12 : boolean;
+  var success__11 : boolean;
+  var success__10 : boolean;
+  var success__9 : boolean;
+  var success__4 : boolean;
+  var recordsuccessfullyinserted__24 : boolean;
+  var alldone__23 : boolean;
+  var success__23 : boolean;
+  var rrsig_rec__23 : rr_type__rrsig_record_type__rrsigrecordtype;
+  var rrsig_rec__22 : rr_type__rrsig_record_type__rrsigrecordtype;
+  var success__21 : boolean;
+  var dnskey_rec__21 : 
+     rr_type__dnskey_record_type__dnskeyrecordtype;
+  var recordsuccessfullyinserted__20 : boolean;
+  var recordsuccessfullyinserted__18 : boolean;
+  var recordsuccessfullyinserted__17 : boolean;
+  var recordsuccessfullyinserted__9 : boolean;
+  var returnedtype__19 : rr_type__rritemtype;
+  var endidx__19 : integer;
+  var begidx__19 : integer;
+  var returnedtype__16 : rr_type__rritemtype;
+  var endidx__16 : integer;
+  var begidx__16 : integer;
+  var returnedtype__15 : rr_type__rritemtype;
+  var endidx__15 : integer;
+  var begidx__15 : integer;
+  var currentminimum__14 : integer;
+  var currentexpiry__13 : integer;
+  var currentretry__12 : integer;
+  var currentrefresh__11 : integer;
+  var currentserialnumber__10 : integer;
+  var rrsig_rec__9 : rr_type__rrsig_record_type__rrsigrecordtype;
+  var dnskey_rec__9 : 
+     rr_type__dnskey_record_type__dnskeyrecordtype;
+  var currentemail__9 : string;
+  var currentnameserver__9 : string;
+  var lineinrecordctr__9 : integer;
+  var success__7 : boolean;
+  var success__8 : boolean;
+  var currentowner__7 : string;
+  var success__5 : boolean;
+  var currentrecordtype__5 : dns_types__query_type;
+  var currentclass__5 : rr_type__classtype;
+  var currentttl__5 : integer;
+  var currentowner__5 : string;
+  var currentttl__4 : integer;
+  var currentorigin__4 : string;
+  var returnedtype__3 : rr_type__rritemtype;
+  var zonefile__1 : spark__ada__text_io__file_type;
+  var lastpos__1 : integer;
+  var currentline__1 : string;
+
+end;

@@ -1,0 +1,76 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U DNS_Network%b dns_network.adb
+U DNS_Network%s dns_network.ads
+W DNS_Types%s dns_types.adb dns_types.sli
+
+D dns_network.adb 00000000000000 00000000
+D dns_network.ads 00000000000000 00000000
+D dns_types.ads 00000000000000 00000000
+
+X 2 dns_network.ads
+22H19 Network 34m16 38m16 43m16 52m16 60m24 74m16 83m24 90m16 33r22
+. 34r29 37r22 38r29 42r22 43r45 51r22 52r60 59r22 60r37 61r28 73r22
+. 74r75 82r22 83r37 84r28 89r22
+24H13 Network_Type 22r29
+32U14 Initialize_TCP 33=22
+36U14 Initialize_UDP 37=22
+40U14 Get_Connection_TCP 42=22
+41H7 Socket 43m33
+46U14 Receive_DNS_Packet_TCP 51=22
+47r7 Packet 52m25
+48i7 Number_Bytes 52m33
+49H7 Socket 52r69
+50e7 Failure 52m47
+54U14 Send_DNS_Packet_Tcp 59=22
+55r7 Packet 61m16 60r46 63r65 63r74
+56i7 Number_Bytes 60r54 62r20
+57H7 Socket 60r68
+58e7 Failure 60m16
+68U14 Receive_DNS_Packet 73=22
+69r7 Packet 74m25
+70i7 Number_Bytes 74m33
+71H7 Reply_Address 74m47
+72e7 Failure 74m62
+78U14 Send_DNS_Packet 82=22
+78r30 Packet 84m16 83r46 86r65 86r74
+79i7 Number_Bytes 83r54 85r20
+80H7 To_Address 83r68
+81e7 Failure 83m16
+88U14 Discard_Socket 89=22
+88H29 Socket 90r32
+X 3 dns_types.ads
+21K9 DNS_Types 2|62r36 85r36 20w13
+23N4 Header_Bits 2|62r46 85r46
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34

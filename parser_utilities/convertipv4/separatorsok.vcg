@@ -1,0 +1,63 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+             function Parser_Utilities.convertIpv4.SeparatorsOK
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 929:
+
+function_separatorsok_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(
+           line, [i___1]) >= character__first) and (element(
+           line, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           separatorindextype__first) and (i___1 <= 
+           separatorindextype__last)) -> ((element(sarray, [
+           i___1]) >= rr_type__linelengthindex__first) and (element(
+           sarray, [i___1]) <= rr_type__linelengthindex__last))) .
+        ->
+C1:    element(sarray, [3]) - 1 >= integer__base__first .
+C2:    element(sarray, [3]) - 1 <= integer__base__last .
+C3:    3 >= separatorindextype__first .
+C4:    3 <= separatorindextype__last .
+C5:    2 >= separatorindextype__first .
+C6:    2 <= separatorindextype__last .
+C7:    element(sarray, [2]) - 1 >= integer__base__first .
+C8:    element(sarray, [2]) - 1 <= integer__base__last .
+C9:    2 >= separatorindextype__first .
+C10:   2 <= separatorindextype__last .
+C11:   1 >= separatorindextype__first .
+C12:   1 <= separatorindextype__last .
+C13:   element(sarray, [3]) >= rr_type__linelengthindex__first .
+C14:   element(sarray, [3]) <= rr_type__linelengthindex__last .
+C15:   3 >= separatorindextype__first .
+C16:   3 <= separatorindextype__last .
+C17:   element(sarray, [2]) >= rr_type__linelengthindex__first .
+C18:   element(sarray, [2]) <= rr_type__linelengthindex__last .
+C19:   2 >= separatorindextype__first .
+C20:   2 <= separatorindextype__last .
+C21:   element(sarray, [1]) >= rr_type__linelengthindex__first .
+C22:   element(sarray, [1]) <= rr_type__linelengthindex__last .
+C23:   1 >= separatorindextype__first .
+C24:   1 <= separatorindextype__last .
+ 
+
+For path(s) from start to finish:
+
+function_separatorsok_2.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+function_separatorsok_3.
+*** true .          /* trivially true VC removed by Examiner */
+
+

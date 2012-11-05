@@ -1,0 +1,18 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+               procedure Tcp_Dns_Package.Initialization_Done
+
+
+
+
+For path(s) from start to finish:
+
+procedure_initialization_done_1.
+*** true .          /* trivially true VC removed by Examiner */
+
+

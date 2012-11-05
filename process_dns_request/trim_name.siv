@@ -1,0 +1,133 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Trim_Name
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 648:
+
+procedure_trim_name_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 649:
+
+procedure_trim_name_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 650:
+
+procedure_trim_name_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 652:
+
+procedure_trim_name_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 655:
+
+procedure_trim_name_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 655:
+
+procedure_trim_name_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 656:
+
+procedure_trim_name_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 656 to assertion of line 656:
+
+procedure_trim_name_8.
+H1:    loop__1__i >= 1 .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H3:    qname_location >= 0 .
+H4:    qname_location <= 8192 .
+H5:    loop__1__i <= 129 .
+H6:    element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]) >= 0 .
+H7:    element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]) <= 
+          255 .
+H8:    loop__1__i + (element(domainname, [1]) + 1) >= 1 .
+H9:    element(domainname, [1]) >= - 1 .
+H10:   loop__1__i < 129 - (element(domainname, [1]) + 1) .
+H11:   integer__size >= 0 .
+H12:   character__size >= 0 .
+H13:   natural__size >= 0 .
+H14:   positive__size >= 0 .
+H15:   dns_types__qname_ptr_range__size >= 0 .
+H16:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H17:   dns_types__packet_length_range__size >= 0 .
+H18:   rr_type__wirestringtypeindex__size >= 0 .
+H19:   dns_types__qname_ptr_range__base__first <= 0 .
+H20:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    loop__1__i <= 128 .
+
+
+For path(s) from assertion of line 656 to run-time check associated with 
+          statement of line 658:
+
+procedure_trim_name_9.
+H1:    loop__1__i + (element(domainname, [1]) + 1) <= 129 .
+H2:    loop__1__i >= 1 .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    qname_location >= 0 .
+H5:    qname_location <= 8192 .
+H6:    loop__1__i <= 129 .
+H7:    loop__1__i <= 129 - (element(domainname, [1]) + 1) .
+H8:    integer__size >= 0 .
+H9:    character__size >= 0 .
+H10:   natural__size >= 0 .
+H11:   positive__size >= 0 .
+H12:   dns_types__qname_ptr_range__size >= 0 .
+H13:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H14:   dns_types__packet_length_range__size >= 0 .
+H15:   rr_type__wirestringtypeindex__size >= 0 .
+H16:   dns_types__qname_ptr_range__base__first <= 0 .
+H17:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]) >= 0 .
+C2:    element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]) <= 
+          255 .
+
+
+For path(s) from start to finish:
+
+procedure_trim_name_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_trim_name_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 656 to finish:
+
+procedure_trim_name_12.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,266 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.AddToKey
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 789:
+
+procedure_addtokey_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 790:
+
+procedure_addtokey_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 790:
+
+procedure_addtokey_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 791:
+
+procedure_addtokey_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to assertion of line 791:
+
+procedure_addtokey_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 792:
+
+procedure_addtokey_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 796:
+
+procedure_addtokey_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 796:
+
+procedure_addtokey_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 797:
+
+procedure_addtokey_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 797:
+
+procedure_addtokey_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 797:
+
+procedure_addtokey_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 798:
+
+procedure_addtokey_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to assertion of line 798:
+
+procedure_addtokey_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to assertion of line 798:
+
+procedure_addtokey_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 799:
+
+procedure_addtokey_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 803:
+
+procedure_addtokey_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 803:
+
+procedure_addtokey_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 803:
+
+procedure_addtokey_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 807:
+
+procedure_addtokey_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 807:
+
+procedure_addtokey_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 807:
+
+procedure_addtokey_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 807:
+
+procedure_addtokey_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 807:
+
+procedure_addtokey_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 807:
+
+procedure_addtokey_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 808:
+
+procedure_addtokey_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to assertion of line 808:
+
+procedure_addtokey_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to assertion of line 808:
+
+procedure_addtokey_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 808 to assertion of line 808:
+
+procedure_addtokey_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 808 to run-time check associated with 
+          statement of line 811:
+
+procedure_addtokey_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 814:
+
+procedure_addtokey_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to run-time check associated with 
+          statement of line 814:
+
+procedure_addtokey_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to run-time check associated with 
+          statement of line 814:
+
+procedure_addtokey_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 808 to run-time check associated with 
+          statement of line 814:
+
+procedure_addtokey_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_addtokey_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_addtokey_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 791 to finish:
+
+procedure_addtokey_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_addtokey_37.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 798 to finish:
+
+procedure_addtokey_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_addtokey_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 808 to finish:
+
+procedure_addtokey_40.
+*** true .          /* all conclusions proved */
+
+

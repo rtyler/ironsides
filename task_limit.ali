@@ -1,0 +1,51 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnn
+
+U task_limit%b		task_limit.adb		9fb84414 NE OO PK
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U task_limit%s		task_limit.ads		81b197a8 EE NE OO PK
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-unccon.ads		20110428140902 f9eb8f06
+D interfac.ads		20110428140906 f77d8799
+D i-c.ads		20110428140906 5421119b
+D i-cstrin.ads		20110428140906 341d0ddf
+D system.ads		20110428140910 bc164b96
+D s-atacco.ads		20110428140906 1dc856ad
+D s-exctab.ads		20110428140906 66e51330
+D s-multip.ads		20110428140908 38ac9f73
+D s-osinte.ads		20110428140908 ecf1fbfd
+D s-parame.ads		20110428140908 03aa3b01
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stausa.ads		20110428140908 017a0a05
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-tasinf.ads		20110428140908 859198ad
+D s-taspri.ads		20110428140908 196697f7
+D s-taskin.ads		20110428140908 b2eaee08
+D s-taprob.ads		20110428140908 502249e3
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-win32.ads		20110428140910 07238fa2
+D task_limit.ads	20120707130424 81b197a8
+D task_limit.adb	20120707130424 1e09d3bc
+X 26 task_limit.ads
+18K9*Task_Limit 33l5 33e15 27|19b14 70l5 70t15
+19i4*MAX_TASKS{integer} 20r51 27|41r26
+20I12*Task_Count_Subtype{integer} 31r20
+21W19*Task_Count_Type 32l8 32e23 27|25b19 68l8 68t23
+23U17 Increment 23<27 27|31b17 48l11 48t20
+23b27 Success{boolean} 27|31b28 44m13 46m13
+27U17 Decrement 27|54b17 66l11 66t20
+31i7 Task_Count{20I12} 27|41r13 42r13 42r27 63r13 64r13 64r27
+

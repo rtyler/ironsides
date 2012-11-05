@@ -1,0 +1,34 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_Unsigned_16
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 50:
+
+procedure_set_unsigned_16_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 51:
+
+procedure_set_unsigned_16_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_set_unsigned_16_3.
+*** true .          /* all conclusions proved */
+
+

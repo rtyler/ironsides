@@ -1,0 +1,82 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+               procedure Task_Limit.Task_Count_Type.Decrement
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 64:
+
+procedure_decrement_1.
+H1:    task_count_type__task_count >= 0 .
+H2:    task_count_type__task_count <= max_tasks .
+H3:    task_count_type__task_count >= task_count_subtype__first .
+H4:    task_count_type__task_count <= task_count_subtype__last .
+H5:    task_count_type__task_count > 0 .
+        ->
+C1:    task_count_type__task_count - 1 >= 
+           task_count_subtype__first .
+C2:    task_count_type__task_count - 1 <= 
+           task_count_subtype__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_decrement_2.
+H1:    task_count_type__task_count >= 0 .
+H2:    task_count_type__task_count <= max_tasks .
+H3:    task_count_type__task_count >= task_count_subtype__first .
+H4:    task_count_type__task_count <= task_count_subtype__last .
+H5:    task_count_type__task_count > 0 .
+H6:    task_count_type__task_count - 1 >= 
+           task_count_subtype__first .
+H7:    task_count_type__task_count - 1 <= 
+           task_count_subtype__last .
+        ->
+C1:    task_count_type__task_count - 1 >= 0 .
+C2:    task_count_type__task_count - 1 <= max_tasks .
+C3:    (task_count_type__task_count > 0) -> (
+           task_count_type__task_count - 1 = 
+           task_count_type__task_count - 1) .
+C4:    (task_count_type__task_count = 0) -> (
+           task_count_type__task_count - 1 = 
+           task_count_type__task_count) .
+ 
+
+procedure_decrement_3.
+H1:    task_count_type__task_count >= 0 .
+H2:    task_count_type__task_count <= max_tasks .
+H3:    task_count_type__task_count >= task_count_subtype__first .
+H4:    task_count_type__task_count <= task_count_subtype__last .
+H5:    not (task_count_type__task_count > 0) .
+        ->
+C1:    task_count_type__task_count >= 0 .
+C2:    task_count_type__task_count <= max_tasks .
+C3:    (task_count_type__task_count > 0) -> (
+           task_count_type__task_count = 
+           task_count_type__task_count - 1) .
+C4:    (task_count_type__task_count = 0) -> (
+           task_count_type__task_count = 
+           task_count_type__task_count) .
+ 
+
+For checks of refinement integrity: 
+
+procedure_decrement_4.
+H1:    true .
+H2:    task_count_type__task_count >= task_count_subtype__first .
+H3:    task_count_type__task_count <= task_count_subtype__last .
+        ->
+C1:    task_count_type__task_count >= 0 .
+C2:    task_count_type__task_count <= max_tasks .
+ 
+
+procedure_decrement_5.
+*** true .          /* trivially true VC removed by Examiner */
+
+

@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.InsertDNSKEYRecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 487:
+
+procedure_insertdnskeyrecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 491:
+
+procedure_insertdnskeyrecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 491 to assertion of line 491:
+
+procedure_insertdnskeyrecord_3.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertdnskeyrecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 491 to run-time check associated with 
+          statement of line 492:
+
+procedure_insertdnskeyrecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 491 to run-time check associated with 
+          statement of line 493:
+
+procedure_insertdnskeyrecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 491 to run-time check associated with 
+          statement of line 494:
+
+procedure_insertdnskeyrecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 491 to finish:
+
+procedure_insertdnskeyrecord_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertdnskeyrecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertdnskeyrecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertdnskeyrecord_11.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertdnskeyrecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertdnskeyrecord_13.
+*** true .          /* all conclusions proved */
+
+

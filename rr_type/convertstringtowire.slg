@@ -1,0 +1,33 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertStringToWire
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_convertstringtowire_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+***  Proved C1:  s__index__subtype__1__last - s__index__subtype__1__first + 1 
+          <= maxdomainnamelength
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtowire_2.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

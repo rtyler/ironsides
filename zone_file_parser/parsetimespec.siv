@@ -1,0 +1,57 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseTimeSpec
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 471:
+
+procedure_parsetimespec_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          472:
+
+procedure_parsetimespec_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 472:
+
+procedure_parsetimespec_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 478:
+
+procedure_parsetimespec_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 478:
+
+procedure_parsetimespec_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parsetimespec_6.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsetimespec_7.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryRRSIGRecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 344:
+
+procedure_queryrrsigrecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 345:
+
+procedure_queryrrsigrecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 347:
+
+procedure_queryrrsigrecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to assertion of line 347:
+
+procedure_queryrrsigrecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryrrsigrecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to run-time check associated with 
+          statement of line 348:
+
+procedure_queryrrsigrecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to run-time check associated with 
+          statement of line 349:
+
+procedure_queryrrsigrecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to run-time check associated with 
+          statement of line 350:
+
+procedure_queryrrsigrecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to run-time check associated with 
+          statement of line 352:
+
+procedure_queryrrsigrecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 347 to finish:
+
+procedure_queryrrsigrecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryrrsigrecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryrrsigrecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_queryrrsigrecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryrrsigrecords_14.
+*** true .          /* all conclusions proved */
+
+

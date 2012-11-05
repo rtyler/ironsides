@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.InsertRRSIGRecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 623:
+
+procedure_insertrrsigrecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 627:
+
+procedure_insertrrsigrecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 627 to assertion of line 627:
+
+procedure_insertrrsigrecord_3.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertrrsigrecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 627 to run-time check associated with 
+          statement of line 628:
+
+procedure_insertrrsigrecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 627 to run-time check associated with 
+          statement of line 629:
+
+procedure_insertrrsigrecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 627 to run-time check associated with 
+          statement of line 630:
+
+procedure_insertrrsigrecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 627 to finish:
+
+procedure_insertrrsigrecord_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertrrsigrecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertrrsigrecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertrrsigrecord_11.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertrrsigrecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertrrsigrecord_13.
+*** true .          /* all conclusions proved */
+
+

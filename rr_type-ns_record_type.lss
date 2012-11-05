@@ -1,0 +1,30 @@
+           *******************************************************
+                            Listing of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+Line
+      --#inherit rr_type;
+      package Rr_Type.Ns_Record_Type is
+         type NSRecordType is new Rr_Type.ResourceRecordType with
+            record
+               NameServer : Rr_Type.WireStringType;
+            end record;
+      
+         --placeholder for empty slots in hash table
+         BlankNSRecord : constant NSRecordType := NSRecordType'(
+            TtlInSeconds => 0,
+            Class => Rr_Type.INTERNET,
+            NameServer => "empty.NS.resource.record         " & Rr_Type.Spaces32
+            & Rr_Type.Spaces32 & Rr_Type.Spaces32);
+      
+         --hash table (2d array) for NS records
+         type NSRecordBucketType is array (Rr_Type.ReturnedRecordsIndexType) of NSRecordType;
+         type NSRecordHashTableType is array (Rr_Type.NumBucketsIndexType) of NSRecordBucketType;
+      
+      end Rr_Type.Ns_Record_Type;
+
+
+--End of file--------------------------------------------------

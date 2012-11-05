@@ -1,0 +1,55 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                  {function Parser_Utilities.getRecordType}
+
+
+title function getrecordtype;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__query_type = (dns_types__a, dns_types__ns, 
+     dns_types__cname, dns_types__soa, dns_types__wks, 
+     dns_types__ptr, dns_types__mx, dns_types__aaaa, 
+     dns_types__srv, dns_types__a6, dns_types__opt, dns_types__ds, 
+     dns_types__rrsig, dns_types__nsec, dns_types__dnskey, 
+     dns_types__any, dns_types__caa, dns_types__error, 
+     dns_types__unimplemented);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const dns_types__query_type__base__first : 
+     dns_types__query_type = pending; 
+  const dns_types__query_type__base__last : dns_types__query_type = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const dns_types__query_type__first : dns_types__query_type = pending; 
+  const dns_types__query_type__last : dns_types__query_type = pending; 
+  const dns_types__query_type__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var s : string;
+  var begidx : integer;
+  var endidx : integer;
+  function ada__characters__handling__to_upper(character) : character;
+
+end;

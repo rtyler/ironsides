@@ -1,0 +1,23 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                      {function Parser_Utilities.IsMult}
+
+
+title function ismult;
+
+  function round__(real) : integer;
+  type character = integer;
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  var char : character;
+  function ada__characters__handling__to_upper(character) : character;
+
+end;

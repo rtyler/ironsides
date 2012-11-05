@@ -1,0 +1,93 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnn
+
+U rr_type.rrsig_record_type%s  rr_type-rrsig_record_type.ads  b261b4cf EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W dns_types%s		dns_types.adb		dns_types.ali
+W rr_type%s		rr_type.adb		rr_type.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+W unsigned_types%s	unsigned_types.ads	unsigned_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D dns_types.ads		20120707130416 d000ba3f
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-rrsig_record_type.ads  20120707130422 94724ac7
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D unsigned_types.ads	20120707130426 dd57bff3
+X 7 dns_types.ads
+21K9*DNS_Types 259e14 9|18w22 34r24 50r22
+187E9*Query_Type 208e25 9|34r34
+207n11*ERROR{187E9} 9|50r32
+X 8 rr_type.ads
+20K9*Rr_Type 98e12 9|23r9 32r32 41r23 49r16 57r58 57r77 58r20 58r41 58r61
+. 64r37 66r40 69r5
+22n23*INTERNET{22E9} 9|49r24
+35A12*DomainNameStringType{string}<integer> 9|41r31
+41a4*Spaces32{string} 9|57r85
+48a4*Spaces64{string} 9|57r66 58r69
+50a4*Spaces256{string} 9|58r49
+52a4*Spaces1024{string} 9|58r28
+77R9*ResourceRecordType 81e17 9|32r40
+79m10*ttlInSeconds{24|21M9} 9|48m7
+80e10*class{22E9} 9|49m7
+88I12*ReturnedRecordsIndexType{integer} 9|64r45
+93I12*NumBucketsIndexType{integer} 9|66r48
+X 9 rr_type-rrsig_record_type.ads
+23K17*Rrsig_Record_Type 8|20k9 9|69l13 69e30
+24i4*TimeStringLength{natural} 26r52
+25i4*MAX_YEAR{natural}
+26I12*TimeStringTypeIndex{natural} 27r37
+27A12*TimeStringType{string}<integer>
+29i4*maxrrsigLength{natural} 30r53
+30I12*RRSIGStringTypeIndex{natural} 31r38 43r28
+31A12*RRSIGStringType{string}<integer> 42r21
+32R9*RRSIGRecordType<8|77R9> 44e14 47r32 47r51 65r6
+34e10*TypeCovered{7|187E9} 50m7
+35m10*algorithm{24|19M9} 51m7
+36m10*numLabels{24|19M9} 52m7
+37m10*origTTL{24|21M9} 53m7
+38m10*sigExpiration{24|21M9} 54m7
+39m10*SigInception{24|21M9} 55m7
+40m10*keyTag{24|20M9} 56m7
+41a10*signerName{8|35A12} 57m7
+42a10*signature{31A12} 58m7
+43i10*signatureLength{30I12} 60m7
+47r4*blankRRSIGRecord{32R9}
+64A6*RRSIGRecordBucketType(32R9)<integer> 67r4
+66A6*RRSIGRecordHashTableType(64A6)<integer>
+X 24 unsigned_types.ads
+18K9*Unsigned_Types 9|18w6 19r10 20r10 21r10 35r22 36r22 37r19 38r25 39r24
+. 40r19 24|25e19
+19M9*Unsigned8 9|21r25 35r37 36r37
+20M9*Unsigned16 9|20r25 40r34
+21M9*Unsigned32 9|19r25 37r34 38r40 39r39
+

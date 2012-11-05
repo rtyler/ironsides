@@ -1,0 +1,133 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                {procedure Zone_File_Parser.ParseDNSKeyHeader}
+
+
+title procedure parsednskeyheader;
+
+  function round__(real) : integer;
+  type character = integer;
+  type unsigned_types__unsigned8 = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type rr_type__rritemtype = (rr_type__domainnameortimespec, 
+     rr_type__number, rr_type__class, rr_type__recordindicator, 
+     rr_type__ipv4, rr_type__ipv6, rr_type__lparen, 
+     rr_type__rparen, rr_type__control, rr_type__comment, 
+     rr_type__other);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__dnskey_record_type__dnskeyrecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        flags : integer;
+        protocol : integer;
+        algorithm : integer;
+        key : string;
+        keylength : integer
+     end;
+  const rr_type__dnskey_record_type__blankdnskeyrecord : 
+     rr_type__dnskey_record_type__dnskeyrecordtype = pending;
+  const correct_protocol_value : integer = pending;
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__base__first : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__base__last : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__base__first : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__base__last : integer = pending; 
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__rritemtype__base__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__base__last : rr_type__rritemtype = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const unsigned_types__unsigned8__base__first : integer = pending; 
+  const unsigned_types__unsigned8__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeyrecordtype__size : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__first : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__last : integer = pending; 
+  const rr_type__dnskey_record_type__dnskeystringtypeindex__size : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__first : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__last : integer = pending; 
+  const rr_type__dnskey_record_type__keylengthvaluetype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__rritemtype__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__last : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const unsigned_types__unsigned8__first : integer = pending; 
+  const unsigned_types__unsigned8__last : integer = pending; 
+  const unsigned_types__unsigned8__modulus : integer = pending; 
+  const unsigned_types__unsigned8__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var dnskey_rec : rr_type__dnskey_record_type__dnskeyrecordtype;
+  var zonefileline : string;
+  var zlength : integer;
+  var success : boolean;
+  var begidx : integer;
+  var endidx : integer;
+  var foundtype : rr_type__rritemtype;
+  var dnskey_rec__8 : 
+     rr_type__dnskey_record_type__dnskeyrecordtype;
+  var foundtype__7 : rr_type__rritemtype;
+  var endidx__7 : integer;
+  var begidx__7 : integer;
+  var success__6 : boolean;
+  var dnskey_rec__6 : 
+     rr_type__dnskey_record_type__dnskeyrecordtype;
+  var foundtype__5 : rr_type__rritemtype;
+  var endidx__5 : integer;
+  var begidx__5 : integer;
+  var success__4 : boolean;
+  var dnskey_rec__4 : 
+     rr_type__dnskey_record_type__dnskeyrecordtype;
+  var foundtype__3 : rr_type__rritemtype;
+  var endidx__3 : integer;
+  var begidx__3 : integer;
+  var foundtype__2 : rr_type__rritemtype;
+  var endidx__2 : integer;
+  var begidx__2 : integer;
+  var foundtype__1 : rr_type__rritemtype;
+  var endidx__1 : integer;
+  var begidx__1 : integer;
+
+end;

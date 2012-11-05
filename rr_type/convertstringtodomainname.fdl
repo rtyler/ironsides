@@ -1,0 +1,43 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                 {function Rr_Type.ConvertStringToDomainName}
+
+
+title function convertstringtodomainname;
+
+  function round__(real) : integer;
+  type character = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const maxdomainnamelength : integer = pending;
+  const domainnamestringtypeindex__base__first : integer = pending; 
+  const domainnamestringtypeindex__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const s__index__subtype__1__first : integer = pending; 
+  const s__index__subtype__1__last : integer = pending; 
+  const domainnamestringtypeindex__first : integer = pending; 
+  const domainnamestringtypeindex__last : integer = pending; 
+  const domainnamestringtypeindex__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var s : string;
+  var loop__1__i : integer;
+
+end;

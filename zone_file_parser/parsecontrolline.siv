@@ -1,0 +1,325 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.ParseControlLine
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          494:
+
+procedure_parsecontrolline_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 494:
+
+procedure_parsecontrolline_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 498:
+
+procedure_parsecontrolline_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 499:
+
+procedure_parsecontrolline_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 506:
+
+procedure_parsecontrolline_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          507:
+
+procedure_parsecontrolline_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 507:
+
+procedure_parsecontrolline_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 511:
+
+procedure_parsecontrolline_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 516:
+
+procedure_parsecontrolline_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 516:
+
+procedure_parsecontrolline_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 517:
+
+procedure_parsecontrolline_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 517 to assertion of line 517:
+
+procedure_parsecontrolline_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 517 to run-time check associated with 
+          statement of line 518:
+
+procedure_parsecontrolline_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 522:
+
+procedure_parsecontrolline_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 517 to run-time check associated with 
+          statement of line 522:
+
+procedure_parsecontrolline_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 523:
+
+procedure_parsecontrolline_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 517 to run-time check associated with 
+          statement of line 523:
+
+procedure_parsecontrolline_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 528:
+
+procedure_parsecontrolline_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 529:
+
+procedure_parsecontrolline_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 533:
+
+procedure_parsecontrolline_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          534:
+
+procedure_parsecontrolline_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 534:
+
+procedure_parsecontrolline_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 541:
+
+procedure_parsecontrolline_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 541:
+
+procedure_parsecontrolline_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 542:
+
+procedure_parsecontrolline_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 542 to assertion of line 542:
+
+procedure_parsecontrolline_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 542 to run-time check associated with 
+          statement of line 543:
+
+procedure_parsecontrolline_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 545:
+
+procedure_parsecontrolline_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_38.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 542 to run-time check associated with 
+          statement of line 545:
+
+procedure_parsecontrolline_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 545:
+
+procedure_parsecontrolline_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_41.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 542 to run-time check associated with 
+          statement of line 545:
+
+procedure_parsecontrolline_42.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parsecontrolline_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_45.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsecontrolline_56.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 517 to finish:
+
+procedure_parsecontrolline_57.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 542 to finish:
+
+procedure_parsecontrolline_58.
+*** true .          /* all conclusions proved */
+
+

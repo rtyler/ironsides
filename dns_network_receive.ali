@@ -1,0 +1,82 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U dns_network_receive%b	dns_network_receive.adb	8347336d NE OO PK
+W dns_types%s		dns_types.adb		dns_types.ali
+
+U dns_network_receive%s	dns_network_receive.ads	944b75bb EE NE OO PK KU
+W dns_network%s		dns_network.adb		dns_network.ali
+W dns_types%s		dns_types.adb		dns_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D dns_network.ads	20120707130602 f1ab7b6e
+D dns_network_receive.ads  20120707130414 b5e0b4ea
+D dns_network_receive.adb  20120707130414 e6a73db8
+D dns_types.ads		20120707130416 d000ba3f
+D gnat.ads		20110428140904 fd2ad2f1
+D g-socket.ads		20110428140904 c20e5040
+D interfac.ads		20110428140906 f77d8799
+D i-c.ads		20110428140906 5421119b
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-oscons.ads		20110428170002 cdbaafae
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+X 9 dns_network.ads
+21K9*DNS_Network 95e16 10|19w6 25r19 37r27 11|29r19 33r7 40r32 51r27 55r7
+. 62r32
+27N4*Max_Query_Size 11|40r44 62r44
+29R9*Network_Address_and_Port 10|37r39 11|51r39
+30I9*DNS_Socket 10|25r31 11|29r31
+46U14*Receive_DNS_Packet_TCP 11|33s19
+47r7 Packet{12|255R9} 11|34r10
+48i7 Number_Bytes{12|27I9} 11|35r10
+49i7 Socket{30I9} 11|36r10
+50b7 Failure{boolean} 11|37r10
+68U14*Receive_DNS_Packet 11|55s19
+69r7 Packet{12|251R9} 11|56r10
+70i7 Number_Bytes{12|27I9} 11|57r10
+71r7 Reply_Address{29R9} 11|58r10
+72b7 Failure{boolean} 11|59r10
+X 10 dns_network_receive.ads
+21K9*Dns_Network_Receive 43l5 43e24 11|21b14 66l5 66t24
+22U14*Receive_DNS_Packet_TCP 23<7 24<7 25>7 26<7 11|26b14 42l8 42t30
+23r7 Packet{12|255R9} 11|27b7 34m26
+24i7 Number_Bytes{12|27I9} 11|28b7 35m26 39r22 40r17
+25i7 Socket{9|30I9} 11|29b7 36r26
+26b7 Failure{boolean} 11|30b7 37m26 38r14 39m10
+34U14*Receive_DNS_Packet 35<7 36<7 37<7 38<7 11|48b14 64l8 64t26
+35r7 Packet{12|251R9} 11|49b7 56m27
+36i7 Number_Bytes{12|27I9} 11|50b7 57m27 61r22 62r17
+37r7 Reply_Address{9|29R9} 11|51b7 58m27
+38b7 Failure{boolean} 11|52b7 59m27 60r14 61m10
+X 12 dns_types.ads
+21K9*DNS_Types 10|18w6 23r20 24r28 35r20 36r27 11|18w6 19r10 27r20 28r28
+. 39r37 39r69 49r20 50r27 61r37 61r69 12|259e14
+23N4*Header_Bits 11|39r79 61r79
+27I9*Packet_Length_Range<short_integer> 10|24r38 36r37 11|19r20 28r38 39r47
+. 50r37 61r47
+251R9*DNS_Packet 10|35r30 11|49r30 12|254e14
+255R9*DNS_Tcp_Packet 10|23r30 11|27r30 12|258e14
+

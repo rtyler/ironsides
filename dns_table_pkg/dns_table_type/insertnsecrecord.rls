@@ -1,0 +1,127 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+          /*procedure dns_table_pkg.DNS_Table_Type.insertNSECRecord*/
+
+
+rule_family insertnsecre_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+insertnsecre_rules(1): character__first <= element(rr_type__blankowner, [I]) may_be_deduced_from [1 <= I, I <= 129].
+insertnsecre_rules(2): element(rr_type__blankowner, [I]) <= 
+     character__last may_be_deduced_from [1 <= I, I <= 129].
+insertnsecre_rules(3): integer__size >= 0 may_be_deduced.
+insertnsecre_rules(4): integer__first may_be_replaced_by -2147483648.
+insertnsecre_rules(5): integer__last may_be_replaced_by 2147483647.
+insertnsecre_rules(6): integer__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(7): integer__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(8): character__size >= 0 may_be_deduced.
+insertnsecre_rules(9): character__first may_be_replaced_by 0.
+insertnsecre_rules(10): character__last may_be_replaced_by 255.
+insertnsecre_rules(11): character__base__first may_be_replaced_by 0.
+insertnsecre_rules(12): character__base__last may_be_replaced_by 255.
+insertnsecre_rules(13): positive__size >= 0 may_be_deduced.
+insertnsecre_rules(14): positive__first may_be_replaced_by 1.
+insertnsecre_rules(15): positive__last may_be_replaced_by 2147483647.
+insertnsecre_rules(16): positive__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(17): positive__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(18): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+insertnsecre_rules(19): unsigned_types__unsigned32__first may_be_replaced_by 0.
+insertnsecre_rules(20): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+insertnsecre_rules(21): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+insertnsecre_rules(22): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+insertnsecre_rules(23): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+insertnsecre_rules(24): rr_type__classtype__size >= 0 may_be_deduced.
+insertnsecre_rules(25): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+insertnsecre_rules(26): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+insertnsecre_rules(27): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+insertnsecre_rules(28): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+insertnsecre_rules(29): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+insertnsecre_rules(30): rr_type__classtype__pos(rr_type__internet) may_be_replaced_by 0.
+insertnsecre_rules(31): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+insertnsecre_rules(32): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+insertnsecre_rules(33): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+insertnsecre_rules(34): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+insertnsecre_rules(35): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+insertnsecre_rules(36): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+insertnsecre_rules(37): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+insertnsecre_rules(38): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+insertnsecre_rules(39): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+insertnsecre_rules(40): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+insertnsecre_rules(41): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+insertnsecre_rules(42): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+insertnsecre_rules(43): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+insertnsecre_rules(44): rr_type__classtype__val(X) <= rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+insertnsecre_rules(45): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+insertnsecre_rules(46): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+insertnsecre_rules(47): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+insertnsecre_rules(48): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+insertnsecre_rules(49): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+insertnsecre_rules(50): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+insertnsecre_rules(51): rr_type__linelengthindex__size >= 0 may_be_deduced.
+insertnsecre_rules(52): rr_type__linelengthindex__first may_be_replaced_by 1.
+insertnsecre_rules(53): rr_type__linelengthindex__last may_be_replaced_by 256.
+insertnsecre_rules(54): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(55): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(56): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+insertnsecre_rules(57): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+insertnsecre_rules(58): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+insertnsecre_rules(59): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(60): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(61): rr_type__resourcerecordtype__size >= 0 may_be_deduced.
+insertnsecre_rules(62): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__resourcerecordtype)),
+      goal(checktype(B,rr_type__resourcerecordtype)),
+      fld_ttlinseconds(A) = fld_ttlinseconds(B),
+      fld_class(A) = fld_class(B)].
+insertnsecre_rules(63): rr_type__returnedrecordsindextype__size >= 0 may_be_deduced.
+insertnsecre_rules(64): rr_type__returnedrecordsindextype__first may_be_replaced_by 1.
+insertnsecre_rules(65): rr_type__returnedrecordsindextype__last may_be_replaced_by 64.
+insertnsecre_rules(66): rr_type__returnedrecordsindextype__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(67): rr_type__returnedrecordsindextype__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(68): rr_type__numbucketsindextype__size >= 0 may_be_deduced.
+insertnsecre_rules(69): rr_type__numbucketsindextype__first may_be_replaced_by 1.
+insertnsecre_rules(70): rr_type__numbucketsindextype__last may_be_replaced_by 64.
+insertnsecre_rules(71): rr_type__numbucketsindextype__base__first may_be_replaced_by -2147483648.
+insertnsecre_rules(72): rr_type__numbucketsindextype__base__last may_be_replaced_by 2147483647.
+insertnsecre_rules(73): rr_type__nsec_record_type__nsecrecordtype__size >= 0 may_be_deduced.
+insertnsecre_rules(74): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__nsec_record_type__nsecrecordtype)),
+      goal(checktype(B,rr_type__nsec_record_type__nsecrecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_domainname(A) = fld_domainname(B),
+      fld_recordlist(A) = fld_recordlist(B)].

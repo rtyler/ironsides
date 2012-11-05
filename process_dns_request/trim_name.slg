@@ -1,0 +1,1105 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Trim_Name
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_trim_name_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  true
+***  Proved C7:  true
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+<S>  New C3:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+<S>  New C4:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C5:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C6:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New C8:  1 <= rr_type__wirestringtypeindex__last
+<S>  New C1:  element(domainname, [1]) >= - 1
+<S>  New C3:  element(domainname, [1]) >= - 1
+<S>  New C2:  element(domainname, [1]) <= 2147483646
+<S>  New C4:  element(domainname, [1]) <= 2147483646
+<S>  New C5:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New C6:  element(domainname, [1]) <= 9223372036854775806
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+<S>  New C8:  true
+***  Proved C8:  true
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H3:  qname_location >= 0
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H4:  qname_location <= 16383
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H1:  qname_location <= 8192
+***  Proved C1:  element(domainname, [1]) >= - 1
+     using hypothesis H2.
+***  Proved C3:  element(domainname, [1]) >= - 1
+     using hypothesis H2.
+***  Proved C2:  element(domainname, [1]) <= 2147483646
+     using hypothesis H2.
+***  Proved C4:  element(domainname, [1]) <= 2147483646
+     using hypothesis H2.
+***  Proved C5:  element(domainname, [1]) >= - 9223372036854775809
+     using hypothesis H2.
+***  Proved C6:  element(domainname, [1]) <= 9223372036854775806
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New C1:  true
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+***  Proved C1:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H3.
+***  Proved C2:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H4.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  element(domainname, [rr_type__wirestringtypeindex__first]) > - 1
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as H6)
+          .
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H3:  qname_location >= 0
+<S>  New C1:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New C3:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H4:  qname_location <= 16383
+<S>  New C2:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 16383
+<S>  New C4:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          16382
+***  Proved C1:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+     using hypotheses H3 & H19.
+***  Proved C3:  element(domainname, [rr_type__wirestringtypeindex__first]) >= 
+          - 1
+     using hypothesis H19.
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H9:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H10:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H13:  true
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H14:  true
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H5:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H6:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H1:  qname_location <= 8192
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H12:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H19:  element(domainname, [1]) > - 1
+<S>  New H20:  element(domainname, [1]) + 1 < rr_type__wirestringtypeindex__last
+<S>  New H9:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H10:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H5:  element(domainname, [1]) >= - 1
+<S>  New H6:  element(domainname, [1]) <= 2147483646
+<S>  New C2:  qname_location + (element(domainname, [1]) + 1) <= 16383
+<S>  New C4:  element(domainname, [1]) <= 16382
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H12:  true
+<S>  New H20:  element(domainname, [1]) < 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+***  Proved C2:  qname_location + (element(domainname, [1]) + 1) <= 16383
+     using hypotheses H1 & H20.
+***  Proved C4:  element(domainname, [1]) <= 16382
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  element(domainname, [rr_type__wirestringtypeindex__first]) > - 1
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified C9 on reading formula in, to give:
+     %%%  C9:  true
+***  Proved C5:  element(domainname, [rr_type__wirestringtypeindex__first]) + 1 
+          >= natural__first
+     using hypothesis H5.
+***  Proved C6:  element(domainname, [rr_type__wirestringtypeindex__first]) + 1 
+          <= natural__last
+     using hypothesis H6.
+***  Proved C7:  element(domainname, [rr_type__wirestringtypeindex__first]) + 1 
+          >= system__min_int
+     using hypothesis H9.
+***  Proved C8:  element(domainname, [rr_type__wirestringtypeindex__first]) + 1 
+          <= system__max_int
+     using hypothesis H10.
+***  Proved C9:  true
+***  Proved C10:  rr_type__wirestringtypeindex__first <= 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H12.
+-S-  Applied substitution rule trim_name_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+<S>  New C11:  true
+-S-  Applied substitution rule trim_name_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+<S>  New C12:  true
+-S-  Applied substitution rule trim_name_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+-S-  Applied substitution rule trim_name_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+***  Proved C1:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+     using hypothesis H20.
+***  Proved C11:  true
+***  Proved C12:  true
+***  Proved C3:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+     using hypothesis H20.
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H9:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H10:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H13:  true
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H14:  true
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H5:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H6:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H3:  qname_location >= 0
+<S>  New H25:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New H27:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H4:  qname_location <= 16383
+<S>  New H26:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 16383
+<S>  New H28:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          16382
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H1:  qname_location <= 8192
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H12:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H19:  element(domainname, [1]) > - 1
+<S>  New H20:  element(domainname, [1]) + 1 < rr_type__wirestringtypeindex__last
+<S>  New H9:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H10:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H5:  element(domainname, [1]) >= - 1
+<S>  New H6:  element(domainname, [1]) <= 2147483646
+<S>  New H25:  qname_location + (element(domainname, [1]) + 1) >= 0
+<S>  New H27:  element(domainname, [1]) >= - 1
+<S>  New H26:  qname_location + (element(domainname, [1]) + 1) <= 16383
+<S>  New H28:  element(domainname, [1]) <= 16382
+<S>  New C2:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= 2147483647
+<S>  New C4:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= 2147483647
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H12:  true
+<S>  New H20:  element(domainname, [1]) < 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C2:  - 2147483518 <= element(domainname, [1]) + 1
+<S>  New C4:  - 2147483518 <= element(domainname, [1]) + 1
+%%%  Simplified C2 further, to give:
+     %%%  C2:  - 2147483519 <= element(domainname, [1])
+%%%  Simplified C4 further, to give:
+     %%%  C4:  - 2147483519 <= element(domainname, [1])
+***  Proved C2:  - 2147483519 <= element(domainname, [1])
+     using hypothesis H19.
+***  Proved C4:  - 2147483519 <= element(domainname, [1])
+     using hypothesis H19.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  element(domainname, [rr_type__wirestringtypeindex__first]) > - 1
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H12).
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H9:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H10:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule trim_name_rules(4).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H29:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+<S>  New H39:  true
+-S-  Applied substitution rule trim_name_rules(5).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H30:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+<S>  New H40:  true
+-S-  Applied substitution rule trim_name_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H31:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+-S-  Applied substitution rule trim_name_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H32:  rr_type__wirestringtypeindex__last - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H13:  true
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H14:  true
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H5:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H6:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H3:  qname_location >= 0
+<S>  New H25:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= 0
+<S>  New H27:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H4:  qname_location <= 16383
+<S>  New H26:  qname_location + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 16383
+<S>  New H28:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          16382
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H1:  qname_location <= 8192
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H12:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H19:  element(domainname, [1]) > - 1
+<S>  New H20:  element(domainname, [1]) + 1 < rr_type__wirestringtypeindex__last
+<S>  New H9:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H10:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H29:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) >= - 2147483648
+<S>  New H30:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= 2147483647
+<S>  New H31:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) >= - 2147483648
+<S>  New H32:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= 2147483647
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New H5:  element(domainname, [1]) >= - 1
+<S>  New H6:  element(domainname, [1]) <= 2147483646
+<S>  New H25:  qname_location + (element(domainname, [1]) + 1) >= 0
+<S>  New H27:  element(domainname, [1]) >= - 1
+<S>  New H26:  qname_location + (element(domainname, [1]) + 1) <= 16383
+<S>  New H28:  element(domainname, [1]) <= 16382
+<S>  New C1:  1 <= rr_type__wirestringtypeindex__last - (element(domainname, [1]
+          ) + 1) -> rr_type__wirestringtypeindex__last - (element(domainname, [
+          1]) + 1) >= 1 and rr_type__wirestringtypeindex__last - (element(
+          domainname, [1]) + 1) <= rr_type__wirestringtypeindex__last
+<S>  New C2:  1 <= rr_type__wirestringtypeindex__last - (element(domainname, [1]
+          ) + 1) -> 1 <= rr_type__wirestringtypeindex__last
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H12:  true
+<S>  New H20:  element(domainname, [1]) < 128
+<S>  New H29:  element(domainname, [1]) + 1 <= 2147483777
+<S>  New H30:  - 2147483518 <= element(domainname, [1]) + 1
+<S>  New H31:  element(domainname, [1]) + 1 <= 2147483777
+<S>  New H32:  - 2147483518 <= element(domainname, [1]) + 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C1:  element(domainname, [1]) + 1 <= 128 -> element(domainname, [1]) + 
+          1 <= 128 and 0 <= element(domainname, [1]) + 1
+<S>  New C2:  true
+%%%  Simplified H29 further, to give:
+     %%%  H29:  element(domainname, [1]) <= 2147483776
+%%%  Simplified H30 further, to give:
+     %%%  H30:  - 2147483519 <= element(domainname, [1])
+%%%  Simplified H31 further, to give:
+     %%%  H31:  element(domainname, [1]) <= 2147483776
+%%%  Simplified H32 further, to give:
+     %%%  H32:  - 2147483519 <= element(domainname, [1])
+%%%  Simplified C1 further, to give:
+     %%%  C1:  element(domainname, [1]) <= 127 -> element(domainname, [1]) <= 
+          127 and - 1 <= element(domainname, [1])
+***  Proved C2:  true
+***  Proved C1:  element(domainname, [1]) <= 127 -> element(domainname, [1]) <= 
+          127 and - 1 <= element(domainname, [1])
+     using hypotheses H5 & H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H6).
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  true
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H19 on reading formula in, to give:
+     %%%  H19:  element(domainname, [rr_type__wirestringtypeindex__first]) > - 1
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H12).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  true
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C1:  1 + (element(domainname, [rr_type__wirestringtypeindex__first])
+           + 1) <= rr_type__wirestringtypeindex__last
+     using hypothesis H43.
+***  Proved C2:  true
+***  Proved C3:  true
+***  Proved C4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C5:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H3.
+***  Proved C6:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H4.
+***  Proved C7:  qname_location <= dns_types__packet_length_range__last
+     using hypothesis H1.
+***  Proved C9:  1 <= rr_type__wirestringtypeindex__last
+     using hypotheses H19 & H20.
+***  Proved C10:  true
+***  Proved C11:  1 <= rr_type__wirestringtypeindex__last - (element(
+          domainname, [rr_type__wirestringtypeindex__first]) + 1)
+     using hypothesis H43.
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New H5:  element(domainname, [1]) + 1 >= natural__first
+<S>  New H6:  element(domainname, [1]) + 1 <= natural__last
+<S>  New H9:  element(domainname, [1]) + 1 >= system__min_int
+<S>  New H10:  element(domainname, [1]) + 1 <= system__max_int
+<S>  New H12:  1 <= rr_type__wirestringtypeindex__last
+<S>  New H19:  element(domainname, [1]) > - 1
+<S>  New H20:  element(domainname, [1]) + 1 < rr_type__wirestringtypeindex__last
+<S>  New H25:  qname_location + (element(domainname, [1]) + 1) >= 
+          dns_types__qname_ptr_range__first
+<S>  New H26:  qname_location + (element(domainname, [1]) + 1) <= 
+          dns_types__qname_ptr_range__last
+<S>  New H27:  element(domainname, [1]) + 1 >= dns_types__qname_ptr_range__first
+<S>  New H28:  element(domainname, [1]) + 1 <= dns_types__qname_ptr_range__last
+<S>  New H29:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) >= integer__first
+<S>  New H30:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= integer__last
+<S>  New H31:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) >= integer__base__first
+<S>  New H32:  rr_type__wirestringtypeindex__last - (element(domainname, [1]) + 
+          1) <= integer__base__last
+<S>  New H41:  1 <= rr_type__wirestringtypeindex__last - (element(domainname, [
+          1]) + 1) -> rr_type__wirestringtypeindex__last - (element(domainname, 
+          [1]) + 1) >= 1 and rr_type__wirestringtypeindex__last - (element(
+          domainname, [1]) + 1) <= rr_type__wirestringtypeindex__last
+<S>  New H42:  1 <= rr_type__wirestringtypeindex__last - (element(domainname, [
+          1]) + 1) -> 1 <= rr_type__wirestringtypeindex__last
+<S>  New H43:  1 <= rr_type__wirestringtypeindex__last - (element(domainname, [
+          1]) + 1)
+<S>  New C8:  true
+***  Proved C8:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_8.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  true
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as H9)
+          .
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  loop__1__i >= 0
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  loop__1__i >= 0
+***  Proved C2:  loop__1__i >= 0
+     using hypothesis H2.
+***  Proved C3:  zone_length = element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1
+     using hypothesis H3.
+***  Proved C4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+     using hypothesis H4.
+***  Proved C5:  qname_location >= dns_types__qname_ptr_range__first
+     using hypothesis H5.
+***  Proved C6:  qname_location <= dns_types__qname_ptr_range__last
+     using hypothesis H6.
+***  Proved C7:  qname_location <= dns_types__packet_length_range__last
+     using hypothesis H7.
+***  Proved C8:  loop__1__i + 1 >= rr_type__wirestringtypeindex__first
+     using hypothesis H8.
+***  Proved C10:  loop__1__i >= 0
+     using hypothesis H2.
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H1:  loop__1__i + zone_length <= 129
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> character__first <= element(domainname, [
+          i___1]) and element(domainname, [i___1]) <= character__last)
+<S>  New H9:  loop__1__i <= 129
+<S>  New H11:  loop__1__i <= 129 - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)
+<S>  New H15:  loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 129
+<S>  New H23:  rr_type__wirestringtypeindex__first <= 129
+<S>  New H26:  not loop__1__i = 129 - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)
+<S>  New C1:  loop__1__i + 1 + zone_length <= 129
+<S>  New C9:  loop__1__i <= 128
+<S>  New C11:  loop__1__i + 1 <= 129 - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)
+>>>  Restructured hypothesis H26 into:
+     >>>  H26:  loop__1__i <> 129 - (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H20:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 
+          9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H21:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          9223372036854775806
+-S-  Applied substitution rule trim_name_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H16:  loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) >= - 2147483648
+-S-  Applied substitution rule trim_name_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H17:  loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 2147483647
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> 0 <= element(domainname, [i___1]) and 
+          element(domainname, [i___1]) <= character__last)
+<S>  New H12:  element(domainname, [loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)]) >= 0
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H13:  element(domainname, [loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)]) <= 255
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> 0 <= element(domainname, [i___1]) and 
+          element(domainname, [i___1]) <= 255)
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New H18:  element(domainname, [rr_type__wirestringtypeindex__first]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New H19:  element(domainname, [rr_type__wirestringtypeindex__first]) <= 
+          2147483646
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H7:  qname_location <= 8192
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H3:  zone_length = element(domainname, [1]) + 1
+<S>  New H8:  loop__1__i >= 1
+<S>  New H11:  loop__1__i <= 129 - (element(domainname, [1]) + 1)
+<S>  New H14:  loop__1__i + (element(domainname, [1]) + 1) >= 1
+<S>  New H15:  loop__1__i + (element(domainname, [1]) + 1) <= 129
+<S>  New H23:  true
+<S>  New H26:  loop__1__i <> 129 - (element(domainname, [1]) + 1)
+<S>  New H20:  element(domainname, [1]) >= - 9223372036854775809
+<S>  New H21:  element(domainname, [1]) <= 9223372036854775806
+<S>  New H16:  loop__1__i + (element(domainname, [1]) + 1) >= - 2147483648
+<S>  New H17:  loop__1__i + (element(domainname, [1]) + 1) <= 2147483647
+<S>  New H12:  element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]
+          ) >= 0
+<S>  New H13:  element(domainname, [loop__1__i + (element(domainname, [1]) + 1)]
+          ) <= 255
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H18:  element(domainname, [1]) >= - 1
+<S>  New H19:  element(domainname, [1]) <= 2147483646
+<S>  New C11:  loop__1__i + 1 <= 129 - (element(domainname, [1]) + 1)
+%%%  Hypotheses H11 & H26 together imply that
+          loop__1__i < 129 - (element(domainname, [1]) + 1).
+     H11 & H26 have therefore been deleted and a new H27 added to this effect.
+***  Proved C11:  loop__1__i + 1 <= 129 - (element(domainname, [1]) + 1)
+     via its standard form, which is:
+     Std.Fm C11:  - loop__1__i - element(domainname, [1]) > - 128
+     using hypothesis H27.
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H22 (true-hypothesis).
+---  Eliminated hypothesis H24 (true-hypothesis).
+---  Eliminated hypothesis H25 (true-hypothesis).
+---  Eliminated hypothesis H23 (true-hypothesis).
+---  Eliminated hypothesis H8 (duplicate of H2).
+---  Eliminated hypothesis H1 (redundant, given H3 & H27).
+---  Eliminated hypothesis H6 (redundant, given H7).
+---  Eliminated hypothesis H15 (redundant, given H27).
+---  Eliminated hypothesis H16 (redundant, given H14).
+---  Eliminated hypothesis H17 (redundant, given H27).
+---  Eliminated hypothesis H19 (redundant, given H2 & H27).
+---  Eliminated hypothesis H20 (redundant, given H18).
+---  Eliminated hypothesis H21 (redundant, given H2 & H27).
+-S-  Eliminated hypothesis H3.
+     This was achieved by replacing all occurrences of zone_length by:
+          element(domainname, [1]) + 1.
+<S>  New C1:  loop__1__i + 1 + (element(domainname, [1]) + 1) <= 129
+***  Proved C1:  loop__1__i + 1 + (element(domainname, [1]) + 1) <= 129
+     via its standard form, which is:
+     Std.Fm C1:  - loop__1__i - element(domainname, [1]) > - 128
+     using hypothesis H27.
+     +++  New H28:  integer__size >= 0
+     +++  New H29:  character__size >= 0
+     +++  New H30:  natural__size >= 0
+     +++  New H31:  positive__size >= 0
+     +++  New H32:  dns_types__qname_ptr_range__size >= 0
+     +++  New H33:  dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last
+     +++  New H34:  dns_types__packet_length_range__size >= 0
+     +++  New H35:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H36:  dns_types__qname_ptr_range__base__first <= 0
+     +++  New H37:  dns_types__qname_ptr_range__base__last >= 16383
+
+
+@@@@@@@@@@  VC: procedure_trim_name_9.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(domainname, [i___1]) and element(
+          domainname, [i___1]) <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified C11 on reading formula in, to give:
+     %%%  C11:  true
+***  Proved C4:  loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1) <= 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H11.
+***  Proved C11:  true
+***  Proved C12:  rr_type__wirestringtypeindex__first <= 
+          rr_type__wirestringtypeindex__last
+     using hypotheses H8 & H9.
+***  Proved C13:  loop__1__i >= rr_type__wirestringtypeindex__first
+     using hypothesis H8.
+***  Proved C14:  loop__1__i <= rr_type__wirestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule trim_name_rules(9).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 
+          character__last)
+<S>  New C1:  element(domainname, [loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)]) >= 0
+-S-  Applied substitution rule trim_name_rules(10).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New C2:  element(domainname, [loop__1__i + (element(domainname, [
+          rr_type__wirestringtypeindex__first]) + 1)]) <= 255
+-S-  Applied substitution rule trim_name_rules(35).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H3:  zone_length = element(domainname, [1]) + 1
+<S>  New H8:  loop__1__i >= 1
+<S>  New H11:  loop__1__i <= rr_type__wirestringtypeindex__last - (element(
+          domainname, [1]) + 1)
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(domainname, [i___1]
+          ) and element(domainname, [i___1]) <= 255)
+<S>  New C3:  loop__1__i + (element(domainname, [1]) + 1) >= 1
+<S>  New C5:  loop__1__i + (element(domainname, [1]) + 1) >= 
+          integer__base__first
+<S>  New C6:  loop__1__i + (element(domainname, [1]) + 1) <= integer__base__last
+<S>  New C7:  element(domainname, [1]) + 1 >= natural__first
+<S>  New C8:  element(domainname, [1]) + 1 <= natural__last
+<S>  New C9:  element(domainname, [1]) + 1 >= system__min_int
+<S>  New C10:  element(domainname, [1]) + 1 <= system__max_int
+<S>  New C1:  element(domainname, [loop__1__i + (element(domainname, [1]) + 1)])
+           >= 0
+<S>  New C2:  element(domainname, [loop__1__i + (element(domainname, [1]) + 1)])
+           <= 255
+-S-  Applied substitution rule trim_name_rules(6).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C5:  loop__1__i + (element(domainname, [1]) + 1) >= - 2147483648
+-S-  Applied substitution rule trim_name_rules(7).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C6:  loop__1__i + (element(domainname, [1]) + 1) <= 2147483647
+-S-  Applied substitution rule trim_name_rules(14).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C7:  element(domainname, [1]) >= - 1
+-S-  Applied substitution rule trim_name_rules(15).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C8:  element(domainname, [1]) <= 2147483646
+-S-  Applied substitution rule trim_name_rules(1).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C9:  element(domainname, [1]) >= - 9223372036854775809
+-S-  Applied substitution rule trim_name_rules(2).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C10:  element(domainname, [1]) <= 9223372036854775806
+***  Proved C7:  element(domainname, [1]) >= - 1
+     using hypotheses H2, H4 & H9.
+***  Proved C8:  element(domainname, [1]) <= 2147483646
+     using hypotheses H2, H4 & H9.
+***  Proved C9:  element(domainname, [1]) >= - 9223372036854775809
+     using hypotheses H2, H4 & H9.
+***  Proved C10:  element(domainname, [1]) <= 9223372036854775806
+     using hypotheses H2, H4 & H9.
+-S-  Applied substitution rule trim_name_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__first by:
+          0.
+<S>  New H5:  qname_location >= 0
+-S-  Applied substitution rule trim_name_rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__qname_ptr_range__last by:
+          16383.
+<S>  New H6:  qname_location <= 16383
+-S-  Applied substitution rule trim_name_rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H7:  qname_location <= 8192
+-S-  Applied substitution rule trim_name_rules(36).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H1:  loop__1__i + zone_length <= 129
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(domainname, [i___1]) and element(domainname, [i___1]) <= 255)
+<S>  New H9:  loop__1__i <= 129
+<S>  New H11:  loop__1__i <= 129 - (element(domainname, [1]) + 1)
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated hypothesis H8 (duplicate of H2).
+---  Eliminated hypothesis H6 (redundant, given H7).
+-S-  Eliminated hypothesis H3.
+     This was achieved by replacing all occurrences of zone_length by:
+          element(domainname, [1]) + 1.
+<S>  New H1:  loop__1__i + (element(domainname, [1]) + 1) <= 129
+***  Proved C3:  loop__1__i + (element(domainname, [1]) + 1) >= 1
+     using hypotheses H2 & H4.
+***  Proved C5:  loop__1__i + (element(domainname, [1]) + 1) >= - 2147483648
+     using hypotheses H2 & H4.
+***  Proved C6:  loop__1__i + (element(domainname, [1]) + 1) <= 2147483647
+     using hypothesis H1.
+     +++  New H12:  integer__size >= 0
+     +++  New H13:  character__size >= 0
+     +++  New H14:  natural__size >= 0
+     +++  New H15:  positive__size >= 0
+     +++  New H16:  dns_types__qname_ptr_range__size >= 0
+     +++  New H17:  dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last
+     +++  New H18:  dns_types__packet_length_range__size >= 0
+     +++  New H19:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H20:  dns_types__qname_ptr_range__base__first <= 0
+     +++  New H21:  dns_types__qname_ptr_range__base__last >= 16383
+
+
+@@@@@@@@@@  VC: procedure_trim_name_10.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_11.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_trim_name_12.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

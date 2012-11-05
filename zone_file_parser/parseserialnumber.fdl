@@ -1,0 +1,73 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                {procedure Zone_File_Parser.parseSerialNumber}
+
+
+title procedure parseserialnumber;
+
+  function round__(real) : integer;
+  type character = integer;
+  type long_long_integer = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__rritemtype = (rr_type__domainnameortimespec, 
+     rr_type__number, rr_type__class, rr_type__recordindicator, 
+     rr_type__ipv4, rr_type__ipv6, rr_type__lparen, 
+     rr_type__rparen, rr_type__control, rr_type__comment, 
+     rr_type__other);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const rr_type__soa_record_type__max_serial_val : integer = pending;
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__rritemtype__base__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__base__last : rr_type__rritemtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const long_long_integer__base__first : integer = pending; 
+  const long_long_integer__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__rritemtype__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__last : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const long_long_integer__first : integer = pending; 
+  const long_long_integer__last : integer = pending; 
+  const long_long_integer__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var zonefileline : string;
+  var zlength : integer;
+  var begidx : integer;
+  var endidx : integer;
+  var foundtype : rr_type__rritemtype;
+  var tmpval : integer;
+  var loop__1__i : integer;
+  var endidx__entry__loop__1 : integer;
+  var foundtype__1 : rr_type__rritemtype;
+  var endidx__1 : integer;
+  var begidx__1 : integer;
+
+end;

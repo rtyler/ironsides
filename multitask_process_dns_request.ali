@@ -1,0 +1,116 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnvnnnnnnnnnnnnnnvnnvnnnnnnvnnvnnnnnnnnnnnnvnnvnnnvnnnnnnvnnnnvnnvnnnnnv1nv1+nnnv1+nn
+
+U multitask_process_dns_request%b  multitask_process_dns_request.adb  c428a30d OO PK
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W process_dns_request%s	process_dns_request.adb	process_dns_request.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W task_limit%s		task_limit.adb		task_limit.ali
+
+U multitask_process_dns_request%s  multitask_process_dns_request.ads  1d4019e8 EE NE OO PK
+W dns_network%s		dns_network.adb		dns_network.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-reatim.ads		20110428140902 63f07669
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D dns_network.ads	20120707130602 f1ab7b6e
+D dns_network_receive.ads  20120707130414 b5e0b4ea
+D dns_table_pkg.ads	20120707130414 38043df2
+D dns_types.ads		20120707130416 d000ba3f
+D gnat.ads		20110428140904 fd2ad2f1
+D g-socket.ads		20110428140904 c20e5040
+D interfac.ads		20110428140906 f77d8799
+D i-c.ads		20110428140906 5421119b
+D i-cstrin.ads		20110428140906 341d0ddf
+D multitask_process_dns_request.ads  20120707130416 eceb6286
+D multitask_process_dns_request.adb  20120707130416 099e9922
+D process_dns_request.ads  20120707130418 a0eccf01
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-a_record_type.ads  20120707130420 0d6b36f2
+D rr_type-aaaa_record_type.ads  20120707130420 1ee8fe4c
+D rr_type-cname_record_type.ads  20120707130420 40c48ba5
+D rr_type-dnskey_record_type.ads  20120707130420 71b14674
+D rr_type-mx_record_type.ads  20120707130420 dd5a7d35
+D rr_type-ns_record_type.ads  20120707130420 9cfbe856
+D rr_type-nsec_record_type.ads  20120707130422 3cb23cba
+D rr_type-ptr_record_type.ads  20120707130422 fa9794c7
+D rr_type-rrsig_record_type.ads  20120707130422 94724ac7
+D rr_type-soa_record_type.ads  20120707130422 250fc6ac
+D system.ads		20110428140910 bc164b96
+D s-atacco.ads		20110428140906 1dc856ad
+D s-exctab.ads		20110428140906 66e51330
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-multip.ads		20110428140908 38ac9f73
+D s-oscons.ads		20110428170002 cdbaafae
+D s-osinte.ads		20110428140908 ecf1fbfd
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stausa.ads		20110428140908 017a0a05
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-stratt.ads		20110428140908 aedef97e
+D s-string.ads		20110428140908 46b01415
+D s-ststop.ads		20110428140908 ee472be4
+D s-tasinf.ads		20110428140908 859198ad
+D s-taspri.ads		20110428140908 196697f7
+D s-taprop.ads		20110428140908 07f79e46
+D s-taskin.ads		20110428140908 b2eaee08
+D s-taprob.ads		20110428140908 502249e3
+D s-tpoben.ads		20110428140908 e8374469
+D s-tasren.ads		20110428140908 86fa7427
+D s-tassta.ads		20110428140908 e88ef99e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-win32.ads		20110428140910 07238fa2
+D task_limit.ads	20120707130424 81b197a8
+D unsigned_types.ads	20120707130426 dd57bff3
+X 10 dns_network.ads
+21K9*DNS_Network 95e16 19|19w6 23r25 20|29r37 35r20 37r38 46r28 55r10
+30I9*DNS_Socket 19|23r37 20|29r49 35r32 37r50 46r40
+88U14*Discard_Socket 20|55s22
+X 19 multitask_process_dns_request.ads
+21K9*Multitask_Process_Dns_Request 32l5 32e34 20|20b14 61l5 61t34
+22U14*Process_Request_Tcp 23>7 20|45b14 58l8 58t27
+23i7 Reply_Socket{10|30I9} 20|46b10 53r18 55r37
+X 20 multitask_process_dns_request.adb
+22w4 Task_Limit_Object{64|21W19} 42r7 50r7
+23T14 Handle_Tcp_Request 31l8 31e26 32r32 34b14 43l8 43t26 52r19
+29Y13 start 29>19 37b14 39l11 39t16 53s12
+29i19 Reply_Socket{10|30I9} 38r24
+32P9 Task_Ptr(23T14) 47r11
+35i7 The_Socket{10|30I9} 38m10 41r63
+37i20 Reply_Socket{10|30I9}
+47p7 T{32P9} 52m10 53r10
+48b7 Success{boolean} 50m35 50r35 51r10
+X 21 process_dns_request.ads
+37K9*Process_Dns_Request 20|18w6 41r7 21|321e24
+38U14*Process_Request_Tcp 20|41s27
+39i7 Reply_Socket{10|30I9} 20|41r47
+X 64 task_limit.ads
+18K9*Task_Limit 20|19w6 22r24 64|33e15
+21W19*Task_Count_Type 20|22r35 64|32e23
+23U17 Increment 20|50s25
+27U17 Decrement 20|42s25
+

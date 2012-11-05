@@ -1,0 +1,34 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                          {procedure Spark_Dns_Main}
+
+
+title procedure spark_dns_main;
+
+  function round__(real) : integer;
+  type spark_ada_command_line__exit_status = integer;
+  const spark_ada_command_line__failure : integer = pending;
+  const spark_ada_command_line__exit_status__base__first : integer = pending; 
+  const spark_ada_command_line__exit_status__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const spark_ada_command_line__exit_status__first : integer = pending; 
+  const spark_ada_command_line__exit_status__last : integer = pending; 
+  const spark_ada_command_line__exit_status__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var success : boolean;
+  var success__2 : boolean;
+
+end;

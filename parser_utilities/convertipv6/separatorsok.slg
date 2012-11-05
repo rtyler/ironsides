@@ -1,0 +1,399 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.convertIpv6.SeparatorsOK
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_separatorsok_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+-S-  Applied substitution rule separatorsok_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  separatorindextype__last >= - 2147483647
+<S>  New C5:  separatorindextype__first >= - 2147483648
+-S-  Applied substitution rule separatorsok_rules(24).
+     This was achieved by replacing all occurrences of separatorindextype__last 
+          by:
+          8.
+<S>  New H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= 8 -> rr_type__linelengthindex__first <= element(sarray, [
+          i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+<S>  New C2:  7 <= integer__last
+<S>  New C3:  7 >= integer__base__first
+<S>  New C4:  7 <= integer__base__last
+<S>  New C1:  true
+-S-  Applied substitution rule separatorsok_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C6:  separatorindextype__first <= 2147483647
+<S>  New C2:  true
+-S-  Applied substitution rule separatorsok_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  true
+-S-  Applied substitution rule separatorsok_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  true
+-S-  Applied substitution rule separatorsok_rules(23).
+     This was achieved by replacing all occurrences of 
+          separatorindextype__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 
+          rr_type__linelengthindex__first <= element(sarray, [i___1]) and 
+          element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+<S>  New C5:  true
+<S>  New C6:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  true
+***  Proved C4:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+***  Proved C1:  separatorindextype__first <= separatorindextype__last - 1 -> 
+          separatorindextype__last - 1 >= integer__first and 
+          separatorindextype__last - 1 <= integer__last
+     using hypotheses H4 & H5.
+***  Proved C2:  separatorindextype__first <= separatorindextype__last - 1 -> 
+          separatorindextype__first >= integer__first and 
+          separatorindextype__first <= integer__last
+     using hypotheses H8 & H9.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, separatorindextype__first <= i___1 
+          and i___1 <= separatorindextype__last -> 
+          rr_type__linelengthindex__first <= element(sarray, [i___1]) and 
+          element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+     using hypothesis H3.
+***  Proved C4:  separatorindextype__first >= integer__first
+     using hypothesis H8.
+***  Proved C5:  separatorindextype__first <= integer__last
+     using hypothesis H9.
+***  Proved C6:  true
+***  Proved C7:  separatorindextype__first <= separatorindextype__last - 1
+     using hypothesis H12.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H6)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, separatorindextype__first <= i___1 
+          and i___1 <= separatorindextype__last -> 
+          rr_type__linelengthindex__first <= element(sarray, [i___1]) and 
+          element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+     using hypothesis H3.
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i + 1 >= separatorindextype__first
+     using hypothesis H10.
+-S-  Applied substitution rule separatorsok_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H20 into:
+     >>>  H20:  element(line, [element(sarray, [loop__1__i])]) = 
+          field_separator and element(sarray, [loop__1__i]) <> element(sarray, [
+          loop__1__i + 1]) - 1
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  loop__1__i <> separatorindextype__last - 1
+>>>  Hypothesis H20 has now been split into two, giving:
+     >>>  H22:  element(line, [element(sarray, [loop__1__i])]) = field_separator
+     >>>  H23:  element(sarray, [loop__1__i]) <> element(sarray, [loop__1__i + 
+          1]) - 1
+-S-  Applied substitution rule separatorsok_rules(1).
+     This was achieved by replacing all occurrences of field_separator by:
+          58.
+<S>  New H22:  element(line, [element(sarray, [loop__1__i])]) = 58
+-S-  Applied substitution rule separatorsok_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule separatorsok_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H8:  element(sarray, [loop__1__i + 1]) >= - 2147483647
+<S>  New H12:  loop__1__i >= - 2147483649
+-S-  Applied substitution rule separatorsok_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H9:  element(sarray, [loop__1__i + 1]) <= 2147483648
+<S>  New H13:  loop__1__i <= 2147483646
+-S-  Applied substitution rule separatorsok_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(line, [
+          i___1]) and element(line, [i___1]) <= character__last)
+-S-  Applied substitution rule separatorsok_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(line, [
+          i___1]) and element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> 1 <= element(sarray, [i___1]) 
+          and element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+<S>  New H16:  element(sarray, [loop__1__i]) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(line, [i___1]) and 
+          element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H17:  element(sarray, [loop__1__i]) <= 256
+<S>  New H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> 1 <= element(sarray, [i___1]) 
+          and element(sarray, [i___1]) <= 256)
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(line, [i___1]) and element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(23).
+     This was achieved by replacing all occurrences of 
+          separatorindextype__first by:
+          1.
+<S>  New H6:  loop__1__i >= 1
+<S>  New H10:  loop__1__i >= 0
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          separatorindextype__last -> 1 <= element(sarray, [i___1]) and element(
+          sarray, [i___1]) <= 256)
+-S-  Applied substitution rule separatorsok_rules(24).
+     This was achieved by replacing all occurrences of separatorindextype__last 
+          by:
+          8.
+<S>  New H7:  loop__1__i <= 7
+<S>  New H11:  loop__1__i <= 7
+<S>  New H15:  loop__1__i <= 8
+<S>  New H21:  loop__1__i <> 7
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 1 <= 
+          element(sarray, [i___1]) and element(sarray, [i___1]) <= 256)
+<S>  New C7:  loop__1__i <= 6
+%%%  Hypotheses H7 & H21 together imply that
+          loop__1__i < 7.
+     H7 & H21 have therefore been deleted and a new H24 added to this effect.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H13.
+***  Proved C7:  loop__1__i <= 6
+     using hypothesis H24.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+***  Proved C3:  loop__1__i + 1 >= separatorindextype__first
+     using hypothesis H6.
+***  Proved C4:  loop__1__i + 1 <= separatorindextype__last
+     using hypothesis H7.
+***  Proved C7:  loop__1__i >= separatorindextype__first
+     using hypothesis H6.
+***  Proved C8:  loop__1__i <= separatorindextype__last
+     using hypothesis H7.
+***  Proved C9:  element(sarray, [loop__1__i]) >= 
+          rr_type__linelengthindex__first
+     using hypotheses H3, H6 & H7.
+***  Proved C10:  element(sarray, [loop__1__i]) <= 
+          rr_type__linelengthindex__last
+     using hypotheses H3, H6 & H7.
+***  Proved C11:  loop__1__i >= separatorindextype__first
+     using hypothesis H6.
+***  Proved C12:  loop__1__i <= separatorindextype__last
+     using hypothesis H7.
+-S-  Applied substitution rule separatorsok_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  element(sarray, [loop__1__i + 1]) >= - 2147483647
+<S>  New C5:  loop__1__i >= - 2147483649
+-S-  Applied substitution rule separatorsok_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  element(sarray, [loop__1__i + 1]) <= 2147483648
+<S>  New C6:  loop__1__i <= 2147483646
+-S-  Applied substitution rule separatorsok_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule separatorsok_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+-S-  Applied substitution rule separatorsok_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(line, [
+          i___1]) and element(line, [i___1]) <= character__last)
+-S-  Applied substitution rule separatorsok_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(line, [
+          i___1]) and element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> 1 <= element(sarray, [i___1]) 
+          and element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(line, [i___1]) and 
+          element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> 1 <= element(sarray, [i___1]) 
+          and element(sarray, [i___1]) <= 256)
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(line, [i___1]) and element(line, [i___1]) <= 255)
+-S-  Applied substitution rule separatorsok_rules(23).
+     This was achieved by replacing all occurrences of 
+          separatorindextype__first by:
+          1.
+<S>  New H6:  loop__1__i >= 1
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          separatorindextype__last -> 1 <= element(sarray, [i___1]) and element(
+          sarray, [i___1]) <= 256)
+-S-  Applied substitution rule separatorsok_rules(24).
+     This was achieved by replacing all occurrences of separatorindextype__last 
+          by:
+          8.
+<S>  New H7:  loop__1__i <= 7
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 1 <= 
+          element(sarray, [i___1]) and element(sarray, [i___1]) <= 256)
+***  Proved C1:  element(sarray, [loop__1__i + 1]) >= - 2147483647
+     using hypotheses H3, H6 & H7.
+***  Proved C5:  loop__1__i >= - 2147483649
+     using hypothesis H4.
+***  Proved C2:  element(sarray, [loop__1__i + 1]) <= 2147483648
+     using hypotheses H3, H6 & H7.
+***  Proved C6:  loop__1__i <= 2147483646
+     using hypothesis H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_8.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

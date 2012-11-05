@@ -1,0 +1,121 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                  /*procedure Zone_File_Parser.ParseTimeSpec*/
+
+
+rule_family parsetimespe_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+parsetimespe_rules(1): integer__size >= 0 may_be_deduced.
+parsetimespe_rules(2): integer__first may_be_replaced_by -2147483648.
+parsetimespe_rules(3): integer__last may_be_replaced_by 2147483647.
+parsetimespe_rules(4): integer__base__first may_be_replaced_by -2147483648.
+parsetimespe_rules(5): integer__base__last may_be_replaced_by 2147483647.
+parsetimespe_rules(6): character__size >= 0 may_be_deduced.
+parsetimespe_rules(7): character__first may_be_replaced_by 0.
+parsetimespe_rules(8): character__last may_be_replaced_by 255.
+parsetimespe_rules(9): character__base__first may_be_replaced_by 0.
+parsetimespe_rules(10): character__base__last may_be_replaced_by 255.
+parsetimespe_rules(11): positive__size >= 0 may_be_deduced.
+parsetimespe_rules(12): positive__first may_be_replaced_by 1.
+parsetimespe_rules(13): positive__last may_be_replaced_by 2147483647.
+parsetimespe_rules(14): positive__base__first may_be_replaced_by -2147483648.
+parsetimespe_rules(15): positive__base__last may_be_replaced_by 2147483647.
+parsetimespe_rules(16): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+parsetimespe_rules(17): unsigned_types__unsigned32__first may_be_replaced_by 0.
+parsetimespe_rules(18): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+parsetimespe_rules(19): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+parsetimespe_rules(20): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+parsetimespe_rules(21): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+parsetimespe_rules(22): rr_type__rritemtype__size >= 0 may_be_deduced.
+parsetimespe_rules(23): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+parsetimespe_rules(24): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+parsetimespe_rules(25): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+parsetimespe_rules(26): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+parsetimespe_rules(27): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+parsetimespe_rules(28): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+parsetimespe_rules(29): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+parsetimespe_rules(30): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+parsetimespe_rules(31): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+parsetimespe_rules(32): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+parsetimespe_rules(33): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+parsetimespe_rules(34): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+parsetimespe_rules(35): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+parsetimespe_rules(36): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+parsetimespe_rules(37): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+parsetimespe_rules(38): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+parsetimespe_rules(39): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+parsetimespe_rules(40): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+parsetimespe_rules(41): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+parsetimespe_rules(42): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+parsetimespe_rules(43): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+parsetimespe_rules(44): rr_type__rritemtype__pos(rr_type__control) may_be_replaced_by 8.
+parsetimespe_rules(45): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+parsetimespe_rules(46): rr_type__rritemtype__pos(rr_type__comment) may_be_replaced_by 9.
+parsetimespe_rules(47): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+parsetimespe_rules(48): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+parsetimespe_rules(49): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+parsetimespe_rules(50): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+parsetimespe_rules(51): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+parsetimespe_rules(52): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+parsetimespe_rules(53): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetimespe_rules(54): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetimespe_rules(55): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+parsetimespe_rules(56): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+parsetimespe_rules(57): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+parsetimespe_rules(58): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+parsetimespe_rules(59): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+parsetimespe_rules(60): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetimespe_rules(61): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+parsetimespe_rules(62): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+parsetimespe_rules(63): rr_type__linelengthindex__size >= 0 may_be_deduced.
+parsetimespe_rules(64): rr_type__linelengthindex__first may_be_replaced_by 1.
+parsetimespe_rules(65): rr_type__linelengthindex__last may_be_replaced_by 256.
+parsetimespe_rules(66): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+parsetimespe_rules(67): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,22 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Tcp_Dns_Package.Initialization_Done
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_initialization_done_1.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

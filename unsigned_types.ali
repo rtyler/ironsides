@@ -1,0 +1,20 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U unsigned_types%s	unsigned_types.ads	dd57bff3 NE OO PK KU
+
+D system.ads		20110428140910 bc164b96
+D unsigned_types.ads	20120707130426 dd57bff3
+X 2 unsigned_types.ads
+18K9*Unsigned_Types 25l5 25e19
+19M9*Unsigned8
+20M9*Unsigned16
+21M9*Unsigned32
+22i4*MAX_8BIT_VAL{natural}
+23i4*MAX_16BIT_VAL{natural}
+24i4*MAX_32BIT_VAL{long_long_integer}
+

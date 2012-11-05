@@ -1,0 +1,15 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                   {task_type Tcp_Dns_Package.Tcp_Dns_Task}
+
+
+title task_type tcp_dns_task;
+
+  function round__(real) : integer;
+
+end;

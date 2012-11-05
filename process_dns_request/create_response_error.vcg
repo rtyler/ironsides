@@ -1,0 +1,235 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+            procedure Process_Dns_Request.Create_Response_Error
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 257:
+
+procedure_create_response_error_1.
+H1:    true .
+H2:    input_bytes >= dns_types__packet_length_range__first .
+H3:    input_bytes <= dns_types__packet_length_range__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(output_packet), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(
+           output_packet), [i___1]) <= dns_types__byte__last))) .
+H5:    fld_arcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H6:    fld_arcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H7:    fld_nscount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H8:    fld_nscount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H9:    fld_ancount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H10:   fld_ancount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H11:   fld_qdcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H12:   fld_qdcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H13:   fld_rcode(fld_header(output_packet)) >= 
+           dns_types__response_code__first .
+H14:   fld_rcode(fld_header(output_packet)) <= 
+           dns_types__response_code__last .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   true .
+H22:   fld_opcode(fld_header(output_packet)) >= 
+           dns_types__opcode_type__first .
+H23:   fld_opcode(fld_header(output_packet)) <= 
+           dns_types__opcode_type__last .
+H24:   true .
+H25:   fld_messageid(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H26:   fld_messageid(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+        ->
+C1:    dns_types__not_implemented >= dns_types__response_code__first .
+C2:    dns_types__not_implemented <= dns_types__response_code__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 258:
+
+procedure_create_response_error_2.
+H1:    true .
+H2:    input_bytes >= dns_types__packet_length_range__first .
+H3:    input_bytes <= dns_types__packet_length_range__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(output_packet), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(
+           output_packet), [i___1]) <= dns_types__byte__last))) .
+H5:    fld_arcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H6:    fld_arcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H7:    fld_nscount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H8:    fld_nscount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H9:    fld_ancount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H10:   fld_ancount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H11:   fld_qdcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H12:   fld_qdcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H13:   fld_rcode(fld_header(output_packet)) >= 
+           dns_types__response_code__first .
+H14:   fld_rcode(fld_header(output_packet)) <= 
+           dns_types__response_code__last .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   true .
+H22:   fld_opcode(fld_header(output_packet)) >= 
+           dns_types__opcode_type__first .
+H23:   fld_opcode(fld_header(output_packet)) <= 
+           dns_types__opcode_type__last .
+H24:   true .
+H25:   fld_messageid(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H26:   fld_messageid(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H27:   dns_types__not_implemented >= dns_types__response_code__first .
+H28:   dns_types__not_implemented <= dns_types__response_code__last .
+        ->
+C1:    0 >= dns_types__unsigned_short__first .
+C2:    0 <= dns_types__unsigned_short__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 259:
+
+procedure_create_response_error_3.
+H1:    true .
+H2:    input_bytes >= dns_types__packet_length_range__first .
+H3:    input_bytes <= dns_types__packet_length_range__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(output_packet), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(
+           output_packet), [i___1]) <= dns_types__byte__last))) .
+H5:    fld_arcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H6:    fld_arcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H7:    fld_nscount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H8:    fld_nscount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H9:    fld_ancount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H10:   fld_ancount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H11:   fld_qdcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H12:   fld_qdcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H13:   fld_rcode(fld_header(output_packet)) >= 
+           dns_types__response_code__first .
+H14:   fld_rcode(fld_header(output_packet)) <= 
+           dns_types__response_code__last .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   true .
+H22:   fld_opcode(fld_header(output_packet)) >= 
+           dns_types__opcode_type__first .
+H23:   fld_opcode(fld_header(output_packet)) <= 
+           dns_types__opcode_type__last .
+H24:   true .
+H25:   fld_messageid(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H26:   fld_messageid(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H27:   dns_types__not_implemented >= dns_types__response_code__first .
+H28:   dns_types__not_implemented <= dns_types__response_code__last .
+H29:   0 >= dns_types__unsigned_short__first .
+H30:   0 <= dns_types__unsigned_short__last .
+        ->
+C1:    input_bytes >= dns_types__packet_length_range__first .
+C2:    input_bytes <= dns_types__packet_length_range__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_create_response_error_4.
+H1:    true .
+H2:    input_bytes >= dns_types__packet_length_range__first .
+H3:    input_bytes <= dns_types__packet_length_range__last .
+H4:    for_all(i___1: dns_types__packet_bytes_range, ((
+           i___1 >= dns_types__packet_bytes_range__first) and (
+           i___1 <= dns_types__packet_bytes_range__last)) -> ((element(
+           fld_bytes(output_packet), [i___1]) >= 
+           dns_types__byte__first) and (element(fld_bytes(
+           output_packet), [i___1]) <= dns_types__byte__last))) .
+H5:    fld_arcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H6:    fld_arcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H7:    fld_nscount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H8:    fld_nscount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H9:    fld_ancount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H10:   fld_ancount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H11:   fld_qdcount(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H12:   fld_qdcount(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H13:   fld_rcode(fld_header(output_packet)) >= 
+           dns_types__response_code__first .
+H14:   fld_rcode(fld_header(output_packet)) <= 
+           dns_types__response_code__last .
+H15:   true .
+H16:   true .
+H17:   true .
+H18:   true .
+H19:   true .
+H20:   true .
+H21:   true .
+H22:   fld_opcode(fld_header(output_packet)) >= 
+           dns_types__opcode_type__first .
+H23:   fld_opcode(fld_header(output_packet)) <= 
+           dns_types__opcode_type__last .
+H24:   true .
+H25:   fld_messageid(fld_header(output_packet)) >= 
+           dns_types__unsigned_short__first .
+H26:   fld_messageid(fld_header(output_packet)) <= 
+           dns_types__unsigned_short__last .
+H27:   dns_types__not_implemented >= dns_types__response_code__first .
+H28:   dns_types__not_implemented <= dns_types__response_code__last .
+H29:   0 >= dns_types__unsigned_short__first .
+H30:   0 <= dns_types__unsigned_short__last .
+H31:   input_bytes >= dns_types__packet_length_range__first .
+H32:   input_bytes <= dns_types__packet_length_range__last .
+        ->
+C1:    input_bytes = input_bytes .
+ 
+

@@ -1,0 +1,66 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+              {procedure Parser_Utilities.CheckAndAppendOrigin}
+
+
+title procedure checkandappendorigin;
+
+  function round__(real) : integer;
+  type character = integer;
+  type unsigned_types__unsigned32 = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const rr_type__maxdomainnamelength : integer = pending;
+  const rr_type__blankdomainname : string = pending;
+  const rr_type__domainnamestringtypeindex__base__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__last : integer = pending; 
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__size : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var target : string;
+  var origin : string;
+  var currentline : string;
+  var lastpos : integer;
+  var linecount : integer;
+  var success : boolean;
+  function rr_type__domainnamelength(string) : integer;
+  var success__2 : boolean;
+  var target__2 : string;
+
+end;

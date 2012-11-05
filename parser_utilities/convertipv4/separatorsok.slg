@@ -1,0 +1,139 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.convertIpv4.SeparatorsOK
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_separatorsok_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(line, [i___1]) and element(line, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, separatorindextype__first <= i___1 and 
+          i___1 <= separatorindextype__last -> rr_type__linelengthindex__first 
+          <= element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+-S-  Applied substitution rule separatorsok_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  element(sarray, [3]) >= - 2147483647
+<S>  New C7:  element(sarray, [2]) >= - 2147483647
+-S-  Applied substitution rule separatorsok_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  element(sarray, [3]) <= 2147483648
+<S>  New C8:  element(sarray, [2]) <= 2147483648
+-S-  Applied substitution rule separatorsok_rules(22).
+     This was achieved by replacing all occurrences of 
+          separatorindextype__first by:
+          1.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          separatorindextype__last -> rr_type__linelengthindex__first <= 
+          element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+<S>  New C3:  true
+<S>  New C5:  true
+<S>  New C9:  true
+<S>  New C11:  true
+<S>  New C15:  true
+<S>  New C19:  true
+<S>  New C23:  true
+-S-  Applied substitution rule separatorsok_rules(23).
+     This was achieved by replacing all occurrences of separatorindextype__last 
+          by:
+          4.
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 4 -> 
+          rr_type__linelengthindex__first <= element(sarray, [i___1]) and 
+          element(sarray, [i___1]) <= rr_type__linelengthindex__last)
+<S>  New C4:  true
+<S>  New C6:  true
+<S>  New C10:  true
+<S>  New C12:  true
+<S>  New C16:  true
+<S>  New C20:  true
+<S>  New C24:  true
+-S-  Applied substitution rule separatorsok_rules(17).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> character__first <= element(line, [
+          i___1]) and element(line, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 4 -> 1 <= 
+          element(sarray, [i___1]) and element(sarray, [i___1]) <= 
+          rr_type__linelengthindex__last)
+<S>  New C13:  element(sarray, [3]) >= 1
+<S>  New C17:  element(sarray, [2]) >= 1
+<S>  New C21:  element(sarray, [1]) >= 1
+-S-  Applied substitution rule separatorsok_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 
+          character__first <= element(line, [i___1]) and element(line, [i___1]) 
+          <= character__last)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 4 -> 1 <= 
+          element(sarray, [i___1]) and element(sarray, [i___1]) <= 256)
+<S>  New C14:  element(sarray, [3]) <= 256
+<S>  New C18:  element(sarray, [2]) <= 256
+<S>  New C22:  element(sarray, [1]) <= 256
+***  Proved C1:  element(sarray, [3]) >= - 2147483647
+     using hypothesis H3.
+***  Proved C7:  element(sarray, [2]) >= - 2147483647
+     using hypothesis H3.
+***  Proved C2:  element(sarray, [3]) <= 2147483648
+     using hypothesis H3.
+***  Proved C8:  element(sarray, [2]) <= 2147483648
+     using hypothesis H3.
+***  Proved C3:  true
+***  Proved C5:  true
+***  Proved C9:  true
+***  Proved C11:  true
+***  Proved C15:  true
+***  Proved C19:  true
+***  Proved C23:  true
+***  Proved C4:  true
+***  Proved C6:  true
+***  Proved C10:  true
+***  Proved C12:  true
+***  Proved C16:  true
+***  Proved C20:  true
+***  Proved C24:  true
+***  Proved C13:  element(sarray, [3]) >= 1
+     using hypothesis H3.
+***  Proved C17:  element(sarray, [2]) >= 1
+     using hypothesis H3.
+***  Proved C21:  element(sarray, [1]) >= 1
+     using hypothesis H3.
+***  Proved C14:  element(sarray, [3]) <= 256
+     using hypothesis H3.
+***  Proved C18:  element(sarray, [2]) <= 256
+     using hypothesis H3.
+***  Proved C22:  element(sarray, [1]) <= 256
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_2.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_separatorsok_3.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

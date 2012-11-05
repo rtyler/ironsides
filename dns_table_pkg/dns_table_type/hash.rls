@@ -1,0 +1,47 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                 /*function dns_table_pkg.DNS_Table_Type.hash*/
+
+
+rule_family hash_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+hash_rules(1): rr_type__numbuckets may_be_replaced_by 64.
+hash_rules(2): numcharsinhashfunction may_be_replaced_by 4.
+hash_rules(3): integer__size >= 0 may_be_deduced.
+hash_rules(4): integer__first may_be_replaced_by -2147483648.
+hash_rules(5): integer__last may_be_replaced_by 2147483647.
+hash_rules(6): integer__base__first may_be_replaced_by -2147483648.
+hash_rules(7): integer__base__last may_be_replaced_by 2147483647.
+hash_rules(8): character__size >= 0 may_be_deduced.
+hash_rules(9): character__first may_be_replaced_by 0.
+hash_rules(10): character__last may_be_replaced_by 255.
+hash_rules(11): character__base__first may_be_replaced_by 0.
+hash_rules(12): character__base__last may_be_replaced_by 255.
+hash_rules(13): natural__size >= 0 may_be_deduced.
+hash_rules(14): natural__first may_be_replaced_by 0.
+hash_rules(15): natural__last may_be_replaced_by 2147483647.
+hash_rules(16): natural__base__first may_be_replaced_by -2147483648.
+hash_rules(17): natural__base__last may_be_replaced_by 2147483647.
+hash_rules(18): positive__size >= 0 may_be_deduced.
+hash_rules(19): positive__first may_be_replaced_by 1.
+hash_rules(20): positive__last may_be_replaced_by 2147483647.
+hash_rules(21): positive__base__first may_be_replaced_by -2147483648.
+hash_rules(22): positive__base__last may_be_replaced_by 2147483647.
+hash_rules(23): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+hash_rules(24): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+hash_rules(25): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+hash_rules(26): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+hash_rules(27): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.
+hash_rules(28): rr_type__numbucketsindextype__size >= 0 may_be_deduced.
+hash_rules(29): rr_type__numbucketsindextype__first may_be_replaced_by 1.
+hash_rules(30): rr_type__numbucketsindextype__last may_be_replaced_by 64.
+hash_rules(31): rr_type__numbucketsindextype__base__first may_be_replaced_by -2147483648.
+hash_rules(32): rr_type__numbucketsindextype__base__last may_be_replaced_by 2147483647.

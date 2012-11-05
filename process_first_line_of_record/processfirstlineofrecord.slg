@@ -1,0 +1,2099 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure process_first_line_of_record.ProcessFirstLineOfRecord
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_1.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+-S-  Applied substitution rule processfirst_rules(86).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H7:  currentttl >= 0
+<S>  New H14:  linecount >= 0
+<S>  New C1:  true
+-S-  Applied substitution rule processfirst_rules(87).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H8:  currentttl <= 4294967295
+<S>  New H15:  linecount <= 4294967295
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_2.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_3.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  currentipv4__1 >= unsigned_types__unsigned32__first
+     using hypothesis H22.
+***  Proved C2:  currentipv4__1 <= unsigned_types__unsigned32__last
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_4.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H28 on reading formula in, to give:
+     %%%  H28:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  rr_type__classtype__first <= currentclass
+***  Proved C1:  currentipv4__1 >= unsigned_types__unsigned32__first
+     using hypothesis H22.
+***  Proved C2:  currentipv4__1 <= unsigned_types__unsigned32__last
+     using hypothesis H23.
+***  Proved C3:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C4:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C5:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C6:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_5.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_6.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(currentipv6__3, [i___1]) 
+          and element(currentipv6__3, [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_7.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_8.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__5, [i___1]) and element(
+          currentdomainname__5, [i___1]) <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_9.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__5, [i___1]) and element(
+          currentdomainname__5, [i___1]) <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__6, [i___1]) and element(
+          currentdomainname__6, [i___1]) <= character__last)
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H30).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_10.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__5, [i___1]) and element(
+          currentdomainname__5, [i___1]) <= character__last)
+%%%  Simplified H26 on reading formula in, to give:
+     %%%  H26:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_11.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_12.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__8, [i___1]) and element(
+          currentdomainname__8, [i___1]) <= character__last)
+***  Proved C1:  currentpref__8 >= unsigned_types__unsigned16__first
+     using hypothesis H22.
+***  Proved C2:  currentpref__8 <= unsigned_types__unsigned16__last
+     using hypothesis H23.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_13.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__8, [i___1]) and element(
+          currentdomainname__8, [i___1]) <= character__last)
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H24).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_14.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__8, [i___1]) and element(
+          currentdomainname__8, [i___1]) <= character__last)
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H34 on reading formula in, to give:
+     %%%  H34:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__9, [i___1]) and element(
+          currentdomainname__9, [i___1]) <= character__last)
+%%%  Simplified H37 on reading formula in, to give:
+     %%%  H37:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H34).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H40 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  rr_type__classtype__first <= currentclass
+***  Proved C1:  currentpref__8 >= unsigned_types__unsigned16__first
+     using hypothesis H22.
+***  Proved C2:  currentpref__8 <= unsigned_types__unsigned16__last
+     using hypothesis H23.
+***  Proved C3:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C4:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C5:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C6:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_15.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__8, [i___1]) and element(
+          currentdomainname__8, [i___1]) <= character__last)
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  rr_type__classtype__first <= currentclass
+***  Proved C1:  currentpref__8 >= unsigned_types__unsigned16__first
+     using hypothesis H22.
+***  Proved C2:  currentpref__8 <= unsigned_types__unsigned16__last
+     using hypothesis H23.
+***  Proved C3:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C4:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C5:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C6:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_16.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_17.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__11, [i___1]) and element(
+          currentdomainname__11, [i___1]) <= character__last)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_18.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__11, [i___1]) and element(
+          currentdomainname__11, [i___1]) <= character__last)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__13, [i___1]) and element(
+          currentdomainname__13, [i___1]) <= character__last)
+%%%  Simplified H35 on reading formula in, to give:
+     %%%  H35:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H32).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_19.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__11, [i___1]) and element(
+          currentdomainname__11, [i___1]) <= character__last)
+---  Hypothesis H24 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified H28 on reading formula in, to give:
+     %%%  H28:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_20.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_21.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__15, [i___1]) and element(
+          currentdomainname__15, [i___1]) <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_22.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__15, [i___1]) and element(
+          currentdomainname__15, [i___1]) <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H30 on reading formula in, to give:
+     %%%  H30:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__16, [i___1]) and element(
+          currentdomainname__16, [i___1]) <= character__last)
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H30).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_23.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__15, [i___1]) and element(
+          currentdomainname__15, [i___1]) <= character__last)
+%%%  Simplified H26 on reading formula in, to give:
+     %%%  H26:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_24.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  0 >= unsigned_types__unsigned32__first
+     using hypothesis H17.
+***  Proved C2:  0 <= unsigned_types__unsigned32__last
+     using hypothesis H18.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_25.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_26.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentnameserver__18, [i___1]) and element(
+          currentnameserver__18, [i___1]) <= character__last)
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentemail__18, [i___1]) and element(currentemail__18, [
+          i___1]) <= character__last)
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H24).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_27.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentnameserver__18, [i___1]) and element(
+          currentnameserver__18, [i___1]) <= character__last)
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentemail__18, [i___1]) and element(currentemail__18, [
+          i___1]) <= character__last)
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentnameserver__19, [i___1]) and element(
+          currentnameserver__19, [i___1]) <= character__last)
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H25).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_28.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentnameserver__18, [i___1]) and element(
+          currentnameserver__18, [i___1]) <= character__last)
+%%%  Simplified H25 on reading formula in, to give:
+     %%%  H25:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentemail__18, [i___1]) and element(currentemail__18, [
+          i___1]) <= character__last)
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H25).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_29.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  0 >= unsigned_types__unsigned32__first
+     using hypothesis H17.
+***  Proved C2:  0 <= unsigned_types__unsigned32__last
+     using hypothesis H18.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_30.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_31.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_32.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__23, [i___1]) and element(
+          currentdomainname__23, [i___1]) <= character__last)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(rrstring__23, [i___1]) and element(rrstring__23, [i___1]) 
+          <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+***  Proved C3:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C4:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_33.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__23, [i___1]) and element(
+          currentdomainname__23, [i___1]) <= character__last)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(rrstring__23, [i___1]) and element(rrstring__23, [i___1]) 
+          <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__25, [i___1]) and element(
+          currentdomainname__25, [i___1]) <= character__last)
+%%%  Simplified H36 on reading formula in, to give:
+     %%%  H36:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H33).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_34.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H2)
+          .
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentdomainname__23, [i___1]) and element(
+          currentdomainname__23, [i___1]) <= character__last)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(rrstring__23, [i___1]) and element(rrstring__23, [i___1]) 
+          <= character__last)
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H22).
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) and element(rr_type__convertdomainnametowire(
+          currentowner), [i___1]) <= character__last)
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__classtype__first <= currentclass
+***  Proved C1:  rr_type__classtype__first <= currentclass
+     using hypothesis H9.
+***  Proved C2:  currentclass <= rr_type__classtype__last
+     using hypothesis H10.
+***  Proved C3:  currentttl >= unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C4:  currentttl <= unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_35.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  0 >= unsigned_types__unsigned32__first
+     using hypothesis H17.
+***  Proved C2:  0 <= unsigned_types__unsigned32__last
+     using hypothesis H18.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_36.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as 
+          H18).
+***  Proved C1:  lastpos >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C2:  lastpos <= rr_type__linelengthindex__last
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_37.  @@@@@@@@@@
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  dns_types__query_type__first <= currentrecordtype
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  rr_type__classtype__first <= currentclass
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  linecount >= unsigned_types__unsigned32__first
+     using hypothesis H14.
+***  Proved C2:  linecount <= unsigned_types__unsigned32__last
+     using hypothesis H15.
+-S-  Applied substitution rule processfirst_rules(12).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C3:  lastpos >= 0
+-S-  Applied substitution rule processfirst_rules(13).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C4:  lastpos <= 2147483647
+***  Proved C3:  lastpos >= 0
+     using hypothesis H1.
+>>>  Restructured hypothesis H19 into:
+     >>>  H19:  currentrecordtype <> dns_types__a
+>>>  Restructured hypothesis H20 into:
+     >>>  H20:  currentrecordtype <> dns_types__aaaa
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  currentrecordtype <> dns_types__cname
+>>>  Restructured hypothesis H22 into:
+     >>>  H22:  currentrecordtype <> dns_types__mx
+>>>  Restructured hypothesis H23 into:
+     >>>  H23:  currentrecordtype <> dns_types__ns
+>>>  Restructured hypothesis H24 into:
+     >>>  H24:  currentrecordtype <> dns_types__ptr
+>>>  Restructured hypothesis H25 into:
+     >>>  H25:  currentrecordtype <> dns_types__soa
+>>>  Restructured hypothesis H26 into:
+     >>>  H26:  currentrecordtype <> dns_types__dnskey
+>>>  Restructured hypothesis H27 into:
+     >>>  H27:  currentrecordtype <> dns_types__nsec
+>>>  Restructured hypothesis H28 into:
+     >>>  H28:  currentrecordtype <> dns_types__rrsig
+-S-  Applied substitution rule processfirst_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentorigin, [i___1]) and element(currentorigin, [i___1]) <= 
+          character__last)
+<S>  New H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          character__last)
+<S>  New H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule processfirst_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H5:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentorigin, [i___1]) and element(currentorigin, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentowner, [i___1]) and element(currentowner, [i___1]) <= 255)
+<S>  New H11:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          currentline, [i___1]) and element(currentline, [i___1]) <= 255)
+-S-  Applied substitution rule processfirst_rules(23).
+     This was achieved by replacing all occurrences of 
+          dns_types__query_type__first by:
+          dns_types__a.
+<S>  New H3:  dns_types__a <= currentrecordtype
+-S-  Applied substitution rule processfirst_rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__query_type__last by:
+          dns_types__unimplemented.
+<S>  New H4:  currentrecordtype <= dns_types__unimplemented
+-S-  Applied substitution rule processfirst_rules(86).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H7:  currentttl >= 0
+<S>  New H14:  linecount >= 0
+<S>  New H17:  true
+-S-  Applied substitution rule processfirst_rules(87).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H8:  currentttl <= 4294967295
+<S>  New H15:  linecount <= 4294967295
+<S>  New H18:  true
+-S-  Applied substitution rule processfirst_rules(92).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H9:  rr_type__internet <= currentclass
+-S-  Applied substitution rule processfirst_rules(93).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H10:  currentclass <= rr_type__hs
+-S-  Applied substitution rule processfirst_rules(119).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H12:  lastpos >= 1
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(currentline, [i___1]) 
+          and element(currentline, [i___1]) <= 255)
+-S-  Applied substitution rule processfirst_rules(120).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H2:  lastpos <= 256
+<S>  New H11:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(currentline, [i___1]) and element(currentline, [i___1]) <= 
+          255)
+-S-  Applied substitution rule processfirst_rules(124).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentorigin, [i___1]) and element(currentorigin, [i___1]) <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(
+          currentowner, [i___1]) and element(currentowner, [i___1]) <= 255)
+-S-  Applied substitution rule processfirst_rules(125).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(currentorigin, [i___1]) and element(currentorigin, [i___1]) 
+          <= 255)
+<S>  New H6:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(currentowner, [i___1]) and element(currentowner, [i___1]) <= 
+          255)
+%%%  Hypotheses H3 & H19 together imply that
+          dns_types__a < currentrecordtype.
+     H3 & H19 have therefore been deleted and a new H29 added to this effect.
+***  Proved C4:  lastpos <= 2147483647
+     using hypothesis H2.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_38.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_39.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_40.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_41.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_42.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_43.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_44.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_45.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_46.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_47.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_48.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_49.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_50.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_51.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_52.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_53.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_54.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_55.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_56.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_57.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_58.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_59.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_60.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_61.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_62.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_63.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_64.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_65.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_66.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_67.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_processfirstlineofrecord_68.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

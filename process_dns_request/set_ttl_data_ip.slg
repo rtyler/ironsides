@@ -1,0 +1,312 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_IP
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_ip_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  rr_type__classtype__first <= fld_class(fld_inherit(a_record))
+***  Proved C1:  fld_ttlinseconds(fld_inherit(a_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H9.
+***  Proved C2:  fld_ttlinseconds(fld_inherit(a_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H10.
+***  Proved C3:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C4:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H4.
+***  Proved C5:  start_byte <= dns_types__packet_bytes_range__last - 3
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_ip_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  rr_type__classtype__first <= fld_class(fld_inherit(a_record))
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+***  Proved C3:  start_byte + 4 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C4:  start_byte + 4 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+-S-  Applied substitution rule set_ttl_data_rules(14).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule set_ttl_data_rules(15).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New C2:  true
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C6:  start_byte >= - 2147483652
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C7:  start_byte <= 2147483643
+***  Proved C1:  true
+***  Proved C2:  true
+-S-  Applied substitution rule set_ttl_data_rules(2).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H3:  start_byte >= 1
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(3).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8170
+<S>  New H4:  start_byte <= 8180
+<S>  New H15:  start_byte <= 8177
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New C5:  start_byte <= 8175
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(9).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  fld_ipv4(a_record) >= 0
+<S>  New H9:  fld_ttlinseconds(fld_inherit(a_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(21).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  fld_ipv4(a_record) <= 4294967295
+<S>  New H10:  fld_ttlinseconds(fld_inherit(a_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(26).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H7:  rr_type__internet <= fld_class(fld_inherit(a_record))
+-S-  Applied substitution rule set_ttl_data_rules(27).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H8:  fld_class(fld_inherit(a_record)) <= rr_type__hs
+***  Proved C6:  start_byte >= - 2147483652
+     using hypothesis H3.
+***  Proved C7:  start_byte <= 2147483643
+     using hypothesis H1.
+***  Proved C5:  start_byte <= 8175
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_ip_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  rr_type__classtype__first <= fld_class(fld_inherit(a_record))
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H16 on reading formula in, to give:
+     %%%  H16:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+%%%  Simplified H24 on reading formula in, to give:
+     %%%  H24:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+***  Proved C1:  fld_ipv4(a_record) >= unsigned_types__unsigned32__first
+     using hypothesis H5.
+***  Proved C2:  fld_ipv4(a_record) <= unsigned_types__unsigned32__last
+     using hypothesis H6.
+***  Proved C3:  start_byte + 6 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C4:  start_byte + 6 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+***  Proved C6:  start_byte + 6 >= dns_types__packet_bytes_range__base__first
+     using hypothesis H22.
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H23:  start_byte <= 2147483643
+<S>  New C7:  start_byte <= 2147483641
+-S-  Applied substitution rule set_ttl_data_rules(2).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H3:  start_byte >= 1
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H19:  start_byte >= - 3
+<S>  New H24:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(3).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8170
+<S>  New H4:  start_byte <= 8180
+<S>  New H15:  start_byte <= 8177
+<S>  New H20:  start_byte <= 8176
+<S>  New H21:  start_byte <= 8175
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New H24:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+<S>  New C5:  start_byte <= 8171
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H22:  start_byte >= - 2147483652
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H24:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(9).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H16:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+<S>  New H24:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(14).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H17:  true
+-S-  Applied substitution rule set_ttl_data_rules(15).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H18:  true
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H5:  fld_ipv4(a_record) >= 0
+<S>  New H9:  fld_ttlinseconds(fld_inherit(a_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(21).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H6:  fld_ipv4(a_record) <= 4294967295
+<S>  New H10:  fld_ttlinseconds(fld_inherit(a_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(26).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H7:  rr_type__internet <= fld_class(fld_inherit(a_record))
+-S-  Applied substitution rule set_ttl_data_rules(27).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H8:  fld_class(fld_inherit(a_record)) <= rr_type__hs
+***  Proved C7:  start_byte <= 2147483641
+     using hypothesis H1.
+***  Proved C5:  start_byte <= 8171
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_ip_4.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

@@ -1,0 +1,65 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Spark_Dns_Main
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_spark_dns_main_1.  @@@@@@@@@@
+-S-  Applied substitution rule spark_dns_ma_rules(8).
+     This was achieved by replacing all occurrences of natural__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule spark_dns_ma_rules(9).
+     This was achieved by replacing all occurrences of natural__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_spark_dns_main_2.  @@@@@@@@@@
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  not success__2
+-S-  Applied substitution rule spark_dns_ma_rules(1).
+     This was achieved by replacing all occurrences of 
+          spark_ada_command_line__failure by:
+          1.
+<S>  New C1:  1 >= spark_ada_command_line__exit_status__first
+<S>  New C2:  1 <= spark_ada_command_line__exit_status__last
+-S-  Applied substitution rule spark_dns_ma_rules(13).
+     This was achieved by replacing all occurrences of 
+          spark_ada_command_line__exit_status__first by:
+          - 2147483648.
+<S>  New C1:  true
+-S-  Applied substitution rule spark_dns_ma_rules(14).
+     This was achieved by replacing all occurrences of 
+          spark_ada_command_line__exit_status__last by:
+          2147483647.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_spark_dns_main_3.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_spark_dns_main_4.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

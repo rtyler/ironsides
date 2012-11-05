@@ -1,0 +1,128 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseSerialNumber
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 570:
+
+procedure_parseserialnumber_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          572:
+
+procedure_parseserialnumber_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 572:
+
+procedure_parseserialnumber_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 578:
+
+procedure_parseserialnumber_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 579:
+
+procedure_parseserialnumber_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 579:
+
+procedure_parseserialnumber_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 580:
+
+procedure_parseserialnumber_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 580 to assertion of line 580:
+
+procedure_parseserialnumber_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 580 to run-time check associated with 
+          statement of line 581:
+
+procedure_parseserialnumber_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 580 to run-time check associated with 
+          statement of line 582:
+
+procedure_parseserialnumber_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 590:
+
+procedure_parseserialnumber_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 580 to run-time check associated with 
+          statement of line 590:
+
+procedure_parseserialnumber_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parseserialnumber_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 580 to finish:
+
+procedure_parseserialnumber_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseserialnumber_20.
+*** true .          /* all conclusions proved */
+
+

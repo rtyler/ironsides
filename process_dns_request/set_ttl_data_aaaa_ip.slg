@@ -1,0 +1,629 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_AAAA_IP
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+***  Proved C1:  fld_ttlinseconds(fld_inherit(aaaa_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H8.
+***  Proved C2:  fld_ttlinseconds(fld_inherit(aaaa_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H9.
+***  Proved C3:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C4:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H4.
+***  Proved C5:  start_byte <= dns_types__packet_bytes_range__last - 3
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+***  Proved C3:  start_byte + 4 >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C4:  start_byte + 4 <= dns_types__packet_bytes_range__last
+     using hypothesis H1.
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H5:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= unsigned_types__unsigned16__last)
+<S>  New C1:  true
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H5:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= 65535)
+<S>  New C2:  true
+-S-  Applied substitution rule set_ttl_data_rules(9).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C6:  start_byte >= - 2147483652
+-S-  Applied substitution rule set_ttl_data_rules(10).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C7:  start_byte <= 2147483643
+***  Proved C1:  true
+***  Proved C2:  true
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H3:  start_byte >= 1
+<S>  New H15:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8158
+<S>  New H4:  start_byte <= 8180
+<S>  New H14:  start_byte <= 8177
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H15:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New C5:  start_byte <= 8175
+-S-  Applied substitution rule set_ttl_data_rules(13).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H15:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(14).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H15:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H8:  fld_ttlinseconds(fld_inherit(aaaa_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H9:  fld_ttlinseconds(fld_inherit(aaaa_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H6:  rr_type__internet <= fld_class(fld_inherit(aaaa_record))
+-S-  Applied substitution rule set_ttl_data_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H7:  fld_class(fld_inherit(aaaa_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first by:
+          1.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= element(
+          fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(aaaa_record), [
+          i___1]) <= 65535)
+-S-  Applied substitution rule set_ttl_data_rules(61).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last by:
+          8.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= 65535)
+***  Proved C6:  start_byte >= - 2147483652
+     using hypothesis H3.
+***  Proved C7:  start_byte <= 2147483643
+     using hypothesis H1.
+***  Proved C5:  start_byte <= 8175
+     using hypothesis H1.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H15 on reading formula in, to give:
+     %%%  H15:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+%%%  Simplified C12 on reading formula in, to give:
+     %%%  C12:  true
+***  Proved C1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+     using hypothesis H23.
+***  Proved C2:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H3.
+***  Proved C3:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H4.
+***  Proved C4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+     using hypothesis H5.
+***  Proved C5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record)
+          )
+     using hypothesis H6.
+***  Proved C6:  fld_class(fld_inherit(aaaa_record)) <= rr_type__classtype__last
+     using hypothesis H7.
+***  Proved C7:  fld_ttlinseconds(fld_inherit(aaaa_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H8.
+***  Proved C8:  fld_ttlinseconds(fld_inherit(aaaa_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H9.
+***  Proved C9:  start_byte <= dns_types__packet_bytes_range__last - 22
+     using hypothesis H1.
+***  Proved C10:  true
+***  Proved C12:  true
+-S-  Applied substitution rule set_ttl_data_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first by:
+          1.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+<S>  New C11:  1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last
+<S>  New C13:  1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last
+-S-  Applied substitution rule set_ttl_data_rules(61).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last by:
+          8.
+<S>  New H5:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+<S>  New C11:  true
+<S>  New C13:  true
+***  Proved C11:  true
+***  Proved C13:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_4.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified H31 on reading formula in, to give:
+     %%%  H31:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified C5 on reading formula in, to give:
+     %%%  C5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+***  Proved C1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+     using hypothesis H31.
+***  Proved C2:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H2.
+***  Proved C3:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H3.
+***  Proved C4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+     using hypothesis H4.
+***  Proved C5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record)
+          )
+     using hypothesis H5.
+***  Proved C6:  fld_class(fld_inherit(aaaa_record)) <= rr_type__classtype__last
+     using hypothesis H6.
+***  Proved C7:  fld_ttlinseconds(fld_inherit(aaaa_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H7.
+***  Proved C8:  fld_ttlinseconds(fld_inherit(aaaa_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H8.
+***  Proved C9:  start_byte <= dns_types__packet_bytes_range__last - 22
+     using hypothesis H9.
+***  Proved C10:  loop__1__i + 1 >= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first
+     using hypothesis H10.
+***  Proved C12:  loop__1__i + 1 >= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first
+     using hypothesis H10.
+-S-  Applied substitution rule set_ttl_data_rules(61).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last by:
+          8.
+<S>  New H4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= 8 -> unsigned_types__unsigned16__first <= element(fld_ipv6(
+          aaaa_record), [i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+<S>  New H11:  loop__1__i <= 8
+<S>  New H32:  not loop__1__i = 8
+<S>  New C11:  loop__1__i <= 7
+<S>  New C13:  loop__1__i <= 7
+***  Proved C11:  loop__1__i <= 7
+     using hypotheses H11 & H32.
+***  Proved C13:  loop__1__i <= 7
+     using hypotheses H11 & H32.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_5.  @@@@@@@@@@
+%%%  Simplified H1 on reading formula in, to give:
+     %%%  H1:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 
+          unsigned_types__unsigned16__first <= element(fld_ipv6(aaaa_record), [
+          i___1]) and element(fld_ipv6(aaaa_record), [i___1]) <= 
+          unsigned_types__unsigned16__last)
+%%%  Simplified H5 on reading formula in, to give:
+     %%%  H5:  rr_type__classtype__first <= fld_class(fld_inherit(aaaa_record))
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  element(fld_ipv6(aaaa_record), [loop__1__i]) >= 
+          unsigned_types__unsigned16__first
+     using hypotheses H4, H10 & H11.
+***  Proved C2:  element(fld_ipv6(aaaa_record), [loop__1__i]) <= 
+          unsigned_types__unsigned16__last
+     using hypotheses H4, H10 & H11.
+***  Proved C6:  loop__1__i >= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first
+     using hypothesis H10.
+***  Proved C7:  loop__1__i <= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last
+     using hypothesis H11.
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H1:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H2:  start_byte >= 1
+<S>  New C3:  start_byte + (6 + 2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first)) >= 1
+<S>  New C10:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) >= - 5
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8180
+<S>  New H9:  start_byte <= 8158
+<S>  New H1:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New C4:  start_byte + (6 + 2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first)) <= 8180
+<S>  New C5:  start_byte + (6 + 2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first)) <= 8179
+<S>  New C11:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) <= 8174
+-S-  Applied substitution rule set_ttl_data_rules(9).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C8:  start_byte + (6 + 2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first)) >= - 2147483648
+-S-  Applied substitution rule set_ttl_data_rules(10).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C9:  start_byte + (6 + 2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first)) <= 2147483647
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C12:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) >= - 2147483654
+<S>  New C14:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) >= - 2147483648
+<S>  New C16:  loop__1__i - rr_type__aaaa_record_type__ipv6addrtypeindex__first 
+          >= - 2147483648
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C13:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) <= 2147483641
+<S>  New C15:  2 * (loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first) <= 2147483647
+<S>  New C17:  loop__1__i - rr_type__aaaa_record_type__ipv6addrtypeindex__first 
+          <= 2147483647
+***  Proved C16:  loop__1__i - 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first >= - 2147483648
+     using hypothesis H10.
+-S-  Applied substitution rule set_ttl_data_rules(13).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H1:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(14).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H1:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= unsigned_types__unsigned16__last)
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H4:  for_all(i___1 : integer, 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first <= i___1 and 
+          i___1 <= rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= 65535)
+-S-  Applied substitution rule set_ttl_data_rules(25).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H7:  fld_ttlinseconds(fld_inherit(aaaa_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(26).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H8:  fld_ttlinseconds(fld_inherit(aaaa_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(31).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H5:  rr_type__internet <= fld_class(fld_inherit(aaaa_record))
+-S-  Applied substitution rule set_ttl_data_rules(32).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H6:  fld_class(fld_inherit(aaaa_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(60).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__first by:
+          1.
+<S>  New H10:  loop__1__i >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last -> 0 <= element(
+          fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(aaaa_record), [
+          i___1]) <= 65535)
+<S>  New C3:  start_byte + (6 + 2 * (loop__1__i - 1)) >= 1
+<S>  New C10:  2 * (loop__1__i - 1) >= - 5
+<S>  New C4:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 8180
+<S>  New C5:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 8179
+<S>  New C11:  2 * (loop__1__i - 1) <= 8174
+<S>  New C8:  start_byte + (6 + 2 * (loop__1__i - 1)) >= - 2147483648
+<S>  New C9:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 2147483647
+<S>  New C12:  2 * (loop__1__i - 1) >= - 2147483654
+<S>  New C14:  2 * (loop__1__i - 1) >= - 2147483648
+<S>  New C13:  2 * (loop__1__i - 1) <= 2147483641
+<S>  New C15:  2 * (loop__1__i - 1) <= 2147483647
+<S>  New C17:  loop__1__i <= 2147483648
+-S-  Applied substitution rule set_ttl_data_rules(61).
+     This was achieved by replacing all occurrences of 
+          rr_type__aaaa_record_type__ipv6addrtypeindex__last by:
+          8.
+<S>  New H11:  loop__1__i <= 8
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8 -> 0 <= 
+          element(fld_ipv6(aaaa_record), [i___1]) and element(fld_ipv6(
+          aaaa_record), [i___1]) <= 65535)
+***  Proved C3:  start_byte + (6 + 2 * (loop__1__i - 1)) >= 1
+     via its standard form, which is:
+     Std.Fm C3:  4 + (2 * loop__1__i + start_byte) >= 1
+     using hypotheses H2 & H10.
+***  Proved C10:  2 * (loop__1__i - 1) >= - 5
+     via its standard form, which is:
+     Std.Fm C10:  2 * loop__1__i > - 4
+     using hypothesis H10.
+***  Proved C4:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 8180
+     via its standard form, which is:
+     Std.Fm C4:  4 + (2 * loop__1__i + start_byte) <= 8180
+     using hypotheses H9 & H11.
+***  Proved C5:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 8179
+     via its standard form, which is:
+     Std.Fm C5:  4 + (2 * loop__1__i + start_byte) <= 8179
+     using hypotheses H9 & H11.
+***  Proved C11:  2 * (loop__1__i - 1) <= 8174
+     via its standard form, which is:
+     Std.Fm C11:  - 2 + 2 * loop__1__i <= 8174
+     using hypothesis H11.
+***  Proved C8:  start_byte + (6 + 2 * (loop__1__i - 1)) >= - 2147483648
+     via its standard form, which is:
+     Std.Fm C8:  4 + (2 * loop__1__i + start_byte) >= - 2147483648
+     using hypotheses H2 & H10.
+***  Proved C9:  start_byte + (6 + 2 * (loop__1__i - 1)) <= 2147483647
+     via its standard form, which is:
+     Std.Fm C9:  4 + (2 * loop__1__i + start_byte) <= 2147483647
+     using hypotheses H3 & H11.
+***  Proved C12:  2 * (loop__1__i - 1) >= - 2147483654
+     via its standard form, which is:
+     Std.Fm C12:  2 * loop__1__i > - 2147483653
+     using hypothesis H10.
+***  Proved C14:  2 * (loop__1__i - 1) >= - 2147483648
+     via its standard form, which is:
+     Std.Fm C14:  2 * loop__1__i > - 2147483647
+     using hypothesis H10.
+***  Proved C13:  2 * (loop__1__i - 1) <= 2147483641
+     via its standard form, which is:
+     Std.Fm C13:  - 2 + 2 * loop__1__i <= 2147483641
+     using hypothesis H11.
+***  Proved C15:  2 * (loop__1__i - 1) <= 2147483647
+     via its standard form, which is:
+     Std.Fm C15:  - 2 + 2 * loop__1__i <= 2147483647
+     using hypothesis H11.
+***  Proved C17:  loop__1__i <= 2147483648
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_aaaa_ip_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

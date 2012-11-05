@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.insertCNAMERecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 460:
+
+procedure_insertcnamerecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 464:
+
+procedure_insertcnamerecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 464 to assertion of line 464:
+
+procedure_insertcnamerecord_3.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_insertcnamerecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 464 to run-time check associated with 
+          statement of line 465:
+
+procedure_insertcnamerecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 464 to run-time check associated with 
+          statement of line 466:
+
+procedure_insertcnamerecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 464 to run-time check associated with 
+          statement of line 467:
+
+procedure_insertcnamerecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 464 to finish:
+
+procedure_insertcnamerecord_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertcnamerecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertcnamerecord_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertcnamerecord_11.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_insertcnamerecord_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_insertcnamerecord_13.
+*** true .          /* all conclusions proved */
+
+

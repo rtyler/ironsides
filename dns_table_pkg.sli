@@ -1,0 +1,247 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Dns_Table_Pkg%b dns_table_pkg.adb
+U Dns_Table_Pkg%s dns_table_pkg.ads
+W DNS_Types%s dns_types.adb dns_types.sli
+W Rr_Type.Soa_Record_Type%s rr_type-soa_record_type.ads rr_type-soa_record_type.sli
+W Rr_Type.Rrsig_Record_Type%s rr_type-rrsig_record_type.ads rr_type-rrsig_record_type.sli
+W Rr_Type.Ptr_Record_Type%s rr_type-ptr_record_type.ads rr_type-ptr_record_type.sli
+W Rr_Type.Nsec_Record_Type%s rr_type-nsec_record_type.ads rr_type-nsec_record_type.sli
+W Rr_Type.Ns_Record_Type%s rr_type-ns_record_type.ads rr_type-ns_record_type.sli
+W Rr_Type.Mx_Record_Type%s rr_type-mx_record_type.ads rr_type-mx_record_type.sli
+W Rr_Type.Dnskey_Record_Type%s rr_type-dnskey_record_type.ads rr_type-dnskey_record_type.sli
+W Rr_Type.Cname_Record_Type%s rr_type-cname_record_type.ads rr_type-cname_record_type.sli
+W RR_Type.Aaaa_Record_Type%s rr_type-aaaa_record_type.ads rr_type-aaaa_record_type.sli
+W Rr_Type.A_Record_Type%s rr_type-a_record_type.ads rr_type-a_record_type.sli
+W Rr_Type%s rr_type.ads rr_type.sli
+W Unsigned_Types%s Unsigned_Types.ads Unsigned_Types.sli
+W Ada.Characters.Handling%s ada-characters-handling.shs ada-characters-handling.sli
+
+D dns_types.ads 00000000000000 00000000
+D dns_table_pkg.adb 00000000000000 00000000
+D dns_table_pkg.ads 00000000000000 00000000
+D rr_type-soa_record_type.ads 00000000000000 00000000
+D rr_type-rrsig_record_type.ads 00000000000000 00000000
+D rr_type-ptr_record_type.ads 00000000000000 00000000
+D rr_type-nsec_record_type.ads 00000000000000 00000000
+D rr_type-ns_record_type.ads 00000000000000 00000000
+D rr_type-mx_record_type.ads 00000000000000 00000000
+D rr_type-dnskey_record_type.ads 00000000000000 00000000
+D rr_type-cname_record_type.ads 00000000000000 00000000
+D rr_type-aaaa_record_type.ads 00000000000000 00000000
+D rr_type-a_record_type.ads 00000000000000 00000000
+D rr_type.ads 00000000000000 00000000
+D Unsigned_Types.ads 00000000000000 00000000
+D ada-characters-handling.shs 00000000000000 00000000
+
+X 1 dns_types.ads
+21K9 DNS_Types 3|40w62 5|22w37
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34
+X 2 dns_table_pkg.adb
+55a18 domainName 65r38 66r38
+60i7 val 63r21
+62H11 i 63r29
+64i29 Q 65r49 66r49
+81i7 Bucket 93r56 93r72
+92H11 ctr 93r48
+114i7 bucket 126r56 126r72
+125H11 ctr 126r48
+147i7 Bucket 159r56 159r72
+158H11 ctr 159r48
+178i7 Bucket 190r56 190r72
+189H11 ctr 190r48
+210i7 Bucket 222r56 222r72
+221H11 ctr 222r48
+242i7 Bucket 254r56 254r72
+253H11 ctr 254r48
+274i7 Bucket 282r56 282r72
+281H11 ctr 282r48
+303i7 Bucket 316r21 316r37
+314H11 ctr 315r48
+335i7 Bucket 347r56 347r72
+346H11 ctr 347r48
+367i7 Bucket 380r21 380r37
+378H11 ctr 379r48
+646a7 ReturnedSOARecords 651r28 673r28
+X 3 dns_table_pkg.ads
+50W16 DNS_Table_Type 47r31
+50w16 Dns_Table_Type 58m16 65m16 72m16 79m16 86m16 93m16 100m16 107m16 114m16
+. 121m16 57r22 59r29 64r22 66r29 71r22 73r29 78r22 80r29 85r22 87r29
+. 92r22 94r29 99r22 101r29 106r22 108r29 113r22 115r29 120r22 122r29 128r18
+. 129r37 130r29 136r18 137r37 138r29 144r18 145r37 146r29 152r18 153r47 159r18
+. 160r37 161r29 167r18 168r37 169r29 175r18 176r37 177r29 183r18 184r37 185r29
+. 191r18 192r47 198r18 199r37 200r29
+54U14 insertARecord 57=22 2|396=22 396=36
+54a28 Key 58r50 59r45 2|397r61 398r36 399r42
+55r28 theRecord 58r39 2|397r50
+56e28 success 59m16 2|399m16
+61U14 insertAAAARecord 64=22 2|423=22 423=39
+61a31 Key 65r50 66r45 2|424r67 425r39 426r45
+62r28 theRecord 65r39 2|424r56
+63e28 success 66m16 2|426m16
+68U14 insertCNAMERecord 71=22 2|450=22 450=40
+68a32 Key 72r50 73r45 2|451r69 452r40 453r46
+69r28 theRecord 72r39 2|451r58
+70e28 success 73m16 2|453m16
+75U14 InsertDNSKEYRecord 78=22 2|477=22 477=41
+75a33 Key 79r50 80r45 2|478r71 479r41 480r47
+76r27 theRecord 79r39 2|478r60
+77e27 success 80m16 2|480m16
+82U14 insertMXRecord 85=22 2|505=22 505=37
+82a29 Key 86r50 87r45 2|506r63 507r37 508r43
+83r28 theRecord 86r39 2|506r52
+84e28 success 87m16 2|508m16
+89U14 insertNSRecord 92=22 2|532=22 532=37
+89a29 Key 93r50 94r45 2|533r63 534r37 535r43
+90r28 theRecord 93r39 2|533r52
+91e28 success 94m16 2|535m16
+96U14 insertNSECRecord 99=22 2|559=22 559=39
+96a31 Key 100r50 101r45 2|560r67 561r39 562r45
+97r28 theRecord 100r39 2|560r56
+98e28 success 101m16 2|562m16
+103U14 insertPTRRecord 106=22 2|586=22 586=38
+103a30 Key 107r50 108r45 2|587r65 588r38 589r44
+104r28 theRecord 107r39 2|587r54
+105e28 success 108m16 2|589m16
+110U14 InsertRRSIGRecord 113=22 2|613=22 613=40
+110a32 Key 114r50 115r45 2|614r69 615r40 616r46
+111r27 theRecord 114r39 2|614r58
+112e27 success 115m16 2|616m16
+117U14 InsertSOARecord 120=22 2|640=22 640=38
+117a30 Key 121r50 122r45 2|641r65 642r38 643r44
+118r28 theRecord 121r39 2|641r54
+119e28 success 122m16 2|643m16
+124U14 queryARecords 128>18 2|77>18 77>32
+125a5 domainName 129r53 130r45 2|78r42 79r64
+126a9 returnedRecords 129m16 2|79m16 98r34 103r29 103r46
+127i9 howMany 130m16 2|78m16 93r21 93r38
+132U14 queryAAAARecords 136>18 2|110>18 110>35
+133a5 domainName 137r53 138r45 2|111r45 112r70
+134a9 returnedRecords 137m16 2|112m16 131r34 136r29 136r46
+135i9 howMany 138m16 2|111m16 126r21 126r38
+140U14 queryCNAMERecords 144>18 2|143>18 143>36
+141a7 domainName 145r53 146r45 2|144r46 145r72
+142a7 returnedRecords 145m16 2|145m16 163r34 168r29 168r46
+143i7 howMany 146m16 2|144m16 159r21 159r38
+148U14 queryDNSKEYRecords 152>18 2|174>18 174>37
+149a7 domainName 153r63 2|175r47 176r74
+150a7 returnedRecords 153m17 2|176m16 194r34 199r29 199r46
+151i7 HowMany 153m34 2|175m16 190r21 190r38
+155U14 queryMXRecords 159>18 2|206>18 206>33
+156a7 domainName 160r53 161r45 2|207r43 208r66
+157a7 returnedRecords 160m16 2|208m16 226r34 231r29 231r46
+158i7 howMany 161m16 2|207m16 222r21 222r38
+163U14 queryNSRecords 167>18 2|238>18 238>33
+164a7 domainName 168r53 169r45 2|239r43 240r66
+165a7 returnedRecords 168m16 2|240m16 258r34 263r29 263r46
+166i7 howMany 169m16 2|239m16 254r21 254r38
+171U14 queryNSECRecords 175>18 2|270>18 270>35
+172a7 domainName 176r53 177r45 2|271r45 272r70
+173a7 returnedRecords 176m16 2|272m16 286r34 291r29 291r46
+174i7 howMany 177m16 2|271m16 282r21 282r38
+179U14 queryPTRRecords 183>18 2|299>18 299>34
+180a7 domainName 184r53 185r45 2|300r44 301r68
+181a7 returnedRecords 184m16 2|301m16 320r34 325r29 325r46
+182i7 howMany 185m16 2|300m16 315r21 315r38
+187U14 queryRRSIGRecords 191>18 2|331>18 331>36
+188a7 domainName 192r63 2|332r46 333r72
+189a7 returnedRecords 192m17 2|333m16 351r34 356r29 356r46
+190i7 HowMany 192m34 2|332m16 347r21 347r38
+194U14 querySOARecords 198>18 2|363>18 363>34
+195a7 domainName 199r53 200r45 2|364r44 365r68
+196a7 returnedRecords 199m16 2|365m16 384r34 389r29 389r46
+197i7 howMany 200m16 2|364m16 379r21 379r38
+204a7 ARecordKeys 2|398m16 77r32 78r29 79r37 396r36 397r37 399r29
+207a7 ARecordTable 2|397m16 77r18 79r50 396r22
+210a7 AAAARecordKeys 2|425m16 110r35 111r29 112r37 423r39 424r40 426r29
+213a7 AAAARecordTable 2|424m16 110r18 112r53 423r22
+216a7 CNAMERecordKeys 2|452m16 143r36 144r29 145r37 450r40 451r41 453r29
+219a7 CNAMERecordTable 2|451m16 143r18 145r54 450r22
+222a7 DNSKEYRecordKeys 2|479m16 174r37 175r29 176r37 477r41 478r42 480r29
+225a7 DNSKEYRecordTable 2|478m16 174r18 176r55 477r22
+228a7 MXRecordKeys 2|507m16 206r33 207r29 208r37 505r37 506r38 508r29
+231a7 MXRecordTable 2|506m16 206r18 208r51 505r22
+234a7 NSRecordKeys 2|534m16 238r33 239r29 240r37 532r37 533r38 535r29
+237a7 NSRecordTable 2|533m16 238r18 240r51 532r22
+240a7 NSECRecordKeys 2|561m16 270r35 271r29 272r37 559r39 560r40 562r29
+243a7 NSECRecordTable 2|560m16 270r18 272r53 559r22
+246a7 PTRRecordKeys 2|588m16 299r34 300r29 301r37 586r38 587r39 589r29
+249a7 PTRRecordTable 2|587m16 299r18 301r52 586r22
+252a7 RRSIGRecordKeys 2|615m16 331r36 332r29 333r37 613r40 614r41 616r29
+255a7 RRSIGRecordTable 2|614m16 331r18 333r54 613r22
+258a7 SOARecordKeys 2|642m16 363r34 364r29 365r37 640r38 641r39 643r29
+261a7 SOARecordTable 2|641m16 363r18 365r52 640r22
+267w1 DNS_Table 47o19
+X 4 rr_type-soa_record_type.ads
+21K9 Soa_Record_Type 3|43w43
+X 5 rr_type-rrsig_record_type.ads
+23K9 Rrsig_Record_Type 3|43w16
+X 6 rr_type-ptr_record_type.ads
+19K9 Ptr_Record_Type 3|42w66
+X 7 rr_type-nsec_record_type.ads
+19K9 Nsec_Record_Type 3|42w40
+X 8 rr_type-ns_record_type.ads
+19K9 Ns_Record_Type 3|42w16
+X 9 rr_type-mx_record_type.ads
+21K9 Mx_Record_Type 3|41w71
+X 10 rr_type-dnskey_record_type.ads
+22K9 Dnskey_Record_Type 3|41w43
+X 11 rr_type-cname_record_type.ads
+19K9 Cname_Record_Type 3|41w16
+X 12 rr_type-aaaa_record_type.ads
+20K9 Aaaa_Record_Type 3|40w113
+X 13 rr_type-a_record_type.ads
+20K9 A_Record_Type 3|40w90
+X 14 rr_type.ads
+20K9 Rr_Type 2|93r82 126r82 159r82 190r82 222r82 254r82 282r82 316r47 347r82
+. 380r47 3|40w73 40w82 40w105 41w8 41w35 41w63 42w8 42w32 42w58 43w8
+. 43w35 4|20w12 5|22w12 6|18w12 7|18w12 8|18w12 9|20w12 10|21w12 11|18w12 12|19w29 13|19w29
+32i4 MaxDomainNameLength 61r32 66r18 72r24 74r24
+55a7 Left 58m16 58r26 58r62
+56a7 Right 58r32 58r67
+57e7 Success 58m49 58r39 58r73
+60a28 Name 61r58 62r73
+61i15 Length 61r25 61r63 62r60
+62i20 Q 62r78
+64a30 Name 65r40 65r55 66r42 67r71
+65i15 Length 65r26 66r11 66r47 67r60
+67i20 Q 67r76
+71a39 S 72r12
+73a33 S 74r12
+92i4 NumBuckets 2|93r90 126r90 159r90 190r90 222r90 254r90 282r90 316r55 347r90
+. 380r55
+X 15 Unsigned_Types.ads
+18K9 Unsigned_Types 3|40w46 4|20w21 5|22w21 9|20w21 10|21w21 12|19w13 13|19w13 14|19w13
+X 16 ada-characters-handling.shs
+43K9 Handling 3|40w36

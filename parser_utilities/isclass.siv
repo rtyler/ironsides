@@ -1,0 +1,56 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.isClass
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 48:
+
+function_isclass_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 49:
+
+function_isclass_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 49:
+
+function_isclass_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 50:
+
+function_isclass_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 50:
+
+function_isclass_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_isclass_6.
+*** true .          /* all conclusions proved */
+
+
+function_isclass_7.
+*** true .          /* all conclusions proved */
+
+

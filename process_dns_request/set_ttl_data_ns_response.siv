@@ -1,0 +1,151 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_NS_Response
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          74:
+
+procedure_set_ttl_data_ns_response_1.
+H1:    current_name_length <= 129 .
+H2:    start_byte <= 8174 - current_name_length .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H4:    start_byte >= 1 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(ns_record), [i___1]) and element(fld_nameserver(
+          ns_record), [i___1]) <= 255) .
+H6:    rr_type__internet <= fld_class(fld_inherit(ns_record)) .
+H7:    fld_class(fld_inherit(ns_record)) <= rr_type__hs .
+H8:    fld_ttlinseconds(fld_inherit(ns_record)) >= 0 .
+H9:    fld_ttlinseconds(fld_inherit(ns_record)) <= 4294967295 .
+H10:   current_name_length >= 1 .
+H11:   integer__size >= 0 .
+H12:   character__size >= 0 .
+H13:   positive__size >= 0 .
+H14:   dns_types__packet_bytes_range__size >= 0 .
+H15:   unsigned_types__unsigned16__size >= 0 .
+H16:   unsigned_types__unsigned32__size >= 0 .
+H17:   rr_type__classtype__size >= 0 .
+H18:   rr_type__wirestringtypeindex__size >= 0 .
+H19:   rr_type__resourcerecordtype__size >= 0 .
+H20:   rr_type__ns_record_type__nsrecordtype__size >= 0 .
+       ->
+C1:    start_byte <= 8177 .
+
+
+For path(s) from start to precondition check associated with statement of line 
+          76:
+
+procedure_set_ttl_data_ns_response_2.
+H1:    current_name_length <= 129 .
+H2:    start_byte <= 8174 - current_name_length .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H4:    start_byte >= 1 .
+H5:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(ns_record), [i___1]) and element(fld_nameserver(
+          ns_record), [i___1]) <= 255) .
+H6:    rr_type__internet <= fld_class(fld_inherit(ns_record)) .
+H7:    fld_class(fld_inherit(ns_record)) <= rr_type__hs .
+H8:    fld_ttlinseconds(fld_inherit(ns_record)) >= 0 .
+H9:    fld_ttlinseconds(fld_inherit(ns_record)) <= 4294967295 .
+H10:   current_name_length >= 1 .
+H11:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255) .
+H12:   integer__size >= 0 .
+H13:   character__size >= 0 .
+H14:   positive__size >= 0 .
+H15:   dns_types__packet_bytes_range__size >= 0 .
+H16:   unsigned_types__unsigned16__size >= 0 .
+H17:   unsigned_types__unsigned32__size >= 0 .
+H18:   rr_type__classtype__size >= 0 .
+H19:   rr_type__wirestringtypeindex__size >= 0 .
+H20:   rr_type__resourcerecordtype__size >= 0 .
+H21:   rr_type__ns_record_type__nsrecordtype__size >= 0 .
+       ->
+C1:    start_byte <= 8176 .
+C2:    start_byte <= 8175 .
+
+
+For path(s) from start to run-time check associated with statement of line 78:
+
+procedure_set_ttl_data_ns_response_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 78:
+
+procedure_set_ttl_data_ns_response_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 79:
+
+procedure_set_ttl_data_ns_response_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 79 to assertion of line 79:
+
+procedure_set_ttl_data_ns_response_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 79 to run-time check associated with 
+          statement of line 81:
+
+procedure_set_ttl_data_ns_response_7.
+H1:    start_byte <= 8174 - current_name_length .
+H2:    loop__1__i >= 1 .
+H3:    loop__1__i <= 129 .
+H4:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          bytes, [i___1]) and element(bytes, [i___1]) <= 255) .
+H5:    start_byte >= 1 .
+H6:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          fld_nameserver(ns_record), [i___1]) and element(fld_nameserver(
+          ns_record), [i___1]) <= 255) .
+H7:    rr_type__internet <= fld_class(fld_inherit(ns_record)) .
+H8:    fld_class(fld_inherit(ns_record)) <= rr_type__hs .
+H9:    fld_ttlinseconds(fld_inherit(ns_record)) >= 0 .
+H10:   fld_ttlinseconds(fld_inherit(ns_record)) <= 4294967295 .
+H11:   current_name_length >= 1 .
+H12:   current_name_length <= 129 .
+H13:   loop__1__i <= current_name_length .
+H14:   integer__size >= 0 .
+H15:   character__size >= 0 .
+H16:   positive__size >= 0 .
+H17:   dns_types__packet_bytes_range__size >= 0 .
+H18:   unsigned_types__unsigned16__size >= 0 .
+H19:   unsigned_types__unsigned32__size >= 0 .
+H20:   rr_type__classtype__size >= 0 .
+H21:   rr_type__wirestringtypeindex__size >= 0 .
+H22:   rr_type__resourcerecordtype__size >= 0 .
+H23:   rr_type__ns_record_type__nsrecordtype__size >= 0 .
+       ->
+C1:    start_byte + 5 + loop__1__i <= 8180 .
+
+
+For path(s) from start to finish:
+
+procedure_set_ttl_data_ns_response_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 79 to finish:
+
+procedure_set_ttl_data_ns_response_9.
+*** true .          /* all conclusions proved */
+
+

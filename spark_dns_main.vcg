@@ -1,0 +1,49 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                          procedure Spark_Dns_Main
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 56:
+
+procedure_spark_dns_main_1.
+H1:    true .
+        ->
+C1:    1 >= natural__first .
+C2:    1 <= natural__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 61:
+
+procedure_spark_dns_main_2.
+H1:    true .
+H2:    1 >= natural__first .
+H3:    1 <= natural__last .
+H4:    true .
+H5:    true .
+H6:    true .
+H7:    true .
+H8:    success__2 = false .
+        ->
+C1:    spark_ada_command_line__failure >= 
+           spark_ada_command_line__exit_status__first .
+C2:    spark_ada_command_line__failure <= 
+           spark_ada_command_line__exit_status__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_spark_dns_main_3.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_spark_dns_main_4.
+*** true .          /* trivially true VC removed by Examiner */
+
+

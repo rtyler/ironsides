@@ -1,0 +1,65 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+                {procedure Parser_Utilities.ConvertTimeString}
+
+
+title procedure converttimestring;
+
+  function round__(real) : integer;
+  type character = integer;
+  type unsigned_types__unsigned32 = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const rr_type__rrsig_record_type__max_year : integer = pending;
+  const secondsinaminute : integer = pending;
+  const minutesinanhour : integer = pending;
+  const hoursinaday : integer = pending;
+  const maxdaysinamonth : integer = pending;
+  const monthsinayear : integer = pending;
+  const rr_type__rrsig_record_type__timestringtypeindex__base__first : integer = pending; 
+  const rr_type__rrsig_record_type__timestringtypeindex__base__last : integer = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__rrsig_record_type__timestringtypeindex__first : integer = pending; 
+  const rr_type__rrsig_record_type__timestringtypeindex__last : integer = pending; 
+  const rr_type__rrsig_record_type__timestringtypeindex__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var timestring : string;
+  var year : integer;
+  var month : integer;
+  var day : integer;
+  var hour : integer;
+  var minute : integer;
+  var second : integer;
+  var loop__1__i : integer;
+  function non_spark_stuff__time_of(integer, integer, integer, integer, integer, integer) : integer;
+
+end;

@@ -1,0 +1,38 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Dns_Network_Receive.Receive_DNS_Packet_TCP
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 33:
+
+procedure_receive_dns_packet_tcp_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 39:
+
+procedure_receive_dns_packet_tcp_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_receive_dns_packet_tcp_3.
+*** true .          /* all conclusions proved */
+
+
+procedure_receive_dns_packet_tcp_4.
+*** true .          /* all conclusions proved */
+
+

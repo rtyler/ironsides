@@ -1,0 +1,96 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure dns_table_pkg.DNS_Table_Type.queryARecords
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 90:
+
+procedure_queryarecords_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 91:
+
+procedure_queryarecords_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 93:
+
+procedure_queryarecords_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to assertion of line 93:
+
+procedure_queryarecords_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryarecords_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to run-time check associated with 
+          statement of line 94:
+
+procedure_queryarecords_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to run-time check associated with 
+          statement of line 96:
+
+procedure_queryarecords_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to run-time check associated with 
+          statement of line 97:
+
+procedure_queryarecords_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to run-time check associated with 
+          statement of line 99:
+
+procedure_queryarecords_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 93 to finish:
+
+procedure_queryarecords_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryarecords_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryarecords_12.
+*** true .          /* all conclusions proved */
+
+
+For checks of refinement integrity: 
+
+procedure_queryarecords_13.
+*** true .          /* all conclusions proved */
+
+
+procedure_queryarecords_14.
+*** true .          /* all conclusions proved */
+
+

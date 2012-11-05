@@ -1,0 +1,460 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_Response_EDNS
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 725:
+
+procedure_create_response_edns_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 726:
+
+procedure_create_response_edns_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 729:
+
+procedure_create_response_edns_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 731:
+
+procedure_create_response_edns_4.
+H1:    additional_count < 65535 .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(input_packet), [i___1]) and element(fld_bytes(input_packet)
+          , [i___1]) <= 255) .
+H3:    fld_arcount(fld_header(input_packet)) >= 0 .
+H4:    fld_arcount(fld_header(input_packet)) <= 65535 .
+H5:    fld_nscount(fld_header(input_packet)) >= 0 .
+H6:    fld_nscount(fld_header(input_packet)) <= 65535 .
+H7:    fld_ancount(fld_header(input_packet)) >= 0 .
+H8:    fld_ancount(fld_header(input_packet)) <= 65535 .
+H9:    fld_qdcount(fld_header(input_packet)) >= 0 .
+H10:   fld_qdcount(fld_header(input_packet)) <= 65535 .
+H11:   dns_types__no_error <= fld_rcode(fld_header(input_packet)) .
+H12:   fld_rcode(fld_header(input_packet)) <= dns_types__refused .
+H13:   dns_types__query <= fld_opcode(fld_header(input_packet)) .
+H14:   fld_opcode(fld_header(input_packet)) <= dns_types__status .
+H15:   fld_messageid(fld_header(input_packet)) >= 0 .
+H16:   fld_messageid(fld_header(input_packet)) <= 65535 .
+H17:   input_bytes <= 8192 .
+H18:   query_end_byte >= 1 .
+H19:   start_byte >= 1 .
+H20:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H21:   fld_arcount(fld_header(output_packet)) >= 0 .
+H22:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H23:   fld_nscount(fld_header(output_packet)) >= 0 .
+H24:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H25:   fld_ancount(fld_header(output_packet)) >= 0 .
+H26:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H27:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H28:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H29:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H30:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H31:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H32:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H33:   fld_messageid(fld_header(output_packet)) >= 0 .
+H34:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H35:   additional_count >= 0 .
+H36:   query_end_byte + 23 <= input_bytes .
+H37:   start_byte < 8169 .
+H38:   integer__size >= 0 .
+H39:   character__size >= 0 .
+H40:   dns_types__packet_length_range__size >= 0 .
+H41:   dns_types__packet_bytes_range__size >= 0 .
+H42:   dns_types__edns_record__size >= 0 .
+H43:   dns_types__dns_packet__size >= 0 .
+       ->
+C1:    element(fld_bytes(input_packet), [query_end_byte + 1]) >= 0 .
+C2:    element(fld_bytes(input_packet), [query_end_byte + 1]) <= 255 .
+C3:    query_end_byte <= 8179 .
+
+
+For path(s) from start to run-time check associated with statement of line 732:
+
+procedure_create_response_edns_5.
+H1:    additional_count < 65535 .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(input_packet), [i___1]) and element(fld_bytes(input_packet)
+          , [i___1]) <= 255) .
+H3:    fld_arcount(fld_header(input_packet)) >= 0 .
+H4:    fld_arcount(fld_header(input_packet)) <= 65535 .
+H5:    fld_nscount(fld_header(input_packet)) >= 0 .
+H6:    fld_nscount(fld_header(input_packet)) <= 65535 .
+H7:    fld_ancount(fld_header(input_packet)) >= 0 .
+H8:    fld_ancount(fld_header(input_packet)) <= 65535 .
+H9:    fld_qdcount(fld_header(input_packet)) >= 0 .
+H10:   fld_qdcount(fld_header(input_packet)) <= 65535 .
+H11:   dns_types__no_error <= fld_rcode(fld_header(input_packet)) .
+H12:   fld_rcode(fld_header(input_packet)) <= dns_types__refused .
+H13:   dns_types__query <= fld_opcode(fld_header(input_packet)) .
+H14:   fld_opcode(fld_header(input_packet)) <= dns_types__status .
+H15:   fld_messageid(fld_header(input_packet)) >= 0 .
+H16:   fld_messageid(fld_header(input_packet)) <= 65535 .
+H17:   input_bytes <= 8192 .
+H18:   query_end_byte >= 1 .
+H19:   start_byte >= 1 .
+H20:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H21:   fld_arcount(fld_header(output_packet)) >= 0 .
+H22:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H23:   fld_nscount(fld_header(output_packet)) >= 0 .
+H24:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H25:   fld_ancount(fld_header(output_packet)) >= 0 .
+H26:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H27:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H28:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H29:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H30:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H31:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H32:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H33:   fld_messageid(fld_header(output_packet)) >= 0 .
+H34:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H35:   additional_count >= 0 .
+H36:   query_end_byte + 23 <= input_bytes .
+H37:   start_byte < 8169 .
+H38:   element(fld_bytes(input_packet), [query_end_byte + 1]) >= 0 .
+H39:   element(fld_bytes(input_packet), [query_end_byte + 1]) <= 255 .
+H40:   integer__size >= 0 .
+H41:   character__size >= 0 .
+H42:   dns_types__packet_length_range__size >= 0 .
+H43:   dns_types__packet_bytes_range__size >= 0 .
+H44:   dns_types__edns_record__size >= 0 .
+H45:   dns_types__dns_packet__size >= 0 .
+       ->
+C1:    element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) >= - 2147483648 .
+C2:    element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) <= 2147483647 .
+C3:    element(fld_bytes(input_packet), [query_end_byte + 3]) >= 0 .
+C4:    element(fld_bytes(input_packet), [query_end_byte + 3]) <= 65535 .
+C5:    query_end_byte <= 8177 .
+C6:    element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 >= - 
+          2147483648 .
+C7:    element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 <= 
+          2147483647 .
+C8:    element(fld_bytes(input_packet), [query_end_byte + 2]) >= 0 .
+C9:    element(fld_bytes(input_packet), [query_end_byte + 2]) <= 65535 .
+C10:   query_end_byte <= 8178 .
+
+
+For path(s) from start to run-time check associated with statement of line 735:
+
+procedure_create_response_edns_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 737:
+
+procedure_create_response_edns_7.
+H1:    additional_count < 65535 .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(input_packet), [i___1]) and element(fld_bytes(input_packet)
+          , [i___1]) <= 255) .
+H3:    fld_arcount(fld_header(input_packet)) >= 0 .
+H4:    fld_arcount(fld_header(input_packet)) <= 65535 .
+H5:    fld_nscount(fld_header(input_packet)) >= 0 .
+H6:    fld_nscount(fld_header(input_packet)) <= 65535 .
+H7:    fld_ancount(fld_header(input_packet)) >= 0 .
+H8:    fld_ancount(fld_header(input_packet)) <= 65535 .
+H9:    fld_qdcount(fld_header(input_packet)) >= 0 .
+H10:   fld_qdcount(fld_header(input_packet)) <= 65535 .
+H11:   dns_types__no_error <= fld_rcode(fld_header(input_packet)) .
+H12:   fld_rcode(fld_header(input_packet)) <= dns_types__refused .
+H13:   dns_types__query <= fld_opcode(fld_header(input_packet)) .
+H14:   fld_opcode(fld_header(input_packet)) <= dns_types__status .
+H15:   fld_messageid(fld_header(input_packet)) >= 0 .
+H16:   fld_messageid(fld_header(input_packet)) <= 65535 .
+H17:   input_bytes <= 8192 .
+H18:   query_end_byte >= 1 .
+H19:   start_byte >= 1 .
+H20:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H21:   fld_arcount(fld_header(output_packet)) >= 0 .
+H22:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H23:   fld_nscount(fld_header(output_packet)) >= 0 .
+H24:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H25:   fld_ancount(fld_header(output_packet)) >= 0 .
+H26:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H27:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H28:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H29:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H30:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H31:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H32:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H33:   fld_messageid(fld_header(output_packet)) >= 0 .
+H34:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H35:   additional_count >= 0 .
+H36:   query_end_byte + 23 <= input_bytes .
+H37:   start_byte < 8169 .
+H38:   element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) >= - 2147483648 .
+H39:   element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) <= 2147483647 .
+H40:   element(fld_bytes(input_packet), [query_end_byte + 3]) >= 0 .
+H41:   element(fld_bytes(input_packet), [query_end_byte + 3]) <= 65535 .
+H42:   element(fld_bytes(input_packet), [query_end_byte + 2]) >= 0 .
+H43:   element(fld_bytes(input_packet), [query_end_byte + 2]) <= 65535 .
+H44:   element(fld_bytes(input_packet), [query_end_byte + 1]) = 0 .
+H45:   to_query_type(element(fld_bytes(input_packet), [query_end_byte + 2]) * 
+          256 + element(fld_bytes(input_packet), [query_end_byte + 3])) = 
+          dns_types__opt .
+H46:   integer__size >= 0 .
+H47:   character__size >= 0 .
+H48:   dns_types__packet_length_range__size >= 0 .
+H49:   dns_types__packet_bytes_range__size >= 0 .
+H50:   dns_types__edns_record__size >= 0 .
+H51:   dns_types__dns_packet__size >= 0 .
+       ->
+C1:    element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 5]) >= 0 .
+C2:    element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 5]) <= 65535 .
+C3:    element(fld_bytes(input_packet), [query_end_byte + 5]) >= 0 .
+C4:    element(fld_bytes(input_packet), [query_end_byte + 5]) <= 65535 .
+C5:    query_end_byte <= 8175 .
+C6:    element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 >= - 
+          2147483648 .
+C7:    element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 <= 
+          2147483647 .
+C8:    element(fld_bytes(input_packet), [query_end_byte + 4]) >= 0 .
+C9:    element(fld_bytes(input_packet), [query_end_byte + 4]) <= 65535 .
+C10:   query_end_byte <= 8176 .
+
+
+For path(s) from start to run-time check associated with statement of line 742:
+
+procedure_create_response_edns_8.
+H1:    additional_count < 65535 .
+H2:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(input_packet), [i___1]) and element(fld_bytes(input_packet)
+          , [i___1]) <= 255) .
+H3:    fld_arcount(fld_header(input_packet)) >= 0 .
+H4:    fld_arcount(fld_header(input_packet)) <= 65535 .
+H5:    fld_nscount(fld_header(input_packet)) >= 0 .
+H6:    fld_nscount(fld_header(input_packet)) <= 65535 .
+H7:    fld_ancount(fld_header(input_packet)) >= 0 .
+H8:    fld_ancount(fld_header(input_packet)) <= 65535 .
+H9:    fld_qdcount(fld_header(input_packet)) >= 0 .
+H10:   fld_qdcount(fld_header(input_packet)) <= 65535 .
+H11:   dns_types__no_error <= fld_rcode(fld_header(input_packet)) .
+H12:   fld_rcode(fld_header(input_packet)) <= dns_types__refused .
+H13:   dns_types__query <= fld_opcode(fld_header(input_packet)) .
+H14:   fld_opcode(fld_header(input_packet)) <= dns_types__status .
+H15:   fld_messageid(fld_header(input_packet)) >= 0 .
+H16:   fld_messageid(fld_header(input_packet)) <= 65535 .
+H17:   input_bytes <= 8192 .
+H18:   query_end_byte >= 1 .
+H19:   start_byte >= 1 .
+H20:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H21:   fld_arcount(fld_header(output_packet)) >= 0 .
+H22:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H23:   fld_nscount(fld_header(output_packet)) >= 0 .
+H24:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H25:   fld_ancount(fld_header(output_packet)) >= 0 .
+H26:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H27:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H28:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H29:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H30:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H31:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H32:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H33:   fld_messageid(fld_header(output_packet)) >= 0 .
+H34:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H35:   additional_count >= 0 .
+H36:   query_end_byte + 23 <= input_bytes .
+H37:   start_byte < 8169 .
+H38:   element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) >= - 2147483648 .
+H39:   element(fld_bytes(input_packet), [query_end_byte + 2]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 3]) <= 2147483647 .
+H40:   element(fld_bytes(input_packet), [query_end_byte + 3]) >= 0 .
+H41:   element(fld_bytes(input_packet), [query_end_byte + 3]) <= 65535 .
+H42:   element(fld_bytes(input_packet), [query_end_byte + 2]) >= 0 .
+H43:   element(fld_bytes(input_packet), [query_end_byte + 2]) <= 65535 .
+H44:   element(fld_bytes(input_packet), [query_end_byte + 1]) = 0 .
+H45:   to_query_type(element(fld_bytes(input_packet), [query_end_byte + 2]) * 
+          256 + element(fld_bytes(input_packet), [query_end_byte + 3])) = 
+          dns_types__opt .
+H46:   element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 5]) >= 0 .
+H47:   element(fld_bytes(input_packet), [query_end_byte + 4]) * 256 + element(
+          fld_bytes(input_packet), [query_end_byte + 5]) <= 65535 .
+H48:   element(fld_bytes(input_packet), [query_end_byte + 5]) >= 0 .
+H49:   element(fld_bytes(input_packet), [query_end_byte + 5]) <= 65535 .
+H50:   element(fld_bytes(input_packet), [query_end_byte + 4]) >= 0 .
+H51:   element(fld_bytes(input_packet), [query_end_byte + 4]) <= 65535 .
+H52:   integer__size >= 0 .
+H53:   character__size >= 0 .
+H54:   dns_types__packet_length_range__size >= 0 .
+H55:   dns_types__packet_bytes_range__size >= 0 .
+H56:   dns_types__edns_record__size >= 0 .
+H57:   dns_types__dns_packet__size >= 0 .
+       ->
+C1:    element(fld_bytes(input_packet), [query_end_byte + 8]) >= 0 .
+C2:    element(fld_bytes(input_packet), [query_end_byte + 8]) <= 255 .
+C3:    query_end_byte <= 8172 .
+
+
+For path(s) from start to run-time check associated with statement of line 747:
+
+procedure_create_response_edns_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 750:
+
+procedure_create_response_edns_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 753:
+
+procedure_create_response_edns_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 755:
+
+procedure_create_response_edns_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 756:
+
+procedure_create_response_edns_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 756:
+
+procedure_create_response_edns_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 758:
+
+procedure_create_response_edns_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 760:
+
+procedure_create_response_edns_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 762:
+
+procedure_create_response_edns_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 763:
+
+procedure_create_response_edns_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 766:
+
+procedure_create_response_edns_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 769:
+
+procedure_create_response_edns_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 771:
+
+procedure_create_response_edns_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 773:
+
+procedure_create_response_edns_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 774:
+
+procedure_create_response_edns_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 776:
+
+procedure_create_response_edns_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 777:
+
+procedure_create_response_edns_29.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_create_response_edns_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_edns_34.
+*** true .          /* all conclusions proved */
+
+

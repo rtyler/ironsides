@@ -1,0 +1,79 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.WireNameLength
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 86:
+
+function_wirenamelength_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 87:
+
+function_wirenamelength_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 88 to run-time check associated with 
+          statement of line 87:
+
+function_wirenamelength_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 88:
+
+function_wirenamelength_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 88 to assertion of line 88:
+
+function_wirenamelength_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 88 to run-time check associated with 
+          statement of line 90:
+
+function_wirenamelength_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_wirenamelength_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 88 to finish:
+
+function_wirenamelength_8.
+H1:    index < 129 .
+H2:    for_all(q_ : integer, 1 <= q_ and q_ <= index -> element(name, [q_]) <> 
+          0) .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          name, [i___1]) and element(name, [i___1]) <= 255) .
+H4:    index >= 1 .
+H5:    128 <= index or element(name, [index + 1]) = 0 .
+H6:    integer__size >= 0 .
+H7:    character__size >= 0 .
+H8:    positive__size >= 0 .
+H9:    wirestringtypeindex__size >= 0 .
+       ->
+C1:    index = 128 or element(name, [index + 1]) = 0 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= index -> element(name, [q_]) <> 0) .
+
+

@@ -1,0 +1,381 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Dns_Network_Receive.Receive_DNS_Packet_TCP
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_receive_dns_packet_tcp_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  dns_types__response_code__first <= fld_rcode(fld_header(
+          fld_rest(packet__1)))
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__opcode_type__first <= fld_opcode(fld_header(fld_rest(
+          packet__1)))
+***  Proved C1:  number_bytes__1 >= dns_types__packet_length_range__first
+     using hypothesis H27.
+***  Proved C2:  number_bytes__1 <= dns_types__packet_length_range__last
+     using hypothesis H28.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_receive_dns_packet_tcp_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  dns_types__response_code__first <= fld_rcode(fld_header(
+          fld_rest(packet__1)))
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__opcode_type__first <= fld_opcode(fld_header(fld_rest(
+          packet__1)))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H28).
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  true
+***  Proved C7:  true
+-S-  Applied substitution rule receive_dns__rules(6).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H27:  number_bytes__1 >= 0
+<S>  New C1:  dns_types__header_bits div 8 >= - 1
+-S-  Applied substitution rule receive_dns__rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H28:  number_bytes__1 <= 8192
+<S>  New C2:  dns_types__header_bits div 8 <= 8191
+-S-  Applied substitution rule receive_dns__rules(3).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New C3:  dns_types__header_bits div 8 >= - 9223372036854775809
+<S>  New C5:  dns_types__header_bits div 8 >= - 9223372036854775808
+-S-  Applied substitution rule receive_dns__rules(4).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New C4:  dns_types__header_bits div 8 <= 9223372036854775806
+<S>  New C6:  dns_types__header_bits div 8 <= 9223372036854775807
+-S-  Applied substitution rule receive_dns__rules(1).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New C1:  true
+<S>  New C2:  true
+<S>  New C3:  true
+<S>  New C5:  true
+<S>  New C4:  true
+<S>  New C6:  true
+-S-  Applied substitution rule receive_dns__rules(11).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(12).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(17).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(18).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= 255)
+-S-  Applied substitution rule receive_dns__rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H3:  fld_arcount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H5:  fld_nscount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H7:  fld_ancount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H9:  fld_qdcount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H23:  fld_messageid(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H25:  fld_length(packet__1) >= 0
+-S-  Applied substitution rule receive_dns__rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H4:  fld_arcount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H6:  fld_nscount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H8:  fld_ancount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H10:  fld_qdcount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H24:  fld_messageid(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H26:  fld_length(packet__1) <= 65535
+-S-  Applied substitution rule receive_dns__rules(30).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H20:  dns_types__query <= fld_opcode(fld_header(fld_rest(packet__1)))
+-S-  Applied substitution rule receive_dns__rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H21:  fld_opcode(fld_header(fld_rest(packet__1))) <= dns_types__status
+-S-  Applied substitution rule receive_dns__rules(56).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H11:  dns_types__no_error <= fld_rcode(fld_header(fld_rest(packet__1)))
+-S-  Applied substitution rule receive_dns__rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H12:  fld_rcode(fld_header(fld_rest(packet__1))) <= dns_types__refused
+***  Proved C1:  true
+***  Proved C2:  true
+***  Proved C3:  true
+***  Proved C5:  true
+***  Proved C4:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_receive_dns_packet_tcp_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  dns_types__response_code__first <= fld_rcode(fld_header(
+          fld_rest(packet__1)))
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__opcode_type__first <= fld_opcode(fld_header(fld_rest(
+          packet__1)))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H28).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H28).
+%%%  Simplified H42 on reading formula in, to give:
+     %%%  H42:  true
+-S-  Applied substitution rule receive_dns__rules(1).
+     This was achieved by replacing all occurrences of dns_types__header_bits 
+          by:
+          96.
+<S>  New H36:  13 >= dns_types__packet_length_range__first
+<S>  New H37:  13 <= dns_types__packet_length_range__last
+<S>  New H38:  13 >= system__min_int
+<S>  New H39:  13 <= system__max_int
+<S>  New H40:  12 >= system__min_int
+<S>  New H41:  12 <= system__max_int
+<S>  New C1:  not (number_bytes__1 < 13 or number_bytes__1 > 
+          dns_network__max_query_size) -> number_bytes__1 >= 13 and 
+          number_bytes__1 <= dns_network__max_query_size
+-S-  Applied substitution rule receive_dns__rules(2).
+     This was achieved by replacing all occurrences of 
+          dns_network__max_query_size by:
+          311.
+<S>  New C1:  not (number_bytes__1 < 13 or number_bytes__1 > 311) -> 
+          number_bytes__1 >= 13 and number_bytes__1 <= 311
+-S-  Applied substitution rule receive_dns__rules(3).
+     This was achieved by replacing all occurrences of system__min_int by:
+          - 9223372036854775808.
+<S>  New H38:  true
+<S>  New H40:  true
+-S-  Applied substitution rule receive_dns__rules(4).
+     This was achieved by replacing all occurrences of system__max_int by:
+          9223372036854775807.
+<S>  New H39:  true
+<S>  New H41:  true
+-S-  Applied substitution rule receive_dns__rules(6).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__first by:
+          0.
+<S>  New H27:  number_bytes__1 >= 0
+<S>  New H36:  true
+-S-  Applied substitution rule receive_dns__rules(7).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_length_range__last by:
+          8192.
+<S>  New H28:  number_bytes__1 <= 8192
+<S>  New H37:  true
+-S-  Applied substitution rule receive_dns__rules(11).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(12).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(17).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule receive_dns__rules(18).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(fld_bytes(fld_rest(packet__1)), [i___1]) and element(
+          fld_bytes(fld_rest(packet__1)), [i___1]) <= 255)
+-S-  Applied substitution rule receive_dns__rules(24).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H3:  fld_arcount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H5:  fld_nscount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H7:  fld_ancount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H9:  fld_qdcount(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H23:  fld_messageid(fld_header(fld_rest(packet__1))) >= 0
+<S>  New H25:  fld_length(packet__1) >= 0
+-S-  Applied substitution rule receive_dns__rules(25).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H4:  fld_arcount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H6:  fld_nscount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H8:  fld_ancount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H10:  fld_qdcount(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H24:  fld_messageid(fld_header(fld_rest(packet__1))) <= 65535
+<S>  New H26:  fld_length(packet__1) <= 65535
+-S-  Applied substitution rule receive_dns__rules(30).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__first by:
+          dns_types__query.
+<S>  New H20:  dns_types__query <= fld_opcode(fld_header(fld_rest(packet__1)))
+-S-  Applied substitution rule receive_dns__rules(31).
+     This was achieved by replacing all occurrences of 
+          dns_types__opcode_type__last by:
+          dns_types__status.
+<S>  New H21:  fld_opcode(fld_header(fld_rest(packet__1))) <= dns_types__status
+-S-  Applied substitution rule receive_dns__rules(56).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H11:  dns_types__no_error <= fld_rcode(fld_header(fld_rest(packet__1)))
+-S-  Applied substitution rule receive_dns__rules(57).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H12:  fld_rcode(fld_header(fld_rest(packet__1))) <= dns_types__refused
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H13 (true-hypothesis).
+---  Eliminated hypothesis H14 (true-hypothesis).
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H17 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H22 (true-hypothesis).
+---  Eliminated hypothesis H29 (true-hypothesis).
+---  Eliminated hypothesis H30 (true-hypothesis).
+---  Eliminated hypothesis H31 (true-hypothesis).
+---  Eliminated hypothesis H32 (true-hypothesis).
+---  Eliminated hypothesis H34 (true-hypothesis).
+---  Eliminated hypothesis H35 (true-hypothesis).
+---  Eliminated hypothesis H42 (true-hypothesis).
+---  Eliminated hypothesis H38 (true-hypothesis).
+---  Eliminated hypothesis H40 (true-hypothesis).
+---  Eliminated hypothesis H39 (true-hypothesis).
+---  Eliminated hypothesis H41 (true-hypothesis).
+---  Eliminated hypothesis H36 (true-hypothesis).
+---  Eliminated hypothesis H37 (true-hypothesis).
+---  Eliminated hypothesis H33, which only specifies a value for failure__1.
+     This is not referred to anywhere else in the VC.
+     +++  New H43:  dns_types__packet_length_range__size >= 0
+     +++  New H44:  dns_types__packet_bytes_range__size >= 0
+     +++  New H45:  dns_types__dns_packet__size >= 0
+     +++  New H46:  dns_types__dns_tcp_packet__size >= 0
+>>>  Conclusion C1 is an implication formula [P->Q].
+     Attempting to prove this by proving Q while adding P to the hypotheses.
++++  Added new hypotheses (in proving an implication formula).
+     +++  New H47:  not (number_bytes__1 < 13 or number_bytes__1 > 311)
+>>>  Restructured hypothesis H47 into:
+     >>>  H47:  13 <= number_bytes__1 and number_bytes__1 <= 311
+>>>  Hypothesis H47 has now been split into two, giving:
+     >>>  H48:  13 <= number_bytes__1
+     >>>  H49:  number_bytes__1 <= 311
++++  New subgoal C1:  number_bytes__1 >= 13 and number_bytes__1 <= 311
+>>>  Conclusion C1 has now been split into two, giving:
+     >>>  C1:  number_bytes__1 >= 13
+     >>>  C2:  number_bytes__1 <= 311
+***  Proved subgoal C1
+     using hypothesis H48.
+***  Proved subgoal C2
+     using hypothesis H49.
+***  Proved C1:  not (number_bytes__1 < 13 or number_bytes__1 > 311) -> 
+          number_bytes__1 >= 13 and number_bytes__1 <= 311
+     by implication.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_receive_dns_packet_tcp_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(fld_rest(packet__1)), [
+          i___1]) and element(fld_bytes(fld_rest(packet__1)), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H11 on reading formula in, to give:
+     %%%  H11:  dns_types__response_code__first <= fld_rcode(fld_header(
+          fld_rest(packet__1)))
+%%%  Simplified H20 on reading formula in, to give:
+     %%%  H20:  dns_types__opcode_type__first <= fld_opcode(fld_header(fld_rest(
+          packet__1)))
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H27).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H28).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  failure__1
+***  Proved C1:  not failure__1 -> number_bytes__1 >= 1 + 
+          dns_types__header_bits div 8 and number_bytes__1 <= 
+          dns_network__max_query_size
+     using hypothesis H33.
+***  PROVED VC.
+

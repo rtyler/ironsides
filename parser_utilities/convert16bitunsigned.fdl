@@ -1,0 +1,56 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+              {procedure Parser_Utilities.convert16BitUnsigned}
+
+
+title procedure convert16bitunsigned;
+
+  function round__(real) : integer;
+  type character = integer;
+  type unsigned_types__unsigned16 = integer;
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  const unsigned_types__max_16bit_val : integer = pending;
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var zonefileline : string;
+  var begidx : integer;
+  var endidx : integer;
+  var tmpval : integer;
+  var loop__1__i : integer;
+
+end;

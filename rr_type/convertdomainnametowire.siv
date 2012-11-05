@@ -1,0 +1,145 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertDomainNameToWire
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 127:
+
+function_convertdomainnametowire_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 129:
+
+function_convertdomainnametowire_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 129:
+
+function_convertdomainnametowire_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 130:
+
+function_convertdomainnametowire_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to assertion of line 130:
+
+function_convertdomainnametowire_5.
+*** true .          /* all conclusions proved */
+
+
+function_convertdomainnametowire_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 131:
+
+function_convertdomainnametowire_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 132:
+
+function_convertdomainnametowire_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 132:
+
+function_convertdomainnametowire_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 134:
+
+function_convertdomainnametowire_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 137:
+
+function_convertdomainnametowire_12.
+*** true .          /* all conclusions proved */
+
+
+function_convertdomainnametowire_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 137:
+
+function_convertdomainnametowire_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 137:
+
+function_convertdomainnametowire_15.
+*** true .          /* all conclusions proved */
+
+
+function_convertdomainnametowire_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 138:
+
+function_convertdomainnametowire_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to run-time check associated with 
+          statement of line 138:
+
+function_convertdomainnametowire_18.
+*** true .          /* all conclusions proved */
+
+
+function_convertdomainnametowire_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_convertdomainnametowire_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 130 to finish:
+
+function_convertdomainnametowire_21.
+*** true .          /* all conclusions proved */
+
+
+function_convertdomainnametowire_22.
+*** true .          /* all conclusions proved */
+
+

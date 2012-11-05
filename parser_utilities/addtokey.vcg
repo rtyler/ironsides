@@ -1,0 +1,2794 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                    procedure Parser_Utilities.AddToKey
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 789:
+
+procedure_addtokey_1.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+        ->
+C1:    1 >= rr_type__linelengthindex__first .
+C2:    1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 790:
+
+procedure_addtokey_2.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+C2:    (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 790:
+
+procedure_addtokey_3.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+C2:    (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+ 
+
+For path(s) from start to assertion of line 791:
+
+procedure_addtokey_4.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   1 < length .
+H26:   (element(s, [1]) = blank) or (element(s, [1]) = tab) .
+        ->
+C1:    1 >= 1 .
+C2:    1 < length .
+C3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C17:   length >= rr_type__linelengthindex__first .
+C18:   length <= rr_type__linelengthindex__last .
+C19:   true .
+ 
+
+For path(s) from assertion of line 791 to assertion of line 791:
+
+procedure_addtokey_5.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   begidx + 1 < length .
+H29:   (element(s, [begidx + 1]) = blank) or (element(s, [
+           begidx + 1]) = tab) .
+        ->
+C1:    begidx + 1 >= 1 .
+C2:    begidx + 1 < length .
+C3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C17:   length >= rr_type__linelengthindex__first .
+C18:   length <= rr_type__linelengthindex__last .
+C19:   true .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 792:
+
+procedure_addtokey_6.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+        ->
+C1:    begidx + 1 >= rr_type__linelengthindex__first .
+C2:    begidx + 1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 796:
+
+procedure_addtokey_7.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    1 >= rr_type__linelengthindex__first .
+C2:    1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 796:
+
+procedure_addtokey_8.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    begidx + 1 >= rr_type__linelengthindex__first .
+C2:    begidx + 1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 797:
+
+procedure_addtokey_9.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+C2:    (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 797:
+
+procedure_addtokey_10.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+C2:    (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 797:
+
+procedure_addtokey_11.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+C2:    (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+ 
+
+For path(s) from start to assertion of line 798:
+
+procedure_addtokey_12.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   1 < length .
+H35:   element(s, [1]) <> blank .
+H36:   element(s, [1]) <> tab .
+        ->
+C1:    1 >= 1 .
+C2:    1 <= 1 .
+C3:    1 >= 1 .
+C4:    1 < length .
+C5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C19:   length >= rr_type__linelengthindex__first .
+C20:   length <= rr_type__linelengthindex__last .
+C21:   true .
+ 
+
+For path(s) from assertion of line 791 to assertion of line 798:
+
+procedure_addtokey_13.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   begidx + 1 < length .
+H38:   element(s, [begidx + 1]) <> blank .
+H39:   element(s, [begidx + 1]) <> tab .
+        ->
+C1:    begidx + 1 >= 1 .
+C2:    begidx + 1 <= begidx + 1 .
+C3:    begidx + 1 >= 1 .
+C4:    begidx + 1 < length .
+C5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C19:   length >= rr_type__linelengthindex__first .
+C20:   length <= rr_type__linelengthindex__last .
+C21:   true .
+ 
+
+For path(s) from assertion of line 798 to assertion of line 798:
+
+procedure_addtokey_14.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   endidx + 1 < length .
+H31:   element(s, [endidx + 1]) <> blank .
+H32:   element(s, [endidx + 1]) <> tab .
+        ->
+C1:    begidx >= 1 .
+C2:    begidx <= endidx + 1 .
+C3:    endidx + 1 >= 1 .
+C4:    endidx + 1 < length .
+C5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C19:   length >= rr_type__linelengthindex__first .
+C20:   length <= rr_type__linelengthindex__last .
+C21:   true .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 799:
+
+procedure_addtokey_15.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+        ->
+C1:    endidx + 1 >= rr_type__linelengthindex__first .
+C2:    endidx + 1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 803:
+
+procedure_addtokey_16.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   not ((1 < length) and ((element(s, [1]) <> blank) and (element(
+           s, [1]) <> tab))) .
+H35:   1 >= rr_type__linelengthindex__first .
+H36:   1 <= rr_type__linelengthindex__last .
+H37:   1 >= rr_type__linelengthindex__first .
+H38:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (1 - 1 + 1) >= integer__base__first .
+C2:    fld_keylength(dnskey_rec) + (1 - 1 + 1) <= integer__base__last .
+C3:    1 - 1 + 1 >= integer__base__first .
+C4:    1 - 1 + 1 <= integer__base__last .
+C5:    1 - 1 >= integer__base__first .
+C6:    1 - 1 <= integer__base__last .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 803:
+
+procedure_addtokey_17.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) <> 
+           blank) and (element(s, [begidx + 1]) <> tab))) .
+H38:   begidx + 1 >= rr_type__linelengthindex__first .
+H39:   begidx + 1 <= rr_type__linelengthindex__last .
+H40:   begidx + 1 >= rr_type__linelengthindex__first .
+H41:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           integer__base__first .
+C2:    fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           integer__base__last .
+C3:    begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+C4:    begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+C5:    begidx + 1 - (begidx + 1) >= integer__base__first .
+C6:    begidx + 1 - (begidx + 1) <= integer__base__last .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 803:
+
+procedure_addtokey_18.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   not ((endidx + 1 < length) and ((element(s, [endidx + 1]) <> 
+           blank) and (element(s, [endidx + 1]) <> tab))) .
+H31:   begidx >= rr_type__linelengthindex__first .
+H32:   begidx <= rr_type__linelengthindex__last .
+H33:   endidx + 1 >= rr_type__linelengthindex__first .
+H34:   endidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           integer__base__first .
+C2:    fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           integer__base__last .
+C3:    endidx + 1 - begidx + 1 >= integer__base__first .
+C4:    endidx + 1 - begidx + 1 <= integer__base__last .
+C5:    endidx + 1 - begidx >= integer__base__first .
+C6:    endidx + 1 - begidx <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 807:
+
+procedure_addtokey_19.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   not ((1 < length) and ((element(s, [1]) <> blank) and (element(
+           s, [1]) <> tab))) .
+H35:   1 >= rr_type__linelengthindex__first .
+H36:   1 <= rr_type__linelengthindex__last .
+H37:   1 >= rr_type__linelengthindex__first .
+H38:   1 <= rr_type__linelengthindex__last .
+H39:   fld_keylength(dnskey_rec) + (1 - 1 + 1) >= integer__base__first .
+H40:   fld_keylength(dnskey_rec) + (1 - 1 + 1) <= integer__base__last .
+H41:   1 - 1 + 1 >= integer__base__first .
+H42:   1 - 1 + 1 <= integer__base__last .
+H43:   1 - 1 >= integer__base__first .
+H44:   1 - 1 <= integer__base__last .
+H45:   not (fld_keylength(dnskey_rec) + (1 - 1 + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H46:   1 >= rr_type__linelengthindex__first .
+H47:   1 <= rr_type__linelengthindex__last .
+H48:   1 >= rr_type__linelengthindex__first .
+H49:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    1 >= integer__first .
+C2:    1 <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 807:
+
+procedure_addtokey_20.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) <> 
+           blank) and (element(s, [begidx + 1]) <> tab))) .
+H38:   begidx + 1 >= rr_type__linelengthindex__first .
+H39:   begidx + 1 <= rr_type__linelengthindex__last .
+H40:   begidx + 1 >= rr_type__linelengthindex__first .
+H41:   begidx + 1 <= rr_type__linelengthindex__last .
+H42:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           integer__base__first .
+H43:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           integer__base__last .
+H44:   begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+H45:   begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+H46:   begidx + 1 - (begidx + 1) >= integer__base__first .
+H47:   begidx + 1 - (begidx + 1) <= integer__base__last .
+H48:   not (fld_keylength(dnskey_rec) + (begidx + 1 - (
+           begidx + 1) + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H49:   begidx + 1 >= rr_type__linelengthindex__first .
+H50:   begidx + 1 <= rr_type__linelengthindex__last .
+H51:   begidx + 1 >= rr_type__linelengthindex__first .
+H52:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    begidx + 1 >= integer__first .
+C2:    begidx + 1 <= integer__last .
+C3:    begidx + 1 >= integer__first .
+C4:    begidx + 1 <= integer__last .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 807:
+
+procedure_addtokey_21.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   not ((endidx + 1 < length) and ((element(s, [endidx + 1]) <> 
+           blank) and (element(s, [endidx + 1]) <> tab))) .
+H31:   begidx >= rr_type__linelengthindex__first .
+H32:   begidx <= rr_type__linelengthindex__last .
+H33:   endidx + 1 >= rr_type__linelengthindex__first .
+H34:   endidx + 1 <= rr_type__linelengthindex__last .
+H35:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           integer__base__first .
+H36:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           integer__base__last .
+H37:   endidx + 1 - begidx + 1 >= integer__base__first .
+H38:   endidx + 1 - begidx + 1 <= integer__base__last .
+H39:   endidx + 1 - begidx >= integer__base__first .
+H40:   endidx + 1 - begidx <= integer__base__last .
+H41:   not (fld_keylength(dnskey_rec) + (endidx + 1 - 
+           begidx + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H42:   begidx >= rr_type__linelengthindex__first .
+H43:   begidx <= rr_type__linelengthindex__last .
+H44:   endidx + 1 >= rr_type__linelengthindex__first .
+H45:   endidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    endidx + 1 >= integer__first .
+C2:    endidx + 1 <= integer__last .
+C3:    begidx >= integer__first .
+C4:    begidx <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 807:
+
+procedure_addtokey_22.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   not ((1 < length) and ((element(s, [1]) <> blank) and (element(
+           s, [1]) <> tab))) .
+H35:   1 >= rr_type__linelengthindex__first .
+H36:   1 <= rr_type__linelengthindex__last .
+H37:   1 >= rr_type__linelengthindex__first .
+H38:   1 <= rr_type__linelengthindex__last .
+H39:   fld_keylength(dnskey_rec) + (1 - 1 + 1) >= integer__base__first .
+H40:   fld_keylength(dnskey_rec) + (1 - 1 + 1) <= integer__base__last .
+H41:   1 - 1 + 1 >= integer__base__first .
+H42:   1 - 1 + 1 <= integer__base__last .
+H43:   1 - 1 >= integer__base__first .
+H44:   1 - 1 <= integer__base__last .
+H45:   not (fld_keylength(dnskey_rec) + (1 - 1 + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H46:   1 >= rr_type__linelengthindex__first .
+H47:   1 <= rr_type__linelengthindex__last .
+H48:   1 >= rr_type__linelengthindex__first .
+H49:   1 <= rr_type__linelengthindex__last .
+H50:   1 >= integer__first .
+H51:   1 <= integer__last .
+H52:   1 >= integer__first .
+H53:   1 <= integer__last .
+        ->
+C1:    (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+C2:    (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 807:
+
+procedure_addtokey_23.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) <> 
+           blank) and (element(s, [begidx + 1]) <> tab))) .
+H38:   begidx + 1 >= rr_type__linelengthindex__first .
+H39:   begidx + 1 <= rr_type__linelengthindex__last .
+H40:   begidx + 1 >= rr_type__linelengthindex__first .
+H41:   begidx + 1 <= rr_type__linelengthindex__last .
+H42:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           integer__base__first .
+H43:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           integer__base__last .
+H44:   begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+H45:   begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+H46:   begidx + 1 - (begidx + 1) >= integer__base__first .
+H47:   begidx + 1 - (begidx + 1) <= integer__base__last .
+H48:   not (fld_keylength(dnskey_rec) + (begidx + 1 - (
+           begidx + 1) + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H49:   begidx + 1 >= rr_type__linelengthindex__first .
+H50:   begidx + 1 <= rr_type__linelengthindex__last .
+H51:   begidx + 1 >= rr_type__linelengthindex__first .
+H52:   begidx + 1 <= rr_type__linelengthindex__last .
+H53:   begidx + 1 >= integer__first .
+H54:   begidx + 1 <= integer__last .
+H55:   begidx + 1 >= integer__first .
+H56:   begidx + 1 <= integer__last .
+        ->
+C1:    (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+C2:    (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 807:
+
+procedure_addtokey_24.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   not ((endidx + 1 < length) and ((element(s, [endidx + 1]) <> 
+           blank) and (element(s, [endidx + 1]) <> tab))) .
+H31:   begidx >= rr_type__linelengthindex__first .
+H32:   begidx <= rr_type__linelengthindex__last .
+H33:   endidx + 1 >= rr_type__linelengthindex__first .
+H34:   endidx + 1 <= rr_type__linelengthindex__last .
+H35:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           integer__base__first .
+H36:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           integer__base__last .
+H37:   endidx + 1 - begidx + 1 >= integer__base__first .
+H38:   endidx + 1 - begidx + 1 <= integer__base__last .
+H39:   endidx + 1 - begidx >= integer__base__first .
+H40:   endidx + 1 - begidx <= integer__base__last .
+H41:   not (fld_keylength(dnskey_rec) + (endidx + 1 - 
+           begidx + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H42:   begidx >= rr_type__linelengthindex__first .
+H43:   begidx <= rr_type__linelengthindex__last .
+H44:   endidx + 1 >= rr_type__linelengthindex__first .
+H45:   endidx + 1 <= rr_type__linelengthindex__last .
+H46:   endidx + 1 >= integer__first .
+H47:   endidx + 1 <= integer__last .
+H48:   begidx >= integer__first .
+H49:   begidx <= integer__last .
+        ->
+C1:    (begidx <= endidx + 1) -> ((endidx + 1 >= integer__first) and (
+           endidx + 1 <= integer__last)) .
+C2:    (begidx <= endidx + 1) -> ((begidx >= integer__first) and (
+           begidx <= integer__last)) .
+ 
+
+For path(s) from start to assertion of line 808:
+
+procedure_addtokey_25.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   not ((1 < length) and ((element(s, [1]) <> blank) and (element(
+           s, [1]) <> tab))) .
+H35:   1 >= rr_type__linelengthindex__first .
+H36:   1 <= rr_type__linelengthindex__last .
+H37:   1 >= rr_type__linelengthindex__first .
+H38:   1 <= rr_type__linelengthindex__last .
+H39:   fld_keylength(dnskey_rec) + (1 - 1 + 1) >= integer__base__first .
+H40:   fld_keylength(dnskey_rec) + (1 - 1 + 1) <= integer__base__last .
+H41:   1 - 1 + 1 >= integer__base__first .
+H42:   1 - 1 + 1 <= integer__base__last .
+H43:   1 - 1 >= integer__base__first .
+H44:   1 - 1 <= integer__base__last .
+H45:   not (fld_keylength(dnskey_rec) + (1 - 1 + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H46:   1 >= rr_type__linelengthindex__first .
+H47:   1 <= rr_type__linelengthindex__last .
+H48:   1 >= rr_type__linelengthindex__first .
+H49:   1 <= rr_type__linelengthindex__last .
+H50:   1 >= integer__first .
+H51:   1 <= integer__last .
+H52:   1 >= integer__first .
+H53:   1 <= integer__last .
+H54:   (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+H55:   (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+H56:   1 >= rr_type__linelengthindex__first .
+H57:   1 <= rr_type__linelengthindex__last .
+H58:   1 >= rr_type__linelengthindex__first .
+H59:   1 <= rr_type__linelengthindex__last .
+H60:   1 <= 1 .
+        ->
+C1:    1 = 1 .
+C2:    1 = 1 .
+C3:    1 >= 1 .
+C4:    1 <= 1 .
+C5:    1 >= 1 .
+C6:    fld_keylength(dnskey_rec) + (1 - 1 + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+C7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C21:   length >= rr_type__linelengthindex__first .
+C22:   length <= rr_type__linelengthindex__last .
+C23:   true .
+C24:   1 >= integer__first .
+C25:   1 <= integer__last .
+C26:   1 >= 1 .
+C27:   1 <= 1 .
+C28:   1 >= rr_type__linelengthindex__first .
+C29:   1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from assertion of line 791 to assertion of line 808:
+
+procedure_addtokey_26.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) <> 
+           blank) and (element(s, [begidx + 1]) <> tab))) .
+H38:   begidx + 1 >= rr_type__linelengthindex__first .
+H39:   begidx + 1 <= rr_type__linelengthindex__last .
+H40:   begidx + 1 >= rr_type__linelengthindex__first .
+H41:   begidx + 1 <= rr_type__linelengthindex__last .
+H42:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           integer__base__first .
+H43:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           integer__base__last .
+H44:   begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+H45:   begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+H46:   begidx + 1 - (begidx + 1) >= integer__base__first .
+H47:   begidx + 1 - (begidx + 1) <= integer__base__last .
+H48:   not (fld_keylength(dnskey_rec) + (begidx + 1 - (
+           begidx + 1) + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H49:   begidx + 1 >= rr_type__linelengthindex__first .
+H50:   begidx + 1 <= rr_type__linelengthindex__last .
+H51:   begidx + 1 >= rr_type__linelengthindex__first .
+H52:   begidx + 1 <= rr_type__linelengthindex__last .
+H53:   begidx + 1 >= integer__first .
+H54:   begidx + 1 <= integer__last .
+H55:   begidx + 1 >= integer__first .
+H56:   begidx + 1 <= integer__last .
+H57:   (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+H58:   (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+H59:   begidx + 1 >= rr_type__linelengthindex__first .
+H60:   begidx + 1 <= rr_type__linelengthindex__last .
+H61:   begidx + 1 >= rr_type__linelengthindex__first .
+H62:   begidx + 1 <= rr_type__linelengthindex__last .
+H63:   begidx + 1 <= begidx + 1 .
+        ->
+C1:    begidx + 1 = begidx + 1 .
+C2:    begidx + 1 = begidx + 1 .
+C3:    begidx + 1 >= begidx + 1 .
+C4:    begidx + 1 <= begidx + 1 .
+C5:    begidx + 1 >= 1 .
+C6:    fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+C7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C21:   length >= rr_type__linelengthindex__first .
+C22:   length <= rr_type__linelengthindex__last .
+C23:   true .
+C24:   begidx + 1 >= integer__first .
+C25:   begidx + 1 <= integer__last .
+C26:   begidx + 1 >= begidx + 1 .
+C27:   begidx + 1 <= begidx + 1 .
+C28:   begidx + 1 >= rr_type__linelengthindex__first .
+C29:   begidx + 1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from assertion of line 798 to assertion of line 808:
+
+procedure_addtokey_27.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   not ((endidx + 1 < length) and ((element(s, [endidx + 1]) <> 
+           blank) and (element(s, [endidx + 1]) <> tab))) .
+H31:   begidx >= rr_type__linelengthindex__first .
+H32:   begidx <= rr_type__linelengthindex__last .
+H33:   endidx + 1 >= rr_type__linelengthindex__first .
+H34:   endidx + 1 <= rr_type__linelengthindex__last .
+H35:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           integer__base__first .
+H36:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           integer__base__last .
+H37:   endidx + 1 - begidx + 1 >= integer__base__first .
+H38:   endidx + 1 - begidx + 1 <= integer__base__last .
+H39:   endidx + 1 - begidx >= integer__base__first .
+H40:   endidx + 1 - begidx <= integer__base__last .
+H41:   not (fld_keylength(dnskey_rec) + (endidx + 1 - 
+           begidx + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H42:   begidx >= rr_type__linelengthindex__first .
+H43:   begidx <= rr_type__linelengthindex__last .
+H44:   endidx + 1 >= rr_type__linelengthindex__first .
+H45:   endidx + 1 <= rr_type__linelengthindex__last .
+H46:   endidx + 1 >= integer__first .
+H47:   endidx + 1 <= integer__last .
+H48:   begidx >= integer__first .
+H49:   begidx <= integer__last .
+H50:   (begidx <= endidx + 1) -> ((endidx + 1 >= integer__first) and (
+           endidx + 1 <= integer__last)) .
+H51:   (begidx <= endidx + 1) -> ((begidx >= integer__first) and (
+           begidx <= integer__last)) .
+H52:   begidx >= rr_type__linelengthindex__first .
+H53:   begidx <= rr_type__linelengthindex__last .
+H54:   endidx + 1 >= rr_type__linelengthindex__first .
+H55:   endidx + 1 <= rr_type__linelengthindex__last .
+H56:   begidx <= endidx + 1 .
+        ->
+C1:    begidx = begidx .
+C2:    endidx + 1 = endidx + 1 .
+C3:    begidx >= begidx .
+C4:    begidx <= endidx + 1 .
+C5:    begidx >= 1 .
+C6:    fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+C7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+C10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+C11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+C12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+C13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+C14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+C15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+C16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+C17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+C18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+C19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+C20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C21:   length >= rr_type__linelengthindex__first .
+C22:   length <= rr_type__linelengthindex__last .
+C23:   true .
+C24:   begidx >= integer__first .
+C25:   begidx <= integer__last .
+C26:   begidx >= begidx .
+C27:   begidx <= endidx + 1 .
+C28:   endidx + 1 >= rr_type__linelengthindex__first .
+C29:   endidx + 1 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from assertion of line 808 to assertion of line 808:
+
+procedure_addtokey_28.
+H1:    begidx = begidx .
+H2:    endidx = endidx__entry__loop__3 .
+H3:    loop__3__i >= begidx .
+H4:    loop__3__i <= endidx .
+H5:    begidx >= 1 .
+H6:    fld_keylength(dnskey_rec) + (endidx - begidx + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+H7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H21:   length >= rr_type__linelengthindex__first .
+H22:   length <= rr_type__linelengthindex__last .
+H23:   true .
+H24:   loop__3__i >= integer__first .
+H25:   loop__3__i <= integer__last .
+H26:   loop__3__i >= begidx .
+H27:   loop__3__i <= endidx__entry__loop__3 .
+H28:   endidx__entry__loop__3 >= rr_type__linelengthindex__first .
+H29:   endidx__entry__loop__3 <= rr_type__linelengthindex__last .
+H30:   element(s, [loop__3__i]) >= character__first .
+H31:   element(s, [loop__3__i]) <= character__last .
+H32:   loop__3__i >= rr_type__linelengthindex__first .
+H33:   loop__3__i <= rr_type__linelengthindex__last .
+H34:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first .
+H35:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last .
+H36:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           integer__base__first .
+H37:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           integer__base__last .
+H38:   loop__3__i - begidx + 1 >= integer__base__first .
+H39:   loop__3__i - begidx + 1 <= integer__base__last .
+H40:   loop__3__i - begidx >= integer__base__first .
+H41:   loop__3__i - begidx <= integer__base__last .
+H42:   not (loop__3__i = endidx__entry__loop__3) .
+        ->
+C1:    begidx = begidx .
+C2:    endidx = endidx__entry__loop__3 .
+C3:    loop__3__i + 1 >= begidx .
+C4:    loop__3__i + 1 <= endidx .
+C5:    begidx >= 1 .
+C6:    fld_keylength(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) + (
+           endidx - begidx + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+C7:    fld_keylength(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C8:    fld_keylength(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))), [
+           i___1]) >= character__first) and (element(fld_key(upf_key(
+           dnskey_rec, update(fld_key(dnskey_rec), [fld_keylength(
+           dnskey_rec) + (loop__3__i - begidx + 1)], element(
+           s, [loop__3__i])))), [i___1]) <= character__last))) .
+C10:   fld_algorithm(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) >= 
+           unsigned_types__unsigned8__first .
+C11:   fld_algorithm(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) <= 
+           unsigned_types__unsigned8__last .
+C12:   fld_protocol(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) >= 
+           unsigned_types__unsigned8__first .
+C13:   fld_protocol(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) <= 
+           unsigned_types__unsigned8__last .
+C14:   fld_flags(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) >= 
+           unsigned_types__unsigned16__first .
+C15:   fld_flags(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) <= 
+           unsigned_types__unsigned16__last .
+C16:   fld_class(fld_inherit(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i]))))) >= 
+           rr_type__classtype__first .
+C17:   fld_class(fld_inherit(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i]))))) <= 
+           rr_type__classtype__last .
+C18:   fld_ttlinseconds(fld_inherit(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i]))))) >= 
+           unsigned_types__unsigned32__first .
+C19:   fld_ttlinseconds(fld_inherit(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i]))))) <= 
+           unsigned_types__unsigned32__last .
+C20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+C21:   length >= rr_type__linelengthindex__first .
+C22:   length <= rr_type__linelengthindex__last .
+C23:   true .
+C24:   loop__3__i + 1 >= integer__first .
+C25:   loop__3__i + 1 <= integer__last .
+C26:   loop__3__i + 1 >= begidx .
+C27:   loop__3__i + 1 <= endidx__entry__loop__3 .
+C28:   endidx__entry__loop__3 >= rr_type__linelengthindex__first .
+C29:   endidx__entry__loop__3 <= rr_type__linelengthindex__last .
+ 
+
+For path(s) from assertion of line 808 to run-time check associated with statement of line 811:
+
+procedure_addtokey_29.
+H1:    begidx = begidx .
+H2:    endidx = endidx__entry__loop__3 .
+H3:    loop__3__i >= begidx .
+H4:    loop__3__i <= endidx .
+H5:    begidx >= 1 .
+H6:    fld_keylength(dnskey_rec) + (endidx - begidx + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+H7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H21:   length >= rr_type__linelengthindex__first .
+H22:   length <= rr_type__linelengthindex__last .
+H23:   true .
+H24:   loop__3__i >= integer__first .
+H25:   loop__3__i <= integer__last .
+H26:   loop__3__i >= begidx .
+H27:   loop__3__i <= endidx__entry__loop__3 .
+H28:   endidx__entry__loop__3 >= rr_type__linelengthindex__first .
+H29:   endidx__entry__loop__3 <= rr_type__linelengthindex__last .
+        ->
+C1:    element(s, [loop__3__i]) >= character__first .
+C2:    element(s, [loop__3__i]) <= character__last .
+C3:    loop__3__i >= rr_type__linelengthindex__first .
+C4:    loop__3__i <= rr_type__linelengthindex__last .
+C5:    fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first .
+C6:    fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last .
+C7:    fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           integer__base__first .
+C8:    fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           integer__base__last .
+C9:    loop__3__i - begidx + 1 >= integer__base__first .
+C10:   loop__3__i - begidx + 1 <= integer__base__last .
+C11:   loop__3__i - begidx >= integer__base__first .
+C12:   loop__3__i - begidx <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 814:
+
+procedure_addtokey_30.
+H1:    true .
+H2:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H3:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H4:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H5:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H6:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H7:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H8:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H9:    fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H10:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H11:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H12:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H13:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H15:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H16:   length >= rr_type__linelengthindex__first .
+H17:   length <= rr_type__linelengthindex__last .
+H18:   true .
+H19:   1 >= rr_type__linelengthindex__first .
+H20:   1 <= rr_type__linelengthindex__last .
+H21:   1 >= rr_type__linelengthindex__first .
+H22:   1 <= rr_type__linelengthindex__last .
+H23:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H24:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H25:   not ((1 < length) and ((element(s, [1]) = blank) or (element(
+           s, [1]) = tab))) .
+H26:   1 >= rr_type__linelengthindex__first .
+H27:   1 <= rr_type__linelengthindex__last .
+H28:   1 >= rr_type__linelengthindex__first .
+H29:   1 <= rr_type__linelengthindex__last .
+H30:   1 >= rr_type__linelengthindex__first .
+H31:   1 <= rr_type__linelengthindex__last .
+H32:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H33:   (1 < length) -> ((1 >= rr_type__linelengthindex__first) and (1 <= 
+           rr_type__linelengthindex__last)) .
+H34:   not ((1 < length) and ((element(s, [1]) <> blank) and (element(
+           s, [1]) <> tab))) .
+H35:   1 >= rr_type__linelengthindex__first .
+H36:   1 <= rr_type__linelengthindex__last .
+H37:   1 >= rr_type__linelengthindex__first .
+H38:   1 <= rr_type__linelengthindex__last .
+H39:   fld_keylength(dnskey_rec) + (1 - 1 + 1) >= integer__base__first .
+H40:   fld_keylength(dnskey_rec) + (1 - 1 + 1) <= integer__base__last .
+H41:   1 - 1 + 1 >= integer__base__first .
+H42:   1 - 1 + 1 <= integer__base__last .
+H43:   1 - 1 >= integer__base__first .
+H44:   1 - 1 <= integer__base__last .
+H45:   not (fld_keylength(dnskey_rec) + (1 - 1 + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H46:   1 >= rr_type__linelengthindex__first .
+H47:   1 <= rr_type__linelengthindex__last .
+H48:   1 >= rr_type__linelengthindex__first .
+H49:   1 <= rr_type__linelengthindex__last .
+H50:   1 >= integer__first .
+H51:   1 <= integer__last .
+H52:   1 >= integer__first .
+H53:   1 <= integer__last .
+H54:   (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+H55:   (1 <= 1) -> ((1 >= integer__first) and (1 <= integer__last)) .
+H56:   1 >= rr_type__linelengthindex__first .
+H57:   1 <= rr_type__linelengthindex__last .
+H58:   1 >= rr_type__linelengthindex__first .
+H59:   1 <= rr_type__linelengthindex__last .
+H60:   not (1 <= 1) .
+H61:   1 >= rr_type__linelengthindex__first .
+H62:   1 <= rr_type__linelengthindex__last .
+H63:   1 >= rr_type__linelengthindex__first .
+H64:   1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (1 - 1 + 1) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C2:    fld_keylength(dnskey_rec) + (1 - 1 + 1) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C3:    1 - 1 + 1 >= integer__base__first .
+C4:    1 - 1 + 1 <= integer__base__last .
+C5:    1 - 1 >= integer__base__first .
+C6:    1 - 1 <= integer__base__last .
+ 
+
+For path(s) from assertion of line 791 to run-time check associated with statement of line 814:
+
+procedure_addtokey_31.
+H1:    begidx >= 1 .
+H2:    begidx < length .
+H3:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H4:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H6:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H7:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H8:    fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H11:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H12:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H13:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H14:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H15:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H16:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H17:   length >= rr_type__linelengthindex__first .
+H18:   length <= rr_type__linelengthindex__last .
+H19:   true .
+H20:   begidx >= rr_type__linelengthindex__first .
+H21:   begidx <= rr_type__linelengthindex__last .
+H22:   begidx + 1 >= rr_type__linelengthindex__first .
+H23:   begidx + 1 <= rr_type__linelengthindex__last .
+H24:   begidx + 1 >= rr_type__linelengthindex__first .
+H25:   begidx + 1 <= rr_type__linelengthindex__last .
+H26:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H27:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H28:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) = 
+           blank) or (element(s, [begidx + 1]) = tab))) .
+H29:   begidx + 1 >= rr_type__linelengthindex__first .
+H30:   begidx + 1 <= rr_type__linelengthindex__last .
+H31:   begidx + 1 >= rr_type__linelengthindex__first .
+H32:   begidx + 1 <= rr_type__linelengthindex__last .
+H33:   begidx + 1 >= rr_type__linelengthindex__first .
+H34:   begidx + 1 <= rr_type__linelengthindex__last .
+H35:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H36:   (begidx + 1 < length) -> ((begidx + 1 >= 
+           rr_type__linelengthindex__first) and (begidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H37:   not ((begidx + 1 < length) and ((element(s, [begidx + 1]) <> 
+           blank) and (element(s, [begidx + 1]) <> tab))) .
+H38:   begidx + 1 >= rr_type__linelengthindex__first .
+H39:   begidx + 1 <= rr_type__linelengthindex__last .
+H40:   begidx + 1 >= rr_type__linelengthindex__first .
+H41:   begidx + 1 <= rr_type__linelengthindex__last .
+H42:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           integer__base__first .
+H43:   fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           integer__base__last .
+H44:   begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+H45:   begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+H46:   begidx + 1 - (begidx + 1) >= integer__base__first .
+H47:   begidx + 1 - (begidx + 1) <= integer__base__last .
+H48:   not (fld_keylength(dnskey_rec) + (begidx + 1 - (
+           begidx + 1) + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H49:   begidx + 1 >= rr_type__linelengthindex__first .
+H50:   begidx + 1 <= rr_type__linelengthindex__last .
+H51:   begidx + 1 >= rr_type__linelengthindex__first .
+H52:   begidx + 1 <= rr_type__linelengthindex__last .
+H53:   begidx + 1 >= integer__first .
+H54:   begidx + 1 <= integer__last .
+H55:   begidx + 1 >= integer__first .
+H56:   begidx + 1 <= integer__last .
+H57:   (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+H58:   (begidx + 1 <= begidx + 1) -> ((begidx + 1 >= 
+           integer__first) and (begidx + 1 <= integer__last)) .
+H59:   begidx + 1 >= rr_type__linelengthindex__first .
+H60:   begidx + 1 <= rr_type__linelengthindex__last .
+H61:   begidx + 1 >= rr_type__linelengthindex__first .
+H62:   begidx + 1 <= rr_type__linelengthindex__last .
+H63:   not (begidx + 1 <= begidx + 1) .
+H64:   begidx + 1 >= rr_type__linelengthindex__first .
+H65:   begidx + 1 <= rr_type__linelengthindex__last .
+H66:   begidx + 1 >= rr_type__linelengthindex__first .
+H67:   begidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C2:    fld_keylength(dnskey_rec) + (begidx + 1 - (begidx + 1) + 1) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C3:    begidx + 1 - (begidx + 1) + 1 >= integer__base__first .
+C4:    begidx + 1 - (begidx + 1) + 1 <= integer__base__last .
+C5:    begidx + 1 - (begidx + 1) >= integer__base__first .
+C6:    begidx + 1 - (begidx + 1) <= integer__base__last .
+ 
+
+For path(s) from assertion of line 798 to run-time check associated with statement of line 814:
+
+procedure_addtokey_32.
+H1:    begidx >= 1 .
+H2:    begidx <= endidx .
+H3:    endidx >= 1 .
+H4:    endidx < length .
+H5:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H6:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H7:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H8:    fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H9:    fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H10:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H13:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H14:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H15:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H16:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H17:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H18:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H19:   length >= rr_type__linelengthindex__first .
+H20:   length <= rr_type__linelengthindex__last .
+H21:   true .
+H22:   endidx >= rr_type__linelengthindex__first .
+H23:   endidx <= rr_type__linelengthindex__last .
+H24:   endidx + 1 >= rr_type__linelengthindex__first .
+H25:   endidx + 1 <= rr_type__linelengthindex__last .
+H26:   endidx + 1 >= rr_type__linelengthindex__first .
+H27:   endidx + 1 <= rr_type__linelengthindex__last .
+H28:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H29:   (endidx + 1 < length) -> ((endidx + 1 >= 
+           rr_type__linelengthindex__first) and (endidx + 1 <= 
+           rr_type__linelengthindex__last)) .
+H30:   not ((endidx + 1 < length) and ((element(s, [endidx + 1]) <> 
+           blank) and (element(s, [endidx + 1]) <> tab))) .
+H31:   begidx >= rr_type__linelengthindex__first .
+H32:   begidx <= rr_type__linelengthindex__last .
+H33:   endidx + 1 >= rr_type__linelengthindex__first .
+H34:   endidx + 1 <= rr_type__linelengthindex__last .
+H35:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           integer__base__first .
+H36:   fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           integer__base__last .
+H37:   endidx + 1 - begidx + 1 >= integer__base__first .
+H38:   endidx + 1 - begidx + 1 <= integer__base__last .
+H39:   endidx + 1 - begidx >= integer__base__first .
+H40:   endidx + 1 - begidx <= integer__base__last .
+H41:   not (fld_keylength(dnskey_rec) + (endidx + 1 - 
+           begidx + 1) > 
+           rr_type__dnskey_record_type__maxdnskeylength) .
+H42:   begidx >= rr_type__linelengthindex__first .
+H43:   begidx <= rr_type__linelengthindex__last .
+H44:   endidx + 1 >= rr_type__linelengthindex__first .
+H45:   endidx + 1 <= rr_type__linelengthindex__last .
+H46:   endidx + 1 >= integer__first .
+H47:   endidx + 1 <= integer__last .
+H48:   begidx >= integer__first .
+H49:   begidx <= integer__last .
+H50:   (begidx <= endidx + 1) -> ((endidx + 1 >= integer__first) and (
+           endidx + 1 <= integer__last)) .
+H51:   (begidx <= endidx + 1) -> ((begidx >= integer__first) and (
+           begidx <= integer__last)) .
+H52:   begidx >= rr_type__linelengthindex__first .
+H53:   begidx <= rr_type__linelengthindex__last .
+H54:   endidx + 1 >= rr_type__linelengthindex__first .
+H55:   endidx + 1 <= rr_type__linelengthindex__last .
+H56:   not (begidx <= endidx + 1) .
+H57:   begidx >= rr_type__linelengthindex__first .
+H58:   begidx <= rr_type__linelengthindex__last .
+H59:   endidx + 1 >= rr_type__linelengthindex__first .
+H60:   endidx + 1 <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C2:    fld_keylength(dnskey_rec) + (endidx + 1 - begidx + 1) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C3:    endidx + 1 - begidx + 1 >= integer__base__first .
+C4:    endidx + 1 - begidx + 1 <= integer__base__last .
+C5:    endidx + 1 - begidx >= integer__base__first .
+C6:    endidx + 1 - begidx <= integer__base__last .
+ 
+
+For path(s) from assertion of line 808 to run-time check associated with statement of line 814:
+
+procedure_addtokey_33.
+H1:    begidx = begidx .
+H2:    endidx = endidx__entry__loop__3 .
+H3:    loop__3__i >= begidx .
+H4:    loop__3__i <= endidx .
+H5:    begidx >= 1 .
+H6:    fld_keylength(dnskey_rec) + (endidx - begidx + 1) <= 
+           rr_type__dnskey_record_type__maxdnskeylength .
+H7:    fld_keylength(dnskey_rec) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+H8:    fld_keylength(dnskey_rec) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+H9:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first) and (
+           i___1 <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last)) -> ((element(
+           fld_key(dnskey_rec), [i___1]) >= character__first) and (element(
+           fld_key(dnskey_rec), [i___1]) <= character__last))) .
+H10:   fld_algorithm(dnskey_rec) >= unsigned_types__unsigned8__first .
+H11:   fld_algorithm(dnskey_rec) <= unsigned_types__unsigned8__last .
+H12:   fld_protocol(dnskey_rec) >= unsigned_types__unsigned8__first .
+H13:   fld_protocol(dnskey_rec) <= unsigned_types__unsigned8__last .
+H14:   fld_flags(dnskey_rec) >= unsigned_types__unsigned16__first .
+H15:   fld_flags(dnskey_rec) <= unsigned_types__unsigned16__last .
+H16:   fld_class(fld_inherit(dnskey_rec)) >= 
+           rr_type__classtype__first .
+H17:   fld_class(fld_inherit(dnskey_rec)) <= 
+           rr_type__classtype__last .
+H18:   fld_ttlinseconds(fld_inherit(dnskey_rec)) >= 
+           unsigned_types__unsigned32__first .
+H19:   fld_ttlinseconds(fld_inherit(dnskey_rec)) <= 
+           unsigned_types__unsigned32__last .
+H20:   for_all(i___1: integer, ((i___1 >= 
+           rr_type__linelengthindex__first) and (i___1 <= 
+           rr_type__linelengthindex__last)) -> ((element(s, [
+           i___1]) >= character__first) and (element(s, [
+           i___1]) <= character__last))) .
+H21:   length >= rr_type__linelengthindex__first .
+H22:   length <= rr_type__linelengthindex__last .
+H23:   true .
+H24:   loop__3__i >= integer__first .
+H25:   loop__3__i <= integer__last .
+H26:   loop__3__i >= begidx .
+H27:   loop__3__i <= endidx__entry__loop__3 .
+H28:   endidx__entry__loop__3 >= rr_type__linelengthindex__first .
+H29:   endidx__entry__loop__3 <= rr_type__linelengthindex__last .
+H30:   element(s, [loop__3__i]) >= character__first .
+H31:   element(s, [loop__3__i]) <= character__last .
+H32:   loop__3__i >= rr_type__linelengthindex__first .
+H33:   loop__3__i <= rr_type__linelengthindex__last .
+H34:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__first .
+H35:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           rr_type__dnskey_record_type__dnskeystringtypeindex__last .
+H36:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) >= 
+           integer__base__first .
+H37:   fld_keylength(dnskey_rec) + (loop__3__i - begidx + 1) <= 
+           integer__base__last .
+H38:   loop__3__i - begidx + 1 >= integer__base__first .
+H39:   loop__3__i - begidx + 1 <= integer__base__last .
+H40:   loop__3__i - begidx >= integer__base__first .
+H41:   loop__3__i - begidx <= integer__base__last .
+H42:   loop__3__i = endidx__entry__loop__3 .
+H43:   begidx >= rr_type__linelengthindex__first .
+H44:   begidx <= rr_type__linelengthindex__last .
+H45:   endidx >= rr_type__linelengthindex__first .
+H46:   endidx <= rr_type__linelengthindex__last .
+        ->
+C1:    fld_keylength(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) + (
+           endidx - begidx + 1) >= 
+           rr_type__dnskey_record_type__keylengthvaluetype__first .
+C2:    fld_keylength(upf_key(dnskey_rec, update(fld_key(
+           dnskey_rec), [fld_keylength(dnskey_rec) + (
+           loop__3__i - begidx + 1)], element(s, [loop__3__i])))) + (
+           endidx - begidx + 1) <= 
+           rr_type__dnskey_record_type__keylengthvaluetype__last .
+C3:    endidx - begidx + 1 >= integer__base__first .
+C4:    endidx - begidx + 1 <= integer__base__last .
+C5:    endidx - begidx >= integer__base__first .
+C6:    endidx - begidx <= integer__base__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_addtokey_34.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_addtokey_35.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 791 to finish:
+
+procedure_addtokey_36.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_addtokey_37.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 798 to finish:
+
+procedure_addtokey_38.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_addtokey_39.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 808 to finish:
+
+procedure_addtokey_40.
+*** true .          /* trivially true VC removed by Examiner */
+
+

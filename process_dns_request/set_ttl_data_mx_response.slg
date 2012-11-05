@@ -1,0 +1,1552 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_MX_Response
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_1.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+***  Proved C1:  fld_ttlinseconds(fld_inherit(mx_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H12.
+***  Proved C2:  fld_ttlinseconds(fld_inherit(mx_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H13.
+***  Proved C3:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H5.
+***  Proved C4:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H6.
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8172 - current_name_length
+<S>  New H6:  start_byte <= 8180
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New C5:  start_byte <= 8177
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H1 (redundant, given H14).
+---  Eliminated hypothesis H6 (redundant, given H3 & H14).
+     +++  New H16:  integer__size >= 0
+     +++  New H17:  character__size >= 0
+     +++  New H18:  positive__size >= 0
+     +++  New H19:  dns_types__packet_bytes_range__size >= 0
+     +++  New H20:  unsigned_types__unsigned16__size >= 0
+     +++  New H21:  unsigned_types__unsigned32__size >= 0
+     +++  New H22:  rr_type__classtype__size >= 0
+     +++  New H23:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H24:  rr_type__resourcerecordtype__size >= 0
+     +++  New H25:  rr_type__mx_record_type__mxrecordtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_2.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+***  Proved C3:  start_byte + 4 >= dns_types__packet_bytes_range__first
+     using hypothesis H5.
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+<S>  New C1:  current_name_length >= - 2
+<S>  New C6:  current_name_length >= - 2
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+<S>  New C2:  current_name_length <= 65533
+<S>  New C7:  current_name_length <= 65533
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8172 - current_name_length
+<S>  New H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> dns_types__byte__first <= element(bytes, [
+          i___1]) and element(bytes, [i___1]) <= dns_types__byte__last)
+<S>  New H6:  start_byte <= 8180
+<S>  New H20:  start_byte <= 8177
+<S>  New H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> dns_types__byte__first <= element(
+          bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New C4:  start_byte <= 8176
+<S>  New C5:  start_byte <= 8175
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C8:  current_name_length >= - 2147483650
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C9:  current_name_length <= 2147483645
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C10:  start_byte >= - 2147483652
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C11:  start_byte <= 2147483643
+***  Proved C1:  current_name_length >= - 2
+     using hypothesis H1.
+***  Proved C6:  current_name_length >= - 2
+     using hypothesis H1.
+***  Proved C8:  current_name_length >= - 2147483650
+     using hypothesis H1.
+***  Proved C11:  start_byte <= 2147483643
+     using hypothesis H6.
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+***  Proved C2:  current_name_length <= 65533
+     using hypothesis H2.
+***  Proved C7:  current_name_length <= 65533
+     using hypothesis H2.
+***  Proved C9:  current_name_length <= 2147483645
+     using hypothesis H2.
+***  Proved C10:  start_byte >= - 2147483652
+     using hypothesis H5.
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H17 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H1 (redundant, given H14).
+---  Eliminated hypothesis H6 (redundant, given H20).
+---  Eliminated hypothesis H20 (redundant, given H3 & H14).
+     +++  New H22:  integer__size >= 0
+     +++  New H23:  character__size >= 0
+     +++  New H24:  positive__size >= 0
+     +++  New H25:  dns_types__packet_bytes_range__size >= 0
+     +++  New H26:  unsigned_types__unsigned16__size >= 0
+     +++  New H27:  unsigned_types__unsigned32__size >= 0
+     +++  New H28:  rr_type__classtype__size >= 0
+     +++  New H29:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H30:  rr_type__resourcerecordtype__size >= 0
+     +++  New H31:  rr_type__mx_record_type__mxrecordtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_3.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+***  Proved C1:  fld_pref(mx_record) >= unsigned_types__unsigned16__first
+     using hypothesis H8.
+***  Proved C2:  fld_pref(mx_record) <= unsigned_types__unsigned16__last
+     using hypothesis H9.
+***  Proved C3:  start_byte + 6 >= dns_types__packet_bytes_range__first
+     using hypothesis H5.
+***  Proved C6:  start_byte + 6 >= dns_types__packet_bytes_range__base__first
+     using hypothesis H31.
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8172 - current_name_length
+<S>  New H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> dns_types__byte__first <= element(bytes, [
+          i___1]) and element(bytes, [i___1]) <= dns_types__byte__last)
+<S>  New H6:  start_byte <= 8180
+<S>  New H20:  start_byte <= 8177
+<S>  New H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> dns_types__byte__first <= element(
+          bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H25:  start_byte <= 8176
+<S>  New H26:  start_byte <= 8175
+<S>  New H33:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> dns_types__byte__first <= element(
+          bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New C4:  start_byte <= 8174
+<S>  New C5:  start_byte <= 8173
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H32:  start_byte <= 2147483643
+<S>  New C7:  start_byte <= 2147483641
+***  Proved C7:  start_byte <= 2147483641
+     using hypothesis H6.
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H29:  current_name_length >= - 2147483650
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H30:  current_name_length <= 2147483645
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New H24:  start_byte >= - 3
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H31:  start_byte >= - 2147483652
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+<S>  New H22:  current_name_length >= - 2
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+<S>  New H23:  current_name_length <= 65533
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+---  Eliminated hypothesis H15 (true-hypothesis).
+---  Eliminated hypothesis H16 (true-hypothesis).
+---  Eliminated hypothesis H17 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H27 (true-hypothesis).
+---  Eliminated hypothesis H28 (true-hypothesis).
+---  Eliminated hypothesis H1 (redundant, given H14).
+---  Eliminated hypothesis H6 (redundant, given H20).
+---  Eliminated hypothesis H20 (redundant, given H25).
+---  Eliminated hypothesis H22 (redundant, given H14).
+---  Eliminated hypothesis H23 (redundant, given H2).
+---  Eliminated hypothesis H24 (redundant, given H5).
+---  Eliminated hypothesis H25 (redundant, given H26).
+---  Eliminated hypothesis H26 (redundant, given H3 & H14).
+---  Eliminated hypothesis H29 (redundant, given H14).
+---  Eliminated hypothesis H30 (redundant, given H2).
+---  Eliminated hypothesis H31 (redundant, given H5).
+---  Eliminated hypothesis H32 (redundant, given H3 & H14).
+***  Proved C4:  start_byte <= 8174
+     via its standard form, which is:
+     Std.Fm C4:  - start_byte > - 8175
+     using hypotheses H3 & H22.
+     +++  New H34:  integer__size >= 0
+     +++  New H35:  character__size >= 0
+     +++  New H36:  positive__size >= 0
+     +++  New H37:  dns_types__packet_bytes_range__size >= 0
+     +++  New H38:  unsigned_types__unsigned16__size >= 0
+     +++  New H39:  unsigned_types__unsigned32__size >= 0
+     +++  New H40:  rr_type__classtype__size >= 0
+     +++  New H41:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H42:  rr_type__resourcerecordtype__size >= 0
+     +++  New H43:  rr_type__mx_record_type__mxrecordtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_4.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as H9)
+          .
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  current_name_length >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule set_ttl_data_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  current_name_length <= 2147483647
+<S>  New C4:  true
+***  Proved C1:  current_name_length >= - 2147483648
+     using hypothesis H1.
+***  Proved C3:  true
+***  Proved C4:  true
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H29:  current_name_length >= - 2147483650
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H30:  current_name_length <= 2147483645
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H24:  start_byte >= - 3
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H36:  start_byte >= - 5
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8172 - current_name_length
+<S>  New H6:  start_byte <= 8180
+<S>  New H20:  start_byte <= 8177
+<S>  New H25:  start_byte <= 8176
+<S>  New H26:  start_byte <= 8175
+<S>  New H37:  start_byte <= 8174
+<S>  New H38:  start_byte <= 8173
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H31:  start_byte >= - 2147483652
+<S>  New H39:  start_byte >= - 2147483654
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H32:  start_byte <= 2147483643
+<S>  New H40:  start_byte <= 2147483641
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+<S>  New H22:  current_name_length >= - 2
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+<S>  New H23:  current_name_length <= 65533
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+***  Proved C2:  current_name_length <= 2147483647
+     using hypothesis H30.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_5.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as H9)
+          .
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+***  Proved C1:  1 <= current_name_length -> current_name_length >= 
+          rr_type__wirestringtypeindex__first and current_name_length <= 
+          rr_type__wirestringtypeindex__last
+     using hypotheses H2 & H14.
+-S-  Applied substitution rule set_ttl_data_rules(2).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H42:  current_name_length >= - 2147483648
+<S>  New H44:  true
+-S-  Applied substitution rule set_ttl_data_rules(3).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H43:  current_name_length <= 2147483647
+<S>  New H45:  true
+-S-  Applied substitution rule set_ttl_data_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H29:  current_name_length >= - 2147483650
+-S-  Applied substitution rule set_ttl_data_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H30:  current_name_length <= 2147483645
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H24:  start_byte >= - 3
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H36:  start_byte >= - 5
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H3:  start_byte <= 8172 - current_name_length
+<S>  New H6:  start_byte <= 8180
+<S>  New H20:  start_byte <= 8177
+<S>  New H25:  start_byte <= 8176
+<S>  New H26:  start_byte <= 8175
+<S>  New H37:  start_byte <= 8174
+<S>  New H38:  start_byte <= 8173
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H31:  start_byte >= - 2147483652
+<S>  New H39:  start_byte >= - 2147483654
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H32:  start_byte <= 2147483643
+<S>  New H40:  start_byte <= 2147483641
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New H21:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__1, [i___1]) and element(bytes__1, [i___1]) <= 255)
+<S>  New H33:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__2, [i___1]) and element(bytes__2, [i___1]) <= 255)
+<S>  New H41:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes__3, [i___1]) and element(bytes__3, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+<S>  New H22:  current_name_length >= - 2
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+<S>  New H23:  current_name_length <= 65533
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+<S>  New C2:  1 <= current_name_length -> 1 <= 
+          rr_type__wirestringtypeindex__last
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H2:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+<S>  New C2:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_6.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H6)
+          .
+%%%  Simplified H21 on reading formula in, to give:
+     %%%  H21:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__1, [i___1]) and element(
+          bytes__1, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified H33 on reading formula in, to give:
+     %%%  H33:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__2, [i___1]) and element(
+          bytes__2, [i___1]) <= dns_types__byte__last)
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as H9)
+          .
+%%%  Simplified H41 on reading formula in, to give:
+     %%%  H41:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+%%%  Simplified C21 on reading formula in, to give:
+     %%%  C21:  true
+***  Proved C1:  start_byte <= dns_types__packet_bytes_range__last - 8 - 
+          current_name_length
+     using hypothesis H3.
+***  Proved C3:  1 <= rr_type__wirestringtypeindex__last
+     using hypotheses H2 & H48.
+***  Proved C4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes__3, [i___1]) and element(
+          bytes__3, [i___1]) <= dns_types__byte__last)
+     using hypothesis H41.
+***  Proved C5:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H5.
+***  Proved C6:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H6.
+***  Proved C7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+     using hypothesis H7.
+***  Proved C8:  fld_pref(mx_record) >= unsigned_types__unsigned16__first
+     using hypothesis H8.
+***  Proved C9:  fld_pref(mx_record) <= unsigned_types__unsigned16__last
+     using hypothesis H9.
+***  Proved C10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+     using hypothesis H10.
+***  Proved C11:  fld_class(fld_inherit(mx_record)) <= rr_type__classtype__last
+     using hypothesis H11.
+***  Proved C12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H12.
+***  Proved C13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H13.
+***  Proved C14:  current_name_length >= rr_type__wirestringtypeindex__first
+     using hypothesis H14.
+***  Proved C15:  current_name_length <= rr_type__wirestringtypeindex__last
+     using hypothesis H2.
+***  Proved C16:  current_name_length >= 0
+     using hypothesis H1.
+***  Proved C17:  current_name_length <= rr_type__wirestringtypeindex__last
+     using hypothesis H2.
+***  Proved C18:  start_byte <= dns_types__packet_bytes_range__last - 8 - 
+          current_name_length
+     using hypothesis H3.
+***  Proved C20:  1 <= rr_type__wirestringtypeindex__last
+     using hypotheses H2 & H48.
+***  Proved C21:  true
+***  Proved C22:  1 <= current_name_length
+     using hypothesis H48.
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+<S>  New H14:  current_name_length >= 1
+<S>  New H46:  1 <= current_name_length -> current_name_length >= 1 and 
+          current_name_length <= rr_type__wirestringtypeindex__last
+<S>  New H47:  1 <= current_name_length -> 1 <= 
+          rr_type__wirestringtypeindex__last
+<S>  New C2:  true
+<S>  New C19:  true
+***  Proved C2:  true
+***  Proved C19:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_7.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H1)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as H3)
+          .
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(update(bytes, [start_byte + 7 + 
+          loop__1__i], element(fld_mailexchanger(mx_record), [loop__1__i])), [
+          i___1]) and element(update(bytes, [start_byte + 7 + loop__1__i], 
+          element(fld_mailexchanger(mx_record), [loop__1__i])), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+%%%  Simplified C21 on reading formula in, to give:
+     %%%  C21:  loop__1__i >= 0
+***  Proved C1:  start_byte <= dns_types__packet_bytes_range__last - 8 - 
+          current_name_length
+     using hypothesis H1.
+***  Proved C2:  loop__1__i + 1 >= rr_type__wirestringtypeindex__first
+     using hypothesis H2.
+***  Proved C4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first 
+          <= i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(update(bytes, [start_byte + 7 + 
+          loop__1__i], element(fld_mailexchanger(mx_record), [loop__1__i])), [
+          i___1]) and element(update(bytes, [start_byte + 7 + loop__1__i], 
+          element(fld_mailexchanger(mx_record), [loop__1__i])), [i___1]) <= 
+          dns_types__byte__last)
+     using hypotheses H4, H23, H24, H29 & H30.
+***  Proved C5:  start_byte >= dns_types__packet_bytes_range__first
+     using hypothesis H5.
+***  Proved C6:  start_byte <= dns_types__packet_bytes_range__last
+     using hypothesis H6.
+***  Proved C7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+     using hypothesis H7.
+***  Proved C8:  fld_pref(mx_record) >= unsigned_types__unsigned16__first
+     using hypothesis H8.
+***  Proved C9:  fld_pref(mx_record) <= unsigned_types__unsigned16__last
+     using hypothesis H9.
+***  Proved C10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+     using hypothesis H10.
+***  Proved C11:  fld_class(fld_inherit(mx_record)) <= rr_type__classtype__last
+     using hypothesis H11.
+***  Proved C12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 
+          unsigned_types__unsigned32__first
+     using hypothesis H12.
+***  Proved C13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 
+          unsigned_types__unsigned32__last
+     using hypothesis H13.
+***  Proved C14:  current_name_length >= rr_type__wirestringtypeindex__first
+     using hypothesis H14.
+***  Proved C15:  current_name_length <= rr_type__wirestringtypeindex__last
+     using hypothesis H15.
+***  Proved C16:  current_name_length >= 0
+     using hypothesis H16.
+***  Proved C17:  current_name_length <= rr_type__wirestringtypeindex__last
+     using hypothesis H15.
+***  Proved C18:  start_byte <= dns_types__packet_bytes_range__last - 8 - 
+          current_name_length
+     using hypothesis H1.
+***  Proved C19:  loop__1__i + 1 >= rr_type__wirestringtypeindex__first
+     using hypothesis H2.
+***  Proved C21:  loop__1__i >= 0
+     using hypothesis H21.
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  loop__1__i <= 129
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> character__first <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+<S>  New H15:  current_name_length <= 129
+<S>  New C3:  loop__1__i <= 128
+<S>  New C20:  loop__1__i <= 128
+***  Proved C3:  loop__1__i <= 128
+     using hypotheses H15, H22 & H37.
+***  Proved C20:  loop__1__i <= 128
+     using hypotheses H15, H22 & H37.
+>>>  Restructured hypothesis H37 into:
+     >>>  H37:  loop__1__i <> current_name_length
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> 0 <= element(fld_mailexchanger(mx_record), [
+          i___1]) and element(fld_mailexchanger(mx_record), [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= 129 -> 0 <= element(fld_mailexchanger(mx_record), [
+          i___1]) and element(fld_mailexchanger(mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          dns_types__packet_bytes_range__last -> dns_types__byte__first <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New H5:  start_byte >= 1
+<S>  New H29:  start_byte + 7 + loop__1__i >= 1
+<S>  New H33:  loop__1__i >= 1
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8172 - current_name_length
+<S>  New H6:  start_byte <= 8180
+<S>  New H30:  start_byte + 7 + loop__1__i <= 8180
+<S>  New H34:  loop__1__i <= 8180
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New H31:  start_byte + 7 + loop__1__i >= - 2147483648
+<S>  New H35:  start_byte >= - 2147483655
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New H32:  start_byte + 7 + loop__1__i <= 2147483647
+<S>  New H36:  start_byte <= 2147483640
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H23:  element(fld_mailexchanger(mx_record), [loop__1__i]) >= 0
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H24:  element(fld_mailexchanger(mx_record), [loop__1__i]) <= 255
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  loop__1__i >= 1
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+%%%  Hypotheses H22 & H37 together imply that
+          loop__1__i < current_name_length.
+     H22 & H37 have therefore been deleted and a new H38 added to this effect.
+***  Proved C22:  loop__1__i + 1 <= current_name_length
+     via its standard form, which is:
+     Std.Fm C22:  current_name_length - loop__1__i > 0
+     using hypothesis H38.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_8.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(bytes, [i___1]) and element(bytes, [
+          i___1]) <= dns_types__byte__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(fld_mailexchanger(mx_record), [i___1]) 
+          and element(fld_mailexchanger(mx_record), [i___1]) <= character__last)
+%%%  Simplified H10 on reading formula in, to give:
+     %%%  H10:  rr_type__classtype__first <= fld_class(fld_inherit(mx_record))
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H1)
+          .
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H3)
+          .
+***  Proved C5:  loop__1__i >= rr_type__wirestringtypeindex__first
+     using hypothesis H2.
+***  Proved C6:  loop__1__i <= rr_type__wirestringtypeindex__last
+     using hypothesis H3.
+***  Proved C7:  start_byte + 7 + loop__1__i >= 
+          dns_types__packet_bytes_range__first
+     using hypotheses H5 & H21.
+-S-  Applied substitution rule set_ttl_data_rules(23).
+     This was achieved by replacing all occurrences of dns_types__byte__first 
+          by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 
+          dns_types__byte__last)
+<S>  New C1:  element(fld_mailexchanger(mx_record), [loop__1__i]) >= 0
+<S>  New C3:  element(fld_mailexchanger(mx_record), [loop__1__i]) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(24).
+     This was achieved by replacing all occurrences of dns_types__byte__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C2:  element(fld_mailexchanger(mx_record), [loop__1__i]) <= 255
+<S>  New C4:  element(fld_mailexchanger(mx_record), [loop__1__i]) <= 255
+-S-  Applied substitution rule set_ttl_data_rules(18).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__last by:
+          8180.
+<S>  New H1:  start_byte <= 8172 - current_name_length
+<S>  New H6:  start_byte <= 8180
+<S>  New H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= 8180 -> 0 <= element(bytes, [i___1]) and element(
+          bytes, [i___1]) <= 255)
+<S>  New C8:  start_byte + 7 + loop__1__i <= 8180
+<S>  New C12:  loop__1__i <= 8180
+-S-  Applied substitution rule set_ttl_data_rules(19).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__first by:
+          - 2147483648.
+<S>  New C9:  start_byte + 7 + loop__1__i >= - 2147483648
+<S>  New C13:  start_byte >= - 2147483655
+-S-  Applied substitution rule set_ttl_data_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__base__last by:
+          2147483647.
+<S>  New C10:  start_byte + 7 + loop__1__i <= 2147483647
+<S>  New C14:  start_byte <= 2147483640
+-S-  Applied substitution rule set_ttl_data_rules(17).
+     This was achieved by replacing all occurrences of 
+          dns_types__packet_bytes_range__first by:
+          1.
+<S>  New H5:  start_byte >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= 
+          element(bytes, [i___1]) and element(bytes, [i___1]) <= 255)
+<S>  New C11:  loop__1__i >= 1
+***  Proved C9:  start_byte + 7 + loop__1__i >= - 2147483648
+     using hypotheses H5 & H21.
+***  Proved C13:  start_byte >= - 2147483655
+     using hypothesis H5.
+***  Proved C14:  start_byte <= 2147483640
+     using hypothesis H6.
+***  Proved C11:  loop__1__i >= 1
+     using hypothesis H21.
+-S-  Applied substitution rule set_ttl_data_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= character__last)
+-S-  Applied substitution rule set_ttl_data_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H7:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          fld_mailexchanger(mx_record), [i___1]) and element(fld_mailexchanger(
+          mx_record), [i___1]) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(29).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__first by:
+          0.
+<S>  New H8:  fld_pref(mx_record) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(30).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned16__last by:
+          65535.
+<S>  New H9:  fld_pref(mx_record) <= 65535
+-S-  Applied substitution rule set_ttl_data_rules(35).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H12:  fld_ttlinseconds(fld_inherit(mx_record)) >= 0
+-S-  Applied substitution rule set_ttl_data_rules(36).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H13:  fld_ttlinseconds(fld_inherit(mx_record)) <= 4294967295
+-S-  Applied substitution rule set_ttl_data_rules(41).
+     This was achieved by replacing all occurrences of 
+          rr_type__classtype__first by:
+          rr_type__internet.
+<S>  New H10:  rr_type__internet <= fld_class(fld_inherit(mx_record))
+-S-  Applied substitution rule set_ttl_data_rules(42).
+     This was achieved by replacing all occurrences of rr_type__classtype__last 
+          by:
+          rr_type__hs.
+<S>  New H11:  fld_class(fld_inherit(mx_record)) <= rr_type__hs
+-S-  Applied substitution rule set_ttl_data_rules(68).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  loop__1__i >= 1
+<S>  New H14:  current_name_length >= 1
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(fld_mailexchanger(
+          mx_record), [i___1]) and element(fld_mailexchanger(mx_record), [i___1]
+          ) <= 255)
+-S-  Applied substitution rule set_ttl_data_rules(69).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H3:  loop__1__i <= 129
+<S>  New H15:  current_name_length <= 129
+<S>  New H7:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(fld_mailexchanger(mx_record), [i___1]) and element(
+          fld_mailexchanger(mx_record), [i___1]) <= 255)
+***  Proved C1:  element(fld_mailexchanger(mx_record), [loop__1__i]) >= 0
+     using hypotheses H3, H7 & H21.
+***  Proved C3:  element(fld_mailexchanger(mx_record), [loop__1__i]) >= 0
+     using hypotheses H3, H7 & H21.
+***  Proved C2:  element(fld_mailexchanger(mx_record), [loop__1__i]) <= 255
+     using hypotheses H3, H7 & H21.
+***  Proved C4:  element(fld_mailexchanger(mx_record), [loop__1__i]) <= 255
+     using hypotheses H3, H7 & H21.
+***  Proved C12:  loop__1__i <= 8180
+     using hypothesis H3.
+***  Proved C10:  start_byte + 7 + loop__1__i <= 2147483647
+     using hypotheses H3 & H6.
+---  Eliminated hypothesis H17 (true-hypothesis).
+---  Eliminated hypothesis H18 (true-hypothesis).
+---  Eliminated hypothesis H19 (true-hypothesis).
+---  Eliminated hypothesis H20 (true-hypothesis).
+---  Eliminated hypothesis H21 (duplicate of H2).
+---  Eliminated hypothesis H6 (redundant, given H1 & H14).
+---  Eliminated hypothesis H16 (redundant, given H14).
+     +++  New H23:  integer__size >= 0
+     +++  New H24:  character__size >= 0
+     +++  New H25:  positive__size >= 0
+     +++  New H26:  dns_types__packet_bytes_range__size >= 0
+     +++  New H27:  unsigned_types__unsigned16__size >= 0
+     +++  New H28:  unsigned_types__unsigned32__size >= 0
+     +++  New H29:  rr_type__classtype__size >= 0
+     +++  New H30:  rr_type__wirestringtypeindex__size >= 0
+     +++  New H31:  rr_type__resourcerecordtype__size >= 0
+     +++  New H32:  rr_type__mx_record_type__mxrecordtype__size >= 0
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_9.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_set_ttl_data_mx_response_10.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

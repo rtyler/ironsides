@@ -1,0 +1,1301 @@
+
+C:\Users\martin.carlisle\Documents\DARPA-DNS\svn\trunk>spark @files.txt 
+           *******************************************************
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+
+           Reading default switch file ...
+
+           Reading target configuration file ...
+
+         type Address is private;
+
+---        Note              :  3: The deferred constant Null_Address has been 
+           implicitly defined here.
+
+         subtype Priority is Any_Priority range  0 ..  30;
+
+---        Note              :  4: The constant Default_Priority, of type Priority, 
+           has been implicitly defined here.
+
+           Examining the specification of package DNS_Types ...
+
+           Examining the specification of package DNS_Network ...
+
+      WITH Gnat.Sockets;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end DNS_Network;
+
+---        Warning           : 10: The private part of package DNS_Network is 
+           hidden - hidden text is ignored by the Examiner.
+
+           Examining the body of package DNS_Network ...
+
+      with Ada.Streams;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Socket_Timeout;
+           ^
+---        Warning           :391: If the identifier Socket_Timeout represents a 
+           package which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Ada.Unchecked_Conversion;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end DNS_Network;
+
+---        Warning           : 10: The body of package DNS_Network is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Generating listing file dns_network.lsb ...
+
+           Examining the specification of package Dns_Network_Receive ...
+
+           Examining the body of package Dns_Network_Receive ...
+
++++        Flow analysis of subprogram 
+           Receive_DNS_Packet_TCP performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Receive_DNS_Packet 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file dns_network_receive.lsb ...
+
+           Examining the specification of package Handling ...
+
+           Examining the specification of package Unsigned_Types ...
+
+           Examining the specification of package Rr_Type ...
+
+           Examining the specification of package A_Record_Type ...
+
+           Examining the specification of package Aaaa_Record_Type ...
+
+           Examining the specification of package Cname_Record_Type ...
+
+           Examining the specification of package Dnskey_Record_Type ...
+
+           Examining the specification of package Mx_Record_Type ...
+
+           Examining the specification of package Ns_Record_Type ...
+
+           Examining the specification of package Nsec_Record_Type ...
+
+           Examining the specification of package Ptr_Record_Type ...
+
+           Examining the specification of package Rrsig_Record_Type ...
+
+           Examining the specification of package Soa_Record_Type ...
+
+           Examining the specification of package dns_table_pkg ...
+
+           Examining the body of package Dns_Table_Pkg ...
+
++++        Flow analysis of subprogram To_Lower performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Same performed: no 
+           errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram hash performed: no 
+           errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryARecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryAAAARecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryCNAMERecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryDNSKEYRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryMXRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryNSRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryNSECRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryPTRRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram queryRRSIGRecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram querySOARecords 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertARecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertAAAARecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertCNAMERecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram InsertDNSKEYRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertMXRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertNSRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertNSECRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram insertPTRRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram InsertRRSIGRecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram InsertSOARecord 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file dns_table_pkg.lsb ...
+
+           Examining the body of package DNS_Types ...
+
+      with Gnat.Byte_Swapping;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+         end Byte_Swap_US;
+
+---        Warning           : 10: The body of subprogram Byte_Swap_US is hidden - 
+           hidden text is ignored by the Examiner.
+
++++        Flow analysis of subprogram Byte_Swap performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file dns_types.lsb ...
+
+           Examining the specification of package Error_Msgs ...
+
+           Examining the body of package Error_Msgs ...
+
+      with Ada.Text_IO, Ada.Integer_Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+                        ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end error_msgs;
+
+---        Warning           : 10: The body of package Error_Msgs is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Generating listing file error_msgs.lsb ...
+
+           Examining the specification of package Protected_SPARK_IO_05 ...
+
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end Protected_SPARK_IO_05;
+
+---        Warning           : 10: The private part of package 
+           Protected_SPARK_IO_05 is hidden - hidden text is ignored by the 
+           Examiner.
+
+           Examining the specification of package Process_Dns_Request ...
+
+           Examining the specification of package Multitask_Process_Dns_Request ...
+
+           Examining the body of package Multitask_Process_Dns_Request ...
+
+      with Task_Limit;
+           ^
+---        Warning           :391: If the identifier Task_Limit represents a 
+           package which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end Multitask_Process_Dns_Request;
+
+---        Warning           : 10: The body of package 
+           Multitask_Process_Dns_Request is hidden - hidden text is ignored by 
+           the Examiner.
+
+           Generating listing file multitask_process_dns_request.lsb ...
+
+           Examining the specification of package Non_Spark_Stuff ...
+
+           Examining the body of package Non_Spark_Stuff ...
+
+      with Ada.Calendar;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end Non_Spark_Stuff;
+
+---        Warning           : 10: The body of package Non_Spark_Stuff is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Generating listing file non_spark_stuff.lsb ...
+
+           Examining the specification of package Parser_Utilities ...
+
+           Examining the body of package Parser_Utilities ...
+
++++        Flow analysis of subprogram isClass performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram isRecord performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram getRecordType 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram CheckAndAppendOrigin 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram checkValidHostName 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram findFirstToken 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram findNextToken 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram IsMult performed: no 
+           errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram convert8BitUnsigned 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram convert16BitUnsigned 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram convert32BitUnsigned 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram MultValue performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ConvertTimeSpec 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ConvertTimeString 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram AddToKeyR performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram AddToKey performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram SeparatorsOK 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram convertIpv6 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram SeparatorsOK 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram convertIpv4 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file parser_utilities.lsb ...
+
+           Examining the body of package Process_Dns_Request ...
+
+      with Ada.Text_Io;
+               ^
+---        Warning           :391: If the identifier Text_Io represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
++++        Flow analysis of subprogram Set_Unsigned_32 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_Unsigned_16 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_TTL_Data_IP 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_NS_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_PTR_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_MX_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_SOA_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_TTL_Data_AAAA_IP 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+            for i in rr_type.aaaa_record_type.IPV6AddrTypeIndex loop
+
+---        Warning           :402: Default assertion planted to cut loop.
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Get_Query_Name_Type_Class performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Create_Response_Error performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_AAAA 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_A 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_NS 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_PTR 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_MX 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_SOA 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Process_Response_Cname performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Trim_Name performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Create_NXDOMAIN_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+               EDNS_Rec.Code    := To_Query_Type(DNS_Types.Unsigned_Short(
+                                   ^
+---        Warning           : 12: Function To_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
+                     From_Query_Type(DNS_Types.OPT) mod 256);
+                     ^
+---        Warning           : 12: Function From_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
++++        Flow analysis of subprogram Create_Response_EDNS 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Process_Request_Tcp 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file process_dns_request.lsb ...
+
+           Examining the specification of package SPARK ...
+
+           Examining the specification of package Ada ...
+
+           Examining the specification of package Text_IO ...
+
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end SPARK.Ada.Text_IO;
+
+---        Warning           : 10: The private part of package Text_IO is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Examining the specification of package Strings ...
+
+           Examining the specification of package Maps ...
+
+      with Ada.Strings.Maps;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end SPARK.Ada.Strings.Maps;
+
+---        Warning           : 10: The private part of package Maps is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Examining the specification of package Zone_File_Parser ...
+
+           Examining the specification of package process_first_line_of_record ...
+
+           Examining the body of package process_first_line_of_record ...
+
++++        Flow analysis of subprogram 
+           ProcessFirstLineOfRecord performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file process_first_line_of_record.lsb ...
+
+           Examining the body of package Protected_Spark_Io_05 ...
+
+      with Text_IO;
+           ^
+---        Warning           :391: If the identifier Text_IO represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Unchecked_Deallocation;
+           ^
+---        Warning           :391: If the identifier Unchecked_Deallocation 
+           represents a package which contains a task or an interrupt handler 
+           then the partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end Protected_Spark_Io_05;
+
+---        Warning           : 10: The body of package Protected_Spark_Io_05 is 
+           hidden - hidden text is ignored by the Examiner.
+
+           Generating listing file protected_spark_io_05.lsb ...
+
+           Examining the body of package Rr_Type ...
+
++++        Flow analysis of subprogram DomainNameLength 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram AppendDomainNames 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram WireNameLength 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           ConvertStringToDomainName performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram FindPeriod 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           ConvertDomainNameToWire performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ConvertStringToWire 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file rr_type.lsb ...
+
+           Examining the specification of package Socket_Timeout ...
+
+      WITH Gnat.Sockets;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end Socket_Timeout;
+
+---        Warning           : 10: The private part of package Socket_Timeout is 
+           hidden - hidden text is ignored by the Examiner.
+          ^
+---        Warning           :394: Variables of type Socket_Type cannot be 
+           initialized using the facilities of this package.
+
+           Examining the body of package Socket_Timeout ...
+
+      with Gnat.Sockets.Thin;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Interfaces;
+           ^
+---        Warning           :391: If the identifier Interfaces represents a 
+           package which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Interfaces.C;
+           ^
+---        Warning           :391: If the identifier Interfaces represents a 
+           package which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with Ada.Unchecked_Conversion;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Gnat.Sockets.Constants;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      with ada.text_io;
+           ^
+---        Warning           :  1: The identifier ada is either undeclared or not 
+           visible at this point.
+
+      end Socket_Timeout;
+
+---        Warning           : 10: The body of package Socket_Timeout is hidden - 
+           hidden text is ignored by the Examiner.
+
+           Generating listing file socket_timeout.lsb ...
+
+           Examining the specification of package SPARK_Ada_Command_Line ...
+
+           Examining the body of package SPARK_Ada_Command_Line ...
+
+      with Ada.Command_Line;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      with Gnat.Os_Lib;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end SPARK_Ada_Command_Line;
+
+---        Warning           : 10: The body of package SPARK_Ada_Command_Line is 
+           hidden - hidden text is ignored by the Examiner.
+
+           Generating listing file spark_ada_command_line.lsb ...
+
+           Examining the specification of package Udp_Dns_Package ...
+
+           Examining the specification of package Tcp_Dns_Package ...
+
+           Examining the specification of package zone_file_io ...
+
+           Examining main program Spark_Dns_Main ...
+
++++        Flow analysis of subprogram Spark_Dns_Main 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of the entire partition performed: 
+           no errors found.
+
+           Generating listing file spark_dns_main.lsb ...
+
+           Examining the specification of package Task_Limit ...
+
+           Examining the body of package Task_Limit ...
+
++++        Flow analysis of subprogram Increment performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Decrement performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file task_limit.lsb ...
+
+           Examining the body of package Tcp_Dns_Package ...
+
++++        Flow analysis of subprogram Initialization_Done 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Tcp_Dns_Task 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file tcp_dns_package.lsb ...
+
+           Examining the body of package Udp_Dns_Package ...
+
++++        Flow analysis of subprogram Initialization_Done 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Udp_Dns_Task 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file udp_dns_package.lsb ...
+
+           Examining the body of package Zone_File_Io ...
+
++++        Flow analysis of subprogram processzoneFile 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file zone_file_io.lsb ...
+
+           Examining the body of package zone_file_parser ...
+
++++        Flow analysis of subprogram ParseDNSKeyHeader 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ParseRRSig2ndLine 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           ParseTypeCoveredAlgorithmNumLabels performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ParseRRSigHeader 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram parseDomainName 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           ParseDomainNameAndRRString performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ParseTimeSpec 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram ParseControlLine 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram parseSerialNumber 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           parsePrefAndDomainName performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram parseIpv4 performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram parseIpv6 performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           ParseNameServerAndEmail performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           parseOwnerTTLClassAndRecordType performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file zone_file_parser.lsb ...
+
+           Generating report file ...
+
+   44 errors or warnings, comprising:
+        44 warnings
+   56 expected (justified) warnings
+
+
+-----------End of SPARK Examination--------------------------------

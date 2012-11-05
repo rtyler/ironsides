@@ -1,0 +1,981 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.checkValidHostName
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 
+          rr_type__maxdomainnamelength or element(name, [
+          rr_type__domainnamelength(name) + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__domainnamelength(name) -> element(name, [
+          q_]) <> 32))
+***  Proved C1:  rr_type__domainnamelength(name) >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H4.
+***  Proved C2:  rr_type__domainnamelength(name) <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 
+          rr_type__maxdomainnamelength or element(name, [
+          rr_type__domainnamelength(name) + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__domainnamelength(name) -> element(name, [
+          q_]) <> 32))
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+<S>  New H4:  rr_type__domainnamelength(name) >= 1
+<S>  New C1:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) - 1 <= 
+          rr_type__domainnamestringtypeindex__last
+<S>  New C3:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) - 1 <= 
+          rr_type__domainnamestringtypeindex__last
+<S>  New C5:  true
+<S>  New C7:  true
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  rr_type__domainnamelength(name) <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 
+          character__first <= element(name, [i___1]) and element(name, [i___1]) 
+          <= character__last)
+<S>  New C6:  true
+<S>  New C8:  true
+<S>  New C1:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) <= 129
+<S>  New C3:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) <= 129
+***  Proved C5:  true
+***  Proved C7:  true
+***  Proved C6:  true
+***  Proved C8:  true
+-S-  Applied substitution rule checkvalidho_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__maxdomainnamelength by:
+          128.
+<S>  New H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 128 
+          or element(name, [rr_type__domainnamelength(name) + 1]) = 32 and 
+          for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__domainnamelength(
+          name) -> element(name, [q_]) <> 32))
+-S-  Applied substitution rule checkvalidho_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C2:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) - 1 <= 
+          integer__base__last
+<S>  New C4:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) - 1 <= 
+          integer__base__last
+-S-  Applied substitution rule checkvalidho_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) <= 
+          2147483648
+<S>  New C4:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) <= 
+          2147483648
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C2:  rr_type__domainnamelength(name) > 1 -> 
+          rr_type__domainnamelength(name) >= - 2147483647 and 
+          rr_type__domainnamelength(name) <= 2147483648
+     using hypotheses H4 & H5.
+***  Proved C4:  rr_type__domainnamelength(name) > 1 -> 
+          rr_type__domainnamelength(name) >= - 2147483647 and 
+          rr_type__domainnamelength(name) <= 2147483648
+     using hypotheses H4 & H5.
+---  Eliminated hypothesis H1 (true-hypothesis).
+---  Eliminated hypothesis H3 (true-hypothesis).
+---  Eliminated hypothesis H7 (true-hypothesis).
+---  Eliminated hypothesis H8 (true-hypothesis).
+---  Eliminated hypothesis H9 (true-hypothesis).
+---  Eliminated hypothesis H10 (true-hypothesis).
+---  Eliminated conclusion C3, which is a duplicate of C1.
+     +++  New H11:  integer__size >= 0
+     +++  New H12:  character__size >= 0
+     +++  New H13:  positive__size >= 0
+     +++  New H14:  rr_type__domainnamestringtypeindex__size >= 0
+>>>  Conclusion C1 is an implication formula [P->Q].
+     Attempting to prove this by proving Q while adding P to the hypotheses.
++++  Added new hypotheses (in proving an implication formula).
+     +++  New H15:  rr_type__domainnamelength(name) > 1
++++  New subgoal C1:  rr_type__domainnamelength(name) >= 2 and 
+          rr_type__domainnamelength(name) <= 129
+>>>  Conclusion C1 has now been split into two, giving:
+     >>>  C1:  rr_type__domainnamelength(name) >= 2
+     >>>  C2:  rr_type__domainnamelength(name) <= 129
+***  Proved subgoal C1
+     using hypothesis H15.
+***  Proved subgoal C2
+     using hypothesis H5.
+***  Proved C1:  rr_type__domainnamelength(name) > 1 -> 
+          rr_type__domainnamelength(name) >= 2 and rr_type__domainnamelength(
+          name) <= 129
+     by implication.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 
+          rr_type__maxdomainnamelength or element(name, [
+          rr_type__domainnamelength(name) + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__domainnamelength(name) -> element(name, [
+          q_]) <> 32))
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H5)
+          .
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  rr_type__domainnamelength(name) >= - 2147483646
+<S>  New C5:  true
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  rr_type__domainnamelength(name) <= 2147483649
+<S>  New C6:  true
+-S-  Applied substitution rule checkvalidho_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H12:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) - 1 <= 
+          integer__base__last
+<S>  New C3:  rr_type__domainnamelength(name) >= - 2147483646
+-S-  Applied substitution rule checkvalidho_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H12:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= - 2147483647 and rr_type__domainnamelength(name) <= 
+          2147483648
+<S>  New C4:  rr_type__domainnamelength(name) <= 2147483649
+***  Proved C5:  true
+***  Proved C6:  true
+>>>  Restructured hypothesis H19 into:
+     >>>  H19:  element(name, [1]) <> 46 and (element(name, [1]) <> 45 and (
+          rr_type__domainnamelength(name) <= 1 or element(name, [
+          rr_type__domainnamelength(name) - 1]) <> 46 and element(name, [
+          rr_type__domainnamelength(name) - 1]) <> 45))
+>>>  Hypothesis H19 has now been split into two, giving:
+     >>>  H22:  element(name, [1]) <> 46
+     >>>  H23:  element(name, [1]) <> 45 and (rr_type__domainnamelength(name) 
+          <= 1 or element(name, [rr_type__domainnamelength(name) - 1]) <> 46 
+          and element(name, [rr_type__domainnamelength(name) - 1]) <> 45)
+>>>  Hypothesis H23 has now been split into two, giving:
+     >>>  H24:  element(name, [1]) <> 45
+     >>>  H25:  rr_type__domainnamelength(name) <= 1 or element(name, [
+          rr_type__domainnamelength(name) - 1]) <> 46 and element(name, [
+          rr_type__domainnamelength(name) - 1]) <> 45
+-S-  Applied substitution rule checkvalidho_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__maxdomainnamelength by:
+          128.
+<S>  New H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 128 
+          or element(name, [rr_type__domainnamelength(name) + 1]) = 32 and 
+          for_all(q_ : integer, 1 <= q_ and q_ <= rr_type__domainnamelength(
+          name) -> element(name, [q_]) <> 32))
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H4:  rr_type__domainnamelength(name) >= 1
+<S>  New H11:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) - 1 <= 
+          rr_type__domainnamestringtypeindex__last
+<S>  New H15:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H5:  rr_type__domainnamelength(name) <= 128
+<S>  New H16:  true
+<S>  New H11:  rr_type__domainnamelength(name) > 1 -> rr_type__domainnamelength(
+          name) >= 2 and rr_type__domainnamelength(name) <= 129
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C1:  rr_type__domainnamelength(name) >= - 2147483646
+     using hypothesis H4.
+***  Proved C2:  rr_type__domainnamelength(name) <= 2147483649
+     using hypothesis H5.
+***  Proved C3:  rr_type__domainnamelength(name) >= - 2147483646
+     using hypothesis H4.
+***  Proved C4:  rr_type__domainnamelength(name) <= 2147483649
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 
+          rr_type__maxdomainnamelength or element(name, [
+          rr_type__domainnamelength(name) + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__domainnamelength(name) -> element(name, [
+          q_]) <> 32))
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H5)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  4 <= rr_type__domainnamelength(name) -> 
+          rr_type__domainnamelength(name) - 2 >= integer__first and 
+          rr_type__domainnamelength(name) - 2 <= integer__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  4 <= rr_type__domainnamelength(name) -> 2 >= integer__first and 
+          2 <= integer__last
+***  Proved C1:  4 <= rr_type__domainnamelength(name) -> 
+          rr_type__domainnamelength(name) - 2 >= integer__first and 
+          rr_type__domainnamelength(name) - 2 <= integer__last
+     using hypotheses H22 & H23.
+***  Proved C2:  4 <= rr_type__domainnamelength(name) -> 2 >= integer__first 
+          and 2 <= integer__last
+     using hypotheses H26 & H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__domainnamelength(name) = 1 and (element(name, [1]) = 32 
+          or element(name, [2]) = 32) or (rr_type__domainnamelength(name) = 
+          rr_type__maxdomainnamelength or element(name, [
+          rr_type__domainnamelength(name) + 1]) = 32 and for_all(q_ : integer, 
+          1 <= q_ and q_ <= rr_type__domainnamelength(name) -> element(name, [
+          q_]) <> 32))
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H14 has been replaced by "true".  (It is already present, as 
+          H12).
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H21 has been replaced by "true".  (It is already present, as H5)
+          .
+%%%  Simplified H28 on reading formula in, to give:
+     %%%  H28:  4 <= rr_type__domainnamelength(name) -> 
+          rr_type__domainnamelength(name) - 2 >= integer__first and 
+          rr_type__domainnamelength(name) - 2 <= integer__last
+%%%  Simplified H29 on reading formula in, to give:
+     %%%  H29:  4 <= rr_type__domainnamelength(name) -> 2 >= integer__first and 
+          2 <= integer__last
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H5)
+          .
+%%%  Simplified H32 on reading formula in, to give:
+     %%%  H32:  4 <= rr_type__domainnamelength(name)
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  4 <= rr_type__domainnamelength(name)
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  2 >= integer__first
+     using hypothesis H26.
+***  Proved C5:  2 <= integer__last
+     using hypothesis H27.
+***  Proved C6:  true
+***  Proved C7:  4 <= rr_type__domainnamelength(name)
+     using hypothesis H32.
+***  Proved C8:  rr_type__domainnamelength(name) >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H4.
+***  Proved C9:  rr_type__domainnamelength(name) <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 1
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C8:  length__entry__loop__1 >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H8.
+***  Proved C9:  length__entry__loop__1 <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H22 into:
+     >>>  H22:  loop__1__i <> length__entry__loop__1 - 2
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule checkvalidho_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H15:  loop__1__i >= - 2147483647
+-S-  Applied substitution rule checkvalidho_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H16:  loop__1__i <= 2147483648
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New H13:  loop__1__i >= 2
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H9:  length__entry__loop__1 <= 128
+<S>  New H11:  loop__1__i <= 128
+<S>  New H14:  loop__1__i <= 129
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+%%%  Hypotheses H7 & H22 together imply that
+          loop__1__i < length__entry__loop__1 - 2.
+     H7 & H22 have therefore been deleted and a new H23 added to this effect.
+***  Proved C7:  loop__1__i + 1 <= length__entry__loop__1 - 2
+     via its standard form, which is:
+     Std.Fm C7:  length__entry__loop__1 - loop__1__i > 2
+     using hypothesis H23.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as 
+          H13).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H20 has been replaced by "true".  (It is already present, as 
+          H16).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 1
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C8:  length__entry__loop__1 >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H8.
+***  Proved C9:  length__entry__loop__1 <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  element(name, [loop__1__i - 1]) <> 46 and element(name, [
+          loop__1__i - 1]) <> 45
+>>>  Restructured hypothesis H22 into:
+     >>>  H22:  loop__1__i <> length__entry__loop__1 - 2
+>>>  Hypothesis H21 has now been split into two, giving:
+     >>>  H23:  element(name, [loop__1__i - 1]) <> 46
+     >>>  H24:  element(name, [loop__1__i - 1]) <> 45
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule checkvalidho_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New H15:  loop__1__i >= - 2147483647
+-S-  Applied substitution rule checkvalidho_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New H16:  loop__1__i <= 2147483648
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New H13:  loop__1__i >= 2
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H9:  length__entry__loop__1 <= 128
+<S>  New H11:  loop__1__i <= 128
+<S>  New H14:  loop__1__i <= 129
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+%%%  Hypotheses H7 & H22 together imply that
+          loop__1__i < length__entry__loop__1 - 2.
+     H7 & H22 have therefore been deleted and a new H25 added to this effect.
+***  Proved C7:  loop__1__i + 1 <= length__entry__loop__1 - 2
+     via its standard form, which is:
+     Std.Fm C7:  length__entry__loop__1 - loop__1__i > 2
+     using hypothesis H25.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_8.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 1
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C8:  length__entry__loop__1 >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H8.
+***  Proved C9:  length__entry__loop__1 <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H12 into:
+     >>>  H12:  element(name, [loop__1__i]) <> 46
+>>>  Restructured hypothesis H22 into:
+     >>>  H22:  loop__1__i <> length__entry__loop__1 - 2
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+<S>  New H13:  element(name, [loop__1__i]) >= 0
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H14:  element(name, [loop__1__i]) <= 255
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H9:  length__entry__loop__1 <= 128
+<S>  New H11:  loop__1__i <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+%%%  Hypotheses H7 & H22 together imply that
+          loop__1__i < length__entry__loop__1 - 2.
+     H7 & H22 have therefore been deleted and a new H23 added to this effect.
+***  Proved C7:  loop__1__i + 1 <= length__entry__loop__1 - 2
+     via its standard form, which is:
+     Std.Fm C7:  length__entry__loop__1 - loop__1__i > 2
+     using hypothesis H23.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_9.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H11).
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 1
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C8:  length__entry__loop__1 >= 
+          rr_type__domainnamestringtypeindex__first
+     using hypothesis H8.
+***  Proved C9:  length__entry__loop__1 <= 
+          rr_type__domainnamestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H12 into:
+     >>>  H12:  element(name, [loop__1__i]) <> 46
+>>>  Restructured hypothesis H20 into:
+     >>>  H20:  ada__characters__handling__is_alphanumeric(element(name, [
+          loop__1__i])) or element(name, [loop__1__i]) = 45
+>>>  Restructured hypothesis H21 into:
+     >>>  H21:  loop__1__i <> length__entry__loop__1 - 2
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+<S>  New H13:  element(name, [loop__1__i]) >= 0
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H14:  element(name, [loop__1__i]) <= 255
+<S>  New H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H9:  length__entry__loop__1 <= 128
+<S>  New H11:  loop__1__i <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+%%%  Hypotheses H7 & H21 together imply that
+          loop__1__i < length__entry__loop__1 - 2.
+     H7 & H21 have therefore been deleted and a new H22 added to this effect.
+***  Proved C7:  loop__1__i + 1 <= length__entry__loop__1 - 2
+     via its standard form, which is:
+     Std.Fm C7:  length__entry__loop__1 - loop__1__i > 2
+     using hypothesis H22.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_10.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C2:  loop__1__i <= rr_type__domainnamestringtypeindex__last
+     using hypotheses H7 & H9.
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New C1:  loop__1__i >= 1
+***  Proved C1:  loop__1__i >= 1
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_11.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C2:  loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last
+     using hypothesis H11.
+***  Proved C6:  loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last
+     using hypothesis H11.
+-S-  Applied substitution rule checkvalidho_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New C1:  loop__1__i >= 2
+<S>  New C5:  loop__1__i >= 2
+-S-  Applied substitution rule checkvalidho_rules(5).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C3:  loop__1__i >= - 2147483647
+<S>  New C7:  loop__1__i >= - 2147483647
+-S-  Applied substitution rule checkvalidho_rules(6).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C4:  loop__1__i <= 2147483648
+<S>  New C8:  loop__1__i <= 2147483648
+***  Proved C1:  loop__1__i >= 2
+     using hypothesis H6.
+***  Proved C5:  loop__1__i >= 2
+     using hypothesis H6.
+***  Proved C3:  loop__1__i >= - 2147483647
+     using hypothesis H6.
+***  Proved C7:  loop__1__i >= - 2147483647
+     using hypothesis H6.
+-S-  Applied substitution rule checkvalidho_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule checkvalidho_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+-S-  Applied substitution rule checkvalidho_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= character__last)
+-S-  Applied substitution rule checkvalidho_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> 0 <= element(name, [i___1]
+          ) and element(name, [i___1]) <= 255)
+-S-  Applied substitution rule checkvalidho_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__domainnamestringtypeindex__last by:
+          128.
+<S>  New H9:  length__entry__loop__1 <= 128
+<S>  New H11:  loop__1__i <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 128 -> 0 <= 
+          element(name, [i___1]) and element(name, [i___1]) <= 255)
+***  Proved C4:  loop__1__i <= 2147483648
+     using hypothesis H5.
+***  Proved C8:  loop__1__i <= 2147483648
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_12.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+***  Proved C1:  element(name, [loop__1__i]) >= character__first
+     using hypotheses H2, H10 & H11.
+***  Proved C2:  element(name, [loop__1__i]) <= character__last
+     using hypotheses H2, H10 & H11.
+***  Proved C3:  loop__1__i >= rr_type__domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C4:  loop__1__i <= rr_type__domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_13.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, 
+          rr_type__domainnamestringtypeindex__first <= i___1 and i___1 <= 
+          rr_type__domainnamestringtypeindex__last -> character__first <= 
+          element(name, [i___1]) and element(name, [i___1]) <= character__last)
+---  Hypothesis H15 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H16 has been replaced by "true".  (It is already present, as 
+          H11).
+***  Proved C1:  loop__1__i >= rr_type__domainnamestringtypeindex__first
+     using hypothesis H10.
+***  Proved C2:  loop__1__i <= rr_type__domainnamestringtypeindex__last
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_14.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_15.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_16.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_17.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_18.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_checkvalidhostname_19.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

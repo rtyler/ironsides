@@ -1,0 +1,20 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                      /*function Parser_Utilities.IsMult*/
+
+
+rule_family ismult_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+ismult_rules(1): character__size >= 0 may_be_deduced.
+ismult_rules(2): character__first may_be_replaced_by 0.
+ismult_rules(3): character__last may_be_replaced_by 255.
+ismult_rules(4): character__base__first may_be_replaced_by 0.
+ismult_rules(5): character__base__last may_be_replaced_by 255.

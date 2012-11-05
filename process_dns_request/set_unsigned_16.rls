@@ -1,0 +1,35 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+               /*procedure Process_Dns_Request.Set_Unsigned_16*/
+
+
+rule_family set_unsigned_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+set_unsigned_rules(1): system__min_int may_be_replaced_by -9223372036854775808.
+set_unsigned_rules(2): system__max_int may_be_replaced_by 9223372036854775807.
+set_unsigned_rules(3): dns_types__packet_bytes_range__size >= 0 may_be_deduced.
+set_unsigned_rules(4): dns_types__packet_bytes_range__first may_be_replaced_by 1.
+set_unsigned_rules(5): dns_types__packet_bytes_range__last may_be_replaced_by 8180.
+set_unsigned_rules(6): dns_types__packet_bytes_range__base__first may_be_replaced_by -2147483648.
+set_unsigned_rules(7): dns_types__packet_bytes_range__base__last may_be_replaced_by 2147483647.
+set_unsigned_rules(8): dns_types__byte__size >= 0 may_be_deduced.
+set_unsigned_rules(9): dns_types__byte__size may_be_replaced_by 8.
+set_unsigned_rules(10): dns_types__byte__first may_be_replaced_by 0.
+set_unsigned_rules(11): dns_types__byte__last may_be_replaced_by 255.
+set_unsigned_rules(12): dns_types__byte__base__first may_be_replaced_by 0.
+set_unsigned_rules(13): dns_types__byte__base__last may_be_replaced_by 255.
+set_unsigned_rules(14): dns_types__byte__modulus may_be_replaced_by 256.
+set_unsigned_rules(15): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+set_unsigned_rules(16): unsigned_types__unsigned16__first may_be_replaced_by 0.
+set_unsigned_rules(17): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+set_unsigned_rules(18): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+set_unsigned_rules(19): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+set_unsigned_rules(20): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.

@@ -1,0 +1,661 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+               procedure Parser_Utilities.checkValidHostName
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 320:
+
+procedure_checkvalidhostname_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H5:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H6:    ((rr_type__domainnamelength(name) = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           rr_type__domainnamelength(name) = 
+           rr_type__maxdomainnamelength) or ((element(name, [
+           rr_type__domainnamelength(name) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__domainnamelength(name))) -> (element(
+           name, [q_]) <> 32))))) .
+        ->
+C1:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+C2:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 325:
+
+procedure_checkvalidhostname_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H5:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H6:    ((rr_type__domainnamelength(name) = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           rr_type__domainnamelength(name) = 
+           rr_type__maxdomainnamelength) or ((element(name, [
+           rr_type__domainnamelength(name) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__domainnamelength(name))) -> (element(
+           name, [q_]) <> 32))))) .
+H7:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H8:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H9:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H10:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+        ->
+C1:    (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+C2:    (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+C3:    (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+C4:    (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+C5:    1 >= rr_type__domainnamestringtypeindex__first .
+C6:    1 <= rr_type__domainnamestringtypeindex__last .
+C7:    1 >= rr_type__domainnamestringtypeindex__first .
+C8:    1 <= rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 328:
+
+procedure_checkvalidhostname_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H5:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H6:    ((rr_type__domainnamelength(name) = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           rr_type__domainnamelength(name) = 
+           rr_type__maxdomainnamelength) or ((element(name, [
+           rr_type__domainnamelength(name) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__domainnamelength(name))) -> (element(
+           name, [q_]) <> 32))))) .
+H7:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H8:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H9:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H10:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H11:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H12:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H13:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H14:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H15:   1 >= rr_type__domainnamestringtypeindex__first .
+H16:   1 <= rr_type__domainnamestringtypeindex__last .
+H17:   1 >= rr_type__domainnamestringtypeindex__first .
+H18:   1 <= rr_type__domainnamestringtypeindex__last .
+H19:   not ((element(name, [1]) = 46) or ((element(name, [1]) = 45) or ((
+           rr_type__domainnamelength(name) > 1) and ((element(
+           name, [rr_type__domainnamelength(name) - 1]) = 46) or (element(
+           name, [rr_type__domainnamelength(name) - 1]) = 45))))) .
+H20:   rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H21:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+        ->
+C1:    rr_type__domainnamelength(name) - 2 >= integer__first .
+C2:    rr_type__domainnamelength(name) - 2 <= integer__last .
+C3:    rr_type__domainnamelength(name) - 2 >= integer__base__first .
+C4:    rr_type__domainnamelength(name) - 2 <= integer__base__last .
+C5:    2 >= integer__first .
+C6:    2 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 328:
+
+procedure_checkvalidhostname_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H5:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H6:    ((rr_type__domainnamelength(name) = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           rr_type__domainnamelength(name) = 
+           rr_type__maxdomainnamelength) or ((element(name, [
+           rr_type__domainnamelength(name) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__domainnamelength(name))) -> (element(
+           name, [q_]) <> 32))))) .
+H7:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H8:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H9:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H10:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H11:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H12:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H13:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H14:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H15:   1 >= rr_type__domainnamestringtypeindex__first .
+H16:   1 <= rr_type__domainnamestringtypeindex__last .
+H17:   1 >= rr_type__domainnamestringtypeindex__first .
+H18:   1 <= rr_type__domainnamestringtypeindex__last .
+H19:   not ((element(name, [1]) = 46) or ((element(name, [1]) = 45) or ((
+           rr_type__domainnamelength(name) > 1) and ((element(
+           name, [rr_type__domainnamelength(name) - 1]) = 46) or (element(
+           name, [rr_type__domainnamelength(name) - 1]) = 45))))) .
+H20:   rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H21:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H22:   rr_type__domainnamelength(name) - 2 >= integer__first .
+H23:   rr_type__domainnamelength(name) - 2 <= integer__last .
+H24:   rr_type__domainnamelength(name) - 2 >= integer__base__first .
+H25:   rr_type__domainnamelength(name) - 2 <= integer__base__last .
+H26:   2 >= integer__first .
+H27:   2 <= integer__last .
+        ->
+C1:    (2 <= rr_type__domainnamelength(name) - 2) -> ((
+           rr_type__domainnamelength(name) - 2 >= integer__first) and (
+           rr_type__domainnamelength(name) - 2 <= integer__last)) .
+C2:    (2 <= rr_type__domainnamelength(name) - 2) -> ((2 >= 
+           integer__first) and (2 <= integer__last)) .
+ 
+
+For path(s) from start to assertion of line 329:
+
+procedure_checkvalidhostname_5.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H5:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H6:    ((rr_type__domainnamelength(name) = 1) and ((element(
+           name, [1]) = 32) or (element(name, [2]) = 32))) or ((
+           rr_type__domainnamelength(name) = 
+           rr_type__maxdomainnamelength) or ((element(name, [
+           rr_type__domainnamelength(name) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           rr_type__domainnamelength(name))) -> (element(
+           name, [q_]) <> 32))))) .
+H7:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H8:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H9:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H10:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H11:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H12:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H13:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           rr_type__domainnamelength(name) - 1 <= 
+           rr_type__domainnamestringtypeindex__last)) .
+H14:   (rr_type__domainnamelength(name) > 1) -> ((
+           rr_type__domainnamelength(name) - 1 >= integer__base__first) and (
+           rr_type__domainnamelength(name) - 1 <= integer__base__last)) .
+H15:   1 >= rr_type__domainnamestringtypeindex__first .
+H16:   1 <= rr_type__domainnamestringtypeindex__last .
+H17:   1 >= rr_type__domainnamestringtypeindex__first .
+H18:   1 <= rr_type__domainnamestringtypeindex__last .
+H19:   not ((element(name, [1]) = 46) or ((element(name, [1]) = 45) or ((
+           rr_type__domainnamelength(name) > 1) and ((element(
+           name, [rr_type__domainnamelength(name) - 1]) = 46) or (element(
+           name, [rr_type__domainnamelength(name) - 1]) = 45))))) .
+H20:   rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H21:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H22:   rr_type__domainnamelength(name) - 2 >= integer__first .
+H23:   rr_type__domainnamelength(name) - 2 <= integer__last .
+H24:   rr_type__domainnamelength(name) - 2 >= integer__base__first .
+H25:   rr_type__domainnamelength(name) - 2 <= integer__base__last .
+H26:   2 >= integer__first .
+H27:   2 <= integer__last .
+H28:   (2 <= rr_type__domainnamelength(name) - 2) -> ((
+           rr_type__domainnamelength(name) - 2 >= integer__first) and (
+           rr_type__domainnamelength(name) - 2 <= integer__last)) .
+H29:   (2 <= rr_type__domainnamelength(name) - 2) -> ((2 >= 
+           integer__first) and (2 <= integer__last)) .
+H30:   rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+H31:   rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+H32:   2 <= rr_type__domainnamelength(name) - 2 .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+C3:    true .
+C4:    2 >= integer__first .
+C5:    2 <= integer__last .
+C6:    2 >= 2 .
+C7:    2 <= rr_type__domainnamelength(name) - 2 .
+C8:    rr_type__domainnamelength(name) >= 
+           rr_type__domainnamestringtypeindex__first .
+C9:    rr_type__domainnamelength(name) <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 329 to assertion of line 329:
+
+procedure_checkvalidhostname_6.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   element(name, [loop__1__i]) = 46 .
+H13:   loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+H14:   loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+H15:   loop__1__i - 1 >= integer__base__first .
+H16:   loop__1__i - 1 <= integer__base__last .
+H17:   loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+H18:   loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+H19:   loop__1__i - 1 >= integer__base__first .
+H20:   loop__1__i - 1 <= integer__base__last .
+H21:   (element(name, [loop__1__i - 1]) = 46) or (element(
+           name, [loop__1__i - 1]) = 45) .
+H22:   not (loop__1__i = length__entry__loop__1 - 2) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+C3:    true .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= 2 .
+C7:    loop__1__i + 1 <= length__entry__loop__1 - 2 .
+C8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+C9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+procedure_checkvalidhostname_7.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   element(name, [loop__1__i]) = 46 .
+H13:   loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+H14:   loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+H15:   loop__1__i - 1 >= integer__base__first .
+H16:   loop__1__i - 1 <= integer__base__last .
+H17:   loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+H18:   loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+H19:   loop__1__i - 1 >= integer__base__first .
+H20:   loop__1__i - 1 <= integer__base__last .
+H21:   not ((element(name, [loop__1__i - 1]) = 46) or (element(
+           name, [loop__1__i - 1]) = 45)) .
+H22:   not (loop__1__i = length__entry__loop__1 - 2) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+C3:    true .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= 2 .
+C7:    loop__1__i + 1 <= length__entry__loop__1 - 2 .
+C8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+C9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+procedure_checkvalidhostname_8.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   not (element(name, [loop__1__i]) = 46) .
+H13:   element(name, [loop__1__i]) >= character__first .
+H14:   element(name, [loop__1__i]) <= character__last .
+H15:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H16:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H17:   true .
+H18:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H19:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H20:   not (ada__characters__handling__is_alphanumeric(element(
+           name, [loop__1__i]))) .
+H21:   element(name, [loop__1__i]) <> 45 .
+H22:   not (loop__1__i = length__entry__loop__1 - 2) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+C3:    true .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= 2 .
+C7:    loop__1__i + 1 <= length__entry__loop__1 - 2 .
+C8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+C9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+procedure_checkvalidhostname_9.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   not (element(name, [loop__1__i]) = 46) .
+H13:   element(name, [loop__1__i]) >= character__first .
+H14:   element(name, [loop__1__i]) <= character__last .
+H15:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H16:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H17:   true .
+H18:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H19:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H20:   not ((not (ada__characters__handling__is_alphanumeric(element(
+           name, [loop__1__i])))) and (element(name, [
+           loop__1__i]) <> 45)) .
+H21:   not (loop__1__i = length__entry__loop__1 - 2) .
+        ->
+C1:    true .
+C2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+C3:    true .
+C4:    loop__1__i + 1 >= integer__first .
+C5:    loop__1__i + 1 <= integer__last .
+C6:    loop__1__i + 1 >= 2 .
+C7:    loop__1__i + 1 <= length__entry__loop__1 - 2 .
+C8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+C9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 329 to run-time check associated with statement of line 331:
+
+procedure_checkvalidhostname_10.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+        ->
+C1:    loop__1__i >= rr_type__domainnamestringtypeindex__first .
+C2:    loop__1__i <= rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 329 to run-time check associated with statement of line 332:
+
+procedure_checkvalidhostname_11.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   element(name, [loop__1__i]) = 46 .
+        ->
+C1:    loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+C2:    loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+C3:    loop__1__i - 1 >= integer__base__first .
+C4:    loop__1__i - 1 <= integer__base__last .
+C5:    loop__1__i - 1 >= rr_type__domainnamestringtypeindex__first .
+C6:    loop__1__i - 1 <= rr_type__domainnamestringtypeindex__last .
+C7:    loop__1__i - 1 >= integer__base__first .
+C8:    loop__1__i - 1 <= integer__base__last .
+ 
+
+For path(s) from assertion of line 329 to run-time check associated with statement of line 336:
+
+procedure_checkvalidhostname_12.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   not (element(name, [loop__1__i]) = 46) .
+        ->
+C1:    element(name, [loop__1__i]) >= character__first .
+C2:    element(name, [loop__1__i]) <= character__last .
+C3:    loop__1__i >= rr_type__domainnamestringtypeindex__first .
+C4:    loop__1__i <= rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 329 to run-time check associated with statement of line 336:
+
+procedure_checkvalidhostname_13.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           rr_type__domainnamestringtypeindex__first) and (
+           i___1 <= rr_type__domainnamestringtypeindex__last)) -> ((element(
+           name, [i___1]) >= character__first) and (element(
+           name, [i___1]) <= character__last))) .
+H3:    true .
+H4:    loop__1__i >= integer__first .
+H5:    loop__1__i <= integer__last .
+H6:    loop__1__i >= 2 .
+H7:    loop__1__i <= length__entry__loop__1 - 2 .
+H8:    length__entry__loop__1 >= 
+           rr_type__domainnamestringtypeindex__first .
+H9:    length__entry__loop__1 <= 
+           rr_type__domainnamestringtypeindex__last .
+H10:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H11:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H12:   not (element(name, [loop__1__i]) = 46) .
+H13:   element(name, [loop__1__i]) >= character__first .
+H14:   element(name, [loop__1__i]) <= character__last .
+H15:   loop__1__i >= rr_type__domainnamestringtypeindex__first .
+H16:   loop__1__i <= rr_type__domainnamestringtypeindex__last .
+H17:   true .
+        ->
+C1:    loop__1__i >= rr_type__domainnamestringtypeindex__first .
+C2:    loop__1__i <= rr_type__domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_checkvalidhostname_14.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_checkvalidhostname_15.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 329 to finish:
+
+procedure_checkvalidhostname_16.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_checkvalidhostname_17.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_checkvalidhostname_18.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_checkvalidhostname_19.
+*** true .          /* trivially true VC removed by Examiner */
+
+

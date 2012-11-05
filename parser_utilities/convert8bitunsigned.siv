@@ -1,0 +1,111 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.convert8BitUnsigned
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 543:
+
+procedure_convert8bitunsigned_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 544:
+
+procedure_convert8bitunsigned_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 545:
+
+procedure_convert8bitunsigned_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 545:
+
+procedure_convert8bitunsigned_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 546:
+
+procedure_convert8bitunsigned_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 546 to assertion of line 546:
+
+procedure_convert8bitunsigned_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 546 to run-time check associated with 
+          statement of line 547:
+
+procedure_convert8bitunsigned_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 546 to run-time check associated with 
+          statement of line 548:
+
+procedure_convert8bitunsigned_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 555:
+
+procedure_convert8bitunsigned_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 546 to run-time check associated with 
+          statement of line 555:
+
+procedure_convert8bitunsigned_10.
+*** true .          /* all conclusions proved */
+
+
+procedure_convert8bitunsigned_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_convert8bitunsigned_12.
+*** true .          /* all conclusions proved */
+
+
+procedure_convert8bitunsigned_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 546 to finish:
+
+procedure_convert8bitunsigned_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_convert8bitunsigned_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_convert8bitunsigned_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_convert8bitunsigned_17.
+*** true .          /* all conclusions proved */
+
+

@@ -1,0 +1,30 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                   task_type Tcp_Dns_Package.Tcp_Dns_Task
+
+
+
+
+For path(s) from start to assertion of line 40:
+
+task_type_tcp_dns_task_1.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 40 to assertion of line 40:
+
+task_type_tcp_dns_task_2.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 40 to finish:
+
+task_type_tcp_dns_task_3.
+*** true .          /* trivially true VC removed by Examiner */
+
+

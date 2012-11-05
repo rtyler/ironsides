@@ -1,0 +1,59 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertStringToDomainName
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 99:
+
+function_convertstringtodomainname_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 99:
+
+function_convertstringtodomainname_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 100:
+
+function_convertstringtodomainname_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 100 to assertion of line 100:
+
+function_convertstringtodomainname_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 100 to run-time check associated with 
+          statement of line 101:
+
+function_convertstringtodomainname_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_convertstringtodomainname_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 100 to finish:
+
+function_convertstringtodomainname_7.
+*** true .          /* all conclusions proved */
+
+

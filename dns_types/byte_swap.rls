@@ -1,0 +1,139 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                       /*procedure DNS_Types.Byte_Swap*/
+
+
+rule_family byte_swap_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+byte_swap_rules(1): unsigned_short__size >= 0 may_be_deduced.
+byte_swap_rules(2): unsigned_short__size may_be_replaced_by 16.
+byte_swap_rules(3): unsigned_short__first may_be_replaced_by 0.
+byte_swap_rules(4): unsigned_short__last may_be_replaced_by 65535.
+byte_swap_rules(5): unsigned_short__base__first may_be_replaced_by -2147483648.
+byte_swap_rules(6): unsigned_short__base__last may_be_replaced_by 2147483647.
+byte_swap_rules(7): opcode_type__size >= 0 may_be_deduced.
+byte_swap_rules(8): opcode_type__size may_be_replaced_by 4.
+byte_swap_rules(9): opcode_type__first may_be_replaced_by query.
+byte_swap_rules(10): opcode_type__last may_be_replaced_by status.
+byte_swap_rules(11): opcode_type__base__first may_be_replaced_by query.
+byte_swap_rules(12): opcode_type__base__last may_be_replaced_by status.
+byte_swap_rules(13): opcode_type__pos(opcode_type__first) may_be_replaced_by 0.
+byte_swap_rules(14): opcode_type__pos(query) may_be_replaced_by 0.
+byte_swap_rules(15): opcode_type__val(0) may_be_replaced_by query.
+byte_swap_rules(16): opcode_type__pos(iquery) may_be_replaced_by 1.
+byte_swap_rules(17): opcode_type__val(1) may_be_replaced_by 
+     iquery.
+byte_swap_rules(18): opcode_type__pos(status) may_be_replaced_by 2.
+byte_swap_rules(19): opcode_type__val(2) may_be_replaced_by 
+     status.
+byte_swap_rules(20): opcode_type__pos(opcode_type__last) may_be_replaced_by 2.
+byte_swap_rules(21): opcode_type__pos(succ(X)) may_be_replaced_by 
+     opcode_type__pos(X) + 1
+     if [X <=status, X <> status].
+byte_swap_rules(22): opcode_type__pos(pred(X)) may_be_replaced_by 
+     opcode_type__pos(X) - 1
+     if [X >=query, X <> query].
+byte_swap_rules(23): opcode_type__pos(X) >= 0 may_be_deduced_from
+     [query <= X, X <= status].
+byte_swap_rules(24): opcode_type__pos(X) <= 2 may_be_deduced_from
+     [query <= X, X <= status].
+byte_swap_rules(25): opcode_type__val(X) >= query may_be_deduced_from
+     [0 <= X, X <= 2].
+byte_swap_rules(26): opcode_type__val(X) <= status may_be_deduced_from
+     [0 <= X, X <= 2].
+byte_swap_rules(27): succ(opcode_type__val(X)) may_be_replaced_by 
+     opcode_type__val(X+1)
+     if [0 <= X, X < 2].
+byte_swap_rules(28): pred(opcode_type__val(X)) may_be_replaced_by 
+     opcode_type__val(X-1)
+     if [0 < X, X <= 2].
+byte_swap_rules(29): opcode_type__pos(opcode_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 2].
+byte_swap_rules(30): opcode_type__val(opcode_type__pos(X)) may_be_replaced_by X
+     if [query <= X, X <= status].
+byte_swap_rules(31): opcode_type__pos(X) <= opcode_type__pos(Y) & X <= Y are_interchangeable 
+     if [query <= X, X <= status, query <= Y, Y <= status].
+byte_swap_rules(32): opcode_type__val(X) <= opcode_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 2, 0 <= Y, Y <= 2].
+byte_swap_rules(33): response_code__size >= 0 may_be_deduced.
+byte_swap_rules(34): response_code__size may_be_replaced_by 4.
+byte_swap_rules(35): response_code__first may_be_replaced_by no_error.
+byte_swap_rules(36): response_code__last may_be_replaced_by refused.
+byte_swap_rules(37): response_code__base__first may_be_replaced_by no_error.
+byte_swap_rules(38): response_code__base__last may_be_replaced_by refused.
+byte_swap_rules(39): response_code__pos(response_code__first) may_be_replaced_by 0.
+byte_swap_rules(40): response_code__pos(no_error) may_be_replaced_by 0.
+byte_swap_rules(41): response_code__val(0) may_be_replaced_by 
+     no_error.
+byte_swap_rules(42): response_code__pos(format_error) may_be_replaced_by 1.
+byte_swap_rules(43): response_code__val(1) may_be_replaced_by 
+     format_error.
+byte_swap_rules(44): response_code__pos(server_failure) may_be_replaced_by 2.
+byte_swap_rules(45): response_code__val(2) may_be_replaced_by 
+     server_failure.
+byte_swap_rules(46): response_code__pos(name_error) may_be_replaced_by 3.
+byte_swap_rules(47): response_code__val(3) may_be_replaced_by 
+     name_error.
+byte_swap_rules(48): response_code__pos(not_implemented) may_be_replaced_by 4.
+byte_swap_rules(49): response_code__val(4) may_be_replaced_by 
+     not_implemented.
+byte_swap_rules(50): response_code__pos(refused) may_be_replaced_by 5.
+byte_swap_rules(51): response_code__val(5) may_be_replaced_by 
+     refused.
+byte_swap_rules(52): response_code__pos(response_code__last) may_be_replaced_by 5.
+byte_swap_rules(53): response_code__pos(succ(X)) may_be_replaced_by 
+     response_code__pos(X) + 1
+     if [X <=refused, X <> refused].
+byte_swap_rules(54): response_code__pos(pred(X)) may_be_replaced_by 
+     response_code__pos(X) - 1
+     if [X >=no_error, X <> no_error].
+byte_swap_rules(55): response_code__pos(X) >= 0 may_be_deduced_from
+     [no_error <= X, X <= refused].
+byte_swap_rules(56): response_code__pos(X) <= 5 may_be_deduced_from
+     [no_error <= X, X <= refused].
+byte_swap_rules(57): response_code__val(X) >= no_error may_be_deduced_from
+     [0 <= X, X <= 5].
+byte_swap_rules(58): response_code__val(X) <= refused may_be_deduced_from
+     [0 <= X, X <= 5].
+byte_swap_rules(59): succ(response_code__val(X)) may_be_replaced_by 
+     response_code__val(X+1)
+     if [0 <= X, X < 5].
+byte_swap_rules(60): pred(response_code__val(X)) may_be_replaced_by 
+     response_code__val(X-1)
+     if [0 < X, X <= 5].
+byte_swap_rules(61): response_code__pos(response_code__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 5].
+byte_swap_rules(62): response_code__val(response_code__pos(X)) may_be_replaced_by X
+     if [no_error <= X, X <= refused].
+byte_swap_rules(63): response_code__pos(X) <= response_code__pos(Y) & X <= Y are_interchangeable 
+     if [no_error <= X, X <= refused, no_error <= Y, Y <= refused].
+byte_swap_rules(64): response_code__val(X) <= response_code__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 5, 0 <= Y, Y <= 5].
+byte_swap_rules(65): header_type__size >= 0 may_be_deduced.
+byte_swap_rules(66): header_type__size may_be_replaced_by 96.
+byte_swap_rules(67): A = B may_be_deduced_from
+     [goal(checktype(A,header_type)),
+      goal(checktype(B,header_type)),
+      fld_messageid(A) = fld_messageid(B),
+      fld_qr(A) = fld_qr(B),
+      fld_opcode(A) = fld_opcode(B),
+      fld_aa(A) = fld_aa(B),
+      fld_tc(A) = fld_tc(B),
+      fld_rd(A) = fld_rd(B),
+      fld_ra(A) = fld_ra(B),
+      fld_res1(A) = fld_res1(B),
+      fld_res2(A) = fld_res2(B),
+      fld_res3(A) = fld_res3(B),
+      fld_rcode(A) = fld_rcode(B),
+      fld_qdcount(A) = fld_qdcount(B),
+      fld_ancount(A) = fld_ancount(B),
+      fld_nscount(A) = fld_nscount(B),
+      fld_arcount(A) = fld_arcount(B)].

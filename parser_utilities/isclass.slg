@@ -1,0 +1,178 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Parser_Utilities.isClass
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_isclass_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(s, [i___1]) and element(s, [i___1]) <= character__last)
+-S-  Applied substitution rule isclass_rules(4).
+     This was achieved by replacing all occurrences of integer__base__first by:
+          - 2147483648.
+<S>  New C1:  endidx >= - 2147483647
+-S-  Applied substitution rule isclass_rules(5).
+     This was achieved by replacing all occurrences of integer__base__last by:
+          2147483647.
+<S>  New C2:  endidx <= 2147483648
+-S-  Applied substitution rule isclass_rules(7).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(s, [i___1]
+          ) and element(s, [i___1]) <= character__last)
+-S-  Applied substitution rule isclass_rules(8).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(s, [i___1]
+          ) and element(s, [i___1]) <= 255)
+-S-  Applied substitution rule isclass_rules(17).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  begidx >= 1
+<S>  New H5:  endidx >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= 255)
+-S-  Applied substitution rule isclass_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  begidx <= 256
+<S>  New H6:  endidx <= 256
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(s, [i___1]) and element(s, [i___1]) <= 255)
+***  Proved C1:  endidx >= - 2147483647
+     using hypothesis H5.
+***  Proved C2:  endidx <= 2147483648
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(s, [i___1]) and element(s, [i___1]) <= character__last)
+***  Proved C1:  element(s, [begidx]) >= character__first
+     using hypotheses H2, H3 & H4.
+***  Proved C2:  element(s, [begidx]) <= character__last
+     using hypotheses H2, H3 & H4.
+***  Proved C3:  begidx >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  begidx <= rr_type__linelengthindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule isclass_rules(22).
+     This was achieved by replacing all occurrences of two_range__first by:
+          1.
+<S>  New C5:  true
+-S-  Applied substitution rule isclass_rules(23).
+     This was achieved by replacing all occurrences of two_range__last by:
+          2.
+<S>  New C6:  true
+***  Proved C5:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(s, [i___1]) and element(s, [i___1]) <= character__last)
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+***  Proved C1:  ada__characters__handling__to_upper(element(s, [begidx])) >= 
+          character__first
+     using hypothesis H16.
+***  Proved C2:  ada__characters__handling__to_upper(element(s, [begidx])) <= 
+          character__last
+     using hypothesis H17.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(s, [i___1]) and element(s, [i___1]) <= character__last)
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H17).
+***  Proved C1:  element(s, [endidx]) >= character__first
+     using hypotheses H2, H5 & H6.
+***  Proved C2:  element(s, [endidx]) <= character__last
+     using hypotheses H2, H5 & H6.
+***  Proved C3:  endidx >= rr_type__linelengthindex__first
+     using hypothesis H5.
+***  Proved C4:  endidx <= rr_type__linelengthindex__last
+     using hypothesis H6.
+***  Proved C5:  2 >= two_range__first
+     using hypothesis H14.
+-S-  Applied substitution rule isclass_rules(23).
+     This was achieved by replacing all occurrences of two_range__last by:
+          2.
+<S>  New H15:  true
+<S>  New C6:  true
+***  Proved C6:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(s, [i___1]) and element(s, [i___1]) <= character__last)
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H16).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H17).
+---  Hypothesis H22 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H23 has been replaced by "true".  (It is already present, as H6)
+          .
+***  Proved C1:  ada__characters__handling__to_upper(element(s, [endidx])) >= 
+          character__first
+     using hypothesis H26.
+***  Proved C2:  ada__characters__handling__to_upper(element(s, [endidx])) <= 
+          character__last
+     using hypothesis H27.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_isclass_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

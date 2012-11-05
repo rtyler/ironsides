@@ -1,0 +1,102 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function dns_table_pkg.DNS_Table_Type.hash
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 62:
+
+function_hash_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 62:
+
+function_hash_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 63:
+
+function_hash_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 63 to assertion of line 63:
+
+function_hash_4.
+H1:    val <= (loop__1__i - 1) * 255 .
+H2:    for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(domainname, [q_]) 
+          <= 255 and 0 <= element(domainname, [q_])) .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    val >= 0 .
+H5:    val + element(domainname, [loop__1__i]) >= 0 .
+H6:    val + element(domainname, [loop__1__i]) <= 2147483647 .
+H7:    loop__1__i < 4 .
+H8:    integer__size >= 0 .
+H9:    character__size >= 0 .
+H10:   natural__size >= 0 .
+H11:   positive__size >= 0 .
+H12:   rr_type__wirestringtypeindex__size >= 0 .
+H13:   rr_type__numbucketsindextype__size >= 0 .
+       ->
+C1:    val + element(domainname, [loop__1__i]) <= loop__1__i * 255 .
+
+
+For path(s) from assertion of line 63 to run-time check associated with 
+          statement of line 67:
+
+function_hash_5.
+H1:    val <= (loop__1__i - 1) * 255 .
+H2:    for_all(q_ : integer, 1 <= q_ and q_ <= 129 -> element(domainname, [q_]) 
+          <= 255 and 0 <= element(domainname, [q_])) .
+H3:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H4:    loop__1__i <= 4 .
+H5:    val >= 0 .
+H6:    integer__size >= 0 .
+H7:    character__size >= 0 .
+H8:    natural__size >= 0 .
+H9:    positive__size >= 0 .
+H10:   rr_type__wirestringtypeindex__size >= 0 .
+H11:   rr_type__numbucketsindextype__size >= 0 .
+       ->
+C1:    val + element(domainname, [loop__1__i]) <= 2147483647 .
+
+
+For path(s) from start to run-time check associated with statement of line 69:
+
+function_hash_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 63 to run-time check associated with 
+          statement of line 69:
+
+function_hash_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_hash_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 63 to finish:
+
+function_hash_9.
+*** true .          /* all conclusions proved */
+
+

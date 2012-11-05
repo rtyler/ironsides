@@ -1,0 +1,175 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+task_type Udp_Dns_Package.Udp_Dns_Task
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 45:
+
+task_type_udp_dns_task_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 48:
+
+task_type_udp_dns_task_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to assertion of line 48:
+
+task_type_udp_dns_task_3.
+*** true .          /* all conclusions proved */
+
+
+task_type_udp_dns_task_4.
+*** true .          /* all conclusions proved */
+
+
+task_type_udp_dns_task_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to run-time check associated with 
+          statement of line 49:
+
+task_type_udp_dns_task_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to run-time check associated with 
+          statement of line 55:
+
+task_type_udp_dns_task_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to precondition check associated with 
+          statement of line 59:
+
+task_type_udp_dns_task_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to run-time check associated with 
+          statement of line 59:
+
+task_type_udp_dns_task_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to run-time check associated with 
+          statement of line 67:
+
+task_type_udp_dns_task_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to precondition check associated with 
+          statement of line 70:
+
+task_type_udp_dns_task_11.
+H1:    for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(input_packet__3), [i___1]) and element(fld_bytes(
+          input_packet__3), [i___1]) <= 255) .
+H2:    fld_arcount(fld_header(input_packet__3)) >= 0 .
+H3:    fld_arcount(fld_header(input_packet__3)) <= 65535 .
+H4:    fld_nscount(fld_header(input_packet__3)) >= 0 .
+H5:    fld_nscount(fld_header(input_packet__3)) <= 65535 .
+H6:    fld_ancount(fld_header(input_packet__3)) >= 0 .
+H7:    fld_ancount(fld_header(input_packet__3)) <= 65535 .
+H8:    fld_qdcount(fld_header(input_packet__3)) >= 0 .
+H9:    fld_qdcount(fld_header(input_packet__3)) <= 65535 .
+H10:   dns_types__no_error <= fld_rcode(fld_header(input_packet__3)) .
+H11:   fld_rcode(fld_header(input_packet__3)) <= dns_types__refused .
+H12:   dns_types__query <= fld_opcode(fld_header(input_packet__3)) .
+H13:   fld_opcode(fld_header(input_packet__3)) <= dns_types__status .
+H14:   fld_messageid(fld_header(input_packet__3)) >= 0 .
+H15:   fld_messageid(fld_header(input_packet__3)) <= 65535 .
+H16:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H17:   fld_arcount(fld_header(output_packet)) >= 0 .
+H18:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H19:   fld_nscount(fld_header(output_packet)) >= 0 .
+H20:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H21:   fld_ancount(fld_header(output_packet)) >= 0 .
+H22:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H23:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H24:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H25:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H26:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H27:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H28:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H29:   fld_messageid(fld_header(output_packet)) >= 0 .
+H30:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H31:   input_bytes__3 >= 13 .
+H32:   input_bytes__3 < 312 .
+H33:   output_bytes__5 >= 13 .
+H34:   output_bytes__5 <= 8192 .
+H35:   max_transmit__5 <= 8192 .
+H36:   max_transmit__5 >= 512 .
+H37:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__5), [i___1]) and element(fld_bytes(
+          output_packet__5), [i___1]) <= 255) .
+H38:   fld_arcount(fld_header(output_packet__5)) >= 0 .
+H39:   fld_arcount(fld_header(output_packet__5)) <= 65535 .
+H40:   fld_nscount(fld_header(output_packet__5)) >= 0 .
+H41:   fld_nscount(fld_header(output_packet__5)) <= 65535 .
+H42:   fld_ancount(fld_header(output_packet__5)) >= 0 .
+H43:   fld_ancount(fld_header(output_packet__5)) <= 65535 .
+H44:   fld_qdcount(fld_header(output_packet__5)) >= 0 .
+H45:   fld_qdcount(fld_header(output_packet__5)) <= 65535 .
+H46:   dns_types__no_error <= fld_rcode(fld_header(output_packet__5)) .
+H47:   fld_rcode(fld_header(output_packet__5)) <= dns_types__refused .
+H48:   dns_types__query <= fld_opcode(fld_header(output_packet__5)) .
+H49:   fld_opcode(fld_header(output_packet__5)) <= dns_types__status .
+H50:   fld_messageid(fld_header(output_packet__5)) >= 0 .
+H51:   fld_messageid(fld_header(output_packet__5)) <= 65535 .
+H52:   dns_types__packet_length_range__min(max_transmit__5, output_bytes__5) >= 
+          0 .
+H53:   dns_types__packet_length_range__min(max_transmit__5, output_bytes__5) <= 
+          8192 .
+H54:   input_bytes__3 <= 311 .
+H55:   integer__size >= 0 .
+H56:   natural__size >= 0 .
+H57:   system__bit_order__size >= 0 .
+H58:   dns_types__packet_length_range__size >= 0 .
+H59:   dns_types__packet_bytes_range__size >= 0 .
+H60:   dns_types__dns_packet__size >= 0 .
+       ->
+C1:    dns_types__packet_length_range__min(max_transmit__5, output_bytes__5) > 
+          12 .
+
+
+For path(s) from assertion of line 48 to run-time check associated with 
+          statement of line 77:
+
+task_type_udp_dns_task_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 48 to finish:
+
+task_type_udp_dns_task_13.
+*** true .          /* all conclusions proved */
+
+
+task_type_udp_dns_task_14.
+*** true .          /* all conclusions proved */
+
+
+task_type_udp_dns_task_15.
+*** true .          /* all conclusions proved */
+
+

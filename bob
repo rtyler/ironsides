@@ -1,0 +1,311 @@
+           *******************************************************
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+
+           Reading default switch file ...
+
+           Reading target configuration file ...
+
+         type Address is private;
+
+---        Note              :  3: The deferred constant Null_Address has been 
+           implicitly defined here.
+
+         subtype Priority is Any_Priority range  0 ..  30;
+
+---        Note              :  4: The constant Default_Priority, of type Priority, 
+           has been implicitly defined here.
+
+           Examining the specification of package DNS_Types ...
+
+           Examining the specification of package DNS_Network ...
+
+      WITH Gnat.Sockets;
+           ^
+---        Warning           :391: If the identifier Gnat represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
+      end DNS_Network;
+
+---        Warning           : 10: The private part of package DNS_Network is 
+           hidden - hidden text is ignored by the Examiner.
+
+           Examining the specification of package Dns_Network_Receive ...
+
+           Examining the specification of package Protected_SPARK_IO_05 ...
+
+      with Ada.Text_IO;
+           ^
+---        Warning           :  1: The identifier Ada is either undeclared or not 
+           visible at this point.
+
+      end Protected_SPARK_IO_05;
+
+---        Warning           : 10: The private part of package 
+           Protected_SPARK_IO_05 is hidden - hidden text is ignored by the 
+           Examiner.
+
+           Examining the specification of package Unsigned_Types ...
+
+           Examining the specification of package Rr_Type ...
+
+           Examining the specification of package A_Record_Type ...
+
+           Examining the specification of package Aaaa_Record_Type ...
+
+           Examining the specification of package Cname_Record_Type ...
+
+           Examining the specification of package Ns_Record_Type ...
+
+           Examining the specification of package Mx_Record_Type ...
+
+           Examining the specification of package Ptr_Record_Type ...
+
+           Examining the specification of package Soa_Record_Type ...
+
+           Examining the specification of package Handling ...
+
+           Examining the specification of package Dnskey_Record_Type ...
+
+           Examining the specification of package Nsec_Record_Type ...
+
+           Examining the specification of package dns_table_pkg ...
+
+           Examining the specification of package Process_Dns_Request ...
+
+           Examining the body of package Process_Dns_Request ...
+
+      with Ada.Text_Io;
+               ^
+---        Warning           :391: If the identifier Text_Io represents a package 
+           which contains a task or an interrupt handler then the 
+           partition-level analysis performed by the Examiner will be 
+           incomplete.  Such packages must be inherited as well as withed.
+
++++        Flow analysis of subprogram Set_Unsigned_32 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_Unsigned_16 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_TTL_Data_IP 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_NS_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_PTR_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_MX_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Set_TTL_Data_SOA_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Set_TTL_Data_AAAA_IP 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+            for i in rr_type.aaaa_record_type.IPV6AddrTypeIndex loop
+
+---        Warning           :402: Default assertion planted to cut loop.
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Get_Query_Name_Type_Class performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Create_Response_Error performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_AAAA 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_A 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_NS 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_PTR 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_MX 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response_SOA 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Process_Response_Cname performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Trim_Name performed: 
+           no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram 
+           Create_NXDOMAIN_Response performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+               EDNS_Rec.Code    := To_Query_Type(DNS_Types.Unsigned_Short(
+                                   ^
+---        Warning           : 12: Function To_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
+                     From_Query_Type(DNS_Types.OPT) mod 256);
+                     ^
+---        Warning           : 12: Function From_Query_Type is an instantiation of 
+           Unchecked_Conversion.
+
++++        Flow analysis of subprogram Create_Response_EDNS 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Create_Response 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
++++        Flow analysis of subprogram Process_Request_Tcp 
+           performed: no errors found.
+
+           Building model of subprogram ...
+
+           Generating VCs ...
+
+           Writing VCs ...
+
+           Generating listing file process_dns_request.lsb ...
+
+           Generating report file ...
+
+   10 errors or warnings, comprising:
+        10 warnings
+   33 expected (justified) warnings
+
+
+-----------End of SPARK Examination--------------------------------

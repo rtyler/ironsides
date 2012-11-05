@@ -1,0 +1,338 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+       /*procedure Zone_File_Parser.ParseTypeCoveredAlgorithmNumLabels*/
+
+
+rule_family parsetypecov_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+parsetypecov_rules(1): integer__size >= 0 may_be_deduced.
+parsetypecov_rules(2): integer__first may_be_replaced_by -2147483648.
+parsetypecov_rules(3): integer__last may_be_replaced_by 2147483647.
+parsetypecov_rules(4): integer__base__first may_be_replaced_by -2147483648.
+parsetypecov_rules(5): integer__base__last may_be_replaced_by 2147483647.
+parsetypecov_rules(6): character__size >= 0 may_be_deduced.
+parsetypecov_rules(7): character__first may_be_replaced_by 0.
+parsetypecov_rules(8): character__last may_be_replaced_by 255.
+parsetypecov_rules(9): character__base__first may_be_replaced_by 0.
+parsetypecov_rules(10): character__base__last may_be_replaced_by 255.
+parsetypecov_rules(11): positive__size >= 0 may_be_deduced.
+parsetypecov_rules(12): positive__first may_be_replaced_by 1.
+parsetypecov_rules(13): positive__last may_be_replaced_by 2147483647.
+parsetypecov_rules(14): positive__base__first may_be_replaced_by -2147483648.
+parsetypecov_rules(15): positive__base__last may_be_replaced_by 2147483647.
+parsetypecov_rules(16): dns_types__query_type__size >= 0 may_be_deduced.
+parsetypecov_rules(17): dns_types__query_type__size may_be_replaced_by 16.
+parsetypecov_rules(18): dns_types__query_type__first may_be_replaced_by dns_types__a.
+parsetypecov_rules(19): dns_types__query_type__last may_be_replaced_by dns_types__unimplemented.
+parsetypecov_rules(20): dns_types__query_type__base__first may_be_replaced_by dns_types__a.
+parsetypecov_rules(21): dns_types__query_type__base__last may_be_replaced_by dns_types__unimplemented.
+parsetypecov_rules(22): dns_types__query_type__pos(
+     dns_types__query_type__first) may_be_replaced_by 0.
+parsetypecov_rules(23): dns_types__query_type__pos(dns_types__a) may_be_replaced_by 0.
+parsetypecov_rules(24): dns_types__query_type__val(0) may_be_replaced_by 
+     dns_types__a.
+parsetypecov_rules(25): dns_types__query_type__pos(dns_types__ns) may_be_replaced_by 1.
+parsetypecov_rules(26): dns_types__query_type__val(1) may_be_replaced_by 
+     dns_types__ns.
+parsetypecov_rules(27): dns_types__query_type__pos(
+     dns_types__cname) may_be_replaced_by 2.
+parsetypecov_rules(28): dns_types__query_type__val(2) may_be_replaced_by 
+     dns_types__cname.
+parsetypecov_rules(29): dns_types__query_type__pos(dns_types__soa) may_be_replaced_by 3.
+parsetypecov_rules(30): dns_types__query_type__val(3) may_be_replaced_by 
+     dns_types__soa.
+parsetypecov_rules(31): dns_types__query_type__pos(dns_types__wks) may_be_replaced_by 4.
+parsetypecov_rules(32): dns_types__query_type__val(4) may_be_replaced_by 
+     dns_types__wks.
+parsetypecov_rules(33): dns_types__query_type__pos(dns_types__ptr) may_be_replaced_by 5.
+parsetypecov_rules(34): dns_types__query_type__val(5) may_be_replaced_by 
+     dns_types__ptr.
+parsetypecov_rules(35): dns_types__query_type__pos(dns_types__mx) may_be_replaced_by 6.
+parsetypecov_rules(36): dns_types__query_type__val(6) may_be_replaced_by 
+     dns_types__mx.
+parsetypecov_rules(37): dns_types__query_type__pos(
+     dns_types__aaaa) may_be_replaced_by 7.
+parsetypecov_rules(38): dns_types__query_type__val(7) may_be_replaced_by 
+     dns_types__aaaa.
+parsetypecov_rules(39): dns_types__query_type__pos(dns_types__srv) may_be_replaced_by 8.
+parsetypecov_rules(40): dns_types__query_type__val(8) may_be_replaced_by 
+     dns_types__srv.
+parsetypecov_rules(41): dns_types__query_type__pos(dns_types__a6) may_be_replaced_by 9.
+parsetypecov_rules(42): dns_types__query_type__val(9) may_be_replaced_by 
+     dns_types__a6.
+parsetypecov_rules(43): dns_types__query_type__pos(dns_types__opt) may_be_replaced_by 10.
+parsetypecov_rules(44): dns_types__query_type__val(10) may_be_replaced_by 
+     dns_types__opt.
+parsetypecov_rules(45): dns_types__query_type__pos(dns_types__ds) may_be_replaced_by 11.
+parsetypecov_rules(46): dns_types__query_type__val(11) may_be_replaced_by 
+     dns_types__ds.
+parsetypecov_rules(47): dns_types__query_type__pos(
+     dns_types__rrsig) may_be_replaced_by 12.
+parsetypecov_rules(48): dns_types__query_type__val(12) may_be_replaced_by 
+     dns_types__rrsig.
+parsetypecov_rules(49): dns_types__query_type__pos(
+     dns_types__nsec) may_be_replaced_by 13.
+parsetypecov_rules(50): dns_types__query_type__val(13) may_be_replaced_by 
+     dns_types__nsec.
+parsetypecov_rules(51): dns_types__query_type__pos(
+     dns_types__dnskey) may_be_replaced_by 14.
+parsetypecov_rules(52): dns_types__query_type__val(14) may_be_replaced_by 
+     dns_types__dnskey.
+parsetypecov_rules(53): dns_types__query_type__pos(dns_types__any) may_be_replaced_by 15.
+parsetypecov_rules(54): dns_types__query_type__val(15) may_be_replaced_by 
+     dns_types__any.
+parsetypecov_rules(55): dns_types__query_type__pos(dns_types__caa) may_be_replaced_by 16.
+parsetypecov_rules(56): dns_types__query_type__val(16) may_be_replaced_by 
+     dns_types__caa.
+parsetypecov_rules(57): dns_types__query_type__pos(
+     dns_types__error) may_be_replaced_by 17.
+parsetypecov_rules(58): dns_types__query_type__val(17) may_be_replaced_by 
+     dns_types__error.
+parsetypecov_rules(59): dns_types__query_type__pos(
+     dns_types__unimplemented) may_be_replaced_by 18.
+parsetypecov_rules(60): dns_types__query_type__val(18) may_be_replaced_by 
+     dns_types__unimplemented.
+parsetypecov_rules(61): dns_types__query_type__pos(
+     dns_types__query_type__last) may_be_replaced_by 18.
+parsetypecov_rules(62): dns_types__query_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) + 1
+     if [X <=dns_types__unimplemented, X <> 
+     dns_types__unimplemented].
+parsetypecov_rules(63): dns_types__query_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) - 1
+     if [X >=dns_types__a, X <> dns_types__a].
+parsetypecov_rules(64): dns_types__query_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+parsetypecov_rules(65): dns_types__query_type__pos(X) <= 18 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+parsetypecov_rules(66): dns_types__query_type__val(X) >= 
+     dns_types__a may_be_deduced_from
+     [0 <= X, X <= 18].
+parsetypecov_rules(67): dns_types__query_type__val(X) <= 
+     dns_types__unimplemented may_be_deduced_from
+     [0 <= X, X <= 18].
+parsetypecov_rules(68): succ(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X+1)
+     if [0 <= X, X < 18].
+parsetypecov_rules(69): pred(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X-1)
+     if [0 < X, X <= 18].
+parsetypecov_rules(70): dns_types__query_type__pos(
+     dns_types__query_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 18].
+parsetypecov_rules(71): dns_types__query_type__val(
+     dns_types__query_type__pos(X)) may_be_replaced_by X
+     if [dns_types__a <= X, X <= dns_types__unimplemented].
+parsetypecov_rules(72): dns_types__query_type__pos(X) <= 
+     dns_types__query_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__a <= X, X <= dns_types__unimplemented, 
+     dns_types__a <= Y, Y <= dns_types__unimplemented].
+parsetypecov_rules(73): dns_types__query_type__val(X) <= 
+     dns_types__query_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 18, 0 <= Y, Y <= 18].
+parsetypecov_rules(74): unsigned_types__unsigned8__size >= 0 may_be_deduced.
+parsetypecov_rules(75): unsigned_types__unsigned8__first may_be_replaced_by 0.
+parsetypecov_rules(76): unsigned_types__unsigned8__last may_be_replaced_by 255.
+parsetypecov_rules(77): unsigned_types__unsigned8__base__first may_be_replaced_by 0.
+parsetypecov_rules(78): unsigned_types__unsigned8__base__last may_be_replaced_by 255.
+parsetypecov_rules(79): unsigned_types__unsigned8__modulus may_be_replaced_by 256.
+parsetypecov_rules(80): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+parsetypecov_rules(81): unsigned_types__unsigned16__first may_be_replaced_by 0.
+parsetypecov_rules(82): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+parsetypecov_rules(83): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+parsetypecov_rules(84): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+parsetypecov_rules(85): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.
+parsetypecov_rules(86): unsigned_types__unsigned32__size >= 0 may_be_deduced.
+parsetypecov_rules(87): unsigned_types__unsigned32__first may_be_replaced_by 0.
+parsetypecov_rules(88): unsigned_types__unsigned32__last may_be_replaced_by 4294967295.
+parsetypecov_rules(89): unsigned_types__unsigned32__base__first may_be_replaced_by 0.
+parsetypecov_rules(90): unsigned_types__unsigned32__base__last may_be_replaced_by 4294967295.
+parsetypecov_rules(91): unsigned_types__unsigned32__modulus may_be_replaced_by 4294967296.
+parsetypecov_rules(92): rr_type__classtype__size >= 0 may_be_deduced.
+parsetypecov_rules(93): rr_type__classtype__first may_be_replaced_by rr_type__internet.
+parsetypecov_rules(94): rr_type__classtype__last may_be_replaced_by rr_type__hs.
+parsetypecov_rules(95): rr_type__classtype__base__first may_be_replaced_by rr_type__internet.
+parsetypecov_rules(96): rr_type__classtype__base__last may_be_replaced_by rr_type__hs.
+parsetypecov_rules(97): rr_type__classtype__pos(
+     rr_type__classtype__first) may_be_replaced_by 0.
+parsetypecov_rules(98): rr_type__classtype__pos(rr_type__internet) may_be_replaced_by 0.
+parsetypecov_rules(99): rr_type__classtype__val(0) may_be_replaced_by 
+     rr_type__internet.
+parsetypecov_rules(100): rr_type__classtype__pos(rr_type__cs) may_be_replaced_by 1.
+parsetypecov_rules(101): rr_type__classtype__val(1) may_be_replaced_by 
+     rr_type__cs.
+parsetypecov_rules(102): rr_type__classtype__pos(rr_type__ch) may_be_replaced_by 2.
+parsetypecov_rules(103): rr_type__classtype__val(2) may_be_replaced_by 
+     rr_type__ch.
+parsetypecov_rules(104): rr_type__classtype__pos(rr_type__hs) may_be_replaced_by 3.
+parsetypecov_rules(105): rr_type__classtype__val(3) may_be_replaced_by 
+     rr_type__hs.
+parsetypecov_rules(106): rr_type__classtype__pos(
+     rr_type__classtype__last) may_be_replaced_by 3.
+parsetypecov_rules(107): rr_type__classtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) + 1
+     if [X <=rr_type__hs, X <> rr_type__hs].
+parsetypecov_rules(108): rr_type__classtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__classtype__pos(X) - 1
+     if [X >=rr_type__internet, X <> rr_type__internet].
+parsetypecov_rules(109): rr_type__classtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parsetypecov_rules(110): rr_type__classtype__pos(X) <= 3 may_be_deduced_from
+     [rr_type__internet <= X, X <= rr_type__hs].
+parsetypecov_rules(111): rr_type__classtype__val(X) >= 
+     rr_type__internet may_be_deduced_from
+     [0 <= X, X <= 3].
+parsetypecov_rules(112): rr_type__classtype__val(X) <= 
+     rr_type__hs may_be_deduced_from
+     [0 <= X, X <= 3].
+parsetypecov_rules(113): succ(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X+1)
+     if [0 <= X, X < 3].
+parsetypecov_rules(114): pred(rr_type__classtype__val(X)) may_be_replaced_by 
+     rr_type__classtype__val(X-1)
+     if [0 < X, X <= 3].
+parsetypecov_rules(115): rr_type__classtype__pos(
+     rr_type__classtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 3].
+parsetypecov_rules(116): rr_type__classtype__val(
+     rr_type__classtype__pos(X)) may_be_replaced_by X
+     if [rr_type__internet <= X, X <= rr_type__hs].
+parsetypecov_rules(117): rr_type__classtype__pos(X) <= 
+     rr_type__classtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__internet <= X, X <= rr_type__hs, 
+     rr_type__internet <= Y, Y <= rr_type__hs].
+parsetypecov_rules(118): rr_type__classtype__val(X) <= 
+     rr_type__classtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 3, 0 <= Y, Y <= 3].
+parsetypecov_rules(119): rr_type__rritemtype__size >= 0 may_be_deduced.
+parsetypecov_rules(120): rr_type__rritemtype__first may_be_replaced_by rr_type__domainnameortimespec.
+parsetypecov_rules(121): rr_type__rritemtype__last may_be_replaced_by rr_type__other.
+parsetypecov_rules(122): rr_type__rritemtype__base__first may_be_replaced_by rr_type__domainnameortimespec.
+parsetypecov_rules(123): rr_type__rritemtype__base__last may_be_replaced_by rr_type__other.
+parsetypecov_rules(124): rr_type__rritemtype__pos(
+     rr_type__rritemtype__first) may_be_replaced_by 0.
+parsetypecov_rules(125): rr_type__rritemtype__pos(
+     rr_type__domainnameortimespec) may_be_replaced_by 0.
+parsetypecov_rules(126): rr_type__rritemtype__val(0) may_be_replaced_by 
+     rr_type__domainnameortimespec.
+parsetypecov_rules(127): rr_type__rritemtype__pos(rr_type__number) may_be_replaced_by 1.
+parsetypecov_rules(128): rr_type__rritemtype__val(1) may_be_replaced_by 
+     rr_type__number.
+parsetypecov_rules(129): rr_type__rritemtype__pos(rr_type__class) may_be_replaced_by 2.
+parsetypecov_rules(130): rr_type__rritemtype__val(2) may_be_replaced_by 
+     rr_type__class.
+parsetypecov_rules(131): rr_type__rritemtype__pos(
+     rr_type__recordindicator) may_be_replaced_by 3.
+parsetypecov_rules(132): rr_type__rritemtype__val(3) may_be_replaced_by 
+     rr_type__recordindicator.
+parsetypecov_rules(133): rr_type__rritemtype__pos(rr_type__ipv4) may_be_replaced_by 4.
+parsetypecov_rules(134): rr_type__rritemtype__val(4) may_be_replaced_by 
+     rr_type__ipv4.
+parsetypecov_rules(135): rr_type__rritemtype__pos(rr_type__ipv6) may_be_replaced_by 5.
+parsetypecov_rules(136): rr_type__rritemtype__val(5) may_be_replaced_by 
+     rr_type__ipv6.
+parsetypecov_rules(137): rr_type__rritemtype__pos(rr_type__lparen) may_be_replaced_by 6.
+parsetypecov_rules(138): rr_type__rritemtype__val(6) may_be_replaced_by 
+     rr_type__lparen.
+parsetypecov_rules(139): rr_type__rritemtype__pos(rr_type__rparen) may_be_replaced_by 7.
+parsetypecov_rules(140): rr_type__rritemtype__val(7) may_be_replaced_by 
+     rr_type__rparen.
+parsetypecov_rules(141): rr_type__rritemtype__pos(
+     rr_type__control) may_be_replaced_by 8.
+parsetypecov_rules(142): rr_type__rritemtype__val(8) may_be_replaced_by 
+     rr_type__control.
+parsetypecov_rules(143): rr_type__rritemtype__pos(
+     rr_type__comment) may_be_replaced_by 9.
+parsetypecov_rules(144): rr_type__rritemtype__val(9) may_be_replaced_by 
+     rr_type__comment.
+parsetypecov_rules(145): rr_type__rritemtype__pos(rr_type__other) may_be_replaced_by 10.
+parsetypecov_rules(146): rr_type__rritemtype__val(10) may_be_replaced_by 
+     rr_type__other.
+parsetypecov_rules(147): rr_type__rritemtype__pos(
+     rr_type__rritemtype__last) may_be_replaced_by 10.
+parsetypecov_rules(148): rr_type__rritemtype__pos(succ(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) + 1
+     if [X <=rr_type__other, X <> rr_type__other].
+parsetypecov_rules(149): rr_type__rritemtype__pos(pred(X)) may_be_replaced_by 
+     rr_type__rritemtype__pos(X) - 1
+     if [X >=rr_type__domainnameortimespec, X <> 
+     rr_type__domainnameortimespec].
+parsetypecov_rules(150): rr_type__rritemtype__pos(X) >= 0 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetypecov_rules(151): rr_type__rritemtype__pos(X) <= 10 may_be_deduced_from
+     [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetypecov_rules(152): rr_type__rritemtype__val(X) >= 
+     rr_type__domainnameortimespec may_be_deduced_from
+     [0 <= X, X <= 10].
+parsetypecov_rules(153): rr_type__rritemtype__val(X) <= 
+     rr_type__other may_be_deduced_from
+     [0 <= X, X <= 10].
+parsetypecov_rules(154): succ(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X+1)
+     if [0 <= X, X < 10].
+parsetypecov_rules(155): pred(rr_type__rritemtype__val(X)) may_be_replaced_by 
+     rr_type__rritemtype__val(X-1)
+     if [0 < X, X <= 10].
+parsetypecov_rules(156): rr_type__rritemtype__pos(
+     rr_type__rritemtype__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 10].
+parsetypecov_rules(157): rr_type__rritemtype__val(
+     rr_type__rritemtype__pos(X)) may_be_replaced_by X
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other].
+parsetypecov_rules(158): rr_type__rritemtype__pos(X) <= 
+     rr_type__rritemtype__pos(Y) & X <= Y are_interchangeable 
+     if [rr_type__domainnameortimespec <= X, X <= rr_type__other, 
+     rr_type__domainnameortimespec <= Y, Y <= rr_type__other].
+parsetypecov_rules(159): rr_type__rritemtype__val(X) <= 
+     rr_type__rritemtype__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 10, 0 <= Y, Y <= 10].
+parsetypecov_rules(160): rr_type__linelengthindex__size >= 0 may_be_deduced.
+parsetypecov_rules(161): rr_type__linelengthindex__first may_be_replaced_by 1.
+parsetypecov_rules(162): rr_type__linelengthindex__last may_be_replaced_by 256.
+parsetypecov_rules(163): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+parsetypecov_rules(164): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+parsetypecov_rules(165): rr_type__domainnamestringtypeindex__size >= 0 may_be_deduced.
+parsetypecov_rules(166): rr_type__domainnamestringtypeindex__first may_be_replaced_by 1.
+parsetypecov_rules(167): rr_type__domainnamestringtypeindex__last may_be_replaced_by 128.
+parsetypecov_rules(168): rr_type__domainnamestringtypeindex__base__first may_be_replaced_by -2147483648.
+parsetypecov_rules(169): rr_type__domainnamestringtypeindex__base__last may_be_replaced_by 2147483647.
+parsetypecov_rules(170): rr_type__resourcerecordtype__size >= 0 may_be_deduced.
+parsetypecov_rules(171): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__resourcerecordtype)),
+      goal(checktype(B,rr_type__resourcerecordtype)),
+      fld_ttlinseconds(A) = fld_ttlinseconds(B),
+      fld_class(A) = fld_class(B)].
+parsetypecov_rules(172): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__size >= 0 may_be_deduced.
+parsetypecov_rules(173): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__first may_be_replaced_by 1.
+parsetypecov_rules(174): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__last may_be_replaced_by 1365.
+parsetypecov_rules(175): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__base__first may_be_replaced_by -2147483648.
+parsetypecov_rules(176): 
+     rr_type__rrsig_record_type__rrsigstringtypeindex__base__last may_be_replaced_by 2147483647.
+parsetypecov_rules(177): 
+     rr_type__rrsig_record_type__rrsigrecordtype__size >= 0 may_be_deduced.
+parsetypecov_rules(178): A = B may_be_deduced_from
+     [goal(checktype(A,rr_type__rrsig_record_type__rrsigrecordtype)),
+      goal(checktype(B,rr_type__rrsig_record_type__rrsigrecordtype)),
+      fld_inherit(A) = fld_inherit(B),
+      fld_typecovered(A) = fld_typecovered(B),
+      fld_algorithm(A) = fld_algorithm(B),
+      fld_numlabels(A) = fld_numlabels(B),
+      fld_origttl(A) = fld_origttl(B),
+      fld_sigexpiration(A) = fld_sigexpiration(B),
+      fld_siginception(A) = fld_siginception(B),
+      fld_keytag(A) = fld_keytag(B),
+      fld_signername(A) = fld_signername(B),
+      fld_signature(A) = fld_signature(B),
+      fld_signaturelength(A) = fld_signaturelength(B)].

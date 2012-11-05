@@ -1,0 +1,296 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function Rr_Type.ConvertStringToDomainName
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+-S-  Applied substitution rule convertstrin_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  s__index__subtype__1__last - s__index__subtype__1__first >= - 
+          2147483649
+<S>  New C3:  true
+-S-  Applied substitution rule convertstrin_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  s__index__subtype__1__last - s__index__subtype__1__first <= 
+          2147483646
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+-S-  Applied substitution rule convertstrin_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H1:  s__index__subtype__1__last - s__index__subtype__1__first <= 127
+-S-  Applied substitution rule convertstrin_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= character__last)
+-S-  Applied substitution rule convertstrin_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= 255)
+-S-  Applied substitution rule convertstrin_rules(22).
+     This was achieved by replacing all occurrences of 
+          s__index__subtype__1__first by:
+          1.
+<S>  New H1:  s__index__subtype__1__last <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          s__index__subtype__1__last -> 0 <= element(s, [i___1]) and element(s, 
+          [i___1]) <= 255)
+<S>  New C1:  s__index__subtype__1__last >= - 2147483648
+<S>  New C2:  s__index__subtype__1__last <= 2147483647
+***  Proved C2:  s__index__subtype__1__last <= 2147483647
+     using hypothesis H1.
+***  Proved C1:  s__index__subtype__1__last >= - 2147483648
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  0 <= s__index__subtype__1__last - s__index__subtype__1__first -> 
+          s__index__subtype__1__last - s__index__subtype__1__first + 1 >= 
+          integer__first and s__index__subtype__1__last - 
+          s__index__subtype__1__first + 1 <= integer__last
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  0 <= s__index__subtype__1__last - s__index__subtype__1__first -> 
+          1 >= integer__first and 1 <= integer__last
+***  Proved C1:  0 <= s__index__subtype__1__last - s__index__subtype__1__first 
+          -> s__index__subtype__1__last - s__index__subtype__1__first + 1 >= 
+          integer__first and s__index__subtype__1__last - 
+          s__index__subtype__1__first + 1 <= integer__last
+     using hypotheses H3 & H4.
+***  Proved C2:  0 <= s__index__subtype__1__last - s__index__subtype__1__first 
+          -> 1 >= integer__first and 1 <= integer__last
+     using hypotheses H5 & H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+%%%  Simplified H7 on reading formula in, to give:
+     %%%  H7:  0 <= s__index__subtype__1__last - s__index__subtype__1__first -> 
+          s__index__subtype__1__last - s__index__subtype__1__first + 1 >= 
+          integer__first and s__index__subtype__1__last - 
+          s__index__subtype__1__first + 1 <= integer__last
+%%%  Simplified H8 on reading formula in, to give:
+     %%%  H8:  0 <= s__index__subtype__1__last - s__index__subtype__1__first -> 
+          1 >= integer__first and 1 <= integer__last
+%%%  Simplified H9 on reading formula in, to give:
+     %%%  H9:  0 <= s__index__subtype__1__last - s__index__subtype__1__first
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+%%%  Simplified C7 on reading formula in, to give:
+     %%%  C7:  0 <= s__index__subtype__1__last - s__index__subtype__1__first
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  s__index__subtype__1__last - s__index__subtype__1__first + 1 
+          <= maxdomainnamelength
+     using hypothesis H1.
+***  Proved C4:  1 >= integer__first
+     using hypothesis H5.
+***  Proved C5:  1 <= integer__last
+     using hypothesis H6.
+***  Proved C6:  true
+***  Proved C7:  0 <= s__index__subtype__1__last - s__index__subtype__1__first
+     using hypothesis H9.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 0
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+     using hypothesis H2.
+***  Proved C3:  s__index__subtype__1__last - s__index__subtype__1__first + 1 
+          <= maxdomainnamelength
+     using hypothesis H3.
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 0
+     using hypothesis H6.
+-S-  Applied substitution rule convertstrin_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H14 into:
+     >>>  H14:  loop__1__i <> s__index__subtype__1__last - 
+          s__index__subtype__1__first + 1
+-S-  Applied substitution rule convertstrin_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H3:  s__index__subtype__1__last - s__index__subtype__1__first <= 127
+-S-  Applied substitution rule convertstrin_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convertstrin_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= character__last)
+<S>  New H8:  element(s, [loop__1__i]) >= 0
+-S-  Applied substitution rule convertstrin_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H9:  element(s, [loop__1__i]) <= 255
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= 255)
+-S-  Applied substitution rule convertstrin_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New H12:  loop__1__i >= 1
+-S-  Applied substitution rule convertstrin_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New H13:  loop__1__i <= 128
+-S-  Applied substitution rule convertstrin_rules(22).
+     This was achieved by replacing all occurrences of 
+          s__index__subtype__1__first by:
+          1.
+<S>  New H7:  loop__1__i <= s__index__subtype__1__last
+<S>  New H10:  loop__1__i >= 1
+<S>  New H14:  loop__1__i <> s__index__subtype__1__last
+<S>  New H3:  s__index__subtype__1__last <= 128
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          s__index__subtype__1__last -> 0 <= element(s, [i___1]) and element(s, 
+          [i___1]) <= 255)
+<S>  New C7:  loop__1__i + 1 <= s__index__subtype__1__last
+%%%  Hypotheses H11 & H14 together imply that
+          loop__1__i < s__index__subtype__1__last.
+     H11 & H14 have therefore been deleted and a new H15 added to this effect.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H13.
+***  Proved C7:  loop__1__i + 1 <= s__index__subtype__1__last
+     via its standard form, which is:
+     Std.Fm C7:  - loop__1__i + s__index__subtype__1__last > 0
+     using hypothesis H15.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 
+          and i___1 <= s__index__subtype__1__last -> character__first <= 
+          element(s, [i___1]) and element(s, [i___1]) <= character__last)
+-S-  Applied substitution rule convertstrin_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= character__last)
+<S>  New C1:  element(s, [loop__1__i]) >= 0
+-S-  Applied substitution rule convertstrin_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, s__index__subtype__1__first <= i___1 and 
+          i___1 <= s__index__subtype__1__last -> 0 <= element(s, [i___1]) and 
+          element(s, [i___1]) <= 255)
+<S>  New C2:  element(s, [loop__1__i]) <= 255
+-S-  Applied substitution rule convertstrin_rules(22).
+     This was achieved by replacing all occurrences of 
+          s__index__subtype__1__first by:
+          1.
+<S>  New H3:  s__index__subtype__1__last <= maxdomainnamelength
+<S>  New H7:  loop__1__i <= s__index__subtype__1__last
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          s__index__subtype__1__last -> 0 <= element(s, [i___1]) and element(s, 
+          [i___1]) <= 255)
+<S>  New C3:  loop__1__i >= 1
+-S-  Applied substitution rule convertstrin_rules(18).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__first by:
+          1.
+<S>  New C5:  loop__1__i >= 1
+-S-  Applied substitution rule convertstrin_rules(19).
+     This was achieved by replacing all occurrences of 
+          domainnamestringtypeindex__last by:
+          128.
+<S>  New C6:  loop__1__i <= 128
+***  Proved C4:  loop__1__i <= s__index__subtype__1__last
+     using hypothesis H7.
+***  Proved C1:  element(s, [loop__1__i]) >= 0
+     using hypotheses H2, H6 & H7.
+***  Proved C2:  element(s, [loop__1__i]) <= 255
+     using hypotheses H2, H6 & H7.
+***  Proved C3:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C5:  loop__1__i >= 1
+     using hypothesis H6.
+-S-  Applied substitution rule convertstrin_rules(1).
+     This was achieved by replacing all occurrences of maxdomainnamelength by:
+          128.
+<S>  New H3:  s__index__subtype__1__last <= 128
+-S-  Applied substitution rule convertstrin_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule convertstrin_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+***  Proved C6:  loop__1__i <= 128
+     using hypotheses H3 & H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_6.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_convertstringtodomainname_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

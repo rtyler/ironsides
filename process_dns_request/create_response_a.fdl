@@ -1,0 +1,182 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+              {procedure Process_Dns_Request.Create_Response_A}
+
+
+title procedure create_response_a;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__qname_ptr_range = integer;
+  type dns_types__packet_length_range = integer;
+  type dns_types__packet_bytes_range = integer;
+  type dns_types__byte = integer;
+  type dns_types__unsigned_short = integer;
+  type dns_types__opcode_type = (dns_types__query, 
+     dns_types__iquery, dns_types__status);
+  type dns_types__response_code = (dns_types__no_error, 
+     dns_types__format_error, dns_types__server_failure, 
+     dns_types__name_error, dns_types__not_implemented, 
+     dns_types__refused);
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type dns_types__header_type = record
+        messageid : integer;
+        qr : boolean;
+        opcode : dns_types__opcode_type;
+        aa : boolean;
+        tc : boolean;
+        rd : boolean;
+        ra : boolean;
+        res1 : boolean;
+        res2 : boolean;
+        res3 : boolean;
+        rcode : dns_types__response_code;
+        qdcount : integer;
+        ancount : integer;
+        nscount : integer;
+        arcount : integer
+     end;
+  type dns_types__bytes_array_type = array [integer] of integer;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type dns_types__dns_packet = record
+        header : dns_types__header_type;
+        bytes : dns_types__bytes_array_type
+     end;
+  type rr_type__a_record_type__arecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        ipv4 : integer
+     end;
+  type rr_type__a_record_type__arecordbuckettype = array [integer] of 
+     rr_type__a_record_type__arecordtype;
+  const dns_types__packet_size : integer = pending;
+  const dns_types__header_bits : integer = pending;
+  const rr_type__maxnumrecords : integer = pending;
+  const system__min_int : integer = pending;
+  const system__max_int : integer = pending;
+  const rr_type__numberofrecordstype__base__first : integer = pending; 
+  const rr_type__numberofrecordstype__base__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const dns_types__response_code__base__first : 
+     dns_types__response_code = pending; 
+  const dns_types__response_code__base__last : 
+     dns_types__response_code = pending; 
+  const dns_types__opcode_type__base__first : 
+     dns_types__opcode_type = pending; 
+  const dns_types__opcode_type__base__last : 
+     dns_types__opcode_type = pending; 
+  const dns_types__unsigned_short__base__first : integer = pending; 
+  const dns_types__unsigned_short__base__last : integer = pending; 
+  const dns_types__byte__base__first : integer = pending; 
+  const dns_types__byte__base__last : integer = pending; 
+  const dns_types__packet_bytes_range__base__first : integer = pending; 
+  const dns_types__packet_bytes_range__base__last : integer = pending; 
+  const dns_types__packet_length_range__base__first : integer = pending; 
+  const dns_types__packet_length_range__base__last : integer = pending; 
+  const dns_types__qname_ptr_range__base__first : integer = pending; 
+  const dns_types__qname_ptr_range__base__last : integer = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const natural__base__first : integer = pending; 
+  const natural__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__a_record_type__arecordtype__size : integer = pending; 
+  const rr_type__numberofrecordstype__first : integer = pending; 
+  const rr_type__numberofrecordstype__last : integer = pending; 
+  const rr_type__numberofrecordstype__size : integer = pending; 
+  const rr_type__returnedrecordsindextype__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const dns_types__dns_packet__size : integer = pending; 
+  const dns_types__header_type__size : integer = pending; 
+  const dns_types__response_code__first : 
+     dns_types__response_code = pending; 
+  const dns_types__response_code__last : dns_types__response_code = pending; 
+  const dns_types__response_code__size : integer = pending; 
+  const dns_types__opcode_type__first : dns_types__opcode_type = pending; 
+  const dns_types__opcode_type__last : dns_types__opcode_type = pending; 
+  const dns_types__opcode_type__size : integer = pending; 
+  const dns_types__unsigned_short__first : integer = pending; 
+  const dns_types__unsigned_short__last : integer = pending; 
+  const dns_types__unsigned_short__size : integer = pending; 
+  const dns_types__byte__first : integer = pending; 
+  const dns_types__byte__last : integer = pending; 
+  const dns_types__byte__modulus : integer = pending; 
+  const dns_types__byte__size : integer = pending; 
+  const dns_types__packet_bytes_range__first : integer = pending; 
+  const dns_types__packet_bytes_range__last : integer = pending; 
+  const dns_types__packet_bytes_range__size : integer = pending; 
+  const dns_types__packet_length_range__first : integer = pending; 
+  const dns_types__packet_length_range__last : integer = pending; 
+  const dns_types__packet_length_range__size : integer = pending; 
+  const dns_types__qname_ptr_range__first : integer = pending; 
+  const dns_types__qname_ptr_range__last : integer = pending; 
+  const dns_types__qname_ptr_range__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const natural__first : integer = pending; 
+  const natural__last : integer = pending; 
+  const natural__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var start_byte : integer;
+  var domainname : string;
+  var qname_location : integer;
+  var output_packet : dns_types__dns_packet;
+  var answer_count : integer;
+  var current_byte : integer;
+  var returnedarecords : 
+     rr_type__a_record_type__arecordbuckettype;
+  var numfound : integer;
+  var response_counter : integer;
+  var output_packet__3 : dns_types__dns_packet;
+  var output_packet__2 : dns_types__dns_packet;
+  var numfound__1 : integer;
+  var returnedarecords__1 : 
+     rr_type__a_record_type__arecordbuckettype;
+
+end;

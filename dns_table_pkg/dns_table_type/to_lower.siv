@@ -1,0 +1,72 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function dns_table_pkg.DNS_Table_Type.To_Lower
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 31:
+
+function_to_lower_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+function_to_lower_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 32:
+
+function_to_lower_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 33:
+
+function_to_lower_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 33 to assertion of line 33:
+
+function_to_lower_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 33 to run-time check associated with 
+          statement of line 34:
+
+function_to_lower_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 33 to run-time check associated with 
+          statement of line 34:
+
+function_to_lower_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+function_to_lower_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 33 to finish:
+
+function_to_lower_9.
+*** true .          /* all conclusions proved */
+
+

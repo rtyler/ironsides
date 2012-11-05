@@ -1,0 +1,223 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Process_Response_Cname
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 606:
+
+procedure_process_response_cname_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 607:
+
+procedure_process_response_cname_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 608:
+
+procedure_process_response_cname_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 608:
+
+procedure_process_response_cname_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 609:
+
+procedure_process_response_cname_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          611:
+
+procedure_process_response_cname_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 613:
+
+procedure_process_response_cname_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 614:
+
+procedure_process_response_cname_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 616:
+
+procedure_process_response_cname_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 617:
+
+procedure_process_response_cname_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          619:
+
+procedure_process_response_cname_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          620:
+
+procedure_process_response_cname_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 621:
+
+procedure_process_response_cname_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 623:
+
+procedure_process_response_cname_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_process_response_cname_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 625:
+
+procedure_process_response_cname_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_process_response_cname_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 626:
+
+procedure_process_response_cname_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_process_response_cname_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 626:
+
+procedure_process_response_cname_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 628:
+
+procedure_process_response_cname_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_process_response_cname_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to assertion of line 628:
+
+procedure_process_response_cname_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 633:
+
+procedure_process_response_cname_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 634:
+
+procedure_process_response_cname_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 635:
+
+procedure_process_response_cname_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 637:
+
+procedure_process_response_cname_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_process_response_cname_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 637:
+
+procedure_process_response_cname_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 638:
+
+procedure_process_response_cname_30.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_process_response_cname_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to run-time check associated with 
+          statement of line 638:
+
+procedure_process_response_cname_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_process_response_cname_33.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+procedure_process_response_cname_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 628 to finish:
+
+procedure_process_response_cname_35.
+*** true .          /* all conclusions proved */
+
+

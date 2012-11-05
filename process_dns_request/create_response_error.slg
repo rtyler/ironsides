@@ -1,0 +1,136 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_Response_Error
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_create_response_error_1.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  dns_types__response_code__first <= dns_types__not_implemented
+-S-  Applied substitution rule create_respo_rules(52).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__first by:
+          dns_types__no_error.
+<S>  New H13:  dns_types__no_error <= fld_rcode(fld_header(output_packet))
+<S>  New C1:  true
+-S-  Applied substitution rule create_respo_rules(53).
+     This was achieved by replacing all occurrences of 
+          dns_types__response_code__last by:
+          dns_types__refused.
+<S>  New H14:  fld_rcode(fld_header(output_packet)) <= dns_types__refused
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_response_error_2.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H27 on reading formula in, to give:
+     %%%  H27:  dns_types__response_code__first <= dns_types__not_implemented
+-S-  Applied substitution rule create_respo_rules(20).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__first by:
+          0.
+<S>  New H5:  fld_arcount(fld_header(output_packet)) >= 0
+<S>  New H7:  fld_nscount(fld_header(output_packet)) >= 0
+<S>  New H9:  fld_ancount(fld_header(output_packet)) >= 0
+<S>  New H11:  fld_qdcount(fld_header(output_packet)) >= 0
+<S>  New H25:  fld_messageid(fld_header(output_packet)) >= 0
+<S>  New C1:  true
+-S-  Applied substitution rule create_respo_rules(21).
+     This was achieved by replacing all occurrences of 
+          dns_types__unsigned_short__last by:
+          65535.
+<S>  New H6:  fld_arcount(fld_header(output_packet)) <= 65535
+<S>  New H8:  fld_nscount(fld_header(output_packet)) <= 65535
+<S>  New H10:  fld_ancount(fld_header(output_packet)) <= 65535
+<S>  New H12:  fld_qdcount(fld_header(output_packet)) <= 65535
+<S>  New H26:  fld_messageid(fld_header(output_packet)) <= 65535
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_response_error_3.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H27 on reading formula in, to give:
+     %%%  H27:  dns_types__response_code__first <= dns_types__not_implemented
+***  Proved C1:  input_bytes >= dns_types__packet_length_range__first
+     using hypothesis H2.
+***  Proved C2:  input_bytes <= dns_types__packet_length_range__last
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_create_response_error_4.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, dns_types__packet_bytes_range__first <= 
+          i___1 and i___1 <= dns_types__packet_bytes_range__last -> 
+          dns_types__byte__first <= element(fld_bytes(output_packet), [i___1]) 
+          and element(fld_bytes(output_packet), [i___1]) <= 
+          dns_types__byte__last)
+%%%  Simplified H13 on reading formula in, to give:
+     %%%  H13:  dns_types__response_code__first <= fld_rcode(fld_header(
+          output_packet))
+%%%  Simplified H22 on reading formula in, to give:
+     %%%  H22:  dns_types__opcode_type__first <= fld_opcode(fld_header(
+          output_packet))
+%%%  Simplified H27 on reading formula in, to give:
+     %%%  H27:  dns_types__response_code__first <= dns_types__not_implemented
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as H2)
+          .
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as H3)
+          .
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  true
+***  Proved C1:  true
+***  PROVED VC.
+

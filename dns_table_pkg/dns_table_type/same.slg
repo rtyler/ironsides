@@ -1,0 +1,382 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+function dns_table_pkg.DNS_Table_Type.Same
+
+
+
+
+
+
+@@@@@@@@@@  VC: function_same_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__wirenamelength(x) = rr_type__maxdomainnamelength + 1 or 
+          element(x, [rr_type__wirenamelength(x)]) = 0 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__wirenamelength(x) - 1 -> element(
+          x, [q_]) <> 0)
+***  Proved C1:  rr_type__wirenamelength(x) >= 
+          rr_type__wirestringtypeindex__first
+     using hypothesis H4.
+***  Proved C2:  rr_type__wirenamelength(x) <= 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__wirenamelength(x) = rr_type__maxdomainnamelength + 1 or 
+          element(x, [rr_type__wirenamelength(x)]) = 0 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__wirenamelength(x) - 1 -> element(
+          x, [q_]) <> 0)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+-S-  Applied substitution rule same_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  rr_type__wirenamelength(x) >= - 2147483648
+<S>  New C3:  true
+-S-  Applied substitution rule same_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  rr_type__wirenamelength(x) <= 2147483647
+<S>  New C4:  true
+***  Proved C3:  true
+***  Proved C4:  true
+-S-  Applied substitution rule same_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__maxdomainnamelength by:
+          128.
+<S>  New H6:  rr_type__wirenamelength(x) = 129 or element(x, [
+          rr_type__wirenamelength(x)]) = 0 and for_all(q_ : integer, 1 <= q_ 
+          and q_ <= rr_type__wirenamelength(x) - 1 -> element(x, [q_]) <> 0)
+-S-  Applied substitution rule same_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          x, [i___1]) and element(x, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          y, [i___1]) and element(y, [i___1]) <= character__last)
+-S-  Applied substitution rule same_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          x, [i___1]) and element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          y, [i___1]) and element(y, [i___1]) <= 255)
+-S-  Applied substitution rule same_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H4:  rr_type__wirenamelength(x) >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(x, [i___1]) and 
+          element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(y, [i___1]) and 
+          element(y, [i___1]) <= 255)
+-S-  Applied substitution rule same_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H5:  rr_type__wirenamelength(x) <= 129
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(x, [i___1]) and element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(y, [i___1]) and element(y, [i___1]) <= 255)
+***  Proved C1:  rr_type__wirenamelength(x) >= - 2147483648
+     using hypothesis H4.
+***  Proved C2:  rr_type__wirenamelength(x) <= 2147483647
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__wirenamelength(x) = rr_type__maxdomainnamelength + 1 or 
+          element(x, [rr_type__wirenamelength(x)]) = 0 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__wirenamelength(x) - 1 -> element(
+          x, [q_]) <> 0)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+***  Proved C1:  1 <= rr_type__wirenamelength(x) -> rr_type__wirenamelength(x) 
+          >= integer__first and rr_type__wirenamelength(x) <= integer__last
+     using hypotheses H11 & H12.
+***  Proved C2:  1 <= rr_type__wirenamelength(x) -> 1 >= integer__first and 1 
+          <= integer__last
+     using hypotheses H13 & H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified H6 on reading formula in, to give:
+     %%%  H6:  rr_type__wirenamelength(x) = rr_type__maxdomainnamelength + 1 or 
+          element(x, [rr_type__wirenamelength(x)]) = 0 and for_all(q_ : 
+          integer, 1 <= q_ and q_ <= rr_type__wirenamelength(x) - 1 -> element(
+          x, [q_]) <> 0)
+---  Hypothesis H7 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H8 has been replaced by "true".  (It is already present, as H5).
+---  Hypothesis H9 has been replaced by "true".  (It is already present, as H4).
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H5)
+          .
+---  Hypothesis H17 has been replaced by "true".  (It is already present, as H4)
+          .
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as H5)
+          .
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  true
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+     using hypothesis H3.
+***  Proved C4:  1 >= integer__first
+     using hypothesis H13.
+***  Proved C5:  1 <= integer__last
+     using hypothesis H14.
+***  Proved C6:  true
+***  Proved C7:  1 <= rr_type__wirenamelength(x)
+     using hypothesis H19.
+***  Proved C8:  rr_type__wirenamelength(x) >= 
+          rr_type__wirestringtypeindex__first
+     using hypothesis H4.
+***  Proved C9:  rr_type__wirenamelength(x) <= 
+          rr_type__wirestringtypeindex__last
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as 
+          H10).
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as 
+          H11).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+%%%  Simplified C6 on reading formula in, to give:
+     %%%  C6:  loop__1__i >= 0
+***  Proved C1:  true
+***  Proved C2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+     using hypothesis H2.
+***  Proved C3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first 
+          <= i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+     using hypothesis H3.
+***  Proved C4:  loop__1__i + 1 >= integer__first
+     using hypothesis H4.
+***  Proved C6:  loop__1__i >= 0
+     using hypothesis H6.
+***  Proved C8:  length__entry__loop__1 >= rr_type__wirestringtypeindex__first
+     using hypothesis H8.
+***  Proved C9:  length__entry__loop__1 <= rr_type__wirestringtypeindex__last
+     using hypothesis H9.
+-S-  Applied substitution rule same_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H5:  loop__1__i <= 2147483647
+<S>  New C5:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H14 into:
+     >>>  H14:  element(x, [loop__1__i]) = element(y, [loop__1__i])
+>>>  Restructured hypothesis H15 into:
+     >>>  H15:  loop__1__i <> length__entry__loop__1
+-S-  Applied substitution rule same_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H4:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule same_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          x, [i___1]) and element(x, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          y, [i___1]) and element(y, [i___1]) <= character__last)
+-S-  Applied substitution rule same_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          x, [i___1]) and element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 0 <= element(
+          y, [i___1]) and element(y, [i___1]) <= 255)
+-S-  Applied substitution rule same_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New H10:  loop__1__i >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(x, [i___1]) and 
+          element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> 0 <= element(y, [i___1]) and 
+          element(y, [i___1]) <= 255)
+-S-  Applied substitution rule same_rules(19).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__last by:
+          129.
+<S>  New H9:  length__entry__loop__1 <= 129
+<S>  New H11:  loop__1__i <= 129
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(x, [i___1]) and element(x, [i___1]) <= 255)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= 
+          element(y, [i___1]) and element(y, [i___1]) <= 255)
+%%%  Hypotheses H7 & H15 together imply that
+          loop__1__i < length__entry__loop__1.
+     H7 & H15 have therefore been deleted and a new H16 added to this effect.
+***  Proved C7:  loop__1__i + 1 <= length__entry__loop__1
+     via its standard form, which is:
+     Std.Fm C7:  length__entry__loop__1 - loop__1__i > 0
+     using hypothesis H16.
+***  Proved C5:  loop__1__i <= 2147483646
+     using hypothesis H11.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(x, [i___1]) and element(x, [i___1]) <= 
+          character__last)
+%%%  Simplified H3 on reading formula in, to give:
+     %%%  H3:  for_all(i___1 : integer, rr_type__wirestringtypeindex__first <= 
+          i___1 and i___1 <= rr_type__wirestringtypeindex__last -> 
+          character__first <= element(y, [i___1]) and element(y, [i___1]) <= 
+          character__last)
+***  Proved C2:  loop__1__i <= rr_type__wirestringtypeindex__last
+     using hypotheses H7 & H9.
+***  Proved C4:  loop__1__i <= rr_type__wirestringtypeindex__last
+     using hypotheses H7 & H9.
+-S-  Applied substitution rule same_rules(18).
+     This was achieved by replacing all occurrences of 
+          rr_type__wirestringtypeindex__first by:
+          1.
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(x, [
+          i___1]) and element(x, [i___1]) <= character__last)
+<S>  New H3:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__wirestringtypeindex__last -> character__first <= element(y, [
+          i___1]) and element(y, [i___1]) <= character__last)
+<S>  New H8:  length__entry__loop__1 >= 1
+<S>  New C1:  loop__1__i >= 1
+<S>  New C3:  loop__1__i >= 1
+***  Proved C1:  loop__1__i >= 1
+     using hypothesis H6.
+***  Proved C3:  loop__1__i >= 1
+     using hypothesis H6.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_7.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_8.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: function_same_9.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

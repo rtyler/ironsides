@@ -1,0 +1,200 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+            /*procedure Dns_Network_Receive.Receive_DNS_Packet_TCP*/
+
+
+rule_family receive_dns__rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+receive_dns__rules(1): dns_types__header_bits may_be_replaced_by 96.
+receive_dns__rules(2): dns_network__max_query_size may_be_replaced_by 311.
+receive_dns__rules(3): system__min_int may_be_replaced_by -9223372036854775808.
+receive_dns__rules(4): system__max_int may_be_replaced_by 9223372036854775807.
+receive_dns__rules(5): dns_types__packet_length_range__size >= 0 may_be_deduced.
+receive_dns__rules(6): dns_types__packet_length_range__first may_be_replaced_by 0.
+receive_dns__rules(7): dns_types__packet_length_range__last may_be_replaced_by 8192.
+receive_dns__rules(8): dns_types__packet_length_range__base__first may_be_replaced_by -2147483648.
+receive_dns__rules(9): dns_types__packet_length_range__base__last may_be_replaced_by 2147483647.
+receive_dns__rules(10): dns_types__packet_bytes_range__size >= 0 may_be_deduced.
+receive_dns__rules(11): dns_types__packet_bytes_range__first may_be_replaced_by 1.
+receive_dns__rules(12): dns_types__packet_bytes_range__last may_be_replaced_by 8180.
+receive_dns__rules(13): dns_types__packet_bytes_range__base__first may_be_replaced_by -2147483648.
+receive_dns__rules(14): dns_types__packet_bytes_range__base__last may_be_replaced_by 2147483647.
+receive_dns__rules(15): dns_types__byte__size >= 0 may_be_deduced.
+receive_dns__rules(16): dns_types__byte__size may_be_replaced_by 8.
+receive_dns__rules(17): dns_types__byte__first may_be_replaced_by 0.
+receive_dns__rules(18): dns_types__byte__last may_be_replaced_by 255.
+receive_dns__rules(19): dns_types__byte__base__first may_be_replaced_by 0.
+receive_dns__rules(20): dns_types__byte__base__last may_be_replaced_by 255.
+receive_dns__rules(21): dns_types__byte__modulus may_be_replaced_by 256.
+receive_dns__rules(22): dns_types__unsigned_short__size >= 0 may_be_deduced.
+receive_dns__rules(23): dns_types__unsigned_short__size may_be_replaced_by 16.
+receive_dns__rules(24): dns_types__unsigned_short__first may_be_replaced_by 0.
+receive_dns__rules(25): dns_types__unsigned_short__last may_be_replaced_by 65535.
+receive_dns__rules(26): dns_types__unsigned_short__base__first may_be_replaced_by -2147483648.
+receive_dns__rules(27): dns_types__unsigned_short__base__last may_be_replaced_by 2147483647.
+receive_dns__rules(28): dns_types__opcode_type__size >= 0 may_be_deduced.
+receive_dns__rules(29): dns_types__opcode_type__size may_be_replaced_by 4.
+receive_dns__rules(30): dns_types__opcode_type__first may_be_replaced_by dns_types__query.
+receive_dns__rules(31): dns_types__opcode_type__last may_be_replaced_by dns_types__status.
+receive_dns__rules(32): dns_types__opcode_type__base__first may_be_replaced_by dns_types__query.
+receive_dns__rules(33): dns_types__opcode_type__base__last may_be_replaced_by dns_types__status.
+receive_dns__rules(34): dns_types__opcode_type__pos(
+     dns_types__opcode_type__first) may_be_replaced_by 0.
+receive_dns__rules(35): dns_types__opcode_type__pos(
+     dns_types__query) may_be_replaced_by 0.
+receive_dns__rules(36): dns_types__opcode_type__val(0) may_be_replaced_by 
+     dns_types__query.
+receive_dns__rules(37): dns_types__opcode_type__pos(
+     dns_types__iquery) may_be_replaced_by 1.
+receive_dns__rules(38): dns_types__opcode_type__val(1) may_be_replaced_by 
+     dns_types__iquery.
+receive_dns__rules(39): dns_types__opcode_type__pos(
+     dns_types__status) may_be_replaced_by 2.
+receive_dns__rules(40): dns_types__opcode_type__val(2) may_be_replaced_by 
+     dns_types__status.
+receive_dns__rules(41): dns_types__opcode_type__pos(
+     dns_types__opcode_type__last) may_be_replaced_by 2.
+receive_dns__rules(42): dns_types__opcode_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) + 1
+     if [X <=dns_types__status, X <> dns_types__status].
+receive_dns__rules(43): dns_types__opcode_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) - 1
+     if [X >=dns_types__query, X <> dns_types__query].
+receive_dns__rules(44): dns_types__opcode_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+receive_dns__rules(45): dns_types__opcode_type__pos(X) <= 2 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+receive_dns__rules(46): dns_types__opcode_type__val(X) >= 
+     dns_types__query may_be_deduced_from
+     [0 <= X, X <= 2].
+receive_dns__rules(47): dns_types__opcode_type__val(X) <= 
+     dns_types__status may_be_deduced_from
+     [0 <= X, X <= 2].
+receive_dns__rules(48): succ(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X+1)
+     if [0 <= X, X < 2].
+receive_dns__rules(49): pred(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X-1)
+     if [0 < X, X <= 2].
+receive_dns__rules(50): dns_types__opcode_type__pos(
+     dns_types__opcode_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 2].
+receive_dns__rules(51): dns_types__opcode_type__val(
+     dns_types__opcode_type__pos(X)) may_be_replaced_by X
+     if [dns_types__query <= X, X <= dns_types__status].
+receive_dns__rules(52): dns_types__opcode_type__pos(X) <= 
+     dns_types__opcode_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__query <= X, X <= dns_types__status, 
+     dns_types__query <= Y, Y <= dns_types__status].
+receive_dns__rules(53): dns_types__opcode_type__val(X) <= 
+     dns_types__opcode_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 2, 0 <= Y, Y <= 2].
+receive_dns__rules(54): dns_types__response_code__size >= 0 may_be_deduced.
+receive_dns__rules(55): dns_types__response_code__size may_be_replaced_by 4.
+receive_dns__rules(56): dns_types__response_code__first may_be_replaced_by dns_types__no_error.
+receive_dns__rules(57): dns_types__response_code__last may_be_replaced_by dns_types__refused.
+receive_dns__rules(58): dns_types__response_code__base__first may_be_replaced_by dns_types__no_error.
+receive_dns__rules(59): dns_types__response_code__base__last may_be_replaced_by dns_types__refused.
+receive_dns__rules(60): dns_types__response_code__pos(
+     dns_types__response_code__first) may_be_replaced_by 0.
+receive_dns__rules(61): dns_types__response_code__pos(
+     dns_types__no_error) may_be_replaced_by 0.
+receive_dns__rules(62): dns_types__response_code__val(0) may_be_replaced_by 
+     dns_types__no_error.
+receive_dns__rules(63): dns_types__response_code__pos(
+     dns_types__format_error) may_be_replaced_by 1.
+receive_dns__rules(64): dns_types__response_code__val(1) may_be_replaced_by 
+     dns_types__format_error.
+receive_dns__rules(65): dns_types__response_code__pos(
+     dns_types__server_failure) may_be_replaced_by 2.
+receive_dns__rules(66): dns_types__response_code__val(2) may_be_replaced_by 
+     dns_types__server_failure.
+receive_dns__rules(67): dns_types__response_code__pos(
+     dns_types__name_error) may_be_replaced_by 3.
+receive_dns__rules(68): dns_types__response_code__val(3) may_be_replaced_by 
+     dns_types__name_error.
+receive_dns__rules(69): dns_types__response_code__pos(
+     dns_types__not_implemented) may_be_replaced_by 4.
+receive_dns__rules(70): dns_types__response_code__val(4) may_be_replaced_by 
+     dns_types__not_implemented.
+receive_dns__rules(71): dns_types__response_code__pos(
+     dns_types__refused) may_be_replaced_by 5.
+receive_dns__rules(72): dns_types__response_code__val(5) may_be_replaced_by 
+     dns_types__refused.
+receive_dns__rules(73): dns_types__response_code__pos(
+     dns_types__response_code__last) may_be_replaced_by 5.
+receive_dns__rules(74): dns_types__response_code__pos(succ(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) + 1
+     if [X <=dns_types__refused, X <> dns_types__refused].
+receive_dns__rules(75): dns_types__response_code__pos(pred(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) - 1
+     if [X >=dns_types__no_error, X <> dns_types__no_error].
+receive_dns__rules(76): dns_types__response_code__pos(X) >= 0 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+receive_dns__rules(77): dns_types__response_code__pos(X) <= 5 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+receive_dns__rules(78): dns_types__response_code__val(X) >= 
+     dns_types__no_error may_be_deduced_from
+     [0 <= X, X <= 5].
+receive_dns__rules(79): dns_types__response_code__val(X) <= 
+     dns_types__refused may_be_deduced_from
+     [0 <= X, X <= 5].
+receive_dns__rules(80): succ(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X+1)
+     if [0 <= X, X < 5].
+receive_dns__rules(81): pred(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X-1)
+     if [0 < X, X <= 5].
+receive_dns__rules(82): dns_types__response_code__pos(
+     dns_types__response_code__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 5].
+receive_dns__rules(83): dns_types__response_code__val(
+     dns_types__response_code__pos(X)) may_be_replaced_by X
+     if [dns_types__no_error <= X, X <= dns_types__refused].
+receive_dns__rules(84): dns_types__response_code__pos(X) <= 
+     dns_types__response_code__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__no_error <= X, X <= dns_types__refused, 
+     dns_types__no_error <= Y, Y <= dns_types__refused].
+receive_dns__rules(85): dns_types__response_code__val(X) <= 
+     dns_types__response_code__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 5, 0 <= Y, Y <= 5].
+receive_dns__rules(86): dns_types__header_type__size >= 0 may_be_deduced.
+receive_dns__rules(87): dns_types__header_type__size may_be_replaced_by 96.
+receive_dns__rules(88): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__header_type)),
+      goal(checktype(B,dns_types__header_type)),
+      fld_messageid(A) = fld_messageid(B),
+      fld_qr(A) = fld_qr(B),
+      fld_opcode(A) = fld_opcode(B),
+      fld_aa(A) = fld_aa(B),
+      fld_tc(A) = fld_tc(B),
+      fld_rd(A) = fld_rd(B),
+      fld_ra(A) = fld_ra(B),
+      fld_res1(A) = fld_res1(B),
+      fld_res2(A) = fld_res2(B),
+      fld_res3(A) = fld_res3(B),
+      fld_rcode(A) = fld_rcode(B),
+      fld_qdcount(A) = fld_qdcount(B),
+      fld_ancount(A) = fld_ancount(B),
+      fld_nscount(A) = fld_nscount(B),
+      fld_arcount(A) = fld_arcount(B)].
+receive_dns__rules(89): dns_types__dns_packet__size >= 0 may_be_deduced.
+receive_dns__rules(90): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_packet)),
+      goal(checktype(B,dns_types__dns_packet)),
+      fld_header(A) = fld_header(B),
+      fld_bytes(A) = fld_bytes(B)].
+receive_dns__rules(91): dns_types__dns_tcp_packet__size >= 0 may_be_deduced.
+receive_dns__rules(92): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_tcp_packet)),
+      goal(checktype(B,dns_types__dns_tcp_packet)),
+      fld_length(A) = fld_length(B),
+      fld_rest(A) = fld_rest(B)].

@@ -1,0 +1,605 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_Response_MX
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 494:
+
+procedure_create_response_mx_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 495:
+
+procedure_create_response_mx_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 497:
+
+procedure_create_response_mx_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 503:
+
+procedure_create_response_mx_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 504:
+
+procedure_create_response_mx_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 504:
+
+procedure_create_response_mx_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 505:
+
+procedure_create_response_mx_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 505:
+
+procedure_create_response_mx_8.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 508:
+
+procedure_create_response_mx_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to assertion of line 508:
+
+procedure_create_response_mx_11.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_12.
+*** true .   /* contradiction within hypotheses. */
+
+
+
+For path(s) from assertion of line 508 to precondition check associated with 
+          statement of line 518:
+
+procedure_create_response_mx_13.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   integer__size >= 0 .
+H32:   character__size >= 0 .
+H33:   natural__size >= 0 .
+H34:   positive__size >= 0 .
+H35:   dns_types__qname_ptr_range__size >= 0 .
+H36:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H37:   dns_types__packet_length_range__size >= 0 .
+H38:   dns_types__packet_bytes_range__size >= 0 .
+H39:   dns_types__dns_packet__size >= 0 .
+H40:   unsigned_types__unsigned16__size >= 0 .
+H41:   unsigned_types__unsigned32__size >= 0 .
+H42:   rr_type__classtype__size >= 0 .
+H43:   rr_type__wirestringtypeindex__size >= 0 .
+H44:   rr_type__resourcerecordtype__size >= 0 .
+H45:   rr_type__returnedrecordsindextype__size >= 0 .
+H46:   rr_type__numberofrecordstype__size >= 0 .
+H47:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H48:   dns_types__qname_ptr_range__base__first <= 0 .
+H49:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8179 .
+C2:    current_byte <= 8178 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 520:
+
+procedure_create_response_mx_14.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   qname_location >= - 49152 .
+H32:   qname_location <= 16383 .
+H33:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H34:   fld_header(output_packet__2) = fld_header(output_packet) .
+H35:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H36:   integer__size >= 0 .
+H37:   character__size >= 0 .
+H38:   natural__size >= 0 .
+H39:   positive__size >= 0 .
+H40:   dns_types__qname_ptr_range__size >= 0 .
+H41:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H42:   dns_types__packet_length_range__size >= 0 .
+H43:   dns_types__packet_bytes_range__size >= 0 .
+H44:   dns_types__dns_packet__size >= 0 .
+H45:   unsigned_types__unsigned16__size >= 0 .
+H46:   unsigned_types__unsigned32__size >= 0 .
+H47:   rr_type__classtype__size >= 0 .
+H48:   rr_type__wirestringtypeindex__size >= 0 .
+H49:   rr_type__resourcerecordtype__size >= 0 .
+H50:   rr_type__returnedrecordsindextype__size >= 0 .
+H51:   rr_type__numberofrecordstype__size >= 0 .
+H52:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H53:   dns_types__qname_ptr_range__base__first <= 0 .
+H54:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8177 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 521:
+
+procedure_create_response_mx_15.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   qname_location >= - 49152 .
+H32:   qname_location <= 16383 .
+H33:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H34:   fld_header(output_packet__2) = fld_header(output_packet) .
+H35:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H36:   integer__size >= 0 .
+H37:   character__size >= 0 .
+H38:   natural__size >= 0 .
+H39:   positive__size >= 0 .
+H40:   dns_types__qname_ptr_range__size >= 0 .
+H41:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H42:   dns_types__packet_length_range__size >= 0 .
+H43:   dns_types__packet_bytes_range__size >= 0 .
+H44:   dns_types__dns_packet__size >= 0 .
+H45:   unsigned_types__unsigned16__size >= 0 .
+H46:   unsigned_types__unsigned32__size >= 0 .
+H47:   rr_type__classtype__size >= 0 .
+H48:   rr_type__wirestringtypeindex__size >= 0 .
+H49:   rr_type__resourcerecordtype__size >= 0 .
+H50:   rr_type__returnedrecordsindextype__size >= 0 .
+H51:   rr_type__numberofrecordstype__size >= 0 .
+H52:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H53:   dns_types__qname_ptr_range__base__first <= 0 .
+H54:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8176 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 523:
+
+procedure_create_response_mx_16.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   qname_location >= - 49152 .
+H32:   qname_location <= 16383 .
+H33:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H34:   fld_header(output_packet__2) = fld_header(output_packet) .
+H35:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H36:   integer__size >= 0 .
+H37:   character__size >= 0 .
+H38:   natural__size >= 0 .
+H39:   positive__size >= 0 .
+H40:   dns_types__qname_ptr_range__size >= 0 .
+H41:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H42:   dns_types__packet_length_range__size >= 0 .
+H43:   dns_types__packet_bytes_range__size >= 0 .
+H44:   dns_types__dns_packet__size >= 0 .
+H45:   unsigned_types__unsigned16__size >= 0 .
+H46:   unsigned_types__unsigned32__size >= 0 .
+H47:   rr_type__classtype__size >= 0 .
+H48:   rr_type__wirestringtypeindex__size >= 0 .
+H49:   rr_type__resourcerecordtype__size >= 0 .
+H50:   rr_type__returnedrecordsindextype__size >= 0 .
+H51:   rr_type__numberofrecordstype__size >= 0 .
+H52:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H53:   dns_types__qname_ptr_range__base__first <= 0 .
+H54:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8175 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 524:
+
+procedure_create_response_mx_17.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   qname_location >= - 49152 .
+H32:   qname_location <= 16383 .
+H33:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H34:   fld_header(output_packet__2) = fld_header(output_packet) .
+H35:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H36:   integer__size >= 0 .
+H37:   character__size >= 0 .
+H38:   natural__size >= 0 .
+H39:   positive__size >= 0 .
+H40:   dns_types__qname_ptr_range__size >= 0 .
+H41:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H42:   dns_types__packet_length_range__size >= 0 .
+H43:   dns_types__packet_bytes_range__size >= 0 .
+H44:   dns_types__dns_packet__size >= 0 .
+H45:   unsigned_types__unsigned16__size >= 0 .
+H46:   unsigned_types__unsigned32__size >= 0 .
+H47:   rr_type__classtype__size >= 0 .
+H48:   rr_type__wirestringtypeindex__size >= 0 .
+H49:   rr_type__resourcerecordtype__size >= 0 .
+H50:   rr_type__returnedrecordsindextype__size >= 0 .
+H51:   rr_type__numberofrecordstype__size >= 0 .
+H52:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H53:   dns_types__qname_ptr_range__base__first <= 0 .
+H54:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8174 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 525:
+
+procedure_create_response_mx_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to precondition check associated with 
+          statement of line 527:
+
+procedure_create_response_mx_19.
+H1:    response_counter >= 1 .
+H2:    response_counter <= num_found .
+H3:    current_name_length >= 1 .
+H4:    current_name_length <= 129 .
+H5:    num_found <= 64 .
+H6:    answer_count~ <= 65471 .
+H7:    current_byte < 8166 - current_name_length .
+H8:    start_byte >= 1 .
+H9:    start_byte <= 8180 .
+H10:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 129 -> 0 <= element(
+          domainname, [i___1]) and element(domainname, [i___1]) <= 255) .
+H11:   qname_location >= 0 .
+H12:   qname_location <= 16383 .
+H13:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet), [i___1]) and element(fld_bytes(
+          output_packet), [i___1]) <= 255) .
+H14:   fld_arcount(fld_header(output_packet)) >= 0 .
+H15:   fld_arcount(fld_header(output_packet)) <= 65535 .
+H16:   fld_nscount(fld_header(output_packet)) >= 0 .
+H17:   fld_nscount(fld_header(output_packet)) <= 65535 .
+H18:   fld_ancount(fld_header(output_packet)) >= 0 .
+H19:   fld_ancount(fld_header(output_packet)) <= 65535 .
+H20:   fld_qdcount(fld_header(output_packet)) >= 0 .
+H21:   fld_qdcount(fld_header(output_packet)) <= 65535 .
+H22:   dns_types__no_error <= fld_rcode(fld_header(output_packet)) .
+H23:   fld_rcode(fld_header(output_packet)) <= dns_types__refused .
+H24:   dns_types__query <= fld_opcode(fld_header(output_packet)) .
+H25:   fld_opcode(fld_header(output_packet)) <= dns_types__status .
+H26:   fld_messageid(fld_header(output_packet)) >= 0 .
+H27:   fld_messageid(fld_header(output_packet)) <= 65535 .
+H28:   answer_count~ >= 0 .
+H29:   answer_count~ <= 65471 .
+H30:   current_byte >= 1 .
+H31:   qname_location >= - 49152 .
+H32:   qname_location <= 16383 .
+H33:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 8180 -> 0 <= element(
+          fld_bytes(output_packet__2), [i___1]) and element(fld_bytes(
+          output_packet__2), [i___1]) <= 255) .
+H34:   fld_header(output_packet__2) = fld_header(output_packet) .
+H35:   output_packet__2 = upf_bytes(output_packet, fld_bytes(output_packet__2)) 
+          .
+H36:   response_counter <= 64 .
+H37:   for_all(i___2 : integer, 1 <= i___2 and i___2 <= 129 -> for_all(i___1 : 
+          integer, 1 <= i___1 and i___1 <= 64 -> 0 <= element(fld_mailexchanger(
+          element(replies, [i___1])), [i___2]) and element(fld_mailexchanger(
+          element(replies, [i___1])), [i___2]) <= 255)) .
+H38:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= fld_pref(
+          element(replies, [i___1])) and fld_pref(element(replies, [i___1])) <= 
+          65535) .
+H39:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> rr_type__internet 
+          <= fld_class(fld_inherit(element(replies, [i___1]))) and fld_class(
+          fld_inherit(element(replies, [i___1]))) <= rr_type__hs) .
+H40:   for_all(i___1 : integer, 1 <= i___1 and i___1 <= 64 -> 0 <= 
+          fld_ttlinseconds(fld_inherit(element(replies, [i___1]))) and 
+          fld_ttlinseconds(fld_inherit(element(replies, [i___1]))) <= 
+          4294967295) .
+H41:   integer__size >= 0 .
+H42:   character__size >= 0 .
+H43:   natural__size >= 0 .
+H44:   positive__size >= 0 .
+H45:   dns_types__qname_ptr_range__size >= 0 .
+H46:   dns_types__qname_ptr_range__base__first <= 
+          dns_types__qname_ptr_range__base__last .
+H47:   dns_types__packet_length_range__size >= 0 .
+H48:   dns_types__packet_bytes_range__size >= 0 .
+H49:   dns_types__dns_packet__size >= 0 .
+H50:   unsigned_types__unsigned16__size >= 0 .
+H51:   unsigned_types__unsigned32__size >= 0 .
+H52:   rr_type__classtype__size >= 0 .
+H53:   rr_type__wirestringtypeindex__size >= 0 .
+H54:   rr_type__resourcerecordtype__size >= 0 .
+H55:   rr_type__returnedrecordsindextype__size >= 0 .
+H56:   rr_type__numberofrecordstype__size >= 0 .
+H57:   rr_type__mx_record_type__mxrecordtype__size >= 0 .
+H58:   dns_types__qname_ptr_range__base__first <= 0 .
+H59:   dns_types__qname_ptr_range__base__last >= 16383 .
+       ->
+C1:    current_byte <= 8173 .
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 529:
+
+procedure_create_response_mx_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 530:
+
+procedure_create_response_mx_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 532:
+
+procedure_create_response_mx_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 532:
+
+procedure_create_response_mx_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 536:
+
+procedure_create_response_mx_24.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 536:
+
+procedure_create_response_mx_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 537:
+
+procedure_create_response_mx_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to run-time check associated with 
+          statement of line 537:
+
+procedure_create_response_mx_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_create_response_mx_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 508 to finish:
+
+procedure_create_response_mx_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_mx_35.
+*** true .          /* all conclusions proved */
+
+

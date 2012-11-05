@@ -1,0 +1,88 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Task_Limit.Task_Count_Type.Decrement
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_decrement_1.  @@@@@@@@@@
+***  Proved C2:  task_count_type__task_count - 1 <= task_count_subtype__last
+     using hypothesis H4.
+-S-  Applied substitution rule decrement_rules(8).
+     This was achieved by replacing all occurrences of 
+          task_count_subtype__first by:
+          0.
+<S>  New H3:  task_count_type__task_count >= 0
+<S>  New C1:  task_count_type__task_count >= 1
+***  Proved C1:  task_count_type__task_count >= 1
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_decrement_2.  @@@@@@@@@@
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  task_count_type__task_count >= 1
+%%%  Simplified C3 on reading formula in, to give:
+     %%%  C3:  true
+***  Proved C1:  task_count_type__task_count >= 1
+     using hypothesis H5.
+***  Proved C2:  task_count_type__task_count - 1 <= max_tasks
+     using hypothesis H2.
+***  Proved C3:  true
+***  Proved C4:  task_count_type__task_count = 0 -> task_count_type__task_count 
+          - 1 = task_count_type__task_count
+     using hypothesis H5.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_decrement_3.  @@@@@@@@@@
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  true
+***  Proved C1:  task_count_type__task_count >= 0
+     using hypothesis H1.
+***  Proved C2:  task_count_type__task_count <= max_tasks
+     using hypothesis H2.
+***  Proved C3:  task_count_type__task_count > 0 -> task_count_type__task_count 
+          = task_count_type__task_count - 1
+     using hypothesis H5.
+***  Proved C4:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_decrement_4.  @@@@@@@@@@
+-S-  Applied substitution rule decrement_rules(1).
+     This was achieved by replacing all occurrences of max_tasks by:
+          100.
+<S>  New C2:  task_count_type__task_count <= 100
+-S-  Applied substitution rule decrement_rules(8).
+     This was achieved by replacing all occurrences of 
+          task_count_subtype__first by:
+          0.
+<S>  New H2:  task_count_type__task_count >= 0
+-S-  Applied substitution rule decrement_rules(9).
+     This was achieved by replacing all occurrences of task_count_subtype__last 
+          by:
+          100.
+<S>  New H3:  task_count_type__task_count <= 100
+***  Proved C1:  task_count_type__task_count >= 0
+     using hypothesis H2.
+***  Proved C2:  task_count_type__task_count <= 100
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_decrement_5.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

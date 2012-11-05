@@ -1,0 +1,401 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+          /*procedure Process_Dns_Request.Get_Query_Name_Type_Class*/
+
+
+rule_family get_query_na_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+get_query_na_rules(1): dns_types__header_bits may_be_replaced_by 96.
+get_query_na_rules(2): X <= dns_types__query_type__last may_be_deduced_from
+     [ dns_types__query_type__valid(X) ].
+get_query_na_rules(3): X >= dns_types__query_type__first may_be_deduced_from
+     [ dns_types__query_type__valid(X) ].
+get_query_na_rules(4): X <= dns_types__query_class__last may_be_deduced_from
+     [ dns_types__query_class__valid(X) ].
+get_query_na_rules(5): X >= dns_types__query_class__first may_be_deduced_from
+     [ dns_types__query_class__valid(X) ].
+get_query_na_rules(6): integer__size >= 0 may_be_deduced.
+get_query_na_rules(7): integer__first may_be_replaced_by -2147483648.
+get_query_na_rules(8): integer__last may_be_replaced_by 2147483647.
+get_query_na_rules(9): integer__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(10): integer__base__last may_be_replaced_by 2147483647.
+get_query_na_rules(11): character__size >= 0 may_be_deduced.
+get_query_na_rules(12): character__first may_be_replaced_by 0.
+get_query_na_rules(13): character__last may_be_replaced_by 255.
+get_query_na_rules(14): character__base__first may_be_replaced_by 0.
+get_query_na_rules(15): character__base__last may_be_replaced_by 255.
+get_query_na_rules(16): natural__size >= 0 may_be_deduced.
+get_query_na_rules(17): natural__first may_be_replaced_by 0.
+get_query_na_rules(18): natural__last may_be_replaced_by 2147483647.
+get_query_na_rules(19): natural__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(20): natural__base__last may_be_replaced_by 2147483647.
+get_query_na_rules(21): dns_types__packet_length_range__size >= 0 may_be_deduced.
+get_query_na_rules(22): dns_types__packet_length_range__first may_be_replaced_by 0.
+get_query_na_rules(23): dns_types__packet_length_range__last may_be_replaced_by 8192.
+get_query_na_rules(24): dns_types__packet_length_range__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(25): dns_types__packet_length_range__base__last may_be_replaced_by 2147483647.
+get_query_na_rules(26): dns_types__packet_bytes_range__size >= 0 may_be_deduced.
+get_query_na_rules(27): dns_types__packet_bytes_range__first may_be_replaced_by 1.
+get_query_na_rules(28): dns_types__packet_bytes_range__last may_be_replaced_by 8180.
+get_query_na_rules(29): dns_types__packet_bytes_range__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(30): dns_types__packet_bytes_range__base__last may_be_replaced_by 2147483647.
+get_query_na_rules(31): dns_types__byte__size >= 0 may_be_deduced.
+get_query_na_rules(32): dns_types__byte__size may_be_replaced_by 8.
+get_query_na_rules(33): dns_types__byte__first may_be_replaced_by 0.
+get_query_na_rules(34): dns_types__byte__last may_be_replaced_by 255.
+get_query_na_rules(35): dns_types__byte__base__first may_be_replaced_by 0.
+get_query_na_rules(36): dns_types__byte__base__last may_be_replaced_by 255.
+get_query_na_rules(37): dns_types__byte__modulus may_be_replaced_by 256.
+get_query_na_rules(38): dns_types__unsigned_short__size >= 0 may_be_deduced.
+get_query_na_rules(39): dns_types__unsigned_short__size may_be_replaced_by 16.
+get_query_na_rules(40): dns_types__unsigned_short__first may_be_replaced_by 0.
+get_query_na_rules(41): dns_types__unsigned_short__last may_be_replaced_by 65535.
+get_query_na_rules(42): dns_types__unsigned_short__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(43): dns_types__unsigned_short__base__last may_be_replaced_by 2147483647.
+get_query_na_rules(44): dns_types__opcode_type__size >= 0 may_be_deduced.
+get_query_na_rules(45): dns_types__opcode_type__size may_be_replaced_by 4.
+get_query_na_rules(46): dns_types__opcode_type__first may_be_replaced_by dns_types__query.
+get_query_na_rules(47): dns_types__opcode_type__last may_be_replaced_by dns_types__status.
+get_query_na_rules(48): dns_types__opcode_type__base__first may_be_replaced_by dns_types__query.
+get_query_na_rules(49): dns_types__opcode_type__base__last may_be_replaced_by dns_types__status.
+get_query_na_rules(50): dns_types__opcode_type__pos(
+     dns_types__opcode_type__first) may_be_replaced_by 0.
+get_query_na_rules(51): dns_types__opcode_type__pos(
+     dns_types__query) may_be_replaced_by 0.
+get_query_na_rules(52): dns_types__opcode_type__val(0) may_be_replaced_by 
+     dns_types__query.
+get_query_na_rules(53): dns_types__opcode_type__pos(
+     dns_types__iquery) may_be_replaced_by 1.
+get_query_na_rules(54): dns_types__opcode_type__val(1) may_be_replaced_by 
+     dns_types__iquery.
+get_query_na_rules(55): dns_types__opcode_type__pos(
+     dns_types__status) may_be_replaced_by 2.
+get_query_na_rules(56): dns_types__opcode_type__val(2) may_be_replaced_by 
+     dns_types__status.
+get_query_na_rules(57): dns_types__opcode_type__pos(
+     dns_types__opcode_type__last) may_be_replaced_by 2.
+get_query_na_rules(58): dns_types__opcode_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) + 1
+     if [X <=dns_types__status, X <> dns_types__status].
+get_query_na_rules(59): dns_types__opcode_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__opcode_type__pos(X) - 1
+     if [X >=dns_types__query, X <> dns_types__query].
+get_query_na_rules(60): dns_types__opcode_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+get_query_na_rules(61): dns_types__opcode_type__pos(X) <= 2 may_be_deduced_from
+     [dns_types__query <= X, X <= dns_types__status].
+get_query_na_rules(62): dns_types__opcode_type__val(X) >= 
+     dns_types__query may_be_deduced_from
+     [0 <= X, X <= 2].
+get_query_na_rules(63): dns_types__opcode_type__val(X) <= 
+     dns_types__status may_be_deduced_from
+     [0 <= X, X <= 2].
+get_query_na_rules(64): succ(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X+1)
+     if [0 <= X, X < 2].
+get_query_na_rules(65): pred(dns_types__opcode_type__val(X)) may_be_replaced_by 
+     dns_types__opcode_type__val(X-1)
+     if [0 < X, X <= 2].
+get_query_na_rules(66): dns_types__opcode_type__pos(
+     dns_types__opcode_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 2].
+get_query_na_rules(67): dns_types__opcode_type__val(
+     dns_types__opcode_type__pos(X)) may_be_replaced_by X
+     if [dns_types__query <= X, X <= dns_types__status].
+get_query_na_rules(68): dns_types__opcode_type__pos(X) <= 
+     dns_types__opcode_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__query <= X, X <= dns_types__status, 
+     dns_types__query <= Y, Y <= dns_types__status].
+get_query_na_rules(69): dns_types__opcode_type__val(X) <= 
+     dns_types__opcode_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 2, 0 <= Y, Y <= 2].
+get_query_na_rules(70): dns_types__response_code__size >= 0 may_be_deduced.
+get_query_na_rules(71): dns_types__response_code__size may_be_replaced_by 4.
+get_query_na_rules(72): dns_types__response_code__first may_be_replaced_by dns_types__no_error.
+get_query_na_rules(73): dns_types__response_code__last may_be_replaced_by dns_types__refused.
+get_query_na_rules(74): dns_types__response_code__base__first may_be_replaced_by dns_types__no_error.
+get_query_na_rules(75): dns_types__response_code__base__last may_be_replaced_by dns_types__refused.
+get_query_na_rules(76): dns_types__response_code__pos(
+     dns_types__response_code__first) may_be_replaced_by 0.
+get_query_na_rules(77): dns_types__response_code__pos(
+     dns_types__no_error) may_be_replaced_by 0.
+get_query_na_rules(78): dns_types__response_code__val(0) may_be_replaced_by 
+     dns_types__no_error.
+get_query_na_rules(79): dns_types__response_code__pos(
+     dns_types__format_error) may_be_replaced_by 1.
+get_query_na_rules(80): dns_types__response_code__val(1) may_be_replaced_by 
+     dns_types__format_error.
+get_query_na_rules(81): dns_types__response_code__pos(
+     dns_types__server_failure) may_be_replaced_by 2.
+get_query_na_rules(82): dns_types__response_code__val(2) may_be_replaced_by 
+     dns_types__server_failure.
+get_query_na_rules(83): dns_types__response_code__pos(
+     dns_types__name_error) may_be_replaced_by 3.
+get_query_na_rules(84): dns_types__response_code__val(3) may_be_replaced_by 
+     dns_types__name_error.
+get_query_na_rules(85): dns_types__response_code__pos(
+     dns_types__not_implemented) may_be_replaced_by 4.
+get_query_na_rules(86): dns_types__response_code__val(4) may_be_replaced_by 
+     dns_types__not_implemented.
+get_query_na_rules(87): dns_types__response_code__pos(
+     dns_types__refused) may_be_replaced_by 5.
+get_query_na_rules(88): dns_types__response_code__val(5) may_be_replaced_by 
+     dns_types__refused.
+get_query_na_rules(89): dns_types__response_code__pos(
+     dns_types__response_code__last) may_be_replaced_by 5.
+get_query_na_rules(90): dns_types__response_code__pos(succ(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) + 1
+     if [X <=dns_types__refused, X <> dns_types__refused].
+get_query_na_rules(91): dns_types__response_code__pos(pred(X)) may_be_replaced_by 
+     dns_types__response_code__pos(X) - 1
+     if [X >=dns_types__no_error, X <> dns_types__no_error].
+get_query_na_rules(92): dns_types__response_code__pos(X) >= 0 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+get_query_na_rules(93): dns_types__response_code__pos(X) <= 5 may_be_deduced_from
+     [dns_types__no_error <= X, X <= dns_types__refused].
+get_query_na_rules(94): dns_types__response_code__val(X) >= 
+     dns_types__no_error may_be_deduced_from
+     [0 <= X, X <= 5].
+get_query_na_rules(95): dns_types__response_code__val(X) <= 
+     dns_types__refused may_be_deduced_from
+     [0 <= X, X <= 5].
+get_query_na_rules(96): succ(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X+1)
+     if [0 <= X, X < 5].
+get_query_na_rules(97): pred(dns_types__response_code__val(X)) may_be_replaced_by 
+     dns_types__response_code__val(X-1)
+     if [0 < X, X <= 5].
+get_query_na_rules(98): dns_types__response_code__pos(
+     dns_types__response_code__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 5].
+get_query_na_rules(99): dns_types__response_code__val(
+     dns_types__response_code__pos(X)) may_be_replaced_by X
+     if [dns_types__no_error <= X, X <= dns_types__refused].
+get_query_na_rules(100): dns_types__response_code__pos(X) <= 
+     dns_types__response_code__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__no_error <= X, X <= dns_types__refused, 
+     dns_types__no_error <= Y, Y <= dns_types__refused].
+get_query_na_rules(101): dns_types__response_code__val(X) <= 
+     dns_types__response_code__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 5, 0 <= Y, Y <= 5].
+get_query_na_rules(102): dns_types__header_type__size >= 0 may_be_deduced.
+get_query_na_rules(103): dns_types__header_type__size may_be_replaced_by 96.
+get_query_na_rules(104): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__header_type)),
+      goal(checktype(B,dns_types__header_type)),
+      fld_messageid(A) = fld_messageid(B),
+      fld_qr(A) = fld_qr(B),
+      fld_opcode(A) = fld_opcode(B),
+      fld_aa(A) = fld_aa(B),
+      fld_tc(A) = fld_tc(B),
+      fld_rd(A) = fld_rd(B),
+      fld_ra(A) = fld_ra(B),
+      fld_res1(A) = fld_res1(B),
+      fld_res2(A) = fld_res2(B),
+      fld_res3(A) = fld_res3(B),
+      fld_rcode(A) = fld_rcode(B),
+      fld_qdcount(A) = fld_qdcount(B),
+      fld_ancount(A) = fld_ancount(B),
+      fld_nscount(A) = fld_nscount(B),
+      fld_arcount(A) = fld_arcount(B)].
+get_query_na_rules(105): dns_types__query_class__size >= 0 may_be_deduced.
+get_query_na_rules(106): dns_types__query_class__size may_be_replaced_by 16.
+get_query_na_rules(107): dns_types__query_class__first may_be_replaced_by dns_types__in_class.
+get_query_na_rules(108): dns_types__query_class__last may_be_replaced_by dns_types__any_class.
+get_query_na_rules(109): dns_types__query_class__base__first may_be_replaced_by dns_types__in_class.
+get_query_na_rules(110): dns_types__query_class__base__last may_be_replaced_by dns_types__any_class.
+get_query_na_rules(111): dns_types__query_class__pos(
+     dns_types__query_class__first) may_be_replaced_by 0.
+get_query_na_rules(112): dns_types__query_class__pos(
+     dns_types__in_class) may_be_replaced_by 0.
+get_query_na_rules(113): dns_types__query_class__val(0) may_be_replaced_by 
+     dns_types__in_class.
+get_query_na_rules(114): dns_types__query_class__pos(
+     dns_types__ch_class) may_be_replaced_by 1.
+get_query_na_rules(115): dns_types__query_class__val(1) may_be_replaced_by 
+     dns_types__ch_class.
+get_query_na_rules(116): dns_types__query_class__pos(
+     dns_types__hs_class) may_be_replaced_by 2.
+get_query_na_rules(117): dns_types__query_class__val(2) may_be_replaced_by 
+     dns_types__hs_class.
+get_query_na_rules(118): dns_types__query_class__pos(
+     dns_types__none_class) may_be_replaced_by 3.
+get_query_na_rules(119): dns_types__query_class__val(3) may_be_replaced_by 
+     dns_types__none_class.
+get_query_na_rules(120): dns_types__query_class__pos(
+     dns_types__any_class) may_be_replaced_by 4.
+get_query_na_rules(121): dns_types__query_class__val(4) may_be_replaced_by 
+     dns_types__any_class.
+get_query_na_rules(122): dns_types__query_class__pos(
+     dns_types__query_class__last) may_be_replaced_by 4.
+get_query_na_rules(123): dns_types__query_class__pos(succ(X)) may_be_replaced_by 
+     dns_types__query_class__pos(X) + 1
+     if [X <=dns_types__any_class, X <> dns_types__any_class].
+get_query_na_rules(124): dns_types__query_class__pos(pred(X)) may_be_replaced_by 
+     dns_types__query_class__pos(X) - 1
+     if [X >=dns_types__in_class, X <> dns_types__in_class].
+get_query_na_rules(125): dns_types__query_class__pos(X) >= 0 may_be_deduced_from
+     [dns_types__in_class <= X, X <= dns_types__any_class].
+get_query_na_rules(126): dns_types__query_class__pos(X) <= 4 may_be_deduced_from
+     [dns_types__in_class <= X, X <= dns_types__any_class].
+get_query_na_rules(127): dns_types__query_class__val(X) >= 
+     dns_types__in_class may_be_deduced_from
+     [0 <= X, X <= 4].
+get_query_na_rules(128): dns_types__query_class__val(X) <= 
+     dns_types__any_class may_be_deduced_from
+     [0 <= X, X <= 4].
+get_query_na_rules(129): succ(dns_types__query_class__val(X)) may_be_replaced_by 
+     dns_types__query_class__val(X+1)
+     if [0 <= X, X < 4].
+get_query_na_rules(130): pred(dns_types__query_class__val(X)) may_be_replaced_by 
+     dns_types__query_class__val(X-1)
+     if [0 < X, X <= 4].
+get_query_na_rules(131): dns_types__query_class__pos(
+     dns_types__query_class__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 4].
+get_query_na_rules(132): dns_types__query_class__val(
+     dns_types__query_class__pos(X)) may_be_replaced_by X
+     if [dns_types__in_class <= X, X <= dns_types__any_class].
+get_query_na_rules(133): dns_types__query_class__pos(X) <= 
+     dns_types__query_class__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__in_class <= X, X <= dns_types__any_class, 
+     dns_types__in_class <= Y, Y <= dns_types__any_class].
+get_query_na_rules(134): dns_types__query_class__val(X) <= 
+     dns_types__query_class__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 4, 0 <= Y, Y <= 4].
+get_query_na_rules(135): dns_types__query_type__size >= 0 may_be_deduced.
+get_query_na_rules(136): dns_types__query_type__size may_be_replaced_by 16.
+get_query_na_rules(137): dns_types__query_type__first may_be_replaced_by dns_types__a.
+get_query_na_rules(138): dns_types__query_type__last may_be_replaced_by dns_types__unimplemented.
+get_query_na_rules(139): dns_types__query_type__base__first may_be_replaced_by dns_types__a.
+get_query_na_rules(140): dns_types__query_type__base__last may_be_replaced_by dns_types__unimplemented.
+get_query_na_rules(141): dns_types__query_type__pos(
+     dns_types__query_type__first) may_be_replaced_by 0.
+get_query_na_rules(142): dns_types__query_type__pos(dns_types__a) may_be_replaced_by 0.
+get_query_na_rules(143): dns_types__query_type__val(0) may_be_replaced_by 
+     dns_types__a.
+get_query_na_rules(144): dns_types__query_type__pos(dns_types__ns) may_be_replaced_by 1.
+get_query_na_rules(145): dns_types__query_type__val(1) may_be_replaced_by 
+     dns_types__ns.
+get_query_na_rules(146): dns_types__query_type__pos(
+     dns_types__cname) may_be_replaced_by 2.
+get_query_na_rules(147): dns_types__query_type__val(2) may_be_replaced_by 
+     dns_types__cname.
+get_query_na_rules(148): dns_types__query_type__pos(
+     dns_types__soa) may_be_replaced_by 3.
+get_query_na_rules(149): dns_types__query_type__val(3) may_be_replaced_by 
+     dns_types__soa.
+get_query_na_rules(150): dns_types__query_type__pos(
+     dns_types__wks) may_be_replaced_by 4.
+get_query_na_rules(151): dns_types__query_type__val(4) may_be_replaced_by 
+     dns_types__wks.
+get_query_na_rules(152): dns_types__query_type__pos(
+     dns_types__ptr) may_be_replaced_by 5.
+get_query_na_rules(153): dns_types__query_type__val(5) may_be_replaced_by 
+     dns_types__ptr.
+get_query_na_rules(154): dns_types__query_type__pos(dns_types__mx) may_be_replaced_by 6.
+get_query_na_rules(155): dns_types__query_type__val(6) may_be_replaced_by 
+     dns_types__mx.
+get_query_na_rules(156): dns_types__query_type__pos(
+     dns_types__aaaa) may_be_replaced_by 7.
+get_query_na_rules(157): dns_types__query_type__val(7) may_be_replaced_by 
+     dns_types__aaaa.
+get_query_na_rules(158): dns_types__query_type__pos(
+     dns_types__srv) may_be_replaced_by 8.
+get_query_na_rules(159): dns_types__query_type__val(8) may_be_replaced_by 
+     dns_types__srv.
+get_query_na_rules(160): dns_types__query_type__pos(dns_types__a6) may_be_replaced_by 9.
+get_query_na_rules(161): dns_types__query_type__val(9) may_be_replaced_by 
+     dns_types__a6.
+get_query_na_rules(162): dns_types__query_type__pos(
+     dns_types__opt) may_be_replaced_by 10.
+get_query_na_rules(163): dns_types__query_type__val(10) may_be_replaced_by 
+     dns_types__opt.
+get_query_na_rules(164): dns_types__query_type__pos(dns_types__ds) may_be_replaced_by 11.
+get_query_na_rules(165): dns_types__query_type__val(11) may_be_replaced_by 
+     dns_types__ds.
+get_query_na_rules(166): dns_types__query_type__pos(
+     dns_types__rrsig) may_be_replaced_by 12.
+get_query_na_rules(167): dns_types__query_type__val(12) may_be_replaced_by 
+     dns_types__rrsig.
+get_query_na_rules(168): dns_types__query_type__pos(
+     dns_types__nsec) may_be_replaced_by 13.
+get_query_na_rules(169): dns_types__query_type__val(13) may_be_replaced_by 
+     dns_types__nsec.
+get_query_na_rules(170): dns_types__query_type__pos(
+     dns_types__dnskey) may_be_replaced_by 14.
+get_query_na_rules(171): dns_types__query_type__val(14) may_be_replaced_by 
+     dns_types__dnskey.
+get_query_na_rules(172): dns_types__query_type__pos(
+     dns_types__any) may_be_replaced_by 15.
+get_query_na_rules(173): dns_types__query_type__val(15) may_be_replaced_by 
+     dns_types__any.
+get_query_na_rules(174): dns_types__query_type__pos(
+     dns_types__caa) may_be_replaced_by 16.
+get_query_na_rules(175): dns_types__query_type__val(16) may_be_replaced_by 
+     dns_types__caa.
+get_query_na_rules(176): dns_types__query_type__pos(
+     dns_types__error) may_be_replaced_by 17.
+get_query_na_rules(177): dns_types__query_type__val(17) may_be_replaced_by 
+     dns_types__error.
+get_query_na_rules(178): dns_types__query_type__pos(
+     dns_types__unimplemented) may_be_replaced_by 18.
+get_query_na_rules(179): dns_types__query_type__val(18) may_be_replaced_by 
+     dns_types__unimplemented.
+get_query_na_rules(180): dns_types__query_type__pos(
+     dns_types__query_type__last) may_be_replaced_by 18.
+get_query_na_rules(181): dns_types__query_type__pos(succ(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) + 1
+     if [X <=dns_types__unimplemented, X <> 
+     dns_types__unimplemented].
+get_query_na_rules(182): dns_types__query_type__pos(pred(X)) may_be_replaced_by 
+     dns_types__query_type__pos(X) - 1
+     if [X >=dns_types__a, X <> dns_types__a].
+get_query_na_rules(183): dns_types__query_type__pos(X) >= 0 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+get_query_na_rules(184): dns_types__query_type__pos(X) <= 18 may_be_deduced_from
+     [dns_types__a <= X, X <= dns_types__unimplemented].
+get_query_na_rules(185): dns_types__query_type__val(X) >= 
+     dns_types__a may_be_deduced_from
+     [0 <= X, X <= 18].
+get_query_na_rules(186): dns_types__query_type__val(X) <= 
+     dns_types__unimplemented may_be_deduced_from
+     [0 <= X, X <= 18].
+get_query_na_rules(187): succ(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X+1)
+     if [0 <= X, X < 18].
+get_query_na_rules(188): pred(dns_types__query_type__val(X)) may_be_replaced_by 
+     dns_types__query_type__val(X-1)
+     if [0 < X, X <= 18].
+get_query_na_rules(189): dns_types__query_type__pos(
+     dns_types__query_type__val(X)) may_be_replaced_by X
+     if [0 <= X, X <= 18].
+get_query_na_rules(190): dns_types__query_type__val(
+     dns_types__query_type__pos(X)) may_be_replaced_by X
+     if [dns_types__a <= X, X <= dns_types__unimplemented].
+get_query_na_rules(191): dns_types__query_type__pos(X) <= 
+     dns_types__query_type__pos(Y) & X <= Y are_interchangeable 
+     if [dns_types__a <= X, X <= dns_types__unimplemented, 
+     dns_types__a <= Y, Y <= dns_types__unimplemented].
+get_query_na_rules(192): dns_types__query_type__val(X) <= 
+     dns_types__query_type__val(Y) & X <= Y are_interchangeable 
+     if [0 <= X, X <= 18, 0 <= Y, Y <= 18].
+get_query_na_rules(193): dns_types__dns_packet__size >= 0 may_be_deduced.
+get_query_na_rules(194): A = B may_be_deduced_from
+     [goal(checktype(A,dns_types__dns_packet)),
+      goal(checktype(B,dns_types__dns_packet)),
+      fld_header(A) = fld_header(B),
+      fld_bytes(A) = fld_bytes(B)].
+get_query_na_rules(195): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+get_query_na_rules(196): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+get_query_na_rules(197): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+get_query_na_rules(198): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+get_query_na_rules(199): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,165 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Create_Response_AAAA
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 275:
+
+procedure_create_response_aaaa_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 278:
+
+procedure_create_response_aaaa_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 281:
+
+procedure_create_response_aaaa_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 282:
+
+procedure_create_response_aaaa_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 282:
+
+procedure_create_response_aaaa_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 283:
+
+procedure_create_response_aaaa_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to assertion of line 283:
+
+procedure_create_response_aaaa_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to precondition check associated with 
+          statement of line 291:
+
+procedure_create_response_aaaa_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 293:
+
+procedure_create_response_aaaa_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 294:
+
+procedure_create_response_aaaa_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 296:
+
+procedure_create_response_aaaa_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 297:
+
+procedure_create_response_aaaa_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to precondition check associated with 
+          statement of line 298:
+
+procedure_create_response_aaaa_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 299:
+
+procedure_create_response_aaaa_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 300:
+
+procedure_create_response_aaaa_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 304:
+
+procedure_create_response_aaaa_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_aaaa_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 304:
+
+procedure_create_response_aaaa_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 305:
+
+procedure_create_response_aaaa_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_aaaa_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to run-time check associated with 
+          statement of line 305:
+
+procedure_create_response_aaaa_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_create_response_aaaa_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_create_response_aaaa_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 283 to finish:
+
+procedure_create_response_aaaa_24.
+*** true .          /* all conclusions proved */
+
+

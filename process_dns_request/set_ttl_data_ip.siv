@@ -1,0 +1,43 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Process_Dns_Request.Set_TTL_Data_IP
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          60:
+
+procedure_set_ttl_data_ip_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          62:
+
+procedure_set_ttl_data_ip_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          64:
+
+procedure_set_ttl_data_ip_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_set_ttl_data_ip_4.
+*** true .          /* all conclusions proved */
+
+

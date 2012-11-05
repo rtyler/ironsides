@@ -1,0 +1,47 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+               /*procedure Parser_Utilities.convert8BitUnsigned*/
+
+
+rule_family convert8bitu_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convert8bitu_rules(1): unsigned_types__max_8bit_val may_be_replaced_by 255.
+convert8bitu_rules(2): integer__size >= 0 may_be_deduced.
+convert8bitu_rules(3): integer__first may_be_replaced_by -2147483648.
+convert8bitu_rules(4): integer__last may_be_replaced_by 2147483647.
+convert8bitu_rules(5): integer__base__first may_be_replaced_by -2147483648.
+convert8bitu_rules(6): integer__base__last may_be_replaced_by 2147483647.
+convert8bitu_rules(7): character__size >= 0 may_be_deduced.
+convert8bitu_rules(8): character__first may_be_replaced_by 0.
+convert8bitu_rules(9): character__last may_be_replaced_by 255.
+convert8bitu_rules(10): character__base__first may_be_replaced_by 0.
+convert8bitu_rules(11): character__base__last may_be_replaced_by 255.
+convert8bitu_rules(12): natural__size >= 0 may_be_deduced.
+convert8bitu_rules(13): natural__first may_be_replaced_by 0.
+convert8bitu_rules(14): natural__last may_be_replaced_by 2147483647.
+convert8bitu_rules(15): natural__base__first may_be_replaced_by -2147483648.
+convert8bitu_rules(16): natural__base__last may_be_replaced_by 2147483647.
+convert8bitu_rules(17): positive__size >= 0 may_be_deduced.
+convert8bitu_rules(18): positive__first may_be_replaced_by 1.
+convert8bitu_rules(19): positive__last may_be_replaced_by 2147483647.
+convert8bitu_rules(20): positive__base__first may_be_replaced_by -2147483648.
+convert8bitu_rules(21): positive__base__last may_be_replaced_by 2147483647.
+convert8bitu_rules(22): unsigned_types__unsigned8__size >= 0 may_be_deduced.
+convert8bitu_rules(23): unsigned_types__unsigned8__first may_be_replaced_by 0.
+convert8bitu_rules(24): unsigned_types__unsigned8__last may_be_replaced_by 255.
+convert8bitu_rules(25): unsigned_types__unsigned8__base__first may_be_replaced_by 0.
+convert8bitu_rules(26): unsigned_types__unsigned8__base__last may_be_replaced_by 255.
+convert8bitu_rules(27): unsigned_types__unsigned8__modulus may_be_replaced_by 256.
+convert8bitu_rules(28): rr_type__linelengthindex__size >= 0 may_be_deduced.
+convert8bitu_rules(29): rr_type__linelengthindex__first may_be_replaced_by 1.
+convert8bitu_rules(30): rr_type__linelengthindex__last may_be_replaced_by 256.
+convert8bitu_rules(31): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+convert8bitu_rules(32): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.

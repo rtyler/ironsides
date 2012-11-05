@@ -1,0 +1,65 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                   /*function Parser_Utilities.convertIpv6*/
+
+
+rule_family convertipv6_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+convertipv6_rules(1): num_fields may_be_replaced_by 8.
+convertipv6_rules(2): req_num_separators may_be_replaced_by 7.
+convertipv6_rules(3): max_digits_in_field may_be_replaced_by 4.
+convertipv6_rules(4): ipv6_radix may_be_replaced_by 16.
+convertipv6_rules(5): integer__size >= 0 may_be_deduced.
+convertipv6_rules(6): integer__first may_be_replaced_by -2147483648.
+convertipv6_rules(7): integer__last may_be_replaced_by 2147483647.
+convertipv6_rules(8): integer__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(9): integer__base__last may_be_replaced_by 2147483647.
+convertipv6_rules(10): character__size >= 0 may_be_deduced.
+convertipv6_rules(11): character__first may_be_replaced_by 0.
+convertipv6_rules(12): character__last may_be_replaced_by 255.
+convertipv6_rules(13): character__base__first may_be_replaced_by 0.
+convertipv6_rules(14): character__base__last may_be_replaced_by 255.
+convertipv6_rules(15): natural__size >= 0 may_be_deduced.
+convertipv6_rules(16): natural__first may_be_replaced_by 0.
+convertipv6_rules(17): natural__last may_be_replaced_by 2147483647.
+convertipv6_rules(18): natural__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(19): natural__base__last may_be_replaced_by 2147483647.
+convertipv6_rules(20): positive__size >= 0 may_be_deduced.
+convertipv6_rules(21): positive__first may_be_replaced_by 1.
+convertipv6_rules(22): positive__last may_be_replaced_by 2147483647.
+convertipv6_rules(23): positive__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(24): positive__base__last may_be_replaced_by 2147483647.
+convertipv6_rules(25): unsigned_types__unsigned16__size >= 0 may_be_deduced.
+convertipv6_rules(26): unsigned_types__unsigned16__first may_be_replaced_by 0.
+convertipv6_rules(27): unsigned_types__unsigned16__last may_be_replaced_by 65535.
+convertipv6_rules(28): unsigned_types__unsigned16__base__first may_be_replaced_by 0.
+convertipv6_rules(29): unsigned_types__unsigned16__base__last may_be_replaced_by 65535.
+convertipv6_rules(30): unsigned_types__unsigned16__modulus may_be_replaced_by 65536.
+convertipv6_rules(31): rr_type__linelengthindex__size >= 0 may_be_deduced.
+convertipv6_rules(32): rr_type__linelengthindex__first may_be_replaced_by 1.
+convertipv6_rules(33): rr_type__linelengthindex__last may_be_replaced_by 256.
+convertipv6_rules(34): rr_type__linelengthindex__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(35): rr_type__linelengthindex__base__last may_be_replaced_by 2147483647.
+convertipv6_rules(36): 
+     rr_type__aaaa_record_type__ipv6addrtypeindex__size >= 0 may_be_deduced.
+convertipv6_rules(37): 
+     rr_type__aaaa_record_type__ipv6addrtypeindex__first may_be_replaced_by 1.
+convertipv6_rules(38): 
+     rr_type__aaaa_record_type__ipv6addrtypeindex__last may_be_replaced_by 8.
+convertipv6_rules(39): 
+     rr_type__aaaa_record_type__ipv6addrtypeindex__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(40): 
+     rr_type__aaaa_record_type__ipv6addrtypeindex__base__last may_be_replaced_by 2147483647.
+convertipv6_rules(41): separatorindextype__size >= 0 may_be_deduced.
+convertipv6_rules(42): separatorindextype__first may_be_replaced_by 1.
+convertipv6_rules(43): separatorindextype__last may_be_replaced_by 8.
+convertipv6_rules(44): separatorindextype__base__first may_be_replaced_by -2147483648.
+convertipv6_rules(45): separatorindextype__base__last may_be_replaced_by 2147483647.

@@ -1,0 +1,1857 @@
+           *******************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+           *******************************************************
+
+
+                    procedure Rr_Type.AppendDomainNames
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 51:
+
+procedure_appenddomainnames_1.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 52:
+
+procedure_appenddomainnames_2.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+        ->
+C1:    domainnamelength(right) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(right) <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 56:
+
+procedure_appenddomainnames_3.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+C2:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+C3:    domainnamelength(left) + 1 >= integer__base__first .
+C4:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+procedure_appenddomainnames_4.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+C2:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+C3:    domainnamelength(left) + 1 >= integer__base__first .
+C4:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 61:
+
+procedure_appenddomainnames_5.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_6.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_7.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_8.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   success .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 64:
+
+procedure_appenddomainnames_9.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+        ->
+C1:    46 >= character__first .
+C2:    46 <= character__last .
+C3:    domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+C4:    domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+C5:    domainnamelength(left) + 1 >= integer__base__first .
+C6:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+procedure_appenddomainnames_10.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+        ->
+C1:    46 >= character__first .
+C2:    46 <= character__last .
+C3:    domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+C4:    domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+C5:    domainnamelength(left) + 1 >= integer__base__first .
+C6:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+procedure_appenddomainnames_11.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+        ->
+C1:    46 >= character__first .
+C2:    46 <= character__last .
+C3:    domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+C4:    domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+C5:    domainnamelength(left) + 1 >= integer__base__first .
+C6:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+procedure_appenddomainnames_12.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   success .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+        ->
+C1:    46 >= character__first .
+C2:    46 <= character__last .
+C3:    domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+C4:    domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+C5:    domainnamelength(left) + 1 >= integer__base__first .
+C6:    domainnamelength(left) + 1 <= integer__base__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 65:
+
+procedure_appenddomainnames_13.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(right) >= integer__first .
+C2:    domainnamelength(right) <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+procedure_appenddomainnames_14.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(right) >= integer__first .
+C2:    domainnamelength(right) <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+procedure_appenddomainnames_15.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(right) >= integer__first .
+C2:    domainnamelength(right) <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+procedure_appenddomainnames_16.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   success .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+        ->
+C1:    domainnamelength(right) >= integer__first .
+C2:    domainnamelength(right) <= integer__last .
+C3:    1 >= integer__first .
+C4:    1 <= integer__last .
+ 
+
+For path(s) from start to run-time check associated with statement of line 65:
+
+procedure_appenddomainnames_17.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+        ->
+C1:    (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+C2:    (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+ 
+
+procedure_appenddomainnames_18.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+        ->
+C1:    (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+C2:    (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+ 
+
+procedure_appenddomainnames_19.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+        ->
+C1:    (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+C2:    (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+ 
+
+procedure_appenddomainnames_20.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   success .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+        ->
+C1:    (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+C2:    (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+ 
+
+For path(s) from start to assertion of line 66:
+
+procedure_appenddomainnames_21.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+H45:   (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+H46:   (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+H47:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H48:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H49:   1 <= domainnamelength(right) .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) < domainnamestringtypeindex__last .
+C3:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           maxdomainnamelength .
+C4:    domainnamelength(right) = domainnamelength(right) .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(update(
+           left, [domainnamelength(left) + 1], 46), [i___1]) >= 
+           character__first) and (element(update(left, [
+           domainnamelength(left) + 1], 46), [i___1]) <= 
+           character__last))) .
+C6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+C7:    true .
+C8:    1 >= integer__first .
+C9:    1 <= integer__last .
+C10:   1 >= 1 .
+C11:   1 <= domainnamelength(right) .
+C12:   domainnamelength(right) >= domainnamestringtypeindex__first .
+C13:   domainnamelength(right) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_22.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   domainnamelength(left) + 1 + domainnamelength(right) > 
+           maxdomainnamelength .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+H45:   (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+H46:   (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+H47:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H48:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H49:   1 <= domainnamelength(right) .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) < domainnamestringtypeindex__last .
+C3:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           maxdomainnamelength .
+C4:    domainnamelength(right) = domainnamelength(right) .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(update(
+           left, [domainnamelength(left) + 1], 46), [i___1]) >= 
+           character__first) and (element(update(left, [
+           domainnamelength(left) + 1], 46), [i___1]) <= 
+           character__last))) .
+C6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+C7:    true .
+C8:    1 >= integer__first .
+C9:    1 <= integer__last .
+C10:   1 >= 1 .
+C11:   1 <= domainnamelength(right) .
+C12:   domainnamelength(right) >= domainnamestringtypeindex__first .
+C13:   domainnamelength(right) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_23.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   domainnamelength(left) = domainnamestringtypeindex__last .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   false .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+H45:   (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+H46:   (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+H47:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H48:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H49:   1 <= domainnamelength(right) .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) < domainnamestringtypeindex__last .
+C3:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           maxdomainnamelength .
+C4:    domainnamelength(right) = domainnamelength(right) .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(update(
+           left, [domainnamelength(left) + 1], 46), [i___1]) >= 
+           character__first) and (element(update(left, [
+           domainnamelength(left) + 1], 46), [i___1]) <= 
+           character__last))) .
+C6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+C7:    true .
+C8:    1 >= integer__first .
+C9:    1 <= integer__last .
+C10:   1 >= 1 .
+C11:   1 <= domainnamelength(right) .
+C12:   domainnamelength(right) >= domainnamestringtypeindex__first .
+C13:   domainnamelength(right) <= domainnamestringtypeindex__last .
+ 
+
+procedure_appenddomainnames_24.
+H1:    true .
+H2:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H3:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H4:    true .
+H5:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H6:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H7:    ((domainnamelength(left) = 1) and ((element(left, [1]) = 32) or (element(
+           left, [2]) = 32))) or ((domainnamelength(left) = 
+           maxdomainnamelength) or ((element(left, [
+           domainnamelength(left) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(left))) -> (element(left, [q_]) <> 32))))) .
+H8:    domainnamelength(left) >= domainnamestringtypeindex__first .
+H9:    domainnamelength(left) <= domainnamestringtypeindex__last .
+H10:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H11:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H12:   ((domainnamelength(right) = 1) and ((element(right, [1]) = 32) or (element(
+           right, [2]) = 32))) or ((domainnamelength(right) = 
+           maxdomainnamelength) or ((element(right, [
+           domainnamelength(right) + 1]) = 32) and (for_all(
+           q_: integer, ((q_ >= 1) and (q_ <= 
+           domainnamelength(right))) -> (element(right, [q_]) <> 32))))) .
+H13:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H14:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H15:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H16:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H17:   not (domainnamelength(left) = 
+           domainnamestringtypeindex__last) .
+H18:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H19:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H20:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H21:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H22:   domainnamelength(left) + 1 + domainnamelength(right) >= 
+           integer__base__first .
+H23:   domainnamelength(left) + 1 + domainnamelength(right) <= 
+           integer__base__last .
+H24:   domainnamelength(left) + 1 >= integer__base__first .
+H25:   domainnamelength(left) + 1 <= integer__base__last .
+H26:   not (domainnamelength(left) + 1 + domainnamelength(
+           right) > maxdomainnamelength) .
+H27:   success .
+H28:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H29:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H30:   domainnamelength(left) >= domainnamestringtypeindex__first .
+H31:   domainnamelength(left) <= domainnamestringtypeindex__last .
+H32:   not ((element(left, [domainnamelength(left)]) = 
+           origin_char) and (domainnamelength(left) = 1)) .
+H33:   46 >= character__first .
+H34:   46 <= character__last .
+H35:   domainnamelength(left) + 1 >= 
+           domainnamestringtypeindex__first .
+H36:   domainnamelength(left) + 1 <= 
+           domainnamestringtypeindex__last .
+H37:   domainnamelength(left) + 1 >= integer__base__first .
+H38:   domainnamelength(left) + 1 <= integer__base__last .
+H39:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H40:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H41:   domainnamelength(right) >= integer__first .
+H42:   domainnamelength(right) <= integer__last .
+H43:   1 >= integer__first .
+H44:   1 <= integer__last .
+H45:   (1 <= domainnamelength(right)) -> ((domainnamelength(
+           right) >= integer__first) and (domainnamelength(
+           right) <= integer__last)) .
+H46:   (1 <= domainnamelength(right)) -> ((1 >= integer__first) and (1 <= 
+           integer__last)) .
+H47:   domainnamelength(right) >= domainnamestringtypeindex__first .
+H48:   domainnamelength(right) <= domainnamestringtypeindex__last .
+H49:   1 <= domainnamelength(right) .
+        ->
+C1:    domainnamelength(left) >= domainnamestringtypeindex__first .
+C2:    domainnamelength(left) < domainnamestringtypeindex__last .
+C3:    domainnamelength(left) + 1 + domainnamelength(right) <= 
+           maxdomainnamelength .
+C4:    domainnamelength(right) = domainnamelength(right) .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(update(
+           left, [domainnamelength(left) + 1], 46), [i___1]) >= 
+           character__first) and (element(update(left, [
+           domainnamelength(left) + 1], 46), [i___1]) <= 
+           character__last))) .
+C6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+C7:    true .
+C8:    1 >= integer__first .
+C9:    1 <= integer__last .
+C10:   1 >= 1 .
+C11:   1 <= domainnamelength(right) .
+C12:   domainnamelength(right) >= domainnamestringtypeindex__first .
+C13:   domainnamelength(right) <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 66 to assertion of line 66:
+
+procedure_appenddomainnames_25.
+H1:    lengthl >= domainnamestringtypeindex__first .
+H2:    lengthl < domainnamestringtypeindex__last .
+H3:    lengthl + 1 + lengthr <= maxdomainnamelength .
+H4:    lengthr__entry__loop__1 = lengthr .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H7:    true .
+H8:    loop__1__i >= integer__first .
+H9:    loop__1__i <= integer__last .
+H10:   loop__1__i >= 1 .
+H11:   loop__1__i <= lengthr__entry__loop__1 .
+H12:   lengthr__entry__loop__1 >= domainnamestringtypeindex__first .
+H13:   lengthr__entry__loop__1 <= domainnamestringtypeindex__last .
+H14:   element(right, [loop__1__i]) >= character__first .
+H15:   element(right, [loop__1__i]) <= character__last .
+H16:   loop__1__i >= domainnamestringtypeindex__first .
+H17:   loop__1__i <= domainnamestringtypeindex__last .
+H18:   lengthl + 1 + loop__1__i >= 
+           domainnamestringtypeindex__first .
+H19:   lengthl + 1 + loop__1__i <= 
+           domainnamestringtypeindex__last .
+H20:   lengthl + 1 + loop__1__i >= integer__base__first .
+H21:   lengthl + 1 + loop__1__i <= integer__base__last .
+H22:   lengthl + 1 >= integer__base__first .
+H23:   lengthl + 1 <= integer__base__last .
+H24:   not (loop__1__i = lengthr__entry__loop__1) .
+        ->
+C1:    lengthl >= domainnamestringtypeindex__first .
+C2:    lengthl < domainnamestringtypeindex__last .
+C3:    lengthl + 1 + lengthr <= maxdomainnamelength .
+C4:    lengthr__entry__loop__1 = lengthr .
+C5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(update(
+           left, [lengthl + 1 + loop__1__i], element(right, [
+           loop__1__i])), [i___1]) >= character__first) and (element(update(
+           left, [lengthl + 1 + loop__1__i], element(right, [
+           loop__1__i])), [i___1]) <= character__last))) .
+C6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+C7:    true .
+C8:    loop__1__i + 1 >= integer__first .
+C9:    loop__1__i + 1 <= integer__last .
+C10:   loop__1__i + 1 >= 1 .
+C11:   loop__1__i + 1 <= lengthr__entry__loop__1 .
+C12:   lengthr__entry__loop__1 >= domainnamestringtypeindex__first .
+C13:   lengthr__entry__loop__1 <= domainnamestringtypeindex__last .
+ 
+
+For path(s) from assertion of line 66 to run-time check associated with statement of line 70:
+
+procedure_appenddomainnames_26.
+H1:    lengthl >= domainnamestringtypeindex__first .
+H2:    lengthl < domainnamestringtypeindex__last .
+H3:    lengthl + 1 + lengthr <= maxdomainnamelength .
+H4:    lengthr__entry__loop__1 = lengthr .
+H5:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           left, [i___1]) >= character__first) and (element(
+           left, [i___1]) <= character__last))) .
+H6:    for_all(i___1: integer, ((i___1 >= 
+           domainnamestringtypeindex__first) and (i___1 <= 
+           domainnamestringtypeindex__last)) -> ((element(
+           right, [i___1]) >= character__first) and (element(
+           right, [i___1]) <= character__last))) .
+H7:    true .
+H8:    loop__1__i >= integer__first .
+H9:    loop__1__i <= integer__last .
+H10:   loop__1__i >= 1 .
+H11:   loop__1__i <= lengthr__entry__loop__1 .
+H12:   lengthr__entry__loop__1 >= domainnamestringtypeindex__first .
+H13:   lengthr__entry__loop__1 <= domainnamestringtypeindex__last .
+        ->
+C1:    element(right, [loop__1__i]) >= character__first .
+C2:    element(right, [loop__1__i]) <= character__last .
+C3:    loop__1__i >= domainnamestringtypeindex__first .
+C4:    loop__1__i <= domainnamestringtypeindex__last .
+C5:    lengthl + 1 + loop__1__i >= 
+           domainnamestringtypeindex__first .
+C6:    lengthl + 1 + loop__1__i <= 
+           domainnamestringtypeindex__last .
+C7:    lengthl + 1 + loop__1__i >= integer__base__first .
+C8:    lengthl + 1 + loop__1__i <= integer__base__last .
+C9:    lengthl + 1 >= integer__base__first .
+C10:   lengthl + 1 <= integer__base__last .
+ 
+
+For path(s) from start to finish:
+
+procedure_appenddomainnames_27.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_28.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_29.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_30.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_31.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_32.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_33.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_34.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_35.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_36.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_37.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+procedure_appenddomainnames_38.
+*** true .          /* trivially true VC removed by Examiner */
+
+
+For path(s) from assertion of line 66 to finish:
+
+procedure_appenddomainnames_39.
+*** true .          /* trivially true VC removed by Examiner */
+
+

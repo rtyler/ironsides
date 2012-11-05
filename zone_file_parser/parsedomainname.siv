@@ -1,0 +1,290 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseDomainName
+
+
+
+
+For path(s) from start to precondition check associated with statement of line 
+          344:
+
+procedure_parsedomainname_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 344:
+
+procedure_parsedomainname_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 348:
+
+procedure_parsedomainname_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to assertion of line 348:
+
+procedure_parsedomainname_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 349:
+
+procedure_parsedomainname_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to precondition check associated with 
+          statement of line 350:
+
+procedure_parsedomainname_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 350:
+
+procedure_parsedomainname_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 357:
+
+procedure_parsedomainname_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 357:
+
+procedure_parsedomainname_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          358:
+
+procedure_parsedomainname_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to precondition check associated with 
+          statement of line 358:
+
+procedure_parsedomainname_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 358:
+
+procedure_parsedomainname_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 358:
+
+procedure_parsedomainname_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 360:
+
+procedure_parsedomainname_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 360:
+
+procedure_parsedomainname_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 364:
+
+procedure_parsedomainname_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 364:
+
+procedure_parsedomainname_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 367:
+
+procedure_parsedomainname_18.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 367:
+
+procedure_parsedomainname_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 367:
+
+procedure_parsedomainname_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 367:
+
+procedure_parsedomainname_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 368:
+
+procedure_parsedomainname_22.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to assertion of line 368:
+
+procedure_parsedomainname_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to assertion of line 368:
+
+procedure_parsedomainname_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to run-time check associated with 
+          statement of line 370:
+
+procedure_parsedomainname_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 372:
+
+procedure_parsedomainname_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 372:
+
+procedure_parsedomainname_27.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to run-time check associated with 
+          statement of line 372:
+
+procedure_parsedomainname_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 372:
+
+procedure_parsedomainname_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to run-time check associated with 
+          statement of line 372:
+
+procedure_parsedomainname_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to run-time check associated with 
+          statement of line 372:
+
+procedure_parsedomainname_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 374:
+
+procedure_parsedomainname_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to assertion of line 374:
+
+procedure_parsedomainname_33.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to assertion of line 374:
+
+procedure_parsedomainname_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 374 to assertion of line 374:
+
+procedure_parsedomainname_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 374 to run-time check associated with 
+          statement of line 375:
+
+procedure_parsedomainname_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parsedomainname_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsedomainname_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsedomainname_39.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 348 to finish:
+
+procedure_parsedomainname_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsedomainname_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_parsedomainname_42.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 368 to finish:
+
+procedure_parsedomainname_43.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 374 to finish:
+
+procedure_parsedomainname_44.
+*** true .          /* all conclusions proved */
+
+

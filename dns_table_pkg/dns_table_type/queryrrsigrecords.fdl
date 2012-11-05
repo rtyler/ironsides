@@ -1,0 +1,144 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+          {procedure dns_table_pkg.DNS_Table_Type.queryRRSIGRecords}
+
+
+title procedure queryrrsigrecords;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__query_type = (dns_types__a, dns_types__ns, 
+     dns_types__cname, dns_types__soa, dns_types__wks, 
+     dns_types__ptr, dns_types__mx, dns_types__aaaa, 
+     dns_types__srv, dns_types__a6, dns_types__opt, dns_types__ds, 
+     dns_types__rrsig, dns_types__nsec, dns_types__dnskey, 
+     dns_types__any, dns_types__caa, dns_types__error, 
+     dns_types__unimplemented);
+  type unsigned_types__unsigned8 = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__ownerrecordbuckettype = array [integer] of string;
+  type rr_type__rrsig_record_type__rrsigrecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        typecovered : dns_types__query_type;
+        algorithm : integer;
+        numlabels : integer;
+        origttl : integer;
+        sigexpiration : integer;
+        siginception : integer;
+        keytag : integer;
+        signername : string;
+        signature : string;
+        signaturelength : integer
+     end;
+  type rr_type__ownerhashtabletype = array [integer] of 
+     rr_type__ownerrecordbuckettype;
+  type rr_type__rrsig_record_type__rrsigrecordbuckettype = array [integer] of 
+     rr_type__rrsig_record_type__rrsigrecordtype;
+  type rr_type__rrsig_record_type__rrsigrecordhashtabletype = array [integer] of 
+     rr_type__rrsig_record_type__rrsigrecordbuckettype;
+  const ascii__nul : character = pending;
+  const rr_type__numbuckets : integer = pending;
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__last : integer = pending; 
+  const rr_type__numbucketsindextype__base__first : integer = pending; 
+  const rr_type__numbucketsindextype__base__last : integer = pending; 
+  const rr_type__numberofrecordstype__base__first : integer = pending; 
+  const rr_type__numberofrecordstype__base__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__base__last : integer = pending; 
+  const rr_type__wirestringtypeindex__base__first : integer = pending; 
+  const rr_type__wirestringtypeindex__base__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__last : integer = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const unsigned_types__unsigned8__base__first : integer = pending; 
+  const unsigned_types__unsigned8__base__last : integer = pending; 
+  const dns_types__query_type__base__first : 
+     dns_types__query_type = pending; 
+  const dns_types__query_type__base__last : dns_types__query_type = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigrecordtype__size : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__last : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__size : integer = pending; 
+  const rr_type__numbucketsindextype__first : integer = pending; 
+  const rr_type__numbucketsindextype__last : integer = pending; 
+  const rr_type__numbucketsindextype__size : integer = pending; 
+  const rr_type__numberofrecordstype__first : integer = pending; 
+  const rr_type__numberofrecordstype__last : integer = pending; 
+  const rr_type__numberofrecordstype__size : integer = pending; 
+  const rr_type__returnedrecordsindextype__first : integer = pending; 
+  const rr_type__returnedrecordsindextype__last : integer = pending; 
+  const rr_type__returnedrecordsindextype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__wirestringtypeindex__first : integer = pending; 
+  const rr_type__wirestringtypeindex__last : integer = pending; 
+  const rr_type__wirestringtypeindex__size : integer = pending; 
+  const rr_type__domainnamestringtypeindex__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const unsigned_types__unsigned8__first : integer = pending; 
+  const unsigned_types__unsigned8__last : integer = pending; 
+  const unsigned_types__unsigned8__modulus : integer = pending; 
+  const unsigned_types__unsigned8__size : integer = pending; 
+  const dns_types__query_type__first : dns_types__query_type = pending; 
+  const dns_types__query_type__last : dns_types__query_type = pending; 
+  const dns_types__query_type__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var domainname : string;
+  var howmany : integer;
+  var dns_table_type__rrsigrecordkeys : 
+     rr_type__ownerhashtabletype;
+  var dns_table_type__rrsigrecordtable : 
+     rr_type__rrsig_record_type__rrsigrecordhashtabletype;
+  var bucket : integer;
+  var lower_domainname : string;
+  var loop__1__ctr : integer;
+  function to_lower(string) : string;
+  function same(string, string) : boolean;
+  function hash(string) : integer;
+
+end;

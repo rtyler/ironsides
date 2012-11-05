@@ -1,0 +1,623 @@
+V "SPARK 0.0.0"
+A -index_file=mcc.idx
+A -nowarning_file
+A -notarget_compiler_data
+A -config_file=mcc.cfg
+A -source_extension=ada
+A -listing_extension=ls_
+A -nodictionary_file
+A -report_file=spark.rep
+A -nohtml
+A -vcg
+A -plain_output
+A -sparklib
+A -nostatistics
+A -fdl_identifiers=accept
+A -flow_analysis=information
+A -language=95
+A -profile=ravenscar
+A -annotation_character=#
+A -rules=none
+A -error_explanations=off
+A -justification_option=full
+A -output_directory=.
+A -output_directory (actual)=.
+P
+R
+
+U Process_Dns_Request%b process_dns_request.adb
+U Process_Dns_Request%s Process_Dns_Request.ads
+W DNS_Network%s dns_network.adb dns_network.sli
+W DNS_Types%s dns_types.adb dns_types.sli
+W Dns_Network_Receive%s dns_network_receive.adb dns_network_receive.sli
+W dns_table_pkg%s dns_table_pkg.adb dns_table_pkg.sli
+W Rr_Type.Soa_Record_Type%s rr_type-soa_record_type.ads rr_type-soa_record_type.sli
+W Rr_Type.Rrsig_Record_Type%s rr_type-rrsig_record_type.ads rr_type-rrsig_record_type.sli
+W Rr_Type.Ptr_Record_Type%s rr_type-ptr_record_type.ads rr_type-ptr_record_type.sli
+W Rr_Type.Nsec_Record_Type%s rr_type-nsec_record_type.ads rr_type-nsec_record_type.sli
+W Rr_Type.Ns_Record_Type%s rr_type-ns_record_type.ads rr_type-ns_record_type.sli
+W Rr_Type.Mx_Record_Type%s rr_type-mx_record_type.ads rr_type-mx_record_type.sli
+W Rr_Type.Dnskey_Record_Type%s rr_type-dnskey_record_type.ads rr_type-dnskey_record_type.sli
+W Rr_Type.Cname_Record_Type%s rr_type-cname_record_type.ads rr_type-cname_record_type.sli
+W RR_Type.Aaaa_Record_Type%s rr_type-aaaa_record_type.ads rr_type-aaaa_record_type.sli
+W Rr_Type.A_Record_Type%s rr_type-a_record_type.ads rr_type-a_record_type.sli
+W Rr_Type%s rr_type.ads rr_type.sli
+W Unsigned_Types%s Unsigned_Types.ads Unsigned_Types.sli
+W Ada.Characters.Handling%s ada-characters-handling.shs ada-characters-handling.sli
+W Protected_SPARK_IO_05%s protected_spark_io_05.adb protected_spark_io_05.sli
+
+D dns_network.ads 00000000000000 00000000
+D dns_types.ads 00000000000000 00000000
+D dns_network_receive.ads 00000000000000 00000000
+D dns_table_pkg.ads 00000000000000 00000000
+D rr_type-soa_record_type.ads 00000000000000 00000000
+D rr_type-rrsig_record_type.ads 00000000000000 00000000
+D rr_type-ptr_record_type.ads 00000000000000 00000000
+D rr_type-nsec_record_type.ads 00000000000000 00000000
+D rr_type-ns_record_type.ads 00000000000000 00000000
+D rr_type-mx_record_type.ads 00000000000000 00000000
+D rr_type-dnskey_record_type.ads 00000000000000 00000000
+D rr_type-cname_record_type.ads 00000000000000 00000000
+D rr_type-aaaa_record_type.ads 00000000000000 00000000
+D rr_type-a_record_type.ads 00000000000000 00000000
+D rr_type.ads 00000000000000 00000000
+D Unsigned_Types.ads 00000000000000 00000000
+D ada-characters-handling.shs 00000000000000 00000000
+D Process_Dns_Request.ads 00000000000000 00000000
+D protected_spark_io_05.ads 00000000000000 00000000
+D process_dns_request.adb 00000000000000 00000000
+
+X 1 dns_network.ads
+21K9 DNS_Network 3|28m16 40m16 27r22 28r72 30r33 39r22 40r87 42r33 20w23
+. 18|43m19 41r25 43r69 44r86 31w24 20|1206r29
+22H19 Network 34m16 38m16 43m16 52m16 60m24 74m16 83m24 90m16 33r22
+. 34r29 37r22 38r29 42r22 43r45 51r22 52r60 59r22 60r37 61r28 73r22
+. 74r75 82r22 83r37 84r28 89r22 3|28m28 40m28 27r34 28r84 39r34 40r99
+. 18|43m31 41r37 43r81 44r98 20|1206r41
+24H13 Network_Type 22r29
+27N4 Max_Query_Size 3|30r45 42r45
+32U14 Initialize_TCP 33=22
+36U14 Initialize_UDP 37=22
+40U14 Get_Connection_TCP 42=22
+41H7 Socket 43m33
+46U14 Receive_DNS_Packet_TCP 51=22
+47r7 Packet 52m25
+48i7 Number_Bytes 52m33
+49H7 Socket 52r69
+50e7 Failure 52m47
+54U14 Send_DNS_Packet_Tcp 59=22
+55r7 Packet 61m16 60r46 63r65 63r74
+56i7 Number_Bytes 60r54 62r20
+57H7 Socket 60r68
+58e7 Failure 60m16
+68U14 Receive_DNS_Packet 73=22
+69r7 Packet 74m25
+70i7 Number_Bytes 74m33
+71H7 Reply_Address 74m47
+72e7 Failure 74m62
+78U14 Send_DNS_Packet 82=22
+78r30 Packet 84m16 83r46 86r65 86r74
+79i7 Number_Bytes 83r54 85r20
+80H7 To_Address 83r68
+81e7 Failure 83m16
+88U14 Discard_Socket 89=22
+88H29 Socket 90r32
+X 2 dns_types.ads
+21K9 DNS_Types 1|62r36 85r36 20w13 3|29r47 29r79 41r47 41r79 20w13 4|40w62
+. 6|22w37 18|57r35 59r38 59r93 60r38 60r80 67r26 74r26 87r26 95r26 102r26
+. 112r27 112r64 121r27 121r64 130r27 130r64 141r27 142r15 160r31 161r38 161r84
+. 163r29 163r72 176r28 176r58 177r39 178r38 178r93 179r43 190r35 191r38 191r93
+. 205r35 206r28 206r58 207r38 207r93 208r45 222r35 224r38 224r93 254r35 255r28
+. 255r58 256r38 256r93 257r42 270r35 271r28 271r58 272r38 272r93 273r42 292r35
+. 293r28 293r58 294r38 294r93 295r42 308r35 309r28 309r58 310r38 310r93 311r42
+. 320r30 320r56 31w13 20|79r39 79r76 98r39 98r76 120r39 120r76 142r36 143r14
+. 152r58 153r14 210r22 285r40 285r70 287r27 288r48 288r74 332r47 334r40 334r70
+. 336r27 337r48 337r74 389r44 391r37 391r67 392r46 392r72 451r44 453r37 453r67
+. 454r46 454r72 511r44 513r37 513r67 514r46 514r72 632r43 632r67 687r34 688r44
+. 827r41 835r44 838r32 996r39 996r69 999r45 1000r45 1042r39 1042r69 1045r45 1046r45
+. 1082r39 1083r39 1115r39 1116r39 1116r81 1117r39
+22N4 Packet_Size 18|59r103 60r48 161r94 163r82 177r49 178r103 190r45 191r103 205r45
+. 207r103 222r45 224r103 254r45 256r103 270r45 272r103 292r45 294r103 308r45 310r103
+. 20|288r58 332r57 337r58 389r54 392r56 451r54 454r56 511r54 514r56 632r77 1000r55
+. 1046r55 1083r49 1116r49 1117r49
+23N4 Header_Bits 1|62r46 85r46 3|29r89 41r89 18|57r45 59r48 87r36 161r48 178r48
+. 191r48 207r48 224r48 256r48 272r48 294r48 310r48 20|288r84 337r84 392r82 454r82
+. 514r82 632r53 827r51 835r54 999r55 1045r55 1082r49 1115r49
+25I9 QNAME_PTR_RANGE 18|320r40 20|688r54
+27I9 Packet_Length_Range 3|29r57 41r57 18|320r66 20|687r44
+29i4 UDP_Max_Size 18|60r90 163r39 20|1116r91
+31I9 Packet_Bytes_Range 18|67r36 74r36 95r36 102r36 112r37 112r74 121r37 121r74 130r37
+. 130r74 141r37 142r25 20|79r49 79r86 98r49 98r86 120r49 120r86 142r46 143r24
+. 152r68 153r24 210r32 287r37 336r37 838r42
+40I9 Unsigned_Short 18|160r41 176r38 176r68 179r53 206r38 206r68 208r55 255r38 255r68
+. 257r52 271r38 271r68 273r52 293r38 293r68 295r52 309r38 309r68 311r52 20|285r50
+. 285r80 334r50 334r80 391r47 391r77 453r47 453r77 513r47 513r77 996r49 996r79
+. 1042r49 1042r79
+70i10 MessageID 165r49
+90i10 QDCOUNT 166r37
+92i10 ANCOUNT 167r37 18|223r37 225r34 20|630r42
+94i10 NSCOUNT 168r37
+96i10 ARCOUNT 169r37
+155V53 Byte_Swap_US 165r33 166r21 167r21 168r21 169r21
+163r10 H 164m16 164r23 165r13 165r17 165r46 166r34 167r34 168r34 169r34
+252r7 Header 18|223r30 225r27 20|630r35
+X 3 dns_network_receive.ads
+21K9 Dns_Network_Receive 18|31w37
+22U14 Receive_DNS_Packet_TCP 27=34
+23r7 Packet 28m37
+24i7 Number_Bytes 28m45 29r31 30r17
+25H7 Socket 28r93
+26e7 Failure 28m59 29r18
+34U14 Receive_DNS_Packet 39=34
+35r7 Packet 40m37
+36i7 Number_Bytes 40m45 41r31 42r17
+37H7 Reply_Address 40m59
+38e7 Failure 40m74 41r18
+X 4 dns_table_pkg.ads
+46K9 dns_table_pkg 18|42r21 43r44 44r61 51r18 53r38 54r77 55r58 56r34 172r18
+. 173r78 174r58 175r49 187r18 188r78 189r74 201r18 202r78 203r58 204r49 247r18
+. 248r78 249r58 250r31 251r29 252r49 253r49 266r18 267r78 268r58 269r49 285r18
+. 286r78 287r58 288r31 289r29 290r49 291r49 304r18 305r78 306r58 307r49 36w14
+50w16 Dns_Table_Type 58m16 65m16 72m16 79m16 86m16 93m16 100m16 107m16 114m16
+. 121m16 57r22 59r29 64r22 66r29 71r22 73r29 78r22 80r29 85r22 87r29
+. 92r22 94r29 99r22 101r29 106r22 108r29 113r22 115r29 120r22 122r29 128r18
+. 129r37 130r29 136r18 137r37 138r29 144r18 145r37 146r29 152r18 153r47 159r18
+. 160r37 161r29 167r18 168r37 169r29 175r18 176r37 177r29 183r18 184r37 185r29
+. 191r18 192r47 198r18 199r37 200r29
+50W16 DNS_Table_Type 47r31
+54U14 insertARecord 57=22
+54a28 Key 58r50 59r45
+55r28 theRecord 58r39
+56e28 success 59m16
+61U14 insertAAAARecord 64=22
+61a31 Key 65r50 66r45
+62r28 theRecord 65r39
+63e28 success 66m16
+68U14 insertCNAMERecord 71=22
+68a32 Key 72r50 73r45
+69r28 theRecord 72r39
+70e28 success 73m16
+75U14 InsertDNSKEYRecord 78=22
+75a33 Key 79r50 80r45
+76r27 theRecord 79r39
+77e27 success 80m16
+82U14 insertMXRecord 85=22
+82a29 Key 86r50 87r45
+83r28 theRecord 86r39
+84e28 success 87m16
+89U14 insertNSRecord 92=22
+89a29 Key 93r50 94r45
+90r28 theRecord 93r39
+91e28 success 94m16
+96U14 insertNSECRecord 99=22
+96a31 Key 100r50 101r45
+97r28 theRecord 100r39
+98e28 success 101m16
+103U14 insertPTRRecord 106=22
+103a30 Key 107r50 108r45
+104r28 theRecord 107r39
+105e28 success 108m16
+110U14 InsertRRSIGRecord 113=22
+110a32 Key 114r50 115r45
+111r27 theRecord 114r39
+112e27 success 115m16
+117U14 InsertSOARecord 120=22
+117a30 Key 121r50 122r45
+118r28 theRecord 121r39
+119e28 success 122m16
+124U14 queryARecords 128>18
+125a5 domainName 129r53 130r45
+126a9 returnedRecords 129m16
+127i9 howMany 130m16
+132U14 queryAAAARecords 136>18
+133a5 domainName 137r53 138r45
+134a9 returnedRecords 137m16
+135i9 howMany 138m16
+140U14 queryCNAMERecords 144>18
+141a7 domainName 145r53 146r45
+142a7 returnedRecords 145m16
+143i7 howMany 146m16
+148U14 queryDNSKEYRecords 152>18
+149a7 domainName 153r63
+150a7 returnedRecords 153m17
+151i7 HowMany 153m34
+155U14 queryMXRecords 159>18
+156a7 domainName 160r53 161r45
+157a7 returnedRecords 160m16
+158i7 howMany 161m16
+163U14 queryNSRecords 167>18
+164a7 domainName 168r53 169r45
+165a7 returnedRecords 168m16
+166i7 howMany 169m16
+171U14 queryNSECRecords 175>18
+172a7 domainName 176r53 177r45
+173a7 returnedRecords 176m16
+174i7 howMany 177m16
+179U14 queryPTRRecords 183>18
+180a7 domainName 184r53 185r45
+181a7 returnedRecords 184m16
+182i7 howMany 185m16
+187U14 queryRRSIGRecords 191>18
+188a7 domainName 192r63
+189a7 returnedRecords 192m17
+190i7 HowMany 192m34
+194U14 querySOARecords 198>18
+195a7 domainName 199r53 200r45
+196a7 returnedRecords 199m16
+197i7 howMany 200m16
+267w1 DNS_Table 47o19 18|42r35 43r58 44r75 51r32 53r52 54r91 55r72 56r48
+. 172r32 173r92 174r72 175r63 187r32 188r92 189r88 201r32 202r92 203r72 204r63
+. 247r32 248r92 249r72 250r45 251r43 252r63 253r63 266r32 267r92 268r72 269r63
+. 285r32 286r92 287r72 288r45 289r43 290r63 291r63 304r32 305r92 306r72 307r63
+X 5 rr_type-soa_record_type.ads
+21K9 Soa_Record_Type 4|43w43 18|35w22
+X 6 rr_type-rrsig_record_type.ads
+23K9 Rrsig_Record_Type 4|43w16
+X 7 rr_type-ptr_record_type.ads
+19K9 Ptr_Record_Type 4|42w66 18|34w46
+X 8 rr_type-nsec_record_type.ads
+19K9 Nsec_Record_Type 4|42w40
+X 9 rr_type-ns_record_type.ads
+19K9 Ns_Record_Type 4|42w16 18|33w49
+X 10 rr_type-mx_record_type.ads
+21K9 Mx_Record_Type 4|41w71 18|34w22
+X 11 rr_type-dnskey_record_type.ads
+22K9 Dnskey_Record_Type 4|41w43
+X 12 rr_type-cname_record_type.ads
+19K9 Cname_Record_Type 4|41w16 18|33w22
+X 13 rr_type-aaaa_record_type.ads
+20K9 Aaaa_Record_Type 4|40w113 18|32w54
+X 14 rr_type-a_record_type.ads
+20K9 A_Record_Type 4|40w90 18|32w31
+X 15 rr_type.ads
+20K9 Rr_Type 4|40w73 40w82 40w105 41w8 41w35 41w63 42w8 42w32 42w58
+. 43w8 43w35 5|20w12 6|22w12 7|18w12 8|18w12 9|18w12 10|20w12 11|21w12 12|18w12 13|19w29
+. 14|19w29 18|111r62 120r62 129r62 139r68 140r62 176r83 179r68 206r83 208r70 255r83
+. 257r67 271r83 273r67 293r83 295r67 309r83 311r67 32w14 32w23 32w46 33w14
+. 33w41 34w14 34w38 35w14 20|80r20 80r62 99r20 99r62 121r20 121r62 144r17
+. 144r59 154r17 154r59 209r24 209r61 285r95 289r36 334r95 338r36 387r70 388r34
+. 391r92 449r70 450r34 453r92 509r70 510r34 513r92 628r23 656r39 686r77 997r22
+. 998r50 1043r22 1044r50 1081r44 1114r44
+32i4 MaxDomainNameLength 61r32 66r18 72r24 74r24
+38I12 WireStringTypeIndex 18|111r70 120r70 129r70 139r76 140r70 20|80r28 80r70 99r28 99r70
+. 121r28 121r70 144r25 144r67 154r25 154r67 387r78 449r78 509r78 628r31 656r47
+39A12 WireStringType 20|209r32 209r69 686r85
+55a7 Left 58m16 58r26 58r62
+56a7 Right 58r32 58r67
+57e7 Success 58m49 58r39 58r73
+60a28 Name 61r58 62r73
+61i15 Length 61r25 61r63 62r60
+62i20 Q 62r78
+64a30 Name 65r40 65r55 66r42 67r71
+65i15 Length 65r26 66r11 66r47 67r60
+67i20 Q 67r76
+71a39 S 72r12
+73a33 S 74r12
+87i4 MaxNumRecords 18|176r91 179r76 206r91 208r78 255r91 257r75 271r91 273r75 293r91
+. 295r75 309r91 311r75 20|285r103 289r44 334r103 338r44 388r42 391r100 450r42 453r100
+. 510r42 513r100 997r30 998r58 1043r30 1044r58 1081r52 1114r52
+X 16 Unsigned_Types.ads
+18K9 Unsigned_Types 4|40w46 5|20w21 6|22w21 10|20w21 11|21w21 13|19w13 14|19w13 15|19w13 18|36w29
+X 17 ada-characters-handling.shs
+43K9 Handling 4|40w36
+X 18 Process_Dns_Request.ads
+38U14 Process_Request_Tcp 40=47 41=37 42>35
+39H7 Reply_Socket 43r90 44r107
+45U14 Create_Response 52=44 51>32
+46r10 Input_Packet 53r63 54r63 55r83 56r59
+47i10 Input_Bytes 53r77 54r50 55r97 56r73 57r20 58r24 20|827r26 829r23 835r29
+. 837r26 838r61
+48r10 Output_Packet 53m16 54r35 20|809r28 811r28 813r28
+49i10 Output_Bytes 54m16 59r21 59r76 20|999r28 1000r28 1045r28 1046r28 1082r22 1083r22
+. 1115r22 1117r22
+50i10 Max_Transmit 56m16 60r21 60r64 20|1116r22 1116r65
+63a10 Bytes 66m16
+64i10 Start_Byte 66r30 67r12
+65m10 Value 66r42
+70a10 Bytes 73m16
+71i10 Start_Byte 73r30 74r12
+72m10 Value 73r42
+77r7 Input_Packet 83r32 84r32 85r33 86r30
+78i7 Input_Bytes 83r45 84r45 85r46 86r43 87r12 87r56 88r42 20|210r86
+79a7 Domainname 83m16
+80e7 Query_Type 84m16
+81e7 Query_Class 85m16
+82i7 End_Byte 86m16 88r21 88r59
+91a7 Bytes 94m16
+92i7 Start_Byte 94r30 95r12
+93r7 A_Record 94r42
+98a7 Bytes 101m16
+99i7 Start_Byte 101r30 102r12
+100r7 AAAA_Record 101r42
+106a10 Bytes 110m16
+107i10 Start_Byte 110r30 112r12 20|79r24
+108r10 NS_Record 110r42
+109i10 Current_Name_Length 110r53 111r12 111r41 112r93 20|79r105
+115a10 Bytes 119m16
+116i10 Start_Byte 119r30 121r12 20|98r24
+117r10 PTR_Record 119r42
+118i10 Current_Name_Length 119r54 120r12 120r41 121r93 20|98r105
+124a10 Bytes 128m16
+125i10 Start_Byte 128r30 130r12 20|120r24
+126r10 MX_Record 128r42
+127i10 Current_Name_Length 128r53 129r12 129r41 130r93 20|120r105
+133a10 Bytes 138m16
+134i10 Start_Byte 138r30 141r12 20|142r21
+135r10 SOA_Record 138r42
+136i10 Nameserver_Name_Length 138r54 139r12 139r44 142r44 20|143r63
+137i10 Mailbox_Name_Length 138r78 140r12 140r41 142r67 20|143r43 153r43
+146r10 Input_Packet 155r50 156r46 157r59 158r53 159r41
+147i10 Input_Bytes 155r64 156r60 157r46 158r40 159r67
+148i10 Query_End_Byte 155r77 156r73 157r73 158r67 159r80
+149i10 Start_Byte 155r38 156r34 157r34 158r28 159r55
+150r10 Output_Packet 155m16
+151i10 Output_Bytes 156m16 161r21 161r68
+152i10 Additional_Count 159m16 160r12 162r13 162r33 162r55 162r75
+153e10 DNSSEC 158m16
+154i10 Max_Transmit 157m16 163r13 163r56
+165U14 Create_Response_A 172>32
+166i10 Start_Byte 173r54 174r46 177r24 20|332r32 335r39
+167a10 Domainname 173r66 174r34 175r37
+168i10 Qname_Location 173r38
+169r10 Output_Packet 173m16
+170i10 Answer_Count 175m16 176r12 179r13 179r29 20|333r24 333r39 334r24
+171i10 Output_Bytes 174m16 178r21 178r76
+181U14 Create_NXDOMAIN_Response 187>32
+182i10 Start_Byte 188r54 189r62 190r20
+183a10 Domainname 188r66 189r34
+184i10 Qname_Location 188r38 189r46
+185r10 Output_Packet 188m16
+186i10 Output_Bytes 189m16 191r21 191r76 20|687r18 688r70
+194U14 Create_Response_AAAA 201>32
+195i10 Start_Byte 202r38 203r46 205r20 20|286r39
+196a10 Domainname 202r66 203r34 204r37
+197i10 Qname_Location 202r50
+198r10 Output_Packet 202m16
+199i10 Answer_Count 204m16 206r12 208r13 208r29 20|284r24 284r39 285r24
+200i10 Output_Bytes 203m16 207r21 207r76
+212i10 Start_Byte 219r36 220r54 221r42 222r20 20|631r37
+213a10 Cnames 218r32 220r66 221r34
+214a10 Domainname 218m16
+215i10 Qname_Location 219m16 220r38
+216r10 Output_Packet 220m16 223r16 225r13 20|630r21
+217i10 Output_Bytes 221m16 224r21 224r76
+228i10 Input_Bytes 232r34 233r28
+229r10 Output_Packet 231m16
+230i10 Output_Bytes 232m16 233r13
+237U14 Create_Response_NS 247>32
+238i10 Start_Byte 248r38 249r46 253r37 254r20 20|389r29
+239a10 Domainname 248r66 249r34 250r56 251r54 252r37 253r74
+240i10 Num_Found 250m16 20|386r69 388r21
+241i10 Qname_Location 248r50
+242a10 Qname_Locations 253m16
+243a10 Replies 251m16
+244r10 Output_Packet 248m16
+245i10 Answer_Count 252m16 255r12 257r12 257r28 20|390r21 390r36 391r21
+246i10 Output_Bytes 249m16 256r21 256r76
+259U14 Create_Response_PTR 266>32
+260i10 Start_Byte 267r38 268r46 270r20 20|451r29
+261a10 Domainname 267r66 268r34 269r37
+262i10 Qname_Location 267r50
+263r10 Output_Packet 267m16
+264i10 Answer_Count 269m16 271r12 273r12 273r28 20|452r21 452r36 453r21
+265i10 Output_Bytes 268m16 272r21 272r76
+275U14 Create_Response_MX 285>32
+276i10 Start_Byte 286r38 287r46 291r37 292r20 20|511r29
+277a10 Domainname 286r66 287r34 288r56 289r54 290r37 291r74
+278i10 Num_Found 288m16 20|508r69 510r21
+279i10 Qname_Location 286r50
+280a10 Qname_Locations 291m16
+281a10 Replies 289m16
+282r10 Output_Packet 286m16
+283i10 Answer_Count 290m16 293r12 295r12 295r28 20|512r21 512r36 513r21
+284i10 Output_Bytes 287m16 294r21 294r76
+297U14 Create_Response_SOA 304>32
+298i10 Start_Byte 305r38 306r46 308r20
+299a10 Domainname 305r66 306r34 307r37
+300i10 Qname_Location 305r50
+301r10 Output_Packet 305m16
+302i10 Answer_Count 307m16 309r12 311r12 311r28
+303i10 Output_Bytes 306m16 310r21 310r76
+314a7 Domainname 318r34 319r40 20|657r53 657r64
+315a7 Trimmed_name 318m16
+316i7 Qname_Location 319r52 320r12
+317i7 New_Qname_Location 319m16
+X 19 protected_spark_io_05.ads
+20K9 Protected_SPARK_IO_05 18|44m19 55m16 40r25 52r22 31w66 20|1207r29
+30n14 In_File 209r29 223r29 236r29
+31n14 Out_File 218r30 229r29 242r29
+32n14 Append_File 219r29 230r29 243r29
+48w19 SPARK_IO_05 104m19 115m19 123m19 178m19 185m19 191m19 205m19 214m19 254m19
+. 262m19 271m19 289m19 299m19 309m19 319m19 338m19 350m19 388m19 401m19 64r21
+. 68r31 76r22 81r31 89r21 94r31 102r25 109r31 114r25 117r31 122r25 125r31
+. 153r18 177r25 184r25 190r25 195r18 198r18 204r25 213r25 222r18 228r18 235r18
+. 241r18 253r25 256r31 261r25 270r25 274r31 288r25 292r31 298r25 308r25 312r31
+. 318r25 337r25 341r31 349r25 387r25 391r31 400r25
+48W19 SPARK_IO_05 21r42
+60U17 Create 64>21
+60H25 File 65m19
+61a10 Name_Of_File 67r31
+62a10 Form_Of_File 66r31
+63e10 Status 66m19
+71U17 Create_Flex 76>22
+71H30 File 77m19
+72i10 Name_Length 79r31
+73a10 Name_Of_File 80r31
+74a10 Form_Of_File 78r31
+75e10 Status 78m19
+84U17 Open 89>21
+84H23 File 90m19
+85e10 Mode_Of_File 92r31
+86a10 Name_Of_File 93r31
+87a10 Form_Of_File 91r31
+88e10 Status 91m19
+96U17 Open_Flex 102=25
+96H28 File 103m19
+97e10 Mode_Of_File 106r31
+98i10 Name_Length 107r31
+99a10 Name_Of_File 108r31
+100a10 Form_Of_File 105r31
+101e10 Status 105m19
+112U17 Close 114=25
+112H24 File 118m19 116r31
+113e10 Status 116m19
+120U17 Delete 122=25
+120H25 File 126m19 124r31
+121e10 Status 124m19
+129H24 File 132m19 133r31
+130e10 Mode_Of_File 134r31
+131e10 Status 133m19
+138V47 Mode 209r15 218r15 219r15 223r15 229r15 230r15 236r15 242r15 243r15
+140H23 File 144r37
+141a10 Name_Of_File 143m19
+142i10 Stop 144m19
+146H23 File 150r41
+147a10 Form_Of_File 149m19
+148i10 Stop 150m19
+152V16 Is_Open 153>18
+175U17 New_Line 177=25
+175H27 File 179r32
+176i10 Spacing 180r32
+182U17 Skip_Line 184=25
+182H28 File 186r31
+183i10 Spacing 187r31
+189U17 New_Page 190=25
+189H27 File 192r32
+194V16 End_Of_Line 195>18
+197V16 End_Of_File 198>18
+202U17 Set_In_File_Col 204=25
+202H34 File 206r31 209r21
+203i10 Posn 207r31
+211U17 Set_Out_File_Col 213=25
+211H35 File 215r32 218r21 219r21
+212i10 Posn 216r32
+221V16 In_File_Col 222>18
+221H29 File 223r21
+227V16 Out_File_Col 228>18
+227H30 File 229r21 230r21
+234V16 In_File_Line 235>18
+234H30 File 236r21
+240V16 Out_File_Line 241>18
+240H31 File 242r21 243r21
+251U17 Get_Char 253=25
+251H27 File 255r31
+252e10 Item 255m19
+259U17 Put_Char 261=25
+259H27 File 263r32
+260e10 Item 264r32
+267U17 Get_Char_Immediate 270=25
+267H37 File 273r31
+268e10 Item 272m19
+269e10 Status 273m19
+285U17 Get_String 288=25
+285H29 File 291r31
+286a10 Item 290m19
+287i10 Stop 291m19
+295U17 Put_String 298=25
+295H29 File 300r32
+296a10 Item 301r32
+297i10 Stop 302r32
+305U17 Get_Line 308=25
+305H27 File 311r31
+306a10 Item 310m19
+307i10 Stop 311m19
+315U17 Put_Line 318=25
+315H27 File 320r32
+316a10 Item 321r32
+317i10 Stop 322r32
+333U17 Get_Integer 337=25
+333H30 File 340r31
+334i10 Item 339m19
+335i10 Width 342r31
+336e10 Read 340m19
+345U17 Put_Integer 349=25
+345H30 File 352r32
+346i10 Item 353r32
+347i10 Width 354r32
+348i10 Base 351r32
+357a38 Source 362r29
+358i10 Item 361m19
+359i10 Start_Pos 363r29
+360i10 Stop 362m19
+366a36 Dest 370m19
+367i10 Item 372r29
+368i10 Start_Pos 373r29
+369i10 Base 371r29
+383U17 Get_Float 387=25
+383H28 File 390r31
+384f10 Item 389m19
+385i10 Width 392r31
+386e10 Read 390m19
+395U17 Put_Float 400=25
+395H28 File 404r32
+396f10 Item 406r32
+397i10 Fore 405r32
+398i10 Aft 402r32
+399i10 Exp 403r32
+409a40 Source 414r29
+410f10 Item 413m19
+411i10 Start_Pos 415r29
+412i10 Stop 414m19
+418a38 Dest 423m19
+419f10 Item 426r29
+420i10 Start_Pos 427r29
+421i10 Aft 424r29
+422i10 Exp 425r29
+431w4 SPARK_IO_PO 21o28 18|44m41 55m38 40r47 52r44 20|1207r51
+X 20 process_dns_request.adb
+70i10 ANCOUNT 811r49
+70e10 AA 813r49
+70e10 QR 809r49
+78H14 i 80r17 80r58
+97H14 i 99r17 99r58
+119H14 i 121r17 121r58
+133i7 Current_Byte 152r21 152r41
+141H11 i 144r14 144r55
+151H11 i 154r14 154r55
+198i7 Byte 210r14 210r69
+199i7 I 209r21 209r57
+201V16 Type_To_Natural 224r31
+202V16 to_type 227r34
+203V16 class_to_natural 236r31
+204V16 To_Class 239r34
+252r7 Header 809r42 811r42 813r42
+256r7 Rest 1170r45 1206r64 1207r78
+269i7 Current_Byte 286r24 288r32
+271i7 NumFound 283r72 289r24
+272i7 Response_Counter 283r27 283r52 287r60
+316i7 Current_Byte 335r24 337r32
+318i7 NumFound 331r72 338r24
+319i7 Response_Counter 331r27 331r52 336r60
+368i7 Response_Counter 386r24 386r49
+369i7 Current_Byte 392r29 394r21
+370i7 Current_Name_Length 387r21 387r49 393r21
+429i7 Num_Found 448r69 450r21
+430i7 Response_Counter 448r24 448r49
+431i7 Current_Byte 454r29 456r21
+432i7 Current_Name_Length 449r21 449r49 455r21
+490i7 Response_Counter 508r24 508r49
+491i7 Current_Byte 514r29 516r21
+492i7 Current_Name_Length 509r21 509r49 515r21
+599i7 Current_Byte 631r21 632r29
+600i7 Name_Length 629r24
+601i7 I 628r21 629r21
+646i7 Zone_Length 656r26 657r17
+655H14 I 656r24 656r76
+669i7 Answer_Count 686r21
+670i7 Amount_Trimmed 686r40 686r62
+673i7 Current_Qname_Location 688r18
+789i7 Start_Byte 838r18 838r78
+794i7 NumFound 893r22 911r22 990r50 998r20 998r38 1036r50 1044r20 1044r38 1081r14
+. 1081r32 1114r14 1114r32
+795i7 Counter 990r24 990r41 1036r24 1036r41
+796i7 Qname_Location 828r15 828r38 836r18 836r41 995r20 995r43 1039r20 1039r43 1079r14
+. 1079r37 1112r14 1112r37
+797a7 Qname_Locations 892r22 910r22 994r24 994r52 1038r24 1038r52
+799a7 NS_Replies 909r22
+800a7 MX_Replies 891r22
+801i7 Answer_Count 991r20 991r41 1040r20 1040r41 1078r14 1078r35 1111r14 1111r35
+802i7 Additional_Count 992r20 996r20 1041r20 1042r20 1080r14 1113r14
+993i29 Z 994r40 994r68
+1037i29 Z 1038r40 1038r68
+1149r7 Output_Packet 1170r31 1206r50 1207r64
+1151i7 Max_Transmit 1171r31 1208r28

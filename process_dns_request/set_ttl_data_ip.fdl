@@ -1,0 +1,65 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+               {procedure Process_Dns_Request.Set_TTL_Data_IP}
+
+
+title procedure set_ttl_data_ip;
+
+  function round__(real) : integer;
+  type dns_types__packet_bytes_range = integer;
+  type dns_types__byte = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type dns_types__bytes_array_type = array [integer] of integer;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__a_record_type__arecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        ipv4 : integer
+     end;
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const dns_types__byte__base__first : integer = pending; 
+  const dns_types__byte__base__last : integer = pending; 
+  const dns_types__packet_bytes_range__base__first : integer = pending; 
+  const dns_types__packet_bytes_range__base__last : integer = pending; 
+  const rr_type__a_record_type__arecordtype__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const dns_types__byte__first : integer = pending; 
+  const dns_types__byte__last : integer = pending; 
+  const dns_types__byte__modulus : integer = pending; 
+  const dns_types__byte__size : integer = pending; 
+  const dns_types__packet_bytes_range__first : integer = pending; 
+  const dns_types__packet_bytes_range__last : integer = pending; 
+  const dns_types__packet_bytes_range__size : integer = pending; 
+  var bytes : dns_types__bytes_array_type;
+  var start_byte : integer;
+  var a_record : rr_type__a_record_type__arecordtype;
+  var bytes__2 : dns_types__bytes_array_type;
+  var bytes__1 : dns_types__bytes_array_type;
+
+end;

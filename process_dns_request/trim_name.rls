@@ -1,0 +1,56 @@
+           /*********************************************************/
+                           /*Proof Rule Declarations*/
+                             /*Examiner GPL Edition*/
+
+           /*********************************************************/
+
+
+                  /*procedure Process_Dns_Request.Trim_Name*/
+
+
+rule_family trim_name_rules:
+     X      requires [X:any] &
+     X <= Y requires [X:ire, Y:ire] &
+     X >= Y requires [X:ire, Y:ire].
+
+trim_name_rules(1): system__min_int may_be_replaced_by -9223372036854775808.
+trim_name_rules(2): system__max_int may_be_replaced_by 9223372036854775807.
+trim_name_rules(3): integer__size >= 0 may_be_deduced.
+trim_name_rules(4): integer__first may_be_replaced_by -2147483648.
+trim_name_rules(5): integer__last may_be_replaced_by 2147483647.
+trim_name_rules(6): integer__base__first may_be_replaced_by -2147483648.
+trim_name_rules(7): integer__base__last may_be_replaced_by 2147483647.
+trim_name_rules(8): character__size >= 0 may_be_deduced.
+trim_name_rules(9): character__first may_be_replaced_by 0.
+trim_name_rules(10): character__last may_be_replaced_by 255.
+trim_name_rules(11): character__base__first may_be_replaced_by 0.
+trim_name_rules(12): character__base__last may_be_replaced_by 255.
+trim_name_rules(13): natural__size >= 0 may_be_deduced.
+trim_name_rules(14): natural__first may_be_replaced_by 0.
+trim_name_rules(15): natural__last may_be_replaced_by 2147483647.
+trim_name_rules(16): natural__base__first may_be_replaced_by -2147483648.
+trim_name_rules(17): natural__base__last may_be_replaced_by 2147483647.
+trim_name_rules(18): positive__size >= 0 may_be_deduced.
+trim_name_rules(19): positive__first may_be_replaced_by 1.
+trim_name_rules(20): positive__last may_be_replaced_by 2147483647.
+trim_name_rules(21): positive__base__first may_be_replaced_by -2147483648.
+trim_name_rules(22): positive__base__last may_be_replaced_by 2147483647.
+trim_name_rules(23): dns_types__qname_ptr_range__size >= 0 may_be_deduced.
+trim_name_rules(24): dns_types__qname_ptr_range__first may_be_replaced_by 0.
+trim_name_rules(25): dns_types__qname_ptr_range__last may_be_replaced_by 16383.
+trim_name_rules(26): dns_types__qname_ptr_range__base__first <= 
+     dns_types__qname_ptr_range__base__last may_be_deduced.
+trim_name_rules(27): dns_types__qname_ptr_range__base__first <= 
+     dns_types__qname_ptr_range__first may_be_deduced.
+trim_name_rules(28): dns_types__qname_ptr_range__base__last >= 
+     dns_types__qname_ptr_range__last may_be_deduced.
+trim_name_rules(29): dns_types__packet_length_range__size >= 0 may_be_deduced.
+trim_name_rules(30): dns_types__packet_length_range__first may_be_replaced_by 0.
+trim_name_rules(31): dns_types__packet_length_range__last may_be_replaced_by 8192.
+trim_name_rules(32): dns_types__packet_length_range__base__first may_be_replaced_by -2147483648.
+trim_name_rules(33): dns_types__packet_length_range__base__last may_be_replaced_by 2147483647.
+trim_name_rules(34): rr_type__wirestringtypeindex__size >= 0 may_be_deduced.
+trim_name_rules(35): rr_type__wirestringtypeindex__first may_be_replaced_by 1.
+trim_name_rules(36): rr_type__wirestringtypeindex__last may_be_replaced_by 129.
+trim_name_rules(37): rr_type__wirestringtypeindex__base__first may_be_replaced_by -2147483648.
+trim_name_rules(38): rr_type__wirestringtypeindex__base__last may_be_replaced_by 2147483647.

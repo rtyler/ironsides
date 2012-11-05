@@ -1,0 +1,135 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseIpv4
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 685:
+
+procedure_parseipv4_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to precondition check associated with statement of line 
+          686:
+
+procedure_parseipv4_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 686:
+
+procedure_parseipv4_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to assertion of line 689:
+
+procedure_parseipv4_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to assertion of line 689:
+
+procedure_parseipv4_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to run-time check associated with 
+          statement of line 690:
+
+procedure_parseipv4_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to precondition check associated with 
+          statement of line 691:
+
+procedure_parseipv4_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to run-time check associated with 
+          statement of line 691:
+
+procedure_parseipv4_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 697:
+
+procedure_parseipv4_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to run-time check associated with 
+          statement of line 697:
+
+procedure_parseipv4_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 697:
+
+procedure_parseipv4_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to run-time check associated with 
+          statement of line 697:
+
+procedure_parseipv4_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 701:
+
+procedure_parseipv4_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to run-time check associated with 
+          statement of line 701:
+
+procedure_parseipv4_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_parseipv4_15.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv4_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv4_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 689 to finish:
+
+procedure_parseipv4_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv4_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_parseipv4_20.
+*** true .          /* all conclusions proved */
+
+

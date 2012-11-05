@@ -1,0 +1,104 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnvnnnnnnnnnnnnnn
+
+U socket_timeout%b	socket_timeout.adb	cc53751d NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_conversion%s
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
+W gnat.sockets.constants%s  g-soccon.ads	g-soccon.ali
+W gnat.sockets.thin%s	g-socthi.adb		g-socthi.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W system%s		system.ads		system.ali
+
+U socket_timeout%s	socket_timeout.ads	de1fa69d EE NE OO PK
+W gnat%s		gnat.ads		gnat.ali
+W gnat.sockets%s	g-socket.adb		g-socket.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-finali.ads		20110428140900 b333d305
+D a-fihema.ads		20110428140900 1940728a
+D a-ioexce.ads		20110428140900 8b9de6cd
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-textio.ads		20110428140902 386df5d4
+D a-unccon.ads		20110428140902 f9eb8f06
+D a-uncdea.ads		20110428140902 f15a5ed1
+D gnat.ads		20110428140904 fd2ad2f1
+D g-socket.ads		20110428140904 c20e5040
+D g-soccon.ads		20110428140904 09f768a0
+D g-socthi.ads		20110428140904 6b58d1c6
+D g-sothco.ads		20110428140904 57efe4f1
+D interfac.ads		20110428140906 f77d8799
+D i-c.ads		20110428140906 5421119b
+D i-cpoint.ads		20110428140906 ee8a93ec
+D i-cstrin.ads		20110428140906 341d0ddf
+D i-cstrea.ads		20110428140906 1bd72c32
+D socket_timeout.ads	20120707130422 1c11f6dd
+D socket_timeout.adb	20120707130422 d037d676
+D system.ads		20110428140910 bc164b96
+D s-crtl.ads		20110428140906 ac77b159
+D s-exctab.ads		20110428140906 66e51330
+D s-ficobl.ads		20110428140906 443b9d66
+D s-finroo.ads		20110428140906 2dd85ce2
+D s-oscons.ads		20110428170002 cdbaafae
+D s-parame.ads		20110428140908 03aa3b01
+D s-pooglo.ads		20110428140908 542f33d0
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stopoo.ads		20110428140908 5c51faf9
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D s-wchcon.ads		20110428140910 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 22|21r6 23r6 44r31
+X 8 a-textio.ads
+49K13*Text_IO 471e16 22|23w10
+X 9 a-unccon.ads
+20v14*Unchecked_Conversion 22|21w10 44r35
+X 11 gnat.ads
+34K9*GNAT 37e9 21|18r6 28r28 22|18r6 22r6 50r14 52r10 53r10 56r14 58r10 59r10
+X 12 g-socket.ads
+58K14*Sockets 1250e17 21|18w11 28r33 22|18r11 22r11 50r19 52r15 53r15 56r19
+. 58r15 59r15
+412I9*Socket_Type 21|28r41
+X 13 g-soccon.ads
+40K22*Constants=40:47 22|22w19 52r23 53r23 58r23 59r23
+X 14 g-socthi.ads
+45K22*Thin 243e22 22|18w19 50r27 56r27
+167V13*C_Setsockopt{17|35I9} 22|50s32 56s32
+X 16 interfac.ads
+36K9*Interfaces 171e15 22|19w6 20r6 30r29 43r13 45r23 47r16
+X 17 i-c.ads
+18K20*C 230e17 22|20w17 30r40 43r24 45r34 47r27
+35I9*int<integer> 22|30r42 43r26 45r36 47r29
+X 21 socket_timeout.ads
+20K9*Socket_Timeout 29l5 29e19 22|24b14 64l5 64t19
+21I9*Socket_Type 23r42 28c9 22|40r16 45r10
+23U14*Set_Socket_Timeout 23>33 24>7 22|39b14 62l8 62t26
+23i33 Socket{21I9} 22|40b7 51r19 57r19
+24i7 Milliseconds{natural} 22|41b7 49r15
+X 22 socket_timeout.adb
+30I9 Timeval_Unit<17|35I9> 31r26 34r17 35r17
+33R9 Timeval 36e14 37r26
+34i7*Tv_Sec{30I9}
+35i7*Tv_Usec{30I9}
+43i7 Res{17|35I9} 50m7 56m7
+44V16 Convert[9|20]{17|35I9} 51s10 57s10
+46i7 Time{integer} 49m7 54m10 54r10 60m10 60r10
+X 28 s-oscons.ads
+178N4*SOL_SOCKET 22|52r33 58r33
+207N4*SO_SNDTIMEO 22|59r33
+208N4*SO_RCVTIMEO 22|53r33
+

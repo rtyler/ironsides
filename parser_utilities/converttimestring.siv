@@ -1,0 +1,392 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Parser_Utilities.ConvertTimeString
+
+
+
+
+For path(s) from start to assertion of line 693:
+
+procedure_converttimestring_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to assertion of line 693:
+
+procedure_converttimestring_2.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_3.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_4.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_5.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_6.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_7.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 695:
+
+procedure_converttimestring_9.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 697:
+
+procedure_converttimestring_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 699:
+
+procedure_converttimestring_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 701:
+
+procedure_converttimestring_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 703:
+
+procedure_converttimestring_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 705:
+
+procedure_converttimestring_14.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 707:
+
+procedure_converttimestring_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 717:
+
+procedure_converttimestring_16.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_17.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_19.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_20.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_21.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_23.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_24.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_25.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_26.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_28.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 719:
+
+procedure_converttimestring_30.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_31.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_32.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_34.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_35.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_36.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_37.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_43.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to run-time check associated with 
+          statement of line 719:
+
+procedure_converttimestring_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_45.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_57.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from assertion of line 693 to finish:
+
+procedure_converttimestring_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_65.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_66.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_68.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_69.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_70.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_71.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_72.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_73.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_74.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_75.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_76.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_77.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_78.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_79.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_80.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_81.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_82.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_83.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_84.
+*** true .          /* all conclusions proved */
+
+
+procedure_converttimestring_85.
+*** true .          /* all conclusions proved */
+
+

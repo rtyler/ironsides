@@ -1,0 +1,139 @@
+           {*******************************************************}
+                               {FDL Declarations}
+                             {Examiner GPL Edition}
+
+           {*******************************************************}
+
+
+       {procedure Zone_File_Parser.ParseTypeCoveredAlgorithmNumLabels}
+
+
+title procedure parsetypecoveredalgorithmnumlabels;
+
+  function round__(real) : integer;
+  type character = integer;
+  type dns_types__query_type = (dns_types__a, dns_types__ns, 
+     dns_types__cname, dns_types__soa, dns_types__wks, 
+     dns_types__ptr, dns_types__mx, dns_types__aaaa, 
+     dns_types__srv, dns_types__a6, dns_types__opt, dns_types__ds, 
+     dns_types__rrsig, dns_types__nsec, dns_types__dnskey, 
+     dns_types__any, dns_types__caa, dns_types__error, 
+     dns_types__unimplemented);
+  type unsigned_types__unsigned8 = integer;
+  type unsigned_types__unsigned16 = integer;
+  type unsigned_types__unsigned32 = integer;
+  type rr_type__classtype = (rr_type__internet, rr_type__cs, 
+     rr_type__ch, rr_type__hs);
+  type rr_type__rritemtype = (rr_type__domainnameortimespec, 
+     rr_type__number, rr_type__class, rr_type__recordindicator, 
+     rr_type__ipv4, rr_type__ipv6, rr_type__lparen, 
+     rr_type__rparen, rr_type__control, rr_type__comment, 
+     rr_type__other);
+  type string = array [integer] of character;
+  const null__string : string = pending;
+  type rr_type__resourcerecordtype = record
+        ttlinseconds : integer;
+        class : rr_type__classtype
+     end;
+  type rr_type__rrsig_record_type__rrsigrecordtype = record
+        inherit : rr_type__resourcerecordtype;
+        typecovered : dns_types__query_type;
+        algorithm : integer;
+        numlabels : integer;
+        origttl : integer;
+        sigexpiration : integer;
+        siginception : integer;
+        keytag : integer;
+        signername : string;
+        signature : string;
+        signaturelength : integer
+     end;
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__base__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__base__last : integer = pending; 
+  const rr_type__linelengthindex__base__first : integer = pending; 
+  const rr_type__linelengthindex__base__last : integer = pending; 
+  const rr_type__rritemtype__base__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__base__last : rr_type__rritemtype = pending; 
+  const rr_type__classtype__base__first : rr_type__classtype = pending; 
+  const rr_type__classtype__base__last : rr_type__classtype = pending; 
+  const unsigned_types__unsigned32__base__first : integer = pending; 
+  const unsigned_types__unsigned32__base__last : integer = pending; 
+  const unsigned_types__unsigned16__base__first : integer = pending; 
+  const unsigned_types__unsigned16__base__last : integer = pending; 
+  const unsigned_types__unsigned8__base__first : integer = pending; 
+  const unsigned_types__unsigned8__base__last : integer = pending; 
+  const dns_types__query_type__base__first : 
+     dns_types__query_type = pending; 
+  const dns_types__query_type__base__last : dns_types__query_type = pending; 
+  const positive__base__first : integer = pending; 
+  const positive__base__last : integer = pending; 
+  const character__base__first : character = pending; 
+  const character__base__last : character = pending; 
+  const integer__base__first : integer = pending; 
+  const integer__base__last : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigrecordtype__size : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__first : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__last : integer = pending; 
+  const rr_type__rrsig_record_type__rrsigstringtypeindex__size : integer = pending; 
+  const rr_type__resourcerecordtype__size : integer = pending; 
+  const rr_type__domainnamestringtypeindex__first : integer = pending; 
+  const rr_type__domainnamestringtypeindex__last : integer = pending; 
+  const rr_type__domainnamestringtypeindex__size : integer = pending; 
+  const rr_type__linelengthindex__first : integer = pending; 
+  const rr_type__linelengthindex__last : integer = pending; 
+  const rr_type__linelengthindex__size : integer = pending; 
+  const rr_type__rritemtype__first : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__last : rr_type__rritemtype = pending; 
+  const rr_type__rritemtype__size : integer = pending; 
+  const rr_type__classtype__first : rr_type__classtype = pending; 
+  const rr_type__classtype__last : rr_type__classtype = pending; 
+  const rr_type__classtype__size : integer = pending; 
+  const unsigned_types__unsigned32__first : integer = pending; 
+  const unsigned_types__unsigned32__last : integer = pending; 
+  const unsigned_types__unsigned32__modulus : integer = pending; 
+  const unsigned_types__unsigned32__size : integer = pending; 
+  const unsigned_types__unsigned16__first : integer = pending; 
+  const unsigned_types__unsigned16__last : integer = pending; 
+  const unsigned_types__unsigned16__modulus : integer = pending; 
+  const unsigned_types__unsigned16__size : integer = pending; 
+  const unsigned_types__unsigned8__first : integer = pending; 
+  const unsigned_types__unsigned8__last : integer = pending; 
+  const unsigned_types__unsigned8__modulus : integer = pending; 
+  const unsigned_types__unsigned8__size : integer = pending; 
+  const dns_types__query_type__first : dns_types__query_type = pending; 
+  const dns_types__query_type__last : dns_types__query_type = pending; 
+  const dns_types__query_type__size : integer = pending; 
+  const positive__first : integer = pending; 
+  const positive__last : integer = pending; 
+  const positive__size : integer = pending; 
+  const character__first : character = pending; 
+  const character__last : character = pending; 
+  const character__size : integer = pending; 
+  const integer__first : integer = pending; 
+  const integer__last : integer = pending; 
+  const integer__size : integer = pending; 
+  var rrsig_rec : rr_type__rrsig_record_type__rrsigrecordtype;
+  var zonefileline : string;
+  var zlength : integer;
+  var endidx : integer;
+  var success : boolean;
+  var begidx : integer;
+  var foundtype : rr_type__rritemtype;
+  function parser_utilities__getrecordtype(string, integer, integer) : 
+     dns_types__query_type;
+  var rrsig_rec__5 : rr_type__rrsig_record_type__rrsigrecordtype;
+  var foundtype__4 : rr_type__rritemtype;
+  var endidx__4 : integer;
+  var begidx__4 : integer;
+  var success__3 : boolean;
+  var rrsig_rec__3 : rr_type__rrsig_record_type__rrsigrecordtype;
+  var foundtype__2 : rr_type__rritemtype;
+  var endidx__2 : integer;
+  var begidx__2 : integer;
+  var foundtype__1 : rr_type__rritemtype;
+  var endidx__1 : integer;
+  var begidx__1 : integer;
+
+end;

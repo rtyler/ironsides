@@ -1,0 +1,59 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnat05
+A -gnatp
+P SS ZX
+R nnnnnnnnnnnnvnnnnnvnnvnnnnvnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnn
+
+U rr_type.a_record_type%s  rr_type-a_record_type.ads  d03c8901 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.ads		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W rr_type%s		rr_type.adb		rr_type.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W unsigned_types%s	unsigned_types.ads	unsigned_types.ali
+
+D ada.ads		20110428140902 3ffc8e18
+D a-except.ads		20110428140900 4759ecee
+D a-stream.ads		20110428140902 2ca4ee37
+D a-tags.ads		20110428140902 7b33f560
+D a-unccon.ads		20110428140902 f9eb8f06
+D rr_type.ads		20120707130422 2b44fbc4
+D rr_type-a_record_type.ads  20120707130420 0d6b36f2
+D system.ads		20110428140910 bc164b96
+D s-exctab.ads		20110428140906 66e51330
+D s-parame.ads		20110428140908 03aa3b01
+D s-secsta.ads		20110428140908 eea35a36
+D s-soflin.ads		20110428140908 607487c5
+D s-stache.ads		20110428140908 596fc1b4
+D s-stalib.ads		20110428140908 f78bcf95
+D s-stoele.ads		20110428140908 facd7d98
+D s-stoele.adb		20110428140908 afc5dc80
+D s-stratt.ads		20110428140908 aedef97e
+D s-traent.ads		20110428140908 5221ee41
+D s-unstyp.ads		20110428140908 6ae15c76
+D unsigned_types.ads	20120707130426 dd57bff3
+X 6 rr_type.ads
+20K9*Rr_Type 98e12 7|18w22 20r9 21r28 31r16 34r37 35r40 37r5
+22n23*INTERNET{22E9} 7|31r24
+77R9*ResourceRecordType 81e17 7|21r36
+79m10*ttlInSeconds{20|21M9} 7|30m7
+80e10*class{22E9} 7|31m7
+88I12*ReturnedRecordsIndexType{integer} 7|34r45
+93I12*NumBucketsIndexType{integer} 7|35r48
+X 7 rr_type-a_record_type.ads
+20K17*A_Record_Type 6|20k9 7|37l13 37e26
+21R9*ARecordType<6|77R9> 24e17 29r28 29r43 34r74
+23m10*Ipv4{20|21M9} 31m34
+26m4*INVALID_IPV4_ADDR{20|21M9} 31r42
+29r4*BlankARecord{21R9}
+34A9*ARecordBucketType(21R9)<integer> 35r72
+35A9*ARecordHashTableType(34A9)<integer>
+X 20 unsigned_types.ads
+18K9*Unsigned_Types 7|18w6 23r17 26r33 20|25e19
+21M9*Unsigned32 7|23r32 26r48
+

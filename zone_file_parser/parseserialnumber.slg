@@ -1,0 +1,1376 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure Zone_File_Parser.parseSerialNumber
+
+
+
+
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_1.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New C1:  true
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_2.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  1 >= rr_type__linelengthindex__first
+     using hypothesis H8.
+***  Proved C2:  1 <= rr_type__linelengthindex__last
+     using hypothesis H9.
+***  Proved C3:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C4:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  true
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H7:  true
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H8:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H9:  true
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C5:  1 <= zlength
+     using hypothesis H3.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_3.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+%%%  Simplified C1 on reading formula in, to give:
+     %%%  C1:  rr_type__rritemtype__first <= foundtype__1
+***  Proved C1:  rr_type__rritemtype__first <= foundtype__1
+     using hypothesis H23.
+***  Proved C2:  foundtype__1 <= rr_type__rritemtype__last
+     using hypothesis H24.
+***  Proved C3:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H21.
+***  Proved C4:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H22.
+***  Proved C5:  begidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H19.
+***  Proved C6:  begidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_4.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New C1:  true
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New C2:  true
+***  Proved C1:  true
+***  Proved C2:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_5.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New C1:  endidx__1 >= - 2147483648
+<S>  New C3:  begidx__1 >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New C2:  endidx__1 <= 2147483647
+<S>  New C4:  begidx__1 <= 2147483647
+>>>  Restructured hypothesis H33 into:
+     >>>  H33:  foundtype__1 = rr_type__number
++++  Using "A->B, A |- B" on hypotheses H18 & H33 yields a new hypothesis:
+     +++  H40:  for_all(i_ : integer, begidx__1 <= i_ and i_ <= endidx__1 -> 48 
+          <= element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H34:  true
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H35:  true
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  true
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H7:  true
+-S-  Applied substitution rule parseserialn_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__rritemtype__first by:
+          rr_type__domainnameortimespec.
+<S>  New H23:  rr_type__domainnameortimespec <= foundtype__1
+-S-  Applied substitution rule parseserialn_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__rritemtype__last by:
+          rr_type__other.
+<S>  New H24:  foundtype__1 <= rr_type__other
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H8:  true
+<S>  New H19:  begidx__1 >= 1
+<S>  New H21:  endidx__1 >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H9:  true
+<S>  New H20:  begidx__1 <= 256
+<S>  New H22:  endidx__1 <= 256
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  endidx__1 >= - 2147483648
+     using hypothesis H21.
+***  Proved C3:  begidx__1 >= - 2147483648
+     using hypothesis H19.
+***  Proved C2:  endidx__1 <= 2147483647
+     using hypothesis H22.
+***  Proved C4:  begidx__1 <= 2147483647
+     using hypothesis H20.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_6.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+***  Proved C1:  begidx__1 <= endidx__1 -> endidx__1 >= integer__first and 
+          endidx__1 <= integer__last
+     using hypotheses H40 & H41.
+***  Proved C2:  begidx__1 <= endidx__1 -> begidx__1 >= integer__first and 
+          begidx__1 <= integer__last
+     using hypotheses H42 & H43.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_7.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H50 has been replaced by "true".  (It is already present, as 
+          H15).
+%%%  Simplified C2 on reading formula in, to give:
+     %%%  C2:  true
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+%%%  Simplified C10 on reading formula in, to give:
+     %%%  C10:  true
+***  Proved C2:  true
+***  Proved C4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H2.
+***  Proved C5:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H3.
+***  Proved C6:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H4.
+***  Proved C7:  true
+***  Proved C8:  begidx__1 >= integer__first
+     using hypothesis H42.
+***  Proved C9:  begidx__1 <= integer__last
+     using hypothesis H43.
+***  Proved C10:  true
+***  Proved C11:  begidx__1 <= endidx__1
+     using hypothesis H15.
+***  Proved C12:  endidx__1 >= rr_type__linelengthindex__first
+     using hypothesis H21.
+***  Proved C13:  endidx__1 <= rr_type__linelengthindex__last
+     using hypothesis H22.
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New C3:  true
+***  Proved C3:  true
+>>>  Restructured hypothesis H33 into:
+     >>>  H33:  foundtype__1 = rr_type__number
++++  Using "A->B, A |- B" on hypotheses H18 & H33 yields a new hypothesis:
+     +++  H51:  for_all(i_ : integer, begidx__1 <= i_ and i_ <= endidx__1 -> 48 
+          <= element(zonefileline, [i_]) and element(zonefileline, [i_]) <= 57)
++++  Using "A->B, A |- B" on hypotheses H44 & H15 yields a new hypothesis:
+     +++  H52:  endidx__1 >= integer__first and endidx__1 <= integer__last
++++  Using "A->B, A |- B" on hypotheses H45 & H15 yields a new hypothesis:
+     +++  H53:  begidx__1 >= integer__first and begidx__1 <= integer__last
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H40:  endidx__1 >= - 2147483648
+<S>  New H42:  begidx__1 >= - 2147483648
+<S>  New H44:  begidx__1 <= endidx__1 -> endidx__1 >= - 2147483648 and 
+          endidx__1 <= integer__last
+<S>  New H45:  begidx__1 <= endidx__1 -> begidx__1 >= - 2147483648 and 
+          begidx__1 <= integer__last
+<S>  New H52:  endidx__1 >= - 2147483648 and endidx__1 <= integer__last
+<S>  New H53:  begidx__1 >= - 2147483648 and begidx__1 <= integer__last
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H41:  endidx__1 <= 2147483647
+<S>  New H43:  begidx__1 <= 2147483647
+<S>  New H44:  begidx__1 <= endidx__1 -> endidx__1 >= - 2147483648 and 
+          endidx__1 <= 2147483647
+<S>  New H45:  begidx__1 <= endidx__1 -> begidx__1 >= - 2147483648 and 
+          begidx__1 <= 2147483647
+<S>  New H52:  endidx__1 >= - 2147483648 and endidx__1 <= 2147483647
+<S>  New H53:  begidx__1 >= - 2147483648 and begidx__1 <= 2147483647
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H34:  true
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H35:  true
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H6:  true
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H7:  true
+-S-  Applied substitution rule parseserialn_rules(29).
+     This was achieved by replacing all occurrences of 
+          rr_type__rritemtype__first by:
+          rr_type__domainnameortimespec.
+<S>  New H23:  rr_type__domainnameortimespec <= foundtype__1
+-S-  Applied substitution rule parseserialn_rules(30).
+     This was achieved by replacing all occurrences of 
+          rr_type__rritemtype__last by:
+          rr_type__other.
+<S>  New H24:  foundtype__1 <= rr_type__other
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H3:  zlength >= 1
+<S>  New H8:  true
+<S>  New H19:  begidx__1 >= 1
+<S>  New H21:  endidx__1 >= 1
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H4:  zlength <= 256
+<S>  New H9:  true
+<S>  New H20:  begidx__1 <= 256
+<S>  New H22:  endidx__1 <= 256
+<S>  New H2:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  begidx__1 >= 1
+     using hypothesis H19.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_8.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H23).
+%%%  Simplified C4 on reading formula in, to give:
+     %%%  C4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C1:  begidx >= 1
+     using hypothesis H1.
+***  Proved C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 
+          rr_type__soa_record_type__max_serial_val
+     using hypothesis H30.
+***  Proved C4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+     using hypothesis H4.
+***  Proved C5:  zlength >= rr_type__linelengthindex__first
+     using hypothesis H5.
+***  Proved C6:  zlength <= rr_type__linelengthindex__last
+     using hypothesis H6.
+***  Proved C7:  true
+***  Proved C8:  loop__1__i + 1 >= integer__first
+     using hypothesis H8.
+***  Proved C10:  loop__1__i + 1 >= begidx
+     using hypothesis H10.
+***  Proved C12:  endidx__entry__loop__1 >= rr_type__linelengthindex__first
+     using hypothesis H12.
+***  Proved C13:  endidx__entry__loop__1 <= rr_type__linelengthindex__last
+     using hypothesis H13.
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+<S>  New C9:  loop__1__i <= 2147483646
+>>>  Restructured hypothesis H30 into:
+     >>>  H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 
+          rr_type__soa_record_type__max_serial_val
+>>>  Restructured hypothesis H31 into:
+     >>>  H31:  loop__1__i <> endidx__entry__loop__1
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New H3:  tmpval <= 4294967295
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H20:  tmpval >= - 9223372036854775808
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H21:  tmpval <= 9223372036854775807
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(20).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__first by:
+          - 9223372036854775808.
+<S>  New H26:  10 * tmpval >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(21).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__last by:
+          9223372036854775807.
+<S>  New H27:  10 * tmpval <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(27).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= - 
+          9223372036854775808
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          9223372036854775807
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= 0
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  zlength >= 1
+<S>  New H12:  endidx__entry__loop__1 >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  zlength <= 256
+<S>  New H13:  endidx__entry__loop__1 <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+%%%  Hypotheses H11 & H31 together imply that
+          loop__1__i < endidx__entry__loop__1.
+     H11 & H31 have therefore been deleted and a new H32 added to this effect.
+***  Proved C11:  loop__1__i + 1 <= endidx__entry__loop__1
+     via its standard form, which is:
+     Std.Fm C11:  endidx__entry__loop__1 - loop__1__i > 0
+     using hypothesis H32.
+***  Proved C9:  loop__1__i <= 2147483646
+     using hypothesis H17.
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= 0
+     using hypotheses H2 & H14.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_9.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+***  Proved C4:  loop__1__i <= rr_type__linelengthindex__last
+     using hypotheses H11 & H13.
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New C1:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New C2:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> character__first <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+<S>  New H5:  zlength >= 1
+<S>  New H12:  endidx__entry__loop__1 >= 1
+<S>  New C3:  loop__1__i >= 1
+***  Proved C3:  loop__1__i >= 1
+     using hypotheses H1 & H10.
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New H3:  tmpval <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(27).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New C1:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+<S>  New C2:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  zlength <= 256
+<S>  New H13:  endidx__entry__loop__1 <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C1:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+***  Proved C2:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_10.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H20:  tmpval >= - 9223372036854775808
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+<S>  New C3:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H21:  tmpval <= 9223372036854775807
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+<S>  New C4:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(20).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__first by:
+          - 9223372036854775808.
+<S>  New C5:  10 * tmpval >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(21).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__last by:
+          9223372036854775807.
+<S>  New C6:  10 * tmpval <= 9223372036854775807
+***  Proved C5:  10 * tmpval >= - 9223372036854775808
+     using hypothesis H2.
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New H3:  tmpval <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(27).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= - 9223372036854775808
+<S>  New C3:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= - 
+          9223372036854775808
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 9223372036854775807
+<S>  New C4:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  zlength >= 1
+<S>  New H12:  endidx__entry__loop__1 >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  zlength <= 256
+<S>  New H13:  endidx__entry__loop__1 <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C6:  10 * tmpval <= 9223372036854775807
+     using hypothesis H3.
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= - 9223372036854775808
+     using hypotheses H2 & H14.
+***  Proved C3:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= - 
+          9223372036854775808
+     using hypothesis H14.
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 9223372036854775807
+     using hypotheses H3 & H15.
+***  Proved C4:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          9223372036854775807
+     using hypothesis H15.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_11.  @@@@@@@@@@
+%%%  Simplified H2 on reading formula in, to give:
+     %%%  H2:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H10 has been replaced by "true".  (It is already present, as H8)
+          .
+---  Hypothesis H11 has been replaced by "true".  (It is already present, as H9)
+          .
+---  Hypothesis H12 has been replaced by "true".  (It is already present, as H3)
+          .
+---  Hypothesis H13 has been replaced by "true".  (It is already present, as H4)
+          .
+%%%  Simplified H18 on reading formula in, to give:
+     %%%  H18:  foundtype__1 = rr_type__number -> for_all(i_ : integer, 
+          begidx__1 <= i_ and i_ <= endidx__1 -> 48 <= element(zonefileline, [
+          i_]) and element(zonefileline, [i_]) <= 57)
+%%%  Simplified H23 on reading formula in, to give:
+     %%%  H23:  rr_type__rritemtype__first <= foundtype__1
+---  Hypothesis H25 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H26 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H27 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H30 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H24).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H37 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H38 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H39 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H46 has been replaced by "true".  (It is already present, as 
+          H19).
+---  Hypothesis H47 has been replaced by "true".  (It is already present, as 
+          H20).
+---  Hypothesis H48 has been replaced by "true".  (It is already present, as 
+          H21).
+---  Hypothesis H49 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H51 has been replaced by "true".  (It is already present, as 
+          H34).
+---  Hypothesis H52 has been replaced by "true".  (It is already present, as 
+          H35).
+---  Hypothesis H54 has been replaced by "true".  (It is already present, as 
+          H34).
+---  Hypothesis H55 has been replaced by "true".  (It is already present, as 
+          H35).
+***  Proved C1:  0 >= unsigned_types__unsigned32__first
+     using hypothesis H6.
+***  Proved C2:  0 <= unsigned_types__unsigned32__last
+     using hypothesis H7.
+***  Proved C3:  0 >= unsigned_types__unsigned32__first
+     using hypothesis H6.
+***  Proved C4:  0 <= unsigned_types__unsigned32__last
+     using hypothesis H7.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_12.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H31 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H23).
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+     using hypotheses H2 & H14.
+***  Proved C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+     using hypotheses H2 & H14.
+>>>  Restructured hypothesis H33 into:
+     >>>  H33:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 
+          rr_type__soa_record_type__max_serial_val
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New H3:  tmpval <= 4294967295
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus > 4294967295
+<S>  New H33:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H20:  tmpval >= - 9223372036854775808
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H21:  tmpval <= 9223372036854775807
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(20).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__first by:
+          - 9223372036854775808.
+<S>  New H26:  10 * tmpval >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(21).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__last by:
+          9223372036854775807.
+<S>  New H27:  10 * tmpval <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(27).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 > 4294967295
+<S>  New H33:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= - 
+          9223372036854775808
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          9223372036854775807
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  zlength >= 1
+<S>  New H12:  endidx__entry__loop__1 >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  zlength <= 256
+<S>  New H13:  endidx__entry__loop__1 <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+     using hypothesis H33.
+***  Proved C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+     using hypothesis H33.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_13.  @@@@@@@@@@
+%%%  Simplified H4 on reading formula in, to give:
+     %%%  H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= 
+          i___1 and i___1 <= rr_type__linelengthindex__last -> character__first 
+          <= element(zonefileline, [i___1]) and element(zonefileline, [i___1]) 
+          <= character__last)
+---  Hypothesis H18 has been replaced by "true".  (It is already present, as 
+          H14).
+---  Hypothesis H19 has been replaced by "true".  (It is already present, as 
+          H15).
+---  Hypothesis H28 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H29 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H32 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H33 has been replaced by "true".  (It is already present, as 
+          H23).
+---  Hypothesis H34 has been replaced by "true".  (It is already present, as 
+          H30).
+---  Hypothesis H35 has been replaced by "true".  (It is already present, as 
+          H22).
+---  Hypothesis H36 has been replaced by "true".  (It is already present, as 
+          H23).
+-S-  Applied substitution rule parseserialn_rules(23).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__first by:
+          0.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+<S>  New C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+<S>  New C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+-S-  Applied substitution rule parseserialn_rules(24).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__last by:
+          4294967295.
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+***  Proved C1:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+     using hypotheses H2 & H14.
+***  Proved C3:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= 0
+     using hypotheses H2 & H14.
+>>>  Restructured hypothesis H30 into:
+     >>>  H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 
+          rr_type__soa_record_type__max_serial_val
+-S-  Applied substitution rule parseserialn_rules(1).
+     This was achieved by replacing all occurrences of 
+          rr_type__soa_record_type__max_serial_val by:
+          4294967295.
+<S>  New H3:  tmpval <= 4294967295
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(3).
+     This was achieved by replacing all occurrences of integer__first by:
+          - 2147483648.
+<S>  New H8:  loop__1__i >= - 2147483648
+-S-  Applied substitution rule parseserialn_rules(4).
+     This was achieved by replacing all occurrences of integer__last by:
+          2147483647.
+<S>  New H9:  loop__1__i <= 2147483647
+-S-  Applied substitution rule parseserialn_rules(8).
+     This was achieved by replacing all occurrences of character__first by:
+          0.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          character__last)
+-S-  Applied substitution rule parseserialn_rules(9).
+     This was achieved by replacing all occurrences of character__last by:
+          255.
+<S>  New H4:  for_all(i___1 : integer, rr_type__linelengthindex__first <= i___1 
+          and i___1 <= rr_type__linelengthindex__last -> 0 <= element(
+          zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(18).
+     This was achieved by replacing all occurrences of long_long_integer__first 
+          by:
+          - 9223372036854775808.
+<S>  New H20:  tmpval >= - 9223372036854775808
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(19).
+     This was achieved by replacing all occurrences of long_long_integer__last 
+          by:
+          9223372036854775807.
+<S>  New H21:  tmpval <= 9223372036854775807
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 
+          unsigned_types__unsigned32__modulus <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(20).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__first by:
+          - 9223372036854775808.
+<S>  New H26:  10 * tmpval >= - 9223372036854775808
+-S-  Applied substitution rule parseserialn_rules(21).
+     This was achieved by replacing all occurrences of 
+          long_long_integer__base__last by:
+          9223372036854775807.
+<S>  New H27:  10 * tmpval <= 9223372036854775807
+-S-  Applied substitution rule parseserialn_rules(27).
+     This was achieved by replacing all occurrences of 
+          unsigned_types__unsigned32__modulus by:
+          4294967296.
+<S>  New H14:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= 0
+<S>  New H15:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          4294967295
+<S>  New H30:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+<S>  New H22:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 >= - 9223372036854775808
+<S>  New H24:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 >= - 
+          9223372036854775808
+<S>  New H23:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 9223372036854775807
+<S>  New H25:  (element(zonefileline, [loop__1__i]) - 48) mod 4294967296 <= 
+          9223372036854775807
+<S>  New C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+<S>  New C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+-S-  Applied substitution rule parseserialn_rules(70).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__first by:
+          1.
+<S>  New H5:  zlength >= 1
+<S>  New H12:  endidx__entry__loop__1 >= 1
+<S>  New H16:  loop__1__i >= 1
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 
+          rr_type__linelengthindex__last -> 0 <= element(zonefileline, [i___1]) 
+          and element(zonefileline, [i___1]) <= 255)
+-S-  Applied substitution rule parseserialn_rules(71).
+     This was achieved by replacing all occurrences of 
+          rr_type__linelengthindex__last by:
+          256.
+<S>  New H6:  zlength <= 256
+<S>  New H13:  endidx__entry__loop__1 <= 256
+<S>  New H17:  loop__1__i <= 256
+<S>  New H4:  for_all(i___1 : integer, 1 <= i___1 and i___1 <= 256 -> 0 <= 
+          element(zonefileline, [i___1]) and element(zonefileline, [i___1]) <= 
+          255)
+***  Proved C2:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+     using hypothesis H30.
+***  Proved C4:  10 * tmpval + (element(zonefileline, [loop__1__i]) - 48) mod 
+          4294967296 <= 4294967295
+     using hypothesis H30.
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_14.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_15.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_16.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_17.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_18.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_19.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+
+
+@@@@@@@@@@  VC: procedure_parseserialnumber_20.  @@@@@@@@@@
+***  Proved C1:  true
+***  PROVED VC.
+

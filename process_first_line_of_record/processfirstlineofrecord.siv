@@ -1,0 +1,352 @@
+*****************************************************************************
+                       Semantic Analysis of SPARK Text
+                             Examiner GPL Edition
+
+*****************************************************************************
+
+
+
+SPARK Simplifier GPL 2011
+Copyright (C) 2011 Altran Praxis Limited, Bath, U.K.
+
+procedure process_first_line_of_record.ProcessFirstLineOfRecord
+
+
+
+
+For path(s) from start to run-time check associated with statement of line 60:
+
+procedure_processfirstlineofrecord_1.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+procedure_processfirstlineofrecord_2.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 70:
+
+procedure_processfirstlineofrecord_3.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 74:
+
+procedure_processfirstlineofrecord_4.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 83:
+
+procedure_processfirstlineofrecord_5.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 87:
+
+procedure_processfirstlineofrecord_6.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 95:
+
+procedure_processfirstlineofrecord_7.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 99:
+
+procedure_processfirstlineofrecord_8.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 105:
+
+procedure_processfirstlineofrecord_9.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_10.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 114:
+
+procedure_processfirstlineofrecord_11.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 114:
+
+procedure_processfirstlineofrecord_12.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 118:
+
+procedure_processfirstlineofrecord_13.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 124:
+
+procedure_processfirstlineofrecord_14.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_15.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 134:
+
+procedure_processfirstlineofrecord_16.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 138:
+
+procedure_processfirstlineofrecord_17.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 144:
+
+procedure_processfirstlineofrecord_18.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_19.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 152:
+
+procedure_processfirstlineofrecord_20.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 155:
+
+procedure_processfirstlineofrecord_21.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 161:
+
+procedure_processfirstlineofrecord_22.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_23.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 170:
+
+procedure_processfirstlineofrecord_24.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 171:
+
+procedure_processfirstlineofrecord_25.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 177:
+
+procedure_processfirstlineofrecord_26.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 183:
+
+procedure_processfirstlineofrecord_27.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_28.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 194:
+
+procedure_processfirstlineofrecord_29.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 195:
+
+procedure_processfirstlineofrecord_30.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 199:
+
+procedure_processfirstlineofrecord_31.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 204:
+
+procedure_processfirstlineofrecord_32.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 209:
+
+procedure_processfirstlineofrecord_33.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_34.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 218:
+
+procedure_processfirstlineofrecord_35.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 219:
+
+procedure_processfirstlineofrecord_36.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to run-time check associated with statement of line 222:
+
+procedure_processfirstlineofrecord_37.
+*** true .          /* all conclusions proved */
+
+
+For path(s) from start to finish:
+
+procedure_processfirstlineofrecord_38.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_39.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_40.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_41.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_42.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_43.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_44.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_45.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_46.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_47.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_48.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_49.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_50.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_51.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_52.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_53.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_54.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_55.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_56.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_57.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_58.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_59.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_60.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_61.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_62.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_63.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_64.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_65.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_66.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_67.
+*** true .          /* all conclusions proved */
+
+
+procedure_processfirstlineofrecord_68.
+*** true .          /* all conclusions proved */
+
+
